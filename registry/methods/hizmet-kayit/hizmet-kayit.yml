@@ -1,0 +1,37 @@
+id: medula.hastane.hizmet-kayit.hizmet-kayit
+service: medula.hastane.hizmet-kayit
+names:
+  documentationHeading: HizmetKayit
+  operationName: HizmetKayit
+  aliases:
+    - hizmetKayit
+    - HizmetKayit Metodu
+contract:
+  inputDvo: HizmetKayitGirisDVO
+  outputDvo: HizmetKayitCevapDVO
+sourceRefs:
+  - id: medula-hastane-guide-2026-06-17
+    sourceType: official-guide
+    guideVersion: "2026-06-17"
+    confidence: extracted
+stateEffects:
+  creates:
+    - serviceRecord
+    - islemSiraNo
+  reads:
+    - hastaBasvuruNo
+    - takipNo
+  updates:
+    - takip
+  deletes: []
+  generates:
+    - islemSiraNumaralari
+    - hizmetKayitReferansNo
+success:
+  resultCodeField: sonucKodu
+  successCode: "0000"
+  messageField: sonucMesaji
+sandbox:
+  supported: true
+  defaultScenario: happy-path
+status: draft

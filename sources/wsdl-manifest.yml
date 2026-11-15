@@ -1,0 +1,30 @@
+wsdls:
+  - id: wsdl.hasta-kabul.production
+    service: hasta-kabul
+    environment: production
+    url: https://medula.sgk.gov.tr/medula/hastane/hastaKabulIslemleriWS?wsdl
+
+  - id: wsdl.hasta-kabul.test
+    service: hasta-kabul
+    environment: test
+    url: https://sgkt.sgk.gov.tr/medula/hastane/hastaKabulIslemleriWS?wsdl
+
+  - id: wsdl.hizmet-kayit.production
+    service: hizmet-kayit
+    environment: production
+    url: https://medula.sgk.gov.tr/medula/hastane/hizmetKayitIslemleriWS?wsdl
+
+  - id: wsdl.hizmet-kayit.test
+    service: hizmet-kayit
+    environment: test
+    url: https://sgkt.sgk.gov.tr/medula/hastane/hizmetKayitIslemleriWS?wsdl
+
+  - id: wsdl.fatura-kayit.production
+    service: fatura-kayit
+    environment: production
+    url: https://medula.sgk.gov.tr/medula/hastane/faturaKayitIslemleriWS?wsdl
+
+  - id: wsdl.fatura-kayit.test
+    service: fatura-kayit
+    environment: test
+    url: https://sgkt.sgk.gov.tr/medula/hastane/faturaKayitIslemleriWS?wsdl

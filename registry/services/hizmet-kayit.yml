@@ -1,0 +1,18 @@
+id: medula.hastane.hizmet-kayit
+slug: hizmet-kayit
+displayName: Hizmet Kayit
+description: Service registration process that records medical services against an existing patient application and tracking number.
+sourceRefs:
+  - id: medula-hastane-guide-2026-06-17
+    sourceType: official-guide
+    guideVersion: "2026-06-17"
+    fetchedAt: "2026-07-06"
+    confidence: extracted
+wsdl:
+  production: wsdl.hizmet-kayit.production
+  test: wsdl.hizmet-kayit.test
+methods:
+  - medula.hastane.hizmet-kayit.hizmet-kayit
+  - medula.hastane.hizmet-kayit.hizmet-kaydi-oku
+  - medula.hastane.hizmet-kayit.hizmet-kaydi-iptal
+status: draft

@@ -1,0 +1,36 @@
+id: medula.hastane.fatura-kayit.fatura-kayit
+service: medula.hastane.fatura-kayit
+names:
+  documentationHeading: FaturaKayit
+  operationName: FaturaKayit
+  aliases:
+    - faturaKayit
+    - FaturaKayit Metodu
+contract:
+  inputDvo: FaturaGirisDVO
+  outputDvo: FaturaCevapDVO
+sourceRefs:
+  - id: medula-hastane-guide-2026-06-17
+    sourceType: official-guide
+    guideVersion: "2026-06-17"
+    confidence: extracted
+stateEffects:
+  creates:
+    - invoiceRecord
+  reads:
+    - hastaBasvuruNo
+    - serviceRecord
+  updates:
+    - takip
+  deletes: []
+  generates:
+    - faturaTeslimNo
+    - faturaTutari
+success:
+  resultCodeField: sonucKodu
+  successCode: "0000"
+  messageField: sonucMesaji
+sandbox:
+  supported: true
+  defaultScenario: happy-path
+status: draft
