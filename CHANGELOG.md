@@ -6,6 +6,43 @@ Format: [Keep a Changelog](https://keepachangelog.com); versioning: SemVer
 
 ## [Unreleased]
 
+### Group 4 — feat/flows (2026-11-15)
+
+Local group: no remote yet, so the PR step is replaced by a local `--no-ff`
+merge to `main` (PRD §28 step 6 fallback).
+
+- TDD red first: flows suite (11 checks) committed and verified failing
+  (5/11 red) before workflows, scenarios, or examples existed (`1b9b4e0`).
+- Four workflows (`ef4d204`): `core-claim-flow` copies PRD §14 verbatim
+  (three chained steps, exact requires/creates/updates/next); three
+  single-step sub-flows isolate each stage for sandbox reuse.
+- Six scenarios per PRD §15 (`5e4b6fa`): happy-path, invalid-takip-no
+  (`SANDBOX_1001`), missing-required-field (`SANDBOX_VALIDATION_ERROR` +
+  `missingFieldPath` in stateChanges), invoice-without-service
+  (`SANDBOX_2001`), duplicate-invoice (`SANDBOX_3001`), service-timeout
+  (`SANDBOX_TIMEOUT`, `deterministic: false`, `latencyMs: 5000`).
+- Six synthetic examples (`b99de9f`): request/response pairs for the three
+  domains using `SYNTHETIC_*` placeholders per PRD §17.2.
+- Suite enforces: step graph integrity (next resolution + exactly one entry
+  step), scenario→method resolution, `defaultScenario` resolution, sandbox
+  code isolation (any `SANDBOX_*` result must be absent from the official
+  sonuc-kodu enum; non-sandbox codes must be present), and an example
+  identity guard (no 11-digit identity values).
+
+Decisions:
+- Scenario model stays per-method (PRD §12.8); full-flow orchestration is
+  documented via the core-claim-flow workflow and a `note` in happy-path
+  stateChanges rather than inventing a multi-method scenario shape.
+- Duplicate-invoice sandbox code set to `SANDBOX_3001` (PRD §15.5 leaves
+  the exact code open) — noted as pending the sandbox-code naming
+  normalization tracked in research gap #5.
+
+Validation output: `pnpm test` → 49/49 passed (4 smoke + 13 schema +
+11 reference + 10 registry-data + 11 flows); `tsc --noEmit` → clean.
+
+Remaining TODOs: none for this group. Next: Group 5 — `feat/tools`
+(registry loader, schema/reference/synthetic validators, validate CLI).
+
 ### Group 3 — feat/registry-data (2026-11-15)
 
 Local group: no remote yet, so the PR step is replaced by a local `--no-ff`
