@@ -1,0 +1,19 @@
+id: provizyon-tipi
+displayName: Provizyon Tipi
+values:
+  - code: N
+    label: Normal Provizyon
+    description: Standard provision for a regular patient admission.
+  - code: S
+    label: Sevk Provizyonu
+    description: Provision created through a referral.
+  - code: A
+    label: Acil Provizyon
+    description: Provision for an emergency admission.
+sourceRefs:
+  - id: medula-hastane-guide-2026-06-17
+    sourceType: official-guide
+    guideVersion: "2026-06-17"
+    confidence: inferred
+    notes: The guide defines additional provizyon codes; catalog them after verification.
+status: draft

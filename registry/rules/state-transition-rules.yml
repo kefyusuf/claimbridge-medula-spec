@@ -1,0 +1,61 @@
+rules:
+  - id: hizmet-kayit-requires-active-takip
+    type: state-transition
+    appliesTo:
+      service: medula.hastane.hizmet-kayit
+      method: medula.hastane.hizmet-kayit.hizmet-kayit
+      dvo: null
+      field: null
+    condition: caller provides a takipNo
+    assertion: >-
+      hizmet-kayit requires an existing tracking record in an active state;
+      registering services against a missing or cancelled takip must return
+      a non-success code and leave state unchanged (PRD 15.2).
+    severity: error
+    sourceRefs:
+      - id: medula-hastane-guide-2026-06-17
+        sourceType: official-guide
+        guideVersion: "2026-06-17"
+        confidence: extracted
+    status: draft
+
+  - id: fatura-requires-registered-services
+    type: state-transition
+    appliesTo:
+      service: medula.hastane.fatura-kayit
+      method: medula.hastane.fatura-kayit.fatura-kayit
+      dvo: null
+      field: null
+    condition: caller provides a hastaBasvuruNo
+    assertion: >-
+      fatura-kayit requires at least one registered service record for the
+      patient application flow; invoicing without services must return a
+      sandbox-specific non-success code and must not create invoice state
+      (PRD 15.4).
+    severity: error
+    sourceRefs:
+      - id: medula-hastane-guide-2026-06-17
+        sourceType: official-guide
+        guideVersion: "2026-06-17"
+        confidence: extracted
+    status: draft
+
+  - id: hasta-kabul-generates-application-and-takip
+    type: state-transition
+    appliesTo:
+      service: medula.hastane.hasta-kabul
+      method: medula.hastane.hasta-kabul.hasta-kabul
+      dvo: null
+      field: null
+    condition: null
+    assertion: >-
+      a successful hasta-kabul creates a patientAdmission state and at least
+      one takip state, and generates hastaBasvuruNo plus takipNo identifiers
+      (PRD 14 workflow step 1).
+    severity: error
+    sourceRefs:
+      - id: sandbox-design-v0.1
+        sourceType: sandbox-design
+        confidence: unknown
+        notes: Encodes the core-claim-flow step effects; sandbox contract, not official behavior.
+    status: draft

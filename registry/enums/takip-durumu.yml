@@ -1,0 +1,19 @@
+id: takip-durumu
+displayName: Takip Durumu
+values:
+  - code: A
+    label: Acik
+    description: Tracking record is open and accepts service registrations.
+  - code: I
+    label: Iptal Edildi
+    description: Tracking record was cancelled.
+  - code: K
+    label: Kapali
+    description: Tracking record is closed after invoicing or closure.
+sourceRefs:
+  - id: medula-hastane-guide-2026-06-17
+    sourceType: official-guide
+    guideVersion: "2026-06-17"
+    confidence: inferred
+    notes: Values follow the documented A/I/K pattern; verify codes and labels against the guide before review.
+status: draft

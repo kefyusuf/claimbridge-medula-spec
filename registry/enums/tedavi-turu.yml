@@ -1,0 +1,16 @@
+id: tedavi-turu
+displayName: Tedavi Turu
+values:
+  - code: "1"
+    label: Ayakta Tedavi
+    description: Outpatient treatment episode.
+  - code: "2"
+    label: Yatarak Tedavi
+    description: Inpatient treatment episode.
+sourceRefs:
+  - id: medula-hastane-guide-2026-06-17
+    sourceType: official-guide
+    guideVersion: "2026-06-17"
+    confidence: inferred
+    notes: The guide defines additional codes (for example day-unit episodes); add them after verification.
+status: draft

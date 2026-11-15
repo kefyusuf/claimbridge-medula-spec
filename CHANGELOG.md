@@ -6,6 +6,44 @@ Format: [Keep a Changelog](https://keepachangelog.com); versioning: SemVer
 
 ## [Unreleased]
 
+### Group 3 — feat/registry-data (2026-11-15)
+
+Local group: no remote yet, so the PR step is replaced by a local `--no-ff`
+merge to `main` (PRD §28 step 6 fallback).
+
+- TDD red first: registry-data suite (10 checks) committed and verified
+  failing (5/10 red) before any DVO/enum/rule file existed (`90760cd`).
+- Nine DVO files per PRD §13.3 (`ba5e438`): six contract DVOs carry the
+  §13.4 minimum field sets; three shared DVOs model a minimal vertical-slice
+  field set with verification notes.
+- Five enum files per PRD §11 (`b322e42`): sonuc-kodu documents only the
+  extracted success code `0000`; pattern-based values marked
+  `confidence: inferred` pending guide verification.
+- Five rule files with twelve draft rules (`6d12ce9`): required-field (3),
+  conditional-required-field (2), state-transition (3), invoice-rule (2),
+  cancellation-rule (2).
+- Suite enforces the amended PRD §12.4 enumRef contract both ways
+  (enum-typed fields must resolve; non-enum fields must stay null) and
+  resolves rule `appliesTo` into registered services, methods, DVOs, and
+  fields.
+
+Decisions:
+- Sensitive fields (`hastaTCKimlikNo`, `hastaTelefon`, `hastaAdres`) are
+  flagged `sensitive: true` + `syntheticOnlyRecommended: true`.
+- The foreign-patient identity case is recorded as a conditional note on
+  `hastaTCKimlikNo` and stays deferred to v0.2 (research gap #7).
+- Sandbox-design rules carry `sourceType: sandbox-design`,
+  `confidence: unknown` — they encode sandbox contracts, not official
+  behavior.
+- One test-expectation fix during green (rule file paths include the
+  directory prefix); no registry data changes were needed.
+
+Validation output: `pnpm test` → 38/38 passed (4 smoke + 13 schema +
+11 reference + 10 registry-data); `tsc --noEmit` → clean.
+
+Remaining TODOs: none for this group. Next: Group 4 — `feat/flows`
+(4 workflows + 6 scenarios + synthetic examples).
+
 ### Group 2 — feat/registry-core (2026-11-15)
 
 Local group: no remote yet, so the PR step is replaced by a local `--no-ff`

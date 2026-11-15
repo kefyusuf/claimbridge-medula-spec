@@ -1,0 +1,85 @@
+id: FaturaHizmetDetayDVO
+domain: fatura-kayit
+direction: shared
+sourceRefs:
+  - id: medula-hastane-guide-2026-06-17
+    sourceType: official-guide
+    guideVersion: "2026-06-17"
+    confidence: extracted
+fields:
+  - name: islemSiraNo
+    displayName: Islem Sira Numarasi
+    type: integer
+    enumRef: null
+    required: true
+    length: null
+    description: Sequence number of the registered operation line being invoiced.
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-2026-06-17
+        sourceType: official-guide
+        guideVersion: "2026-06-17"
+        confidence: inferred
+        notes: Field set for this shared DVO is minimal in v0.1; extend after guide verification.
+    conditionalRequired: []
+    introducedIn: null
+    deprecatedIn: null
+
+  - name: islemKodu
+    displayName: Islem Kodu
+    type: string
+    enumRef: null
+    required: true
+    length: null
+    description: Procedure code (SUT movement code) of the invoiced service line.
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-2026-06-17
+        sourceType: official-guide
+        guideVersion: "2026-06-17"
+        confidence: inferred
+        notes: Field set for this shared DVO is minimal in v0.1; extend after guide verification.
+    conditionalRequired: []
+    introducedIn: null
+    deprecatedIn: null
+
+  - name: adet
+    displayName: Adet
+    type: integer
+    enumRef: null
+    required: true
+    length: null
+    description: Quantity of the invoiced service line.
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-2026-06-17
+        sourceType: official-guide
+        guideVersion: "2026-06-17"
+        confidence: inferred
+        notes: Field set for this shared DVO is minimal in v0.1; extend after guide verification.
+    conditionalRequired: []
+    introducedIn: null
+    deprecatedIn: null
+
+  - name: birimFiyat
+    displayName: Birim Fiyat
+    type: decimal
+    enumRef: null
+    required: true
+    length: null
+    description: Unit price of the invoiced service line.
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-2026-06-17
+        sourceType: official-guide
+        guideVersion: "2026-06-17"
+        confidence: inferred
+        notes: Field set for this shared DVO is minimal in v0.1; extend after guide verification.
+    conditionalRequired: []
+    introducedIn: null
+    deprecatedIn: null
+status: draft

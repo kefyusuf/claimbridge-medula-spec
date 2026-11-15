@@ -1,0 +1,103 @@
+id: ProvizyonCevapDVO
+domain: hasta-kabul
+direction: output
+sourceRefs:
+  - id: medula-hastane-guide-2026-06-17
+    sourceType: official-guide
+    guideVersion: "2026-06-17"
+    confidence: extracted
+fields:
+  - name: sonucKodu
+    displayName: Sonuc Kodu
+    type: string
+    enumRef: null
+    required: true
+    length: null
+    description: Result code; 0000 means success, any other value is an error.
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-2026-06-17
+        sourceType: official-guide
+        guideVersion: "2026-06-17"
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: null
+    deprecatedIn: null
+
+  - name: sonucMesaji
+    displayName: Sonuc Mesaji
+    type: string
+    enumRef: null
+    required: true
+    length: null
+    description: Human-readable result message accompanying the result code.
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-2026-06-17
+        sourceType: official-guide
+        guideVersion: "2026-06-17"
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: null
+    deprecatedIn: null
+
+  - name: hastaBasvuruNo
+    displayName: Hasta Basvuru Numarasi
+    type: string
+    enumRef: null
+    required: false
+    length: null
+    description: Patient application number generated on successful admission; null on failure.
+    sensitive: false
+    syntheticOnlyRecommended: true
+    sourceRefs:
+      - id: medula-hastane-guide-2026-06-17
+        sourceType: official-guide
+        guideVersion: "2026-06-17"
+        confidence: extracted
+    conditionalRequired:
+      - condition: sonucKodu is 0000 (success)
+        note: generated identifier; present only on success
+    introducedIn: null
+    deprecatedIn: null
+
+  - name: takipNo
+    displayName: Takip Numarasi
+    type: string
+    enumRef: null
+    required: false
+    length: null
+    description: Primary tracking number generated on successful admission; null on failure.
+    sensitive: false
+    syntheticOnlyRecommended: true
+    sourceRefs:
+      - id: medula-hastane-guide-2026-06-17
+        sourceType: official-guide
+        guideVersion: "2026-06-17"
+        confidence: extracted
+    conditionalRequired:
+      - condition: sonucKodu is 0000 (success)
+        note: generated identifier; present only on success
+    introducedIn: null
+    deprecatedIn: null
+
+  - name: takipler
+    displayName: Takipler
+    type: array
+    enumRef: null
+    required: false
+    length: null
+    description: List of TakipDVO records; a bagli-takip request can return more than one tracking record.
+    sensitive: false
+    syntheticOnlyRecommended: true
+    sourceRefs:
+      - id: medula-hastane-guide-2026-06-17
+        sourceType: official-guide
+        guideVersion: "2026-06-17"
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: null
+    deprecatedIn: null
+status: draft
