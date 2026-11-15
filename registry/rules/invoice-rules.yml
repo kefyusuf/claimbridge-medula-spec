@@ -1,0 +1,37 @@
+rules:
+  - id: duplicate-invoice-rejected
+    type: invoice-rule
+    appliesTo:
+      service: medula.hastane.fatura-kayit
+      method: medula.hastane.fatura-kayit.fatura-kayit
+      dvo: null
+      field: null
+    condition: an invoice already exists for the same patient application flow
+    assertion: >-
+      a second invoice for the same flow must return a non-success result and
+      must not create duplicate invoice state (PRD 15.5).
+    severity: error
+    sourceRefs:
+      - id: sandbox-design-v0.1
+        sourceType: sandbox-design
+        confidence: unknown
+        notes: Encodes the duplicate-invoice scenario contract; sandbox behavior, not official behavior.
+    status: draft
+
+  - id: invoice-date-not-future
+    type: invoice-rule
+    appliesTo:
+      service: medula.hastane.fatura-kayit
+      method: medula.hastane.fatura-kayit.fatura-kayit
+      dvo: FaturaGirisDVO
+      field: faturaTarihi
+    condition: null
+    assertion: faturaTarihi must not be in the future.
+    severity: error
+    sourceRefs:
+      - id: medula-hastane-guide-2026-06-17
+        sourceType: official-guide
+        guideVersion: "2026-06-17"
+        confidence: inferred
+        notes: Common invoice constraint; verify against the guide before review.
+    status: draft

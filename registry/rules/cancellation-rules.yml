@@ -1,0 +1,39 @@
+rules:
+  - id: hasta-kabul-iptal-deletes-takip-state
+    type: cancellation-rule
+    appliesTo:
+      service: medula.hastane.hasta-kabul
+      method: medula.hastane.hasta-kabul.hasta-kabul-iptal
+      dvo: null
+      field: null
+    condition: null
+    assertion: >-
+      cancelling a patient admission deletes the associated takip state; the
+      sandbox must not leave orphan takip records behind.
+    severity: error
+    sourceRefs:
+      - id: sandbox-design-v0.1
+        sourceType: sandbox-design
+        confidence: unknown
+        notes: Encodes the cancellation state effect; sandbox contract, not official behavior.
+    status: draft
+
+  - id: fatura-iptal-requires-existing-invoice
+    type: cancellation-rule
+    appliesTo:
+      service: medula.hastane.fatura-kayit
+      method: medula.hastane.fatura-kayit.fatura-iptal
+      dvo: null
+      field: null
+    condition: null
+    assertion: >-
+      fatura-iptal requires an existing invoice record for the referenced
+      faturaTeslimNo; cancelling a missing invoice must return a non-success
+      code and leave state unchanged.
+    severity: error
+    sourceRefs:
+      - id: sandbox-design-v0.1
+        sourceType: sandbox-design
+        confidence: unknown
+        notes: Encodes the cancellation state effect; sandbox contract, not official behavior.
+    status: draft

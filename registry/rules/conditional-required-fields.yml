@@ -1,0 +1,40 @@
+rules:
+  - id: conditional-takip-no-for-bagli-takip
+    type: conditional-required-field
+    appliesTo:
+      service: medula.hastane.hasta-kabul
+      method: medula.hastane.hasta-kabul.hasta-kabul
+      dvo: ProvizyonGirisDVO
+      field: takipNo
+    condition: takipTipi is B (bagli takip)
+    assertion: >-
+      takipNo is required when takipTipi is B; a bagli takip must reference
+      the existing tracking number it is attached to.
+    severity: error
+    sourceRefs:
+      - id: medula-hastane-guide-2026-06-17
+        sourceType: official-guide
+        guideVersion: "2026-06-17"
+        confidence: inferred
+        notes: Condition follows the documented bagli-takip pattern; verify before review.
+    status: draft
+
+  - id: conditional-trafik-kazasi-yuzdesi
+    type: conditional-required-field
+    appliesTo:
+      service: medula.hastane.fatura-kayit
+      method: medula.hastane.fatura-kayit.fatura-kayit
+      dvo: FaturaGirisDVO
+      field: trafikKazasiOdemeYuzdesi
+    condition: the invoice covers services related to a traffic accident
+    assertion: >-
+      trafikKazasiOdemeYuzdesi is required when the invoiced episode is
+      traffic-accident related.
+    severity: error
+    sourceRefs:
+      - id: medula-hastane-guide-2026-06-17
+        sourceType: official-guide
+        guideVersion: "2026-06-17"
+        confidence: inferred
+        notes: Condition follows the documented traffic-accident rule; verify before review.
+    status: draft
