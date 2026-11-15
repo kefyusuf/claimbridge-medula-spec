@@ -1,0 +1,165 @@
+id: KonsultasyonBilgisiDVO
+domain: hizmet-kayit
+direction: input
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: "3.1.1"
+    fetchedAt: "2026-11-15"
+    page: 224
+    section: Tablo 4.2.1.g - KonsultasyonBilgisiDVO
+    confidence: extracted
+fields:
+  - name: bransKodu
+    displayName: Brans Kodu
+    type: string
+    enumRef: null
+    required: true
+    length: 4
+    description: (Branch code of the consultation) s.224
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 224
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: drTescilNo
+    displayName: Doktor Tescil No
+    type: string
+    enumRef: null
+    required: true
+    length: 16
+    description: (Registration number of the performing doctor) s.224
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 224
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: sutKodu
+    displayName: SUT Kodu
+    type: string
+    enumRef: null
+    required: true
+    length: null
+    description: (SUT-defined operation code) s.224
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 224
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: hizmetSunucuRefNo
+    displayName: Hizmet Sunucu Referans Numarasi
+    type: string
+    enumRef: null
+    required: true
+    length: 20
+    description: (Institution reference paired with islemSiraNo) s.224
+    sensitive: false
+    syntheticOnlyRecommended: true
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 224
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: islemSiraNo
+    displayName: Islem Sira Numarasi
+    type: string
+    enumRef: null
+    required: false
+    length: 15
+    description: (Sequence number; null-on-input pattern) s.224
+    sensitive: false
+    syntheticOnlyRecommended: true
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 224
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: islemTarihi
+    displayName: Konsultasyon Tarihi
+    type: date
+    enumRef: null
+    required: true
+    length: 10
+    description: (Consultation date, dd.mm.yyyy) s.224
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 224
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: ozelDurum
+    displayName: Ozel Durum
+    type: string
+    enumRef: null
+    required: false
+    length: 1
+    description: (Special condition code, Tablo 5.1 OzelDurumVO) s.224
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 224
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: cokluOzelDurum
+    displayName: Coklu Ozel Durum
+    type: array
+    enumRef: null
+    required: false
+    length: null
+    description: (Multiple special-condition codes) s.224
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 224
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+status: reviewed
