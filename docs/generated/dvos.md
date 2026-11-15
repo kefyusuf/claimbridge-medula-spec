@@ -401,6 +401,16 @@ Domain: `hizmet-kayit` · Direction: `input` · Status: `reviewed` · Source ref
 | `ozelDurum` | string |  | — |  | (Special condition code, Tablo 5.1 OzelDurumVO) s.224 |
 | `cokluOzelDurum` | array |  | — |  | (Multiple special-condition codes) s.224 |
 
+## `MajistralEklenenIlacDVO`
+
+Domain: `hizmet-kayit` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19, medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `islemSiraNo` | string |  | — |  | Sequence number; null-on-input pattern (s.223) |
+| `barkod` | string |  | — |  | Barcode of the added drug registered in GSS (s.224) |
+| `adet` | decimal |  | — |  | Quantity of the added drug (s.224) |
+
 ## `MajistralHamMaddeDVO`
 
 Domain: `hizmet-kayit` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
@@ -425,7 +435,7 @@ Domain: `hizmet-kayit` · Direction: `input` · Status: `reviewed` · Source ref
 | `ambalajBoyutu` | string |  | — |  | Packaging size code; the guide lists ~30 codes (1-19, 21-31) - enum candidate for v0.3 (s.200) |
 | `ambalajAdet` | string |  | — |  | Packaging quantity (s.200) |
 | `hamMaddeler` | array |  | — |  | Raw-material records, expanded as the MajistralHamMaddeDVO registry entity (Tablo 4.2.1.f.1.1, s.201) |
-| `eklenenIlaclar` | array |  | — |  | Added-drug records (MajistralEklenenIlacDVO[], Tablo 4.2.1.f.1.2, s.201); nested placeholder, expansion is v0.3 scope |
+| `eklenenIlaclar` | array |  | — |  | Added-drug records, expanded as the MajistralEklenenIlacDVO registry entity (Tablo 4.2.1.f.1.2, s.223-224) |
 
 ## `MalzemeBilgisiDVO`
 

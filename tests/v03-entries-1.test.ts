@@ -135,7 +135,7 @@ describe("v0.3 entries 1 (Group 17)", () => {
     const manifest = JSON.parse(
       readFileSync(resolve(root, "dist", "manifest.json"), "utf8"),
     ) as { counts: Record<string, number> };
-    expect(manifest.counts.dvos).toBe(41);
+    expect(manifest.counts.dvos).toBe(42);
     expect(manifest.counts.enums).toBe(19);
   });
 });

@@ -6,6 +6,26 @@ Format: [Keep a Changelog](https://keepachangelog.com); versioning: SemVer
 
 ## [Unreleased]
 
+### Group 23 — feat/v03-nested-3 (2026-11-15)
+
+Local group: no remote yet, so the PR step is replaced by a local
+`--no-ff` merge to `main` (PRD §28 step 6 fallback).
+
+- TDD red first: MajistralEklenenIlac suite (3 checks) committed and
+  verified failing (3/3 red) before the composite existed (`a8c05da`).
+- `MajistralEklenenIlacDVO` registered (Tablo 4.2.1.f.1.2, s.223-224,
+  3 fields: islemSiraNo / barkod String(14) / adet Decimal(4)) — the
+  table also explains the String(14) barkod seen at the Ilac tail.
+- MajistralIlacDVO `eklenenIlaclar` placeholder resolved to the registry
+  entity.
+- Registry now: **42 DVOs, 19 enums**; dist regenerated.
+
+Validation output: `pnpm test` → 154/154 passed (24 suites); `tsc
+--noEmit` → clean; `pnpm validate` → OK; `pnpm check` → OK;
+`pnpm format:check` → OK.
+
+Remaining TODOs: none for this group.
+
 ### Group 22 — feat/v03-nested-2 (2026-11-15)
 
 Local group: no remote yet, so the PR step is replaced by a local

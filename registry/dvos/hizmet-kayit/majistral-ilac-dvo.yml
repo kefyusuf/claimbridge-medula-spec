@@ -158,7 +158,7 @@ fields:
     enumRef: null
     required: false
     length: null
-    description: Added-drug records (MajistralEklenenIlacDVO[], Tablo 4.2.1.f.1.2, s.201); nested placeholder, expansion is v0.3 scope
+    description: Added-drug records, expanded as the MajistralEklenenIlacDVO registry entity (Tablo 4.2.1.f.1.2, s.223-224)
     sensitive: false
     syntheticOnlyRecommended: false
     sourceRefs:
