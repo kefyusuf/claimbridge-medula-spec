@@ -1,0 +1,16 @@
+id: takip-tipi
+displayName: Takip Tipi
+values:
+  - code: Y
+    label: Yeni Takip
+    description: A new tracking record created for the patient episode.
+  - code: B
+    label: Bagli Takip
+    description: A tracking record attached to an existing tracking number.
+sourceRefs:
+  - id: medula-hastane-guide-2026-06-17
+    sourceType: official-guide
+    guideVersion: "2026-06-17"
+    confidence: inferred
+    notes: Values follow the documented Y/B pattern; verify codes against the guide before review.
+status: draft
