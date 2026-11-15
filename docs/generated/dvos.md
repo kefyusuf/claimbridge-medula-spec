@@ -146,6 +146,24 @@ Domain: `fatura-kayit` · Direction: `input` · Status: `reviewed` · Source ref
 | `faturaTarihi` | date |  | — |  | Invoice date in dd.mm.yyyy format per the guide (s.244). |
 | `ktsHbysKodu` | string |  | — |  | Software vendor KTS code (s.244). |
 
+## `HastaYatisBilgisiDVO`
+
+Domain: `hizmet-kayit` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `bransKodu` | string |  | — |  | Branch code of the hospitalization (s.234) |
+| `drTescilNo` | string |  | — |  | Registration number of the performing doctor (s.234) |
+| `sutKodu` | string |  | — |  | SUT-defined operation code (s.234) |
+| `hizmetSunucuRefNo` | string |  | — |  | Institution reference paired with islemSiraNo (s.234) |
+| `islemSiraNo` | string |  | — |  | Sequence number; null-on-input pattern (s.234) |
+| `refakatciGunSayisi` | string |  | — |  | Companion days; empty when no companion (s.234) |
+| `yatisBaslangicTarihi` | date |  | — |  | Hospitalization start date, dd.mm.yyyy (s.234) |
+| `yatisBitisTarihi` | date |  | — |  | Hospitalization end date, dd.mm.yyyy (s.234) |
+| `ozelDurum` | string |  | — |  | Special condition code, Tablo 5.1 OzelDurumVO (s.234) |
+| `aciklama` | string |  | — |  | Hospitalization description (s.234) |
+| `cokluOzelDurum` | array |  | — |  | Multiple special-condition codes (s.234) |
+
 ## `HataliIslemBilgisiDVO`
 
 Domain: `hizmet-kayit` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19, medula-hastane-guide-3-1-1-2026-10-19
@@ -271,6 +289,24 @@ Domain: `hizmet-kayit` · Direction: `input` · Status: `reviewed` · Source ref
 | `takipNo` | string |  | — |  | Tracking number whose registered operations are read (s.237). |
 | `ktsHbysKodu` | string |  | — |  | Software vendor KTS code (s.237). |
 
+## `KanBilgisiDVO`
+
+Domain: `hizmet-kayit` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19, medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `bransKodu` | string |  | — |  | Branch code of the transfusion (s.234) |
+| `drTescilNo` | string |  | — |  | Registration number of the performing doctor (s.235) |
+| `sutKodu` | string |  | — |  | SUT-defined operation code (s.235) |
+| `hizmetSunucuRefNo` | string |  | — |  | Institution reference paired with islemSiraNo (s.235) |
+| `islemSiraNo` | string |  | — |  | Sequence number; null-on-input pattern (s.235) |
+| `adet` | integer |  | — |  | Quantity of blood products (s.235) |
+| `isbtBilesenNo` | string |  | — |  | ISBT component number of the blood product (s.235) |
+| `isbtUniteNo` | string |  | — |  | ISBT unit number of the blood product (s.235) |
+| `islemTarihi` | date |  | — |  | Transfusion date, dd.mm.yyyy (s.235) |
+| `ozelDurum` | string |  | — |  | Special condition code, Tablo 5.1 OzelDurumVO (s.235) |
+| `cokluOzelDurum` | array |  | — |  | Multiple special-condition codes (s.235) |
+
 ## `KayitliIslemBilgisiDVO`
 
 Domain: `hizmet-kayit` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
@@ -279,6 +315,36 @@ Domain: `hizmet-kayit` · Direction: `output` · Status: `reviewed` · Source re
 | --- | --- | --- | --- | --- | --- |
 | `hizmetSunucuRefNo` | string |  | — |  | Institution-assigned reference of the registered operation (s.235). |
 | `islemSiraNo` | string |  | — |  | Medula-assigned sequence number of the registered operation (s.235). |
+
+## `KonsultasyonBilgisiDVO`
+
+Domain: `hizmet-kayit` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `bransKodu` | string |  | — |  | (Branch code of the consultation) s.224 |
+| `drTescilNo` | string |  | — |  | (Registration number of the performing doctor) s.224 |
+| `sutKodu` | string |  | — |  | (SUT-defined operation code) s.224 |
+| `hizmetSunucuRefNo` | string |  | — |  | (Institution reference paired with islemSiraNo) s.224 |
+| `islemSiraNo` | string |  | — |  | (Sequence number; null-on-input pattern) s.224 |
+| `islemTarihi` | date |  | — |  | (Consultation date, dd.mm.yyyy) s.224 |
+| `ozelDurum` | string |  | — |  | (Special condition code, Tablo 5.1 OzelDurumVO) s.224 |
+| `cokluOzelDurum` | array |  | — |  | (Multiple special-condition codes) s.224 |
+
+## `MuayeneBilgisiDVO`
+
+Domain: `hizmet-kayit` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19, medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `bransKodu` | string |  | — |  | Branch code of the examination (s.226) |
+| `drTescilNo` | string |  | — |  | Registration number of the performing doctor (s.226) |
+| `sutKodu` | string |  | — |  | SUT-defined operation code (s.226) |
+| `hizmetSunucuRefNo` | string |  | — |  | Institution reference paired with islemSiraNo (s.226) |
+| `islemSiraNo` | string |  | — |  | Sequence number; null-on-input pattern (s.227) |
+| `muayeneTarihi` | date |  | — |  | Examination date, dd.mm.yyyy (s.227) |
+| `ozelDurum` | string |  | — |  | Special condition code, Tablo 5.1 OzelDurumVO (s.227) |
+| `cokluOzelDurum` | array |  | — |  | Multiple special-condition codes (s.227) |
 
 ## `OncekiIslemBilgisiDVO`
 

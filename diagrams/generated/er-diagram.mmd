@@ -95,6 +95,19 @@ erDiagram
     date faturaTarihi
     string ktsHbysKodu
   }
+  HastaYatisBilgisiDVO {
+    string bransKodu
+    string drTescilNo
+    string sutKodu
+    string hizmetSunucuRefNo
+    string islemSiraNo
+    string refakatciGunSayisi
+    date yatisBaslangicTarihi
+    date yatisBitisTarihi
+    string ozelDurum
+    string aciklama
+    array cokluOzelDurum
+  }
   HataliIslemBilgisiDVO {
     string hataKodu
     string hataMesaji
@@ -175,9 +188,42 @@ erDiagram
     string takipNo
     string ktsHbysKodu
   }
+  KanBilgisiDVO {
+    string bransKodu
+    string drTescilNo
+    string sutKodu
+    string hizmetSunucuRefNo
+    string islemSiraNo
+    integer adet
+    string isbtBilesenNo
+    string isbtUniteNo
+    date islemTarihi
+    string ozelDurum
+    array cokluOzelDurum
+  }
   KayitliIslemBilgisiDVO {
     string hizmetSunucuRefNo
     string islemSiraNo
+  }
+  KonsultasyonBilgisiDVO {
+    string bransKodu
+    string drTescilNo
+    string sutKodu
+    string hizmetSunucuRefNo
+    string islemSiraNo
+    date islemTarihi
+    string ozelDurum
+    array cokluOzelDurum
+  }
+  MuayeneBilgisiDVO {
+    string bransKodu
+    string drTescilNo
+    string sutKodu
+    string hizmetSunucuRefNo
+    string islemSiraNo
+    date muayeneTarihi
+    string ozelDurum
+    array cokluOzelDurum
   }
   OncekiIslemBilgisiDVO {
     integer islemAdedi

@@ -6,6 +6,35 @@ Format: [Keep a Changelog](https://keepachangelog.com); versioning: SemVer
 
 ## [Unreleased]
 
+### Group 18 — feat/v03-entries-2 (2026-11-15)
+
+Local group: no remote yet, so the PR step is replaced by a local
+`--no-ff` merge to `main` (PRD §28 step 6 fallback).
+
+- TDD red first: entry composite suite part 2 (5 checks) committed and
+  verified failing (5/5 red) before the composites existed (`7fea73b`).
+- Four new reviewed DVOs from the guide tables:
+  `KonsultasyonBilgisiDVO` (4.2.1.g, s.224, 8 fields),
+  `MuayeneBilgisiDVO` (4.2.1.i, s.226-227, 8 fields),
+  `HastaYatisBilgisiDVO` (4.2.1.o, s.234, 11 fields incl.
+  refakatciGunSayisi and the yatis date pair), `KanBilgisiDVO`
+  (4.2.1.s, s.234-235, ISBT bilesen/unite fields).
+- The shared service-entry pattern (bransKodu/drTescilNo/sutKodu/
+  hizmetSunucuRefNo/islemSiraNo null-on-input/ozelDurum/cokluOzelDurum)
+  is now consistent across five entry composites.
+- Registry now: **32 DVOs, 14 enums**; dist regenerated.
+
+Deferred to Group 19: `IlacBilgisiDVO` (the 26-page drug table, s.198-223),
+`DisBilgisiDVO` (dental chart, s.193-195), `TahlilBilgisiDVO` (s.227-228
+boundary), `MalzemeBilgisiDVO` (s.224-226 boundary), devredilenKurum
+enum, new HastaKabul methods, Mimosa audit, GitHub remote.
+
+Validation output: `pnpm test` → 130/130 passed (19 suites); `tsc
+--noEmit` → clean; `pnpm validate` → OK; `pnpm check` → OK;
+`pnpm format:check` → OK.
+
+Remaining TODOs: none for this group.
+
 ### Group 17 — feat/v03-entries-1 (2026-11-15)
 
 Local group: no remote yet, so the PR step is replaced by a local
