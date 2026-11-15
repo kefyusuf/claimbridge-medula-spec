@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://claimbridge.dev/schemas/method.schema.json",
+  "title": "Method registry file (PRD 12.2, amended: nullable contract)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "service", "names", "contract", "sourceRefs", "stateEffects", "success", "sandbox", "status"],
+  "properties": {
+    "id": { "$ref": "common.schema.json#/$defs/nonEmptyString" },
+    "service": { "$ref": "common.schema.json#/$defs/nonEmptyString" },
+    "names": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["documentationHeading", "operationName", "aliases"],
+      "properties": {
+        "documentationHeading": { "$ref": "common.schema.json#/$defs/nonEmptyString" },
+        "operationName": { "$ref": "common.schema.json#/$defs/nonEmptyString" },
+        "aliases": { "$ref": "common.schema.json#/$defs/stringList" }
+      }
+    },
+    "contract": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["inputDvo", "outputDvo"],
+      "properties": {
+        "inputDvo": { "type": ["string", "null"], "description": "DVO id, or null only while status is draft (PRD 12.2 MVP note)." },
+        "outputDvo": { "type": ["string", "null"], "description": "DVO id, or null only while status is draft (PRD 12.2 MVP note)." }
+      }
+    },
+    "sourceRefs": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "common.schema.json#/$defs/sourceReference" }
+    },
+    "stateEffects": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["creates", "reads", "updates", "deletes", "generates"],
+      "properties": {
+        "creates": { "$ref": "common.schema.json#/$defs/stringList" },
+        "reads": { "$ref": "common.schema.json#/$defs/stringList" },
+        "updates": { "$ref": "common.schema.json#/$defs/stringList" },
+        "deletes": { "$ref": "common.schema.json#/$defs/stringList" },
+        "generates": { "$ref": "common.schema.json#/$defs/stringList" }
+      }
+    },
+    "success": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["resultCodeField", "successCode", "messageField"],
+      "properties": {
+        "resultCodeField": { "$ref": "common.schema.json#/$defs/nonEmptyString" },
+        "successCode": { "$ref": "common.schema.json#/$defs/nonEmptyString" },
+        "messageField": { "$ref": "common.schema.json#/$defs/nonEmptyString" }
+      }
+    },
+    "sandbox": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["supported", "defaultScenario"],
+      "properties": {
+        "supported": { "type": "boolean" },
+        "defaultScenario": { "type": ["string", "null"] }
+      }
+    },
+    "status": { "$ref": "common.schema.json#/$defs/status" }
+  }
+}

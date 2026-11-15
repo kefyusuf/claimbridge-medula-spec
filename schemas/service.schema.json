@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://claimbridge.dev/schemas/service.schema.json",
+  "title": "Service registry file (PRD 12.1)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "slug", "displayName", "description", "sourceRefs", "wsdl", "methods", "status"],
+  "properties": {
+    "id": { "$ref": "common.schema.json#/$defs/nonEmptyString" },
+    "slug": { "$ref": "common.schema.json#/$defs/nonEmptyString" },
+    "displayName": { "$ref": "common.schema.json#/$defs/nonEmptyString" },
+    "description": { "$ref": "common.schema.json#/$defs/nonEmptyString" },
+    "sourceRefs": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "common.schema.json#/$defs/sourceReference" }
+    },
+    "wsdl": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["production", "test"],
+      "properties": {
+        "production": { "type": ["string", "null"], "description": "WSDL manifest id from sources/wsdl-manifest.yml, or null." },
+        "test": { "type": ["string", "null"], "description": "WSDL manifest id from sources/wsdl-manifest.yml, or null." }
+      }
+    },
+    "methods": { "$ref": "common.schema.json#/$defs/stringList" },
+    "status": { "$ref": "common.schema.json#/$defs/status" }
+  }
+}

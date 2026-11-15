@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://claimbridge.dev/schemas/dvo.schema.json",
+  "title": "DVO registry file (PRD 12.3)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "domain", "direction", "sourceRefs", "fields", "status"],
+  "properties": {
+    "id": { "$ref": "common.schema.json#/$defs/nonEmptyString" },
+    "domain": { "$ref": "common.schema.json#/$defs/nonEmptyString" },
+    "direction": { "$ref": "common.schema.json#/$defs/direction" },
+    "sourceRefs": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "common.schema.json#/$defs/sourceReference" }
+    },
+    "fields": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "field.schema.json" }
+    },
+    "status": { "$ref": "common.schema.json#/$defs/status" }
+  }
+}

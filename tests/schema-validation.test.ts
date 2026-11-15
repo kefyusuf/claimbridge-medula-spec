@@ -13,7 +13,7 @@ const fixturesDir = resolve(root, "tests", "fixtures");
 let ajv: Ajv2020;
 
 beforeAll(() => {
-  ajv = new Ajv2020({ allErrors: true });
+  ajv = new Ajv2020({ allErrors: true, allowUnionTypes: true });
   const files = readdirSync(schemasDir).filter((f) => f.endsWith(".schema.json"));
   expect(files.length, "schemas directory must contain schema files").toBeGreaterThan(0);
   for (const file of files) {
@@ -32,24 +32,24 @@ function getValidator(schemaName: string): ValidateFunction {
 }
 
 const validFixtures: Array<[string, string]> = [
-  ["service", "service.valid.yml"],
-  ["method", "method.valid.yml"],
-  ["dvo", "dvo.valid.yml"],
-  ["workflow", "workflow.valid.yml"],
-  ["scenario", "scenario.valid.yml"],
+  ["service", "valid/service.valid.yml"],
+  ["method", "valid/method.valid.yml"],
+  ["dvo", "valid/dvo.valid.yml"],
+  ["workflow", "valid/workflow.valid.yml"],
+  ["scenario", "valid/scenario.valid.yml"],
 ];
 
 const schemaInvalidFixtures: Array<[string, string]> = [
-  ["service", "service-missing-id.yml"],
-  ["method", "method-bad-status.yml"],
-  ["dvo", "dvo-invalid-field-type.yml"],
+  ["service", "invalid/service-missing-id.yml"],
+  ["method", "invalid/method-bad-status.yml"],
+  ["dvo", "invalid/dvo-invalid-field-type.yml"],
 ];
 
 const referenceInvalidFixtures: Array<[string, string]> = [
-  ["method", "method-unknown-dvo-ref.yml"],
-  ["dvo", "field-bad-enum-ref.yml"],
-  ["workflow", "workflow-missing-method-ref.yml"],
-  ["scenario", "scenario-missing-method-ref.yml"],
+  ["method", "invalid/method-unknown-dvo-ref.yml"],
+  ["dvo", "invalid/field-bad-enum-ref.yml"],
+  ["workflow", "invalid/workflow-missing-method-ref.yml"],
+  ["scenario", "invalid/scenario-missing-method-ref.yml"],
 ];
 
 describe("schema-validation (Group 1)", () => {

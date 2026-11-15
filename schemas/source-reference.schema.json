@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://claimbridge.dev/schemas/source-reference.schema.json",
+  "title": "Standalone source reference (PRD 12.9)",
+  "description": "A single provenance record. The same shape is embedded as sourceRefs items in every registry entity via common.schema.json#/$defs/sourceReference.",
+  "type": "object",
+  "$ref": "common.schema.json#/$defs/sourceReference"
+}

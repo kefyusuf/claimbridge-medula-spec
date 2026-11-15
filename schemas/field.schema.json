@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://claimbridge.dev/schemas/field.schema.json",
+  "title": "Field definition (PRD 12.4, amended: enumRef)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "name",
+    "displayName",
+    "type",
+    "enumRef",
+    "required",
+    "length",
+    "description",
+    "sensitive",
+    "syntheticOnlyRecommended",
+    "sourceRefs",
+    "conditionalRequired",
+    "introducedIn",
+    "deprecatedIn"
+  ],
+  "properties": {
+    "name": { "$ref": "common.schema.json#/$defs/nonEmptyString" },
+    "displayName": { "type": ["string", "null"] },
+    "type": { "$ref": "common.schema.json#/$defs/fieldType" },
+    "enumRef": {
+      "type": ["string", "null"],
+      "description": "Registry enum id; required (non-null) when type is enum, null otherwise (PRD 12.4 amendment)."
+    },
+    "required": { "type": "boolean" },
+    "length": { "type": ["integer", "string", "null"] },
+    "description": { "type": ["string", "null"] },
+    "sensitive": { "type": "boolean" },
+    "syntheticOnlyRecommended": { "type": "boolean" },
+    "sourceRefs": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "common.schema.json#/$defs/sourceReference" }
+    },
+    "conditionalRequired": {
+      "type": "array",
+      "items": { "$ref": "common.schema.json#/$defs/conditionalRule" }
+    },
+    "introducedIn": { "type": ["string", "null"] },
+    "deprecatedIn": { "type": ["string", "null"] }
+  }
+}

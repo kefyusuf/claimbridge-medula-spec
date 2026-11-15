@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://claimbridge.dev/schemas/rule.schema.json",
+  "title": "Rule registry file (PRD 12.6)",
+  "description": "Rule files aggregate multiple rules under a top-level rules array; the individual rule object is defined in $defs.rule.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["rules"],
+  "properties": {
+    "rules": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/rule" }
+    }
+  },
+  "$defs": {
+    "rule": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "type", "appliesTo", "condition", "assertion", "severity", "sourceRefs", "status"],
+      "properties": {
+        "id": { "$ref": "common.schema.json#/$defs/nonEmptyString" },
+        "type": {
+          "enum": [
+            "required-field",
+            "conditional-required-field",
+            "state-transition",
+            "invoice-rule",
+            "cancellation-rule",
+            "sandbox-only"
+          ]
+        },
+        "appliesTo": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["service", "method", "dvo", "field"],
+          "properties": {
+            "service": { "type": ["string", "null"] },
+            "method": { "type": ["string", "null"] },
+            "dvo": { "type": ["string", "null"] },
+            "field": { "type": ["string", "null"] }
+          }
+        },
+        "condition": { "type": ["string", "null"] },
+        "assertion": { "$ref": "common.schema.json#/$defs/nonEmptyString" },
+        "severity": { "$ref": "common.schema.json#/$defs/severity" },
+        "sourceRefs": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "common.schema.json#/$defs/sourceReference" }
+        },
+        "status": { "$ref": "common.schema.json#/$defs/status" }
+      }
+    }
+  }
+}
