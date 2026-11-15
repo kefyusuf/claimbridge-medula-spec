@@ -1,0 +1,178 @@
+id: ProvizyonGirisDVO
+domain: hasta-kabul
+direction: input
+sourceRefs:
+  - id: medula-hastane-guide-2026-06-17
+    sourceType: official-guide
+    guideVersion: "2026-06-17"
+    confidence: extracted
+fields:
+  - name: saglikTesisKodu
+    displayName: Saglik Tesisi Kodu
+    type: integer
+    enumRef: null
+    required: true
+    length: null
+    description: Healthcare facility code assigned to the institution.
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-2026-06-17
+        sourceType: official-guide
+        guideVersion: "2026-06-17"
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: null
+    deprecatedIn: null
+
+  - name: hastaTCKimlikNo
+    displayName: Hastanin TC Kimlik Numarasi
+    type: string
+    enumRef: null
+    required: true
+    length: 11
+    description: Patient identity number. Examples must use synthetic placeholders only.
+    sensitive: true
+    syntheticOnlyRecommended: true
+    sourceRefs:
+      - id: medula-hastane-guide-2026-06-17
+        sourceType: official-guide
+        guideVersion: "2026-06-17"
+        confidence: extracted
+    conditionalRequired:
+      - condition: patient is a foreign national without a T.C. identity number
+        note: foreign-patient provizyon uses alternative identifiers; deferred to v0.2
+    introducedIn: null
+    deprecatedIn: null
+
+  - name: takipNo
+    displayName: Takip Numarasi
+    type: string
+    enumRef: null
+    required: false
+    length: null
+    description: Existing tracking number used when requesting a related (bagli) follow-up tracking number.
+    sensitive: false
+    syntheticOnlyRecommended: true
+    sourceRefs:
+      - id: medula-hastane-guide-2026-06-17
+        sourceType: official-guide
+        guideVersion: "2026-06-17"
+        confidence: extracted
+    conditionalRequired:
+      - condition: takipTipi is B (bagli takip)
+        note: covered by rule conditional-takip-no-for-bagli-takip
+    introducedIn: null
+    deprecatedIn: null
+
+  - name: provizyonTipi
+    displayName: Provizyon Tipi
+    type: enum
+    enumRef: provizyon-tipi
+    required: true
+    length: null
+    description: Provision type controlling how SGK covers the admission.
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-2026-06-17
+        sourceType: official-guide
+        guideVersion: "2026-06-17"
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: null
+    deprecatedIn: null
+
+  - name: tedaviTuru
+    displayName: Tedavi Turu
+    type: enum
+    enumRef: tedavi-turu
+    required: true
+    length: null
+    description: Treatment type of the admission (inpatient or outpatient).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-2026-06-17
+        sourceType: official-guide
+        guideVersion: "2026-06-17"
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: null
+    deprecatedIn: null
+
+  - name: takipTipi
+    displayName: Takip Tipi
+    type: enum
+    enumRef: takip-tipi
+    required: true
+    length: null
+    description: Whether this is a new tracking record or one attached to an existing tracking number.
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-2026-06-17
+        sourceType: official-guide
+        guideVersion: "2026-06-17"
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: null
+    deprecatedIn: null
+
+  - name: bransKodu
+    displayName: Brans Kodu
+    type: integer
+    enumRef: null
+    required: true
+    length: null
+    description: Medical branch (specialty) code of the admitting department.
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-2026-06-17
+        sourceType: official-guide
+        guideVersion: "2026-06-17"
+        confidence: inferred
+        notes: Type assumed integer; verify against the guide field table.
+    conditionalRequired: []
+    introducedIn: null
+    deprecatedIn: null
+
+  - name: doktorTescilNo
+    displayName: Doktor Tescil Numarasi
+    type: string
+    enumRef: null
+    required: true
+    length: null
+    description: Registration number of the admitting doctor. Examples use synthetic placeholders.
+    sensitive: false
+    syntheticOnlyRecommended: true
+    sourceRefs:
+      - id: medula-hastane-guide-2026-06-17
+        sourceType: official-guide
+        guideVersion: "2026-06-17"
+        confidence: inferred
+        notes: Type assumed string; verify against the guide field table.
+    conditionalRequired: []
+    introducedIn: null
+    deprecatedIn: null
+
+  - name: ktsHbysKodu
+    displayName: KTS HBYS Kodu
+    type: string
+    enumRef: null
+    required: false
+    length: null
+    description: Hospital information system (HBYS) code used by the KTS integration.
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-2026-06-17
+        sourceType: official-guide
+        guideVersion: "2026-06-17"
+        confidence: inferred
+        notes: Required flag assumed optional; verify against the guide field table.
+    conditionalRequired: []
+    introducedIn: null
+    deprecatedIn: null
+status: draft

@@ -1,0 +1,136 @@
+id: HizmetKayitGirisDVO
+domain: hizmet-kayit
+direction: input
+sourceRefs:
+  - id: medula-hastane-guide-2026-06-17
+    sourceType: official-guide
+    guideVersion: "2026-06-17"
+    confidence: extracted
+fields:
+  - name: saglikTesisKodu
+    displayName: Saglik Tesisi Kodu
+    type: integer
+    enumRef: null
+    required: true
+    length: null
+    description: Healthcare facility code of the registering institution.
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-2026-06-17
+        sourceType: official-guide
+        guideVersion: "2026-06-17"
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: null
+    deprecatedIn: null
+
+  - name: hastaBasvuruNo
+    displayName: Hasta Basvuru Numarasi
+    type: string
+    enumRef: null
+    required: true
+    length: null
+    description: Patient application number produced by the admission flow.
+    sensitive: false
+    syntheticOnlyRecommended: true
+    sourceRefs:
+      - id: medula-hastane-guide-2026-06-17
+        sourceType: official-guide
+        guideVersion: "2026-06-17"
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: null
+    deprecatedIn: null
+
+  - name: takipNo
+    displayName: Takip Numarasi
+    type: string
+    enumRef: null
+    required: true
+    length: null
+    description: Tracking number the services are registered against.
+    sensitive: false
+    syntheticOnlyRecommended: true
+    sourceRefs:
+      - id: medula-hastane-guide-2026-06-17
+        sourceType: official-guide
+        guideVersion: "2026-06-17"
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: null
+    deprecatedIn: null
+
+  - name: taniBilgileri
+    displayName: Tani Bilgileri
+    type: array
+    enumRef: null
+    required: true
+    length: null
+    description: Diagnosis entries (ICD-10 codes with type qualifiers) for this episode.
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-2026-06-17
+        sourceType: official-guide
+        guideVersion: "2026-06-17"
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: null
+    deprecatedIn: null
+
+  - name: islemBilgileri
+    displayName: Islem Bilgileri
+    type: array
+    enumRef: null
+    required: true
+    length: null
+    description: Procedure/operation entries performed during the episode.
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-2026-06-17
+        sourceType: official-guide
+        guideVersion: "2026-06-17"
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: null
+    deprecatedIn: null
+
+  - name: hizmetDetaylari
+    displayName: Hizmet Detaylari
+    type: array
+    enumRef: null
+    required: true
+    length: null
+    description: Detailed service lines (HizmetDetayDVO records) to register.
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-2026-06-17
+        sourceType: official-guide
+        guideVersion: "2026-06-17"
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: null
+    deprecatedIn: null
+
+  - name: ktsHbysKodu
+    displayName: KTS HBYS Kodu
+    type: string
+    enumRef: null
+    required: false
+    length: null
+    description: Hospital information system (HBYS) code used by the KTS integration.
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-2026-06-17
+        sourceType: official-guide
+        guideVersion: "2026-06-17"
+        confidence: inferred
+        notes: Required flag assumed optional; verify against the guide field table.
+    conditionalRequired: []
+    introducedIn: null
+    deprecatedIn: null
+status: draft
