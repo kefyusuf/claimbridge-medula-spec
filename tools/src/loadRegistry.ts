@@ -39,14 +39,18 @@ function loadNested(dir: string): YamlFile[] {
     .flatMap((d) =>
       readdirSync(resolve(dir, d.name))
         .filter((f) => f.endsWith(".yml"))
-        .map((file) => ({ file: `${d.name}/${file}`, data: readYaml(resolve(dir, d.name, file)) })),
+        .map((file) => ({
+          file: `${d.name}/${file}`,
+          data: readYaml(resolve(dir, d.name, file)),
+        })),
     );
 }
 
 function collectSourceIds(root: string): Set<string> {
   const ids = new Set<string>();
   const official = readYaml(resolve(root, "sources", "official-sources.yml"));
-  for (const s of (official["sources"] as Array<Record<string, unknown>>) ?? []) {
+  for (const s of (official["sources"] as Array<Record<string, unknown>>) ??
+    []) {
     if (typeof s["id"] === "string") ids.add(s["id"]);
   }
   const guides = readYaml(resolve(root, "sources", "guide-versions.yml"));
@@ -56,7 +60,9 @@ function collectSourceIds(root: string): Set<string> {
   return ids;
 }
 
-function collectWsdlIds(root: string): Map<string, { service: string; environment: string }> {
+function collectWsdlIds(
+  root: string,
+): Map<string, { service: string; environment: string }> {
   const map = new Map<string, { service: string; environment: string }>();
   const manifest = readYaml(resolve(root, "sources", "wsdl-manifest.yml"));
   for (const w of (manifest["wsdls"] as Array<Record<string, unknown>>) ?? []) {
@@ -64,7 +70,8 @@ function collectWsdlIds(root: string): Map<string, { service: string; environmen
     if (typeof id === "string") {
       map.set(id, {
         service: typeof w["service"] === "string" ? w["service"] : "",
-        environment: typeof w["environment"] === "string" ? w["environment"] : "",
+        environment:
+          typeof w["environment"] === "string" ? w["environment"] : "",
       });
     }
   }

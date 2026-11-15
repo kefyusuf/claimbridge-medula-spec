@@ -52,8 +52,14 @@ function readYamlEntries(path: string, key: string): Record<string, unknown>[] {
 
 export function buildBundle(reg: Registry, generatedAt: string): Bundle {
   const sources = [
-    ...readYamlEntries(resolve(reg.root, "sources", "official-sources.yml"), "sources"),
-    ...readYamlEntries(resolve(reg.root, "sources", "guide-versions.yml"), "guides"),
+    ...readYamlEntries(
+      resolve(reg.root, "sources", "official-sources.yml"),
+      "sources",
+    ),
+    ...readYamlEntries(
+      resolve(reg.root, "sources", "guide-versions.yml"),
+      "guides",
+    ),
   ].sort((a, b) => {
     const ka = String(a["id"] ?? "");
     const kb = String(b["id"] ?? "");
@@ -113,7 +119,11 @@ export function buildManifest(
   };
 }
 
-export function writeDist(reg: Registry, outDir: string, generatedAt: string): Manifest {
+export function writeDist(
+  reg: Registry,
+  outDir: string,
+  generatedAt: string,
+): Manifest {
   const bundle = buildBundle(reg, generatedAt);
   const pretty = renderPretty(bundle);
   const minified = renderMinified(bundle);

@@ -6,6 +6,31 @@ Format: [Keep a Changelog](https://keepachangelog.com); versioning: SemVer
 
 ## [Unreleased]
 
+### Group 7 — ci/pipeline (2026-11-15)
+
+Local group: no remote yet, so the PR step is replaced by a local `--no-ff`
+merge to `main` (PRD §28 step 6 fallback).
+
+- TDD red first: CI contract suite (2 checks — PRD §21 step order and
+  format:check pass) committed and verified failing before the pipeline
+  existed (`56e0b4c`).
+- Prettier scope decision (`4c298ec`): `.prettierignore` excludes generated
+  outputs (they are byte-compared by `check` — prettier must never touch
+  them), hand-authored prose (`*.md`), diagram sources (`*.mmd`), and the
+  lockfile. Formatting applied across tooling, tests, schemas, registry
+  manifests, and fixtures; `pnpm check` verified registry semantics stayed
+  byte-identical through the reformat.
+- Full CI (`fcb20a3`): install → format:check → validate → test → check on
+  push/PR per PRD §21. pnpm version comes from `packageManager`
+  (11.1.1) instead of the PRD's pinned `version: 9` input.
+
+Validation output (full PRD §29 checklist green): `pnpm install
+--frozen-lockfile` ✓, `pnpm format:check` ✓, `pnpm validate` ✓, `pnpm test`
+→ 69/69 ✓, `pnpm generate` ✓, `pnpm check` ✓, `tsc --noEmit` clean.
+
+Remaining TODOs: none for this group. Next: Group 8 — `docs/readme`
+(final public-ready polish: README refresh, CHANGELOG 0.1.0 entry).
+
 ### Group 6 — feat/generators (2026-11-15)
 
 Local group: no remote yet, so the PR step is replaced by a local `--no-ff`

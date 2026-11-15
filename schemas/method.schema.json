@@ -4,7 +4,17 @@
   "title": "Method registry file (PRD 12.2, amended: nullable contract)",
   "type": "object",
   "additionalProperties": false,
-  "required": ["id", "service", "names", "contract", "sourceRefs", "stateEffects", "success", "sandbox", "status"],
+  "required": [
+    "id",
+    "service",
+    "names",
+    "contract",
+    "sourceRefs",
+    "stateEffects",
+    "success",
+    "sandbox",
+    "status"
+  ],
   "properties": {
     "id": { "$ref": "common.schema.json#/$defs/nonEmptyString" },
     "service": { "$ref": "common.schema.json#/$defs/nonEmptyString" },
@@ -13,7 +23,9 @@
       "additionalProperties": false,
       "required": ["documentationHeading", "operationName", "aliases"],
       "properties": {
-        "documentationHeading": { "$ref": "common.schema.json#/$defs/nonEmptyString" },
+        "documentationHeading": {
+          "$ref": "common.schema.json#/$defs/nonEmptyString"
+        },
         "operationName": { "$ref": "common.schema.json#/$defs/nonEmptyString" },
         "aliases": { "$ref": "common.schema.json#/$defs/stringList" }
       }
@@ -23,8 +35,14 @@
       "additionalProperties": false,
       "required": ["inputDvo", "outputDvo"],
       "properties": {
-        "inputDvo": { "type": ["string", "null"], "description": "DVO id, or null only while status is draft (PRD 12.2 MVP note)." },
-        "outputDvo": { "type": ["string", "null"], "description": "DVO id, or null only while status is draft (PRD 12.2 MVP note)." }
+        "inputDvo": {
+          "type": ["string", "null"],
+          "description": "DVO id, or null only while status is draft (PRD 12.2 MVP note)."
+        },
+        "outputDvo": {
+          "type": ["string", "null"],
+          "description": "DVO id, or null only while status is draft (PRD 12.2 MVP note)."
+        }
       }
     },
     "sourceRefs": {
@@ -49,7 +67,9 @@
       "additionalProperties": false,
       "required": ["resultCodeField", "successCode", "messageField"],
       "properties": {
-        "resultCodeField": { "$ref": "common.schema.json#/$defs/nonEmptyString" },
+        "resultCodeField": {
+          "$ref": "common.schema.json#/$defs/nonEmptyString"
+        },
         "successCode": { "$ref": "common.schema.json#/$defs/nonEmptyString" },
         "messageField": { "$ref": "common.schema.json#/$defs/nonEmptyString" }
       }

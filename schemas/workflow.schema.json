@@ -15,7 +15,15 @@
       "items": {
         "type": "object",
         "additionalProperties": false,
-        "required": ["id", "method", "requires", "creates", "updates", "deletes", "next"],
+        "required": [
+          "id",
+          "method",
+          "requires",
+          "creates",
+          "updates",
+          "deletes",
+          "next"
+        ],
         "properties": {
           "id": { "$ref": "common.schema.json#/$defs/nonEmptyString" },
           "method": { "$ref": "common.schema.json#/$defs/nonEmptyString" },

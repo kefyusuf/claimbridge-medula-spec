@@ -7,14 +7,21 @@ import { mkdirSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 import type { Registry } from "./loadRegistry.js";
 
-export const MERMAID_NAMES = ["core-flow.mmd", "er-diagram.mmd", "service-map.mmd"] as const;
+export const MERMAID_NAMES = [
+  "core-flow.mmd",
+  "er-diagram.mmd",
+  "service-map.mmd",
+] as const;
 
-export const MERMAID_HEADER = "%% This file is generated. Do not edit manually.";
+export const MERMAID_HEADER =
+  "%% This file is generated. Do not edit manually.";
 
 type Entity = Record<string, unknown>;
 
 function obj(v: unknown): Entity {
-  return v !== null && typeof v === "object" && !Array.isArray(v) ? (v as Entity) : {};
+  return v !== null && typeof v === "object" && !Array.isArray(v)
+    ? (v as Entity)
+    : {};
 }
 
 function arr(v: unknown): unknown[] {
@@ -49,12 +56,16 @@ function renderErDiagram(reg: Registry): string {
     lines.push("  }");
   }
 
-  for (const m of [...reg.methods].map((f) => f.data).sort((a, b) => (str(a["id"]) < str(b["id"]) ? -1 : 1))) {
+  for (const m of [...reg.methods]
+    .map((f) => f.data)
+    .sort((a, b) => (str(a["id"]) < str(b["id"]) ? -1 : 1))) {
     const contract = obj(m["contract"]);
     for (const key of ["inputDvo", "outputDvo"] as const) {
       const dvo = str(contract[key]);
       if (dvo !== "") {
-        lines.push(`  ${sanitize(str(m["id"]))} ||--|| ${sanitize(dvo)} : ${key}`);
+        lines.push(
+          `  ${sanitize(str(m["id"]))} ||--|| ${sanitize(dvo)} : ${key}`,
+        );
       }
     }
   }
@@ -64,7 +75,9 @@ function renderErDiagram(reg: Registry): string {
       const f = obj(field);
       const ref = str(f["enumRef"]);
       if (ref !== "" && enumIds.has(ref)) {
-        lines.push(`  ${sanitize(str(dvo["id"]))} }o--|| ${sanitize(ref)} : enumRef`);
+        lines.push(
+          `  ${sanitize(str(dvo["id"]))} }o--|| ${sanitize(ref)} : enumRef`,
+        );
       }
     }
   }
@@ -72,7 +85,9 @@ function renderErDiagram(reg: Registry): string {
 }
 
 function renderCoreFlow(reg: Registry): string {
-  const core = reg.workflows.map((w) => w.data).find((w) => str(w["id"]) === "core-claim-flow");
+  const core = reg.workflows
+    .map((w) => w.data)
+    .find((w) => str(w["id"]) === "core-claim-flow");
   const steps = core ? arr(core["steps"]) : [];
   const lines: string[] = ["flowchart LR"];
   const nodeIds: string[] = [];

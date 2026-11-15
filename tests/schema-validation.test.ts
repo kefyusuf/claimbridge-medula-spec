@@ -14,8 +14,13 @@ let ajv: Ajv2020;
 
 beforeAll(() => {
   ajv = new Ajv2020({ allErrors: true, allowUnionTypes: true });
-  const files = readdirSync(schemasDir).filter((f) => f.endsWith(".schema.json"));
-  expect(files.length, "schemas directory must contain schema files").toBeGreaterThan(0);
+  const files = readdirSync(schemasDir).filter((f) =>
+    f.endsWith(".schema.json"),
+  );
+  expect(
+    files.length,
+    "schemas directory must contain schema files",
+  ).toBeGreaterThan(0);
   for (const file of files) {
     ajv.addSchema(JSON.parse(readFileSync(resolve(schemasDir, file), "utf8")));
   }
@@ -54,7 +59,9 @@ const referenceInvalidFixtures: Array<[string, string]> = [
 
 describe("schema-validation (Group 1)", () => {
   it("contains exactly the 10 schemas from PRD section 11", () => {
-    const files = readdirSync(schemasDir).filter((f) => f.endsWith(".schema.json"));
+    const files = readdirSync(schemasDir).filter((f) =>
+      f.endsWith(".schema.json"),
+    );
     expect(files).toHaveLength(10);
   });
 
@@ -64,18 +71,23 @@ describe("schema-validation (Group 1)", () => {
     expect(ok, JSON.stringify(validate.errors ?? [], null, 2)).toBe(true);
   });
 
-  it.each(schemaInvalidFixtures)("rejects schema-invalid fixture: %s", (schemaName, file) => {
-    const validate = getValidator(schemaName);
-    const ok = validate(loadFixture(file));
-    expect(ok, "fixture must fail schema validation").toBe(false);
-    expect(validate.errors?.length).toBeGreaterThan(0);
-  });
+  it.each(schemaInvalidFixtures)(
+    "rejects schema-invalid fixture: %s",
+    (schemaName, file) => {
+      const validate = getValidator(schemaName);
+      const ok = validate(loadFixture(file));
+      expect(ok, "fixture must fail schema validation").toBe(false);
+      expect(validate.errors?.length).toBeGreaterThan(0);
+    },
+  );
 
   it.each(referenceInvalidFixtures)(
     "accepts schema-wise (reference failure is Group 5's job): %s",
     (schemaName, file) => {
       const validate = getValidator(schemaName);
-      expect(validate(loadFixture(file)), "fixture must pass schema").toBe(true);
+      expect(validate(loadFixture(file)), "fixture must pass schema").toBe(
+        true,
+      );
     },
   );
 });

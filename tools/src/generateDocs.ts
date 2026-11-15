@@ -8,14 +8,23 @@ import { mkdirSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 import type { Registry, YamlFile } from "./loadRegistry.js";
 
-export const DOC_NAMES = ["dvos.md", "methods.md", "scenarios.md", "services.md", "workflows.md"] as const;
+export const DOC_NAMES = [
+  "dvos.md",
+  "methods.md",
+  "scenarios.md",
+  "services.md",
+  "workflows.md",
+] as const;
 
-export const GENERATED_HEADER = "<!-- This file is generated. Do not edit manually. -->";
+export const GENERATED_HEADER =
+  "<!-- This file is generated. Do not edit manually. -->";
 
 type Entity = Record<string, unknown>;
 
 function obj(v: unknown): Entity {
-  return v !== null && typeof v === "object" && !Array.isArray(v) ? (v as Entity) : {};
+  return v !== null && typeof v === "object" && !Array.isArray(v)
+    ? (v as Entity)
+    : {};
 }
 
 function arr(v: unknown): unknown[] {
@@ -44,7 +53,9 @@ function table(headers: string[], rows: string[][]): string {
 }
 
 function codeRefs(entity: Entity): string {
-  const refs = arr(entity["sourceRefs"]).map((r) => str(obj(r)["id"])).filter(Boolean);
+  const refs = arr(entity["sourceRefs"])
+    .map((r) => str(obj(r)["id"]))
+    .filter(Boolean);
   return refs.join(", ");
 }
 
@@ -96,7 +107,10 @@ function renderMethods(reg: Registry): string {
           ["Operation name", str(names["operationName"])],
           ["Input DVO", str(contract["inputDvo"]) || "null"],
           ["Output DVO", str(contract["outputDvo"]) || "null"],
-          ["Success", `${str(success["resultCodeField"])} = ${str(success["successCode"])} (${str(success["messageField"])})`],
+          [
+            "Success",
+            `${str(success["resultCodeField"])} = ${str(success["successCode"])} (${str(success["messageField"])})`,
+          ],
           ["Sandbox supported", str(sandbox["supported"])],
           ["Status", str(m["status"])],
           ["Source refs", codeRefs(m)],
@@ -109,7 +123,9 @@ function renderMethods(reg: Registry): string {
         ["Effect", "Targets"],
         ["creates", "reads", "updates", "deletes", "generates"].map((k) => [
           k,
-          arr(effects[k]).map((v) => `\`${str(v)}\``).join(", ") || "—",
+          arr(effects[k])
+            .map((v) => `\`${str(v)}\``)
+            .join(", ") || "—",
         ]),
       ),
       "",
@@ -161,11 +177,21 @@ function renderWorkflows(reg: Registry): string {
           return [
             `\`${str(e["id"])}\``,
             `\`${str(e["method"])}\``,
-            arr(e["requires"]).map((v) => `\`${str(v)}\``).join(", ") || "—",
-            arr(e["creates"]).map((v) => `\`${str(v)}\``).join(", ") || "—",
-            arr(e["updates"]).map((v) => `\`${str(v)}\``).join(", ") || "—",
-            arr(e["deletes"]).map((v) => `\`${str(v)}\``).join(", ") || "—",
-            arr(e["next"]).map((v) => `\`${str(v)}\``).join(", ") || "—",
+            arr(e["requires"])
+              .map((v) => `\`${str(v)}\``)
+              .join(", ") || "—",
+            arr(e["creates"])
+              .map((v) => `\`${str(v)}\``)
+              .join(", ") || "—",
+            arr(e["updates"])
+              .map((v) => `\`${str(v)}\``)
+              .join(", ") || "—",
+            arr(e["deletes"])
+              .map((v) => `\`${str(v)}\``)
+              .join(", ") || "—",
+            arr(e["next"])
+              .map((v) => `\`${str(v)}\``)
+              .join(", ") || "—",
           ];
         }),
       ),

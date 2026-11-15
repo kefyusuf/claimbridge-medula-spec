@@ -32,7 +32,13 @@ const EXPECTED_DVO_FILES = [
   "hizmet-kayit/hizmet-kayit-giris-dvo.yml",
 ];
 
-const EXPECTED_ENUM_IDS = ["provizyon-tipi", "sonuc-kodu", "takip-durumu", "takip-tipi", "tedavi-turu"];
+const EXPECTED_ENUM_IDS = [
+  "provizyon-tipi",
+  "sonuc-kodu",
+  "takip-durumu",
+  "takip-tipi",
+  "tedavi-turu",
+];
 
 const EXPECTED_RULE_FILES = [
   "rules/cancellation-rules.yml",
@@ -54,7 +60,13 @@ const MIN_FIELDS: Record<string, string[]> = {
     "doktorTescilNo",
     "ktsHbysKodu",
   ],
-  ProvizyonCevapDVO: ["sonucKodu", "sonucMesaji", "hastaBasvuruNo", "takipNo", "takipler"],
+  ProvizyonCevapDVO: [
+    "sonucKodu",
+    "sonucMesaji",
+    "hastaBasvuruNo",
+    "takipNo",
+    "takipler",
+  ],
   HizmetKayitGirisDVO: [
     "saglikTesisKodu",
     "hastaBasvuruNo",
@@ -64,7 +76,12 @@ const MIN_FIELDS: Record<string, string[]> = {
     "hizmetDetaylari",
     "ktsHbysKodu",
   ],
-  HizmetKayitCevapDVO: ["sonucKodu", "sonucMesaji", "islemSiraNumaralari", "hizmetKayitReferansNo"],
+  HizmetKayitCevapDVO: [
+    "sonucKodu",
+    "sonucMesaji",
+    "islemSiraNumaralari",
+    "hizmetKayitReferansNo",
+  ],
   FaturaGirisDVO: [
     "saglikTesisKodu",
     "faturaTarihi",
@@ -78,12 +95,19 @@ const MIN_FIELDS: Record<string, string[]> = {
     "hastaAdres",
     "muvafakatVar",
   ],
-  FaturaCevapDVO: ["sonucKodu", "sonucMesaji", "faturaTeslimNo", "faturaTutari"],
+  FaturaCevapDVO: [
+    "sonucKodu",
+    "sonucMesaji",
+    "faturaTeslimNo",
+    "faturaTutari",
+  ],
 };
 
 beforeAll(() => {
   ajv = new Ajv2020({ allErrors: true, allowUnionTypes: true });
-  for (const file of readdirSync(schemasDir).filter((f) => f.endsWith(".schema.json"))) {
+  for (const file of readdirSync(schemasDir).filter((f) =>
+    f.endsWith(".schema.json"),
+  )) {
     ajv.addSchema(JSON.parse(readFileSync(resolve(schemasDir, file), "utf8")));
   }
 
@@ -92,7 +116,9 @@ beforeAll(() => {
       .filter((f) => f.endsWith(".yml"))
       .map((file) => ({
         file: `${dir}/${file}`,
-        data: parse(readFileSync(resolve(registryDir, dir, file), "utf8")) as Record<string, unknown>,
+        data: parse(
+          readFileSync(resolve(registryDir, dir, file), "utf8"),
+        ) as Record<string, unknown>,
       }));
 
   const loadNested = (dir: string): RegistryEntry[] => {
@@ -104,7 +130,9 @@ beforeAll(() => {
           .filter((f) => f.endsWith(".yml"))
           .map((file) => ({
             file: `${d.name}/${file}`,
-            data: parse(readFileSync(resolve(basePath, d.name, file), "utf8")) as Record<string, unknown>,
+            data: parse(
+              readFileSync(resolve(basePath, d.name, file), "utf8"),
+            ) as Record<string, unknown>,
           })),
       );
   };
@@ -116,7 +144,10 @@ beforeAll(() => {
   services = loadFlat("services");
 });
 
-function schemaValidate(schemaName: string, data: unknown): boolean | ValidateFunction["errors"] {
+function schemaValidate(
+  schemaName: string,
+  data: unknown,
+): boolean | ValidateFunction["errors"] {
   const validate = ajv.getSchema(`${SCHEMA_BASE}${schemaName}.schema.json`);
   expect(validate, `schema not registered: ${schemaName}`).toBeTruthy();
   const ok = (validate as ValidateFunction)(data);
@@ -150,8 +181,12 @@ describe("registry-data (Group 3)", () => {
 
   it("keeps enum codes unique within each enum", () => {
     for (const e of enums) {
-      const codes = (e.data.values as Array<{ code: string }>).map((v) => v.code);
-      expect(new Set(codes).size, `duplicate codes in enum ${e.data.id}`).toBe(codes.length);
+      const codes = (e.data.values as Array<{ code: string }>).map(
+        (v) => v.code,
+      );
+      expect(new Set(codes).size, `duplicate codes in enum ${e.data.id}`).toBe(
+        codes.length,
+      );
     }
   });
 
@@ -160,13 +195,19 @@ describe("registry-data (Group 3)", () => {
     for (const d of dvos) {
       for (const f of (d.data.fields as FieldLike[]) ?? []) {
         if (f.type === "enum") {
-          expect(f.enumRef, `enum-typed field ${d.data.id}.${f.name} must declare enumRef`).toBeTruthy();
+          expect(
+            f.enumRef,
+            `enum-typed field ${d.data.id}.${f.name} must declare enumRef`,
+          ).toBeTruthy();
           expect(
             enumIds.has(f.enumRef as string),
             `unresolved enumRef "${f.enumRef}" in ${d.data.id}.${f.name}`,
           ).toBe(true);
         } else {
-          expect(f.enumRef, `non-enum field ${d.data.id}.${f.name} must keep enumRef null`).toBeNull();
+          expect(
+            f.enumRef,
+            `non-enum field ${d.data.id}.${f.name} must keep enumRef null`,
+          ).toBeNull();
         }
       }
     }
@@ -175,11 +216,16 @@ describe("registry-data (Group 3)", () => {
   it("resolves every non-null method contract DVO to a registered DVO id", () => {
     const dvoIds = new Set(dvos.map((d) => d.data.id as string));
     for (const m of methods) {
-      const contract = m.data.contract as { inputDvo: string | null; outputDvo: string | null };
+      const contract = m.data.contract as {
+        inputDvo: string | null;
+        outputDvo: string | null;
+      };
       for (const key of ["inputDvo", "outputDvo"] as const) {
         const id = contract[key];
         if (id !== null) {
-          expect(dvoIds.has(id), `unresolved ${key} "${id}" in ${m.file}`).toBe(true);
+          expect(dvoIds.has(id), `unresolved ${key} "${id}" in ${m.file}`).toBe(
+            true,
+          );
         }
       }
     }
@@ -187,12 +233,18 @@ describe("registry-data (Group 3)", () => {
 
   it("covers the PRD 13.4 minimum fields in the six contract DVOs", () => {
     const fieldsById = new Map(
-      dvos.map((d) => [d.data.id as string, (d.data.fields as FieldLike[]).map((f) => f.name)]),
+      dvos.map((d) => [
+        d.data.id as string,
+        (d.data.fields as FieldLike[]).map((f) => f.name),
+      ]),
     );
     for (const [dvoId, required] of Object.entries(MIN_FIELDS)) {
       const present = fieldsById.get(dvoId) ?? [];
       for (const name of required) {
-        expect(present, `${dvoId} is missing minimum field "${name}" (PRD 13.4)`).toContain(name);
+        expect(
+          present,
+          `${dvoId} is missing minimum field "${name}" (PRD 13.4)`,
+        ).toContain(name);
       }
     }
   });
@@ -204,26 +256,41 @@ describe("registry-data (Group 3)", () => {
         ids.push(rule.id);
       }
     }
-    expect(new Set(ids).size, "duplicate rule ids across rule files").toBe(ids.length);
+    expect(new Set(ids).size, "duplicate rule ids across rule files").toBe(
+      ids.length,
+    );
   });
 
   it("resolves rule appliesTo references into services, methods, DVOs, and fields", () => {
     const serviceIds = new Set(services.map((s) => s.data.id as string));
     const methodIds = new Set(methods.map((m) => m.data.id as string));
     const fieldNamesByDvo = new Map(
-      dvos.map((d) => [d.data.id as string, (d.data.fields as FieldLike[]).map((f) => f.name)]),
+      dvos.map((d) => [
+        d.data.id as string,
+        (d.data.fields as FieldLike[]).map((f) => f.name),
+      ]),
     );
     for (const r of rules) {
-      for (const rule of (r.data.rules as Array<Record<string, unknown>>) ?? []) {
+      for (const rule of (r.data.rules as Array<Record<string, unknown>>) ??
+        []) {
         const at = rule.appliesTo as Record<string, string | null>;
         if (at.service) {
-          expect(serviceIds.has(at.service), `unresolved appliesTo.service "${at.service}" in ${r.file}`).toBe(true);
+          expect(
+            serviceIds.has(at.service),
+            `unresolved appliesTo.service "${at.service}" in ${r.file}`,
+          ).toBe(true);
         }
         if (at.method) {
-          expect(methodIds.has(at.method), `unresolved appliesTo.method "${at.method}" in ${r.file}`).toBe(true);
+          expect(
+            methodIds.has(at.method),
+            `unresolved appliesTo.method "${at.method}" in ${r.file}`,
+          ).toBe(true);
         }
         if (at.dvo) {
-          expect(fieldNamesByDvo.has(at.dvo), `unresolved appliesTo.dvo "${at.dvo}" in ${r.file}`).toBe(true);
+          expect(
+            fieldNamesByDvo.has(at.dvo),
+            `unresolved appliesTo.dvo "${at.dvo}" in ${r.file}`,
+          ).toBe(true);
         }
         if (at.dvo && at.field) {
           expect(

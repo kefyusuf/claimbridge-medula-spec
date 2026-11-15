@@ -8,7 +8,8 @@ import { readFileSync, readdirSync, statSync } from "node:fs";
 import { resolve } from "node:path";
 import type { ValidationIssue } from "./validateSchemas.js";
 
-const REAL_IDENTITY_PATTERN = /"(?:hastaTCKimlikNo|tcKimlikNo)"\s*:\s*"(?!\s*SYNTHETIC_)\d{11}"/;
+const REAL_IDENTITY_PATTERN =
+  /"(?:hastaTCKimlikNo|tcKimlikNo)"\s*:\s*"(?!\s*SYNTHETIC_)\d{11}"/;
 
 const CREDENTIAL_KEYS = [
   "password",
@@ -22,7 +23,12 @@ const CREDENTIAL_KEYS = [
 
 const PLACEHOLDER_PATTERN = /^(SYNTHETIC_|<|%|\$)/;
 
-function scanValue(key: string, value: unknown, file: string, issues: ValidationIssue[]): void {
+function scanValue(
+  key: string,
+  value: unknown,
+  file: string,
+  issues: ValidationIssue[],
+): void {
   if (typeof value === "string" && CREDENTIAL_KEYS.includes(key)) {
     if (!PLACEHOLDER_PATTERN.test(value)) {
       issues.push({
@@ -41,7 +47,10 @@ function walk(dir: string, issues: ValidationIssue[]): void {
       continue;
     }
     if (entry.name.endsWith(".log")) {
-      issues.push({ file: path, message: "request/response logs must never be committed (PRD 17.1)" });
+      issues.push({
+        file: path,
+        message: "request/response logs must never be committed (PRD 17.1)",
+      });
       continue;
     }
     if (!entry.name.endsWith(".json")) {
@@ -51,7 +60,8 @@ function walk(dir: string, issues: ValidationIssue[]): void {
     if (REAL_IDENTITY_PATTERN.test(text)) {
       issues.push({
         file: path,
-        message: "hastaTCKimlikNo looks like a real 11-digit identity value; use SYNTHETIC_* placeholders",
+        message:
+          "hastaTCKimlikNo looks like a real 11-digit identity value; use SYNTHETIC_* placeholders",
       });
     }
     let data: unknown;

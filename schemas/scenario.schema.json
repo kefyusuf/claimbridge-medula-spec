@@ -4,7 +4,17 @@
   "title": "Scenario registry file (PRD 12.8)",
   "type": "object",
   "additionalProperties": false,
-  "required": ["id", "title", "method", "given", "request", "expected", "sandbox", "sourceRefs", "status"],
+  "required": [
+    "id",
+    "title",
+    "method",
+    "given",
+    "request",
+    "expected",
+    "sandbox",
+    "sourceRefs",
+    "status"
+  ],
   "properties": {
     "id": { "$ref": "common.schema.json#/$defs/nonEmptyString" },
     "title": { "$ref": "common.schema.json#/$defs/nonEmptyString" },
@@ -22,7 +32,9 @@
           "required": ["sonucKodu", "sonucMesaji"],
           "properties": {
             "sonucKodu": { "$ref": "common.schema.json#/$defs/nonEmptyString" },
-            "sonucMesaji": { "$ref": "common.schema.json#/$defs/nonEmptyString" }
+            "sonucMesaji": {
+              "$ref": "common.schema.json#/$defs/nonEmptyString"
+            }
           }
         },
         "stateChanges": { "type": "object" }

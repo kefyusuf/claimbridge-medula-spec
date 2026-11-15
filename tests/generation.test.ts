@@ -14,13 +14,17 @@ import { generateMermaid } from "../tools/src/generateMermaid.js";
 
 const root = resolve(import.meta.dirname, "..");
 const PINNED = "2026-11-15T00:00:00.000Z";
-const GENERATED_HEADER = "<!-- This file is generated. Do not edit manually. -->";
-const MERMAID_HEADER_PREFIX = "%% This file is generated. Do not edit manually.";
+const GENERATED_HEADER =
+  "<!-- This file is generated. Do not edit manually. -->";
+const MERMAID_HEADER_PREFIX =
+  "%% This file is generated. Do not edit manually.";
 
 describe("generation (Group 6)", () => {
   it("builds the PRD 18.1 bundle shape", () => {
     const bundle = buildBundle(loadRegistry(root), PINNED);
-    expect(bundle.specVersion).toBe(readFileSync(resolve(root, "SPEC_VERSION"), "utf8").trim());
+    expect(bundle.specVersion).toBe(
+      readFileSync(resolve(root, "SPEC_VERSION"), "utf8").trim(),
+    );
     expect(bundle.generatedAt).toBe(PINNED);
     expect(bundle.sources.length).toBeGreaterThanOrEqual(1);
     expect(bundle.services).toHaveLength(3);
@@ -61,7 +65,9 @@ describe("generation (Group 6)", () => {
   it("minifies to the same object", () => {
     const bundle = buildBundle(loadRegistry(root), PINNED);
     expect(JSON.parse(renderMinified(bundle))).toEqual(bundle);
-    expect(renderMinified(bundle).length).toBeLessThan(renderPretty(bundle).length);
+    expect(renderMinified(bundle).length).toBeLessThan(
+      renderPretty(bundle).length,
+    );
   });
 
   it("emits the five generated documents with the do-not-edit header", () => {
@@ -74,10 +80,15 @@ describe("generation (Group 6)", () => {
       "workflows.md",
     ]);
     for (const [name, text] of Object.entries(docs)) {
-      expect(text.startsWith(`${GENERATED_HEADER}\n`), `header on ${name}`).toBe(true);
+      expect(
+        text.startsWith(`${GENERATED_HEADER}\n`),
+        `header on ${name}`,
+      ).toBe(true);
     }
     expect(docs["services.md"]).toContain("medula.hastane.hasta-kabul");
-    expect(docs["methods.md"]).toContain("medula.hastane.fatura-kayit.fatura-tutar-oku");
+    expect(docs["methods.md"]).toContain(
+      "medula.hastane.fatura-kayit.fatura-tutar-oku",
+    );
     expect(docs["dvos.md"]).toContain("ProvizyonGirisDVO");
     expect(docs["workflows.md"]).toContain("core-claim-flow");
     expect(docs["scenarios.md"]).toContain("SANDBOX_2001");
@@ -95,14 +106,21 @@ describe("generation (Group 6)", () => {
     }
     expect(diagrams["er-diagram.mmd"]).toContain("ProvizyonGirisDVO");
     expect(diagrams["er-diagram.mmd"]).toContain("provizyon_tipi");
-    expect(diagrams["core-flow.mmd"]).toContain("medula.hastane.hasta-kabul.hasta-kabul");
-    expect(diagrams["core-flow.mmd"]).toContain("medula.hastane.fatura-kayit.fatura-kayit");
+    expect(diagrams["core-flow.mmd"]).toContain(
+      "medula.hastane.hasta-kabul.hasta-kabul",
+    );
+    expect(diagrams["core-flow.mmd"]).toContain(
+      "medula.hastane.fatura-kayit.fatura-kayit",
+    );
     expect(diagrams["service-map.mmd"]).toContain("hizmet-kayit");
   });
 
   it("generates committed outputs that pass the check command", () => {
     execSync("pnpm generate", { cwd: root, stdio: "pipe" });
-    const stdout = execSync("pnpm check", { cwd: root, stdio: "pipe" }).toString();
+    const stdout = execSync("pnpm check", {
+      cwd: root,
+      stdio: "pipe",
+    }).toString();
     expect(stdout).toContain("check: OK");
   });
 

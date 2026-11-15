@@ -12,7 +12,16 @@
       "enum": ["draft", "reviewed", "deprecated"]
     },
     "fieldType": {
-      "enum": ["string", "integer", "decimal", "boolean", "date", "array", "object", "enum"]
+      "enum": [
+        "string",
+        "integer",
+        "decimal",
+        "boolean",
+        "date",
+        "array",
+        "object",
+        "enum"
+      ]
     },
     "severity": {
       "enum": ["info", "warning", "error"]
@@ -21,7 +30,13 @@
       "enum": ["input", "output", "shared"]
     },
     "sourceType": {
-      "enum": ["official-guide", "official-wsdl", "manual-review", "derived", "sandbox-design"]
+      "enum": [
+        "official-guide",
+        "official-wsdl",
+        "manual-review",
+        "derived",
+        "sandbox-design"
+      ]
     },
     "confidence": {
       "enum": ["extracted", "reviewed", "inferred", "unknown"]

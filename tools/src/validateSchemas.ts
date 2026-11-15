@@ -15,7 +15,10 @@ export interface ValidationIssue {
 const SCHEMA_BASE = "https://claimbridge.dev/schemas/";
 
 type CollectionSpec = {
-  name: keyof Omit<import("./loadRegistry.js").Registry, "root" | "sourceIds" | "wsdlIds">;
+  name: keyof Omit<
+    import("./loadRegistry.js").Registry,
+    "root" | "sourceIds" | "wsdlIds"
+  >;
   schema: string;
 };
 
@@ -32,7 +35,9 @@ const COLLECTIONS: CollectionSpec[] = [
 export function validateSchemas(reg: Registry): ValidationIssue[] {
   const ajv = new Ajv2020({ allErrors: true, allowUnionTypes: true });
   const schemasDir = resolve(reg.root, "schemas");
-  for (const file of readdirSync(schemasDir).filter((f) => f.endsWith(".schema.json"))) {
+  for (const file of readdirSync(schemasDir).filter((f) =>
+    f.endsWith(".schema.json"),
+  )) {
     ajv.addSchema(JSON.parse(readFileSync(resolve(schemasDir, file), "utf8")));
   }
 
@@ -41,7 +46,10 @@ export function validateSchemas(reg: Registry): ValidationIssue[] {
     const files = reg[spec.name] as YamlFile[];
     const validate = ajv.getSchema(`${SCHEMA_BASE}${spec.schema}.schema.json`);
     if (!validate) {
-      issues.push({ file: "*", message: `schema not registered: ${spec.schema}` });
+      issues.push({
+        file: "*",
+        message: `schema not registered: ${spec.schema}`,
+      });
       continue;
     }
     for (const { file, data } of files) {
