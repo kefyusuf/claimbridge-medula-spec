@@ -1,0 +1,85 @@
+%% This file is generated. Do not edit manually.
+
+erDiagram
+  FaturaCevapDVO {
+    string sonucKodu
+    string sonucMesaji
+    string faturaTeslimNo
+    decimal faturaTutari
+  }
+  FaturaGirisDVO {
+    integer saglikTesisKodu
+    date faturaTarihi
+    string hastaBasvuruNo
+    string faturaRefNo
+    array hizmetDetaylari
+    integer trafikKazasiOdemeYuzdesi
+    decimal ilaveUcret
+    string ktsHbysKodu
+    string hastaTelefon
+    string hastaAdres
+    boolean muvafakatVar
+  }
+  FaturaHizmetDetayDVO {
+    integer islemSiraNo
+    string islemKodu
+    integer adet
+    decimal birimFiyat
+  }
+  HizmetDetayDVO {
+    integer islemSiraNo
+    integer bransKodu
+    string islemKodu
+    date hizmetTarihi
+    integer adet
+  }
+  HizmetKayitCevapDVO {
+    string sonucKodu
+    string sonucMesaji
+    array islemSiraNumaralari
+    string hizmetKayitReferansNo
+  }
+  HizmetKayitGirisDVO {
+    integer saglikTesisKodu
+    string hastaBasvuruNo
+    string takipNo
+    array taniBilgileri
+    array islemBilgileri
+    array hizmetDetaylari
+    string ktsHbysKodu
+  }
+  ProvizyonCevapDVO {
+    string sonucKodu
+    string sonucMesaji
+    string hastaBasvuruNo
+    string takipNo
+    array takipler
+  }
+  ProvizyonGirisDVO {
+    integer saglikTesisKodu
+    string hastaTCKimlikNo
+    string takipNo
+    enum provizyonTipi
+    enum tedaviTuru
+    enum takipTipi
+    integer bransKodu
+    string doktorTescilNo
+    string ktsHbysKodu
+  }
+  TakipDVO {
+    string takipNo
+    enum takipTipi
+    enum takipDurumu
+    string hastaBasvuruNo
+  }
+  medula_hastane_fatura_kayit_fatura_kayit ||--|| FaturaGirisDVO : inputDvo
+  medula_hastane_fatura_kayit_fatura_kayit ||--|| FaturaCevapDVO : outputDvo
+  medula_hastane_hasta_kabul_hasta_kabul ||--|| ProvizyonGirisDVO : inputDvo
+  medula_hastane_hasta_kabul_hasta_kabul ||--|| ProvizyonCevapDVO : outputDvo
+  medula_hastane_hizmet_kayit_hizmet_kayit ||--|| HizmetKayitGirisDVO : inputDvo
+  medula_hastane_hizmet_kayit_hizmet_kayit ||--|| HizmetKayitCevapDVO : outputDvo
+  ProvizyonGirisDVO }o--|| provizyon_tipi : enumRef
+  ProvizyonGirisDVO }o--|| tedavi_turu : enumRef
+  ProvizyonGirisDVO }o--|| takip_tipi : enumRef
+  TakipDVO }o--|| takip_tipi : enumRef
+  TakipDVO }o--|| takip_durumu : enumRef

@@ -6,6 +6,39 @@ Format: [Keep a Changelog](https://keepachangelog.com); versioning: SemVer
 
 ## [Unreleased]
 
+### Group 6 — feat/generators (2026-11-15)
+
+Local group: no remote yet, so the PR step is replaced by a local `--no-ff`
+merge to `main` (PRD §28 step 6 fallback).
+
+- TDD red first: generation suite (8 checks) committed and verified failing
+  (generator modules absent) before any generator code existed (`60a15cf`).
+- Generators (`9cd9d9b`): `generateDist` (PRD §18.1 bundle + minified +
+  manifest with counts and sha256 checksums), `generateDocs` (five §18.2
+  documents with the do-not-edit header), `generateMermaid` (three §18.3
+  diagrams: ER model, core claim flow, service map).
+- Real `check` command: validates, regenerates in memory with the committed
+  `generatedAt`, compares bundle/minified/manifest/docs/diagrams
+  byte-for-byte, exits non-zero with a STALE list (§19.3).
+- Generated outputs committed per PRD §18.4 (`eed32df`); stale `.gitkeep`
+  markers removed.
+
+Decisions:
+- Bundle is byte-deterministic for a pinned `generatedAt` (collections
+  sorted by id, rules falling back to file name); `check` pins the
+  committed manifest timestamp — this is what makes byte comparison sound.
+- Mermaid entity ids are sanitized to `[A-Za-z0-9_]`; enum ids appear as
+  `provizyon_tipi` style in diagrams.
+- `tools/README.md` command table updated to reflect live commands.
+
+Validation output: `pnpm test` → 67/67 passed (incl. generate→check happy
+path and stale-detection negative test); `tsc --noEmit` → clean;
+`pnpm generate` → OK (3/10/9/5/5/4/6); `pnpm check` → OK; `pnpm validate`
+→ OK.
+
+Remaining TODOs: none for this group. Next: Group 7 — `ci/pipeline` (full
+CI: format:check, validate, test, check).
+
 ### Group 5 — feat/tools (2026-11-15)
 
 Local group: no remote yet, so the PR step is replaced by a local `--no-ff`
