@@ -1,0 +1,150 @@
+id: TaniBilgisiDVO
+domain: hizmet-kayit
+direction: shared
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: "3.1.1"
+    fetchedAt: "2026-11-15"
+    page: 232
+    section: Tablo 4.2.1.k - TaniBilgisiDVO
+    confidence: extracted
+fields:
+  - name: islemSiraNo
+    displayName: Islem Sira Numarasi
+    type: string
+    enumRef: null
+    required: false
+    length: 15
+    description: >-
+      Sequence number of the registered service; send null while
+      registering, Medula fills and returns it (s.232).
+    sensitive: false
+    syntheticOnlyRecommended: true
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 232
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: birincilTani
+    displayName: Birincil Tani
+    type: string
+    enumRef: null
+    required: true
+    length: 1
+    description: Primary diagnosis flag taking E (Evet) or H (Hayir) (s.232).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 232
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: hizmetSunucuRefNo
+    displayName: Hizmet Sunucu Referans Numarasi
+    type: string
+    enumRef: null
+    required: true
+    length: 20
+    description: >-
+      Institution-assigned reference used to pair the record with the
+      Medula-generated islemSiraNo (s.232). Synthetic placeholders in
+      examples.
+    sensitive: false
+    syntheticOnlyRecommended: true
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 232
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: taniKodu
+    displayName: Tani Kodu
+    type: string
+    enumRef: null
+    required: true
+    length: 10
+    description: ICD-10 diagnosis code (s.232).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 232
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: taniTipi
+    displayName: Tani Tipi
+    type: enum
+    enumRef: tani-tipi
+    required: true
+    length: 1
+    description: Diagnosis type - 1 On tani, 2 Kesin tani, 3 Ayirici tani (s.232).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 232
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: ozelDurum
+    displayName: Ozel Durum
+    type: string
+    enumRef: null
+    required: false
+    length: 1
+    description: Special condition code; see guide Tablo 5.1 OzelDurumVO (s.232).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 232
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: cokluOzelDurum
+    displayName: Coklu Ozel Durum
+    type: array
+    enumRef: null
+    required: false
+    length: null
+    description: Multiple special-condition codes, valid alongside ozelDurum (s.232).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 232
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+status: reviewed

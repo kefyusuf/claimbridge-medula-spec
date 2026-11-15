@@ -162,6 +162,15 @@ erDiagram
     string takipNo
     string ktsHbysKodu
   }
+  TaniBilgisiDVO {
+    string islemSiraNo
+    string birincilTani
+    string hizmetSunucuRefNo
+    string taniKodu
+    enum taniTipi
+    string ozelDurum
+    array cokluOzelDurum
+  }
   medula_hastane_fatura_kayit_fatura_iptal ||--|| FaturaIptalGirisDVO : inputDvo
   medula_hastane_fatura_kayit_fatura_iptal ||--|| FaturaIptalCevapDVO : outputDvo
   medula_hastane_fatura_kayit_fatura_kayit ||--|| FaturaGirisDVO : inputDvo
@@ -191,3 +200,4 @@ erDiagram
   TakipDVO }o--|| takip_tipi : enumRef
   TakipDVO }o--|| takip_durumu : enumRef
   TakipDVO }o--|| ekds_yontem_gerekce : enumRef
+  TaniBilgisiDVO }o--|| tani_tipi : enumRef

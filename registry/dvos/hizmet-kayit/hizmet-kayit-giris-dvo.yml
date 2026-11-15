@@ -73,7 +73,7 @@ fields:
     enumRef: null
     required: false
     length: null
-    description: Diagnosis entries (TaniBilgisiDVO records, s.189). Verification correction - the guide names this field tanilar.
+    description: Diagnosis entries as an array of TaniBilgisiDVO (Tablo 4.2.1.k, s.232). Verification correction - the guide names this field tanilar.
     sensitive: false
     syntheticOnlyRecommended: false
     sourceRefs:
