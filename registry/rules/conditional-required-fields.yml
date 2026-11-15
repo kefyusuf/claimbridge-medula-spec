@@ -1,4 +1,24 @@
 rules:
+  - id: conditional-tani-per-takip
+    type: conditional-required-field
+    appliesTo:
+      service: medula.hastane.hizmet-kayit
+      method: medula.hastane.hizmet-kayit.hizmet-kayit
+      dvo: HizmetKayitGirisDVO
+      field: tanilar
+    condition: per tracking record
+    assertion: >-
+      tanilar is optional per service-registration call, but every takip
+      must end up with at least one diagnosis (s.189).
+    severity: error
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 189
+        confidence: extracted
+    status: reviewed
+
   - id: conditional-takip-no-for-bagli-takip
     type: conditional-required-field
     appliesTo:

@@ -28,15 +28,16 @@ rules:
       field: null
     condition: null
     assertion: >-
-      saglikTesisKodu, hastaBasvuruNo, takipNo, taniBilgileri, islemBilgileri
-      and hizmetDetaylari are mandatory for hizmet-kayit.
+      saglikTesisKodu, takipNo and ktsHbysKodu are mandatory for
+      hizmet-kayit; hastaBasvuruNo is optional per Tablo 4.2.1.a (s.189).
     severity: error
     sourceRefs:
-      - id: medula-hastane-guide-2026-06-17
+      - id: medula-hastane-guide-3-1-1-2026-10-19
         sourceType: official-guide
-        guideVersion: "2026-06-17"
+        guideVersion: "3.1.1"
+        page: 189
         confidence: extracted
-    status: draft
+    status: reviewed
 
   - id: required-fatura-giris-fields
     type: required-field

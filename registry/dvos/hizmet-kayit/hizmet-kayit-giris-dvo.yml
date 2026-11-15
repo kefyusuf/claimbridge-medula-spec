@@ -2,42 +2,28 @@ id: HizmetKayitGirisDVO
 domain: hizmet-kayit
 direction: input
 sourceRefs:
-  - id: medula-hastane-guide-2026-06-17
+  - id: medula-hastane-guide-3-1-1-2026-10-19
     sourceType: official-guide
-    guideVersion: "2026-06-17"
+    guideVersion: "3.1.1"
+    fetchedAt: "2026-11-15"
+    page: 189
+    section: Tablo 4.2.1.a - HizmetKayitGirisDVO
     confidence: extracted
 fields:
   - name: saglikTesisKodu
-    displayName: Saglik Tesisi Kodu
+    displayName: Tesis Kodu
     type: integer
     enumRef: null
     required: true
     length: null
-    description: Healthcare facility code of the registering institution.
+    description: Code of the institution performing the service registration (s.189).
     sensitive: false
     syntheticOnlyRecommended: false
     sourceRefs:
-      - id: medula-hastane-guide-2026-06-17
+      - id: medula-hastane-guide-3-1-1-2026-10-19
         sourceType: official-guide
-        guideVersion: "2026-06-17"
-        confidence: extracted
-    conditionalRequired: []
-    introducedIn: null
-    deprecatedIn: null
-
-  - name: hastaBasvuruNo
-    displayName: Hasta Basvuru Numarasi
-    type: string
-    enumRef: null
-    required: true
-    length: null
-    description: Patient application number produced by the admission flow.
-    sensitive: false
-    syntheticOnlyRecommended: true
-    sourceRefs:
-      - id: medula-hastane-guide-2026-06-17
-        sourceType: official-guide
-        guideVersion: "2026-06-17"
+        guideVersion: "3.1.1"
+        page: 189
         confidence: extracted
     conditionalRequired: []
     introducedIn: null
@@ -49,88 +35,307 @@ fields:
     enumRef: null
     required: true
     length: null
-    description: Tracking number the services are registered against.
+    description: Tracking number the services are registered against (s.189).
     sensitive: false
     syntheticOnlyRecommended: true
     sourceRefs:
-      - id: medula-hastane-guide-2026-06-17
+      - id: medula-hastane-guide-3-1-1-2026-10-19
         sourceType: official-guide
-        guideVersion: "2026-06-17"
+        guideVersion: "3.1.1"
+        page: 189
         confidence: extracted
     conditionalRequired: []
     introducedIn: null
     deprecatedIn: null
 
-  - name: taniBilgileri
-    displayName: Tani Bilgileri
-    type: array
+  - name: hastaBasvuruNo
+    displayName: Hasta Basvuru Numarasi
+    type: string
     enumRef: null
-    required: true
+    required: false
     length: null
-    description: Diagnosis entries (ICD-10 codes with type qualifiers) for this episode.
+    description: Patient application number; the guide marks it optional here (s.189).
     sensitive: false
-    syntheticOnlyRecommended: false
+    syntheticOnlyRecommended: true
     sourceRefs:
-      - id: medula-hastane-guide-2026-06-17
+      - id: medula-hastane-guide-3-1-1-2026-10-19
         sourceType: official-guide
-        guideVersion: "2026-06-17"
+        guideVersion: "3.1.1"
+        page: 189
         confidence: extracted
     conditionalRequired: []
     introducedIn: null
     deprecatedIn: null
 
-  - name: islemBilgileri
-    displayName: Islem Bilgileri
+  - name: tanilar
+    displayName: Tanilar
     type: array
     enumRef: null
-    required: true
+    required: false
     length: null
-    description: Procedure/operation entries performed during the episode.
+    description: Diagnosis entries (TaniBilgisiDVO records, s.189). Verification correction - the guide names this field tanilar.
     sensitive: false
     syntheticOnlyRecommended: false
     sourceRefs:
-      - id: medula-hastane-guide-2026-06-17
+      - id: medula-hastane-guide-3-1-1-2026-10-19
         sourceType: official-guide
-        guideVersion: "2026-06-17"
+        guideVersion: "3.1.1"
+        page: 189
         confidence: extracted
-    conditionalRequired: []
-    introducedIn: null
+    conditionalRequired:
+      - condition: per tracking record
+        note: the guide requires at least one diagnosis per takip even though the field itself is optional per call (s.189)
+    introducedIn: "0.2.0"
     deprecatedIn: null
 
-  - name: hizmetDetaylari
-    displayName: Hizmet Detaylari
+  - name: ameliyatveGirisimBilgileri
+    displayName: Ameliyat ve Girisim Bilgileri
     type: array
     enumRef: null
-    required: true
+    required: false
     length: null
-    description: Detailed service lines (HizmetDetayDVO records) to register.
+    description: Surgery and intervention entries as an array (AmeliyatveGirisimBilgisiDVO, s.189).
     sensitive: false
     syntheticOnlyRecommended: false
     sourceRefs:
-      - id: medula-hastane-guide-2026-06-17
+      - id: medula-hastane-guide-3-1-1-2026-10-19
         sourceType: official-guide
-        guideVersion: "2026-06-17"
+        guideVersion: "3.1.1"
+        page: 189
         confidence: extracted
     conditionalRequired: []
-    introducedIn: null
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: digerIslemBilgileri
+    displayName: Diger Islem Bilgileri
+    type: array
+    enumRef: null
+    required: false
+    length: null
+    description: Other operation entries (DigerIslemBilgisiDVO, s.189).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 189
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: disBilgileri
+    displayName: Dis Bilgileri
+    type: array
+    enumRef: null
+    required: false
+    length: null
+    description: Dental entries (DisBilgisiDVO, s.189).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 189
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: ilacBilgileri
+    displayName: Ilac Bilgileri
+    type: array
+    enumRef: null
+    required: false
+    length: null
+    description: Medication entries (IlacBilgisiDVO, s.189).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 189
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: konsultasyonBilgileri
+    displayName: Konsultasyon Bilgileri
+    type: array
+    enumRef: null
+    required: false
+    length: null
+    description: Consultation entries (KonsultasyonBilgisiDVO, s.189).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 189
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: malzemeBilgileri
+    displayName: Malzeme Bilgileri
+    type: array
+    enumRef: null
+    required: false
+    length: null
+    description: Material entries (MalzemeBilgisiDVO, s.189).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 189
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: muayeneBilgisi
+    displayName: Muayene Bilgisi
+    type: object
+    enumRef: null
+    required: false
+    length: null
+    description: Examination entry (MuayeneBilgisiDVO, s.189).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 189
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: tahlilBilgileri
+    displayName: Tahlil Bilgileri
+    type: array
+    enumRef: null
+    required: false
+    length: null
+    description: Lab test entries (TahlilBilgisiDVO, s.189).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 189
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: tetkikveRadyolojiBilgileri
+    displayName: Tetkik ve Radyoloji Bilgileri
+    type: array
+    enumRef: null
+    required: false
+    length: null
+    description: Imaging and work-up entries (TetkikveRadyolojiBilgisiDVO, s.189).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 189
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: hastaYatisBilgileri
+    displayName: Hasta Yatis Bilgileri
+    type: array
+    enumRef: null
+    required: false
+    length: null
+    description: Hospitalization entries (HastaYatisBilgisiDVO, s.190); mandatory for inpatient takips per the guide note.
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 190
+        confidence: extracted
+    conditionalRequired:
+      - condition: the takip is an inpatient (yatarak) episode
+        note: guide requires yatis bilgisi for inpatient takips (s.190)
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: kanBilgileri
+    displayName: Kan Bilgileri
+    type: array
+    enumRef: null
+    required: false
+    length: null
+    description: Blood transfusion entries (KanBilgisiDVO, s.190).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 190
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: triajBeyani
+    displayName: Triaj Beyani
+    type: string
+    enumRef: null
+    required: false
+    length: 1
+    description: Triage declaration taking S/K/Y values; mandatory for emergency takips (s.190).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 190
+        confidence: extracted
+    conditionalRequired:
+      - condition: the takip is an emergency (acil) episode
+        note: guide requires triaj beyani for emergency takips (s.190)
+    introducedIn: "0.2.0"
     deprecatedIn: null
 
   - name: ktsHbysKodu
     displayName: KTS HBYS Kodu
     type: string
     enumRef: null
-    required: false
+    required: true
     length: null
-    description: Hospital information system (HBYS) code used by the KTS integration.
+    description: Software vendor KTS code (s.190).
     sensitive: false
     syntheticOnlyRecommended: false
     sourceRefs:
-      - id: medula-hastane-guide-2026-06-17
+      - id: medula-hastane-guide-3-1-1-2026-10-19
         sourceType: official-guide
-        guideVersion: "2026-06-17"
-        confidence: inferred
-        notes: Required flag assumed optional; verify against the guide field table.
+        guideVersion: "3.1.1"
+        page: 190
+        confidence: extracted
     conditionalRequired: []
     introducedIn: null
     deprecatedIn: null
-status: draft
+status: reviewed

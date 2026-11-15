@@ -2,9 +2,12 @@ id: HizmetKayitCevapDVO
 domain: hizmet-kayit
 direction: output
 sourceRefs:
-  - id: medula-hastane-guide-2026-06-17
+  - id: medula-hastane-guide-3-1-1-2026-10-19
     sourceType: official-guide
-    guideVersion: "2026-06-17"
+    guideVersion: "3.1.1"
+    fetchedAt: "2026-11-15"
+    page: 190
+    section: Tablo 4.2.1.b - HizmetKayitCevapDVO
     confidence: extracted
 fields:
   - name: sonucKodu
@@ -12,14 +15,15 @@ fields:
     type: string
     enumRef: null
     required: true
-    length: null
-    description: Result code; 0000 means success, any other value is an error.
+    length: 4
+    description: Result code; 0000 means success, any other value is an error (s.190).
     sensitive: false
     syntheticOnlyRecommended: false
     sourceRefs:
-      - id: medula-hastane-guide-2026-06-17
+      - id: medula-hastane-guide-3-1-1-2026-10-19
         sourceType: official-guide
-        guideVersion: "2026-06-17"
+        guideVersion: "3.1.1"
+        page: 190
         confidence: extracted
     conditionalRequired: []
     introducedIn: null
@@ -31,55 +35,111 @@ fields:
     enumRef: null
     required: true
     length: null
-    description: Human-readable result message accompanying the result code.
+    description: Result explanation; the error cause is reported here (s.190).
     sensitive: false
     syntheticOnlyRecommended: false
     sourceRefs:
-      - id: medula-hastane-guide-2026-06-17
+      - id: medula-hastane-guide-3-1-1-2026-10-19
         sourceType: official-guide
-        guideVersion: "2026-06-17"
+        guideVersion: "3.1.1"
+        page: 190
         confidence: extracted
     conditionalRequired: []
     introducedIn: null
     deprecatedIn: null
 
-  - name: islemSiraNumaralari
-    displayName: Islem Sira Numaralari
-    type: array
-    enumRef: null
-    required: false
-    length: null
-    description: Operation sequence numbers generated for the registered procedures; present on success.
-    sensitive: false
-    syntheticOnlyRecommended: true
-    sourceRefs:
-      - id: medula-hastane-guide-2026-06-17
-        sourceType: official-guide
-        guideVersion: "2026-06-17"
-        confidence: extracted
-    conditionalRequired:
-      - condition: sonucKodu is 0000 (success)
-        note: generated identifiers; present only on success
-    introducedIn: null
-    deprecatedIn: null
-
-  - name: hizmetKayitReferansNo
-    displayName: Hizmet Kayit Referans Numarasi
+  - name: takipNo
+    displayName: Takip Numarasi
     type: string
     enumRef: null
     required: false
     length: null
-    description: Service registration reference number linking the registered lines; present on success.
+    description: Tracking number of the registration (s.190).
     sensitive: false
     syntheticOnlyRecommended: true
     sourceRefs:
-      - id: medula-hastane-guide-2026-06-17
+      - id: medula-hastane-guide-3-1-1-2026-10-19
         sourceType: official-guide
-        guideVersion: "2026-06-17"
+        guideVersion: "3.1.1"
+        page: 190
         confidence: extracted
-    conditionalRequired:
-      - condition: sonucKodu is 0000 (success)
-        note: generated identifier; present only on success
-    introducedIn: null
+    conditionalRequired: []
+    introducedIn: "0.2.0"
     deprecatedIn: null
-status: draft
+
+  - name: hastaBasvuruNo
+    displayName: Hasta Basvuru Numarasi
+    type: string
+    enumRef: null
+    required: false
+    length: null
+    description: Patient application number (s.190).
+    sensitive: false
+    syntheticOnlyRecommended: true
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 190
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: saglikTesisKodu
+    displayName: Tesis Kodu
+    type: integer
+    enumRef: null
+    required: false
+    length: null
+    description: Code of the registering institution (s.190).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 190
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: islemBilgileri
+    displayName: Islem Bilgileri
+    type: array
+    enumRef: null
+    required: false
+    length: null
+    description: Registered operation records (KayitliIslemBilgisiDVO, s.190). Verification correction - the v0.1 draft modeled islemSiraNumaralari.
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 190
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: hataliKayitlar
+    displayName: Hatali Kayitlar
+    type: array
+    enumRef: null
+    required: false
+    length: null
+    description: Failed registration records (HataliIslemBilgisiDVO, s.190).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 190
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+status: reviewed
