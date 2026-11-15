@@ -1,6 +1,6 @@
 {
   "specVersion": "0.1.0",
-  "generatedAt": "2026-11-15T17:20:15.177Z",
+  "generatedAt": "2026-11-15T17:24:21.296Z",
   "sources": [
     {
       "id": "medula-hastane-guide-2026-06-17",
@@ -5050,6 +5050,468 @@
       "status": "reviewed"
     },
     {
+      "id": "IlacBilgisiDVO",
+      "domain": "hizmet-kayit",
+      "direction": "input",
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "fetchedAt": "2026-11-15",
+          "page": 198,
+          "section": "Tablo 4.2.1.f - IlacBilgisiDVO (table continues through s.224) (ilk kisim)",
+          "confidence": "extracted"
+        },
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "fetchedAt": "2026-11-15",
+          "page": 199,
+          "section": "Tablo 4.2.1.f - IlacBilgisiDVO (table continues through s.224) (devam)",
+          "confidence": "extracted"
+        },
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "fetchedAt": "2026-11-15",
+          "page": 199,
+          "section": "Tablo 4.2.1.f - IlacBilgisiDVO (table continues through s.224)",
+          "confidence": "extracted",
+          "notes": "Core fields verified from s.198-199; the remaining s.200-223 rows are cataloged as a v0.3 continuation."
+        }
+      ],
+      "fields": [
+        {
+          "name": "aciklama",
+          "displayName": "Aciklama",
+          "type": "string",
+          "enumRef": null,
+          "required": false,
+          "length": 255,
+          "description": "Drug description; majistral drugs carry the content here (s.198)",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 198,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "adet",
+          "displayName": "Adet",
+          "type": "decimal",
+          "enumRef": null,
+          "required": true,
+          "length": 4,
+          "description": "Drug quantity; the usage unit comes from the Yardimci Servisleri ilac-ara method (s.198)",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 198,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "barkod",
+          "displayName": "Ilacin Barkodu",
+          "type": "string",
+          "enumRef": null,
+          "required": false,
+          "length": 13,
+          "description": "Drug barcode registered in GSS; mandatory except for majistral drugs (s.198)",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 198,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [
+            {
+              "condition": "ilacTuru is not 2 (not majistral)",
+              "note": "guide marks barkod mandatory except for majistral drugs (s.198)"
+            }
+          ],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "hizmetSunucuRefNo",
+          "displayName": "Hizmet Sunucu Referans Numarasi",
+          "type": "string",
+          "enumRef": null,
+          "required": true,
+          "length": 20,
+          "description": "Institution reference paired with islemSiraNo (s.198)",
+          "sensitive": false,
+          "syntheticOnlyRecommended": true,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 198,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "ilacTuru",
+          "displayName": "Ilacin Turu",
+          "type": "enum",
+          "enumRef": "ilac-turu",
+          "required": true,
+          "length": 1,
+          "description": "Drug type - 1 Barkodlu, 2 Majistral, 3 Radyofarmasotik Ajan (s.198)",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 198,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "islemSiraNo",
+          "displayName": "Islem Sira Numarasi",
+          "type": "string",
+          "enumRef": null,
+          "required": false,
+          "length": 15,
+          "description": "Sequence number; null-on-input pattern (s.198)",
+          "sensitive": false,
+          "syntheticOnlyRecommended": true,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 198,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "islemTarihi",
+          "displayName": "Islem Tarihi",
+          "type": "date",
+          "enumRef": null,
+          "required": true,
+          "length": 10,
+          "description": "Drug usage date, dd.mm.yyyy (s.198)",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 198,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "tutar",
+          "displayName": "Ilacin Tutari",
+          "type": "decimal",
+          "enumRef": null,
+          "required": false,
+          "length": null,
+          "description": "Amount for majistral drugs and radiopharmaceutical agents (s.198)",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 198,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "paketHaric",
+          "displayName": "Paket Haric Bilgisi",
+          "type": "string",
+          "enumRef": null,
+          "required": true,
+          "length": 1,
+          "description": "0 when included in the package, 1 when excluded (s.198)",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 198,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "ozelDurum",
+          "displayName": "Ozel Durum",
+          "type": "string",
+          "enumRef": null,
+          "required": false,
+          "length": 1,
+          "description": "Special condition code, Tablo 5.1 OzelDurumVO (s.198)",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 198,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "cokluOzelDurum",
+          "displayName": "Coklu Ozel Durum",
+          "type": "array",
+          "enumRef": null,
+          "required": false,
+          "length": null,
+          "description": "Multiple special-condition codes (s.198)",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 198,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "seriNo",
+          "displayName": "Seri No",
+          "type": "string",
+          "enumRef": null,
+          "required": false,
+          "length": 20,
+          "description": "Drug serial number (s.199)",
+          "sensitive": false,
+          "syntheticOnlyRecommended": true,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 199,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "sonKullanimTarihi",
+          "displayName": "Son Kullanim Tarihi",
+          "type": "date",
+          "enumRef": null,
+          "required": false,
+          "length": null,
+          "description": "Drug expiry date (s.199)",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 199,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "batchNo",
+          "displayName": "Ilac Batch No",
+          "type": "string",
+          "enumRef": null,
+          "required": false,
+          "length": 20,
+          "description": "Drug batch number (s.199)",
+          "sensitive": false,
+          "syntheticOnlyRecommended": true,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 199,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "itsBirimSarfId",
+          "displayName": "ITS bildirim ID",
+          "type": "string",
+          "enumRef": null,
+          "required": false,
+          "length": null,
+          "description": "Unit consumption ID received from the ITS system (s.199)",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 199,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "majistralIlac",
+          "displayName": "Majistral Ilac Bilgileri",
+          "type": "object",
+          "enumRef": null,
+          "required": false,
+          "length": null,
+          "description": "Majistral drug composite (MajistralIlacDVO, Tablo 4.2.1.f.1, s.199); nested placeholder, expansion is v0.3 scope (s.199)",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 199,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [
+            {
+              "condition": "ilacTuru is 2 (Majistral ilac)",
+              "note": "guide requires the MajistralIlacDVO object filled when the drug type is majistral (s.199)"
+            }
+          ],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "birlikteYapilanIslemSUTKodu",
+          "displayName": "Birlikte Yapilan Islem SUT Kodu",
+          "type": "string",
+          "enumRef": null,
+          "required": false,
+          "length": null,
+          "description": "SUT code of the concurrently performed operation (s.199)",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 199,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "birlikteYapilanIslemHizmetSunucuRefNo",
+          "displayName": "Birlikte Yapilan Islem Hizmet Sunucu Ref No",
+          "type": "string",
+          "enumRef": null,
+          "required": false,
+          "length": 20,
+          "description": "Institution reference of the concurrently performed operation (s.199)",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 199,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
       "id": "KanBilgisiDVO",
       "domain": "hizmet-kayit",
       "direction": "input",
@@ -8155,6 +8617,39 @@
           "fetchedAt": "2026-11-15",
           "page": 191,
           "section": "Tablo 4.2.1.c - AmeliyatveGirisimBilgisiDVO (Euroscore)",
+          "confidence": "extracted"
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
+      "id": "ilac-turu",
+      "displayName": "Ilac Turu",
+      "values": [
+        {
+          "code": "1",
+          "label": "Barkodlu ilac",
+          "description": "Barcode-registered drug."
+        },
+        {
+          "code": "2",
+          "label": "Majistral ilac",
+          "description": "Magistral (compounded) drug; majistralIlac composite required."
+        },
+        {
+          "code": "3",
+          "label": "Radyofarmasotik Ajan",
+          "description": "Radiopharmaceutical agent."
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "fetchedAt": "2026-11-15",
+          "page": 198,
+          "section": "Tablo 4.2.1.f - IlacBilgisiDVO (ilacTuru)",
           "confidence": "extracted"
         }
       ],

@@ -1,0 +1,21 @@
+id: ilac-turu
+displayName: Ilac Turu
+values:
+  - code: "1"
+    label: Barkodlu ilac
+    description: Barcode-registered drug.
+  - code: "2"
+    label: Majistral ilac
+    description: Magistral (compounded) drug; majistralIlac composite required.
+  - code: "3"
+    label: Radyofarmasotik Ajan
+    description: Radiopharmaceutical agent.
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: "3.1.1"
+    fetchedAt: "2026-11-15"
+    page: 198
+    section: Tablo 4.2.1.f - IlacBilgisiDVO (ilacTuru)
+    confidence: extracted
+status: reviewed

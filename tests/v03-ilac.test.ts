@@ -48,7 +48,7 @@ describe("v0.3 ilac (Group 20)", () => {
     expect(byName.get("adet")?.["type"]).toBe("decimal");
     expect(byName.get("barkod")?.["length"]).toBe(13);
     expect(String(byName.get("barkod")?.["description"])).toContain(
-      "Majistral",
+      "majistral",
     );
     expect(byName.get("ilacTuru")?.["type"]).toBe("enum");
     expect(byName.get("ilacTuru")?.["enumRef"]).toBe("ilac-turu");

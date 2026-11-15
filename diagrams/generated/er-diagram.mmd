@@ -211,6 +211,26 @@ erDiagram
     string takipNo
     string ktsHbysKodu
   }
+  IlacBilgisiDVO {
+    string aciklama
+    decimal adet
+    string barkod
+    string hizmetSunucuRefNo
+    enum ilacTuru
+    string islemSiraNo
+    date islemTarihi
+    decimal tutar
+    string paketHaric
+    string ozelDurum
+    array cokluOzelDurum
+    string seriNo
+    date sonKullanimTarihi
+    string batchNo
+    string itsBirimSarfId
+    object majistralIlac
+    string birlikteYapilanIslemSUTKodu
+    string birlikteYapilanIslemHizmetSunucuRefNo
+  }
   KanBilgisiDVO {
     string bransKodu
     string drTescilNo
@@ -378,6 +398,7 @@ erDiagram
   FaturaCevapDetayDVO }o--|| taburcu_kodu : enumRef
   HizmetDVO }o--|| odeme_sorgu_durum : enumRef
   HizmetDetayDVO }o--|| taburcu_kodu : enumRef
+  IlacBilgisiDVO }o--|| ilac_turu : enumRef
   MalzemeBilgisiDVO }o--|| malzeme_turu : enumRef
   ProvizyonGirisDVO }o--|| sigortali_turu : enumRef
   ProvizyonGirisDVO }o--|| provizyon_tipi : enumRef
