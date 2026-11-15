@@ -1,0 +1,98 @@
+id: HataliIslemBilgisiDVO
+domain: hizmet-kayit
+direction: output
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: "3.1.1"
+    fetchedAt: "2026-11-15"
+    page: 235
+    section: Tablo 4.2.1.n - HataliIslemBilgisiDVO
+    confidence: extracted
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: "3.1.1"
+    fetchedAt: "2026-11-15"
+    page: 236
+    section: Tablo 4.2.1.n - HataliIslemBilgisiDVO (devam)
+    confidence: extracted
+fields:
+  - name: hataKodu
+    displayName: Hata Kodu
+    type: string
+    enumRef: null
+    required: false
+    length: 4
+    description: Error code (s.235).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 235
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: hataMesaji
+    displayName: Hata Mesaji
+    type: string
+    enumRef: null
+    required: false
+    length: null
+    description: Error explanation (s.236).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 236
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: hizmetSunucuRefNo
+    displayName: Hizmet Sunucu Referans Numarasi
+    type: string
+    enumRef: null
+    required: false
+    length: 20
+    description: Institution reference of the failed operation (s.236).
+    sensitive: false
+    syntheticOnlyRecommended: true
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 236
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: oncekiIslemBilgisi
+    displayName: Onceki Islem Bilgisi
+    type: object
+    enumRef: null
+    required: false
+    length: null
+    description: >-
+      Prior-operation composite (OncekiIslemBilgisiDVO, Tablo 4.2.1.p,
+      s.236: islemAdedi, islemTarihi, saglikTesisKodu, tesisAdi). Nested
+      placeholder; full expansion is v0.3 scope.
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 236
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+status: reviewed

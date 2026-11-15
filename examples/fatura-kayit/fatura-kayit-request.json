@@ -5,10 +5,10 @@
   "faturaRefNo": "SYNTHETIC_FATURA_000001",
   "hizmetDetaylari": [
     {
-      "islemSiraNo": 1,
-      "islemKodu": "SYNTHETIC_SUT_000001",
-      "adet": 1,
-      "birimFiyat": 100.0
+      "aciklama": null,
+      "protokolNo": "SYNTHETIC_PROTOCOL_000001",
+      "taburcuKodu": "1",
+      "takipNo": "SYNTHETIC_TAKIP_000001"
     }
   ],
   "trafikKazasiOdemeYuzdesi": null,

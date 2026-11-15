@@ -75,14 +75,13 @@ describe("v0.2 composites 3 (Group 15)", () => {
     expect(JSON.stringify(dvo?.data["sourceRefs"])).toContain('"page":241');
   });
 
-  it("deprecates the PRD-modeled service-line HizmetDetayDVO", () => {
+  it("removes the PRD-modeled service-line HizmetDetayDVO (guide moves it to fatura)", () => {
     const dvo = reg.dvos.find(
       (d) =>
         d.data["id"] === "HizmetDetayDVO" &&
         d.data["domain"] === "hizmet-kayit",
     );
-    expect(dvo?.data["status"]).toBe("deprecated");
-    expect(dvo?.data["deprecatedIn"] ?? "").toBeTruthy();
+    expect(dvo, "service-line variant must be removed").toBeUndefined();
   });
 
   it("updates the manifest counts", () => {

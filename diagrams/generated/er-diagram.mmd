@@ -54,6 +54,12 @@ erDiagram
     date faturaTarihi
     string ktsHbysKodu
   }
+  HataliIslemBilgisiDVO {
+    string hataKodu
+    string hataMesaji
+    string hizmetSunucuRefNo
+    object oncekiIslemBilgisi
+  }
   HizmetDVO {
     array ameliyatveGirisimBilgileri
     array digerIslemBilgileri
@@ -72,11 +78,10 @@ erDiagram
     string triajBeyani
   }
   HizmetDetayDVO {
-    integer islemSiraNo
-    integer bransKodu
-    string islemKodu
-    date hizmetTarihi
-    integer adet
+    string aciklama
+    string protokolNo
+    enum taburcuKodu
+    string takipNo
   }
   HizmetIptalCevapDVO {
     string sonucKodu
@@ -209,6 +214,7 @@ erDiagram
   medula_hastane_hizmet_kayit_hizmet_kayit ||--|| HizmetKayitGirisDVO : inputDvo
   medula_hastane_hizmet_kayit_hizmet_kayit ||--|| HizmetKayitCevapDVO : outputDvo
   HizmetDVO }o--|| odeme_sorgu_durum : enumRef
+  HizmetDetayDVO }o--|| taburcu_kodu : enumRef
   ProvizyonGirisDVO }o--|| sigortali_turu : enumRef
   ProvizyonGirisDVO }o--|| provizyon_tipi : enumRef
   ProvizyonGirisDVO }o--|| tedavi_turu : enumRef

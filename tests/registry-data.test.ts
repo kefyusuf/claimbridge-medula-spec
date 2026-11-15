@@ -30,7 +30,6 @@ const EXPECTED_DVO_FILES = [
   "hasta-kabul/takip-oku-giris-dvo.yml",
   "hasta-kabul/takip-sil-cevap-dvo.yml",
   "hasta-kabul/takip-sil-giris-dvo.yml",
-  "hizmet-kayit/hizmet-detay-dvo.yml",
   "hizmet-kayit/hizmet-iptal-cevap-dvo.yml",
   "hizmet-kayit/hizmet-iptal-giris-dvo.yml",
   "hizmet-kayit/hizmet-oku-cevap-dvo.yml",
@@ -38,11 +37,13 @@ const EXPECTED_DVO_FILES = [
   "hizmet-kayit/hizmet-oku-giris-dvo.yml",
   "hizmet-kayit/hizmet-kayit-cevap-dvo.yml",
   "hizmet-kayit/hizmet-kayit-giris-dvo.yml",
+  "hizmet-kayit/hatali-islem-bilgisi-dvo.yml",
   "hizmet-kayit/tani-bilgisi-dvo.yml",
   "fatura-kayit/fatura-iptal-cevap-dvo.yml",
   "fatura-kayit/fatura-iptal-giris-dvo.yml",
   "fatura-kayit/fatura-oku-cevap-dvo.yml",
   "fatura-kayit/fatura-oku-giris-dvo.yml",
+  "fatura-kayit/hizmet-detay-dvo.yml",
 ];
 
 const EXPECTED_ENUM_IDS = [
@@ -57,6 +58,7 @@ const EXPECTED_ENUM_IDS = [
   "tani-tipi",
   "ekds-yontem-gerekce",
   "istisnai-hal",
+  "taburcu-kodu",
 ];
 
 const EXPECTED_RULE_FILES = [
