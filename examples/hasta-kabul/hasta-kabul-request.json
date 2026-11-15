@@ -1,0 +1,11 @@
+{
+  "saglikTesisKodu": 1,
+  "hastaTCKimlikNo": "SYNTHETIC_TC_000000001",
+  "takipNo": null,
+  "provizyonTipi": "N",
+  "tedaviTuru": "1",
+  "takipTipi": "Y",
+  "bransKodu": 1,
+  "doktorTescilNo": "SYNTHETIC_DOCTOR_001",
+  "ktsHbysKodu": "SYNTHETIC_HBYS_001"
+}

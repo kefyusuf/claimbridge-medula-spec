@@ -1,0 +1,14 @@
+{
+  "sonucKodu": "0000",
+  "sonucMesaji": "Islem basari ile tamamlandi.",
+  "hastaBasvuruNo": "SYNTHETIC_BASVURU_000001",
+  "takipNo": "SYNTHETIC_TAKIP_000001",
+  "takipler": [
+    {
+      "takipNo": "SYNTHETIC_TAKIP_000001",
+      "takipTipi": "Y",
+      "takipDurumu": "A",
+      "hastaBasvuruNo": "SYNTHETIC_BASVURU_000001"
+    }
+  ]
+}
