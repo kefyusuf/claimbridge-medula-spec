@@ -1,0 +1,19 @@
+id: medula.hastane.fatura-kayit
+slug: fatura-kayit
+displayName: Fatura Kayit
+description: Invoice registration process that invoices previously registered service records linked to a patient application.
+sourceRefs:
+  - id: medula-hastane-guide-2026-06-17
+    sourceType: official-guide
+    guideVersion: "2026-06-17"
+    fetchedAt: "2026-07-06"
+    confidence: extracted
+wsdl:
+  production: wsdl.fatura-kayit.production
+  test: wsdl.fatura-kayit.test
+methods:
+  - medula.hastane.fatura-kayit.fatura-kayit
+  - medula.hastane.fatura-kayit.fatura-oku
+  - medula.hastane.fatura-kayit.fatura-iptal
+  - medula.hastane.fatura-kayit.fatura-tutar-oku
+status: draft

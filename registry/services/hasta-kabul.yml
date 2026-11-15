@@ -1,0 +1,18 @@
+id: medula.hastane.hasta-kabul
+slug: hasta-kabul
+displayName: Hasta Kabul
+description: Patient admission process that creates a patient application number and an associated tracking number.
+sourceRefs:
+  - id: medula-hastane-guide-2026-06-17
+    sourceType: official-guide
+    guideVersion: "2026-06-17"
+    fetchedAt: "2026-07-06"
+    confidence: extracted
+wsdl:
+  production: wsdl.hasta-kabul.production
+  test: wsdl.hasta-kabul.test
+methods:
+  - medula.hastane.hasta-kabul.hasta-kabul
+  - medula.hastane.hasta-kabul.hasta-kabul-oku
+  - medula.hastane.hasta-kabul.hasta-kabul-iptal
+status: draft
