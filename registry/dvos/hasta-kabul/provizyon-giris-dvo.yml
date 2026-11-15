@@ -52,13 +52,11 @@ fields:
 
   - name: sigortaliTuru
     displayName: Sigortali Turu
-    type: string
-    enumRef: null
+    type: enum
+    enumRef: sigortali-turu
     required: true
     length: 1
-    description: >-
-      Insured person type (s.154). Codes 1-4 (1 Calisan, 2 Emekli, 3 SSK
-      Kurum Personeli, 4 Diger). Enum registry candidate for v0.2.
+    description: Insured person type (s.154). Codes 1-4 in the sigortali-turu registry enum.
     sensitive: false
     syntheticOnlyRecommended: false
     sourceRefs:
@@ -175,14 +173,11 @@ fields:
 
   - name: tedaviTipi
     displayName: Tedavi Tipi
-    type: string
-    enumRef: null
+    type: enum
+    enumRef: tedavi-tipi
     required: true
     length: 1
-    description: >-
-      Detailed treatment profile (s.158-159). Codes 0-22 (0 Normal Sorgu,
-      1 Diyaliz, 4 Kemik iligi, 20 Ortodontik Tedavi, ...). Enum registry
-      candidate for v0.2.
+    description: Detailed treatment profile (s.158-159); codes 0-22 (no 3) in the tedavi-tipi registry enum.
     sensitive: false
     syntheticOnlyRecommended: false
     sourceRefs:

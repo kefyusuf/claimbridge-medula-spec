@@ -27,6 +27,9 @@ const EXPECTED_DVO_FILES = [
   "hasta-kabul/provizyon-cevap-dvo.yml",
   "hasta-kabul/provizyon-giris-dvo.yml",
   "hasta-kabul/takip-dvo.yml",
+  "hasta-kabul/takip-oku-giris-dvo.yml",
+  "hasta-kabul/takip-sil-cevap-dvo.yml",
+  "hasta-kabul/takip-sil-giris-dvo.yml",
   "hizmet-kayit/hizmet-detay-dvo.yml",
   "hizmet-kayit/hizmet-kayit-cevap-dvo.yml",
   "hizmet-kayit/hizmet-kayit-giris-dvo.yml",
@@ -34,9 +37,11 @@ const EXPECTED_DVO_FILES = [
 
 const EXPECTED_ENUM_IDS = [
   "provizyon-tipi",
+  "sigortali-turu",
   "sonuc-kodu",
   "takip-durumu",
   "takip-tipi",
+  "tedavi-tipi",
   "tedavi-turu",
 ];
 
@@ -69,18 +74,23 @@ const MIN_FIELDS: Record<string, string[]> = {
   ],
   HizmetKayitGirisDVO: [
     "saglikTesisKodu",
-    "hastaBasvuruNo",
     "takipNo",
-    "taniBilgileri",
-    "islemBilgileri",
-    "hizmetDetaylari",
+    "tanilar",
     "ktsHbysKodu",
+    "ameliyatveGirisimBilgileri",
+    "muayeneBilgisi",
+    "triajBeyani",
+    "hastaYatisBilgileri",
+    "kanBilgileri",
   ],
   HizmetKayitCevapDVO: [
     "sonucKodu",
     "sonucMesaji",
-    "islemSiraNumaralari",
-    "hizmetKayitReferansNo",
+    "takipNo",
+    "hastaBasvuruNo",
+    "saglikTesisKodu",
+    "islemBilgileri",
+    "hataliKayitlar",
   ],
   FaturaGirisDVO: [
     "saglikTesisKodu",

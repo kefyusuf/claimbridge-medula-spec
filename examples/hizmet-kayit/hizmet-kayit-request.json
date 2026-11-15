@@ -2,19 +2,16 @@
   "saglikTesisKodu": 1,
   "hastaBasvuruNo": "SYNTHETIC_BASVURU_000001",
   "takipNo": "SYNTHETIC_TAKIP_000001",
-  "taniBilgileri": [
+  "tanilar": [
     {
       "taniKodu": "SYNTHETIC_ICD_000001",
       "taniTipi": "S"
     }
   ],
-  "islemBilgileri": [],
-  "hizmetDetaylari": [
+  "ameliyatveGirisimBilgileri": [],
+  "digerIslemBilgileri": [
     {
-      "islemSiraNo": 1,
-      "bransKodu": 1,
       "islemKodu": "SYNTHETIC_SUT_000001",
-      "hizmetTarihi": "2026-07-06",
       "adet": 1
     }
   ],

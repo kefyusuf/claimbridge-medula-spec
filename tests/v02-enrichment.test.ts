@@ -84,10 +84,11 @@ describe("v0.2 enrichment (Group 10)", () => {
     const codes = (e?.data["values"] as Array<{ code: string }>).map(
       (v) => v.code,
     );
-    expect(codes).toHaveLength(23);
+    expect(codes).toHaveLength(22);
     expect(codes[0]).toBe("0");
     expect(codes).toContain("20");
-    expect(codes[22]).toBe("22");
+    expect(codes).not.toContain("3");
+    expect(codes[21]).toBe("22");
     expect(e?.data["status"]).toBe("reviewed");
   });
 

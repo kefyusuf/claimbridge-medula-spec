@@ -1,0 +1,24 @@
+id: sigortali-turu
+displayName: Sigortali Turu
+values:
+  - code: "1"
+    label: Calisan
+    description: Employed insured person.
+  - code: "2"
+    label: Emekli
+    description: Retired insured person.
+  - code: "3"
+    label: SSK Kurum Personeli
+    description: SSK institution personnel.
+  - code: "4"
+    label: Diger
+    description: Other insured types.
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: "3.1.1"
+    fetchedAt: "2026-11-15"
+    page: 154
+    section: Tablo 4.1.1.a - ProvizyonGirisDVO (sigortaliTuru)
+    confidence: extracted
+status: reviewed
