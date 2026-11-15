@@ -1,0 +1,34 @@
+id: medula.hastane.fatura-kayit.fatura-iptal
+service: medula.hastane.fatura-kayit
+names:
+  documentationHeading: FaturaIptal
+  operationName: faturaIptal
+  aliases:
+    - faturaIptal
+contract:
+  inputDvo: null
+  outputDvo: null
+sourceRefs:
+  - id: medula-hastane-guide-2026-06-17
+    sourceType: official-guide
+    guideVersion: "2026-06-17"
+    confidence: inferred
+    notes: Operation name follows the service pattern; verify against guide and WSDL before review.
+stateEffects:
+  creates: []
+  reads:
+    - invoiceRecord
+    - takip
+  updates:
+    - takip
+  deletes:
+    - invoiceRecord
+  generates: []
+success:
+  resultCodeField: sonucKodu
+  successCode: "0000"
+  messageField: sonucMesaji
+sandbox:
+  supported: true
+  defaultScenario: null
+status: draft

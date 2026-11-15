@@ -1,0 +1,32 @@
+id: medula.hastane.hasta-kabul.hasta-kabul-oku
+service: medula.hastane.hasta-kabul
+names:
+  documentationHeading: HastaKabulOku
+  operationName: hastaKabulOku
+  aliases:
+    - hastaKabulOku
+contract:
+  inputDvo: null
+  outputDvo: null
+sourceRefs:
+  - id: medula-hastane-guide-2026-06-17
+    sourceType: official-guide
+    guideVersion: "2026-06-17"
+    confidence: inferred
+    notes: Operation name follows the service pattern; verify against guide and WSDL before review.
+stateEffects:
+  creates: []
+  reads:
+    - patientAdmission
+    - takip
+  updates: []
+  deletes: []
+  generates: []
+success:
+  resultCodeField: sonucKodu
+  successCode: "0000"
+  messageField: sonucMesaji
+sandbox:
+  supported: true
+  defaultScenario: null
+status: draft
