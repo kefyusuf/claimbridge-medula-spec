@@ -1,0 +1,135 @@
+id: FaturaCevapDetayDVO
+domain: fatura-kayit
+direction: output
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: "3.1.1"
+    fetchedAt: "2026-11-15"
+    page: 245
+    section: Tablo 4.3.3.c - FaturaCevapDetayDVO (continues on s.246)
+    confidence: extracted
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: "3.1.1"
+    fetchedAt: "2026-11-15"
+    page: 246
+    section: Tablo 4.3.3.c - FaturaCevapDetayDVO (devam)
+    confidence: extracted
+fields:
+  - name: aciklama
+    displayName: Aciklama
+    type: string
+    enumRef: null
+    required: false
+    length: 255
+    description: Invoice detail description (s.245).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 245
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: protokolNo
+    displayName: Protokol Numarasi
+    type: string
+    enumRef: null
+    required: false
+    length: 20
+    description: Protocol number of the invoice (s.245).
+    sensitive: false
+    syntheticOnlyRecommended: true
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 245
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: taburcuKodu
+    displayName: Taburcu Kodu
+    type: enum
+    enumRef: taburcu-kodu
+    required: false
+    length: 1
+    description: Discharge code (s.245-246); codes 1-13 in the taburcu-kodu registry enum.
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 245
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: takipNo
+    displayName: Takip Numarasi
+    type: string
+    enumRef: null
+    required: false
+    length: null
+    description: Tracking number of the invoiced episode (s.246).
+    sensitive: false
+    syntheticOnlyRecommended: true
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 246
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: takipToplamTutar
+    displayName: Takip Toplam Tutari
+    type: decimal
+    enumRef: null
+    required: false
+    length: null
+    description: Total amount calculated by GSS for the takip (s.246).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 246
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: islemDetaylari
+    displayName: Islem Detaylari
+    type: array
+    enumRef: null
+    required: false
+    length: null
+    description: >-
+      Operation detail records (IslemDetayDVO[], Tablo 4.3.1.f, s.246).
+      Nested composite; expansion is v0.3 scope.
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 246
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+status: reviewed

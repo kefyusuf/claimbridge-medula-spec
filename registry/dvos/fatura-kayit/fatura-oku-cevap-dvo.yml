@@ -131,9 +131,8 @@ fields:
     required: false
     length: null
     description: >-
-      Invoice detail records (FaturaCevapDetayDVO, Tablo 4.3.3.c, s.245).
-      Nested composite modeled as a placeholder; full expansion is v0.3
-      scope.
+      Invoice detail records, expanded as the FaturaCevapDetayDVO registry
+      entity (Tablo 4.3.3.c, s.245-246).
     sensitive: false
     syntheticOnlyRecommended: false
     sourceRefs:
