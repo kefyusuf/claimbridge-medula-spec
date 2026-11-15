@@ -258,6 +258,15 @@ erDiagram
     string ozelDurum
     array cokluOzelDurum
   }
+  MajistralIlacDVO {
+    string islemSiraNo
+    enum preparatTuru
+    string bolunmusTozTuru
+    enum ambalajTuru
+    string ambalajBoyutu
+    string ambalajAdet
+    array hamMaddeler
+  }
   MalzemeBilgisiDVO {
     string kodsuzMalzemeAdi
     decimal adet
@@ -339,6 +348,10 @@ erDiagram
     string istemYapanDrBrans
     array genBilgisi
   }
+  TahlilSonucDVO {
+    string islemSiraNo
+    string sonuc
+  }
   TakipDVO {
     string takipNo
     string ilkTakipNo
@@ -399,6 +412,8 @@ erDiagram
   HizmetDVO }o--|| odeme_sorgu_durum : enumRef
   HizmetDetayDVO }o--|| taburcu_kodu : enumRef
   IlacBilgisiDVO }o--|| ilac_turu : enumRef
+  MajistralIlacDVO }o--|| preparat_turu : enumRef
+  MajistralIlacDVO }o--|| ambalaj_turu : enumRef
   MalzemeBilgisiDVO }o--|| malzeme_turu : enumRef
   ProvizyonGirisDVO }o--|| sigortali_turu : enumRef
   ProvizyonGirisDVO }o--|| provizyon_tipi : enumRef

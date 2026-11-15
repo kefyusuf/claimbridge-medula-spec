@@ -338,7 +338,7 @@ Domain: `hizmet-kayit` · Direction: `input` · Status: `reviewed` · Source ref
 | `sonKullanimTarihi` | date |  | — |  | Drug expiry date (s.199) |
 | `batchNo` | string |  | — |  | Drug batch number (s.199) |
 | `itsBirimSarfId` | string |  | — |  | Unit consumption ID received from the ITS system (s.199) |
-| `majistralIlac` | object |  | — |  | Majistral drug composite (MajistralIlacDVO, Tablo 4.2.1.f.1, s.199); nested placeholder, expansion is v0.3 scope (s.199) |
+| `majistralIlac` | object |  | — |  | Majistral drug composite, expanded as the MajistralIlacDVO registry entity (Tablo 4.2.1.f.1, s.199-200) (s.199) |
 | `birlikteYapilanIslemSUTKodu` | string |  | — |  | SUT code of the concurrently performed operation (s.199) |
 | `birlikteYapilanIslemHizmetSunucuRefNo` | string |  | — |  | Institution reference of the concurrently performed operation (s.199) |
 
@@ -383,6 +383,20 @@ Domain: `hizmet-kayit` · Direction: `input` · Status: `reviewed` · Source ref
 | `islemTarihi` | date |  | — |  | (Consultation date, dd.mm.yyyy) s.224 |
 | `ozelDurum` | string |  | — |  | (Special condition code, Tablo 5.1 OzelDurumVO) s.224 |
 | `cokluOzelDurum` | array |  | — |  | (Multiple special-condition codes) s.224 |
+
+## `MajistralIlacDVO`
+
+Domain: `hizmet-kayit` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19, medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `islemSiraNo` | string |  | — |  | Sequence number; null-on-input pattern (s.199) |
+| `preparatTuru` | enum |  | preparat-turu |  | Preparation type - codes 1-8 in the preparat-turu registry enum (s.199) |
+| `bolunmusTozTuru` | string |  | — |  | Powder-division type; required when preparatTuru is 3 (s.199) |
+| `ambalajTuru` | enum |  | ambalaj-turu |  | Packaging type - codes 1-3 in the ambalaj-turu registry enum (s.200) |
+| `ambalajBoyutu` | string |  | — |  | Packaging size code; the guide lists ~30 codes (1-19, 21-31) - enum candidate for v0.3 (s.200) |
+| `ambalajAdet` | string |  | — |  | Packaging quantity (s.200) |
+| `hamMaddeler` | array |  | — |  | Raw-material records (MajistralHammaddeDVO[], Tablo 4.2.1.f.1.1, s.200); nested composite, expansion is v0.3 scope (s.200) |
 
 ## `MalzemeBilgisiDVO`
 
@@ -494,6 +508,15 @@ Domain: `hizmet-kayit` · Direction: `input` · Status: `reviewed` · Source ref
 | `raporTakipNo` | string |  | — |  | Report tracking number (s.228) |
 | `istemYapanDrBrans` | string |  | — |  | Branch code of the requesting doctor (s.228) |
 | `genBilgisi` | array |  | — |  | Gene details worked in the operation (GenBilgisiDVO[], Tablo 4.2.1.j.2, s.228); nested composite, expansion is v0.3 scope (s.228) |
+
+## `TahlilSonucDVO`
+
+Domain: `hizmet-kayit` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `islemSiraNo` | string |  | — |  | Sequence number; null-on-input pattern while registering (s.228) |
+| `sonuc` | string |  | — |  | Lab result value; must be +, - or a numeric value (s.228) |
 
 ## `TakipDVO`
 

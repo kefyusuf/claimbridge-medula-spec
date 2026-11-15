@@ -318,7 +318,7 @@ fields:
     enumRef: null
     required: false
     length: null
-    description: Majistral drug composite (MajistralIlacDVO, Tablo 4.2.1.f.1, s.199); nested placeholder, expansion is v0.3 scope (s.199)
+    description: Majistral drug composite, expanded as the MajistralIlacDVO registry entity (Tablo 4.2.1.f.1, s.199-200) (s.199)
     sensitive: false
     syntheticOnlyRecommended: false
     sourceRefs:

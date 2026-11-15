@@ -6,6 +6,35 @@ Format: [Keep a Changelog](https://keepachangelog.com); versioning: SemVer
 
 ## [Unreleased]
 
+### Group 21 — feat/v03-nested (2026-11-15)
+
+Local group: no remote yet, so the PR step is replaced by a local
+`--no-ff` merge to `main` (PRD §28 step 6 fallback).
+
+- TDD red first: nested composite suite (6 checks) committed and verified
+  failing (6/6 red) before the files existed (`3b0f81c`).
+- `MajistralIlacDVO` (4.2.1.f.1, s.199-200, 7 fields): preparatTuru and
+  ambalajTuru enum bindings, the bolunmusTozTuru conditional
+  (preparatTuru=3), ~30-code ambalajBoyutu noted as a v0.3 enum
+  candidate, and the hamMaddeler nested reference
+  (MajistralHammaddeDVO, 4.2.1.f.1.1).
+- `TahlilSonucDVO` (4.2.1.j.1, s.228): the two-field lab result record
+  (islemSiraNo + sonuc taking +/- or numeric values).
+- New enums `preparat-turu` (8 codes) and `ambalaj-turu` (3 codes).
+- IlacBilgisiDVO `majistralIlac` placeholder resolved to the registry
+  entity.
+- Registry now: **38 DVOs, 18 enums**; dist regenerated.
+
+Deferred: MajistralHammaddeDVO (4.2.1.f.1.1), GenBilgisiDVO (4.2.1.j.2),
+IslemDetayDVO (4.3.1.f), ambalajBoyutu enum, devredilenKurum enum, new
+HastaKabul methods, Mimosa audit, GitHub remote.
+
+Validation output: `pnpm test` → 145/145 passed (22 suites); `tsc
+--noEmit` → clean; `pnpm validate` → OK; `pnpm check` → OK;
+`pnpm format:check` → OK.
+
+Remaining TODOs: none for this group.
+
 ### Group 20 — feat/v03-ilac (2026-11-15)
 
 Local group: no remote yet, so the PR step is replaced by a local
