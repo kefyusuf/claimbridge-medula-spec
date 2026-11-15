@@ -88,8 +88,8 @@ describe("v0.2 composites 3 (Group 15)", () => {
     const manifest = JSON.parse(
       readFileSync(resolve(root, "dist", "manifest.json"), "utf8"),
     ) as { counts: Record<string, number> };
-    expect(manifest.counts.dvos).toBe(26);
-    expect(manifest.counts.enums).toBe(12);
+    expect(manifest.counts.dvos).toBe(28);
+    expect(manifest.counts.enums).toBe(14);
   });
 });
 

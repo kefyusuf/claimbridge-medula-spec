@@ -1,6 +1,6 @@
 {
   "specVersion": "0.1.0",
-  "generatedAt": "2026-11-15T17:01:53.226Z",
+  "generatedAt": "2026-11-15T17:06:19.447Z",
   "sources": [
     {
       "id": "medula-hastane-guide-2026-06-17",
@@ -679,6 +679,748 @@
     }
   ],
   "dvos": [
+    {
+      "id": "AmeliyatveGirisimBilgisiDVO",
+      "domain": "hizmet-kayit",
+      "direction": "input",
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "fetchedAt": "2026-11-15",
+          "page": 190,
+          "section": "Tablo 4.2.1.c - AmeliyatveGirisimBilgisiDVO (continues on s.191-192)",
+          "confidence": "extracted"
+        },
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "fetchedAt": "2026-11-15",
+          "page": 191,
+          "section": "Tablo 4.2.1.c - AmeliyatveGirisimBilgisiDVO (devam)",
+          "confidence": "extracted"
+        },
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "fetchedAt": "2026-11-15",
+          "page": 192,
+          "section": "Tablo 4.2.1.c - AmeliyatveGirisimBilgisiDVO (son)",
+          "confidence": "extracted"
+        }
+      ],
+      "fields": [
+        {
+          "name": "aciklama",
+          "displayName": "Aciklama",
+          "type": "string",
+          "enumRef": null,
+          "required": false,
+          "length": 1000,
+          "description": "Description of the performed operation (s.190).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 190,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "adet",
+          "displayName": "Adet",
+          "type": "integer",
+          "enumRef": null,
+          "required": true,
+          "length": null,
+          "description": "Quantity of the operation (s.191).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 191,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "ayniFarkliKesi",
+          "displayName": "Ayni Kesi / Seans Bilgisi",
+          "type": "enum",
+          "enumRef": "ayni-farkli-kesi",
+          "required": false,
+          "length": 1,
+          "description": "Same-session/same-incision relation code (s.191); codes 1-5.",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 191,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "bransKodu",
+          "displayName": "Brans Kodu",
+          "type": "string",
+          "enumRef": null,
+          "required": true,
+          "length": 4,
+          "description": "Branch code of the operation (s.191).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 191,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "drTescilNo",
+          "displayName": "Doktor Tescil No",
+          "type": "string",
+          "enumRef": null,
+          "required": true,
+          "length": 16,
+          "description": "Diploma registration number of the performing doctor (s.191).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": true,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 191,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "hizmetSunucuRefNo",
+          "displayName": "Hizmet Sunucu Referans Numarasi",
+          "type": "string",
+          "enumRef": null,
+          "required": true,
+          "length": 20,
+          "description": "Institution-assigned reference used to pair the record with the Medula-generated islemSiraNo (s.191).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": true,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 191,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "islemSiraNo",
+          "displayName": "Islem Sira Numarasi",
+          "type": "string",
+          "enumRef": null,
+          "required": false,
+          "length": 20,
+          "description": "Sequence number of the registered service; send null while registering, Medula fills and returns it (s.191). Null-on-input pattern.",
+          "sensitive": false,
+          "syntheticOnlyRecommended": true,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 191,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "islemTarihi",
+          "displayName": "Islem Tarihi",
+          "type": "date",
+          "enumRef": null,
+          "required": true,
+          "length": 10,
+          "description": "Operation date in dd.mm.yyyy format (s.191).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 191,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "sagSol",
+          "displayName": "Sag Taraf, Sol Taraf",
+          "type": "string",
+          "enumRef": null,
+          "required": false,
+          "length": 1,
+          "description": "Side code 1/2/3 (Sag, Sol, Sag-Sol ayrimi yok); null saves as 3 (s.191). The DigerIslem table uses R/L instead - divergence noted.",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 191,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "sutKodu",
+          "displayName": "SUT Kodu",
+          "type": "string",
+          "enumRef": null,
+          "required": true,
+          "length": 7,
+          "description": "SUT-defined operation code (s.191).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 191,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "euroscore",
+          "displayName": "Euroscore",
+          "type": "enum",
+          "enumRef": "euroscore",
+          "required": true,
+          "length": 1,
+          "description": "Euroscore risk code (s.191); codes 0-3 in the euroscore registry enum.",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 191,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "ozelDurum",
+          "displayName": "Ozel Durum",
+          "type": "string",
+          "enumRef": null,
+          "required": false,
+          "length": 1,
+          "description": "Special condition code; see guide Tablo 5.1 OzelDurumVO (s.192).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 192,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "cokluOzelDurum",
+          "displayName": "Coklu Ozel Durum",
+          "type": "array",
+          "enumRef": null,
+          "required": false,
+          "length": null,
+          "description": "Multiple special-condition codes (s.192).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 192,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "raporTakipNo",
+          "displayName": "Rapor Takip Numarasi",
+          "type": "string",
+          "enumRef": null,
+          "required": false,
+          "length": null,
+          "description": "Report tracking number (s.192).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": true,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 192,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
+      "id": "DigerIslemBilgisiDVO",
+      "domain": "hizmet-kayit",
+      "direction": "input",
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "fetchedAt": "2026-11-15",
+          "page": 192,
+          "section": "Tablo 4.2.1.d - DigerIslemBilgisiDVO (continues on s.193)",
+          "confidence": "extracted"
+        },
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "fetchedAt": "2026-11-15",
+          "page": 193,
+          "section": "Tablo 4.2.1.d - DigerIslemBilgisiDVO (devam)",
+          "confidence": "extracted"
+        }
+      ],
+      "fields": [
+        {
+          "name": "adet",
+          "displayName": "Adet",
+          "type": "integer",
+          "enumRef": null,
+          "required": true,
+          "length": null,
+          "description": "Quantity of the operation (s.192).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 192,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "bransKodu",
+          "displayName": "Brans Kodu",
+          "type": "string",
+          "enumRef": null,
+          "required": true,
+          "length": 4,
+          "description": "Branch code of the operation (s.192).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 192,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "sutKodu",
+          "displayName": "SUT Kodu",
+          "type": "string",
+          "enumRef": null,
+          "required": true,
+          "length": null,
+          "description": "SUT-defined operation code (s.192).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 192,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "drTescilNo",
+          "displayName": "Doktor Tescil No",
+          "type": "string",
+          "enumRef": null,
+          "required": false,
+          "length": 16,
+          "description": "Diploma registration number of the performing doctor (s.192); optional for operations coded 530140 and 530150 per the guide note.",
+          "sensitive": false,
+          "syntheticOnlyRecommended": true,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 192,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [
+            {
+              "condition": "operation code is 530140 or 530150",
+              "note": "guide marks drTescilNo as not required for these codes (s.192)"
+            }
+          ],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "hizmetSunucuRefNo",
+          "displayName": "Hizmet Sunucu Referans Numarasi",
+          "type": "string",
+          "enumRef": null,
+          "required": true,
+          "length": 20,
+          "description": "Institution-assigned reference used to pair the record with the Medula-generated islemSiraNo (s.192).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": true,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 192,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "islemSiraNo",
+          "displayName": "Islem Sira Numarasi",
+          "type": "string",
+          "enumRef": null,
+          "required": false,
+          "length": 15,
+          "description": "Sequence number of the registered service; send null while registering, Medula fills and returns it (s.192). Null-on-input pattern.",
+          "sensitive": false,
+          "syntheticOnlyRecommended": true,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 192,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "islemTarihi",
+          "displayName": "Islem Tarihi",
+          "type": "date",
+          "enumRef": null,
+          "required": true,
+          "length": 10,
+          "description": "Operation date in dd.mm.yyyy format (s.192).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 192,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "raporTakipNo",
+          "displayName": "Rapor Takip Numarasi",
+          "type": "string",
+          "enumRef": null,
+          "required": false,
+          "length": 8,
+          "description": "Medula record number of a registered report (s.192); mandatory for report-requiring operations (Diyaliz, FTR, etc.).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": true,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 192,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [
+            {
+              "condition": "the operation requires a report",
+              "note": "guide marks raporTakipNo mandatory for report-requiring operations (s.192)"
+            }
+          ],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "ozelDurum",
+          "displayName": "Ozel Durum",
+          "type": "string",
+          "enumRef": null,
+          "required": false,
+          "length": 1,
+          "description": "Special condition code; see guide Tablo 5.1 OzelDurumVO (s.192).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 192,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "ayniFarkliKesi",
+          "displayName": "Ayni Kesi / Seans Bilgisi",
+          "type": "enum",
+          "enumRef": "ayni-farkli-kesi",
+          "required": false,
+          "length": 1,
+          "description": "Same-session/same-incision relation code (s.192-193); codes 1-5.",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 192,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "cokluOzelDurum",
+          "displayName": "Coklu Ozel Durum",
+          "type": "array",
+          "enumRef": null,
+          "required": false,
+          "length": null,
+          "description": "Multiple special-condition codes (s.193).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 193,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "aciklama",
+          "displayName": "Aciklama",
+          "type": "string",
+          "enumRef": null,
+          "required": false,
+          "length": 500,
+          "description": "Operation description (s.193).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 193,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "sagSol",
+          "displayName": "Sag Sol Bilgisi",
+          "type": "string",
+          "enumRef": null,
+          "required": false,
+          "length": 1,
+          "description": "Side code using R (Sag) / L (Sol) letters in this table (s.193) - diverges from the AmeliyatveGirisim 1/2/3 codes; divergence noted.",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 193,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "istemYapanDrTescilNo",
+          "displayName": "Istem Yapan Doktor Tescil No",
+          "type": "string",
+          "enumRef": null,
+          "required": true,
+          "length": 16,
+          "description": "Registration number of the requesting doctor (s.193).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": true,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 193,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "istemYapanDrBrans",
+          "displayName": "Istem Yapan Doktor Brans",
+          "type": "string",
+          "enumRef": null,
+          "required": true,
+          "length": 4,
+          "description": "Branch code of the requesting doctor (s.193).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 193,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        }
+      ],
+      "status": "reviewed"
+    },
     {
       "id": "FaturaCevapDVO",
       "domain": "fatura-kayit",
@@ -4901,6 +5643,49 @@
   ],
   "enums": [
     {
+      "id": "ayni-farkli-kesi",
+      "displayName": "Ayni Farkli Kesi",
+      "values": [
+        {
+          "code": "1",
+          "label": "Ayni seans + ayni kesi",
+          "description": "Same session and same incision."
+        },
+        {
+          "code": "2",
+          "label": "Farkli seans + farkli kesi",
+          "description": "Different session and different incision."
+        },
+        {
+          "code": "3",
+          "label": "Ayni seansta + farkli kesi",
+          "description": "Same session, different incision."
+        },
+        {
+          "code": "4",
+          "label": "Ayni seansta + farkli kesi + farkli klinik kod",
+          "description": "Same session, different incision, different clinic code."
+        },
+        {
+          "code": "5",
+          "label": "Ayni seansta + ayni kesi + farkli klinik kod",
+          "description": "Same session, same incision, different clinic code."
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "fetchedAt": "2026-11-15",
+          "page": 191,
+          "section": "Tablo 4.2.1.c - AmeliyatveGirisimBilgisiDVO (ayniFarkliKesi)",
+          "confidence": "extracted"
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
       "id": "ekds-yontem-gerekce",
       "displayName": "EKDS Yontem Gerekce",
       "values": [
@@ -4978,6 +5763,44 @@
           "fetchedAt": "2026-11-15",
           "page": 167,
           "section": "ekdsYontemGerekce codes (Pin/fotograf/fiziksel dogrulama gerekceleri)",
+          "confidence": "extracted"
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
+      "id": "euroscore",
+      "displayName": "Euroscore",
+      "values": [
+        {
+          "code": "0",
+          "label": "Yok",
+          "description": "No Euroscore; full payment."
+        },
+        {
+          "code": "1",
+          "label": "Dusuk risk",
+          "description": "Low risk - operation amount reduced by ten percent (s.191)."
+        },
+        {
+          "code": "2",
+          "label": "Orta risk",
+          "description": "Medium risk - operation amount paid in full (s.191)."
+        },
+        {
+          "code": "3",
+          "label": "Yuksek risk",
+          "description": "High risk (s.191)."
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "fetchedAt": "2026-11-15",
+          "page": 191,
+          "section": "Tablo 4.2.1.c - AmeliyatveGirisimBilgisiDVO (Euroscore)",
           "confidence": "extracted"
         }
       ],

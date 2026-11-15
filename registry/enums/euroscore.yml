@@ -1,0 +1,24 @@
+id: euroscore
+displayName: Euroscore
+values:
+  - code: "0"
+    label: Yok
+    description: No Euroscore; full payment.
+  - code: "1"
+    label: Dusuk risk
+    description: Low risk - operation amount reduced by ten percent (s.191).
+  - code: "2"
+    label: Orta risk
+    description: Medium risk - operation amount paid in full (s.191).
+  - code: "3"
+    label: Yuksek risk
+    description: High risk (s.191).
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: "3.1.1"
+    fetchedAt: "2026-11-15"
+    page: 191
+    section: Tablo 4.2.1.c - AmeliyatveGirisimBilgisiDVO (Euroscore)
+    confidence: extracted
+status: reviewed

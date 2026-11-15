@@ -6,6 +6,36 @@ Format: [Keep a Changelog](https://keepachangelog.com); versioning: SemVer
 
 ## [Unreleased]
 
+### Group 17 — feat/v03-entries-1 (2026-11-15)
+
+Local group: no remote yet, so the PR step is replaced by a local
+`--no-ff` merge to `main` (PRD §28 step 6 fallback).
+
+- TDD red first: entry composite suite part 1 (5 checks) committed and
+  verified failing (5/5 red) before the composites existed (`11af938`).
+- `AmeliyatveGirisimBilgisiDVO` (4.2.1.c, s.190-192, 14 fields) and
+  `DigerIslemBilgisiDVO` (4.2.1.d, s.192-193, 15 fields) registered —
+  both `reviewed` with per-field page references; the null-on-input
+  `islemSiraNo` pattern, the 530140/530150 drTescil exception, and the
+  report-requiring `raporTakipNo` condition documented.
+- New enums `ayni-farkli-kesi` (5 codes, s.191) and `euroscore` (4 risk
+  codes, s.191).
+- Guide divergence documented: `sagSol` uses 1/2/3 in Ameliyat table but
+  R/L in DigerIslem table — fields modeled per-table with notes, no
+  shared enum (kılavuz kendi içinde tutarsız).
+- Registry now: **28 DVOs, 14 enums**; dist regenerated.
+
+Deferred to Group 18: DisBilgisiDVO (4.2.1.e, s.193-195 dental chart
+fields), IlacBilgisiDVO, KonsultasyonBilgisiDVO, MalzemeBilgisiDVO,
+MuayeneBilgisiDVO, TahlilBilgisiDVO, TetkikveRadyolojiBilgisiDVO,
+HastaYatisBilgisiDVO, KanBilgisiDVO.
+
+Validation output: `pnpm test` → 125/125 passed (18 suites); `tsc
+--noEmit` → clean; `pnpm validate` → OK; `pnpm check` → OK;
+`pnpm format:check` → OK.
+
+Remaining TODOs: none for this group.
+
 ### Group 16 — feat/v03-composites (2026-11-15)
 
 Local group: no remote yet, so the PR step is replaced by a local
