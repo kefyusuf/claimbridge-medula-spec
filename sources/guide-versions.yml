@@ -9,3 +9,16 @@ guides:
       Official technical usage guide referenced by the v0.1 registry.
       Official PDFs are never vendored into Git (PRD 16.3); only the URL,
       fetch date, and version are recorded here.
+
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    title: MEDULA Web Servisleri Kullanım Kılavuzu
+    version: "3.1.1"
+    publishedAt: "2026-10-19"
+    fetchedAt: "2026-11-15"
+    sha256: 87489834b81b914656eedff3040cb896c49f9de2b18363663c7649e19d237d66
+    url: https://medula.sgk.gov.tr/hastane/kilavuz/MEDULA_Kullanim_Kilavuzu.pdf
+    notes: >-
+      Edition used for the Group 9 verification pass. Edition stamp
+      19/10/2026; changelog line shows version 3.1.1 (entries through
+      2025). 354 pages. sha256 computed over the fetched PDF; the file
+      itself stays in the gitignored local-guide/ directory.

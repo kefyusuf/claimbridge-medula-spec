@@ -2,9 +2,12 @@ id: FaturaGirisDVO
 domain: fatura-kayit
 direction: input
 sourceRefs:
-  - id: medula-hastane-guide-2026-06-17
+  - id: medula-hastane-guide-3-1-1-2026-10-19
     sourceType: official-guide
-    guideVersion: "2026-06-17"
+    guideVersion: "3.1.1"
+    fetchedAt: "2026-11-15"
+    page: 240
+    section: Tablo 4.3.1.a - FaturaGirisDVO
     confidence: extracted
 fields:
   - name: saglikTesisKodu
@@ -66,14 +69,15 @@ fields:
     type: string
     enumRef: null
     required: true
-    length: null
-    description: Institution-side invoice reference number.
+    length: 20
+    description: Institution-side invoice reference number (s.240).
     sensitive: false
     syntheticOnlyRecommended: false
     sourceRefs:
-      - id: medula-hastane-guide-2026-06-17
+      - id: medula-hastane-guide-3-1-1-2026-10-19
         sourceType: official-guide
-        guideVersion: "2026-06-17"
+        guideVersion: "3.1.1"
+        page: 240
         confidence: extracted
     conditionalRequired: []
     introducedIn: null
@@ -101,19 +105,21 @@ fields:
     displayName: Trafik Kazasi Odeme Yuzdesi
     type: integer
     enumRef: null
-    required: false
+    required: true
     length: null
-    description: Traffic-accident payment percentage when the claim is traffic-accident related.
+    description: >-
+      Traffic-accident payment percentage; the guide marks it required -
+      traffic invoices pay back by this percentage (s.240).
     sensitive: false
     syntheticOnlyRecommended: false
     sourceRefs:
-      - id: medula-hastane-guide-2026-06-17
+      - id: medula-hastane-guide-3-1-1-2026-10-19
         sourceType: official-guide
-        guideVersion: "2026-06-17"
-        confidence: inferred
-        notes: Type assumed integer; verify against the guide field table.
+        guideVersion: "3.1.1"
+        page: 240
+        confidence: extracted
     conditionalRequired:
-      - condition: claim is traffic-accident related
+      - condition: the invoice covers services related to a traffic accident
         note: covered by rule conditional-trafik-kazasi-yuzdesi
     introducedIn: null
     deprecatedIn: null
@@ -122,17 +128,17 @@ fields:
     displayName: Ilave Ucret
     type: decimal
     enumRef: null
-    required: false
+    required: true
     length: null
-    description: Additional fee amount declared with the invoice.
+    description: Additional difference fee collected from the patient; the guide marks it required (s.240).
     sensitive: false
     syntheticOnlyRecommended: false
     sourceRefs:
-      - id: medula-hastane-guide-2026-06-17
+      - id: medula-hastane-guide-3-1-1-2026-10-19
         sourceType: official-guide
-        guideVersion: "2026-06-17"
-        confidence: inferred
-        notes: Type assumed decimal; verify against the guide field table.
+        guideVersion: "3.1.1"
+        page: 240
+        confidence: extracted
     conditionalRequired: []
     introducedIn: null
     deprecatedIn: null
@@ -194,19 +200,23 @@ fields:
 
   - name: muvafakatVar
     displayName: Muvafakat Var
-    type: boolean
+    type: string
     enumRef: null
-    required: false
-    length: null
-    description: Whether the patient consent (muvafakat) is on file.
+    required: true
+    length: 1
+    description: >-
+      Patient consent flag sent as E (Evet) or H (Hayir) by uncontracted
+      institutions (s.240 and changelog s.12, edition 3.1.1). Verification
+      correction - the v0.1 draft modeled a boolean.
     sensitive: false
     syntheticOnlyRecommended: false
     sourceRefs:
-      - id: medula-hastane-guide-2026-06-17
+      - id: medula-hastane-guide-3-1-1-2026-10-19
         sourceType: official-guide
-        guideVersion: "2026-06-17"
+        guideVersion: "3.1.1"
+        page: 240
         confidence: extracted
     conditionalRequired: []
     introducedIn: null
     deprecatedIn: null
-status: draft
+status: reviewed

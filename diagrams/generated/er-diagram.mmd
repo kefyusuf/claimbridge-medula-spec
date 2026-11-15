@@ -18,7 +18,7 @@ erDiagram
     string ktsHbysKodu
     string hastaTelefon
     string hastaAdres
-    boolean muvafakatVar
+    string muvafakatVar
   }
   FaturaHizmetDetayDVO {
     integer islemSiraNo
@@ -58,19 +58,28 @@ erDiagram
   ProvizyonGirisDVO {
     integer saglikTesisKodu
     string hastaTCKimlikNo
-    string takipNo
+    string sigortaliTuru
+    string bransKodu
+    string devredilenKurum
+    date provizyonTarihi
     enum provizyonTipi
     enum tedaviTuru
+    string tedaviTipi
     enum takipTipi
-    integer bransKodu
-    string doktorTescilNo
+    string takipNo
+    string istisnaiHal
+    string hastaTelefon
+    string hastaAdres
     string ktsHbysKodu
+    string doktorTescilNo
   }
   TakipDVO {
     string takipNo
+    string ilkTakipNo
     enum takipTipi
     enum takipDurumu
     string hastaBasvuruNo
+    string bransKodu
   }
   medula_hastane_fatura_kayit_fatura_kayit ||--|| FaturaGirisDVO : inputDvo
   medula_hastane_fatura_kayit_fatura_kayit ||--|| FaturaCevapDVO : outputDvo

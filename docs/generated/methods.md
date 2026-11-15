@@ -37,8 +37,8 @@
 | Output DVO | FaturaCevapDVO |
 | Success | sonucKodu = 0000 (sonucMesaji) |
 | Sandbox supported |  |
-| Status | draft |
-| Source refs | medula-hastane-guide-2026-06-17 |
+| Status | reviewed |
+| Source refs | medula-hastane-guide-2026-06-17, medula-hastane-guide-3-1-1-2026-10-19 |
 
 **State effects**
 
@@ -109,8 +109,8 @@
 | Output DVO | ProvizyonCevapDVO |
 | Success | sonucKodu = 0000 (sonucMesaji) |
 | Sandbox supported |  |
-| Status | draft |
-| Source refs | medula-hastane-guide-2026-06-17 |
+| Status | reviewed |
+| Source refs | medula-hastane-guide-2026-06-17, medula-hastane-guide-3-1-1-2026-10-19 |
 
 **State effects**
 
@@ -229,8 +229,8 @@
 | Output DVO | HizmetKayitCevapDVO |
 | Success | sonucKodu = 0000 (sonucMesaji) |
 | Sandbox supported |  |
-| Status | draft |
-| Source refs | medula-hastane-guide-2026-06-17 |
+| Status | reviewed |
+| Source refs | medula-hastane-guide-2026-06-17, medula-hastane-guide-3-1-1-2026-10-19 |
 
 **State effects**
 

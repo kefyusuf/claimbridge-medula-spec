@@ -14,6 +14,13 @@ sourceRefs:
     sourceType: official-guide
     guideVersion: "2026-06-17"
     confidence: extracted
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: "3.1.1"
+    fetchedAt: "2026-11-15"
+    page: 149
+    section: 3 Surecler ve Metotlari - metot listesi
+    confidence: extracted
 stateEffects:
   creates:
     - serviceRecord
@@ -34,4 +41,4 @@ success:
 sandbox:
   supported: true
   defaultScenario: happy-path
-status: draft
+status: reviewed

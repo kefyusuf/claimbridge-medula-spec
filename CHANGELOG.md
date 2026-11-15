@@ -6,7 +6,47 @@ Format: [Keep a Changelog](https://keepachangelog.com); versioning: SemVer
 
 ## [Unreleased]
 
-_Nothing yet — the v0.1 scope is complete._
+### Group 9 — feat/guide-verification (2026-11-15)
+
+Local group: no remote yet, so the PR step is replaced by a local
+`--no-ff` merge to `main` (PRD §28 step 6 fallback).
+
+- The official guide is publicly downloadable without login: fetched
+  directly from `medula.sgk.gov.tr` (edition stamp 19/10/2026, version
+  line 3.1.1, 354 pages, sha256 `87489834…` recorded in
+  `guide-versions.yml`; PDF kept in gitignored `local-guide/`, never
+  vendored — PRD §16.3).
+- TDD red first: verification contract suite (9 checks) committed and
+  verified failing (8/9 red) before any registry correction (`079ef7a`).
+- Guide corrections applied (see `sources/extraction-notes.md` for the
+  full list): provizyonTipi → 16 codes; takipTipi → 11 codes (the Y/B
+  yeni/bagli model was wrong — linked takips go through `takipNo`);
+  takipDurumu → 0/1 (A/I/K was wrong); tedaviTuru → A/Y/G (1/2 was
+  wrong, detailed profile is the separate `tedaviTipi` 0-22 field);
+  bransKodu → String(4); ktsHbysKodu required; muvafakatVar → E/H
+  string; trafikKazasiOdemeYuzdesi + ilaveUcret required;
+  faturaRefNo → String(20); six new guide fields added to
+  ProvizyonGirisDVO; doktorTescilNo marked absent from the guide
+  (`deprecatedIn: 0.2.0`).
+- Promoted to `reviewed` with page references: the five enums,
+  ProvizyonGirisDVO, TakipDVO, FaturaGirisDVO, and the three core kayit
+  methods (method list verified on guide page 149). oku/iptal methods
+  stay `draft` until their TakipSil* contracts resolve.
+- Scenarios and examples updated to the verified codes; dist outputs
+  regenerated.
+
+Deferred to Group 10 (v0.2): TakipSil* DVOs and full oku/iptal contract
+resolution; sonucKodu error-code catalog completion; enum extraction for
+sigortaliTuru/devredilenKurum/tedaviTipi/istisnaiHal; PRD §13.4 revision
+(taniBilgileri→tanilar naming, doktorTescilNo removal); new HastaKabul
+methods (ekdsKisiDogrulamaSorgu, ekdsBelgeGerekenTakipSorgu, SevkBildir,
+HastaCikis*, KemikIligi*).
+
+Validation output: `pnpm test` → 81/81 passed; `tsc --noEmit` → clean;
+`pnpm validate` → OK; `pnpm check` → OK; `pnpm format:check` → OK.
+
+Remaining TODOs: none for this group. Next: Group 10 — v0.2 enrichment
+(PRD §25 items 1-4).
 
 ## [0.1.0] — 2026-11-15
 

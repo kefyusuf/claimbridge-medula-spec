@@ -2,24 +2,28 @@ id: ProvizyonGirisDVO
 domain: hasta-kabul
 direction: input
 sourceRefs:
-  - id: medula-hastane-guide-2026-06-17
+  - id: medula-hastane-guide-3-1-1-2026-10-19
     sourceType: official-guide
-    guideVersion: "2026-06-17"
+    guideVersion: "3.1.1"
+    fetchedAt: "2026-11-15"
+    page: 154
+    section: Tablo 4.1.1.a - ProvizyonGirisDVO
     confidence: extracted
 fields:
   - name: saglikTesisKodu
-    displayName: Saglik Tesisi Kodu
+    displayName: Tesis Kodu
     type: integer
     enumRef: null
     required: true
     length: null
-    description: Healthcare facility code assigned to the institution.
+    description: Healthcare facility code assigned by GSS (s.154).
     sensitive: false
     syntheticOnlyRecommended: false
     sourceRefs:
-      - id: medula-hastane-guide-2026-06-17
+      - id: medula-hastane-guide-3-1-1-2026-10-19
         sourceType: official-guide
-        guideVersion: "2026-06-17"
+        guideVersion: "3.1.1"
+        page: 154
         confidence: extracted
     conditionalRequired: []
     introducedIn: null
@@ -31,38 +35,104 @@ fields:
     enumRef: null
     required: true
     length: 11
-    description: Patient identity number. Examples must use synthetic placeholders only.
+    description: Patient identity number (s.154). Examples must use synthetic placeholders only.
     sensitive: true
     syntheticOnlyRecommended: true
     sourceRefs:
-      - id: medula-hastane-guide-2026-06-17
+      - id: medula-hastane-guide-3-1-1-2026-10-19
         sourceType: official-guide
-        guideVersion: "2026-06-17"
+        guideVersion: "3.1.1"
+        page: 154
         confidence: extracted
     conditionalRequired:
-      - condition: patient is a foreign national without a T.C. identity number
-        note: foreign-patient provizyon uses alternative identifiers; deferred to v0.2
+      - condition: takipNo is filled (linked-takip request)
+        note: guide marks this field with * - not required when takipNo is sent; the sent takip's data takes precedence (s.154)
     introducedIn: null
     deprecatedIn: null
 
-  - name: takipNo
-    displayName: Takip Numarasi
+  - name: sigortaliTuru
+    displayName: Sigortali Turu
     type: string
     enumRef: null
-    required: false
-    length: null
-    description: Existing tracking number used when requesting a related (bagli) follow-up tracking number.
+    required: true
+    length: 1
+    description: >-
+      Insured person type (s.154). Codes 1-4 (1 Calisan, 2 Emekli, 3 SSK
+      Kurum Personeli, 4 Diger). Enum registry candidate for v0.2.
     sensitive: false
-    syntheticOnlyRecommended: true
+    syntheticOnlyRecommended: false
     sourceRefs:
-      - id: medula-hastane-guide-2026-06-17
+      - id: medula-hastane-guide-3-1-1-2026-10-19
         sourceType: official-guide
-        guideVersion: "2026-06-17"
+        guideVersion: "3.1.1"
+        page: 154
         confidence: extracted
     conditionalRequired:
-      - condition: takipTipi is B (bagli takip)
-        note: covered by rule conditional-takip-no-for-bagli-takip
+      - condition: takipNo is filled (linked-takip request)
+        note: marked with * in the guide - not required when takipNo is sent
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: bransKodu
+    displayName: Brans Kodu
+    type: string
+    enumRef: null
+    required: true
+    length: 4
+    description: Medical branch (specialty) code (s.154). Verification correction - the guide defines String(4), not integer.
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 154
+        confidence: extracted
+    conditionalRequired: []
     introducedIn: null
+    deprecatedIn: null
+
+  - name: devredilenKurum
+    displayName: Devredilen Kurum
+    type: string
+    enumRef: null
+    required: true
+    length: 1
+    description: >-
+      Institution the person was transferred from before the SGK merger
+      (s.154-155). Codes include 1-9, 32, 97, 100, 147-149, I, M, B, V.
+      Enum registry candidate for v0.2.
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 154
+        confidence: extracted
+    conditionalRequired:
+      - condition: takipNo is filled (linked-takip request)
+        note: marked with * in the guide - not required when takipNo is sent
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: provizyonTarihi
+    displayName: Provizyon Tarihi
+    type: date
+    enumRef: null
+    required: true
+    length: 10
+    description: Date the provision was requested, dd.mm.yyyy format in the guide (s.156).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 156
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
     deprecatedIn: null
 
   - name: provizyonTipi
@@ -70,14 +140,15 @@ fields:
     type: enum
     enumRef: provizyon-tipi
     required: true
-    length: null
-    description: Provision type controlling how SGK covers the admission.
+    length: 1
+    description: Provision type controlling how SGK covers the admission (s.156-157).
     sensitive: false
     syntheticOnlyRecommended: false
     sourceRefs:
-      - id: medula-hastane-guide-2026-06-17
+      - id: medula-hastane-guide-3-1-1-2026-10-19
         sourceType: official-guide
-        guideVersion: "2026-06-17"
+        guideVersion: "3.1.1"
+        page: 156
         confidence: extracted
     conditionalRequired: []
     introducedIn: null
@@ -88,17 +159,40 @@ fields:
     type: enum
     enumRef: tedavi-turu
     required: true
-    length: null
-    description: Treatment type of the admission (inpatient or outpatient).
+    length: 1
+    description: Treatment type of the admission - A/Y/G letter codes (s.158).
     sensitive: false
     syntheticOnlyRecommended: false
     sourceRefs:
-      - id: medula-hastane-guide-2026-06-17
+      - id: medula-hastane-guide-3-1-1-2026-10-19
         sourceType: official-guide
-        guideVersion: "2026-06-17"
+        guideVersion: "3.1.1"
+        page: 158
         confidence: extracted
     conditionalRequired: []
     introducedIn: null
+    deprecatedIn: null
+
+  - name: tedaviTipi
+    displayName: Tedavi Tipi
+    type: string
+    enumRef: null
+    required: true
+    length: 1
+    description: >-
+      Detailed treatment profile (s.158-159). Codes 0-22 (0 Normal Sorgu,
+      1 Diyaliz, 4 Kemik iligi, 20 Ortodontik Tedavi, ...). Enum registry
+      candidate for v0.2.
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 158
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
     deprecatedIn: null
 
   - name: takipTipi
@@ -106,34 +200,115 @@ fields:
     type: enum
     enumRef: takip-tipi
     required: true
-    length: null
-    description: Whether this is a new tracking record or one attached to an existing tracking number.
+    length: 1
+    description: Tracking record type (s.157). Linked takips are requested through takipNo, not through this field.
     sensitive: false
     syntheticOnlyRecommended: false
     sourceRefs:
-      - id: medula-hastane-guide-2026-06-17
+      - id: medula-hastane-guide-3-1-1-2026-10-19
         sourceType: official-guide
-        guideVersion: "2026-06-17"
+        guideVersion: "3.1.1"
+        page: 157
         confidence: extracted
     conditionalRequired: []
     introducedIn: null
     deprecatedIn: null
 
-  - name: bransKodu
-    displayName: Brans Kodu
-    type: integer
+  - name: takipNo
+    displayName: Takip Numarasi
+    type: string
     enumRef: null
-    required: true
+    required: false
     length: null
-    description: Medical branch (specialty) code of the admitting department.
+    description: Existing tracking number used when requesting a linked takip; empty for first takips (s.157).
+    sensitive: false
+    syntheticOnlyRecommended: true
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 157
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: null
+    deprecatedIn: null
+
+  - name: istisnaiHal
+    displayName: Istisnai Hal
+    type: string
+    enumRef: null
+    required: false
+    length: null
+    description: Exceptional-case code (s.157). Codes 1-9 (1 Acil hal, 2 Is kazasi ile meslek hastaligi, ...). Enum candidate for v0.2.
     sensitive: false
     syntheticOnlyRecommended: false
     sourceRefs:
-      - id: medula-hastane-guide-2026-06-17
+      - id: medula-hastane-guide-3-1-1-2026-10-19
         sourceType: official-guide
-        guideVersion: "2026-06-17"
-        confidence: inferred
-        notes: Type assumed integer; verify against the guide field table.
+        guideVersion: "3.1.1"
+        page: 157
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: hastaTelefon
+    displayName: Hasta Telefon
+    type: string
+    enumRef: null
+    required: false
+    length: 10
+    description: Patient contact phone in 3121234567 format; mandatory on first takips (s.159). Synthetic placeholders only.
+    sensitive: true
+    syntheticOnlyRecommended: true
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 159
+        confidence: extracted
+    conditionalRequired:
+      - condition: first takip request
+        note: guide marks hastaTelefon mandatory for first takips (s.159)
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: hastaAdres
+    displayName: Hasta Adres
+    type: string
+    enumRef: null
+    required: false
+    length: 100
+    description: Patient contact address; mandatory on first takips (s.159). Synthetic placeholders only.
+    sensitive: true
+    syntheticOnlyRecommended: true
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 159
+        confidence: extracted
+    conditionalRequired:
+      - condition: first takip request
+        note: guide marks hastaAdres mandatory for first takips (s.159)
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: ktsHbysKodu
+    displayName: KTS HBYS Kodu
+    type: string
+    enumRef: null
+    required: true
+    length: null
+    description: Software vendor KTS code (s.159). Verification correction - the guide marks this required.
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 159
+        confidence: extracted
     conditionalRequired: []
     introducedIn: null
     deprecatedIn: null
@@ -142,37 +317,22 @@ fields:
     displayName: Doktor Tescil Numarasi
     type: string
     enumRef: null
-    required: true
+    required: false
     length: null
-    description: Registration number of the admitting doctor. Examples use synthetic placeholders.
+    description: >-
+      Registration number of the admitting doctor. Verification finding -
+      this field does not appear in Tablo 4.1.1.a; kept for PRD 13.4
+      compatibility and slated for removal in 0.2.0.
     sensitive: false
     syntheticOnlyRecommended: true
     sourceRefs:
-      - id: medula-hastane-guide-2026-06-17
+      - id: medula-hastane-guide-3-1-1-2026-10-19
         sourceType: official-guide
-        guideVersion: "2026-06-17"
-        confidence: inferred
-        notes: Type assumed string; verify against the guide field table.
+        guideVersion: "3.1.1"
+        page: 154
+        confidence: unknown
+        notes: Absence verified by full-text search of the guide; kept pending PRD 13.4 revision.
     conditionalRequired: []
     introducedIn: null
-    deprecatedIn: null
-
-  - name: ktsHbysKodu
-    displayName: KTS HBYS Kodu
-    type: string
-    enumRef: null
-    required: false
-    length: null
-    description: Hospital information system (HBYS) code used by the KTS integration.
-    sensitive: false
-    syntheticOnlyRecommended: false
-    sourceRefs:
-      - id: medula-hastane-guide-2026-06-17
-        sourceType: official-guide
-        guideVersion: "2026-06-17"
-        confidence: inferred
-        notes: Required flag assumed optional; verify against the guide field table.
-    conditionalRequired: []
-    introducedIn: null
-    deprecatedIn: null
-status: draft
+    deprecatedIn: "0.2.0"
+status: reviewed

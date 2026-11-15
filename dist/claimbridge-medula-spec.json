@@ -1,6 +1,6 @@
 {
   "specVersion": "0.1.0",
-  "generatedAt": "2026-11-15T13:55:37.436Z",
+  "generatedAt": "2026-11-15T14:09:47.814Z",
   "sources": [
     {
       "id": "medula-hastane-guide-2026-06-17",
@@ -19,6 +19,25 @@
       "fetchedAt": "2026-07-06",
       "url": "https://medula.sgk.gov.tr/hastane/kilavuz/MEDULA_Kullanim_Kilavuzu.pdf",
       "notes": "Official technical usage guide referenced by the v0.1 registry. Official PDFs are never vendored into Git (PRD 16.3); only the URL, fetch date, and version are recorded here."
+    },
+    {
+      "id": "medula-hastane-guide-3-1-1-2026-10-19",
+      "title": "MEDULA Web Servisleri Kullanım Kılavuzu (v3.1.1+)",
+      "sourceType": "official-guide",
+      "url": "https://medula.sgk.gov.tr/hastane/kilavuz/MEDULA_Kullanim_Kilavuzu.pdf",
+      "publishedAt": "2026-10-19",
+      "fetchedAt": "2026-11-15",
+      "notes": "Official hospital web services guide, edition stamped 19/10/2026, version line 3.1.1 (changelog entries through 2025). 354 pages. sha256 recorded in guide-versions.yml; the PDF itself is never vendored into Git (PRD 16.3)."
+    },
+    {
+      "id": "medula-hastane-guide-3-1-1-2026-10-19",
+      "title": "MEDULA Web Servisleri Kullanım Kılavuzu",
+      "version": "3.1.1",
+      "publishedAt": "2026-10-19",
+      "fetchedAt": "2026-11-15",
+      "sha256": "87489834b81b914656eedff3040cb896c49f9de2b18363663c7649e19d237d66",
+      "url": "https://medula.sgk.gov.tr/hastane/kilavuz/MEDULA_Kullanim_Kilavuzu.pdf",
+      "notes": "Edition used for the Group 9 verification pass. Edition stamp 19/10/2026; changelog line shows version 3.1.1 (entries through 2025). 354 pages. sha256 computed over the fetched PDF; the file itself stays in the gitignored local-guide/ directory."
     }
   ],
   "services": [
@@ -169,6 +188,15 @@
           "sourceType": "official-guide",
           "guideVersion": "2026-06-17",
           "confidence": "extracted"
+        },
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "fetchedAt": "2026-11-15",
+          "page": 149,
+          "section": "3 Surecler ve Metotlari - metot listesi",
+          "confidence": "extracted"
         }
       ],
       "stateEffects": {
@@ -197,7 +225,7 @@
         "supported": true,
         "defaultScenario": "happy-path"
       },
-      "status": "draft"
+      "status": "reviewed"
     },
     {
       "id": "medula.hastane.fatura-kayit.fatura-oku",
@@ -307,6 +335,15 @@
           "sourceType": "official-guide",
           "guideVersion": "2026-06-17",
           "confidence": "extracted"
+        },
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "fetchedAt": "2026-11-15",
+          "page": 149,
+          "section": "3 Surecler ve Metotlari - metot listesi",
+          "confidence": "extracted"
         }
       ],
       "stateEffects": {
@@ -331,7 +368,7 @@
         "supported": true,
         "defaultScenario": "happy-path"
       },
-      "status": "draft"
+      "status": "reviewed"
     },
     {
       "id": "medula.hastane.hasta-kabul.hasta-kabul-iptal",
@@ -536,6 +573,15 @@
           "sourceType": "official-guide",
           "guideVersion": "2026-06-17",
           "confidence": "extracted"
+        },
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "fetchedAt": "2026-11-15",
+          "page": 149,
+          "section": "3 Surecler ve Metotlari - metot listesi",
+          "confidence": "extracted"
         }
       ],
       "stateEffects": {
@@ -565,7 +611,7 @@
         "supported": true,
         "defaultScenario": "happy-path"
       },
-      "status": "draft"
+      "status": "reviewed"
     }
   ],
   "dvos": [
@@ -689,9 +735,12 @@
       "direction": "input",
       "sourceRefs": [
         {
-          "id": "medula-hastane-guide-2026-06-17",
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
           "sourceType": "official-guide",
-          "guideVersion": "2026-06-17",
+          "guideVersion": "3.1.1",
+          "fetchedAt": "2026-11-15",
+          "page": 240,
+          "section": "Tablo 4.3.1.a - FaturaGirisDVO",
           "confidence": "extracted"
         }
       ],
@@ -768,15 +817,16 @@
           "type": "string",
           "enumRef": null,
           "required": true,
-          "length": null,
-          "description": "Institution-side invoice reference number.",
+          "length": 20,
+          "description": "Institution-side invoice reference number (s.240).",
           "sensitive": false,
           "syntheticOnlyRecommended": false,
           "sourceRefs": [
             {
-              "id": "medula-hastane-guide-2026-06-17",
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
               "sourceType": "official-guide",
-              "guideVersion": "2026-06-17",
+              "guideVersion": "3.1.1",
+              "page": 240,
               "confidence": "extracted"
             }
           ],
@@ -811,23 +861,23 @@
           "displayName": "Trafik Kazasi Odeme Yuzdesi",
           "type": "integer",
           "enumRef": null,
-          "required": false,
+          "required": true,
           "length": null,
-          "description": "Traffic-accident payment percentage when the claim is traffic-accident related.",
+          "description": "Traffic-accident payment percentage; the guide marks it required - traffic invoices pay back by this percentage (s.240).",
           "sensitive": false,
           "syntheticOnlyRecommended": false,
           "sourceRefs": [
             {
-              "id": "medula-hastane-guide-2026-06-17",
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
               "sourceType": "official-guide",
-              "guideVersion": "2026-06-17",
-              "confidence": "inferred",
-              "notes": "Type assumed integer; verify against the guide field table."
+              "guideVersion": "3.1.1",
+              "page": 240,
+              "confidence": "extracted"
             }
           ],
           "conditionalRequired": [
             {
-              "condition": "claim is traffic-accident related",
+              "condition": "the invoice covers services related to a traffic accident",
               "note": "covered by rule conditional-trafik-kazasi-yuzdesi"
             }
           ],
@@ -839,18 +889,18 @@
           "displayName": "Ilave Ucret",
           "type": "decimal",
           "enumRef": null,
-          "required": false,
+          "required": true,
           "length": null,
-          "description": "Additional fee amount declared with the invoice.",
+          "description": "Additional difference fee collected from the patient; the guide marks it required (s.240).",
           "sensitive": false,
           "syntheticOnlyRecommended": false,
           "sourceRefs": [
             {
-              "id": "medula-hastane-guide-2026-06-17",
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
               "sourceType": "official-guide",
-              "guideVersion": "2026-06-17",
-              "confidence": "inferred",
-              "notes": "Type assumed decimal; verify against the guide field table."
+              "guideVersion": "3.1.1",
+              "page": 240,
+              "confidence": "extracted"
             }
           ],
           "conditionalRequired": [],
@@ -927,18 +977,19 @@
         {
           "name": "muvafakatVar",
           "displayName": "Muvafakat Var",
-          "type": "boolean",
+          "type": "string",
           "enumRef": null,
-          "required": false,
-          "length": null,
-          "description": "Whether the patient consent (muvafakat) is on file.",
+          "required": true,
+          "length": 1,
+          "description": "Patient consent flag sent as E (Evet) or H (Hayir) by uncontracted institutions (s.240 and changelog s.12, edition 3.1.1). Verification correction - the v0.1 draft modeled a boolean.",
           "sensitive": false,
           "syntheticOnlyRecommended": false,
           "sourceRefs": [
             {
-              "id": "medula-hastane-guide-2026-06-17",
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
               "sourceType": "official-guide",
-              "guideVersion": "2026-06-17",
+              "guideVersion": "3.1.1",
+              "page": 240,
               "confidence": "extracted"
             }
           ],
@@ -947,7 +998,7 @@
           "deprecatedIn": null
         }
       ],
-      "status": "draft"
+      "status": "reviewed"
     },
     {
       "id": "FaturaHizmetDetayDVO",
@@ -1615,28 +1666,32 @@
       "direction": "input",
       "sourceRefs": [
         {
-          "id": "medula-hastane-guide-2026-06-17",
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
           "sourceType": "official-guide",
-          "guideVersion": "2026-06-17",
+          "guideVersion": "3.1.1",
+          "fetchedAt": "2026-11-15",
+          "page": 154,
+          "section": "Tablo 4.1.1.a - ProvizyonGirisDVO",
           "confidence": "extracted"
         }
       ],
       "fields": [
         {
           "name": "saglikTesisKodu",
-          "displayName": "Saglik Tesisi Kodu",
+          "displayName": "Tesis Kodu",
           "type": "integer",
           "enumRef": null,
           "required": true,
           "length": null,
-          "description": "Healthcare facility code assigned to the institution.",
+          "description": "Healthcare facility code assigned by GSS (s.154).",
           "sensitive": false,
           "syntheticOnlyRecommended": false,
           "sourceRefs": [
             {
-              "id": "medula-hastane-guide-2026-06-17",
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
               "sourceType": "official-guide",
-              "guideVersion": "2026-06-17",
+              "guideVersion": "3.1.1",
+              "page": 154,
               "confidence": "extracted"
             }
           ],
@@ -1651,51 +1706,127 @@
           "enumRef": null,
           "required": true,
           "length": 11,
-          "description": "Patient identity number. Examples must use synthetic placeholders only.",
+          "description": "Patient identity number (s.154). Examples must use synthetic placeholders only.",
           "sensitive": true,
           "syntheticOnlyRecommended": true,
           "sourceRefs": [
             {
-              "id": "medula-hastane-guide-2026-06-17",
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
               "sourceType": "official-guide",
-              "guideVersion": "2026-06-17",
+              "guideVersion": "3.1.1",
+              "page": 154,
               "confidence": "extracted"
             }
           ],
           "conditionalRequired": [
             {
-              "condition": "patient is a foreign national without a T.C. identity number",
-              "note": "foreign-patient provizyon uses alternative identifiers; deferred to v0.2"
+              "condition": "takipNo is filled (linked-takip request)",
+              "note": "guide marks this field with * - not required when takipNo is sent; the sent takip's data takes precedence (s.154)"
             }
           ],
           "introducedIn": null,
           "deprecatedIn": null
         },
         {
-          "name": "takipNo",
-          "displayName": "Takip Numarasi",
+          "name": "sigortaliTuru",
+          "displayName": "Sigortali Turu",
           "type": "string",
           "enumRef": null,
-          "required": false,
-          "length": null,
-          "description": "Existing tracking number used when requesting a related (bagli) follow-up tracking number.",
+          "required": true,
+          "length": 1,
+          "description": "Insured person type (s.154). Codes 1-4 (1 Calisan, 2 Emekli, 3 SSK Kurum Personeli, 4 Diger). Enum registry candidate for v0.2.",
           "sensitive": false,
-          "syntheticOnlyRecommended": true,
+          "syntheticOnlyRecommended": false,
           "sourceRefs": [
             {
-              "id": "medula-hastane-guide-2026-06-17",
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
               "sourceType": "official-guide",
-              "guideVersion": "2026-06-17",
+              "guideVersion": "3.1.1",
+              "page": 154,
               "confidence": "extracted"
             }
           ],
           "conditionalRequired": [
             {
-              "condition": "takipTipi is B (bagli takip)",
-              "note": "covered by rule conditional-takip-no-for-bagli-takip"
+              "condition": "takipNo is filled (linked-takip request)",
+              "note": "marked with * in the guide - not required when takipNo is sent"
             }
           ],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "bransKodu",
+          "displayName": "Brans Kodu",
+          "type": "string",
+          "enumRef": null,
+          "required": true,
+          "length": 4,
+          "description": "Medical branch (specialty) code (s.154). Verification correction - the guide defines String(4), not integer.",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 154,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
           "introducedIn": null,
+          "deprecatedIn": null
+        },
+        {
+          "name": "devredilenKurum",
+          "displayName": "Devredilen Kurum",
+          "type": "string",
+          "enumRef": null,
+          "required": true,
+          "length": 1,
+          "description": "Institution the person was transferred from before the SGK merger (s.154-155). Codes include 1-9, 32, 97, 100, 147-149, I, M, B, V. Enum registry candidate for v0.2.",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 154,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [
+            {
+              "condition": "takipNo is filled (linked-takip request)",
+              "note": "marked with * in the guide - not required when takipNo is sent"
+            }
+          ],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "provizyonTarihi",
+          "displayName": "Provizyon Tarihi",
+          "type": "date",
+          "enumRef": null,
+          "required": true,
+          "length": 10,
+          "description": "Date the provision was requested, dd.mm.yyyy format in the guide (s.156).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 156,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
           "deprecatedIn": null
         },
         {
@@ -1704,15 +1835,16 @@
           "type": "enum",
           "enumRef": "provizyon-tipi",
           "required": true,
-          "length": null,
-          "description": "Provision type controlling how SGK covers the admission.",
+          "length": 1,
+          "description": "Provision type controlling how SGK covers the admission (s.156-157).",
           "sensitive": false,
           "syntheticOnlyRecommended": false,
           "sourceRefs": [
             {
-              "id": "medula-hastane-guide-2026-06-17",
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
               "sourceType": "official-guide",
-              "guideVersion": "2026-06-17",
+              "guideVersion": "3.1.1",
+              "page": 156,
               "confidence": "extracted"
             }
           ],
@@ -1726,20 +1858,44 @@
           "type": "enum",
           "enumRef": "tedavi-turu",
           "required": true,
-          "length": null,
-          "description": "Treatment type of the admission (inpatient or outpatient).",
+          "length": 1,
+          "description": "Treatment type of the admission - A/Y/G letter codes (s.158).",
           "sensitive": false,
           "syntheticOnlyRecommended": false,
           "sourceRefs": [
             {
-              "id": "medula-hastane-guide-2026-06-17",
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
               "sourceType": "official-guide",
-              "guideVersion": "2026-06-17",
+              "guideVersion": "3.1.1",
+              "page": 158,
               "confidence": "extracted"
             }
           ],
           "conditionalRequired": [],
           "introducedIn": null,
+          "deprecatedIn": null
+        },
+        {
+          "name": "tedaviTipi",
+          "displayName": "Tedavi Tipi",
+          "type": "string",
+          "enumRef": null,
+          "required": true,
+          "length": 1,
+          "description": "Detailed treatment profile (s.158-159). Codes 0-22 (0 Normal Sorgu, 1 Diyaliz, 4 Kemik iligi, 20 Ortodontik Tedavi, ...). Enum registry candidate for v0.2.",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 158,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
           "deprecatedIn": null
         },
         {
@@ -1748,15 +1904,16 @@
           "type": "enum",
           "enumRef": "takip-tipi",
           "required": true,
-          "length": null,
-          "description": "Whether this is a new tracking record or one attached to an existing tracking number.",
+          "length": 1,
+          "description": "Tracking record type (s.157). Linked takips are requested through takipNo, not through this field.",
           "sensitive": false,
           "syntheticOnlyRecommended": false,
           "sourceRefs": [
             {
-              "id": "medula-hastane-guide-2026-06-17",
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
               "sourceType": "official-guide",
-              "guideVersion": "2026-06-17",
+              "guideVersion": "3.1.1",
+              "page": 157,
               "confidence": "extracted"
             }
           ],
@@ -1765,22 +1922,124 @@
           "deprecatedIn": null
         },
         {
-          "name": "bransKodu",
-          "displayName": "Brans Kodu",
-          "type": "integer",
+          "name": "takipNo",
+          "displayName": "Takip Numarasi",
+          "type": "string",
           "enumRef": null,
-          "required": true,
+          "required": false,
           "length": null,
-          "description": "Medical branch (specialty) code of the admitting department.",
+          "description": "Existing tracking number used when requesting a linked takip; empty for first takips (s.157).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": true,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 157,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": null,
+          "deprecatedIn": null
+        },
+        {
+          "name": "istisnaiHal",
+          "displayName": "Istisnai Hal",
+          "type": "string",
+          "enumRef": null,
+          "required": false,
+          "length": null,
+          "description": "Exceptional-case code (s.157). Codes 1-9 (1 Acil hal, 2 Is kazasi ile meslek hastaligi, ...). Enum candidate for v0.2.",
           "sensitive": false,
           "syntheticOnlyRecommended": false,
           "sourceRefs": [
             {
-              "id": "medula-hastane-guide-2026-06-17",
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
               "sourceType": "official-guide",
-              "guideVersion": "2026-06-17",
-              "confidence": "inferred",
-              "notes": "Type assumed integer; verify against the guide field table."
+              "guideVersion": "3.1.1",
+              "page": 157,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "hastaTelefon",
+          "displayName": "Hasta Telefon",
+          "type": "string",
+          "enumRef": null,
+          "required": false,
+          "length": 10,
+          "description": "Patient contact phone in 3121234567 format; mandatory on first takips (s.159). Synthetic placeholders only.",
+          "sensitive": true,
+          "syntheticOnlyRecommended": true,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 159,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [
+            {
+              "condition": "first takip request",
+              "note": "guide marks hastaTelefon mandatory for first takips (s.159)"
+            }
+          ],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "hastaAdres",
+          "displayName": "Hasta Adres",
+          "type": "string",
+          "enumRef": null,
+          "required": false,
+          "length": 100,
+          "description": "Patient contact address; mandatory on first takips (s.159). Synthetic placeholders only.",
+          "sensitive": true,
+          "syntheticOnlyRecommended": true,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 159,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [
+            {
+              "condition": "first takip request",
+              "note": "guide marks hastaAdres mandatory for first takips (s.159)"
+            }
+          ],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "ktsHbysKodu",
+          "displayName": "KTS HBYS Kodu",
+          "type": "string",
+          "enumRef": null,
+          "required": true,
+          "length": null,
+          "description": "Software vendor KTS code (s.159). Verification correction - the guide marks this required.",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 159,
+              "confidence": "extracted"
             }
           ],
           "conditionalRequired": [],
@@ -1792,49 +2051,27 @@
           "displayName": "Doktor Tescil Numarasi",
           "type": "string",
           "enumRef": null,
-          "required": true,
+          "required": false,
           "length": null,
-          "description": "Registration number of the admitting doctor. Examples use synthetic placeholders.",
+          "description": "Registration number of the admitting doctor. Verification finding - this field does not appear in Tablo 4.1.1.a; kept for PRD 13.4 compatibility and slated for removal in 0.2.0.",
           "sensitive": false,
           "syntheticOnlyRecommended": true,
           "sourceRefs": [
             {
-              "id": "medula-hastane-guide-2026-06-17",
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
               "sourceType": "official-guide",
-              "guideVersion": "2026-06-17",
-              "confidence": "inferred",
-              "notes": "Type assumed string; verify against the guide field table."
+              "guideVersion": "3.1.1",
+              "page": 154,
+              "confidence": "unknown",
+              "notes": "Absence verified by full-text search of the guide; kept pending PRD 13.4 revision."
             }
           ],
           "conditionalRequired": [],
           "introducedIn": null,
-          "deprecatedIn": null
-        },
-        {
-          "name": "ktsHbysKodu",
-          "displayName": "KTS HBYS Kodu",
-          "type": "string",
-          "enumRef": null,
-          "required": false,
-          "length": null,
-          "description": "Hospital information system (HBYS) code used by the KTS integration.",
-          "sensitive": false,
-          "syntheticOnlyRecommended": false,
-          "sourceRefs": [
-            {
-              "id": "medula-hastane-guide-2026-06-17",
-              "sourceType": "official-guide",
-              "guideVersion": "2026-06-17",
-              "confidence": "inferred",
-              "notes": "Required flag assumed optional; verify against the guide field table."
-            }
-          ],
-          "conditionalRequired": [],
-          "introducedIn": null,
-          "deprecatedIn": null
+          "deprecatedIn": "0.2.0"
         }
       ],
-      "status": "draft"
+      "status": "reviewed"
     },
     {
       "id": "TakipDVO",
@@ -1842,9 +2079,12 @@
       "direction": "shared",
       "sourceRefs": [
         {
-          "id": "medula-hastane-guide-2026-06-17",
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
           "sourceType": "official-guide",
-          "guideVersion": "2026-06-17",
+          "guideVersion": "3.1.1",
+          "fetchedAt": "2026-11-15",
+          "page": 165,
+          "section": "Tablo 4.1.2.b - TakipDVO",
           "confidence": "extracted"
         }
       ],
@@ -1856,14 +2096,15 @@
           "enumRef": null,
           "required": true,
           "length": null,
-          "description": "Tracking number identifying this treatment episode.",
+          "description": "Tracking number identifying this treatment episode; returned for control purposes (s.165).",
           "sensitive": false,
           "syntheticOnlyRecommended": true,
           "sourceRefs": [
             {
-              "id": "medula-hastane-guide-2026-06-17",
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
               "sourceType": "official-guide",
-              "guideVersion": "2026-06-17",
+              "guideVersion": "3.1.1",
+              "page": 165,
               "confidence": "extracted"
             }
           ],
@@ -1872,22 +2113,45 @@
           "deprecatedIn": null
         },
         {
+          "name": "ilkTakipNo",
+          "displayName": "Ilk Takip Numarasi",
+          "type": "string",
+          "enumRef": null,
+          "required": false,
+          "length": null,
+          "description": "Number of the first takip when this record is a linked takip produced from another one (s.165).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": true,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 165,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        },
+        {
           "name": "takipTipi",
           "displayName": "Takip Tipi",
           "type": "enum",
           "enumRef": "takip-tipi",
           "required": true,
-          "length": null,
-          "description": "Whether the tracking record is new or attached to an existing one.",
+          "length": 1,
+          "description": "Tracking record type (s.157, Tablo 4.1.1.a; mirrored in TakipDVO context s.166).",
           "sensitive": false,
           "syntheticOnlyRecommended": false,
           "sourceRefs": [
             {
-              "id": "medula-hastane-guide-2026-06-17",
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
               "sourceType": "official-guide",
-              "guideVersion": "2026-06-17",
-              "confidence": "inferred",
-              "notes": "Field presence assumed; verify against the guide TakipDVO table."
+              "guideVersion": "3.1.1",
+              "page": 157,
+              "confidence": "extracted"
             }
           ],
           "conditionalRequired": [],
@@ -1900,17 +2164,17 @@
           "type": "enum",
           "enumRef": "takip-durumu",
           "required": true,
-          "length": null,
-          "description": "Current state of the tracking record.",
+          "length": 1,
+          "description": "Payment-inquiry state of the tracking record - 0/1 only (s.166).",
           "sensitive": false,
           "syntheticOnlyRecommended": false,
           "sourceRefs": [
             {
-              "id": "medula-hastane-guide-2026-06-17",
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
               "sourceType": "official-guide",
-              "guideVersion": "2026-06-17",
-              "confidence": "inferred",
-              "notes": "Field presence assumed; verify against the guide TakipDVO table."
+              "guideVersion": "3.1.1",
+              "page": 166,
+              "confidence": "extracted"
             }
           ],
           "conditionalRequired": [],
@@ -1929,9 +2193,33 @@
           "syntheticOnlyRecommended": true,
           "sourceRefs": [
             {
-              "id": "medula-hastane-guide-2026-06-17",
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
               "sourceType": "official-guide",
-              "guideVersion": "2026-06-17",
+              "guideVersion": "3.1.1",
+              "page": 165,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": null,
+          "deprecatedIn": null
+        },
+        {
+          "name": "bransKodu",
+          "displayName": "Brans Kodu",
+          "type": "string",
+          "enumRef": null,
+          "required": true,
+          "length": 4,
+          "description": "Branch code of the service (s.165). Verification correction - String(4) in the guide.",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 165,
               "confidence": "extracted"
             }
           ],
@@ -1940,7 +2228,7 @@
           "deprecatedIn": null
         }
       ],
-      "status": "draft"
+      "status": "reviewed"
     }
   ],
   "enums": [
@@ -1950,30 +2238,97 @@
       "values": [
         {
           "code": "N",
-          "label": "Normal Provizyon",
+          "label": "Normal",
           "description": "Standard provision for a regular patient admission."
         },
         {
-          "code": "S",
-          "label": "Sevk Provizyonu",
-          "description": "Provision created through a referral."
+          "code": "I",
+          "label": "Is kazasi",
+          "description": "Occupational accident provision."
         },
         {
           "code": "A",
-          "label": "Acil Provizyon",
-          "description": "Provision for an emergency admission."
+          "label": "Acil",
+          "description": "Emergency admission provision."
+        },
+        {
+          "code": "T",
+          "label": "Trafik kazasi",
+          "description": "Traffic accident provision."
+        },
+        {
+          "code": "V",
+          "label": "Adli Vaka",
+          "description": "Forensic case provision."
+        },
+        {
+          "code": "M",
+          "label": "Meslek hastaligi",
+          "description": "Occupational disease provision."
+        },
+        {
+          "code": "K",
+          "label": "Kurum Sevki",
+          "description": "Institution referral provision."
+        },
+        {
+          "code": "C",
+          "label": "Acil Hal",
+          "description": "Emergency-condition provision (uncontracted institutions)."
+        },
+        {
+          "code": "H",
+          "label": "Bulasici Hastalik",
+          "description": "Notifiable infectious disease provision."
+        },
+        {
+          "code": "R",
+          "label": "Koruyucu Saglik",
+          "description": "Preventive health service provision."
+        },
+        {
+          "code": "L",
+          "label": "Analik",
+          "description": "Maternity provision."
+        },
+        {
+          "code": "G",
+          "label": "Afet Savas Grev Lokavt",
+          "description": "Disaster, war, strike, or lockout provision."
+        },
+        {
+          "code": "U",
+          "label": "Bakima Muhtac",
+          "description": "Care-dependent person provision."
+        },
+        {
+          "code": "D",
+          "label": "Dogal Afet",
+          "description": "Natural disaster provision."
+        },
+        {
+          "code": "E",
+          "label": "3713/21",
+          "description": "Provision under law 3713 article 21 (terror victims)."
+        },
+        {
+          "code": "S",
+          "label": "Istisnai hal",
+          "description": "Exceptional-case provision."
         }
       ],
       "sourceRefs": [
         {
-          "id": "medula-hastane-guide-2026-06-17",
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
           "sourceType": "official-guide",
-          "guideVersion": "2026-06-17",
-          "confidence": "inferred",
-          "notes": "The guide defines additional provizyon codes; catalog them after verification."
+          "guideVersion": "3.1.1",
+          "fetchedAt": "2026-11-15",
+          "page": 156,
+          "section": "Tablo 4.1.1.a - ProvizyonGirisDVO (provizyonTipi)",
+          "confidence": "extracted"
         }
       ],
-      "status": "draft"
+      "status": "reviewed"
     },
     {
       "id": "sonuc-kodu",
@@ -1982,102 +2337,179 @@
         {
           "code": "0000",
           "label": "Islem Basarili",
-          "description": "The operation completed successfully."
+          "description": "The operation completed successfully. Documented for every response DVO as a String of length 4."
+        },
+        {
+          "code": "33",
+          "label": "Kisiye ait TCKK yok",
+          "description": "Hasta Kabul error - no T.C. identity number is associated with the person."
+        },
+        {
+          "code": "34",
+          "label": "EKDS dogrulama yontemleri uygulanamadi",
+          "description": "Hasta Kabul error - EKDS verification methods could not be applied."
+        },
+        {
+          "code": "35",
+          "label": "Kisinin fotograf dogrulamasi yapilamadi",
+          "description": "Hasta Kabul error - photo verification of the person failed."
+        },
+        {
+          "code": "99",
+          "label": "EKDS'den saglik sebebiyle muaftir",
+          "description": "Hasta Kabul information code - the person is exempt from health services per EKDS."
         }
       ],
       "sourceRefs": [
         {
-          "id": "medula-hastane-guide-2026-06-17",
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
           "sourceType": "official-guide",
-          "guideVersion": "2026-06-17",
+          "guideVersion": "3.1.1",
+          "fetchedAt": "2026-11-15",
+          "page": 168,
+          "section": "Hasta Kabul hata kodlari",
           "confidence": "extracted",
-          "notes": "Only the success code is documented in the PRD; catalog the full error-code list from the guide in a later version."
+          "notes": "Success code verified across all response tables; sample error codes extracted from the hasta kabul catalog (pages 167-168). The full error-code catalog per method is cataloged in the v0.2 pass."
         }
       ],
-      "status": "draft"
+      "status": "reviewed"
     },
     {
       "id": "takip-durumu",
       "displayName": "Takip Durumu",
       "values": [
         {
-          "code": "A",
-          "label": "Acik",
-          "description": "Tracking record is open and accepts service registrations."
+          "code": "0",
+          "label": "Odeme sorgusu yapilmadi",
+          "description": "Payment inquiry has not been performed for this tracking record."
         },
         {
-          "code": "I",
-          "label": "Iptal Edildi",
-          "description": "Tracking record was cancelled."
-        },
-        {
-          "code": "K",
-          "label": "Kapali",
-          "description": "Tracking record is closed after invoicing or closure."
+          "code": "1",
+          "label": "Odeme sorgusu yapildi",
+          "description": "Payment inquiry has been performed for this tracking record."
         }
       ],
       "sourceRefs": [
         {
-          "id": "medula-hastane-guide-2026-06-17",
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
           "sourceType": "official-guide",
-          "guideVersion": "2026-06-17",
-          "confidence": "inferred",
-          "notes": "Values follow the documented A/I/K pattern; verify codes and labels against the guide before review."
+          "guideVersion": "3.1.1",
+          "fetchedAt": "2026-11-15",
+          "page": 166,
+          "section": "Tablo 4.1.2.b - TakipDVO (takipDurumu)",
+          "confidence": "extracted",
+          "notes": "Verification correction: the v0.1 draft modeled A/I/K states. The guide defines takipDurumu as the payment-inquiry flag with values 0 and 1 only."
         }
       ],
-      "status": "draft"
+      "status": "reviewed"
     },
     {
       "id": "takip-tipi",
       "displayName": "Takip Tipi",
       "values": [
         {
+          "code": "N",
+          "label": "Normal",
+          "description": "Normal tracking record."
+        },
+        {
+          "code": "E",
+          "label": "Eslik Eden Hastalik",
+          "description": "Accompanying disease tracking record."
+        },
+        {
+          "code": "U",
+          "label": "Uzayan Yatis",
+          "description": "Extended hospitalization tracking record."
+        },
+        {
+          "code": "K",
+          "label": "Komplikasyon",
+          "description": "Complication tracking record."
+        },
+        {
+          "code": "T",
+          "label": "Tani Amacli Gunubirlik",
+          "description": "Diagnostic day-unit tracking record."
+        },
+        {
           "code": "Y",
-          "label": "Yeni Takip",
-          "description": "A new tracking record created for the patient episode."
+          "label": "Yogun Bakim",
+          "description": "Intensive care tracking record."
+        },
+        {
+          "code": "P",
+          "label": "Hizmetin Iptal Olmasi veya Yarim Kalmasi",
+          "description": "Service cancelled or interrupted tracking record."
+        },
+        {
+          "code": "S",
+          "label": "Kurum Sevkli Kontrol Muayenesi",
+          "description": "Institution-referred control examination record."
+        },
+        {
+          "code": "C",
+          "label": "Kurum Sevkli",
+          "description": "Institution-referred tracking record."
+        },
+        {
+          "code": "F",
+          "label": "Faturalanmis Uzayan Yatis",
+          "description": "Invoiced extended hospitalization record."
         },
         {
           "code": "B",
-          "label": "Bagli Takip",
-          "description": "A tracking record attached to an existing tracking number."
+          "label": "Faturalanmis Uzayan Yatis ve Yogun Bakim",
+          "description": "Invoiced extended hospitalization and intensive care record."
         }
       ],
       "sourceRefs": [
         {
-          "id": "medula-hastane-guide-2026-06-17",
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
           "sourceType": "official-guide",
-          "guideVersion": "2026-06-17",
-          "confidence": "inferred",
-          "notes": "Values follow the documented Y/B pattern; verify codes against the guide before review."
+          "guideVersion": "3.1.1",
+          "fetchedAt": "2026-11-15",
+          "page": 157,
+          "section": "Tablo 4.1.1.a - ProvizyonGirisDVO (takipTipi)",
+          "confidence": "extracted",
+          "notes": "Verification correction: the v0.1 draft modeled Y/B as yeni/bagli takip. The guide defines linked takips through the takipNo field (empty for a first takip, filled for a linked one), not through takipTipi codes."
         }
       ],
-      "status": "draft"
+      "status": "reviewed"
     },
     {
       "id": "tedavi-turu",
       "displayName": "Tedavi Turu",
       "values": [
         {
-          "code": "1",
+          "code": "A",
           "label": "Ayakta Tedavi",
           "description": "Outpatient treatment episode."
         },
         {
-          "code": "2",
+          "code": "Y",
           "label": "Yatarak Tedavi",
           "description": "Inpatient treatment episode."
+        },
+        {
+          "code": "G",
+          "label": "Gunubirlik Tedavi",
+          "description": "Day-unit treatment episode."
         }
       ],
       "sourceRefs": [
         {
-          "id": "medula-hastane-guide-2026-06-17",
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
           "sourceType": "official-guide",
-          "guideVersion": "2026-06-17",
-          "confidence": "inferred",
-          "notes": "The guide defines additional codes (for example day-unit episodes); add them after verification."
+          "guideVersion": "3.1.1",
+          "fetchedAt": "2026-11-15",
+          "page": 158,
+          "section": "Tablo 4.1.1.a - ProvizyonGirisDVO (tedaviTuru)",
+          "confidence": "extracted",
+          "notes": "Verification correction: the v0.1 draft modeled numeric codes 1/2. The guide uses letter codes A/Y/G; the detailed treatment profile lives in the separate tedaviTipi field (codes 0-22)."
         }
       ],
-      "status": "draft"
+      "status": "reviewed"
     }
   ],
   "rules": [
@@ -2589,8 +3021,8 @@
         "saglikTesisKodu": 1,
         "hastaTCKimlikNo": "SYNTHETIC_TC_000000001",
         "provizyonTipi": "N",
-        "tedaviTuru": "1",
-        "takipTipi": "Y",
+        "tedaviTuru": "A",
+        "takipTipi": "N",
         "bransKodu": 1,
         "doktorTescilNo": "SYNTHETIC_DOCTOR_001",
         "ktsHbysKodu": "SYNTHETIC_HBYS_001"
@@ -2713,8 +3145,8 @@
       "request": {
         "saglikTesisKodu": 1,
         "provizyonTipi": "N",
-        "tedaviTuru": "1",
-        "takipTipi": "Y",
+        "tedaviTuru": "A",
+        "takipTipi": "N",
         "bransKodu": 1,
         "doktorTescilNo": "SYNTHETIC_DOCTOR_001"
       },
@@ -2755,8 +3187,8 @@
         "saglikTesisKodu": 1,
         "hastaTCKimlikNo": "SYNTHETIC_TC_000000001",
         "provizyonTipi": "N",
-        "tedaviTuru": "1",
-        "takipTipi": "Y",
+        "tedaviTuru": "A",
+        "takipTipi": "N",
         "bransKodu": 1,
         "doktorTescilNo": "SYNTHETIC_DOCTOR_001"
       },

@@ -3,11 +3,29 @@ displayName: Sonuc Kodu
 values:
   - code: "0000"
     label: Islem Basarili
-    description: The operation completed successfully.
+    description: The operation completed successfully. Documented for every response DVO as a String of length 4.
+  - code: "33"
+    label: Kisiye ait TCKK yok
+    description: Hasta Kabul error - no T.C. identity number is associated with the person.
+  - code: "34"
+    label: EKDS dogrulama yontemleri uygulanamadi
+    description: Hasta Kabul error - EKDS verification methods could not be applied.
+  - code: "35"
+    label: Kisinin fotograf dogrulamasi yapilamadi
+    description: Hasta Kabul error - photo verification of the person failed.
+  - code: "99"
+    label: EKDS'den saglik sebebiyle muaftir
+    description: Hasta Kabul information code - the person is exempt from health services per EKDS.
 sourceRefs:
-  - id: medula-hastane-guide-2026-06-17
+  - id: medula-hastane-guide-3-1-1-2026-10-19
     sourceType: official-guide
-    guideVersion: "2026-06-17"
+    guideVersion: "3.1.1"
+    fetchedAt: "2026-11-15"
+    page: 168
+    section: Hasta Kabul hata kodlari
     confidence: extracted
-    notes: Only the success code is documented in the PRD; catalog the full error-code list from the guide in a later version.
-status: draft
+    notes: >-
+      Success code verified across all response tables; sample error codes
+      extracted from the hasta kabul catalog (pages 167-168). The full
+      error-code catalog per method is cataloged in the v0.2 pass.
+status: reviewed

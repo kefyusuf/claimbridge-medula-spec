@@ -8,8 +8,8 @@ request:
   saglikTesisKodu: 1
   hastaTCKimlikNo: SYNTHETIC_TC_000000001
   provizyonTipi: N
-  tedaviTuru: "1"
-  takipTipi: Y
+  tedaviTuru: A
+  takipTipi: N
   bransKodu: 1
   doktorTescilNo: SYNTHETIC_DOCTOR_001
 expected:
