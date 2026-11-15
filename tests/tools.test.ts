@@ -15,7 +15,7 @@ describe("tools (Group 5)", () => {
     const reg = loadRegistry(root);
     expect(reg.services).toHaveLength(3);
     expect(reg.methods).toHaveLength(10);
-    expect(reg.dvos).toHaveLength(12);
+    expect(reg.dvos).toHaveLength(20);
     expect(reg.enums).toHaveLength(7);
     expect(reg.rules).toHaveLength(5);
     expect(reg.workflows).toHaveLength(4);
@@ -50,6 +50,7 @@ describe("tools (Group 5)", () => {
       (m.data["id"] as string).endsWith("hizmet-kaydi-oku"),
     );
     expect(readMethod).toBeTruthy();
+    readMethod!.data["contract"] = { inputDvo: null, outputDvo: null };
     readMethod!.data["status"] = "reviewed";
     const issues = validateReferences(reg);
     expect(issues.some((i) => i.message.includes("null contract"))).toBe(true);
