@@ -20,3 +20,6 @@ Thumbs.db
 
 # local tool state
 .mimosa/
+
+# Locally acquired guide artifacts (never vendored into git, PRD 16.3)
+local-guide/
