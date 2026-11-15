@@ -6,6 +6,40 @@ Format: [Keep a Changelog](https://keepachangelog.com); versioning: SemVer
 
 ## [Unreleased]
 
+### Group 5 — feat/tools (2026-11-15)
+
+Local group: no remote yet, so the PR step is replaced by a local `--no-ff`
+merge to `main` (PRD §28 step 6 fallback).
+
+- TDD red first: tooling suite (10 checks) committed and verified failing
+  (module imports absent) before any tool code existed (`4283549`).
+- Four modules + CLI (`10f2a9c`): `loadRegistry`, `validateSchemas` (PRD
+  §20.1), `validateReferences` (PRD §20.2), `checkSyntheticExamples`
+  (PRD §20.5), and the `validate` command replacing the Group 0 stub.
+- `pnpm validate` now runs the real PRD §19.1 pipeline: 42 registry files
+  → schemas → references → synthetic examples, exit 1 on any issue.
+- Negative tests inject breakage into a loaded registry (missing service,
+  null contract on a reviewed method, unresolved enumRef) and temp
+  fixtures (real-looking identity value, non-placeholder credential);
+  nothing invalid is committed.
+- `tools/README.md` documents module responsibilities and the
+  sandbox-design self-registration rule.
+
+Decisions:
+- Sandbox-design sources are self-registered through the reserved
+  `sandbox-design-` id prefix (`sourceType: sandbox-design`); all other
+  source ids must resolve against `official-sources.yml` /
+  `guide-versions.yml` — avoids inventing a new manifest file.
+- The validate CLI reports per-stage issues with `process.exitCode` and a
+  final `validate: OK` line consumed by the CLI exit test.
+
+Validation output: `pnpm test` → 59/59 passed; `tsc --noEmit` → clean;
+`pnpm validate` → OK (42 files, schemas/references/synthetic-examples all
+green).
+
+Remaining TODOs: none for this group. Next: Group 6 — `feat/generators`
+(dist bundle, manifest with checksums, docs, mermaid, check command).
+
 ### Group 4 — feat/flows (2026-11-15)
 
 Local group: no remote yet, so the PR step is replaced by a local `--no-ff`
