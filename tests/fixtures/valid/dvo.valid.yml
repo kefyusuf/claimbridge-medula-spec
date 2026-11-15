@@ -1,0 +1,41 @@
+id: ProvizyonGirisDVO
+domain: hasta-kabul
+direction: input
+sourceRefs:
+  - id: medula-hastane-guide-2026-06-17
+    sourceType: official-guide
+    confidence: extracted
+fields:
+  - name: saglikTesisKodu
+    displayName: Saglik Tesisi Kodu
+    type: integer
+    enumRef: null
+    required: true
+    length: null
+    description: Healthcare facility code.
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-2026-06-17
+        sourceType: official-guide
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: null
+    deprecatedIn: null
+  - name: provizyonTipi
+    displayName: Provizyon Tipi
+    type: enum
+    enumRef: provizyon-tipi
+    required: true
+    length: null
+    description: Provision type; references the provizyon-tipi registry enum.
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-2026-06-17
+        sourceType: official-guide
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: null
+    deprecatedIn: null
+status: draft

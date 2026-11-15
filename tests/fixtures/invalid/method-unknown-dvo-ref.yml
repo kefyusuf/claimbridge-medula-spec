@@ -1,0 +1,29 @@
+id: medula.hastane.hasta-kabul.hasta-kabul
+service: medula.hastane.hasta-kabul
+names:
+  documentationHeading: HastaKabul
+  operationName: HastaKabul
+  aliases: []
+contract:
+  inputDvo: DoesNotExistDVO
+  outputDvo: ProvizyonCevapDVO
+sourceRefs:
+  - id: medula-hastane-guide-2026-06-17
+    sourceType: official-guide
+    confidence: extracted
+stateEffects:
+  creates:
+    - patientAdmission
+  reads: []
+  updates: []
+  deletes: []
+  generates:
+    - hastaBasvuruNo
+success:
+  resultCodeField: sonucKodu
+  successCode: "0000"
+  messageField: sonucMesaji
+sandbox:
+  supported: true
+  defaultScenario: happy-path
+status: draft

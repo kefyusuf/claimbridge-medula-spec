@@ -1,0 +1,17 @@
+id: broken-flow
+name: Broken Flow
+description: Workflow step references a method id that does not exist in the registry.
+steps:
+  - id: patient-admission
+    method: medula.hastane.hasta-kabul.does-not-exist
+    requires: []
+    creates:
+      - patientAdmission
+    updates: []
+    deletes: []
+    next: []
+sourceRefs:
+  - id: medula-hastane-guide-2026-06-17
+    sourceType: official-guide
+    confidence: extracted
+status: draft

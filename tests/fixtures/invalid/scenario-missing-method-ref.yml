@@ -1,0 +1,20 @@
+id: orphan-scenario
+title: Scenario referencing a method that does not exist
+method: medula.hastane.hasta-kabul.does-not-exist
+given:
+  facility: SYNTHETIC_FACILITY_001
+request: {}
+expected:
+  result:
+    sonucKodu: "0000"
+    sonucMesaji: Islem basari ile tamamlandi.
+  stateChanges: {}
+sandbox:
+  deterministic: true
+  httpStatus: 200
+  latencyMs: null
+sourceRefs:
+  - id: sandbox-design-v0.1
+    sourceType: sandbox-design
+    confidence: unknown
+status: draft
