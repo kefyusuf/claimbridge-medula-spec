@@ -1,0 +1,111 @@
+id: FaturaOkuGirisDVO
+domain: fatura-kayit
+direction: input
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: "3.1.1"
+    fetchedAt: "2026-11-15"
+    page: 244
+    section: Tablo 4.3.3.a - FaturaOkuGirisDVO
+    confidence: extracted
+fields:
+  - name: saglikTesisKodu
+    displayName: Tesis Kodu
+    type: integer
+    enumRef: null
+    required: true
+    length: null
+    description: Healthcare facility code (s.244).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 244
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: faturaTeslimNo
+    displayName: Fatura Teslim Numarasi
+    type: array
+    enumRef: null
+    required: true
+    length: null
+    description: Delivery numbers of the invoices to read, as an array (s.244).
+    sensitive: false
+    syntheticOnlyRecommended: true
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 244
+        confidence: extracted
+    conditionalRequired:
+      - condition: faturaRefNo is empty
+        note: marked * in the guide - required when faturaRefNo is empty (s.244)
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: faturaRefNo
+    displayName: Fatura Referans No
+    type: string
+    enumRef: null
+    required: true
+    length: 20
+    description: Reference number of the invoice to read (s.244).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 244
+        confidence: extracted
+    conditionalRequired:
+      - condition: faturaTeslimNo is empty
+        note: marked * in the guide - required when faturaTeslimNo is empty (s.244)
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: faturaTarihi
+    displayName: Fatura Tarihi
+    type: date
+    enumRef: null
+    required: true
+    length: 10
+    description: Invoice date in dd.mm.yyyy format per the guide (s.244).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 244
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: ktsHbysKodu
+    displayName: KTS HBYS Kodu
+    type: string
+    enumRef: null
+    required: true
+    length: null
+    description: Software vendor KTS code (s.244).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 244
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+status: reviewed

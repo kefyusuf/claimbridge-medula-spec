@@ -1,0 +1,115 @@
+id: HizmetOkuGirisDVO
+domain: hizmet-kayit
+direction: input
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: "3.1.1"
+    fetchedAt: "2026-11-15"
+    page: 236
+    section: Tablo 4.2.2.a - HizmetOkuGirisDVO
+    confidence: extracted
+fields:
+  - name: islemSiraNumaralari
+    displayName: Islem Sira Numaralari
+    type: array
+    enumRef: null
+    required: false
+    length: null
+    description: >-
+      Operation sequence numbers to read only the specified operations;
+      empty reads all registered operations (s.236).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 236
+        confidence: extracted
+    conditionalRequired:
+      - condition: hizmetSunucuRefNolari is also filled
+        note: the guide forbids filling both filters at once (s.237)
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: hizmetSunucuRefNolari
+    displayName: Hizmet Sunucu Ref Nolari
+    type: array
+    enumRef: null
+    required: false
+    length: null
+    description: >-
+      Service-provider reference numbers to filter the read (s.237);
+      empty reads all registered operations.
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 237
+        confidence: extracted
+    conditionalRequired:
+      - condition: islemSiraNumaralari is also filled
+        note: the guide forbids filling both filters at once - her ikisi de dolu olamaz (s.237)
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: saglikTesisKodu
+    displayName: Tesis Kodu
+    type: integer
+    enumRef: null
+    required: true
+    length: null
+    description: Healthcare facility code (s.237).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 237
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: takipNo
+    displayName: Takip Numarasi
+    type: string
+    enumRef: null
+    required: true
+    length: null
+    description: Tracking number whose registered operations are read (s.237).
+    sensitive: false
+    syntheticOnlyRecommended: true
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 237
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: ktsHbysKodu
+    displayName: KTS HBYS Kodu
+    type: string
+    enumRef: null
+    required: true
+    length: null
+    description: Software vendor KTS code (s.237).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 237
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+status: reviewed
