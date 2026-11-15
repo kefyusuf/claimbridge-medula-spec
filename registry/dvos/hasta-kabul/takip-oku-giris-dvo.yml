@@ -1,0 +1,74 @@
+id: TakipOkuGirisDVO
+domain: hasta-kabul
+direction: input
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: "3.1.1"
+    fetchedAt: "2026-11-15"
+    page: 164
+    section: Tablo 4.1.2.a - TakipOkuGirisDVO
+    confidence: extracted
+    notes: >-
+      Table spans pages 164-165; text extraction truncated one row
+      boundary. Fields saglikTesisKodu (Evet), takipNo, and ktsHbysKodu
+      (Evet, s.165) are verified from the visible table rows.
+fields:
+  - name: saglikTesisKodu
+    displayName: Tesis Kodu
+    type: integer
+    enumRef: null
+    required: true
+    length: null
+    description: Healthcare facility code assigned by GSS (s.164).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 164
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: takipNo
+    displayName: Takip Numarasi
+    type: string
+    enumRef: null
+    required: true
+    length: null
+    description: Tracking number to be read (s.164-165).
+    sensitive: false
+    syntheticOnlyRecommended: true
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 164
+        confidence: extracted
+        notes: Row boundary truncated in text extraction; requirement follows the table pattern and the method's purpose.
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: ktsHbysKodu
+    displayName: KTS HBYS Kodu
+    type: string
+    enumRef: null
+    required: true
+    length: null
+    description: Software vendor KTS code (s.165).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 165
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+status: reviewed

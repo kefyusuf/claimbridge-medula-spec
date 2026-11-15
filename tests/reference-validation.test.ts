@@ -41,8 +41,6 @@ const CORE_CONTRACTS: Record<string, { inputDvo: string; outputDvo: string }> =
   };
 
 const NULL_CONTRACT_IDS = [
-  "medula.hastane.hasta-kabul.hasta-kabul-oku",
-  "medula.hastane.hasta-kabul.hasta-kabul-iptal",
   "medula.hastane.hizmet-kayit.hizmet-kaydi-oku",
   "medula.hastane.hizmet-kayit.hizmet-kaydi-iptal",
   "medula.hastane.fatura-kayit.fatura-oku",

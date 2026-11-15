@@ -15,8 +15,8 @@ describe("tools (Group 5)", () => {
     const reg = loadRegistry(root);
     expect(reg.services).toHaveLength(3);
     expect(reg.methods).toHaveLength(10);
-    expect(reg.dvos).toHaveLength(9);
-    expect(reg.enums).toHaveLength(5);
+    expect(reg.dvos).toHaveLength(12);
+    expect(reg.enums).toHaveLength(7);
     expect(reg.rules).toHaveLength(5);
     expect(reg.workflows).toHaveLength(4);
     expect(reg.scenarios).toHaveLength(6);
@@ -47,7 +47,7 @@ describe("tools (Group 5)", () => {
   it("flags a null contract on a method whose status is not draft", () => {
     const reg = loadRegistry(root);
     const readMethod = reg.methods.find((m) =>
-      (m.data["id"] as string).endsWith("hasta-kabul-oku"),
+      (m.data["id"] as string).endsWith("hizmet-kaydi-oku"),
     );
     expect(readMethod).toBeTruthy();
     readMethod!.data["status"] = "reviewed";

@@ -1,0 +1,79 @@
+id: tedavi-tipi
+displayName: Tedavi Tipi
+values:
+  - code: "0"
+    label: Normal Sorgu
+    description: Standard query profile.
+  - code: "1"
+    label: Diyaliz
+    description: Dialysis treatment profile.
+  - code: "2"
+    label: Fiziksel Tedavi ve Rehabilitasyon
+    description: Physical therapy and rehabilitation profile.
+  - code: "4"
+    label: Kemik Iligi
+    description: Bone marrow treatment profile.
+  - code: "5"
+    label: Kok Hucre Nakli
+    description: Stem cell transplant profile.
+  - code: "6"
+    label: Ekstrakorporeal Fotoferez
+    description: Extracorporeal photopheresis profile.
+  - code: "7"
+    label: Hiperbarik Oksijen
+    description: Hyperbaric oxygen therapy profile.
+  - code: "8"
+    label: ESWL
+    description: Extracorporeal shock wave lithotripsy profile.
+  - code: "9"
+    label: Agiz Protez
+    description: Dental prosthesis treatment profile.
+  - code: "10"
+    label: Ketem
+    description: Ketem treatment profile.
+  - code: "11"
+    label: Tup Bebek 1
+    description: IVF cycle 1 profile.
+  - code: "12"
+    label: Tup Bebek 2
+    description: IVF cycle 2 profile.
+  - code: "13"
+    label: Dis Tedavisi
+    description: Dental treatment profile.
+  - code: "14"
+    label: Onkolojik Tedavi
+    description: Oncological treatment profile.
+  - code: "15"
+    label: Plazmaferez
+    description: Plasmapheresis profile.
+  - code: "16"
+    label: ESWT
+    description: Extracorporeal shock wave therapy profile.
+  - code: "17"
+    label: Evde Bakim
+    description: Home care profile.
+  - code: "18"
+    label: Analik Hali
+    description: Maternity leave profile.
+  - code: "19"
+    label: Is Goremezlik
+    description: Incapacity-to-work profile.
+  - code: "20"
+    label: Ortodontik Tedavi
+    description: Orthodontic treatment profile.
+  - code: "21"
+    label: Alkol Madde Bagimliligi
+    description: Alcohol and substance dependence treatment profile.
+  - code: "22"
+    label: Pulmoner Rehabilitasyon
+    description: Pulmonary rehabilitation profile.
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: "3.1.1"
+    fetchedAt: "2026-11-15"
+    page: 158
+    section: Tablo 4.1.1.a / 4.1.2.b - tedaviTipi (kod 3 kılavuzda tanımlı değil)
+    confidence: extracted
+    notes: Code 3 is skipped by the guide itself (the sequence jumps from 2 to 4).
+status: reviewed

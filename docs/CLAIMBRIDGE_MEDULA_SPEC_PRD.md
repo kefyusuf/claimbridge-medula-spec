@@ -699,16 +699,35 @@ Do not attempt to model every field from the official guide in v0.1. Add enough 
 - takipler
 ```
 
+> **Group 10 amendment (2026-11-15):** HizmetKayitGirisDVO and
+> HizmetKayitCevapDVO minimum sets are aligned with the official guide
+> (Tablo 4.2.1.a/b, edition 3.1.1): `tanilar` replaces `taniBilgileri`;
+> `hastaBasvuruNo` is optional in the input (s.189); the response follows
+> Tablo 4.2.1.b (`takipNo`, `hastaBasvuruNo`, `saglikTesisKodu`,
+> `islemBilgileri`, `hataliKayitlar`). `doktorTescilNo` is absent from the
+> guide and deprecated for 0.2.0. Source:
+> `medula-hastane-guide-3-1-1-2026-10-19`.
+
 #### HizmetKayitGirisDVO
 
 ```yaml
 - saglikTesisKodu
-- hastaBasvuruNo
 - takipNo
-- taniBilgileri
-- islemBilgileri
-- hizmetDetaylari
+- tanilar
 - ktsHbysKodu
+- ameliyatveGirisimBilgileri
+- digerIslemBilgileri
+- disBilgileri
+- ilacBilgileri
+- konsultasyonBilgileri
+- malzemeBilgileri
+- muayeneBilgisi
+- tahlilBilgileri
+- tetkikveRadyolojiBilgileri
+- hastaYatisBilgileri
+- kanBilgileri
+- triajBeyani
+- hastaBasvuruNo (optional per s.189)
 ```
 
 #### HizmetKayitCevapDVO
@@ -716,8 +735,11 @@ Do not attempt to model every field from the official guide in v0.1. Add enough 
 ```yaml
 - sonucKodu
 - sonucMesaji
-- islemSiraNumaralari
-- hizmetKayitReferansNo
+- takipNo
+- hastaBasvuruNo
+- saglikTesisKodu
+- islemBilgileri
+- hataliKayitlar
 ```
 
 #### FaturaGirisDVO

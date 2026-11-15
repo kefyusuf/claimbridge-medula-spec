@@ -6,6 +6,43 @@ Format: [Keep a Changelog](https://keepachangelog.com); versioning: SemVer
 
 ## [Unreleased]
 
+### Group 10 — feat/v02-enrichment (2026-11-15)
+
+Local group: no remote yet, so the PR step is replaced by a local
+`--no-ff` merge to `main` (PRD §28 step 6 fallback).
+
+- TDD red first: v0.2 enrichment suite (10 checks) committed and verified
+  failing (10/10 red) before any guide-aligned data existed (`04eabb8`).
+- Three new guide-derived DVOs: `TakipSilGirisDVO` / `TakipSilCevapDVO`
+  (Tablo 4.1.3.a/b, s.168) and `TakipOkuGirisDVO` (Tablo 4.1.2.a,
+  s.164-165) — `hasta-kabul-oku` and `hasta-kabul-iptal` contracts now
+  resolve and both methods are `reviewed` (`fd85073`).
+- Two new value-set enums: `sigortali-turu` (1-4, s.154) and `tedavi-tipi`
+  (0-22 without 3, s.158-159) — ProvizyonGirisDVO `sigortaliTuru`/
+  `tedaviTipi` bound via `enumRef`.
+- HizmetKayit DVOs aligned with Tablo 4.2.1.a/b (`5ee5810`):
+  HizmetKayitGirisDVO carries the guide field set (`tanilar` replaces the
+  PRD's `taniBilgileri`; hastaBasvuruNo optional per s.189; categorized
+  service arrays; triajBeyani S/K/Y; hastaYatisBilgileri for inpatient
+  takips); HizmetKayitCevapDVO follows Tablo 4.2.1.b (`islemBilgileri`,
+  `hataliKayitlar`). Rules updated (`required-hizmet-kayit-giris-fields`
+  reviewed; new `conditional-tani-per-takip`). PRD §13.4 amended with a
+  Group 10 marker; example request guide-aligned.
+- Registry now: 3 services, 10 methods, **12 DVOs**, **7 enums**, 13
+  rules, 4 workflows, 6 scenarios; dist regenerated.
+
+Deferred to Group 11: remaining oku/iptal contract tables (hizmet-kaydi
+4.2.2/4.2.3, fatura 4.3.2-4.3.4); sonucKodu catalog completion; istisnai
+hal and devredilen kurum enum extraction; new HastaKabul methods
+(ekds*, SevkBildir, HastaCikis*, KemikIligi*); tools/extract scratch
+workspace (PRD §25.4).
+
+Validation output: `pnpm test` → 91/91 passed; `tsc --noEmit` → clean;
+`pnpm validate` → OK; `pnpm check` → OK; `pnpm format:check` → OK.
+
+Remaining TODOs: none for this group. Next: Group 11 — remaining oku/iptal
+contracts and the sonucKodu catalog.
+
 ### Group 9 — feat/guide-verification (2026-11-15)
 
 Local group: no remote yet, so the PR step is replaced by a local

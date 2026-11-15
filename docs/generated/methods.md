@@ -129,12 +129,12 @@
 | Service | medula.hastane.hasta-kabul |
 | Documentation heading | HastaKabulIptal |
 | Operation name | hastaKabulIptal |
-| Input DVO | null |
-| Output DVO | null |
+| Input DVO | TakipSilGirisDVO |
+| Output DVO | TakipSilCevapDVO |
 | Success | sonucKodu = 0000 (sonucMesaji) |
 | Sandbox supported |  |
-| Status | draft |
-| Source refs | medula-hastane-guide-2026-06-17 |
+| Status | reviewed |
+| Source refs | medula-hastane-guide-2026-06-17, medula-hastane-guide-3-1-1-2026-10-19 |
 
 **State effects**
 
@@ -153,12 +153,12 @@
 | Service | medula.hastane.hasta-kabul |
 | Documentation heading | HastaKabulOku |
 | Operation name | hastaKabulOku |
-| Input DVO | null |
-| Output DVO | null |
+| Input DVO | TakipOkuGirisDVO |
+| Output DVO | TakipDVO |
 | Success | sonucKodu = 0000 (sonucMesaji) |
 | Sandbox supported |  |
-| Status | draft |
-| Source refs | medula-hastane-guide-2026-06-17 |
+| Status | reviewed |
+| Source refs | medula-hastane-guide-2026-06-17, medula-hastane-guide-3-1-1-2026-10-19 |
 
 **State effects**
 
@@ -240,5 +240,5 @@
 | reads | `hastaBasvuruNo`, `takipNo` |
 | updates | `takip` |
 | deletes | — |
-| generates | `islemSiraNumaralari`, `hizmetKayitReferansNo` |
+| generates | `islemSiraNo` |
 

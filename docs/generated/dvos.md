@@ -56,28 +56,41 @@ Domain: `hizmet-kayit` · Direction: `shared` · Status: `draft` · Source refs:
 
 ## `HizmetKayitCevapDVO`
 
-Domain: `hizmet-kayit` · Direction: `output` · Status: `draft` · Source refs: medula-hastane-guide-2026-06-17
+Domain: `hizmet-kayit` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
 
 | Field | Type | Required | Enum ref | Sensitive | Description |
 | --- | --- | --- | --- | --- | --- |
-| `sonucKodu` | string |  | — |  | Result code; 0000 means success, any other value is an error. |
-| `sonucMesaji` | string |  | — |  | Human-readable result message accompanying the result code. |
-| `islemSiraNumaralari` | array |  | — |  | Operation sequence numbers generated for the registered procedures; present on success. |
-| `hizmetKayitReferansNo` | string |  | — |  | Service registration reference number linking the registered lines; present on success. |
+| `sonucKodu` | string |  | — |  | Result code; 0000 means success, any other value is an error (s.190). |
+| `sonucMesaji` | string |  | — |  | Result explanation; the error cause is reported here (s.190). |
+| `takipNo` | string |  | — |  | Tracking number of the registration (s.190). |
+| `hastaBasvuruNo` | string |  | — |  | Patient application number (s.190). |
+| `saglikTesisKodu` | integer |  | — |  | Code of the registering institution (s.190). |
+| `islemBilgileri` | array |  | — |  | Registered operation records (KayitliIslemBilgisiDVO, s.190). Verification correction - the v0.1 draft modeled islemSiraNumaralari. |
+| `hataliKayitlar` | array |  | — |  | Failed registration records (HataliIslemBilgisiDVO, s.190). |
 
 ## `HizmetKayitGirisDVO`
 
-Domain: `hizmet-kayit` · Direction: `input` · Status: `draft` · Source refs: medula-hastane-guide-2026-06-17
+Domain: `hizmet-kayit` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
 
 | Field | Type | Required | Enum ref | Sensitive | Description |
 | --- | --- | --- | --- | --- | --- |
-| `saglikTesisKodu` | integer |  | — |  | Healthcare facility code of the registering institution. |
-| `hastaBasvuruNo` | string |  | — |  | Patient application number produced by the admission flow. |
-| `takipNo` | string |  | — |  | Tracking number the services are registered against. |
-| `taniBilgileri` | array |  | — |  | Diagnosis entries (ICD-10 codes with type qualifiers) for this episode. |
-| `islemBilgileri` | array |  | — |  | Procedure/operation entries performed during the episode. |
-| `hizmetDetaylari` | array |  | — |  | Detailed service lines (HizmetDetayDVO records) to register. |
-| `ktsHbysKodu` | string |  | — |  | Hospital information system (HBYS) code used by the KTS integration. |
+| `saglikTesisKodu` | integer |  | — |  | Code of the institution performing the service registration (s.189). |
+| `takipNo` | string |  | — |  | Tracking number the services are registered against (s.189). |
+| `hastaBasvuruNo` | string |  | — |  | Patient application number; the guide marks it optional here (s.189). |
+| `tanilar` | array |  | — |  | Diagnosis entries (TaniBilgisiDVO records, s.189). Verification correction - the guide names this field tanilar. |
+| `ameliyatveGirisimBilgileri` | array |  | — |  | Surgery and intervention entries as an array (AmeliyatveGirisimBilgisiDVO, s.189). |
+| `digerIslemBilgileri` | array |  | — |  | Other operation entries (DigerIslemBilgisiDVO, s.189). |
+| `disBilgileri` | array |  | — |  | Dental entries (DisBilgisiDVO, s.189). |
+| `ilacBilgileri` | array |  | — |  | Medication entries (IlacBilgisiDVO, s.189). |
+| `konsultasyonBilgileri` | array |  | — |  | Consultation entries (KonsultasyonBilgisiDVO, s.189). |
+| `malzemeBilgileri` | array |  | — |  | Material entries (MalzemeBilgisiDVO, s.189). |
+| `muayeneBilgisi` | object |  | — |  | Examination entry (MuayeneBilgisiDVO, s.189). |
+| `tahlilBilgileri` | array |  | — |  | Lab test entries (TahlilBilgisiDVO, s.189). |
+| `tetkikveRadyolojiBilgileri` | array |  | — |  | Imaging and work-up entries (TetkikveRadyolojiBilgisiDVO, s.189). |
+| `hastaYatisBilgileri` | array |  | — |  | Hospitalization entries (HastaYatisBilgisiDVO, s.190); mandatory for inpatient takips per the guide note. |
+| `kanBilgileri` | array |  | — |  | Blood transfusion entries (KanBilgisiDVO, s.190). |
+| `triajBeyani` | string |  | — |  | Triage declaration taking S/K/Y values; mandatory for emergency takips (s.190). |
+| `ktsHbysKodu` | string |  | — |  | Software vendor KTS code (s.190). |
 
 ## `ProvizyonCevapDVO`
 
@@ -99,13 +112,13 @@ Domain: `hasta-kabul` · Direction: `input` · Status: `reviewed` · Source refs
 | --- | --- | --- | --- | --- | --- |
 | `saglikTesisKodu` | integer |  | — |  | Healthcare facility code assigned by GSS (s.154). |
 | `hastaTCKimlikNo` | string |  | — |  | Patient identity number (s.154). Examples must use synthetic placeholders only. |
-| `sigortaliTuru` | string |  | — |  | Insured person type (s.154). Codes 1-4 (1 Calisan, 2 Emekli, 3 SSK Kurum Personeli, 4 Diger). Enum registry candidate for v0.2. |
+| `sigortaliTuru` | enum |  | sigortali-turu |  | Insured person type (s.154). Codes 1-4 in the sigortali-turu registry enum. |
 | `bransKodu` | string |  | — |  | Medical branch (specialty) code (s.154). Verification correction - the guide defines String(4), not integer. |
 | `devredilenKurum` | string |  | — |  | Institution the person was transferred from before the SGK merger (s.154-155). Codes include 1-9, 32, 97, 100, 147-149, I, M, B, V. Enum registry candidate for v0.2. |
 | `provizyonTarihi` | date |  | — |  | Date the provision was requested, dd.mm.yyyy format in the guide (s.156). |
 | `provizyonTipi` | enum |  | provizyon-tipi |  | Provision type controlling how SGK covers the admission (s.156-157). |
 | `tedaviTuru` | enum |  | tedavi-turu |  | Treatment type of the admission - A/Y/G letter codes (s.158). |
-| `tedaviTipi` | string |  | — |  | Detailed treatment profile (s.158-159). Codes 0-22 (0 Normal Sorgu, 1 Diyaliz, 4 Kemik iligi, 20 Ortodontik Tedavi, ...). Enum registry candidate for v0.2. |
+| `tedaviTipi` | enum |  | tedavi-tipi |  | Detailed treatment profile (s.158-159); codes 0-22 (no 3) in the tedavi-tipi registry enum. |
 | `takipTipi` | enum |  | takip-tipi |  | Tracking record type (s.157). Linked takips are requested through takipNo, not through this field. |
 | `takipNo` | string |  | — |  | Existing tracking number used when requesting a linked takip; empty for first takips (s.157). |
 | `istisnaiHal` | string |  | — |  | Exceptional-case code (s.157). Codes 1-9 (1 Acil hal, 2 Is kazasi ile meslek hastaligi, ...). Enum candidate for v0.2. |
@@ -126,4 +139,34 @@ Domain: `hasta-kabul` · Direction: `shared` · Status: `reviewed` · Source ref
 | `takipDurumu` | enum |  | takip-durumu |  | Payment-inquiry state of the tracking record - 0/1 only (s.166). |
 | `hastaBasvuruNo` | string |  | — |  | Patient application number this tracking record belongs to. |
 | `bransKodu` | string |  | — |  | Branch code of the service (s.165). Verification correction - String(4) in the guide. |
+
+## `TakipOkuGirisDVO`
+
+Domain: `hasta-kabul` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `saglikTesisKodu` | integer |  | — |  | Healthcare facility code assigned by GSS (s.164). |
+| `takipNo` | string |  | — |  | Tracking number to be read (s.164-165). |
+| `ktsHbysKodu` | string |  | — |  | Software vendor KTS code (s.165). |
+
+## `TakipSilCevapDVO`
+
+Domain: `hasta-kabul` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `sonucKodu` | string |  | — |  | Result code; 0000 means success, any other value is an error (s.168). |
+| `sonucMesaji` | string |  | — |  | Result explanation; the error cause is reported here (s.168). |
+| `takipNo` | string |  | — |  | Cancelled tracking number returned for control (s.168). |
+
+## `TakipSilGirisDVO`
+
+Domain: `hasta-kabul` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `saglikTesisKodu` | integer |  | — |  | Healthcare facility code of the cancelling institution (s.168). Only the institution's own takips can be cancelled. |
+| `takipNo` | string |  | — |  | Tracking number to be cancelled (s.168). |
+| `ktsHbysKodu` | string |  | — |  | Software vendor KTS code (s.168). |
 

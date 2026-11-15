@@ -36,16 +36,29 @@ erDiagram
   HizmetKayitCevapDVO {
     string sonucKodu
     string sonucMesaji
-    array islemSiraNumaralari
-    string hizmetKayitReferansNo
+    string takipNo
+    string hastaBasvuruNo
+    integer saglikTesisKodu
+    array islemBilgileri
+    array hataliKayitlar
   }
   HizmetKayitGirisDVO {
     integer saglikTesisKodu
-    string hastaBasvuruNo
     string takipNo
-    array taniBilgileri
-    array islemBilgileri
-    array hizmetDetaylari
+    string hastaBasvuruNo
+    array tanilar
+    array ameliyatveGirisimBilgileri
+    array digerIslemBilgileri
+    array disBilgileri
+    array ilacBilgileri
+    array konsultasyonBilgileri
+    array malzemeBilgileri
+    object muayeneBilgisi
+    array tahlilBilgileri
+    array tetkikveRadyolojiBilgileri
+    array hastaYatisBilgileri
+    array kanBilgileri
+    string triajBeyani
     string ktsHbysKodu
   }
   ProvizyonCevapDVO {
@@ -58,13 +71,13 @@ erDiagram
   ProvizyonGirisDVO {
     integer saglikTesisKodu
     string hastaTCKimlikNo
-    string sigortaliTuru
+    enum sigortaliTuru
     string bransKodu
     string devredilenKurum
     date provizyonTarihi
     enum provizyonTipi
     enum tedaviTuru
-    string tedaviTipi
+    enum tedaviTipi
     enum takipTipi
     string takipNo
     string istisnaiHal
@@ -81,14 +94,35 @@ erDiagram
     string hastaBasvuruNo
     string bransKodu
   }
+  TakipOkuGirisDVO {
+    integer saglikTesisKodu
+    string takipNo
+    string ktsHbysKodu
+  }
+  TakipSilCevapDVO {
+    string sonucKodu
+    string sonucMesaji
+    string takipNo
+  }
+  TakipSilGirisDVO {
+    integer saglikTesisKodu
+    string takipNo
+    string ktsHbysKodu
+  }
   medula_hastane_fatura_kayit_fatura_kayit ||--|| FaturaGirisDVO : inputDvo
   medula_hastane_fatura_kayit_fatura_kayit ||--|| FaturaCevapDVO : outputDvo
   medula_hastane_hasta_kabul_hasta_kabul ||--|| ProvizyonGirisDVO : inputDvo
   medula_hastane_hasta_kabul_hasta_kabul ||--|| ProvizyonCevapDVO : outputDvo
+  medula_hastane_hasta_kabul_hasta_kabul_iptal ||--|| TakipSilGirisDVO : inputDvo
+  medula_hastane_hasta_kabul_hasta_kabul_iptal ||--|| TakipSilCevapDVO : outputDvo
+  medula_hastane_hasta_kabul_hasta_kabul_oku ||--|| TakipOkuGirisDVO : inputDvo
+  medula_hastane_hasta_kabul_hasta_kabul_oku ||--|| TakipDVO : outputDvo
   medula_hastane_hizmet_kayit_hizmet_kayit ||--|| HizmetKayitGirisDVO : inputDvo
   medula_hastane_hizmet_kayit_hizmet_kayit ||--|| HizmetKayitCevapDVO : outputDvo
+  ProvizyonGirisDVO }o--|| sigortali_turu : enumRef
   ProvizyonGirisDVO }o--|| provizyon_tipi : enumRef
   ProvizyonGirisDVO }o--|| tedavi_turu : enumRef
+  ProvizyonGirisDVO }o--|| tedavi_tipi : enumRef
   ProvizyonGirisDVO }o--|| takip_tipi : enumRef
   TakipDVO }o--|| takip_tipi : enumRef
   TakipDVO }o--|| takip_durumu : enumRef

@@ -6,14 +6,23 @@ names:
   aliases:
     - hastaKabulIptal
 contract:
-  inputDvo: null
-  outputDvo: null
+  inputDvo: TakipSilGirisDVO
+  outputDvo: TakipSilCevapDVO
 sourceRefs:
   - id: medula-hastane-guide-2026-06-17
     sourceType: official-guide
     guideVersion: "2026-06-17"
-    confidence: inferred
-    notes: Operation name follows the service pattern; verify against guide and WSDL before review.
+    confidence: extracted
+    notes: >-
+      Contract verified against Tablo 4.1.3.a/b (edition 3.1.1, s.168);
+      method list verified on s.149.
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: "3.1.1"
+    fetchedAt: "2026-11-15"
+    page: 168
+    section: "4.1.3 Hasta Kabul Iptal Metodu"
+    confidence: extracted
 stateEffects:
   creates: []
   reads:
@@ -30,4 +39,4 @@ success:
 sandbox:
   supported: true
   defaultScenario: null
-status: draft
+status: reviewed

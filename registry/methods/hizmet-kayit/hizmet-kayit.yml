@@ -32,8 +32,7 @@ stateEffects:
     - takip
   deletes: []
   generates:
-    - islemSiraNumaralari
-    - hizmetKayitReferansNo
+    - islemSiraNo
 success:
   resultCodeField: sonucKodu
   successCode: "0000"
