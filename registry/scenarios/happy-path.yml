@@ -1,0 +1,38 @@
+id: happy-path
+title: Happy path across the full core claim flow
+method: medula.hastane.hasta-kabul.hasta-kabul
+given:
+  facility: SYNTHETIC_FACILITY_001
+  flow: core-claim-flow
+request:
+  saglikTesisKodu: 1
+  hastaTCKimlikNo: SYNTHETIC_TC_000000001
+  provizyonTipi: N
+  tedaviTuru: "1"
+  takipTipi: Y
+  bransKodu: 1
+  doktorTescilNo: SYNTHETIC_DOCTOR_001
+  ktsHbysKodu: SYNTHETIC_HBYS_001
+expected:
+  result:
+    sonucKodu: "0000"
+    sonucMesaji: Islem basari ile tamamlandi.
+  stateChanges:
+    creates:
+      - hastaBasvuruNo
+      - takipNo
+      - patientAdmission
+      - takip
+    note: >-
+      Anchored on the admission step; the full happy path continues through
+      hizmet-kayit and fatura-kayit per the core-claim-flow workflow, each
+      step returning sonucKodu 0000 (PRD 15.1).
+sandbox:
+  deterministic: true
+  httpStatus: 200
+  latencyMs: null
+sourceRefs:
+  - id: sandbox-design-v0.1
+    sourceType: sandbox-design
+    confidence: unknown
+status: draft

@@ -1,0 +1,21 @@
+id: patient-admission-flow
+name: Patient Admission Flow
+description: Sub-flow covering only the patient admission step of the core claim flow.
+steps:
+  - id: patient-admission
+    method: medula.hastane.hasta-kabul.hasta-kabul
+    requires: []
+    creates:
+      - hastaBasvuruNo
+      - takipNo
+      - patientAdmission
+      - takip
+    updates: []
+    deletes: []
+    next: []
+sourceRefs:
+  - id: medula-hastane-guide-2026-06-17
+    sourceType: official-guide
+    guideVersion: "2026-06-17"
+    confidence: extracted
+status: draft

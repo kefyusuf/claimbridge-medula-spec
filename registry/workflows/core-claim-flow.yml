@@ -1,0 +1,49 @@
+id: core-claim-flow
+name: Core Claim Flow
+description: Stateful core claim workflow for patient admission, service registration, and invoice registration.
+steps:
+  - id: patient-admission
+    method: medula.hastane.hasta-kabul.hasta-kabul
+    requires: []
+    creates:
+      - hastaBasvuruNo
+      - takipNo
+      - patientAdmission
+      - takip
+    updates: []
+    deletes: []
+    next:
+      - service-registration
+
+  - id: service-registration
+    method: medula.hastane.hizmet-kayit.hizmet-kayit
+    requires:
+      - hastaBasvuruNo
+      - takipNo
+    creates:
+      - serviceRecord
+      - islemSiraNo
+    updates:
+      - takip
+    deletes: []
+    next:
+      - invoice-registration
+
+  - id: invoice-registration
+    method: medula.hastane.fatura-kayit.fatura-kayit
+    requires:
+      - hastaBasvuruNo
+      - serviceRecord
+    creates:
+      - invoiceRecord
+      - faturaTeslimNo
+    updates:
+      - takip
+    deletes: []
+    next: []
+sourceRefs:
+  - id: medula-hastane-guide-2026-06-17
+    sourceType: official-guide
+    guideVersion: "2026-06-17"
+    confidence: extracted
+status: draft

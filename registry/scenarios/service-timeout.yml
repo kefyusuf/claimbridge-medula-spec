@@ -1,0 +1,30 @@
+id: service-timeout
+title: Simulated service latency and timeout
+method: medula.hastane.hasta-kabul.hasta-kabul
+given:
+  facility: SYNTHETIC_FACILITY_001
+  simulateTimeout: true
+request:
+  saglikTesisKodu: 1
+  hastaTCKimlikNo: SYNTHETIC_TC_000000001
+  provizyonTipi: N
+  tedaviTuru: "1"
+  takipTipi: Y
+  bransKodu: 1
+  doktorTescilNo: SYNTHETIC_DOCTOR_001
+expected:
+  result:
+    sonucKodu: SANDBOX_TIMEOUT
+    sonucMesaji: Servis zaman asimi simule edildi.
+  stateChanges:
+    note: Scenario metadata tells the future sandbox to delay or timeout; spec validation only verifies the scenario shape (PRD 15.6).
+sandbox:
+  deterministic: false
+  httpStatus: 200
+  latencyMs: 5000
+sourceRefs:
+  - id: sandbox-design-v0.1
+    sourceType: sandbox-design
+    confidence: unknown
+    notes: SANDBOX_TIMEOUT is a sandbox-only code, not an official Medula error code (PRD 15.6).
+status: draft

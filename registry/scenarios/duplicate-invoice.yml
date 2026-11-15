@@ -1,0 +1,30 @@
+id: duplicate-invoice
+title: The same claim flow is invoiced twice
+method: medula.hastane.fatura-kayit.fatura-kayit
+given:
+  facility: SYNTHETIC_FACILITY_001
+  hastaBasvuruNo: SYNTHETIC_BASVURU_000001
+  hasServiceRecord: true
+  hasInvoiceRecord: true
+request:
+  saglikTesisKodu: 1
+  faturaTarihi: "2026-07-06"
+  hastaBasvuruNo: SYNTHETIC_BASVURU_000001
+  faturaRefNo: SYNTHETIC_FATURA_000002
+  hizmetDetaylari: []
+expected:
+  result:
+    sonucKodu: SANDBOX_3001
+    sonucMesaji: Bu basvuru icin fatura zaten olusturulmus.
+  stateChanges:
+    note: First invoice succeeds; the second returns a non-success code and no duplicate invoice state is created (PRD 15.5).
+sandbox:
+  deterministic: true
+  httpStatus: 200
+  latencyMs: null
+sourceRefs:
+  - id: sandbox-design-v0.1
+    sourceType: sandbox-design
+    confidence: unknown
+    notes: SANDBOX_3001 is a sandbox-only code chosen for the duplicate case; the PRD leaves the exact code open (PRD 15.5).
+status: draft

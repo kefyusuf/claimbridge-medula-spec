@@ -1,0 +1,20 @@
+{
+  "saglikTesisKodu": 1,
+  "faturaTarihi": "2026-07-06",
+  "hastaBasvuruNo": "SYNTHETIC_BASVURU_000001",
+  "faturaRefNo": "SYNTHETIC_FATURA_000001",
+  "hizmetDetaylari": [
+    {
+      "islemSiraNo": 1,
+      "islemKodu": "SYNTHETIC_SUT_000001",
+      "adet": 1,
+      "birimFiyat": 100.0
+    }
+  ],
+  "trafikKazasiOdemeYuzdesi": null,
+  "ilaveUcret": null,
+  "ktsHbysKodu": "SYNTHETIC_HBYS_001",
+  "hastaTelefon": "SYNTHETIC_PHONE_0000000001",
+  "hastaAdres": "SYNTHETIC_ADDRESS_000001",
+  "muvafakatVar": true
+}
