@@ -1,0 +1,22 @@
+id: invoice-registration-flow
+name: Invoice Registration Flow
+description: Sub-flow covering only the invoice registration step of the core claim flow.
+steps:
+  - id: invoice-registration
+    method: medula.hastane.fatura-kayit.fatura-kayit
+    requires:
+      - hastaBasvuruNo
+      - serviceRecord
+    creates:
+      - invoiceRecord
+      - faturaTeslimNo
+    updates:
+      - takip
+    deletes: []
+    next: []
+sourceRefs:
+  - id: medula-hastane-guide-2026-06-17
+    sourceType: official-guide
+    guideVersion: "2026-06-17"
+    confidence: extracted
+status: draft
