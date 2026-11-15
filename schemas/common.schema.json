@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://claimbridge.dev/schemas/common.schema.json",
+  "title": "ClaimBridge Medula Spec - shared schema definitions",
+  "description": "Shared $defs referenced by all registry entity schemas. Generated files are committed per PRD 18.4; hand-edits are allowed but must pass pnpm check.",
+  "$defs": {
+    "nonEmptyString": {
+      "type": "string",
+      "minLength": 1
+    },
+    "status": {
+      "enum": ["draft", "reviewed", "deprecated"]
+    },
+    "fieldType": {
+      "enum": ["string", "integer", "decimal", "boolean", "date", "array", "object", "enum"]
+    },
+    "severity": {
+      "enum": ["info", "warning", "error"]
+    },
+    "direction": {
+      "enum": ["input", "output", "shared"]
+    },
+    "sourceType": {
+      "enum": ["official-guide", "official-wsdl", "manual-review", "derived", "sandbox-design"]
+    },
+    "confidence": {
+      "enum": ["extracted", "reviewed", "inferred", "unknown"]
+    },
+    "isoDate": {
+      "type": ["string", "null"],
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+    },
+    "sourceReference": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "sourceType", "confidence"],
+      "properties": {
+        "id": { "$ref": "#/$defs/nonEmptyString" },
+        "sourceType": { "$ref": "#/$defs/sourceType" },
+        "url": { "type": ["string", "null"] },
+        "guideVersion": { "type": ["string", "null"] },
+        "publishedAt": { "$ref": "#/$defs/isoDate" },
+        "fetchedAt": { "$ref": "#/$defs/isoDate" },
+        "page": { "type": ["integer", "null"], "minimum": 1 },
+        "section": { "type": ["string", "null"] },
+        "table": { "type": ["string", "null"] },
+        "lineHint": { "type": ["string", "null"] },
+        "confidence": { "$ref": "#/$defs/confidence" },
+        "notes": { "type": ["string", "null"] }
+      }
+    },
+    "conditionalRule": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["condition"],
+      "properties": {
+        "condition": { "$ref": "#/$defs/nonEmptyString" },
+        "note": { "type": ["string", "null"] }
+      }
+    },
+    "stringList": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/nonEmptyString" }
+    }
+  }
+}

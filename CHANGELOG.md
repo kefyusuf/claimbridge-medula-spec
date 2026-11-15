@@ -6,6 +6,39 @@ Format: [Keep a Changelog](https://keepachangelog.com); versioning: SemVer
 
 ## [Unreleased]
 
+### Group 1 — feat/schemas (2026-11-15)
+
+Local group: no remote yet, so the PR step is replaced by a local `--no-ff`
+merge to `main` (PRD §28 step 6 fallback).
+
+- TDD red first: schema-validation suite + 12 fixtures (5 valid, 7 invalid)
+  committed and verified failing before any schema existed (`301d0db`).
+- 10 JSON Schemas (Draft 2020-12) per PRD §11: common shared defs, service,
+  method, dvo, field, enum, rule, workflow, scenario, standalone
+  source-reference (`3f9e1ba`).
+- Schema design decisions:
+  - Cross-file refs resolve through `$id` base
+    (`https://claimbridge.dev/schemas/...`); AJV loads every schema file.
+  - Method `contract` is required but its members are nullable — a `null`
+    contract is draft-only (amended PRD §12.2); full resolution checks are
+    Group 5 reference validation.
+  - Field `enumRef` (amended PRD §12.4): string|null; enum-typed fields point
+    at registry enum ids.
+  - Rule files aggregate multiple rules under a top-level `rules` array;
+    PRD §12.6 defines the single-rule object (kept as `$defs.rule`).
+  - `ConditionalRule` minimal shape introduced: `{ condition, note? }` — PRD
+    never defined it; flagged as decision for later groups.
+  - Dates use an ISO pattern; no `format` keywords (ajv-formats wiring
+    deferred to Group 5).
+- Suite details: AJV 2020 with `allErrors` + `allowUnionTypes` (the
+  intentional `length: integer|string|null` union); 4 reference-invalid
+  fixtures are asserted schema-valid — reference failures belong to Group 5.
+
+Validation output: `pnpm test` → 17/17 passed (4 smoke + 13 schema);
+`tsc --noEmit` → clean; `pnpm validate` → OK (stub).
+
+Remaining TODOs: none for this group. Next: Group 2 — `feat/registry-core`.
+
 ### Group 0 — chore/bootstrap (2026-11-15)
 
 Local group: no remote yet, so the PR step is replaced by a local `--no-ff`

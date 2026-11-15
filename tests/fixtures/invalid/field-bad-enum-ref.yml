@@ -1,0 +1,25 @@
+id: ProvizyonGirisDVO
+domain: hasta-kabul
+direction: input
+sourceRefs:
+  - id: medula-hastane-guide-2026-06-17
+    sourceType: official-guide
+    confidence: extracted
+fields:
+  - name: provizyonTipi
+    displayName: Provizyon Tipi
+    type: enum
+    enumRef: does-not-exist
+    required: true
+    length: null
+    description: enumRef points to a registry enum that is not defined.
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-2026-06-17
+        sourceType: official-guide
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: null
+    deprecatedIn: null
+status: draft

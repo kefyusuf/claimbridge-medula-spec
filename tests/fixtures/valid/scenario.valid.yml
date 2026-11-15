@@ -1,0 +1,25 @@
+id: happy-path
+title: Happy path across the full core claim flow
+method: medula.hastane.hasta-kabul.hasta-kabul
+given:
+  facility: SYNTHETIC_FACILITY_001
+request:
+  saglikTesisKodu: 1
+  hastaTCKimlikNo: SYNTHETIC_TC_000000001
+expected:
+  result:
+    sonucKodu: "0000"
+    sonucMesaji: Islem basari ile tamamlandi.
+  stateChanges:
+    creates:
+      - hastaBasvuruNo
+      - takipNo
+sandbox:
+  deterministic: true
+  httpStatus: 200
+  latencyMs: null
+sourceRefs:
+  - id: sandbox-design-v0.1
+    sourceType: sandbox-design
+    confidence: unknown
+status: draft

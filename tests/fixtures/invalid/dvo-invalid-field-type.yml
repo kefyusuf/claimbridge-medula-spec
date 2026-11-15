@@ -1,0 +1,25 @@
+id: ProvizyonGirisDVO
+domain: hasta-kabul
+direction: input
+sourceRefs:
+  - id: medula-hastane-guide-2026-06-17
+    sourceType: official-guide
+    confidence: extracted
+fields:
+  - name: saglikTesisKodu
+    displayName: Saglik Tesisi Kodu
+    type: complexnumber
+    enumRef: null
+    required: true
+    length: null
+    description: Field type is not one of the eight supported v0.1 types.
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-2026-06-17
+        sourceType: official-guide
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: null
+    deprecatedIn: null
+status: draft

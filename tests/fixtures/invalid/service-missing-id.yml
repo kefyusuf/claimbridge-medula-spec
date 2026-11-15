@@ -1,0 +1,12 @@
+slug: hasta-kabul
+displayName: Hasta Kabul
+description: Service fixture missing the required id field.
+sourceRefs:
+  - id: medula-hastane-guide-2026-06-17
+    sourceType: official-guide
+    confidence: extracted
+wsdl:
+  production: wsdl.hasta-kabul.production
+  test: wsdl.hasta-kabul.test
+methods: []
+status: draft
