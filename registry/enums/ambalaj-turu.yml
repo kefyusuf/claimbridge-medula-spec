@@ -1,0 +1,21 @@
+id: ambalaj-turu
+displayName: Ambalaj Turu
+values:
+  - code: "1"
+    label: Ecza Siseleri
+    description: Pharmacy bottles.
+  - code: "2"
+    label: Merhem Kutulari
+    description: Ointment boxes.
+  - code: "3"
+    label: Kilitli Torbalar
+    description: Locked bags.
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: "3.1.1"
+    fetchedAt: "2026-11-15"
+    page: 200
+    section: Tablo 4.2.1.f.1 - MajistralIlacDVO (ambalajTuru)
+    confidence: extracted
+status: reviewed

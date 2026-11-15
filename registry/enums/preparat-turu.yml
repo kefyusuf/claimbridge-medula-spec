@@ -1,0 +1,36 @@
+id: preparat-turu
+displayName: Preparat Turu
+values:
+  - code: "1"
+    label: Tozlar
+    description: Powders.
+  - code: "2"
+    label: Likid
+    description: Liquids.
+  - code: "3"
+    label: Bolunmus tozlar
+    description: Divided powders; bolunmusTozTuru becomes required.
+  - code: "4"
+    label: Sert kapsul ve pastiller
+    description: Hard capsules and lozenges.
+  - code: "5"
+    label: Sogukta hazirlanan cozeltiler
+    description: Solutions prepared cold.
+  - code: "6"
+    label: Sicakta hazirlanan cozeltiler
+    description: Solutions prepared hot.
+  - code: "7"
+    label: Farmasotik formuller
+    description: Pharmaceutical formulations.
+  - code: "8"
+    label: Granuller
+    description: Granules.
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: "3.1.1"
+    fetchedAt: "2026-11-15"
+    page: 199
+    section: Tablo 4.2.1.f.1 - MajistralIlacDVO (preparatTuru)
+    confidence: extracted
+status: reviewed
