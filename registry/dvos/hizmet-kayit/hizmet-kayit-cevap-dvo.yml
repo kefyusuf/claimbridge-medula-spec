@@ -111,7 +111,7 @@ fields:
     enumRef: null
     required: false
     length: null
-    description: Registered operation records (KayitliIslemBilgisiDVO, s.190). Verification correction - the v0.1 draft modeled islemSiraNumaralari.
+    description: Registered operation records as KayitliIslemBilgisiDVO registry entities (Tablo 4.2.1.m, s.235).
     sensitive: false
     syntheticOnlyRecommended: false
     sourceRefs:

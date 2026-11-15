@@ -6,6 +6,34 @@ Format: [Keep a Changelog](https://keepachangelog.com); versioning: SemVer
 
 ## [Unreleased]
 
+### Group 16 — feat/v03-composites (2026-11-15)
+
+Local group: no remote yet, so the PR step is replaced by a local
+`--no-ff` merge to `main` (PRD §28 step 6 fallback).
+
+- TDD red first: v0.3 composite suite (5 checks) committed and verified
+  failing (5/5 red) before the composites existed (`f81ecac`).
+- Three new reviewed DVOs: `KayitliIslemBilgisiDVO` (4.2.1.m, s.235 — the
+  two-field pairing record hizmetSunucuRefNo/islemSiraNo),
+  `OncekiIslemBilgisiDVO` (4.2.1.p, s.236), `FaturaCevapDetayDVO`
+  (4.3.3.c, s.245-246, both pages cited; taburcuKodu bound to the
+  taburcu-kodu enum; takipToplamTutar Double).
+- Nested placeholder resolutions: HataliIslemBilgisiDVO.oncekiIslemBilgisi
+  → OncekiIslemBilgisiDVO entity; HizmetKayitCevapDVO.islemBilgileri →
+  KayitliIslemBilgisiDVO; FaturaOkuCevapDVO.faturaDetaylari →
+  FaturaCevapDetayDVO.
+- Registry now: **26 DVOs, 12 enums**; dist regenerated.
+
+Remaining v0.3 backlog: IslemDetayDVO (4.3.1.f), the entry composites
+(4.2.1.c-j, s.190-235), devredilenKurum enum, new HastaKabul methods,
+Mimosa audit, GitHub remote decision.
+
+Validation output: `pnpm test` → 120/120 passed (17 suites); `tsc
+--noEmit` → clean; `pnpm validate` → OK; `pnpm check` → OK;
+`pnpm format:check` → OK.
+
+Remaining TODOs: none for this group.
+
 ### Group 15 — feat/v02-composites-3 (2026-11-15)
 
 Local group: no remote yet, so the PR step is replaced by a local

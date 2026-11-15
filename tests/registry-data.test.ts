@@ -21,6 +21,7 @@ let methods: RegistryEntry[];
 let services: RegistryEntry[];
 
 const EXPECTED_DVO_FILES = [
+  "fatura-kayit/fatura-cevap-detay-dvo.yml",
   "fatura-kayit/fatura-cevap-dvo.yml",
   "fatura-kayit/fatura-giris-dvo.yml",
   "fatura-kayit/fatura-hizmet-detay-dvo.yml",
@@ -37,6 +38,8 @@ const EXPECTED_DVO_FILES = [
   "hizmet-kayit/hizmet-oku-giris-dvo.yml",
   "hizmet-kayit/hizmet-kayit-cevap-dvo.yml",
   "hizmet-kayit/hizmet-kayit-giris-dvo.yml",
+  "hizmet-kayit/kayitli-islem-bilgisi-dvo.yml",
+  "hizmet-kayit/onceki-islem-bilgisi-dvo.yml",
   "hizmet-kayit/hatali-islem-bilgisi-dvo.yml",
   "hizmet-kayit/tani-bilgisi-dvo.yml",
   "fatura-kayit/fatura-iptal-cevap-dvo.yml",

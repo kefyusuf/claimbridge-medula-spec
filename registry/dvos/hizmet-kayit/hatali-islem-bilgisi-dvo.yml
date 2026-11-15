@@ -81,9 +81,8 @@ fields:
     required: false
     length: null
     description: >-
-      Prior-operation composite (OncekiIslemBilgisiDVO, Tablo 4.2.1.p,
-      s.236: islemAdedi, islemTarihi, saglikTesisKodu, tesisAdi). Nested
-      placeholder; full expansion is v0.3 scope.
+      Prior-operation composite, expanded as the OncekiIslemBilgisiDVO
+      registry entity (Tablo 4.2.1.p, s.236).
     sensitive: false
     syntheticOnlyRecommended: false
     sourceRefs:

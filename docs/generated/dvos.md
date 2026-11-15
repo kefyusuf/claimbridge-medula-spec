@@ -13,6 +13,19 @@ Domain: `fatura-kayit` · Direction: `output` · Status: `draft` · Source refs:
 | `faturaTeslimNo` | string |  | — |  | Invoice delivery number generated on successful submission; null on failure. |
 | `faturaTutari` | decimal |  | — |  | Total invoice amount reported on successful submission. |
 
+## `FaturaCevapDetayDVO`
+
+Domain: `fatura-kayit` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19, medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `aciklama` | string |  | — |  | Invoice detail description (s.245). |
+| `protokolNo` | string |  | — |  | Protocol number of the invoice (s.245). |
+| `taburcuKodu` | enum |  | taburcu-kodu |  | Discharge code (s.245-246); codes 1-13 in the taburcu-kodu registry enum. |
+| `takipNo` | string |  | — |  | Tracking number of the invoiced episode (s.246). |
+| `takipToplamTutar` | decimal |  | — |  | Total amount calculated by GSS for the takip (s.246). |
+| `islemDetaylari` | array |  | — |  | Operation detail records (IslemDetayDVO[], Tablo 4.3.1.f, s.246). Nested composite; expansion is v0.3 scope. |
+
 ## `FaturaGirisDVO`
 
 Domain: `fatura-kayit` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
@@ -76,7 +89,7 @@ Domain: `fatura-kayit` · Direction: `output` · Status: `reviewed` · Source re
 | `faturaTutari` | decimal |  | — |  | Invoice amount calculated by GSS (s.245). |
 | `sonucKodu` | string |  | — |  | Result code; 0000 means success (s.245). |
 | `sonucMesaji` | string |  | — |  | Result explanation (s.245). |
-| `faturaDetaylari` | array |  | — |  | Invoice detail records (FaturaCevapDetayDVO, Tablo 4.3.3.c, s.245). Nested composite modeled as a placeholder; full expansion is v0.3 scope. |
+| `faturaDetaylari` | array |  | — |  | Invoice detail records, expanded as the FaturaCevapDetayDVO registry entity (Tablo 4.3.3.c, s.245-246). |
 
 ## `FaturaOkuGirisDVO`
 
@@ -99,7 +112,7 @@ Domain: `hizmet-kayit` · Direction: `output` · Status: `reviewed` · Source re
 | `hataKodu` | string |  | — |  | Error code (s.235). |
 | `hataMesaji` | string |  | — |  | Error explanation (s.236). |
 | `hizmetSunucuRefNo` | string |  | — |  | Institution reference of the failed operation (s.236). |
-| `oncekiIslemBilgisi` | object |  | — |  | Prior-operation composite (OncekiIslemBilgisiDVO, Tablo 4.2.1.p, s.236: islemAdedi, islemTarihi, saglikTesisKodu, tesisAdi). Nested placeholder; full expansion is v0.3 scope. |
+| `oncekiIslemBilgisi` | object |  | — |  | Prior-operation composite, expanded as the OncekiIslemBilgisiDVO registry entity (Tablo 4.2.1.p, s.236). |
 
 ## `HizmetDVO`
 
@@ -165,7 +178,7 @@ Domain: `hizmet-kayit` · Direction: `output` · Status: `reviewed` · Source re
 | `takipNo` | string |  | — |  | Tracking number of the registration (s.190). |
 | `hastaBasvuruNo` | string |  | — |  | Patient application number (s.190). |
 | `saglikTesisKodu` | integer |  | — |  | Code of the registering institution (s.190). |
-| `islemBilgileri` | array |  | — |  | Registered operation records (KayitliIslemBilgisiDVO, s.190). Verification correction - the v0.1 draft modeled islemSiraNumaralari. |
+| `islemBilgileri` | array |  | — |  | Registered operation records as KayitliIslemBilgisiDVO registry entities (Tablo 4.2.1.m, s.235). |
 | `hataliKayitlar` | array |  | — |  | Failed registration records (HataliIslemBilgisiDVO, s.190). |
 
 ## `HizmetKayitGirisDVO`
@@ -214,6 +227,26 @@ Domain: `hizmet-kayit` · Direction: `input` · Status: `reviewed` · Source ref
 | `saglikTesisKodu` | integer |  | — |  | Healthcare facility code (s.237). |
 | `takipNo` | string |  | — |  | Tracking number whose registered operations are read (s.237). |
 | `ktsHbysKodu` | string |  | — |  | Software vendor KTS code (s.237). |
+
+## `KayitliIslemBilgisiDVO`
+
+Domain: `hizmet-kayit` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `hizmetSunucuRefNo` | string |  | — |  | Institution-assigned reference of the registered operation (s.235). |
+| `islemSiraNo` | string |  | — |  | Medula-assigned sequence number of the registered operation (s.235). |
+
+## `OncekiIslemBilgisiDVO`
+
+Domain: `hizmet-kayit` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `islemAdedi` | integer |  | — |  | Count of the prior operations (s.236). |
+| `islemTarihi` | date |  | — |  | Date the prior operations were performed, dd.mm.yyyy per the guide (s.236). |
+| `saglikTesisKodu` | integer |  | — |  | GSS-assigned code of the institution that performed the prior operations (s.236). |
+| `tesisAdi` | string |  | — |  | Name of the institution that performed the prior operations (s.236). |
 
 ## `ProvizyonCevapDVO`
 
