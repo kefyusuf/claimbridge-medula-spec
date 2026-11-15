@@ -42,6 +42,54 @@ Domain: `fatura-kayit` · Direction: `shared` · Status: `draft` · Source refs:
 | `adet` | integer |  | — |  | Quantity of the invoiced service line. |
 | `birimFiyat` | decimal |  | — |  | Unit price of the invoiced service line. |
 
+## `FaturaIptalCevapDVO`
+
+Domain: `fatura-kayit` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `sonucKodu` | string |  | — |  | Result code; 0000 means success, any other value is an error (s.243). |
+| `sonucMesaji` | string |  | — |  | Result explanation (s.243). |
+| `hataKodu` | string |  | — |  | Error code for invoices that could not be cancelled (s.244). |
+| `hataMesaji` | string |  | — |  | Error explanation for invoices that could not be cancelled (s.244). |
+| `faturaTeslimNo` | string |  | — |  | Delivery number of the invoice that could not be cancelled due to the error (s.244). |
+
+## `FaturaIptalGirisDVO`
+
+Domain: `fatura-kayit` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `saglikTesisKodu` | integer |  | — |  | Healthcare facility code (s.243). |
+| `faturaTeslimNo` | array |  | — |  | Delivery numbers of the invoices to cancel, as an array (s.243). |
+| `ktsHbysKodu` | string |  | — |  | Software vendor KTS code (s.243). |
+
+## `FaturaOkuCevapDVO`
+
+Domain: `fatura-kayit` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `faturaRefNo` | string |  | — |  | Reference number of the read invoice (s.245). |
+| `faturaTarihi` | date |  | — |  | Invoice date in dd.mm.yyyy format (s.245). |
+| `faturaTeslimNo` | array |  | — |  | Delivery numbers returned for the read invoices, as an array (s.245). |
+| `faturaTutari` | decimal |  | — |  | Invoice amount calculated by GSS (s.245). |
+| `sonucKodu` | string |  | — |  | Result code; 0000 means success (s.245). |
+| `sonucMesaji` | string |  | — |  | Result explanation (s.245). |
+| `faturaDetaylari` | array |  | — |  | Invoice detail records (FaturaCevapDetayDVO, Tablo 4.3.3.c, s.245). Nested composite modeled as a placeholder; full expansion is v0.3 scope. |
+
+## `FaturaOkuGirisDVO`
+
+Domain: `fatura-kayit` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `saglikTesisKodu` | integer |  | — |  | Healthcare facility code (s.244). |
+| `faturaTeslimNo` | array |  | — |  | Delivery numbers of the invoices to read, as an array (s.244). |
+| `faturaRefNo` | string |  | — |  | Reference number of the invoice to read (s.244). |
+| `faturaTarihi` | date |  | — |  | Invoice date in dd.mm.yyyy format per the guide (s.244). |
+| `ktsHbysKodu` | string |  | — |  | Software vendor KTS code (s.244). |
+
 ## `HizmetDetayDVO`
 
 Domain: `hizmet-kayit` · Direction: `shared` · Status: `draft` · Source refs: medula-hastane-guide-2026-06-17
@@ -53,6 +101,26 @@ Domain: `hizmet-kayit` · Direction: `shared` · Status: `draft` · Source refs:
 | `islemKodu` | string |  | — |  | Procedure code (SUT movement code) of the service line. |
 | `hizmetTarihi` | date |  | — |  | Date the service was provided. |
 | `adet` | integer |  | — |  | Quantity of the service provided. |
+
+## `HizmetIptalCevapDVO`
+
+Domain: `hizmet-kayit` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `sonucKodu` | string |  | — |  | Result code; 0000 means success, any other value is an error (s.239). |
+| `sonucMesaji` | string |  | — |  | Result explanation; the error cause is reported here (s.239). |
+
+## `HizmetIptalGirisDVO`
+
+Domain: `hizmet-kayit` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `islemSiraNumaralari` | array |  | — |  | Operation sequence numbers to cancel only the specified operations; empty cancels all registered operations (s.239). |
+| `saglikTesisKodu` | integer |  | — |  | Healthcare facility code (s.239). |
+| `takipNo` | string |  | — |  | Tracking number whose operations are cancelled (s.239). |
+| `ktsHbysKodu` | string |  | — |  | Software vendor KTS code (s.239). |
 
 ## `HizmetKayitCevapDVO`
 
@@ -91,6 +159,29 @@ Domain: `hizmet-kayit` · Direction: `input` · Status: `reviewed` · Source ref
 | `kanBilgileri` | array |  | — |  | Blood transfusion entries (KanBilgisiDVO, s.190). |
 | `triajBeyani` | string |  | — |  | Triage declaration taking S/K/Y values; mandatory for emergency takips (s.190). |
 | `ktsHbysKodu` | string |  | — |  | Software vendor KTS code (s.190). |
+
+## `HizmetOkuCevapDVO`
+
+Domain: `hizmet-kayit` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `hizmetler` | object |  | — |  | Composite service read result (HizmetDVO, Tablo 4.2.2.c, s.237-238) carrying all categorized service arrays. Nested composite modeled as a placeholder; full expansion is v0.3 scope. |
+| `hastaBasvuruNo` | string |  | — |  | Patient application number (s.237). |
+| `sonucKodu` | string |  | — |  | Result code; 0000 means success (s.237). |
+| `sonucMesaji` | string |  | — |  | Result explanation (s.237). |
+
+## `HizmetOkuGirisDVO`
+
+Domain: `hizmet-kayit` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `islemSiraNumaralari` | array |  | — |  | Operation sequence numbers to read only the specified operations; empty reads all registered operations (s.236). |
+| `hizmetSunucuRefNolari` | array |  | — |  | Service-provider reference numbers to filter the read (s.237); empty reads all registered operations. |
+| `saglikTesisKodu` | integer |  | — |  | Healthcare facility code (s.237). |
+| `takipNo` | string |  | — |  | Tracking number whose registered operations are read (s.237). |
+| `ktsHbysKodu` | string |  | — |  | Software vendor KTS code (s.237). |
 
 ## `ProvizyonCevapDVO`
 
