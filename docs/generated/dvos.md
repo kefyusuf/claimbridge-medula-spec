@@ -90,6 +90,17 @@ Domain: `fatura-kayit` · Direction: `input` · Status: `reviewed` · Source ref
 | `faturaTarihi` | date |  | — |  | Invoice date in dd.mm.yyyy format per the guide (s.244). |
 | `ktsHbysKodu` | string |  | — |  | Software vendor KTS code (s.244). |
 
+## `HataliIslemBilgisiDVO`
+
+Domain: `hizmet-kayit` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19, medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `hataKodu` | string |  | — |  | Error code (s.235). |
+| `hataMesaji` | string |  | — |  | Error explanation (s.236). |
+| `hizmetSunucuRefNo` | string |  | — |  | Institution reference of the failed operation (s.236). |
+| `oncekiIslemBilgisi` | object |  | — |  | Prior-operation composite (OncekiIslemBilgisiDVO, Tablo 4.2.1.p, s.236: islemAdedi, islemTarihi, saglikTesisKodu, tesisAdi). Nested placeholder; full expansion is v0.3 scope. |
+
 ## `HizmetDVO`
 
 Domain: `hizmet-kayit` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19, medula-hastane-guide-3-1-1-2026-10-19
@@ -114,15 +125,14 @@ Domain: `hizmet-kayit` · Direction: `output` · Status: `reviewed` · Source re
 
 ## `HizmetDetayDVO`
 
-Domain: `hizmet-kayit` · Direction: `shared` · Status: `draft` · Source refs: medula-hastane-guide-2026-06-17
+Domain: `fatura-kayit` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
 
 | Field | Type | Required | Enum ref | Sensitive | Description |
 | --- | --- | --- | --- | --- | --- |
-| `islemSiraNo` | integer |  | — |  | Sequence number of the registered operation line. |
-| `bransKodu` | integer |  | — |  | Medical branch code the service line belongs to. |
-| `islemKodu` | string |  | — |  | Procedure code (SUT movement code) of the service line. |
-| `hizmetTarihi` | date |  | — |  | Date the service was provided. |
-| `adet` | integer |  | — |  | Quantity of the service provided. |
+| `aciklama` | string |  | — |  | Description of the service provided by the institution (s.241). |
+| `protokolNo` | string |  | — |  | Protocol number assigned by the institution (s.241). |
+| `taburcuKodu` | enum |  | taburcu-kodu |  | Discharge code (s.241-242); codes 1-13 in the taburcu-kodu registry enum. |
+| `takipNo` | string |  | — |  | Tracking number (s.242). |
 
 ## `HizmetIptalCevapDVO`
 

@@ -1,6 +1,6 @@
 {
   "specVersion": "0.1.0",
-  "generatedAt": "2026-11-15T16:12:02.861Z",
+  "generatedAt": "2026-11-15T16:32:17.352Z",
   "sources": [
     {
       "id": "medula-hastane-guide-2026-06-17",
@@ -1719,6 +1719,126 @@
       "status": "reviewed"
     },
     {
+      "id": "HataliIslemBilgisiDVO",
+      "domain": "hizmet-kayit",
+      "direction": "output",
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "fetchedAt": "2026-11-15",
+          "page": 235,
+          "section": "Tablo 4.2.1.n - HataliIslemBilgisiDVO",
+          "confidence": "extracted"
+        },
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "fetchedAt": "2026-11-15",
+          "page": 236,
+          "section": "Tablo 4.2.1.n - HataliIslemBilgisiDVO (devam)",
+          "confidence": "extracted"
+        }
+      ],
+      "fields": [
+        {
+          "name": "hataKodu",
+          "displayName": "Hata Kodu",
+          "type": "string",
+          "enumRef": null,
+          "required": false,
+          "length": 4,
+          "description": "Error code (s.235).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 235,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "hataMesaji",
+          "displayName": "Hata Mesaji",
+          "type": "string",
+          "enumRef": null,
+          "required": false,
+          "length": null,
+          "description": "Error explanation (s.236).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 236,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "hizmetSunucuRefNo",
+          "displayName": "Hizmet Sunucu Referans Numarasi",
+          "type": "string",
+          "enumRef": null,
+          "required": false,
+          "length": 20,
+          "description": "Institution reference of the failed operation (s.236).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": true,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 236,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "oncekiIslemBilgisi",
+          "displayName": "Onceki Islem Bilgisi",
+          "type": "object",
+          "enumRef": null,
+          "required": false,
+          "length": null,
+          "description": "Prior-operation composite (OncekiIslemBilgisiDVO, Tablo 4.2.1.p, s.236: islemAdedi, islemTarihi, saglikTesisKodu, tesisAdi). Nested placeholder; full expansion is v0.3 scope.",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 236,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
       "id": "HizmetDVO",
       "domain": "hizmet-kayit",
       "direction": "output",
@@ -2093,134 +2213,114 @@
     },
     {
       "id": "HizmetDetayDVO",
-      "domain": "hizmet-kayit",
-      "direction": "shared",
+      "domain": "fatura-kayit",
+      "direction": "input",
       "sourceRefs": [
         {
-          "id": "medula-hastane-guide-2026-06-17",
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
           "sourceType": "official-guide",
-          "guideVersion": "2026-06-17",
+          "guideVersion": "3.1.1",
+          "fetchedAt": "2026-11-15",
+          "page": 241,
+          "section": "Tablo 4.3.1.c - HizmetDetayDVO (continues on s.242)",
           "confidence": "extracted"
         }
       ],
       "fields": [
         {
-          "name": "islemSiraNo",
-          "displayName": "Islem Sira Numarasi",
-          "type": "integer",
-          "enumRef": null,
-          "required": true,
-          "length": null,
-          "description": "Sequence number of the registered operation line.",
-          "sensitive": false,
-          "syntheticOnlyRecommended": false,
-          "sourceRefs": [
-            {
-              "id": "medula-hastane-guide-2026-06-17",
-              "sourceType": "official-guide",
-              "guideVersion": "2026-06-17",
-              "confidence": "inferred",
-              "notes": "Field set for this shared DVO is minimal in v0.1; extend after guide verification."
-            }
-          ],
-          "conditionalRequired": [],
-          "introducedIn": null,
-          "deprecatedIn": null
-        },
-        {
-          "name": "bransKodu",
-          "displayName": "Brans Kodu",
-          "type": "integer",
-          "enumRef": null,
-          "required": true,
-          "length": null,
-          "description": "Medical branch code the service line belongs to.",
-          "sensitive": false,
-          "syntheticOnlyRecommended": false,
-          "sourceRefs": [
-            {
-              "id": "medula-hastane-guide-2026-06-17",
-              "sourceType": "official-guide",
-              "guideVersion": "2026-06-17",
-              "confidence": "inferred",
-              "notes": "Field set for this shared DVO is minimal in v0.1; extend after guide verification."
-            }
-          ],
-          "conditionalRequired": [],
-          "introducedIn": null,
-          "deprecatedIn": null
-        },
-        {
-          "name": "islemKodu",
-          "displayName": "Islem Kodu",
+          "name": "aciklama",
+          "displayName": "Aciklama",
           "type": "string",
           "enumRef": null,
-          "required": true,
-          "length": null,
-          "description": "Procedure code (SUT movement code) of the service line.",
+          "required": false,
+          "length": 2000,
+          "description": "Description of the service provided by the institution (s.241).",
           "sensitive": false,
           "syntheticOnlyRecommended": false,
           "sourceRefs": [
             {
-              "id": "medula-hastane-guide-2026-06-17",
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
               "sourceType": "official-guide",
-              "guideVersion": "2026-06-17",
-              "confidence": "inferred",
-              "notes": "Field set for this shared DVO is minimal in v0.1; extend after guide verification."
+              "guideVersion": "3.1.1",
+              "page": 241,
+              "confidence": "extracted"
             }
           ],
           "conditionalRequired": [],
-          "introducedIn": null,
+          "introducedIn": "0.2.0",
           "deprecatedIn": null
         },
         {
-          "name": "hizmetTarihi",
-          "displayName": "Hizmet Tarihi",
-          "type": "date",
+          "name": "protokolNo",
+          "displayName": "Protokol Numarasi",
+          "type": "string",
           "enumRef": null,
-          "required": true,
+          "required": false,
           "length": null,
-          "description": "Date the service was provided.",
+          "description": "Protocol number assigned by the institution (s.241).",
           "sensitive": false,
-          "syntheticOnlyRecommended": false,
+          "syntheticOnlyRecommended": true,
           "sourceRefs": [
             {
-              "id": "medula-hastane-guide-2026-06-17",
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
               "sourceType": "official-guide",
-              "guideVersion": "2026-06-17",
-              "confidence": "inferred",
-              "notes": "Field set for this shared DVO is minimal in v0.1; extend after guide verification."
+              "guideVersion": "3.1.1",
+              "page": 241,
+              "confidence": "extracted"
             }
           ],
           "conditionalRequired": [],
-          "introducedIn": null,
+          "introducedIn": "0.2.0",
           "deprecatedIn": null
         },
         {
-          "name": "adet",
-          "displayName": "Adet",
-          "type": "integer",
-          "enumRef": null,
-          "required": true,
-          "length": null,
-          "description": "Quantity of the service provided.",
+          "name": "taburcuKodu",
+          "displayName": "Taburcu Kodu",
+          "type": "enum",
+          "enumRef": "taburcu-kodu",
+          "required": false,
+          "length": 1,
+          "description": "Discharge code (s.241-242); codes 1-13 in the taburcu-kodu registry enum.",
           "sensitive": false,
           "syntheticOnlyRecommended": false,
           "sourceRefs": [
             {
-              "id": "medula-hastane-guide-2026-06-17",
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
               "sourceType": "official-guide",
-              "guideVersion": "2026-06-17",
-              "confidence": "inferred",
-              "notes": "Field set for this shared DVO is minimal in v0.1; extend after guide verification."
+              "guideVersion": "3.1.1",
+              "page": 241,
+              "confidence": "extracted"
             }
           ],
           "conditionalRequired": [],
-          "introducedIn": null,
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "takipNo",
+          "displayName": "Takip Numarasi",
+          "type": "string",
+          "enumRef": null,
+          "required": false,
+          "length": null,
+          "description": "Tracking number (s.242).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": true,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 242,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
           "deprecatedIn": null
         }
       ],
-      "status": "draft"
+      "status": "reviewed"
     },
     {
       "id": "HizmetIptalCevapDVO",
@@ -4828,6 +4928,89 @@
           "section": "Response tables across all methods",
           "confidence": "extracted",
           "notes": "Verification correction (Group 12): the codes 33/34/35/99 added in Group 9 were EKDS verification-reason codes (ekdsYontemGerekce, s.167-168), not result codes — they moved to the ekds-yontem-gerekce enum. The guide provides no global result-code catalog; error codes surface per response in Medula and are cataloged as they are observed."
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
+      "id": "taburcu-kodu",
+      "displayName": "Taburcu Kodu",
+      "values": [
+        {
+          "code": "1",
+          "label": "Sifa ile taburcu",
+          "description": "Discharged after recovery."
+        },
+        {
+          "code": "2",
+          "label": "Haliyle taburcu",
+          "description": "Discharged at own request."
+        },
+        {
+          "code": "3",
+          "label": "Olum veya baska nedenle tedaviden vazgecme",
+          "description": "Death or treatment abandoned for another reason."
+        },
+        {
+          "code": "4",
+          "label": "Eve gonderilme",
+          "description": "Sent home."
+        },
+        {
+          "code": "5",
+          "label": "Ayni kapsamli baska bir hastaneye sevk",
+          "description": "Referred to another hospital of the same coverage."
+        },
+        {
+          "code": "6",
+          "label": "Daha kapsamli baska bir hastaneye sevk",
+          "description": "Referred to a more comprehensive hospital."
+        },
+        {
+          "code": "7",
+          "label": "Orta dereceli bir baska bakim kurulusuna sevk",
+          "description": "Referred to an intermediate care facility."
+        },
+        {
+          "code": "8",
+          "label": "Aile hekimi bakimi altinda eve gonderilme",
+          "description": "Sent home under family physician care."
+        },
+        {
+          "code": "9",
+          "label": "Hastane icinde baska bir bransa sevk",
+          "description": "Transferred to another branch within the hospital."
+        },
+        {
+          "code": "10",
+          "label": "Vefat",
+          "description": "Deceased."
+        },
+        {
+          "code": "11",
+          "label": "Diger",
+          "description": "Other discharge reasons."
+        },
+        {
+          "code": "12",
+          "label": "Yesil kartli sevk ile taburcu",
+          "description": "Discharged with green-card referral."
+        },
+        {
+          "code": "13",
+          "label": "Uzayan Yatis",
+          "description": "Extended hospitalization."
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "fetchedAt": "2026-11-15",
+          "page": 241,
+          "section": "Tablo 4.3.1.c - HizmetDetayDVO (taburcuKodu, list continues on s.242)",
+          "confidence": "extracted"
         }
       ],
       "status": "reviewed"

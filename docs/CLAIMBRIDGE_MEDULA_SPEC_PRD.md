@@ -699,6 +699,8 @@ Do not attempt to model every field from the official guide in v0.1. Add enough 
 - takipler
 ```
 
+> **Group 15 amendment (2026-11-15):** HizmetDetayDVO now lives in the fatura domain per guide Tablo 4.3.1.c (aciklama/protokolNo/taburcuKodu/takipNo); the PRD-era service-line variant was removed.
+>
 > **Group 10 amendment (2026-11-15):** HizmetKayitGirisDVO and
 > HizmetKayitCevapDVO minimum sets are aligned with the official guide
 > (Tablo 4.2.1.a/b, edition 3.1.1): `tanilar` replaces `taniBilgileri`;

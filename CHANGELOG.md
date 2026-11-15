@@ -6,6 +6,29 @@ Format: [Keep a Changelog](https://keepachangelog.com); versioning: SemVer
 
 ## [Unreleased]
 
+### Group 15 — feat/v02-composites-3 (2026-11-15)
+
+Local group: no remote yet, so the PR step is replaced by a local
+`--no-ff` merge to `main` (PRD §28 step 6 fallback).
+
+- TDD red first: fatura composite suite (5 checks) committed and verified
+  failing before the data landed (`5383cf6`).
+- `HataliIslemBilgisiDVO` registered (Tablo 4.2.1.n, s.235-236, both
+  pages cited): hataKodu/hataMesaji/hizmetSunucuRefNo + oncekiIslemBilgisi
+  nested placeholder (4.2.1.p).
+- New enum `taburcu-kodu` (13 discharge codes, s.241-242).
+- Invoice `HizmetDetayDVO` moved to the fatura domain per guide Tablo
+  4.3.1.c (aciklama/protokolNo/taburcuKodu/takipNo); the PRD-era
+  service-line variant removed with a PRD §13.3 amendment marker. The
+  draft-only `dvos: 20 → 23` journey documented in the manifest.
+- Registry now: **23 DVOs, 12 enums**; dist regenerated.
+
+Validation output: `pnpm test` → 115/115 passed (16 suites); `tsc
+--noEmit` → clean; `pnpm validate` → OK; `pnpm check` → OK;
+`pnpm format:check` → OK.
+
+Remaining TODOs: none for this group.
+
 ### Group 14 — feat/v02-composites-2 (2026-11-15)
 
 Local group: no remote yet, so the PR step is replaced by a local

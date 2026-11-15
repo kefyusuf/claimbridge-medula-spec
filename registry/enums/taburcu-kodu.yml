@@ -1,0 +1,51 @@
+id: taburcu-kodu
+displayName: Taburcu Kodu
+values:
+  - code: "1"
+    label: Sifa ile taburcu
+    description: Discharged after recovery.
+  - code: "2"
+    label: Haliyle taburcu
+    description: Discharged at own request.
+  - code: "3"
+    label: Olum veya baska nedenle tedaviden vazgecme
+    description: Death or treatment abandoned for another reason.
+  - code: "4"
+    label: Eve gonderilme
+    description: Sent home.
+  - code: "5"
+    label: Ayni kapsamli baska bir hastaneye sevk
+    description: Referred to another hospital of the same coverage.
+  - code: "6"
+    label: Daha kapsamli baska bir hastaneye sevk
+    description: Referred to a more comprehensive hospital.
+  - code: "7"
+    label: Orta dereceli bir baska bakim kurulusuna sevk
+    description: Referred to an intermediate care facility.
+  - code: "8"
+    label: Aile hekimi bakimi altinda eve gonderilme
+    description: Sent home under family physician care.
+  - code: "9"
+    label: Hastane icinde baska bir bransa sevk
+    description: Transferred to another branch within the hospital.
+  - code: "10"
+    label: Vefat
+    description: Deceased.
+  - code: "11"
+    label: Diger
+    description: Other discharge reasons.
+  - code: "12"
+    label: Yesil kartli sevk ile taburcu
+    description: Discharged with green-card referral.
+  - code: "13"
+    label: Uzayan Yatis
+    description: Extended hospitalization.
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: "3.1.1"
+    fetchedAt: "2026-11-15"
+    page: 241
+    section: Tablo 4.3.1.c - HizmetDetayDVO (taburcuKodu, list continues on s.242)
+    confidence: extracted
+status: reviewed
