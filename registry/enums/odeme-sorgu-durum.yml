@@ -1,0 +1,36 @@
+id: odeme-sorgu-durum
+displayName: Odeme Sorgu Durumu
+values:
+  - code: "0"
+    label: Ilk Kayit
+    description: First registration.
+  - code: "1"
+    label: Hatasiz
+    description: Registered without errors.
+  - code: "2"
+    label: Hatali
+    description: Registered with errors.
+  - code: "3"
+    label: Faturalandi
+    description: Invoiced.
+  - code: "4"
+    label: Donem Sonlandirildi
+    description: Period closed.
+  - code: "5"
+    label: Incelendi
+    description: Reviewed.
+  - code: "6"
+    label: Itiraz Incelendi
+    description: Objection reviewed.
+  - code: "X"
+    label: Online diger islem talep
+    description: Online other-transaction request.
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: "3.1.1"
+    fetchedAt: "2026-11-15"
+    page: 238
+    section: HizmetKaydiOku response (odemeSorguDurum)
+    confidence: extracted
+status: reviewed

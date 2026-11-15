@@ -1,6 +1,6 @@
 {
   "specVersion": "0.1.0",
-  "generatedAt": "2026-11-15T15:57:28.286Z",
+  "generatedAt": "2026-11-15T16:12:02.861Z",
   "sources": [
     {
       "id": "medula-hastane-guide-2026-06-17",
@@ -1719,6 +1719,379 @@
       "status": "reviewed"
     },
     {
+      "id": "HizmetDVO",
+      "domain": "hizmet-kayit",
+      "direction": "output",
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "fetchedAt": "2026-11-15",
+          "page": 237,
+          "section": "Tablo 4.2.2.c - HizmetDVO",
+          "confidence": "extracted"
+        },
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "fetchedAt": "2026-11-15",
+          "page": 238,
+          "section": "Tablo 4.2.2.c - HizmetDVO (devam)",
+          "confidence": "extracted"
+        }
+      ],
+      "fields": [
+        {
+          "name": "ameliyatveGirisimBilgileri",
+          "displayName": "Ameliyat ve Girisim Bilgileri",
+          "type": "array",
+          "enumRef": null,
+          "required": false,
+          "length": null,
+          "description": "Surgery/intervention records (AmeliyatveGirisimBilgisiDVO[], Tablo 4.2.1.c, s.190).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 190,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "digerIslemBilgileri",
+          "displayName": "Diger Islem Bilgileri",
+          "type": "array",
+          "enumRef": null,
+          "required": false,
+          "length": null,
+          "description": "Other operation records (DigerIslemBilgisiDVO[], Tablo 4.2.1.d, s.190).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 190,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "disBilgileri",
+          "displayName": "Dis Bilgileri",
+          "type": "array",
+          "enumRef": null,
+          "required": false,
+          "length": null,
+          "description": "Dental records (DisBilgisiDVO[], Tablo 4.2.1.e, s.190).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 190,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "ilacBilgileri",
+          "displayName": "Ilac Bilgileri",
+          "type": "array",
+          "enumRef": null,
+          "required": false,
+          "length": null,
+          "description": "Medication records (IlacBilgisiDVO[], Tablo 4.2.1.f, s.190).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 190,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "konsultasyonBilgileri",
+          "displayName": "Konsultasyon Bilgileri",
+          "type": "array",
+          "enumRef": null,
+          "required": false,
+          "length": null,
+          "description": "Consultation records (KonsultasyonBilgisiDVO[], Tablo 4.2.1.g, s.190).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 190,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "malzemeBilgileri",
+          "displayName": "Malzeme Bilgileri",
+          "type": "array",
+          "enumRef": null,
+          "required": false,
+          "length": null,
+          "description": "Material records (MalzemeBilgisiDVO[], Tablo 4.2.1.h, s.190).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 190,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "muayeneBilgisi",
+          "displayName": "Muayene Bilgisi",
+          "type": "object",
+          "enumRef": null,
+          "required": false,
+          "length": null,
+          "description": "Examination record (MuayeneBilgisiDVO, Tablo 4.2.1.i, s.190).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 190,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "tahlilBilgileri",
+          "displayName": "Tahlil Bilgileri",
+          "type": "array",
+          "enumRef": null,
+          "required": false,
+          "length": null,
+          "description": "Lab test records (TahlilBilgisiDVO[], Tablo 4.2.1.j, s.190).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 190,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "tanilar",
+          "displayName": "Tanilar",
+          "type": "array",
+          "enumRef": null,
+          "required": false,
+          "length": null,
+          "description": "Diagnosis records (TaniBilgisiDVO[], Tablo 4.2.1.k, s.232).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 232,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "tetkikveRadyolojiBilgileri",
+          "displayName": "Tetkik ve Radyoloji Bilgileri",
+          "type": "array",
+          "enumRef": null,
+          "required": false,
+          "length": null,
+          "description": "Imaging records (TetkikveRadyolojiBilgisiDVO[], Tablo 4.2.1.l, s.232).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 232,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "hastaYatisBilgileri",
+          "displayName": "Hasta Yatis Bilgileri",
+          "type": "array",
+          "enumRef": null,
+          "required": false,
+          "length": null,
+          "description": "Hospitalization records (HastaYatisBilgisiDVO[], Tablo 4.2.1.o, s.190).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 190,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "kanBilgileri",
+          "displayName": "Kan Bilgileri",
+          "type": "array",
+          "enumRef": null,
+          "required": false,
+          "length": null,
+          "description": "Blood product records (KanBilgisiDVO[], Tablo 4.2.1.s, s.190).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 190,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "takipNo",
+          "displayName": "Takip Numarasi",
+          "type": "string",
+          "enumRef": null,
+          "required": false,
+          "length": null,
+          "description": "Tracking number of the read services (s.238).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": true,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 238,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "odemeSorguDurum",
+          "displayName": "Odeme Sorgu Durumu",
+          "type": "enum",
+          "enumRef": "odeme-sorgu-durum",
+          "required": false,
+          "length": 1,
+          "description": "Payment-inquiry state of the registered services (s.238); codes 0-6 and X.",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 238,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "triajBeyani",
+          "displayName": "Triaj Beyani",
+          "type": "string",
+          "enumRef": null,
+          "required": false,
+          "length": 1,
+          "description": "Triage declaration taking S/K/Y values (s.238).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 238,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
       "id": "HizmetDetayDVO",
       "domain": "hizmet-kayit",
       "direction": "shared",
@@ -2653,7 +3026,7 @@
           "enumRef": null,
           "required": false,
           "length": null,
-          "description": "Composite service read result (HizmetDVO, Tablo 4.2.2.c, s.237-238) carrying all categorized service arrays. Nested composite modeled as a placeholder; full expansion is v0.3 scope.",
+          "description": "Composite service read result, expanded as the HizmetDVO registry entity (Tablo 4.2.2.c, s.237-238) carrying all categorized service arrays.",
           "sensitive": false,
           "syntheticOnlyRecommended": false,
           "sourceRefs": [
@@ -4237,6 +4610,64 @@
           "section": "ProvizyonGirisDVO istisnaiHal codes 5-9",
           "confidence": "extracted",
           "notes": "Codes 5-9 continue on s.158 before the devredilenKurum letter codes (I/M/B/V). Column-flow inference noted; a visual pass of pages 157-158 would remove any residual doubt."
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
+      "id": "odeme-sorgu-durum",
+      "displayName": "Odeme Sorgu Durumu",
+      "values": [
+        {
+          "code": "0",
+          "label": "Ilk Kayit",
+          "description": "First registration."
+        },
+        {
+          "code": "1",
+          "label": "Hatasiz",
+          "description": "Registered without errors."
+        },
+        {
+          "code": "2",
+          "label": "Hatali",
+          "description": "Registered with errors."
+        },
+        {
+          "code": "3",
+          "label": "Faturalandi",
+          "description": "Invoiced."
+        },
+        {
+          "code": "4",
+          "label": "Donem Sonlandirildi",
+          "description": "Period closed."
+        },
+        {
+          "code": "5",
+          "label": "Incelendi",
+          "description": "Reviewed."
+        },
+        {
+          "code": "6",
+          "label": "Itiraz Incelendi",
+          "description": "Objection reviewed."
+        },
+        {
+          "code": "X",
+          "label": "Online diger islem talep",
+          "description": "Online other-transaction request."
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "fetchedAt": "2026-11-15",
+          "page": 238,
+          "section": "HizmetKaydiOku response (odemeSorguDurum)",
+          "confidence": "extracted"
         }
       ],
       "status": "reviewed"

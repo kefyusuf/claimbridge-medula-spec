@@ -17,9 +17,9 @@ fields:
     required: false
     length: null
     description: >-
-      Composite service read result (HizmetDVO, Tablo 4.2.2.c, s.237-238)
-      carrying all categorized service arrays. Nested composite modeled as
-      a placeholder; full expansion is v0.3 scope.
+      Composite service read result, expanded as the HizmetDVO registry
+      entity (Tablo 4.2.2.c, s.237-238) carrying all categorized service
+      arrays.
     sensitive: false
     syntheticOnlyRecommended: false
     sourceRefs:

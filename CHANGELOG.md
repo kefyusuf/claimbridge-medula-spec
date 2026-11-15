@@ -6,6 +6,32 @@ Format: [Keep a Changelog](https://keepachangelog.com); versioning: SemVer
 
 ## [Unreleased]
 
+### Group 14 — feat/v02-composites-2 (2026-11-15)
+
+Local group: no remote yet, so the PR step is replaced by a local
+`--no-ff` merge to `main` (PRD §28 step 6 fallback).
+
+- TDD red first: composite-2 suite (4 checks) committed and verified
+  failing (4/4 red) before the files existed (`4272d35`).
+- New enum `odeme-sorgu-durum` (8 codes 0-6 + X, s.238).
+- `HizmetDVO` composite registered from Tablo 4.2.2.c (s.237-238): all
+  categorized service arrays (ameliyat/diger/dis/ilac/konsultasyon/
+  malzeme/muayene/tahlil/tanilar/tetkik/hastaYatis/kan), takipNo,
+  odemeSorguDurum (enumRef), triajBeyani — both pages cited.
+- HizmetOkuCevapDVO `hizmetler` placeholder resolved to the registry
+  entity.
+- Registry now: **22 DVOs, 11 enums**; dist regenerated.
+
+Deferred to v0.3: FaturaCevapDetayDVO (4.3.3.c), Kayitli/HataliIslem
+(4.2.1.m/n), invoice HizmetDetayDVO (4.3.1.c), devredilenKurum enum,
+new HastaKabul methods, Mimosa audit, GitHub remote.
+
+Validation output: `pnpm test` → 110/110 passed (15 suites); `tsc
+--noEmit` → clean; `pnpm validate` → OK; `pnpm check` → OK;
+`pnpm format:check` → OK.
+
+Remaining TODOs: none for this group.
+
 ### Group 13 — feat/v02-composites (2026-11-15)
 
 Local group: no remote yet, so the PR step is replaced by a local

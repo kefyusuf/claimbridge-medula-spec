@@ -90,6 +90,28 @@ Domain: `fatura-kayit` · Direction: `input` · Status: `reviewed` · Source ref
 | `faturaTarihi` | date |  | — |  | Invoice date in dd.mm.yyyy format per the guide (s.244). |
 | `ktsHbysKodu` | string |  | — |  | Software vendor KTS code (s.244). |
 
+## `HizmetDVO`
+
+Domain: `hizmet-kayit` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19, medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `ameliyatveGirisimBilgileri` | array |  | — |  | Surgery/intervention records (AmeliyatveGirisimBilgisiDVO[], Tablo 4.2.1.c, s.190). |
+| `digerIslemBilgileri` | array |  | — |  | Other operation records (DigerIslemBilgisiDVO[], Tablo 4.2.1.d, s.190). |
+| `disBilgileri` | array |  | — |  | Dental records (DisBilgisiDVO[], Tablo 4.2.1.e, s.190). |
+| `ilacBilgileri` | array |  | — |  | Medication records (IlacBilgisiDVO[], Tablo 4.2.1.f, s.190). |
+| `konsultasyonBilgileri` | array |  | — |  | Consultation records (KonsultasyonBilgisiDVO[], Tablo 4.2.1.g, s.190). |
+| `malzemeBilgileri` | array |  | — |  | Material records (MalzemeBilgisiDVO[], Tablo 4.2.1.h, s.190). |
+| `muayeneBilgisi` | object |  | — |  | Examination record (MuayeneBilgisiDVO, Tablo 4.2.1.i, s.190). |
+| `tahlilBilgileri` | array |  | — |  | Lab test records (TahlilBilgisiDVO[], Tablo 4.2.1.j, s.190). |
+| `tanilar` | array |  | — |  | Diagnosis records (TaniBilgisiDVO[], Tablo 4.2.1.k, s.232). |
+| `tetkikveRadyolojiBilgileri` | array |  | — |  | Imaging records (TetkikveRadyolojiBilgisiDVO[], Tablo 4.2.1.l, s.232). |
+| `hastaYatisBilgileri` | array |  | — |  | Hospitalization records (HastaYatisBilgisiDVO[], Tablo 4.2.1.o, s.190). |
+| `kanBilgileri` | array |  | — |  | Blood product records (KanBilgisiDVO[], Tablo 4.2.1.s, s.190). |
+| `takipNo` | string |  | — |  | Tracking number of the read services (s.238). |
+| `odemeSorguDurum` | enum |  | odeme-sorgu-durum |  | Payment-inquiry state of the registered services (s.238); codes 0-6 and X. |
+| `triajBeyani` | string |  | — |  | Triage declaration taking S/K/Y values (s.238). |
+
 ## `HizmetDetayDVO`
 
 Domain: `hizmet-kayit` · Direction: `shared` · Status: `draft` · Source refs: medula-hastane-guide-2026-06-17
@@ -166,7 +188,7 @@ Domain: `hizmet-kayit` · Direction: `output` · Status: `reviewed` · Source re
 
 | Field | Type | Required | Enum ref | Sensitive | Description |
 | --- | --- | --- | --- | --- | --- |
-| `hizmetler` | object |  | — |  | Composite service read result (HizmetDVO, Tablo 4.2.2.c, s.237-238) carrying all categorized service arrays. Nested composite modeled as a placeholder; full expansion is v0.3 scope. |
+| `hizmetler` | object |  | — |  | Composite service read result, expanded as the HizmetDVO registry entity (Tablo 4.2.2.c, s.237-238) carrying all categorized service arrays. |
 | `hastaBasvuruNo` | string |  | — |  | Patient application number (s.237). |
 | `sonucKodu` | string |  | — |  | Result code; 0000 means success (s.237). |
 | `sonucMesaji` | string |  | — |  | Result explanation (s.237). |
