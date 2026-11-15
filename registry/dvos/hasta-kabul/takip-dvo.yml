@@ -2,9 +2,12 @@ id: TakipDVO
 domain: hasta-kabul
 direction: shared
 sourceRefs:
-  - id: medula-hastane-guide-2026-06-17
+  - id: medula-hastane-guide-3-1-1-2026-10-19
     sourceType: official-guide
-    guideVersion: "2026-06-17"
+    guideVersion: "3.1.1"
+    fetchedAt: "2026-11-15"
+    page: 165
+    section: Tablo 4.1.2.b - TakipDVO
     confidence: extracted
 fields:
   - name: takipNo
@@ -13,16 +16,36 @@ fields:
     enumRef: null
     required: true
     length: null
-    description: Tracking number identifying this treatment episode.
+    description: Tracking number identifying this treatment episode; returned for control purposes (s.165).
     sensitive: false
     syntheticOnlyRecommended: true
     sourceRefs:
-      - id: medula-hastane-guide-2026-06-17
+      - id: medula-hastane-guide-3-1-1-2026-10-19
         sourceType: official-guide
-        guideVersion: "2026-06-17"
+        guideVersion: "3.1.1"
+        page: 165
         confidence: extracted
     conditionalRequired: []
     introducedIn: null
+    deprecatedIn: null
+
+  - name: ilkTakipNo
+    displayName: Ilk Takip Numarasi
+    type: string
+    enumRef: null
+    required: false
+    length: null
+    description: Number of the first takip when this record is a linked takip produced from another one (s.165).
+    sensitive: false
+    syntheticOnlyRecommended: true
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 165
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
     deprecatedIn: null
 
   - name: takipTipi
@@ -30,16 +53,16 @@ fields:
     type: enum
     enumRef: takip-tipi
     required: true
-    length: null
-    description: Whether the tracking record is new or attached to an existing one.
+    length: 1
+    description: Tracking record type (s.157, Tablo 4.1.1.a; mirrored in TakipDVO context s.166).
     sensitive: false
     syntheticOnlyRecommended: false
     sourceRefs:
-      - id: medula-hastane-guide-2026-06-17
+      - id: medula-hastane-guide-3-1-1-2026-10-19
         sourceType: official-guide
-        guideVersion: "2026-06-17"
-        confidence: inferred
-        notes: Field presence assumed; verify against the guide TakipDVO table.
+        guideVersion: "3.1.1"
+        page: 157
+        confidence: extracted
     conditionalRequired: []
     introducedIn: null
     deprecatedIn: null
@@ -49,16 +72,16 @@ fields:
     type: enum
     enumRef: takip-durumu
     required: true
-    length: null
-    description: Current state of the tracking record.
+    length: 1
+    description: Payment-inquiry state of the tracking record - 0/1 only (s.166).
     sensitive: false
     syntheticOnlyRecommended: false
     sourceRefs:
-      - id: medula-hastane-guide-2026-06-17
+      - id: medula-hastane-guide-3-1-1-2026-10-19
         sourceType: official-guide
-        guideVersion: "2026-06-17"
-        confidence: inferred
-        notes: Field presence assumed; verify against the guide TakipDVO table.
+        guideVersion: "3.1.1"
+        page: 166
+        confidence: extracted
     conditionalRequired: []
     introducedIn: null
     deprecatedIn: null
@@ -73,11 +96,31 @@ fields:
     sensitive: false
     syntheticOnlyRecommended: true
     sourceRefs:
-      - id: medula-hastane-guide-2026-06-17
+      - id: medula-hastane-guide-3-1-1-2026-10-19
         sourceType: official-guide
-        guideVersion: "2026-06-17"
+        guideVersion: "3.1.1"
+        page: 165
         confidence: extracted
     conditionalRequired: []
     introducedIn: null
     deprecatedIn: null
-status: draft
+
+  - name: bransKodu
+    displayName: Brans Kodu
+    type: string
+    enumRef: null
+    required: true
+    length: 4
+    description: Branch code of the service (s.165). Verification correction - String(4) in the guide.
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 165
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: null
+    deprecatedIn: null
+status: reviewed

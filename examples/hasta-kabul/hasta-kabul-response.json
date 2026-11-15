@@ -6,8 +6,8 @@
   "takipler": [
     {
       "takipNo": "SYNTHETIC_TAKIP_000001",
-      "takipTipi": "Y",
-      "takipDurumu": "A",
+      "takipTipi": "N",
+      "takipDurumu": "0",
       "hastaBasvuruNo": "SYNTHETIC_BASVURU_000001"
     }
   ]

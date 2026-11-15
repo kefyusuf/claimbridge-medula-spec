@@ -6,3 +6,15 @@ sources:
     publishedAt: "2026-06-17"
     fetchedAt: "2026-07-06"
     notes: Official technical usage guide. Not legal or regulatory advice.
+
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    title: MEDULA Web Servisleri Kullanım Kılavuzu (v3.1.1+)
+    sourceType: official-guide
+    url: https://medula.sgk.gov.tr/hastane/kilavuz/MEDULA_Kullanim_Kilavuzu.pdf
+    publishedAt: "2026-10-19"
+    fetchedAt: "2026-11-15"
+    notes: >-
+      Official hospital web services guide, edition stamped 19/10/2026,
+      version line 3.1.1 (changelog entries through 2025). 354 pages.
+      sha256 recorded in guide-versions.yml; the PDF itself is never
+      vendored into Git (PRD 16.3).

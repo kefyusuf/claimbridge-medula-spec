@@ -1,16 +1,50 @@
 id: takip-tipi
 displayName: Takip Tipi
 values:
+  - code: N
+    label: Normal
+    description: Normal tracking record.
+  - code: E
+    label: Eslik Eden Hastalik
+    description: Accompanying disease tracking record.
+  - code: U
+    label: Uzayan Yatis
+    description: Extended hospitalization tracking record.
+  - code: K
+    label: Komplikasyon
+    description: Complication tracking record.
+  - code: T
+    label: Tani Amacli Gunubirlik
+    description: Diagnostic day-unit tracking record.
   - code: Y
-    label: Yeni Takip
-    description: A new tracking record created for the patient episode.
+    label: Yogun Bakim
+    description: Intensive care tracking record.
+  - code: P
+    label: Hizmetin Iptal Olmasi veya Yarim Kalmasi
+    description: Service cancelled or interrupted tracking record.
+  - code: S
+    label: Kurum Sevkli Kontrol Muayenesi
+    description: Institution-referred control examination record.
+  - code: C
+    label: Kurum Sevkli
+    description: Institution-referred tracking record.
+  - code: F
+    label: Faturalanmis Uzayan Yatis
+    description: Invoiced extended hospitalization record.
   - code: B
-    label: Bagli Takip
-    description: A tracking record attached to an existing tracking number.
+    label: Faturalanmis Uzayan Yatis ve Yogun Bakim
+    description: Invoiced extended hospitalization and intensive care record.
 sourceRefs:
-  - id: medula-hastane-guide-2026-06-17
+  - id: medula-hastane-guide-3-1-1-2026-10-19
     sourceType: official-guide
-    guideVersion: "2026-06-17"
-    confidence: inferred
-    notes: Values follow the documented Y/B pattern; verify codes against the guide before review.
-status: draft
+    guideVersion: "3.1.1"
+    fetchedAt: "2026-11-15"
+    page: 157
+    section: Tablo 4.1.1.a - ProvizyonGirisDVO (takipTipi)
+    confidence: extracted
+    notes: >-
+      Verification correction: the v0.1 draft modeled Y/B as yeni/bagli
+      takip. The guide defines linked takips through the takipNo field
+      (empty for a first takip, filled for a linked one), not through
+      takipTipi codes.
+status: reviewed

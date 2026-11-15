@@ -1,16 +1,25 @@
 id: tedavi-turu
 displayName: Tedavi Turu
 values:
-  - code: "1"
+  - code: A
     label: Ayakta Tedavi
     description: Outpatient treatment episode.
-  - code: "2"
+  - code: Y
     label: Yatarak Tedavi
     description: Inpatient treatment episode.
+  - code: G
+    label: Gunubirlik Tedavi
+    description: Day-unit treatment episode.
 sourceRefs:
-  - id: medula-hastane-guide-2026-06-17
+  - id: medula-hastane-guide-3-1-1-2026-10-19
     sourceType: official-guide
-    guideVersion: "2026-06-17"
-    confidence: inferred
-    notes: The guide defines additional codes (for example day-unit episodes); add them after verification.
-status: draft
+    guideVersion: "3.1.1"
+    fetchedAt: "2026-11-15"
+    page: 158
+    section: Tablo 4.1.1.a - ProvizyonGirisDVO (tedaviTuru)
+    confidence: extracted
+    notes: >-
+      Verification correction: the v0.1 draft modeled numeric codes 1/2.
+      The guide uses letter codes A/Y/G; the detailed treatment profile
+      lives in the separate tedaviTipi field (codes 0-22).
+status: reviewed

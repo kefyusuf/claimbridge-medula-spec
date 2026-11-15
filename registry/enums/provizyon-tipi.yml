@@ -2,18 +2,59 @@ id: provizyon-tipi
 displayName: Provizyon Tipi
 values:
   - code: N
-    label: Normal Provizyon
+    label: Normal
     description: Standard provision for a regular patient admission.
-  - code: S
-    label: Sevk Provizyonu
-    description: Provision created through a referral.
+  - code: I
+    label: Is kazasi
+    description: Occupational accident provision.
   - code: A
-    label: Acil Provizyon
-    description: Provision for an emergency admission.
+    label: Acil
+    description: Emergency admission provision.
+  - code: T
+    label: Trafik kazasi
+    description: Traffic accident provision.
+  - code: V
+    label: Adli Vaka
+    description: Forensic case provision.
+  - code: M
+    label: Meslek hastaligi
+    description: Occupational disease provision.
+  - code: K
+    label: Kurum Sevki
+    description: Institution referral provision.
+  - code: C
+    label: Acil Hal
+    description: Emergency-condition provision (uncontracted institutions).
+  - code: H
+    label: Bulasici Hastalik
+    description: Notifiable infectious disease provision.
+  - code: R
+    label: Koruyucu Saglik
+    description: Preventive health service provision.
+  - code: L
+    label: Analik
+    description: Maternity provision.
+  - code: G
+    label: Afet Savas Grev Lokavt
+    description: Disaster, war, strike, or lockout provision.
+  - code: U
+    label: Bakima Muhtac
+    description: Care-dependent person provision.
+  - code: D
+    label: Dogal Afet
+    description: Natural disaster provision.
+  - code: E
+    label: 3713/21
+    description: Provision under law 3713 article 21 (terror victims).
+  - code: S
+    label: Istisnai hal
+    description: Exceptional-case provision.
 sourceRefs:
-  - id: medula-hastane-guide-2026-06-17
+  - id: medula-hastane-guide-3-1-1-2026-10-19
     sourceType: official-guide
-    guideVersion: "2026-06-17"
-    confidence: inferred
-    notes: The guide defines additional provizyon codes; catalog them after verification.
-status: draft
+    guideVersion: "3.1.1"
+    fetchedAt: "2026-11-15"
+    page: 156
+    section: Tablo 4.1.1.a - ProvizyonGirisDVO (provizyonTipi)
+    confidence: extracted
+status: reviewed
