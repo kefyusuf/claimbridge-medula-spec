@@ -26,12 +26,50 @@ erDiagram
     integer adet
     decimal birimFiyat
   }
+  FaturaIptalCevapDVO {
+    string sonucKodu
+    string sonucMesaji
+    string hataKodu
+    string hataMesaji
+    string faturaTeslimNo
+  }
+  FaturaIptalGirisDVO {
+    integer saglikTesisKodu
+    array faturaTeslimNo
+    string ktsHbysKodu
+  }
+  FaturaOkuCevapDVO {
+    string faturaRefNo
+    date faturaTarihi
+    array faturaTeslimNo
+    decimal faturaTutari
+    string sonucKodu
+    string sonucMesaji
+    array faturaDetaylari
+  }
+  FaturaOkuGirisDVO {
+    integer saglikTesisKodu
+    array faturaTeslimNo
+    string faturaRefNo
+    date faturaTarihi
+    string ktsHbysKodu
+  }
   HizmetDetayDVO {
     integer islemSiraNo
     integer bransKodu
     string islemKodu
     date hizmetTarihi
     integer adet
+  }
+  HizmetIptalCevapDVO {
+    string sonucKodu
+    string sonucMesaji
+  }
+  HizmetIptalGirisDVO {
+    array islemSiraNumaralari
+    integer saglikTesisKodu
+    string takipNo
+    string ktsHbysKodu
   }
   HizmetKayitCevapDVO {
     string sonucKodu
@@ -59,6 +97,19 @@ erDiagram
     array hastaYatisBilgileri
     array kanBilgileri
     string triajBeyani
+    string ktsHbysKodu
+  }
+  HizmetOkuCevapDVO {
+    object hizmetler
+    string hastaBasvuruNo
+    string sonucKodu
+    string sonucMesaji
+  }
+  HizmetOkuGirisDVO {
+    array islemSiraNumaralari
+    array hizmetSunucuRefNolari
+    integer saglikTesisKodu
+    string takipNo
     string ktsHbysKodu
   }
   ProvizyonCevapDVO {
@@ -109,14 +160,24 @@ erDiagram
     string takipNo
     string ktsHbysKodu
   }
+  medula_hastane_fatura_kayit_fatura_iptal ||--|| FaturaIptalGirisDVO : inputDvo
+  medula_hastane_fatura_kayit_fatura_iptal ||--|| FaturaIptalCevapDVO : outputDvo
   medula_hastane_fatura_kayit_fatura_kayit ||--|| FaturaGirisDVO : inputDvo
   medula_hastane_fatura_kayit_fatura_kayit ||--|| FaturaCevapDVO : outputDvo
+  medula_hastane_fatura_kayit_fatura_oku ||--|| FaturaOkuGirisDVO : inputDvo
+  medula_hastane_fatura_kayit_fatura_oku ||--|| FaturaOkuCevapDVO : outputDvo
+  medula_hastane_fatura_kayit_fatura_tutar_oku ||--|| FaturaGirisDVO : inputDvo
+  medula_hastane_fatura_kayit_fatura_tutar_oku ||--|| FaturaCevapDVO : outputDvo
   medula_hastane_hasta_kabul_hasta_kabul ||--|| ProvizyonGirisDVO : inputDvo
   medula_hastane_hasta_kabul_hasta_kabul ||--|| ProvizyonCevapDVO : outputDvo
   medula_hastane_hasta_kabul_hasta_kabul_iptal ||--|| TakipSilGirisDVO : inputDvo
   medula_hastane_hasta_kabul_hasta_kabul_iptal ||--|| TakipSilCevapDVO : outputDvo
   medula_hastane_hasta_kabul_hasta_kabul_oku ||--|| TakipOkuGirisDVO : inputDvo
   medula_hastane_hasta_kabul_hasta_kabul_oku ||--|| TakipDVO : outputDvo
+  medula_hastane_hizmet_kayit_hizmet_kaydi_iptal ||--|| HizmetIptalGirisDVO : inputDvo
+  medula_hastane_hizmet_kayit_hizmet_kaydi_iptal ||--|| HizmetIptalCevapDVO : outputDvo
+  medula_hastane_hizmet_kayit_hizmet_kaydi_oku ||--|| HizmetOkuGirisDVO : inputDvo
+  medula_hastane_hizmet_kayit_hizmet_kaydi_oku ||--|| HizmetOkuCevapDVO : outputDvo
   medula_hastane_hizmet_kayit_hizmet_kayit ||--|| HizmetKayitGirisDVO : inputDvo
   medula_hastane_hizmet_kayit_hizmet_kayit ||--|| HizmetKayitCevapDVO : outputDvo
   ProvizyonGirisDVO }o--|| sigortali_turu : enumRef

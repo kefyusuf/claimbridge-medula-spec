@@ -40,14 +40,6 @@ const CORE_CONTRACTS: Record<string, { inputDvo: string; outputDvo: string }> =
     },
   };
 
-const NULL_CONTRACT_IDS = [
-  "medula.hastane.hizmet-kayit.hizmet-kaydi-oku",
-  "medula.hastane.hizmet-kayit.hizmet-kaydi-iptal",
-  "medula.hastane.fatura-kayit.fatura-oku",
-  "medula.hastane.fatura-kayit.fatura-iptal",
-  "medula.hastane.fatura-kayit.fatura-tutar-oku",
-];
-
 beforeAll(() => {
   ajv = new Ajv2020({ allErrors: true, allowUnionTypes: true });
   for (const file of readdirSync(schemasDir).filter((f) =>
@@ -192,12 +184,17 @@ describe("reference-validation (Group 2)", () => {
     }
   });
 
-  it("keeps read/cancel/amount methods on null contracts with draft status", () => {
-    for (const id of NULL_CONTRACT_IDS) {
-      const m = methods.find((entry) => entry.data.id === id);
-      expect(m, `missing method ${id}`).toBeTruthy();
-      expect(m?.data.contract).toEqual({ inputDvo: null, outputDvo: null });
-      expect(m?.data.status).toBe("draft");
+  it("resolves every method contract after the Group 11 pass", () => {
+    for (const m of methods) {
+      const contract = m.data.contract as {
+        inputDvo: string;
+        outputDvo: string;
+      };
+      expect(contract.inputDvo, `${m.file} inputDvo must resolve`).toBeTruthy();
+      expect(
+        contract.outputDvo,
+        `${m.file} outputDvo must resolve`,
+      ).toBeTruthy();
     }
   });
 

@@ -6,6 +6,7 @@ names:
   aliases:
     - faturaKayit
     - FaturaKayit Metodu
+    - FaturaBilgisiKaydet
 contract:
   inputDvo: FaturaGirisDVO
   outputDvo: FaturaCevapDVO
@@ -21,6 +22,7 @@ sourceRefs:
     page: 149
     section: 3 Surecler ve Metotlari - metot listesi
     confidence: extracted
+    notes: The s.239 method table row also names the operation FaturaBilgisiKaydet; recorded as an alias pending WSDL confirmation.
 stateEffects:
   creates:
     - invoiceRecord

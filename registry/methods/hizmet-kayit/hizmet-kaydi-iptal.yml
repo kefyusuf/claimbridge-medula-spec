@@ -6,14 +6,21 @@ names:
   aliases:
     - hizmetKaydiIptal
 contract:
-  inputDvo: null
-  outputDvo: null
+  inputDvo: HizmetIptalGirisDVO
+  outputDvo: HizmetIptalCevapDVO
 sourceRefs:
   - id: medula-hastane-guide-2026-06-17
     sourceType: official-guide
     guideVersion: "2026-06-17"
-    confidence: inferred
-    notes: Operation name follows the service pattern; verify against guide and WSDL before review.
+    confidence: extracted
+    notes: Contract verified against the guide method table.
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: "3.1.1"
+    fetchedAt: "2026-11-15"
+    page: 239
+    section: "4.2.3 HizmetKaydiIptal Metodu"
+    confidence: extracted
 stateEffects:
   creates: []
   reads:
@@ -31,4 +38,4 @@ success:
 sandbox:
   supported: true
   defaultScenario: null
-status: draft
+status: reviewed

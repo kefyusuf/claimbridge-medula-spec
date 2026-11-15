@@ -31,8 +31,16 @@ const EXPECTED_DVO_FILES = [
   "hasta-kabul/takip-sil-cevap-dvo.yml",
   "hasta-kabul/takip-sil-giris-dvo.yml",
   "hizmet-kayit/hizmet-detay-dvo.yml",
+  "hizmet-kayit/hizmet-iptal-cevap-dvo.yml",
+  "hizmet-kayit/hizmet-iptal-giris-dvo.yml",
+  "hizmet-kayit/hizmet-oku-cevap-dvo.yml",
+  "hizmet-kayit/hizmet-oku-giris-dvo.yml",
   "hizmet-kayit/hizmet-kayit-cevap-dvo.yml",
   "hizmet-kayit/hizmet-kayit-giris-dvo.yml",
+  "fatura-kayit/fatura-iptal-cevap-dvo.yml",
+  "fatura-kayit/fatura-iptal-giris-dvo.yml",
+  "fatura-kayit/fatura-oku-cevap-dvo.yml",
+  "fatura-kayit/fatura-oku-giris-dvo.yml",
 ];
 
 const EXPECTED_ENUM_IDS = [
@@ -166,7 +174,9 @@ function schemaValidate(
 
 describe("registry-data (Group 3)", () => {
   it("has exactly the 9 DVO files from PRD section 13.3", () => {
-    expect(dvos.map((d) => d.file).sort()).toEqual(EXPECTED_DVO_FILES);
+    expect(dvos.map((d) => d.file).sort()).toEqual(
+      [...EXPECTED_DVO_FILES].sort(),
+    );
   });
 
   it("has exactly the 5 enum files from PRD section 11", () => {

@@ -9,12 +9,12 @@
 | Service | medula.hastane.fatura-kayit |
 | Documentation heading | FaturaIptal |
 | Operation name | faturaIptal |
-| Input DVO | null |
-| Output DVO | null |
+| Input DVO | FaturaIptalGirisDVO |
+| Output DVO | FaturaIptalCevapDVO |
 | Success | sonucKodu = 0000 (sonucMesaji) |
 | Sandbox supported |  |
-| Status | draft |
-| Source refs | medula-hastane-guide-2026-06-17 |
+| Status | reviewed |
+| Source refs | medula-hastane-guide-2026-06-17, medula-hastane-guide-3-1-1-2026-10-19 |
 
 **State effects**
 
@@ -57,12 +57,12 @@
 | Service | medula.hastane.fatura-kayit |
 | Documentation heading | FaturaOku |
 | Operation name | faturaOku |
-| Input DVO | null |
-| Output DVO | null |
+| Input DVO | FaturaOkuGirisDVO |
+| Output DVO | FaturaOkuCevapDVO |
 | Success | sonucKodu = 0000 (sonucMesaji) |
 | Sandbox supported |  |
-| Status | draft |
-| Source refs | medula-hastane-guide-2026-06-17 |
+| Status | reviewed |
+| Source refs | medula-hastane-guide-2026-06-17, medula-hastane-guide-3-1-1-2026-10-19 |
 
 **State effects**
 
@@ -81,12 +81,12 @@
 | Service | medula.hastane.fatura-kayit |
 | Documentation heading | FaturaTutarOku |
 | Operation name | faturaTutarOku |
-| Input DVO | null |
-| Output DVO | null |
+| Input DVO | FaturaGirisDVO |
+| Output DVO | FaturaCevapDVO |
 | Success | sonucKodu = 0000 (sonucMesaji) |
 | Sandbox supported |  |
-| Status | draft |
-| Source refs | medula-hastane-guide-2026-06-17 |
+| Status | reviewed |
+| Source refs | medula-hastane-guide-2026-06-17, medula-hastane-guide-3-1-1-2026-10-19 |
 
 **State effects**
 
@@ -177,12 +177,12 @@
 | Service | medula.hastane.hizmet-kayit |
 | Documentation heading | HizmetKaydiIptal |
 | Operation name | hizmetKaydiIptal |
-| Input DVO | null |
-| Output DVO | null |
+| Input DVO | HizmetIptalGirisDVO |
+| Output DVO | HizmetIptalCevapDVO |
 | Success | sonucKodu = 0000 (sonucMesaji) |
 | Sandbox supported |  |
-| Status | draft |
-| Source refs | medula-hastane-guide-2026-06-17 |
+| Status | reviewed |
+| Source refs | medula-hastane-guide-2026-06-17, medula-hastane-guide-3-1-1-2026-10-19 |
 
 **State effects**
 
@@ -201,12 +201,12 @@
 | Service | medula.hastane.hizmet-kayit |
 | Documentation heading | HizmetKaydiOku |
 | Operation name | hizmetKaydiOku |
-| Input DVO | null |
-| Output DVO | null |
+| Input DVO | HizmetOkuGirisDVO |
+| Output DVO | HizmetOkuCevapDVO |
 | Success | sonucKodu = 0000 (sonucMesaji) |
 | Sandbox supported |  |
-| Status | draft |
-| Source refs | medula-hastane-guide-2026-06-17 |
+| Status | reviewed |
+| Source refs | medula-hastane-guide-2026-06-17, medula-hastane-guide-3-1-1-2026-10-19 |
 
 **State effects**
 

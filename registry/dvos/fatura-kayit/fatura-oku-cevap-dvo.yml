@@ -1,0 +1,148 @@
+id: FaturaOkuCevapDVO
+domain: fatura-kayit
+direction: output
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: "3.1.1"
+    fetchedAt: "2026-11-15"
+    page: 245
+    section: Tablo 4.3.3.b - FaturaOkuCevapDVO
+    confidence: extracted
+fields:
+  - name: faturaRefNo
+    displayName: Fatura Referans Numarasi
+    type: string
+    enumRef: null
+    required: false
+    length: 20
+    description: Reference number of the read invoice (s.245).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 245
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: faturaTarihi
+    displayName: Fatura Tarihi
+    type: date
+    enumRef: null
+    required: false
+    length: 10
+    description: Invoice date in dd.mm.yyyy format (s.245).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 245
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: faturaTeslimNo
+    displayName: Fatura Teslim Numarasi
+    type: array
+    enumRef: null
+    required: false
+    length: null
+    description: Delivery numbers returned for the read invoices, as an array (s.245).
+    sensitive: false
+    syntheticOnlyRecommended: true
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 245
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: faturaTutari
+    displayName: Fatura Tutari
+    type: decimal
+    enumRef: null
+    required: false
+    length: null
+    description: Invoice amount calculated by GSS (s.245).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 245
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: sonucKodu
+    displayName: Sonuc Kodu
+    type: string
+    enumRef: null
+    required: true
+    length: 4
+    description: Result code; 0000 means success (s.245).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 245
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: sonucMesaji
+    displayName: Sonuc Mesaji
+    type: string
+    enumRef: null
+    required: true
+    length: null
+    description: Result explanation (s.245).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 245
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: faturaDetaylari
+    displayName: Fatura Detaylari
+    type: array
+    enumRef: null
+    required: false
+    length: null
+    description: >-
+      Invoice detail records (FaturaCevapDetayDVO, Tablo 4.3.3.c, s.245).
+      Nested composite modeled as a placeholder; full expansion is v0.3
+      scope.
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 245
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+status: reviewed
