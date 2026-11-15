@@ -6,6 +6,45 @@ Format: [Keep a Changelog](https://keepachangelog.com); versioning: SemVer
 
 ## [Unreleased]
 
+_Nothing yet — the v0.1 scope is complete._
+
+## [0.1.0] — 2026-11-15
+
+First public-ready draft (PRD Milestone 6): canonical registry (3
+services, 10 methods, 9 DVOs, 5 enums, 12 rules in 5 files, 4 workflows,
+6 scenarios), ten JSON Schemas, real validate/generate/check tooling,
+committed generated outputs guarded by checksums, full CI, synthetic-data
+guards, and the hand-written documentation set. A future
+`claimbridge-sandbox` can consume `dist/claimbridge-medula-spec.json` as
+its contract (PRD §30). Delivered as nine TDD work groups (see entries
+below).
+
+### Group 8 — docs/readme (2026-11-15)
+
+Local group: no remote yet, so the PR step is replaced by a local
+`--no-ff` merge to `main` (PRD §28 step 6 fallback).
+
+- TDD red first: documentation contract suite (3 checks — PRD §22.2-22.7
+  document set, §22.1 README coverage, 0.1.0 release record) committed
+  and verified failing before any content existed (`2d170ff`).
+- Hand-written documentation set: `00-overview` (domain context, why
+  spec-first, provenance), `01-domain-model` (the nine entities),
+  `02-versioning` (SemVer, guide versions, review status, diff
+  workflow), `03-workflows` (state effects, generated identifiers),
+  `04-sandbox-contract` (consumption contract, sandbox-code isolation,
+  known v0.1 gaps), `05-code-generation` (future targets).
+- README rewritten to cover all ten PRD §22.1 requirements: architecture
+  diagram, layout, quick start, validate/generate/check how-to,
+  downstream consumption, documentation map, disclaimer summary, source
+  policy, license.
+- CHANGELOG gains the `0.1.0` release section; SPEC_VERSION stays
+  `0.1.0`.
+
+Validation output: `pnpm test` → 72/72 passed; `tsc --noEmit` → clean;
+full PRD §29 checklist green.
+
+Remaining TODOs: none — v0.1 scope complete.
+
 ### Group 7 — ci/pipeline (2026-11-15)
 
 Local group: no remote yet, so the PR step is replaced by a local `--no-ff`
