@@ -1,6 +1,6 @@
 {
   "specVersion": "0.1.0",
-  "generatedAt": "2026-11-15T15:50:01.442Z",
+  "generatedAt": "2026-11-15T15:52:40.486Z",
   "sources": [
     {
       "id": "medula-hastane-guide-2026-06-17",
@@ -3408,6 +3408,29 @@
           "deprecatedIn": null
         },
         {
+          "name": "ekdsYontemGerekce",
+          "displayName": "EKDS Yontem Gerekce",
+          "type": "enum",
+          "enumRef": "ekds-yontem-gerekce",
+          "required": false,
+          "length": null,
+          "description": "EKDS verification method justification codes; Integer[] in the guide, modeled as an array of ekds-yontem-gerekce codes (s.167, changelog s.13).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 167,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        },
+        {
           "name": "doktorTescilNo",
           "displayName": "Doktor Tescil Numarasi",
           "type": "string",
@@ -3586,6 +3609,29 @@
           ],
           "conditionalRequired": [],
           "introducedIn": null,
+          "deprecatedIn": null
+        },
+        {
+          "name": "ekdsYontemGerekce",
+          "displayName": "EKDS Yontem Gerekce",
+          "type": "enum",
+          "enumRef": "ekds-yontem-gerekce",
+          "required": false,
+          "length": null,
+          "description": "EKDS verification method justification codes; Integer[] in the guide, modeled as an array of ekds-yontem-gerekce codes (s.167, changelog s.13).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 167,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
           "deprecatedIn": null
         }
       ],
@@ -3860,6 +3906,162 @@
   ],
   "enums": [
     {
+      "id": "ekds-yontem-gerekce",
+      "displayName": "EKDS Yontem Gerekce",
+      "values": [
+        {
+          "code": "10",
+          "label": "Kisiye ait TCKKda parmak izi verisi yok",
+          "description": "No fingerprint data exists for the person's T.C. record."
+        },
+        {
+          "code": "11",
+          "label": "Parmak izi verisini cihaz okumuyor",
+          "description": "The device cannot read the person's fingerprint data."
+        },
+        {
+          "code": "12",
+          "label": "KEC cihazina temas etmek istemiyor",
+          "description": "The person refuses to touch the KEC device for fingerprint reading."
+        },
+        {
+          "code": "13",
+          "label": "Biyometrik verisini paylasmak istemiyor",
+          "description": "The person refuses to share biometric data."
+        },
+        {
+          "code": "20",
+          "label": "KEC cihazina temas etmek istemiyor (pin)",
+          "description": "The person refuses to touch the KEC device to enter the PIN."
+        },
+        {
+          "code": "21",
+          "label": "E-Devletten pin koduna ulasamiyorum",
+          "description": "The person cannot reach the PIN code through e-Government."
+        },
+        {
+          "code": "30",
+          "label": "Kisiye ait TCKK yaninda yok",
+          "description": "The person does not have their T.C. identity card with them."
+        },
+        {
+          "code": "31",
+          "label": "Kisiye ait TCKK kayip",
+          "description": "The person's T.C. identity card is lost."
+        },
+        {
+          "code": "32",
+          "label": "Kisi EKDS istemiyor",
+          "description": "The person refuses the EKDS verification."
+        },
+        {
+          "code": "33",
+          "label": "Kisiye ait TCKK yok",
+          "description": "No T.C. identity card exists for the person."
+        },
+        {
+          "code": "34",
+          "label": "EKDS dogrulama yontemleri uygulanamadi",
+          "description": "None of the EKDS verification methods could be applied."
+        },
+        {
+          "code": "35",
+          "label": "Kisinin fotograf dogrulamasi yapilamadi",
+          "description": "Photo verification of the person failed."
+        },
+        {
+          "code": "99",
+          "label": "EKDS'den saglik sebebiyle muaftir",
+          "description": "The person is exempt from health services per EKDS."
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "fetchedAt": "2026-11-15",
+          "page": 167,
+          "section": "ekdsYontemGerekce codes (Pin/fotograf/fiziksel dogrulama gerekceleri)",
+          "confidence": "extracted"
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
+      "id": "istisnai-hal",
+      "displayName": "Istisnai Hal",
+      "values": [
+        {
+          "code": "1",
+          "label": "Acil hal",
+          "description": "Emergency condition."
+        },
+        {
+          "code": "2",
+          "label": "Is kazasi ile meslek hastaligi",
+          "description": "Occupational accident or disease condition."
+        },
+        {
+          "code": "3",
+          "label": "Bildirimi zorunlu bulasici hastalik",
+          "description": "Notifiable infectious disease condition."
+        },
+        {
+          "code": "4",
+          "label": "Kisiye yonelik koruyucu saglik hizmeti",
+          "description": "Person-specific preventive health service condition."
+        },
+        {
+          "code": "5",
+          "label": "Analik hali",
+          "description": "Maternity condition."
+        },
+        {
+          "code": "6",
+          "label": "Afet ve savas ile grev ve lokavt hali",
+          "description": "Disaster, war, strike, or lockout condition."
+        },
+        {
+          "code": "7",
+          "label": "18 yas alti cocuklar",
+          "description": "Children under 18."
+        },
+        {
+          "code": "8",
+          "label": "Tibben baskasinin bakimina muhtac kisiler",
+          "description": "Persons medically dependent on others' care."
+        },
+        {
+          "code": "9",
+          "label": "BKK na gore Borclular",
+          "description": "Debtors under BKK."
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "fetchedAt": "2026-11-15",
+          "page": 157,
+          "section": "ProvizyonGirisDVO istisnaiHal codes 1-4",
+          "confidence": "extracted"
+        },
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "fetchedAt": "2026-11-15",
+          "page": 158,
+          "section": "ProvizyonGirisDVO istisnaiHal codes 5-9",
+          "confidence": "extracted",
+          "notes": "Codes 5-9 continue on s.158 before the devredilenKurum letter codes (I/M/B/V). Column-flow inference noted; a visual pass of pages 157-158 would remove any residual doubt."
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
       "id": "provizyon-tipi",
       "displayName": "Provizyon Tipi",
       "values": [
@@ -4002,27 +4204,7 @@
         {
           "code": "0000",
           "label": "Islem Basarili",
-          "description": "The operation completed successfully. Documented for every response DVO as a String of length 4."
-        },
-        {
-          "code": "33",
-          "label": "Kisiye ait TCKK yok",
-          "description": "Hasta Kabul error - no T.C. identity number is associated with the person."
-        },
-        {
-          "code": "34",
-          "label": "EKDS dogrulama yontemleri uygulanamadi",
-          "description": "Hasta Kabul error - EKDS verification methods could not be applied."
-        },
-        {
-          "code": "35",
-          "label": "Kisinin fotograf dogrulamasi yapilamadi",
-          "description": "Hasta Kabul error - photo verification of the person failed."
-        },
-        {
-          "code": "99",
-          "label": "EKDS'den saglik sebebiyle muaftir",
-          "description": "Hasta Kabul information code - the person is exempt from health services per EKDS."
+          "description": "The operation completed successfully. Documented as a String of length 4 in every response table (Tablo 4.1.1.b, 4.1.2.b, 4.1.3.b, 4.2.1.b, 4.2.3.b, 4.3.1.b, 4.3.2.b, 4.3.3.b)."
         }
       ],
       "sourceRefs": [
@@ -4031,10 +4213,10 @@
           "sourceType": "official-guide",
           "guideVersion": "3.1.1",
           "fetchedAt": "2026-11-15",
-          "page": 168,
-          "section": "Hasta Kabul hata kodlari",
+          "page": 165,
+          "section": "Response tables across all methods",
           "confidence": "extracted",
-          "notes": "Success code verified across all response tables; sample error codes extracted from the hasta kabul catalog (pages 167-168). The full error-code catalog per method is cataloged in the v0.2 pass."
+          "notes": "Verification correction (Group 12): the codes 33/34/35/99 added in Group 9 were EKDS verification-reason codes (ekdsYontemGerekce, s.167-168), not result codes — they moved to the ekds-yontem-gerekce enum. The guide provides no global result-code catalog; error codes surface per response in Medula and are cataloged as they are observed."
         }
       ],
       "status": "reviewed"

@@ -6,6 +6,30 @@ Format: [Keep a Changelog](https://keepachangelog.com); versioning: SemVer
 
 ## [Unreleased]
 
+### Group 12 — feat/v02-catalog (2026-11-15)
+
+Local group: no remote yet, so the PR step is replaced by a local
+`--no-ff` merge to `main` (PRD §28 step 6 fallback).
+
+- TDD red first: catalog suite (5 checks) committed and verified failing
+  (5/5 red) before the corrections landed (`79f69d7`).
+- **Self-correction**: the codes 33/34/35/99 added to `sonuc-kodu` in
+  Group 9 were EKDS verification-reason codes (s.167-168), not result
+  codes — sonuc-kodu now carries only the verified `0000`, with a note
+  that the guide ships no global result-code catalog.
+- New enum `ekds-yontem-gerekce` (13 codes, s.167-168): pin/fotograf/
+  fiziksel doğrulama gerekçeleri; `ekdsYontemGerekce` field added to
+  ProvizyonGirisDVO and TakipDVO (changelog s.13 + s.167).
+- New enum `istisnai-hal` (9 codes, s.157-158) with a column-flow note;
+  devredilenKurum stays deferred until a visual pass of p.155-158.
+- Registry now: 20 DVOs, **9 enums**, 13 rules; dist regenerated.
+
+Validation output: `pnpm test` → 102/102 passed (13 suites); `tsc
+--noEmit` → clean; `pnpm validate` → OK; `pnpm check` → OK;
+`pnpm format:check` → OK.
+
+Remaining TODOs: none for this group.
+
 ### Group 11 — feat/v02-contracts (2026-11-15)
 
 Local group: no remote yet, so the PR step is replaced by a local

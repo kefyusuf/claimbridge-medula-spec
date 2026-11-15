@@ -51,6 +51,8 @@ const EXPECTED_ENUM_IDS = [
   "takip-tipi",
   "tedavi-tipi",
   "tedavi-turu",
+  "ekds-yontem-gerekce",
+  "istisnai-hal",
 ];
 
 const EXPECTED_RULE_FILES = [
@@ -180,7 +182,9 @@ describe("registry-data (Group 3)", () => {
   });
 
   it("has exactly the 5 enum files from PRD section 11", () => {
-    expect(enums.map((e) => e.data.id).sort()).toEqual(EXPECTED_ENUM_IDS);
+    expect(enums.map((e) => e.data.id).sort()).toEqual(
+      [...EXPECTED_ENUM_IDS].sort(),
+    );
   });
 
   it("has exactly the 5 rule files from PRD section 11", () => {

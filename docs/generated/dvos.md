@@ -216,6 +216,7 @@ Domain: `hasta-kabul` · Direction: `input` · Status: `reviewed` · Source refs
 | `hastaTelefon` | string |  | — |  | Patient contact phone in 3121234567 format; mandatory on first takips (s.159). Synthetic placeholders only. |
 | `hastaAdres` | string |  | — |  | Patient contact address; mandatory on first takips (s.159). Synthetic placeholders only. |
 | `ktsHbysKodu` | string |  | — |  | Software vendor KTS code (s.159). Verification correction - the guide marks this required. |
+| `ekdsYontemGerekce` | enum |  | ekds-yontem-gerekce |  | EKDS verification method justification codes; Integer[] in the guide, modeled as an array of ekds-yontem-gerekce codes (s.167, changelog s.13). |
 | `doktorTescilNo` | string |  | — |  | Registration number of the admitting doctor. Verification finding - this field does not appear in Tablo 4.1.1.a; kept for PRD 13.4 compatibility and slated for removal in 0.2.0. |
 
 ## `TakipDVO`
@@ -230,6 +231,7 @@ Domain: `hasta-kabul` · Direction: `shared` · Status: `reviewed` · Source ref
 | `takipDurumu` | enum |  | takip-durumu |  | Payment-inquiry state of the tracking record - 0/1 only (s.166). |
 | `hastaBasvuruNo` | string |  | — |  | Patient application number this tracking record belongs to. |
 | `bransKodu` | string |  | — |  | Branch code of the service (s.165). Verification correction - String(4) in the guide. |
+| `ekdsYontemGerekce` | enum |  | ekds-yontem-gerekce |  | EKDS verification method justification codes; Integer[] in the guide, modeled as an array of ekds-yontem-gerekce codes (s.167, changelog s.13). |
 
 ## `TakipOkuGirisDVO`
 
