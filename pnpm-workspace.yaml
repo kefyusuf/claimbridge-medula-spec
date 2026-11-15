@@ -1,0 +1,4 @@
+# pnpm 11 workspace/config file (single-package repo).
+# esbuild needs its postinstall build step (used by tsx).
+allowBuilds:
+  esbuild: true
