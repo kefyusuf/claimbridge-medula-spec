@@ -20,7 +20,7 @@ describe("tools (Group 5)", () => {
     expect(reg.rules).toHaveLength(5);
     expect(reg.workflows).toHaveLength(4);
     expect(reg.scenarios).toHaveLength(6);
-    expect(reg.sourceIds.size).toBeGreaterThanOrEqual(2);
+    expect(reg.sourceIds.has("medula-hastane-guide-2026-06-17")).toBe(true);
     expect(reg.wsdlIds.size).toBe(6);
   });
 
