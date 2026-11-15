@@ -1,0 +1,32 @@
+id: GenBilgisiDVO
+domain: hizmet-kayit
+direction: input
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: "3.1.1"
+    fetchedAt: "2026-11-15"
+    page: 231
+    section: Tablo 4.2.1.j.2 - GenBilgisiDVO
+    confidence: extracted
+fields:
+  - name: genKodu
+    displayName: Gen Kodu
+    type: string
+    enumRef: null
+    required: true
+    length: 50
+    description: Gene code; the table closes at s.232 with TaniBilgisiDVO following (s.231)
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 231
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+status: reviewed

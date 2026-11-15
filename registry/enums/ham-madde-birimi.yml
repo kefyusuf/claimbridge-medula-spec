@@ -1,0 +1,18 @@
+id: ham-madde-birimi
+displayName: Ham Madde Birimi
+values:
+  - code: "1"
+    label: Gram
+    description: Gram unit.
+  - code: "2"
+    label: Miligram
+    description: Milligram unit.
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: "3.1.1"
+    fetchedAt: "2026-11-15"
+    page: 201
+    section: Tablo 4.2.1.f.1.1 - MajistralHamMaddeDVO (hamMaddeBirimi)
+    confidence: extracted
+status: reviewed

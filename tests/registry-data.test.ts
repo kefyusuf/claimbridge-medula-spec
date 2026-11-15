@@ -47,6 +47,8 @@ const EXPECTED_DVO_FILES = [
   "hizmet-kayit/konsultasyon-bilgisi-dvo.yml",
   "hizmet-kayit/kayitli-islem-bilgisi-dvo.yml",
   "hizmet-kayit/majistral-ilac-dvo.yml",
+  "hizmet-kayit/gen-bilgisi-dvo.yml",
+  "hizmet-kayit/majistral-ham-madde-dvo.yml",
   "hizmet-kayit/muayene-bilgisi-dvo.yml",
   "hizmet-kayit/tahlil-sonuc-dvo.yml",
   "hizmet-kayit/onceki-islem-bilgisi-dvo.yml",
@@ -59,6 +61,7 @@ const EXPECTED_DVO_FILES = [
   "fatura-kayit/fatura-oku-cevap-dvo.yml",
   "fatura-kayit/fatura-oku-giris-dvo.yml",
   "fatura-kayit/hizmet-detay-dvo.yml",
+  "fatura-kayit/islem-detay-dvo.yml",
 ];
 
 const EXPECTED_ENUM_IDS = [
@@ -76,6 +79,7 @@ const EXPECTED_ENUM_IDS = [
   "taburcu-kodu",
   "malzeme-turu",
   "ilac-turu",
+  "ham-madde-birimi",
   "preparat-turu",
   "ambalaj-turu",
   "ayni-farkli-kesi",

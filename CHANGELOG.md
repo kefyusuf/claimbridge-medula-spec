@@ -6,6 +6,38 @@ Format: [Keep a Changelog](https://keepachangelog.com); versioning: SemVer
 
 ## [Unreleased]
 
+### Group 22 — feat/v03-nested-2 (2026-11-15)
+
+Local group: no remote yet, so the PR step is replaced by a local
+`--no-ff` merge to `main` (PRD §28 step 6 fallback).
+
+- TDD red first: final nested suite (6 checks) committed and verified
+  failing (6/6 red) before the composites existed (`7539d69`).
+- Three new reviewed DVOs: `MajistralHamMaddeDVO` (4.2.1.f.1.1, s.201 —
+  guide spelling MajistralHamMadde, 4 fields incl. the raw-material
+  catalog reference 4.2.1.f.1.1.1), `GenBilgisiDVO` (4.2.1.j.2, s.231 —
+  single-field genKodu record), `IslemDetayDVO` (4.3.1.f, s.242-243 —
+  islemSiraNo(20)/islemTutari).
+- New enum `ham-madde-birimi` (Gram/Miligram, s.201).
+- TahlilBilgisiDVO enriched with the s.231 tail fields: tahlilTipi (HEM/
+  IDR/KGAZ/OGTT catalog reference), birim, sagSol, ayniFarkliKesi (bound
+  to the existing enum — this table uses the 1-5 codes), aciklama.
+- MajistralIlacDVO gained the missed `eklenenIlaclar` field
+  (MajistralEklenenIlacDVO, 4.2.1.f.1.2). Placeholders resolved:
+  MajistralIlac.hamMaddeler, Tahlil.genBilgisi, FaturaCevapDetay.
+  islemDetaylari.
+- Registry now: **41 DVOs, 19 enums**; dist regenerated.
+
+Remaining v0.3: MajistralEklenenIlacDVO (4.2.1.f.1.2), GenBilgisi visual
+check, raw-material/tahlilTipi catalogs (v0.3 enums), devredilenKurum,
+new HastaKabul methods, Mimosa audit, GitHub remote.
+
+Validation output: `pnpm test` → 151/151 passed (23 suites); `tsc
+--noEmit` → clean; `pnpm validate` → OK; `pnpm check` → OK;
+`pnpm format:check` → OK.
+
+Remaining TODOs: none for this group.
+
 ### Group 21 — feat/v03-nested (2026-11-15)
 
 Local group: no remote yet, so the PR step is replaced by a local
