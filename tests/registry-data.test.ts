@@ -35,11 +35,11 @@ const EXPECTED_DVO_FILES = [
 const EXPECTED_ENUM_IDS = ["provizyon-tipi", "sonuc-kodu", "takip-durumu", "takip-tipi", "tedavi-turu"];
 
 const EXPECTED_RULE_FILES = [
-  "cancellation-rules.yml",
-  "conditional-required-fields.yml",
-  "invoice-rules.yml",
-  "required-fields.yml",
-  "state-transition-rules.yml",
+  "rules/cancellation-rules.yml",
+  "rules/conditional-required-fields.yml",
+  "rules/invoice-rules.yml",
+  "rules/required-fields.yml",
+  "rules/state-transition-rules.yml",
 ];
 
 const MIN_FIELDS: Record<string, string[]> = {
