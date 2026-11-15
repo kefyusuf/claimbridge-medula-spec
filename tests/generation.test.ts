@@ -94,7 +94,7 @@ describe("generation (Group 6)", () => {
       expect(text.startsWith(`${MERMAID_HEADER_PREFIX}\n`)).toBe(true);
     }
     expect(diagrams["er-diagram.mmd"]).toContain("ProvizyonGirisDVO");
-    expect(diagrams["er-diagram.mmd"]).toContain("provizyon-tipi");
+    expect(diagrams["er-diagram.mmd"]).toContain("provizyon_tipi");
     expect(diagrams["core-flow.mmd"]).toContain("medula.hastane.hasta-kabul.hasta-kabul");
     expect(diagrams["core-flow.mmd"]).toContain("medula.hastane.fatura-kayit.fatura-kayit");
     expect(diagrams["service-map.mmd"]).toContain("hizmet-kayit");
