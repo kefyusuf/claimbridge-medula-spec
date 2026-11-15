@@ -145,7 +145,7 @@ Domain: `hizmet-kayit` · Direction: `input` · Status: `reviewed` · Source ref
 | `saglikTesisKodu` | integer |  | — |  | Code of the institution performing the service registration (s.189). |
 | `takipNo` | string |  | — |  | Tracking number the services are registered against (s.189). |
 | `hastaBasvuruNo` | string |  | — |  | Patient application number; the guide marks it optional here (s.189). |
-| `tanilar` | array |  | — |  | Diagnosis entries (TaniBilgisiDVO records, s.189). Verification correction - the guide names this field tanilar. |
+| `tanilar` | array |  | — |  | Diagnosis entries as an array of TaniBilgisiDVO (Tablo 4.2.1.k, s.232). Verification correction - the guide names this field tanilar. |
 | `ameliyatveGirisimBilgileri` | array |  | — |  | Surgery and intervention entries as an array (AmeliyatveGirisimBilgisiDVO, s.189). |
 | `digerIslemBilgileri` | array |  | — |  | Other operation entries (DigerIslemBilgisiDVO, s.189). |
 | `disBilgileri` | array |  | — |  | Dental entries (DisBilgisiDVO, s.189). |
@@ -262,4 +262,18 @@ Domain: `hasta-kabul` · Direction: `input` · Status: `reviewed` · Source refs
 | `saglikTesisKodu` | integer |  | — |  | Healthcare facility code of the cancelling institution (s.168). Only the institution's own takips can be cancelled. |
 | `takipNo` | string |  | — |  | Tracking number to be cancelled (s.168). |
 | `ktsHbysKodu` | string |  | — |  | Software vendor KTS code (s.168). |
+
+## `TaniBilgisiDVO`
+
+Domain: `hizmet-kayit` · Direction: `shared` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `islemSiraNo` | string |  | — |  | Sequence number of the registered service; send null while registering, Medula fills and returns it (s.232). |
+| `birincilTani` | string |  | — |  | Primary diagnosis flag taking E (Evet) or H (Hayir) (s.232). |
+| `hizmetSunucuRefNo` | string |  | — |  | Institution-assigned reference used to pair the record with the Medula-generated islemSiraNo (s.232). Synthetic placeholders in examples. |
+| `taniKodu` | string |  | — |  | ICD-10 diagnosis code (s.232). |
+| `taniTipi` | enum |  | tani-tipi |  | Diagnosis type - 1 On tani, 2 Kesin tani, 3 Ayirici tani (s.232). |
+| `ozelDurum` | string |  | — |  | Special condition code; see guide Tablo 5.1 OzelDurumVO (s.232). |
+| `cokluOzelDurum` | array |  | — |  | Multiple special-condition codes, valid alongside ozelDurum (s.232). |
 

@@ -6,6 +6,32 @@ Format: [Keep a Changelog](https://keepachangelog.com); versioning: SemVer
 
 ## [Unreleased]
 
+### Group 13 — feat/v02-composites (2026-11-15)
+
+Local group: no remote yet, so the PR step is replaced by a local
+`--no-ff` merge to `main` (PRD §28 step 6 fallback).
+
+- TDD red first: composite suite (4 checks) committed and verified failing
+  (4/4 red) before TaniBilgisiDVO existed (`ae71f3f`).
+- `TaniBilgisiDVO` registered from Tablo 4.2.1.k (s.232) — the diagnosis
+  entry composite: `islemSiraNo` (null-on-input pattern), `birincilTani`
+  E/H, `hizmetSunucuRefNo` String(20) pairing key, `taniKodu` ICD-10
+  String(10), `taniTipi`, `ozelDurum`/`cokluOzelDurum` (OzelDurumVO refs).
+- New enum `tani-tipi` (1 On tani / 2 Kesin tani / 3 Ayirici tani, s.232).
+- HizmetKayitGirisDVO `tanilar` now cites the composite (Tablo 4.2.1.k);
+  example diagnosis entries guide-shaped.
+- First nested composite resolved; remaining placeholders (HizmetDVO
+  4.2.2.c, FaturaCevapDetayDVO 4.3.3.c, Kayitli/HataliIslemBilgisiDVO
+  4.2.1.m/n, invoice HizmetDetayDVO 4.3.1.c) stay cited-but-deferred —
+  their tables span page boundaries in the text extraction.
+- Registry now: **21 DVOs, 10 enums**; dist regenerated.
+
+Validation output: `pnpm test` → 106/106 passed (14 suites); `tsc
+--noEmit` → clean; `pnpm validate` → OK; `pnpm check` → OK;
+`pnpm format:check` → OK.
+
+Remaining TODOs: none for this group.
+
 ### Group 12 — feat/v02-catalog (2026-11-15)
 
 Local group: no remote yet, so the PR step is replaced by a local

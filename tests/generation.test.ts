@@ -29,8 +29,8 @@ describe("generation (Group 6)", () => {
     expect(bundle.sources.length).toBeGreaterThanOrEqual(1);
     expect(bundle.services).toHaveLength(3);
     expect(bundle.methods).toHaveLength(10);
-    expect(bundle.dvos).toHaveLength(20);
-    expect(bundle.enums).toHaveLength(9);
+    expect(bundle.dvos).toHaveLength(21);
+    expect(bundle.enums).toHaveLength(10);
     expect(bundle.rules).toHaveLength(5);
     expect(bundle.workflows).toHaveLength(4);
     expect(bundle.scenarios).toHaveLength(6);
@@ -44,8 +44,8 @@ describe("generation (Group 6)", () => {
     expect(manifest.counts).toEqual({
       services: 3,
       methods: 10,
-      dvos: 20,
-      enums: 9,
+      dvos: 21,
+      enums: 10,
       rules: 5,
       workflows: 4,
       scenarios: 6,

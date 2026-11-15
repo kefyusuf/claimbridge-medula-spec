@@ -1,0 +1,21 @@
+id: tani-tipi
+displayName: Tani Tipi
+values:
+  - code: "1"
+    label: On tani
+    description: Preliminary diagnosis.
+  - code: "2"
+    label: Kesin tani
+    description: Definitive diagnosis.
+  - code: "3"
+    label: Ayirici tani
+    description: Differential diagnosis.
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: "3.1.1"
+    fetchedAt: "2026-11-15"
+    page: 232
+    section: Tablo 4.2.1.k - TaniBilgisiDVO (taniTipi)
+    confidence: extracted
+status: reviewed
