@@ -1,0 +1,29 @@
+id: missing-required-field
+title: Admission request missing a required field
+method: medula.hastane.hasta-kabul.hasta-kabul
+given:
+  facility: SYNTHETIC_FACILITY_001
+request:
+  saglikTesisKodu: 1
+  provizyonTipi: N
+  tedaviTuru: "1"
+  takipTipi: Y
+  bransKodu: 1
+  doktorTescilNo: SYNTHETIC_DOCTOR_001
+expected:
+  result:
+    sonucKodu: SANDBOX_VALIDATION_ERROR
+    sonucMesaji: Zorunlu alan eksik - hastaTCKimlikNo.
+  stateChanges:
+    missingFieldPath: hastaTCKimlikNo
+    note: State remains unchanged; the response identifies the missing field path (PRD 15.3).
+sandbox:
+  deterministic: true
+  httpStatus: 200
+  latencyMs: null
+sourceRefs:
+  - id: sandbox-design-v0.1
+    sourceType: sandbox-design
+    confidence: unknown
+    notes: SANDBOX_VALIDATION_ERROR is a sandbox-only code, not an official Medula error code (PRD 15.3).
+status: draft

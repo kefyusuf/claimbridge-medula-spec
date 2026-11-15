@@ -1,0 +1,28 @@
+id: invalid-takip-no
+title: Service registration against a non-existing tracking number
+method: medula.hastane.hizmet-kayit.hizmet-kayit
+given:
+  facility: SYNTHETIC_FACILITY_001
+request:
+  saglikTesisKodu: 1
+  hastaBasvuruNo: SYNTHETIC_BASVURU_000001
+  takipNo: SYNTHETIC_TAKIP_MISSING
+  taniBilgileri: []
+  islemBilgileri: []
+  hizmetDetaylari: []
+expected:
+  result:
+    sonucKodu: SANDBOX_1001
+    sonucMesaji: Takip bulunamadi.
+  stateChanges:
+    note: State remains unchanged; no service record is created (PRD 15.2).
+sandbox:
+  deterministic: true
+  httpStatus: 200
+  latencyMs: null
+sourceRefs:
+  - id: sandbox-design-v0.1
+    sourceType: sandbox-design
+    confidence: unknown
+    notes: SANDBOX_1001 is a sandbox-only code, not an official Medula error code (PRD 15.2).
+status: draft

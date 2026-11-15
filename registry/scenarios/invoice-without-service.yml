@@ -1,0 +1,29 @@
+id: invoice-without-service
+title: Invoice registration before any service record exists
+method: medula.hastane.fatura-kayit.fatura-kayit
+given:
+  facility: SYNTHETIC_FACILITY_001
+  hastaBasvuruNo: SYNTHETIC_BASVURU_000001
+  hasServiceRecord: false
+request:
+  saglikTesisKodu: 1
+  faturaTarihi: "2026-07-06"
+  hastaBasvuruNo: SYNTHETIC_BASVURU_000001
+  faturaRefNo: SYNTHETIC_FATURA_000001
+  hizmetDetaylari: []
+expected:
+  result:
+    sonucKodu: SANDBOX_2001
+    sonucMesaji: Kayitli hizmet bulunamadi.
+  stateChanges:
+    note: No invoice state is created (PRD 15.4).
+sandbox:
+  deterministic: true
+  httpStatus: 200
+  latencyMs: null
+sourceRefs:
+  - id: sandbox-design-v0.1
+    sourceType: sandbox-design
+    confidence: unknown
+    notes: SANDBOX_2001 is a sandbox-only code, not an official Medula error code (PRD 15.4).
+status: draft
