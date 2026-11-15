@@ -36,20 +36,32 @@ function idOf(file: YamlFile): string {
   return str(file.data["id"]);
 }
 
-function checkUniqueIds(files: YamlFile[], kind: string, issues: ValidationIssue[]): void {
+function checkUniqueIds(
+  files: YamlFile[],
+  kind: string,
+  issues: ValidationIssue[],
+): void {
   const seen = new Map<string, string>();
   for (const f of files) {
     const id = idOf(f);
     const first = seen.get(id);
     if (first !== undefined) {
-      issues.push({ file: f.file, message: `duplicate ${kind} id "${id}" (first seen in ${first})` });
+      issues.push({
+        file: f.file,
+        message: `duplicate ${kind} id "${id}" (first seen in ${first})`,
+      });
     } else {
       seen.set(id, f.file);
     }
   }
 }
 
-function checkSourceRefs(entity: Entity, file: string, reg: Registry, issues: ValidationIssue[]): void {
+function checkSourceRefs(
+  entity: Entity,
+  file: string,
+  reg: Registry,
+  issues: ValidationIssue[],
+): void {
   for (const ref of arr(entity["sourceRefs"])) {
     const r = obj(ref);
     const id = str(r["id"]);
@@ -57,9 +69,14 @@ function checkSourceRefs(entity: Entity, file: string, reg: Registry, issues: Va
       issues.push({ file, message: "sourceRefs entry without an id" });
       continue;
     }
-    const sandboxInternal = str(r["sourceType"]) === "sandbox-design" && id.startsWith("sandbox-design-");
+    const sandboxInternal =
+      str(r["sourceType"]) === "sandbox-design" &&
+      id.startsWith("sandbox-design-");
     if (!reg.sourceIds.has(id) && !sandboxInternal) {
-      issues.push({ file, message: `source reference id "${id}" does not exist in the source manifests` });
+      issues.push({
+        file,
+        message: `source reference id "${id}" does not exist in the source manifests`,
+      });
     }
   }
 }
@@ -81,7 +98,10 @@ export function validateReferences(reg: Registry): ValidationIssue[] {
       if (id !== "") {
         const first = ruleIds.get(id);
         if (first !== undefined) {
-          issues.push({ file: r.file, message: `duplicate rule id "${id}" (first seen in ${first})` });
+          issues.push({
+            file: r.file,
+            message: `duplicate rule id "${id}" (first seen in ${first})`,
+          });
         } else {
           ruleIds.set(id, r.file);
         }
@@ -97,7 +117,9 @@ export function validateReferences(reg: Registry): ValidationIssue[] {
   const fieldNamesByDvo = new Map<string, string[]>(
     reg.dvos.map((d) => [
       idOf(d),
-      arr(d.data["fields"]).map((f) => str(obj(f)["name"])).filter((n) => n !== ""),
+      arr(d.data["fields"])
+        .map((f) => str(obj(f)["name"]))
+        .filter((n) => n !== ""),
     ]),
   );
 
@@ -113,7 +135,10 @@ export function validateReferences(reg: Registry): ValidationIssue[] {
       }
       const entry = reg.wsdlIds.get(id);
       if (entry === undefined) {
-        issues.push({ file, message: `service references missing wsdl id "${id}"` });
+        issues.push({
+          file,
+          message: `service references missing wsdl id "${id}"`,
+        });
         continue;
       }
       if (entry.service !== slug || entry.environment !== env) {
@@ -130,7 +155,10 @@ export function validateReferences(reg: Registry): ValidationIssue[] {
     const id = str(data["id"]);
     const service = str(data["service"]);
     if (!serviceIds.has(service)) {
-      issues.push({ file, message: `method "${id}" references missing service "${service}"` });
+      issues.push({
+        file,
+        message: `method "${id}" references missing service "${service}"`,
+      });
     }
 
     const contract = obj(data["contract"]);
@@ -139,7 +167,10 @@ export function validateReferences(reg: Registry): ValidationIssue[] {
       const dvo = strOrNull(contract[key]);
       if (dvo !== null) {
         if (!dvoIds.has(dvo)) {
-          issues.push({ file, message: `method "${id}" references missing ${key} DVO "${dvo}"` });
+          issues.push({
+            file,
+            message: `method "${id}" references missing ${key} DVO "${dvo}"`,
+          });
         }
       } else if (status !== "draft") {
         issues.push({
@@ -169,12 +200,21 @@ export function validateReferences(reg: Registry): ValidationIssue[] {
       const enumRef = strOrNull(f["enumRef"]);
       if (type === "enum") {
         if (enumRef === null) {
-          issues.push({ file, message: `enum-typed field "${name}" must declare enumRef (PRD 12.4)` });
+          issues.push({
+            file,
+            message: `enum-typed field "${name}" must declare enumRef (PRD 12.4)`,
+          });
         } else if (!enumIds.has(enumRef)) {
-          issues.push({ file, message: `field "${name}" references missing enum "${enumRef}"` });
+          issues.push({
+            file,
+            message: `field "${name}" references missing enum "${enumRef}"`,
+          });
         }
       } else if (enumRef !== null) {
-        issues.push({ file, message: `field "${name}" has type "${type}" but a non-null enumRef "${enumRef}"` });
+        issues.push({
+          file,
+          message: `field "${name}" has type "${type}" but a non-null enumRef "${enumRef}"`,
+        });
       }
     }
   }
@@ -190,18 +230,31 @@ export function validateReferences(reg: Registry): ValidationIssue[] {
       const at = obj(r["appliesTo"]);
       const service = strOrNull(at["service"]);
       if (service !== null && !serviceIds.has(service)) {
-        issues.push({ file, message: `rule "${str(r["id"])}" appliesTo.service "${service}" does not resolve` });
+        issues.push({
+          file,
+          message: `rule "${str(r["id"])}" appliesTo.service "${service}" does not resolve`,
+        });
       }
       const method = strOrNull(at["method"]);
       if (method !== null && !methodIds.has(method)) {
-        issues.push({ file, message: `rule "${str(r["id"])}" appliesTo.method "${method}" does not resolve` });
+        issues.push({
+          file,
+          message: `rule "${str(r["id"])}" appliesTo.method "${method}" does not resolve`,
+        });
       }
       const dvo = strOrNull(at["dvo"]);
       if (dvo !== null && !dvoIds.has(dvo)) {
-        issues.push({ file, message: `rule "${str(r["id"])}" appliesTo.dvo "${dvo}" does not resolve` });
+        issues.push({
+          file,
+          message: `rule "${str(r["id"])}" appliesTo.dvo "${dvo}" does not resolve`,
+        });
       }
       const field = strOrNull(at["field"]);
-      if (dvo !== null && field !== null && !fieldNamesByDvo.get(dvo)?.includes(field)) {
+      if (
+        dvo !== null &&
+        field !== null &&
+        !fieldNamesByDvo.get(dvo)?.includes(field)
+      ) {
         issues.push({
           file,
           message: `rule "${str(r["id"])}" appliesTo.field "${field}" does not exist in DVO "${dvo}"`,
@@ -212,13 +265,20 @@ export function validateReferences(reg: Registry): ValidationIssue[] {
 
   for (const { file, data } of reg.workflows) {
     checkSourceRefs(data, file, reg, issues);
-    const stepIds = new Set(arr(data["steps"]).map((s) => str(obj(s)["id"])).filter((v) => v !== ""));
+    const stepIds = new Set(
+      arr(data["steps"])
+        .map((s) => str(obj(s)["id"]))
+        .filter((v) => v !== ""),
+    );
     for (const step of arr(data["steps"])) {
       const s = obj(step);
       const stepId = str(s["id"]);
       const method = str(s["method"]);
       if (!methodIds.has(method)) {
-        issues.push({ file, message: `workflow step "${stepId}" references missing method "${method}"` });
+        issues.push({
+          file,
+          message: `workflow step "${stepId}" references missing method "${method}"`,
+        });
       }
       for (const next of arr(s["next"])) {
         const nextId = str(next);
@@ -236,7 +296,10 @@ export function validateReferences(reg: Registry): ValidationIssue[] {
     checkSourceRefs(data, file, reg, issues);
     const method = str(data["method"]);
     if (!methodIds.has(method)) {
-      issues.push({ file, message: `scenario "${str(data["id"])}" references missing method "${method}"` });
+      issues.push({
+        file,
+        message: `scenario "${str(data["id"])}" references missing method "${method}"`,
+      });
     }
   }
 

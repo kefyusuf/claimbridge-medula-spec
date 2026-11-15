@@ -8,7 +8,9 @@ const root = resolve(import.meta.dirname, "..");
 
 describe("ci pipeline (Group 7)", () => {
   it("runs the full PRD 21 step sequence", () => {
-    const doc = parse(readFileSync(resolve(root, ".github", "workflows", "ci.yml"), "utf8")) as {
+    const doc = parse(
+      readFileSync(resolve(root, ".github", "workflows", "ci.yml"), "utf8"),
+    ) as {
       name: string;
       jobs: Record<string, { steps: Array<{ run?: string }> }>;
     };
@@ -17,8 +19,15 @@ describe("ci pipeline (Group 7)", () => {
       .map((s) => s.run ?? "")
       .filter((r) => r !== "");
     expect(runs).toContain("pnpm install --frozen-lockfile");
-    const sequence = runs.filter((r) => r.startsWith("pnpm ") && r !== "pnpm install --frozen-lockfile");
-    expect(sequence).toEqual(["pnpm format:check", "pnpm validate", "pnpm test", "pnpm check"]);
+    const sequence = runs.filter(
+      (r) => r.startsWith("pnpm ") && r !== "pnpm install --frozen-lockfile",
+    );
+    expect(sequence).toEqual([
+      "pnpm format:check",
+      "pnpm validate",
+      "pnpm test",
+      "pnpm check",
+    ]);
   });
 
   it("passes format:check over the repository", () => {

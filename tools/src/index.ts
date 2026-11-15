@@ -58,13 +58,19 @@ function runValidation(): void {
   console.log(`validation — ${fileCount} registry files loaded (spec v0.1.0)`);
   report("schemas", validateSchemas(reg));
   report("references", validateReferences(reg));
-  report("synthetic-examples", checkSyntheticExamples(resolve(repoRoot, "examples")));
+  report(
+    "synthetic-examples",
+    checkSyntheticExamples(resolve(repoRoot, "examples")),
+  );
   if (process.exitCode === 1) {
     fail("validation failed");
   }
 }
 
-function compareOutputs(reg: ReturnType<typeof loadRegistry>, generatedAt: string): string[] {
+function compareOutputs(
+  reg: ReturnType<typeof loadRegistry>,
+  generatedAt: string,
+): string[] {
   const stale: string[] = [];
   const bundle = buildBundle(reg, generatedAt);
   const pretty = renderPretty(bundle);
@@ -124,7 +130,9 @@ switch (command) {
     if (!existsSync(manifestPath)) {
       fail("dist/manifest.json is missing — run pnpm generate first");
     }
-    const committed = JSON.parse(readFileSync(manifestPath, "utf8")) as { generatedAt: string };
+    const committed = JSON.parse(readFileSync(manifestPath, "utf8")) as {
+      generatedAt: string;
+    };
     const reg = loadRegistry(repoRoot);
     const stale = compareOutputs(reg, committed.generatedAt);
     if (stale.length > 0) {
@@ -137,5 +145,7 @@ switch (command) {
     break;
   }
   default:
-    fail(`unknown command "${command ?? ""}" — usage: validate | generate | check`);
+    fail(
+      `unknown command "${command ?? ""}" — usage: validate | generate | check`,
+    );
 }

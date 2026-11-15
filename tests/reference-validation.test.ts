@@ -24,20 +24,21 @@ let services: RegistryEntry[];
 let methods: RegistryEntry[];
 let wsdlManifest: WsdlEntry[];
 
-const CORE_CONTRACTS: Record<string, { inputDvo: string; outputDvo: string }> = {
-  "medula.hastane.hasta-kabul.hasta-kabul": {
-    inputDvo: "ProvizyonGirisDVO",
-    outputDvo: "ProvizyonCevapDVO",
-  },
-  "medula.hastane.hizmet-kayit.hizmet-kayit": {
-    inputDvo: "HizmetKayitGirisDVO",
-    outputDvo: "HizmetKayitCevapDVO",
-  },
-  "medula.hastane.fatura-kayit.fatura-kayit": {
-    inputDvo: "FaturaGirisDVO",
-    outputDvo: "FaturaCevapDVO",
-  },
-};
+const CORE_CONTRACTS: Record<string, { inputDvo: string; outputDvo: string }> =
+  {
+    "medula.hastane.hasta-kabul.hasta-kabul": {
+      inputDvo: "ProvizyonGirisDVO",
+      outputDvo: "ProvizyonCevapDVO",
+    },
+    "medula.hastane.hizmet-kayit.hizmet-kayit": {
+      inputDvo: "HizmetKayitGirisDVO",
+      outputDvo: "HizmetKayitCevapDVO",
+    },
+    "medula.hastane.fatura-kayit.fatura-kayit": {
+      inputDvo: "FaturaGirisDVO",
+      outputDvo: "FaturaCevapDVO",
+    },
+  };
 
 const NULL_CONTRACT_IDS = [
   "medula.hastane.hasta-kabul.hasta-kabul-oku",
@@ -51,7 +52,9 @@ const NULL_CONTRACT_IDS = [
 
 beforeAll(() => {
   ajv = new Ajv2020({ allErrors: true, allowUnionTypes: true });
-  for (const file of readdirSync(schemasDir).filter((f) => f.endsWith(".schema.json"))) {
+  for (const file of readdirSync(schemasDir).filter((f) =>
+    f.endsWith(".schema.json"),
+  )) {
     ajv.addSchema(JSON.parse(readFileSync(resolve(schemasDir, file), "utf8")));
   }
 
@@ -60,7 +63,10 @@ beforeAll(() => {
     .filter((f) => f.endsWith(".yml"))
     .map((file) => ({
       file,
-      data: parse(readFileSync(resolve(servicesPath, file), "utf8")) as Record<string, unknown>,
+      data: parse(readFileSync(resolve(servicesPath, file), "utf8")) as Record<
+        string,
+        unknown
+      >,
     }));
 
   const methodsPath = resolve(registryDir, "methods");
@@ -71,11 +77,15 @@ beforeAll(() => {
         .filter((f) => f.endsWith(".yml"))
         .map((file) => ({
           file: `${dir.name}/${file}`,
-          data: parse(readFileSync(resolve(methodsPath, dir.name, file), "utf8")) as Record<string, unknown>,
+          data: parse(
+            readFileSync(resolve(methodsPath, dir.name, file), "utf8"),
+          ) as Record<string, unknown>,
         })),
     );
 
-  const manifest = parse(readFileSync(resolve(sourcesDir, "wsdl-manifest.yml"), "utf8")) as {
+  const manifest = parse(
+    readFileSync(resolve(sourcesDir, "wsdl-manifest.yml"), "utf8"),
+  ) as {
     wsdls: WsdlEntry[];
   };
   wsdlManifest = manifest.wsdls ?? [];
@@ -117,10 +127,14 @@ describe("reference-validation (Group 2)", () => {
 
   it("validates every service and method file against its schema", () => {
     for (const s of services) {
-      expect(schemaValidate("service", s.data), `service file: ${s.file}`).toBe(true);
+      expect(schemaValidate("service", s.data), `service file: ${s.file}`).toBe(
+        true,
+      );
     }
     for (const m of methods) {
-      expect(schemaValidate("method", m.data), `method file: ${m.file}`).toBe(true);
+      expect(schemaValidate("method", m.data), `method file: ${m.file}`).toBe(
+        true,
+      );
     }
   });
 
@@ -128,7 +142,10 @@ describe("reference-validation (Group 2)", () => {
     const serviceIds = new Set(services.map((s) => s.data.id as string));
     for (const m of methods) {
       const service = m.data.service as string;
-      expect(serviceIds.has(service), `unresolved service "${service}" in ${m.file}`).toBe(true);
+      expect(
+        serviceIds.has(service),
+        `unresolved service "${service}" in ${m.file}`,
+      ).toBe(true);
     }
   });
 
@@ -136,9 +153,15 @@ describe("reference-validation (Group 2)", () => {
     const methodIds = new Set(methods.map((m) => m.data.id as string));
     for (const s of services) {
       const ids = (s.data.methods as string[]) ?? [];
-      expect(ids.length, `service ${s.file} must list its methods`).toBeGreaterThan(0);
+      expect(
+        ids.length,
+        `service ${s.file} must list its methods`,
+      ).toBeGreaterThan(0);
       for (const id of ids) {
-        expect(methodIds.has(id), `unresolved method "${id}" in ${s.file}`).toBe(true);
+        expect(
+          methodIds.has(id),
+          `unresolved method "${id}" in ${s.file}`,
+        ).toBe(true);
       }
     }
   });
@@ -147,14 +170,19 @@ describe("reference-validation (Group 2)", () => {
     for (const m of methods) {
       const id = m.data.id as string;
       const service = m.data.service as string;
-      expect(id.startsWith(`${service}.`), `method "${id}" must be prefixed by service "${service}"`).toBe(true);
+      expect(
+        id.startsWith(`${service}.`),
+        `method "${id}" must be prefixed by service "${service}"`,
+      ).toBe(true);
     }
   });
 
   it("uses the medula.hastane.<slug> id convention for services", () => {
     for (const s of services) {
       const slug = s.data.slug as string;
-      expect(s.data.id, `service ${s.file} id convention`).toBe(`medula.hastane.${slug}`);
+      expect(s.data.id, `service ${s.file} id convention`).toBe(
+        `medula.hastane.${slug}`,
+      );
     }
   });
 
@@ -189,7 +217,10 @@ describe("reference-validation (Group 2)", () => {
     expect(wsdlManifest.length).toBe(6);
     for (const s of services) {
       const slug = s.data.slug as string;
-      const wsdl = s.data.wsdl as { production: string | null; test: string | null };
+      const wsdl = s.data.wsdl as {
+        production: string | null;
+        test: string | null;
+      };
       for (const [env, id] of [
         ["production", wsdl.production],
         ["test", wsdl.test],

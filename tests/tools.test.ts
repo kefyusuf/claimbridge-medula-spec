@@ -39,7 +39,9 @@ describe("tools (Group 5)", () => {
     reg.methods[0]!.data["service"] = "medula.hastane.does-not-exist";
     const issues = validateReferences(reg);
     expect(issues.length).toBeGreaterThan(0);
-    expect(issues.some((i) => i.message.includes("medula.hastane.does-not-exist"))).toBe(true);
+    expect(
+      issues.some((i) => i.message.includes("medula.hastane.does-not-exist")),
+    ).toBe(true);
   });
 
   it("flags a null contract on a method whose status is not draft", () => {
@@ -71,10 +73,15 @@ describe("tools (Group 5)", () => {
   it("catches a real-looking identity value in a temp example", () => {
     const tmp = mkdtempSync(resolve(tmpdir(), "cbms-synthetic-"));
     try {
-      writeFileSync(resolve(tmp, "bad.json"), JSON.stringify({ hastaTCKimlikNo: "12345678901" }));
+      writeFileSync(
+        resolve(tmp, "bad.json"),
+        JSON.stringify({ hastaTCKimlikNo: "12345678901" }),
+      );
       const issues = checkSyntheticExamples(tmp);
       expect(issues.length).toBeGreaterThan(0);
-      expect(issues.some((i) => i.message.includes("hastaTCKimlikNo"))).toBe(true);
+      expect(issues.some((i) => i.message.includes("hastaTCKimlikNo"))).toBe(
+        true,
+      );
     } finally {
       rmSync(tmp, { recursive: true, force: true });
     }
@@ -83,7 +90,10 @@ describe("tools (Group 5)", () => {
   it("catches a non-placeholder credential in a temp example", () => {
     const tmp = mkdtempSync(resolve(tmpdir(), "cbms-synthetic-"));
     try {
-      writeFileSync(resolve(tmp, "bad.json"), JSON.stringify({ kullaniciAdi: "admin" }));
+      writeFileSync(
+        resolve(tmp, "bad.json"),
+        JSON.stringify({ kullaniciAdi: "admin" }),
+      );
       const issues = checkSyntheticExamples(tmp);
       expect(issues.length).toBeGreaterThan(0);
       expect(issues.some((i) => i.message.includes("kullaniciAdi"))).toBe(true);
@@ -93,7 +103,10 @@ describe("tools (Group 5)", () => {
   });
 
   it("exits zero when the validate command runs on the committed repository", () => {
-    const stdout = execSync("pnpm validate", { cwd: root, stdio: "pipe" }).toString();
+    const stdout = execSync("pnpm validate", {
+      cwd: root,
+      stdio: "pipe",
+    }).toString();
     expect(stdout).toContain("validate: OK");
   });
 });

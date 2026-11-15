@@ -4,7 +4,16 @@
   "title": "Service registry file (PRD 12.1)",
   "type": "object",
   "additionalProperties": false,
-  "required": ["id", "slug", "displayName", "description", "sourceRefs", "wsdl", "methods", "status"],
+  "required": [
+    "id",
+    "slug",
+    "displayName",
+    "description",
+    "sourceRefs",
+    "wsdl",
+    "methods",
+    "status"
+  ],
   "properties": {
     "id": { "$ref": "common.schema.json#/$defs/nonEmptyString" },
     "slug": { "$ref": "common.schema.json#/$defs/nonEmptyString" },
@@ -20,8 +29,14 @@
       "additionalProperties": false,
       "required": ["production", "test"],
       "properties": {
-        "production": { "type": ["string", "null"], "description": "WSDL manifest id from sources/wsdl-manifest.yml, or null." },
-        "test": { "type": ["string", "null"], "description": "WSDL manifest id from sources/wsdl-manifest.yml, or null." }
+        "production": {
+          "type": ["string", "null"],
+          "description": "WSDL manifest id from sources/wsdl-manifest.yml, or null."
+        },
+        "test": {
+          "type": ["string", "null"],
+          "description": "WSDL manifest id from sources/wsdl-manifest.yml, or null."
+        }
       }
     },
     "methods": { "$ref": "common.schema.json#/$defs/stringList" },

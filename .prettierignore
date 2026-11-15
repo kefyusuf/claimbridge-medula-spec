@@ -1,0 +1,12 @@
+# Generated outputs are byte-compared by `pnpm check`; prettier must never
+# touch them (PRD 18.4).
+dist/
+docs/generated/
+diagrams/generated/
+
+# Hand-authored prose and diagram sources keep their original formatting.
+*.md
+*.mmd
+
+# Lockfile is machine-managed.
+pnpm-lock.yaml
