@@ -1,0 +1,8 @@
+sources:
+  - id: medula-hastane-guide-2026-06-17
+    title: MEDULA Web Servisleri Kullanim Kilavuzu
+    sourceType: official-guide
+    url: https://medula.sgk.gov.tr/hastane/kilavuz/MEDULA_Kullanim_Kilavuzu.pdf
+    publishedAt: "2026-06-17"
+    fetchedAt: "2026-07-06"
+    notes: Official technical usage guide. Not legal or regulatory advice.
