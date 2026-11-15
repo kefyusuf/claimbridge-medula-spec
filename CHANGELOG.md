@@ -6,6 +6,39 @@ Format: [Keep a Changelog](https://keepachangelog.com); versioning: SemVer
 
 ## [Unreleased]
 
+### Group 2 — feat/registry-core (2026-11-15)
+
+Local group: no remote yet, so the PR step is replaced by a local `--no-ff`
+merge to `main` (PRD §28 step 6 fallback).
+
+- TDD red first: reference-validation suite (11 checks) committed and
+  verified failing before any registry data existed (`a89f647`).
+- Source manifests (PRD §16): `official-sources` (guide entry),
+  `guide-versions`, `wsdl-manifest` (6 production/test ids), extraction
+  notes with the provenance policy (`fec37d2`).
+- Three service registry files per PRD §13.1/§23.1 (`954c0cd`).
+- Ten method registry files per PRD §13.2 (`6010bae`):
+  - core `kayit` methods carry resolved contracts into the nine planned
+    DVO ids (DVO files arrive in Group 3),
+  - read/cancel/amount operations keep null contracts with `draft` status
+    (amended PRD §12.2) and `confidence: inferred` names pending guide/WSDL
+    verification,
+  - all methods share the `sonucKodu`/`0000`/`sonucMesaji` success pattern.
+- Reference suite covers: file counts, per-file schema validation,
+  method↔service id resolution both ways, `medula.hastane.<slug>` id
+  convention, WSDL manifest resolution with environment checks.
+
+Decisions:
+- `sourceRefs` entries are full SourceReference objects (PRD §12.9), not
+  the bare-id shorthand shown in PRD §23.1 — the schema is authoritative.
+- Six stale `.gitkeep` markers removed from populated directories.
+
+Validation output: `pnpm test` → 28/28 passed (4 smoke + 13 schema +
+11 reference); `tsc --noEmit` → clean.
+
+Remaining TODOs: none for this group. Next: Group 3 — `feat/registry-data`
+(9 DVOs, 5 enums, 5 rule files).
+
 ### Group 1 — feat/schemas (2026-11-15)
 
 Local group: no remote yet, so the PR step is replaced by a local `--no-ff`
