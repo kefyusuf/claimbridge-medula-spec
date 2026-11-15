@@ -10,14 +10,14 @@ TypeScript CLI for validating and (from Group 6) generating the spec.
 | `validateSchemas.ts` | PRD §20.1 — validates every registry file against its JSON Schema (Draft 2020-12, AJV). |
 | `validateReferences.ts` | PRD §20.2 — id resolution across services/methods/DVOs/enums/rules/workflows/scenarios, draft-only null contracts (amended §12.2), field `enumRef` contract (amended §12.4), WSDL manifest resolution, source-reference id resolution. |
 | `checkSyntheticExamples.ts` | PRD §20.5 — high-signal guard: 11-digit identity values, non-placeholder credentials, log files. |
-| `index.ts` | CLI entry. `validate` runs the full PRD §19.1 pipeline; `generate`/`check` arrive with Group 6. |
+| `index.ts` | CLI entry. `validate` runs the full PRD §19.1 pipeline; `generate` writes dist/docs/mermaid (§19.2); `check` validates, regenerates in memory with the committed generatedAt, and fails on stale outputs (§19.3). |
 
 ## Commands
 
 ```bash
 pnpm validate   # full validation pipeline; exit 1 on any issue
-pnpm generate   # (Group 6)
-pnpm check      # (Group 6)
+pnpm generate   # write dist bundle + manifest, docs/generated, diagrams/generated
+pnpm check      # validate + regenerate + compare; exit 1 on stale outputs
 ```
 
 Sandbox-design sources are self-registered: any `sourceType: sandbox-design`
