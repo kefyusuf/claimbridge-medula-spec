@@ -150,10 +150,13 @@ describe("guide-verification (Group 9)", () => {
     }
   });
 
-  it("keeps oku/iptal methods draft until their TakipSil DVOs arrive (Group 10)", () => {
+  it("keeps the other oku/iptal methods draft until Group 11 reads their tables", () => {
     for (const id of [
-      "medula.hastane.hasta-kabul.hasta-kabul-oku",
-      "medula.hastane.hasta-kabul.hasta-kabul-iptal",
+      "medula.hastane.hizmet-kayit.hizmet-kaydi-oku",
+      "medula.hastane.hizmet-kayit.hizmet-kaydi-iptal",
+      "medula.hastane.fatura-kayit.fatura-oku",
+      "medula.hastane.fatura-kayit.fatura-iptal",
+      "medula.hastane.fatura-kayit.fatura-tutar-oku",
     ]) {
       const m = reg.methods.find((x) => x.data["id"] === id);
       expect(m?.data["status"]).toBe("draft");
