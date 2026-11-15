@@ -79,7 +79,9 @@ describe("v0.3 nested 2 (Group 22)", () => {
     }
     expect(byName.get("tahlilTipi")?.["length"]).toBe(6);
     expect(byName.get("ayniFarkliKesi")?.["enumRef"]).toBe("ayni-farkli-kesi");
-    expect(JSON.stringify(dvo?.data["sourceRefs"])).toContain('"page":231');
+    expect(JSON.stringify(byName.get("birim")?.["sourceRefs"])).toContain(
+      '"page":231',
+    );
   });
 
   it("resolves the remaining nested placeholders and adds eklenenIlaclar", () => {

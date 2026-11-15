@@ -1,6 +1,6 @@
 {
   "specVersion": "0.1.0",
-  "generatedAt": "2026-11-15T17:44:32.697Z",
+  "generatedAt": "2026-11-15T17:48:18.529Z",
   "sources": [
     {
       "id": "medula-hastane-guide-2026-06-17",
@@ -2193,7 +2193,7 @@
           "enumRef": null,
           "required": false,
           "length": null,
-          "description": "Operation detail records (IslemDetayDVO[], Tablo 4.3.1.f, s.246). Nested composite; expansion is v0.3 scope.",
+          "description": "Operation detail records, expanded as the IslemDetayDVO registry entity (Tablo 4.3.1.f, s.242-243).",
           "sensitive": false,
           "syntheticOnlyRecommended": false,
           "sourceRefs": [
@@ -3127,6 +3127,48 @@
               "sourceType": "official-guide",
               "guideVersion": "3.1.1",
               "page": 244,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
+      "id": "GenBilgisiDVO",
+      "domain": "hizmet-kayit",
+      "direction": "input",
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "fetchedAt": "2026-11-15",
+          "page": 231,
+          "section": "Tablo 4.2.1.j.2 - GenBilgisiDVO",
+          "confidence": "extracted"
+        }
+      ],
+      "fields": [
+        {
+          "name": "genKodu",
+          "displayName": "Gen Kodu",
+          "type": "string",
+          "enumRef": null,
+          "required": true,
+          "length": 50,
+          "description": "Gene code; the table closes at s.232 with TaniBilgisiDVO following (s.231)",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 231,
               "confidence": "extracted"
             }
           ],
@@ -5512,6 +5554,71 @@
       "status": "reviewed"
     },
     {
+      "id": "IslemDetayDVO",
+      "domain": "fatura-kayit",
+      "direction": "output",
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "fetchedAt": "2026-11-15",
+          "page": 243,
+          "section": "Tablo 4.3.1.f - IslemDetayDVO (s.242 son satir + s.243 basi)",
+          "confidence": "extracted"
+        }
+      ],
+      "fields": [
+        {
+          "name": "islemSiraNo",
+          "displayName": "Islem Sira Numarasi",
+          "type": "string",
+          "enumRef": null,
+          "required": false,
+          "length": 20,
+          "description": "Medula sequence number of the operation (s.243)",
+          "sensitive": false,
+          "syntheticOnlyRecommended": true,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 243,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "islemTutari",
+          "displayName": "Islem Tutari",
+          "type": "decimal",
+          "enumRef": null,
+          "required": false,
+          "length": null,
+          "description": "Operation-specific amount within the takip (s.243)",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 243,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
       "id": "KanBilgisiDVO",
       "domain": "hizmet-kayit",
       "direction": "input",
@@ -6061,6 +6168,117 @@
       "status": "reviewed"
     },
     {
+      "id": "MajistralHamMaddeDVO",
+      "domain": "hizmet-kayit",
+      "direction": "input",
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "fetchedAt": "2026-11-15",
+          "page": 201,
+          "section": "Tablo 4.2.1.f.1.1 - MajistralHamMaddeDVO",
+          "confidence": "extracted"
+        }
+      ],
+      "fields": [
+        {
+          "name": "islemSiraNo",
+          "displayName": "Islem Sira Numarasi",
+          "type": "string",
+          "enumRef": null,
+          "required": false,
+          "length": 15,
+          "description": "Sequence number; null-on-input pattern (s.201)",
+          "sensitive": false,
+          "syntheticOnlyRecommended": true,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 201,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "majistralHamMaddeKodu",
+          "displayName": "Majistral Ham Madde Kodu",
+          "type": "integer",
+          "enumRef": null,
+          "required": true,
+          "length": null,
+          "description": "Raw-material code from the guide catalog (Tablo 4.2.1.f.1.1.1, s.201+); catalog enum is v0.3 scope (s.201)",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 201,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "miktar",
+          "displayName": "Ham Madde Miktari",
+          "type": "integer",
+          "enumRef": null,
+          "required": true,
+          "length": null,
+          "description": "Raw-material quantity (s.201)",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 201,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "hamMaddeBirimi",
+          "displayName": "Ham Madde Birimi",
+          "type": "enum",
+          "enumRef": "ham-madde-birimi",
+          "required": true,
+          "length": null,
+          "description": "Raw-material unit - 1 Gram / 2 Miligram (s.201)",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 201,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
       "id": "MajistralIlacDVO",
       "domain": "hizmet-kayit",
       "direction": "input",
@@ -6235,7 +6453,7 @@
           "enumRef": null,
           "required": false,
           "length": null,
-          "description": "Raw-material records (MajistralHammaddeDVO[], Tablo 4.2.1.f.1.1, s.200); nested composite, expansion is v0.3 scope (s.200)",
+          "description": "Raw-material records, expanded as the MajistralHamMaddeDVO registry entity (Tablo 4.2.1.f.1.1, s.201)",
           "sensitive": false,
           "syntheticOnlyRecommended": false,
           "sourceRefs": [
@@ -6244,6 +6462,29 @@
               "sourceType": "official-guide",
               "guideVersion": "3.1.1",
               "page": 200,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "eklenenIlaclar",
+          "displayName": "Majistral Eklenen Ilac Bilgileri",
+          "type": "array",
+          "enumRef": null,
+          "required": false,
+          "length": null,
+          "description": "Added-drug records (MajistralEklenenIlacDVO[], Tablo 4.2.1.f.1.2, s.201); nested placeholder, expansion is v0.3 scope",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 201,
               "confidence": "extracted"
             }
           ],
@@ -8005,7 +8246,7 @@
           "enumRef": null,
           "required": false,
           "length": null,
-          "description": "Gene details worked in the operation (GenBilgisiDVO[], Tablo 4.2.1.j.2, s.228); nested composite, expansion is v0.3 scope (s.228)",
+          "description": "Gene details, expanded as the GenBilgisiDVO registry entity (Tablo 4.2.1.j.2, s.231) (s.228)",
           "sensitive": false,
           "syntheticOnlyRecommended": false,
           "sourceRefs": [
@@ -8014,6 +8255,121 @@
               "sourceType": "official-guide",
               "guideVersion": "3.1.1",
               "page": 228,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "tahlilTipi",
+          "displayName": "Tahlil Tipi",
+          "type": "string",
+          "enumRef": null,
+          "required": true,
+          "length": 6,
+          "description": "Lab-type code catalog (HEM/IDR/KGAZ/OGTT prefixes, s.229-231); catalog enum is v0.3 scope",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 229,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "birim",
+          "displayName": "Birim",
+          "type": "string",
+          "enumRef": null,
+          "required": true,
+          "length": 15,
+          "description": "Result unit (s.231)",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 231,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "sagSol",
+          "displayName": "Sag Sol Bilgisi",
+          "type": "string",
+          "enumRef": null,
+          "required": false,
+          "length": 1,
+          "description": "R (Sag) / L (Sol) side code (s.231)",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 231,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "ayniFarkliKesi",
+          "displayName": "Kesi Bilgisi",
+          "type": "enum",
+          "enumRef": "ayni-farkli-kesi",
+          "required": false,
+          "length": 1,
+          "description": "Incision/session relation; codes 1-5 match the ayni-farkli-kesi enum (s.231)",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 231,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "aciklama",
+          "displayName": "Aciklama",
+          "type": "string",
+          "enumRef": null,
+          "required": false,
+          "length": null,
+          "description": "Lab description (s.231)",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 231,
               "confidence": "extracted"
             }
           ],
@@ -8909,6 +9265,34 @@
           "fetchedAt": "2026-11-15",
           "page": 191,
           "section": "Tablo 4.2.1.c - AmeliyatveGirisimBilgisiDVO (Euroscore)",
+          "confidence": "extracted"
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
+      "id": "ham-madde-birimi",
+      "displayName": "Ham Madde Birimi",
+      "values": [
+        {
+          "code": "1",
+          "label": "Gram",
+          "description": "Gram unit."
+        },
+        {
+          "code": "2",
+          "label": "Miligram",
+          "description": "Milligram unit."
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "fetchedAt": "2026-11-15",
+          "page": 201,
+          "section": "Tablo 4.2.1.f.1.1 - MajistralHamMaddeDVO (hamMaddeBirimi)",
           "confidence": "extracted"
         }
       ],

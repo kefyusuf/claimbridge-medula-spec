@@ -40,7 +40,7 @@ describe("v0.3 nested (Group 21)", () => {
       "3",
     );
     expect(String(byName.get("hamMaddeler")?.["description"])).toContain(
-      "MajistralHammaddeDVO",
+      "MajistralHamMaddeDVO",
     );
     const refs = JSON.stringify(dvo?.data["sourceRefs"]);
     expect(refs).toContain('"page":199');
@@ -109,7 +109,7 @@ describe("v0.3 nested (Group 21)", () => {
     const manifest = JSON.parse(
       readFileSync(resolve(root, "dist", "manifest.json"), "utf8"),
     ) as { counts: Record<string, number> };
-    expect(manifest.counts.dvos).toBe(38);
-    expect(manifest.counts.enums).toBe(18);
+    expect(manifest.counts.dvos).toBe(41);
+    expect(manifest.counts.enums).toBe(19);
   });
 });

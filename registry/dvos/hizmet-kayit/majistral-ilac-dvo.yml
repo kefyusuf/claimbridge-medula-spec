@@ -139,7 +139,7 @@ fields:
     enumRef: null
     required: false
     length: null
-    description: Raw-material records (MajistralHammaddeDVO[], Tablo 4.2.1.f.1.1, s.200); nested composite, expansion is v0.3 scope (s.200)
+    description: Raw-material records, expanded as the MajistralHamMaddeDVO registry entity (Tablo 4.2.1.f.1.1, s.201)
     sensitive: false
     syntheticOnlyRecommended: false
     sourceRefs:
@@ -147,6 +147,25 @@ fields:
         sourceType: official-guide
         guideVersion: "3.1.1"
         page: 200
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: eklenenIlaclar
+    displayName: Majistral Eklenen Ilac Bilgileri
+    type: array
+    enumRef: null
+    required: false
+    length: null
+    description: Added-drug records (MajistralEklenenIlacDVO[], Tablo 4.2.1.f.1.2, s.201); nested placeholder, expansion is v0.3 scope
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 201
         confidence: extracted
     conditionalRequired: []
     introducedIn: "0.2.0"

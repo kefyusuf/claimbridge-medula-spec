@@ -118,6 +118,9 @@ erDiagram
     date faturaTarihi
     string ktsHbysKodu
   }
+  GenBilgisiDVO {
+    string genKodu
+  }
   HastaYatisBilgisiDVO {
     string bransKodu
     string drTescilNo
@@ -231,6 +234,10 @@ erDiagram
     string birlikteYapilanIslemSUTKodu
     string birlikteYapilanIslemHizmetSunucuRefNo
   }
+  IslemDetayDVO {
+    string islemSiraNo
+    decimal islemTutari
+  }
   KanBilgisiDVO {
     string bransKodu
     string drTescilNo
@@ -258,6 +265,12 @@ erDiagram
     string ozelDurum
     array cokluOzelDurum
   }
+  MajistralHamMaddeDVO {
+    string islemSiraNo
+    integer majistralHamMaddeKodu
+    integer miktar
+    enum hamMaddeBirimi
+  }
   MajistralIlacDVO {
     string islemSiraNo
     enum preparatTuru
@@ -266,6 +279,7 @@ erDiagram
     string ambalajBoyutu
     string ambalajAdet
     array hamMaddeler
+    array eklenenIlaclar
   }
   MalzemeBilgisiDVO {
     string kodsuzMalzemeAdi
@@ -347,6 +361,11 @@ erDiagram
     string raporTakipNo
     string istemYapanDrBrans
     array genBilgisi
+    string tahlilTipi
+    string birim
+    string sagSol
+    enum ayniFarkliKesi
+    string aciklama
   }
   TahlilSonucDVO {
     string islemSiraNo
@@ -412,6 +431,7 @@ erDiagram
   HizmetDVO }o--|| odeme_sorgu_durum : enumRef
   HizmetDetayDVO }o--|| taburcu_kodu : enumRef
   IlacBilgisiDVO }o--|| ilac_turu : enumRef
+  MajistralHamMaddeDVO }o--|| ham_madde_birimi : enumRef
   MajistralIlacDVO }o--|| preparat_turu : enumRef
   MajistralIlacDVO }o--|| ambalaj_turu : enumRef
   MalzemeBilgisiDVO }o--|| malzeme_turu : enumRef
@@ -421,6 +441,7 @@ erDiagram
   ProvizyonGirisDVO }o--|| tedavi_tipi : enumRef
   ProvizyonGirisDVO }o--|| takip_tipi : enumRef
   ProvizyonGirisDVO }o--|| ekds_yontem_gerekce : enumRef
+  TahlilBilgisiDVO }o--|| ayni_farkli_kesi : enumRef
   TakipDVO }o--|| takip_tipi : enumRef
   TakipDVO }o--|| takip_durumu : enumRef
   TakipDVO }o--|| ekds_yontem_gerekce : enumRef

@@ -95,7 +95,7 @@ Domain: `fatura-kayit` · Direction: `output` · Status: `reviewed` · Source re
 | `taburcuKodu` | enum |  | taburcu-kodu |  | Discharge code (s.245-246); codes 1-13 in the taburcu-kodu registry enum. |
 | `takipNo` | string |  | — |  | Tracking number of the invoiced episode (s.246). |
 | `takipToplamTutar` | decimal |  | — |  | Total amount calculated by GSS for the takip (s.246). |
-| `islemDetaylari` | array |  | — |  | Operation detail records (IslemDetayDVO[], Tablo 4.3.1.f, s.246). Nested composite; expansion is v0.3 scope. |
+| `islemDetaylari` | array |  | — |  | Operation detail records, expanded as the IslemDetayDVO registry entity (Tablo 4.3.1.f, s.242-243). |
 
 ## `FaturaGirisDVO`
 
@@ -173,6 +173,14 @@ Domain: `fatura-kayit` · Direction: `input` · Status: `reviewed` · Source ref
 | `faturaRefNo` | string |  | — |  | Reference number of the invoice to read (s.244). |
 | `faturaTarihi` | date |  | — |  | Invoice date in dd.mm.yyyy format per the guide (s.244). |
 | `ktsHbysKodu` | string |  | — |  | Software vendor KTS code (s.244). |
+
+## `GenBilgisiDVO`
+
+Domain: `hizmet-kayit` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `genKodu` | string |  | — |  | Gene code; the table closes at s.232 with TaniBilgisiDVO following (s.231) |
 
 ## `HastaYatisBilgisiDVO`
 
@@ -342,6 +350,15 @@ Domain: `hizmet-kayit` · Direction: `input` · Status: `reviewed` · Source ref
 | `birlikteYapilanIslemSUTKodu` | string |  | — |  | SUT code of the concurrently performed operation (s.199) |
 | `birlikteYapilanIslemHizmetSunucuRefNo` | string |  | — |  | Institution reference of the concurrently performed operation (s.199) |
 
+## `IslemDetayDVO`
+
+Domain: `fatura-kayit` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `islemSiraNo` | string |  | — |  | Medula sequence number of the operation (s.243) |
+| `islemTutari` | decimal |  | — |  | Operation-specific amount within the takip (s.243) |
+
 ## `KanBilgisiDVO`
 
 Domain: `hizmet-kayit` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19, medula-hastane-guide-3-1-1-2026-10-19
@@ -384,6 +401,17 @@ Domain: `hizmet-kayit` · Direction: `input` · Status: `reviewed` · Source ref
 | `ozelDurum` | string |  | — |  | (Special condition code, Tablo 5.1 OzelDurumVO) s.224 |
 | `cokluOzelDurum` | array |  | — |  | (Multiple special-condition codes) s.224 |
 
+## `MajistralHamMaddeDVO`
+
+Domain: `hizmet-kayit` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `islemSiraNo` | string |  | — |  | Sequence number; null-on-input pattern (s.201) |
+| `majistralHamMaddeKodu` | integer |  | — |  | Raw-material code from the guide catalog (Tablo 4.2.1.f.1.1.1, s.201+); catalog enum is v0.3 scope (s.201) |
+| `miktar` | integer |  | — |  | Raw-material quantity (s.201) |
+| `hamMaddeBirimi` | enum |  | ham-madde-birimi |  | Raw-material unit - 1 Gram / 2 Miligram (s.201) |
+
 ## `MajistralIlacDVO`
 
 Domain: `hizmet-kayit` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19, medula-hastane-guide-3-1-1-2026-10-19
@@ -396,7 +424,8 @@ Domain: `hizmet-kayit` · Direction: `input` · Status: `reviewed` · Source ref
 | `ambalajTuru` | enum |  | ambalaj-turu |  | Packaging type - codes 1-3 in the ambalaj-turu registry enum (s.200) |
 | `ambalajBoyutu` | string |  | — |  | Packaging size code; the guide lists ~30 codes (1-19, 21-31) - enum candidate for v0.3 (s.200) |
 | `ambalajAdet` | string |  | — |  | Packaging quantity (s.200) |
-| `hamMaddeler` | array |  | — |  | Raw-material records (MajistralHammaddeDVO[], Tablo 4.2.1.f.1.1, s.200); nested composite, expansion is v0.3 scope (s.200) |
+| `hamMaddeler` | array |  | — |  | Raw-material records, expanded as the MajistralHamMaddeDVO registry entity (Tablo 4.2.1.f.1.1, s.201) |
+| `eklenenIlaclar` | array |  | — |  | Added-drug records (MajistralEklenenIlacDVO[], Tablo 4.2.1.f.1.2, s.201); nested placeholder, expansion is v0.3 scope |
 
 ## `MalzemeBilgisiDVO`
 
@@ -507,7 +536,12 @@ Domain: `hizmet-kayit` · Direction: `input` · Status: `reviewed` · Source ref
 | `cokluOzelDurum` | array |  | — |  | Multiple special-condition codes (s.228) |
 | `raporTakipNo` | string |  | — |  | Report tracking number (s.228) |
 | `istemYapanDrBrans` | string |  | — |  | Branch code of the requesting doctor (s.228) |
-| `genBilgisi` | array |  | — |  | Gene details worked in the operation (GenBilgisiDVO[], Tablo 4.2.1.j.2, s.228); nested composite, expansion is v0.3 scope (s.228) |
+| `genBilgisi` | array |  | — |  | Gene details, expanded as the GenBilgisiDVO registry entity (Tablo 4.2.1.j.2, s.231) (s.228) |
+| `tahlilTipi` | string |  | — |  | Lab-type code catalog (HEM/IDR/KGAZ/OGTT prefixes, s.229-231); catalog enum is v0.3 scope |
+| `birim` | string |  | — |  | Result unit (s.231) |
+| `sagSol` | string |  | — |  | R (Sag) / L (Sol) side code (s.231) |
+| `ayniFarkliKesi` | enum |  | ayni-farkli-kesi |  | Incision/session relation; codes 1-5 match the ayni-farkli-kesi enum (s.231) |
+| `aciklama` | string |  | — |  | Lab description (s.231) |
 
 ## `TahlilSonucDVO`
 

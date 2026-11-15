@@ -119,8 +119,8 @@ fields:
     required: false
     length: null
     description: >-
-      Operation detail records (IslemDetayDVO[], Tablo 4.3.1.f, s.246).
-      Nested composite; expansion is v0.3 scope.
+      Operation detail records, expanded as the IslemDetayDVO registry
+      entity (Tablo 4.3.1.f, s.242-243).
     sensitive: false
     syntheticOnlyRecommended: false
     sourceRefs:
