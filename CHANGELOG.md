@@ -6,6 +6,32 @@ Format: [Keep a Changelog](https://keepachangelog.com); versioning: SemVer
 
 ## [Unreleased]
 
+### Group 20 — feat/v03-ilac (2026-11-15)
+
+Local group: no remote yet, so the PR step is replaced by a local
+`--no-ff` merge to `main` (PRD §28 step 6 fallback).
+
+- TDD red first: IlacBilgisiDVO suite (4 checks) committed and verified
+  failing (4/4 red) before the DVO existed (`bcc5880`).
+- `IlacBilgisiDVO` registered with the verified core of the 26-page drug
+  table (Tablo 4.2.1.f, s.198-199, 18 fields): `ilacTuru` enum binding
+  (1 Barkodlu / 2 Majistral / 3 Radyofarmasotik), the barkod exception
+  (majistral harici zorunlu), `adet` Decimal with the usage-unit note
+  (Yardimci Servisleri ilac-ara), majistral/radyofarma `tutar`,
+  `paketHaric`, ITS/batch/serial tracking fields, and the
+  `majistralIlac` nested placeholder (MajistralIlacDVO, Tablo 4.2.1.f.1).
+- New enum `ilac-turu` (3 codes, s.198).
+- Honest extraction boundary: s.200-223 rows recorded as a v0.3
+  continuation in the DVO sourceRefs notes; `MajistralIlacDVO` expansion
+  deferred.
+- Registry now: **36 DVOs, 16 enums**; dist regenerated.
+
+Validation output: `pnpm test` → 139/139 passed (21 suites); `tsc
+--noEmit` → clean; `pnpm validate` → OK; `pnpm check` → OK;
+`pnpm format:check` → OK.
+
+Remaining TODOs: none for this group.
+
 ### Group 19 — feat/v03-entries-3 (2026-11-15)
 
 Local group: no remote yet, so the PR step is replaced by a local

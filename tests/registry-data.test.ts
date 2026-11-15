@@ -39,6 +39,7 @@ const EXPECTED_DVO_FILES = [
   "hizmet-kayit/hizmet-kayit-cevap-dvo.yml",
   "hizmet-kayit/ameliyatve-girisim-bilgisi-dvo.yml",
   "hizmet-kayit/diger-islem-bilgisi-dvo.yml",
+  "hizmet-kayit/ilac-bilgisi-dvo.yml",
   "hizmet-kayit/hizmet-kayit-giris-dvo.yml",
   "hizmet-kayit/dis-bilgisi-dvo.yml",
   "hizmet-kayit/kan-bilgisi-dvo.yml",
@@ -72,6 +73,7 @@ const EXPECTED_ENUM_IDS = [
   "istisnai-hal",
   "taburcu-kodu",
   "malzeme-turu",
+  "ilac-turu",
   "ayni-farkli-kesi",
   "euroscore",
 ];

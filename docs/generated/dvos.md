@@ -317,6 +317,31 @@ Domain: `hizmet-kayit` · Direction: `input` · Status: `reviewed` · Source ref
 | `takipNo` | string |  | — |  | Tracking number whose registered operations are read (s.237). |
 | `ktsHbysKodu` | string |  | — |  | Software vendor KTS code (s.237). |
 
+## `IlacBilgisiDVO`
+
+Domain: `hizmet-kayit` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19, medula-hastane-guide-3-1-1-2026-10-19, medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `aciklama` | string |  | — |  | Drug description; majistral drugs carry the content here (s.198) |
+| `adet` | decimal |  | — |  | Drug quantity; the usage unit comes from the Yardimci Servisleri ilac-ara method (s.198) |
+| `barkod` | string |  | — |  | Drug barcode registered in GSS; mandatory except for majistral drugs (s.198) |
+| `hizmetSunucuRefNo` | string |  | — |  | Institution reference paired with islemSiraNo (s.198) |
+| `ilacTuru` | enum |  | ilac-turu |  | Drug type - 1 Barkodlu, 2 Majistral, 3 Radyofarmasotik Ajan (s.198) |
+| `islemSiraNo` | string |  | — |  | Sequence number; null-on-input pattern (s.198) |
+| `islemTarihi` | date |  | — |  | Drug usage date, dd.mm.yyyy (s.198) |
+| `tutar` | decimal |  | — |  | Amount for majistral drugs and radiopharmaceutical agents (s.198) |
+| `paketHaric` | string |  | — |  | 0 when included in the package, 1 when excluded (s.198) |
+| `ozelDurum` | string |  | — |  | Special condition code, Tablo 5.1 OzelDurumVO (s.198) |
+| `cokluOzelDurum` | array |  | — |  | Multiple special-condition codes (s.198) |
+| `seriNo` | string |  | — |  | Drug serial number (s.199) |
+| `sonKullanimTarihi` | date |  | — |  | Drug expiry date (s.199) |
+| `batchNo` | string |  | — |  | Drug batch number (s.199) |
+| `itsBirimSarfId` | string |  | — |  | Unit consumption ID received from the ITS system (s.199) |
+| `majistralIlac` | object |  | — |  | Majistral drug composite (MajistralIlacDVO, Tablo 4.2.1.f.1, s.199); nested placeholder, expansion is v0.3 scope (s.199) |
+| `birlikteYapilanIslemSUTKodu` | string |  | — |  | SUT code of the concurrently performed operation (s.199) |
+| `birlikteYapilanIslemHizmetSunucuRefNo` | string |  | — |  | Institution reference of the concurrently performed operation (s.199) |
+
 ## `KanBilgisiDVO`
 
 Domain: `hizmet-kayit` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19, medula-hastane-guide-3-1-1-2026-10-19
