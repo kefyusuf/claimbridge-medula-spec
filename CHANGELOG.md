@@ -6,6 +6,41 @@ Format: [Keep a Changelog](https://keepachangelog.com); versioning: SemVer
 
 ## [Unreleased]
 
+### Group 11 — feat/v02-contracts (2026-11-15)
+
+Local group: no remote yet, so the PR step is replaced by a local
+`--no-ff` merge to `main` (PRD §28 step 6 fallback).
+
+- TDD red first: contract resolution suite (6 checks) committed and
+  verified failing (6/6 red) before the new DVOs existed (`9c5160f`).
+- Eight new DVOs, all `reviewed` with page references (`11a29b2`):
+  HizmetOkuGiris/CevapDVO (4.2.2, s.236-238), HizmetIptalGiris/CevapDVO
+  (4.2.3, s.239), FaturaOkuGiris/CevapDVO (4.3.3, s.244-245),
+  FaturaIptalGiris/CevapDVO (4.3.2, s.243-244).
+- **Every method contract now resolves**: hizmet-kaydi-oku/iptal and
+  fatura-oku/iptal/fatura-tutar-oku are `reviewed`; fatura-tutar-oku
+  reuses FaturaGirisDVO/FaturaCevapDVO per 4.3.4 (s.246). The draft-only
+  null-contract allowance is no longer used anywhere.
+- Mutually-exclusive read filters documented
+  (`islemSiraNumaralari` vs `hizmetSunucuRefNolari`, s.237); fatura-kayit
+  gains the `FaturaBilgisiKaydet` alias evidence (s.239).
+- `tools/extract` workspace shipped (PRD §25.4): README workflow +
+  `guide-page-map.md` documenting every discovered table location
+  (s.149, 154-159, 165-168, 189-190, 236-246, 240-245).
+- Nested composites (HizmetDVO, FaturaCevapDetayDVO) modeled as
+  placeholders with page citations — v0.3 scope.
+
+Deferred to v0.3: nested composite expansion (Tablo 4.2.1.c-l, 4.3.1.c-e,
+4.3.3.c); complete sonucKodu catalog; istisnaiHal/devredilenKurum enums
+(visual pass needed for column mapping); new HastaKabul methods; UTS
+kesinleştirme; Mimosa full security audit re-run.
+
+Validation output: `pnpm test` → 97/97 passed (12 suites); `tsc
+--noEmit` → clean; `pnpm validate` → OK; `pnpm check` → OK;
+`pnpm format:check` → OK.
+
+Remaining TODOs: none for this group.
+
 ### Group 10 — feat/v02-enrichment (2026-11-15)
 
 Local group: no remote yet, so the PR step is replaced by a local
