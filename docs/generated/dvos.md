@@ -45,6 +45,34 @@ Domain: `hizmet-kayit` · Direction: `input` · Status: `reviewed` · Source ref
 | `istemYapanDrTescilNo` | string |  | — |  | Registration number of the requesting doctor (s.193). |
 | `istemYapanDrBrans` | string |  | — |  | Branch code of the requesting doctor (s.193). |
 
+## `DisBilgisiDVO`
+
+Domain: `hizmet-kayit` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19, medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `drTescilNo` | string |  | — |  | Registration number of the performing doctor (s.193) |
+| `anomali` | string |  | — |  | Anomaly flag taking E (Evet) or H (Hayir) (s.193) |
+| `adet` | integer |  | — |  | Quantity of the dental operation (s.193) |
+| `bransKodu` | string |  | — |  | Branch code of the operation (s.193) |
+| `hizmetSunucuRefNo` | string |  | — |  | Institution reference paired with islemSiraNo (s.193) |
+| `islemSiraNo` | string |  | — |  | Sequence number; null-on-input pattern (s.193) |
+| `islemTarihi` | date |  | — |  | Operation date, dd.mm.yyyy (s.193) |
+| `sagAltCene` | string |  | — |  | Teeth of the right lower jaw (s.193) |
+| `sagSutAltCene` | string |  | — |  | Milk teeth of the right lower jaw (children) (s.193) |
+| `sagSutUstCene` | string |  | — |  | Milk teeth of the right upper jaw (children) (s.194) |
+| `sagUstCene` | string |  | — |  | Teeth of the right upper jaw (s.194) |
+| `solAltCene` | string |  | — |  | Teeth of the left lower jaw (s.194) |
+| `solSutAltCene` | string |  | — |  | Milk teeth of the left lower jaw (children) (s.194) |
+| `solSutUstCene` | string |  | — |  | Milk teeth of the left upper jaw (children) (s.194) |
+| `solUstCene` | string |  | — |  | Teeth of the left upper jaw (s.194) |
+| `sagAltCeneAnomaliDis` | string |  | — |  | E when an operation was performed on an anomalous tooth (s.194) |
+| `sagUstCeneAnomaliDis` | string |  | — |  | E when an operation was performed on an anomalous tooth (s.194) |
+| `solAltCeneAnomaliDis` | string |  | — |  | E when an operation was performed on an anomalous tooth (s.194) |
+| `solUstCeneAnomaliDis` | string |  | — |  | E when an operation was performed on an anomalous tooth (s.194) |
+| `sutKodu` | string |  | — |  | SUT-defined operation code (s.194) |
+| `ayniFarkliKesi` | string |  | — |  | Incision/session relation; values diverge from the ameliyat table (cut in extraction, s.194) (s.194) |
+
 ## `FaturaCevapDVO`
 
 Domain: `fatura-kayit` · Direction: `output` · Status: `draft` · Source refs: medula-hastane-guide-2026-06-17
@@ -331,6 +359,36 @@ Domain: `hizmet-kayit` · Direction: `input` · Status: `reviewed` · Source ref
 | `ozelDurum` | string |  | — |  | (Special condition code, Tablo 5.1 OzelDurumVO) s.224 |
 | `cokluOzelDurum` | array |  | — |  | (Multiple special-condition codes) s.224 |
 
+## `MalzemeBilgisiDVO`
+
+Domain: `hizmet-kayit` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19, medula-hastane-guide-3-1-1-2026-10-19, medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `kodsuzMalzemeAdi` | string |  | — |  | Name of the uncoded material; required when malzemeTuru is 3 (s.224) |
+| `adet` | decimal |  | — |  | Quantity of the used material (s.224) |
+| `barkod` | string |  | — |  | UBB material barcode; required since 01.02.2008 (s.225) |
+| `hizmetSunucuRefNo` | string |  | — |  | Institution reference paired with islemSiraNo (s.225) |
+| `islemSiraNo` | string |  | — |  | Sequence number; null-on-input pattern (s.225) |
+| `islemTarihi` | date |  | — |  | Date the material was used, dd.mm.yyyy (s.225) |
+| `kodsuzMalzemeFiyati` | decimal |  | — |  | Price of the uncoded material; sent for coded materials too (s.225) |
+| `malzemeKodu` | string |  | — |  | Material code; required for SUT and protocol materials (s.225) |
+| `malzemeTuru` | enum |  | malzeme-turu |  | Material type - 1 SUT kodlu, 2 Emekli Sandigi protokol kodlu, 3 kodsuz (s.225) |
+| `paketHaric` | string |  | — |  | 0 when included in the package, 1 when excluded (s.225) |
+| `katkiPayi` | string |  | — |  | E when a patient contribution exists, H when not (s.225) |
+| `kdv` | integer |  | — |  | VAT amount of the material (s.225) |
+| `ozelDurum` | string |  | — |  | Special condition code, Tablo 5.1 OzelDurumVO (s.225) |
+| `cokluOzelDurum` | array |  | — |  | Multiple special-condition codes (s.226) |
+| `malzemeSatinAlisTarihi` | date |  | — |  | Date the material was purchased (s.226) |
+| `donorId` | string |  | — |  | Mandatory for allograft shipments (s.226) |
+| `ihaleKesinlesmeTarihi` | date |  | — |  | Mandatory for public institutions for uncoded materials used on or after 01.10.2014 (s.226) |
+| `ikNoAlimNo` | string |  | — |  | Mandatory for public institutions for uncoded materials used on or after 01.10.2014 (s.226) |
+| `bayiNo` | string |  | — |  | Vendor identifier of the material supplier (mandatory since 02.07.2018) (s.226) |
+| `raporTakipNo` | string |  | — |  | Report tracking number (s.226) |
+| `sagSol` | string |  | — |  | R (Sag) / L (Sol) side code (s.226) |
+| `birlikteYapilanIslemSUTKodu` | string |  | — |  | SUT code of the concurrently performed operation (s.226) |
+| `birlikteYapilanIslemHizmetSunucuRefNo` | string |  | — |  | Institution reference of the concurrently performed operation (s.226) |
+
 ## `MuayeneBilgisiDVO`
 
 Domain: `hizmet-kayit` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19, medula-hastane-guide-3-1-1-2026-10-19
@@ -392,6 +450,25 @@ Domain: `hasta-kabul` · Direction: `input` · Status: `reviewed` · Source refs
 | `ktsHbysKodu` | string |  | — |  | Software vendor KTS code (s.159). Verification correction - the guide marks this required. |
 | `ekdsYontemGerekce` | enum |  | ekds-yontem-gerekce |  | EKDS verification method justification codes; Integer[] in the guide, modeled as an array of ekds-yontem-gerekce codes (s.167, changelog s.13). |
 | `doktorTescilNo` | string |  | — |  | Registration number of the admitting doctor. Verification finding - this field does not appear in Tablo 4.1.1.a; kept for PRD 13.4 compatibility and slated for removal in 0.2.0. |
+
+## `TahlilBilgisiDVO`
+
+Domain: `hizmet-kayit` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19, medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `bransKodu` | string |  | — |  | Branch code of the lab test (s.227) |
+| `drTescilNo` | string |  | — |  | Registration number of the performing doctor (s.227) |
+| `istemYapanDrTescilNo` | string |  | — |  | Registration number of the requesting doctor (s.227) |
+| `sutKodu` | string |  | — |  | SUT-defined operation code (s.227) |
+| `hizmetSunucuRefNo` | string |  | — |  | Institution reference paired with islemSiraNo (s.227) |
+| `islemSiraNo` | string |  | — |  | Sequence number; null-on-input pattern (s.227) |
+| `islemTarihi` | date |  | — |  | Lab test date, dd.mm.yyyy (s.228) |
+| `ozelDurum` | string |  | — |  | Special condition code, Tablo 5.1 OzelDurumVO (s.228) |
+| `cokluOzelDurum` | array |  | — |  | Multiple special-condition codes (s.228) |
+| `raporTakipNo` | string |  | — |  | Report tracking number (s.228) |
+| `istemYapanDrBrans` | string |  | — |  | Branch code of the requesting doctor (s.228) |
+| `genBilgisi` | array |  | — |  | Gene details worked in the operation (GenBilgisiDVO[], Tablo 4.2.1.j.2, s.228); nested composite, expansion is v0.3 scope (s.228) |
 
 ## `TakipDVO`
 

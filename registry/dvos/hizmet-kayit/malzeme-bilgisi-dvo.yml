@@ -1,0 +1,466 @@
+id: MalzemeBilgisiDVO
+domain: hizmet-kayit
+direction: input
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: "3.1.1"
+    fetchedAt: "2026-11-15"
+    page: 224
+    section: Tablo 4.2.1.h - MalzemeBilgisiDVO (ilk kisim)
+    confidence: extracted
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: "3.1.1"
+    fetchedAt: "2026-11-15"
+    page: 225
+    section: Tablo 4.2.1.h - MalzemeBilgisiDVO (devam)
+    confidence: extracted
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: "3.1.1"
+    fetchedAt: "2026-11-15"
+    page: 226
+    section: Tablo 4.2.1.h - MalzemeBilgisiDVO (devam)
+    confidence: extracted
+fields:
+  - name: kodsuzMalzemeAdi
+    displayName: Kodsuz Malzemenin Adi
+    type: string
+    enumRef: null
+    required: false
+    length: 100
+    description: Name of the uncoded material; required when malzemeTuru is 3 (s.224)
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 224
+        confidence: extracted
+    conditionalRequired:
+      - condition: malzemeTuru is 3 (kodsuz malzeme)
+        note: guide marks this field required in that case (s.224)
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: adet
+    displayName: Adet
+    type: decimal
+    enumRef: null
+    required: true
+    length: null
+    description: Quantity of the used material (s.224)
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 224
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: barkod
+    displayName: UBB Malzeme Barkod Bilgisi
+    type: string
+    enumRef: null
+    required: false
+    length: 20
+    description: UBB material barcode; required since 01.02.2008 (s.225)
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 225
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: hizmetSunucuRefNo
+    displayName: Hizmet Sunucu Referans Numarasi
+    type: string
+    enumRef: null
+    required: true
+    length: 20
+    description: Institution reference paired with islemSiraNo (s.225)
+    sensitive: false
+    syntheticOnlyRecommended: true
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 225
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: islemSiraNo
+    displayName: Islem Sira Numarasi
+    type: string
+    enumRef: null
+    required: false
+    length: 15
+    description: Sequence number; null-on-input pattern (s.225)
+    sensitive: false
+    syntheticOnlyRecommended: true
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 225
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: islemTarihi
+    displayName: Islem Tarihi
+    type: date
+    enumRef: null
+    required: true
+    length: 10
+    description: Date the material was used, dd.mm.yyyy (s.225)
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 225
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: kodsuzMalzemeFiyati
+    displayName: Kodsuz Malzemenin Fiyati
+    type: decimal
+    enumRef: null
+    required: true
+    length: null
+    description: Price of the uncoded material; sent for coded materials too (s.225)
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 225
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: malzemeKodu
+    displayName: Malzemenin Kodu
+    type: string
+    enumRef: null
+    required: false
+    length: 20
+    description: Material code; required for SUT and protocol materials (s.225)
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 225
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: malzemeTuru
+    displayName: Malzemenin Turu
+    type: enum
+    enumRef: malzeme-turu
+    required: true
+    length: 1
+    description: Material type - 1 SUT kodlu, 2 Emekli Sandigi protokol kodlu, 3 kodsuz (s.225)
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 225
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: paketHaric
+    displayName: Paket Haric Bilgisi
+    type: string
+    enumRef: null
+    required: true
+    length: 1
+    description: 0 when included in the package, 1 when excluded (s.225)
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 225
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: katkiPayi
+    displayName: Katki Payi Bilgisi
+    type: string
+    enumRef: null
+    required: true
+    length: 1
+    description: E when a patient contribution exists, H when not (s.225)
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 225
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: kdv
+    displayName: KDV
+    type: integer
+    enumRef: null
+    required: false
+    length: null
+    description: VAT amount of the material (s.225)
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 225
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: ozelDurum
+    displayName: Ozel Durum
+    type: string
+    enumRef: null
+    required: false
+    length: 1
+    description: Special condition code, Tablo 5.1 OzelDurumVO (s.225)
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 225
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: cokluOzelDurum
+    displayName: Coklu Ozel Durum
+    type: array
+    enumRef: null
+    required: false
+    length: null
+    description: Multiple special-condition codes (s.226)
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 226
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: malzemeSatinAlisTarihi
+    displayName: Malzeme Satin Alis Tarihi
+    type: date
+    enumRef: null
+    required: true
+    length: 10
+    description: Date the material was purchased (s.226)
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 226
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: donorId
+    displayName: Donor ID
+    type: string
+    enumRef: null
+    required: false
+    length: 20
+    description: Mandatory for allograft shipments (s.226)
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 226
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: ihaleKesinlesmeTarihi
+    displayName: Ihale Kesinlesme Tarihi
+    type: date
+    enumRef: null
+    required: false
+    length: 10
+    description: Mandatory for public institutions for uncoded materials used on or after 01.10.2014 (s.226)
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 226
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: ikNoAlimNo
+    displayName: Ihale Kayit No / Alim No
+    type: string
+    enumRef: null
+    required: false
+    length: 25
+    description: Mandatory for public institutions for uncoded materials used on or after 01.10.2014 (s.226)
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 226
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: bayiNo
+    displayName: Bayi Firma Tanimlayici No
+    type: string
+    enumRef: null
+    required: true
+    length: 13
+    description: Vendor identifier of the material supplier (mandatory since 02.07.2018) (s.226)
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 226
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: raporTakipNo
+    displayName: Rapor Takip Numarasi
+    type: string
+    enumRef: null
+    required: false
+    length: null
+    description: Report tracking number (s.226)
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 226
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: sagSol
+    displayName: Sag Sol Bilgisi
+    type: string
+    enumRef: null
+    required: false
+    length: 1
+    description: R (Sag) / L (Sol) side code (s.226)
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 226
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: birlikteYapilanIslemSUTKodu
+    displayName: Birlikte Yapilan Islem SUT Kodu
+    type: string
+    enumRef: null
+    required: false
+    length: null
+    description: SUT code of the concurrently performed operation (s.226)
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 226
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: birlikteYapilanIslemHizmetSunucuRefNo
+    displayName: Birlikte Yapilan Islem Hizmet Sunucu Ref No
+    type: string
+    enumRef: null
+    required: false
+    length: 20
+    description: Institution reference of the concurrently performed operation (s.226)
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 226
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+status: reviewed

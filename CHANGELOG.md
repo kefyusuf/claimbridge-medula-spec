@@ -6,6 +6,33 @@ Format: [Keep a Changelog](https://keepachangelog.com); versioning: SemVer
 
 ## [Unreleased]
 
+### Group 19 — feat/v03-entries-3 (2026-11-15)
+
+Local group: no remote yet, so the PR step is replaced by a local
+`--no-ff` merge to `main` (PRD §28 step 6 fallback).
+
+- TDD red first: entry composite suite part 3 (5 checks) committed and
+  verified failing (5/5 red) before the composites existed (`7250e7a`).
+- `DisBilgisiDVO` (4.2.1.e, s.193-194, 21 fields): the complete dental
+  chart (8 cene fields incl. sut-diş variants + 4 anomali-diş flags),
+  anomali E/H flag, and a table-divergent ayniFarkliKesi (values cut in
+  extraction — noted).
+- `MalzemeBilgisiDVO` (4.2.1.h, s.224-226, 23 fields): procurement chain
+  (kodsuzMalzeme* price/name, malzemeTuru, paketHaric, katkiPayi, kdv,
+  bayiNo(13) mandatory since 02.07.2018, ihale/ikNo fields mandatory for
+  public institutions since 01.10.2014, donorId for allografts,
+  birlikteYapilanIslem pair from the changelog).
+- New enum `malzeme-turu` (3 codes, s.225).
+- `TahlilBilgisiDVO` (4.2.1.j, s.227-228, 12 fields) with the genBilgisi
+  nested placeholder (GenBilgisiDVO, Tablo 4.2.1.j.2) — v0.3 scope.
+- Registry now: **35 DVOs, 15 enums**; dist regenerated.
+
+Validation output: `pnpm test` → 135/135 passed (20 suites); `tsc
+--noEmit` → clean; `pnpm validate` → OK; `pnpm check` → OK;
+`pnpm format:check` → OK.
+
+Remaining TODOs: none for this group.
+
 ### Group 18 — feat/v03-entries-2 (2026-11-15)
 
 Local group: no remote yet, so the PR step is replaced by a local

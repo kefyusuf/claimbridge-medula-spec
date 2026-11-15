@@ -1,0 +1,419 @@
+id: DisBilgisiDVO
+domain: hizmet-kayit
+direction: input
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: "3.1.1"
+    fetchedAt: "2026-11-15"
+    page: 193
+    section: Tablo 4.2.1.e - DisBilgisiDVO (ilk kisim)
+    confidence: extracted
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: "3.1.1"
+    fetchedAt: "2026-11-15"
+    page: 194
+    section: Tablo 4.2.1.e - DisBilgisiDVO (devam)
+    confidence: extracted
+fields:
+  - name: drTescilNo
+    displayName: Doktor Tescil No
+    type: string
+    enumRef: null
+    required: true
+    length: 16
+    description: Registration number of the performing doctor (s.193)
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 193
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: anomali
+    displayName: Anomali
+    type: string
+    enumRef: null
+    required: true
+    length: 1
+    description: Anomaly flag taking E (Evet) or H (Hayir) (s.193)
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 193
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: adet
+    displayName: Adet
+    type: integer
+    enumRef: null
+    required: true
+    length: null
+    description: Quantity of the dental operation (s.193)
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 193
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: bransKodu
+    displayName: Brans Kodu
+    type: string
+    enumRef: null
+    required: true
+    length: 4
+    description: Branch code of the operation (s.193)
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 193
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: hizmetSunucuRefNo
+    displayName: Hizmet Sunucu Referans Numarasi
+    type: string
+    enumRef: null
+    required: true
+    length: 20
+    description: Institution reference paired with islemSiraNo (s.193)
+    sensitive: false
+    syntheticOnlyRecommended: true
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 193
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: islemSiraNo
+    displayName: Islem Sira Numarasi
+    type: string
+    enumRef: null
+    required: false
+    length: 15
+    description: Sequence number; null-on-input pattern (s.193)
+    sensitive: false
+    syntheticOnlyRecommended: true
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 193
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: islemTarihi
+    displayName: Islem Tarihi
+    type: date
+    enumRef: null
+    required: true
+    length: 10
+    description: Operation date, dd.mm.yyyy (s.193)
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 193
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: sagAltCene
+    displayName: Sag Alt Cenedeki Disler
+    type: string
+    enumRef: null
+    required: true
+    length: 8
+    description: Teeth of the right lower jaw (s.193)
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 193
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: sagSutAltCene
+    displayName: Cocukta Sag Alt Cenedeki Sut Disleri
+    type: string
+    enumRef: null
+    required: true
+    length: 5
+    description: Milk teeth of the right lower jaw (children) (s.193)
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 193
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: sagSutUstCene
+    displayName: Cocukta Sag Ust Cenedeki Sut Disleri
+    type: string
+    enumRef: null
+    required: true
+    length: 5
+    description: Milk teeth of the right upper jaw (children) (s.194)
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 194
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: sagUstCene
+    displayName: Sag Ust Cenedeki Disler
+    type: string
+    enumRef: null
+    required: true
+    length: 8
+    description: Teeth of the right upper jaw (s.194)
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 194
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: solAltCene
+    displayName: Sol Alt Cenedeki Disler
+    type: string
+    enumRef: null
+    required: true
+    length: 8
+    description: Teeth of the left lower jaw (s.194)
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 194
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: solSutAltCene
+    displayName: Cocukta Sol Alt Cenedeki Sut Disleri
+    type: string
+    enumRef: null
+    required: true
+    length: 5
+    description: Milk teeth of the left lower jaw (children) (s.194)
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 194
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: solSutUstCene
+    displayName: Cocukta Sol Ust Cenedeki Sut Disleri
+    type: string
+    enumRef: null
+    required: true
+    length: 5
+    description: Milk teeth of the left upper jaw (children) (s.194)
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 194
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: solUstCene
+    displayName: Sol Ust Cenedeki Disler
+    type: string
+    enumRef: null
+    required: true
+    length: 8
+    description: Teeth of the left upper jaw (s.194)
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 194
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: sagAltCeneAnomaliDis
+    displayName: Sag Alt Cene Anomali Dis Bilgisi
+    type: string
+    enumRef: null
+    required: true
+    length: 1
+    description: E when an operation was performed on an anomalous tooth (s.194)
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 194
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: sagUstCeneAnomaliDis
+    displayName: Sag Ust Cene Anomali Dis Bilgisi
+    type: string
+    enumRef: null
+    required: true
+    length: 1
+    description: E when an operation was performed on an anomalous tooth (s.194)
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 194
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: solAltCeneAnomaliDis
+    displayName: Sol Alt Cene Anomali Dis Bilgisi
+    type: string
+    enumRef: null
+    required: true
+    length: 1
+    description: E when an operation was performed on an anomalous tooth (s.194)
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 194
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: solUstCeneAnomaliDis
+    displayName: Sol Ust Cene Anomali Dis Bilgisi
+    type: string
+    enumRef: null
+    required: true
+    length: 1
+    description: E when an operation was performed on an anomalous tooth (s.194)
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 194
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: sutKodu
+    displayName: SUT Kodu
+    type: string
+    enumRef: null
+    required: true
+    length: 7
+    description: SUT-defined operation code (s.194)
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 194
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: ayniFarkliKesi
+    displayName: Kesi Bilgisi
+    type: string
+    enumRef: null
+    required: false
+    length: 1
+    description: Incision/session relation; values diverge from the ameliyat table (cut in extraction, s.194) (s.194)
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 194
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+status: reviewed

@@ -34,6 +34,29 @@ erDiagram
     string istemYapanDrTescilNo
     string istemYapanDrBrans
   }
+  DisBilgisiDVO {
+    string drTescilNo
+    string anomali
+    integer adet
+    string bransKodu
+    string hizmetSunucuRefNo
+    string islemSiraNo
+    date islemTarihi
+    string sagAltCene
+    string sagSutAltCene
+    string sagSutUstCene
+    string sagUstCene
+    string solAltCene
+    string solSutAltCene
+    string solSutUstCene
+    string solUstCene
+    string sagAltCeneAnomaliDis
+    string sagUstCeneAnomaliDis
+    string solAltCeneAnomaliDis
+    string solUstCeneAnomaliDis
+    string sutKodu
+    string ayniFarkliKesi
+  }
   FaturaCevapDVO {
     string sonucKodu
     string sonucMesaji
@@ -215,6 +238,31 @@ erDiagram
     string ozelDurum
     array cokluOzelDurum
   }
+  MalzemeBilgisiDVO {
+    string kodsuzMalzemeAdi
+    decimal adet
+    string barkod
+    string hizmetSunucuRefNo
+    string islemSiraNo
+    date islemTarihi
+    decimal kodsuzMalzemeFiyati
+    string malzemeKodu
+    enum malzemeTuru
+    string paketHaric
+    string katkiPayi
+    integer kdv
+    string ozelDurum
+    array cokluOzelDurum
+    date malzemeSatinAlisTarihi
+    string donorId
+    date ihaleKesinlesmeTarihi
+    string ikNoAlimNo
+    string bayiNo
+    string raporTakipNo
+    string sagSol
+    string birlikteYapilanIslemSUTKodu
+    string birlikteYapilanIslemHizmetSunucuRefNo
+  }
   MuayeneBilgisiDVO {
     string bransKodu
     string drTescilNo
@@ -256,6 +304,20 @@ erDiagram
     string ktsHbysKodu
     enum ekdsYontemGerekce
     string doktorTescilNo
+  }
+  TahlilBilgisiDVO {
+    string bransKodu
+    string drTescilNo
+    string istemYapanDrTescilNo
+    string sutKodu
+    string hizmetSunucuRefNo
+    string islemSiraNo
+    date islemTarihi
+    string ozelDurum
+    array cokluOzelDurum
+    string raporTakipNo
+    string istemYapanDrBrans
+    array genBilgisi
   }
   TakipDVO {
     string takipNo
@@ -316,6 +378,7 @@ erDiagram
   FaturaCevapDetayDVO }o--|| taburcu_kodu : enumRef
   HizmetDVO }o--|| odeme_sorgu_durum : enumRef
   HizmetDetayDVO }o--|| taburcu_kodu : enumRef
+  MalzemeBilgisiDVO }o--|| malzeme_turu : enumRef
   ProvizyonGirisDVO }o--|| sigortali_turu : enumRef
   ProvizyonGirisDVO }o--|| provizyon_tipi : enumRef
   ProvizyonGirisDVO }o--|| tedavi_turu : enumRef
