@@ -1,6 +1,6 @@
 {
   "specVersion": "0.1.0",
-  "generatedAt": "2026-11-15T17:48:18.529Z",
+  "generatedAt": "2026-11-15T19:11:08.134Z",
   "sources": [
     {
       "id": "medula-hastane-guide-2026-06-17",
@@ -6168,6 +6168,103 @@
       "status": "reviewed"
     },
     {
+      "id": "MajistralEklenenIlacDVO",
+      "domain": "hizmet-kayit",
+      "direction": "input",
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "fetchedAt": "2026-11-15",
+          "page": 223,
+          "section": "Tablo 4.2.1.f.1.2 - MajistralEklenenIlacDVO (ilk kisim)",
+          "confidence": "extracted"
+        },
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "fetchedAt": "2026-11-15",
+          "page": 224,
+          "section": "Tablo 4.2.1.f.1.2 - MajistralEklenenIlacDVO (devam)",
+          "confidence": "extracted"
+        }
+      ],
+      "fields": [
+        {
+          "name": "islemSiraNo",
+          "displayName": "Islem Sira Numarasi",
+          "type": "string",
+          "enumRef": null,
+          "required": false,
+          "length": 15,
+          "description": "Sequence number; null-on-input pattern (s.223)",
+          "sensitive": false,
+          "syntheticOnlyRecommended": true,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 223,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "barkod",
+          "displayName": "Ilac Barkod No",
+          "type": "string",
+          "enumRef": null,
+          "required": true,
+          "length": 14,
+          "description": "Barcode of the added drug registered in GSS (s.224)",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 224,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "adet",
+          "displayName": "Ilac Adedi",
+          "type": "decimal",
+          "enumRef": null,
+          "required": true,
+          "length": 4,
+          "description": "Quantity of the added drug (s.224)",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 224,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
       "id": "MajistralHamMaddeDVO",
       "domain": "hizmet-kayit",
       "direction": "input",
@@ -6476,7 +6573,7 @@
           "enumRef": null,
           "required": false,
           "length": null,
-          "description": "Added-drug records (MajistralEklenenIlacDVO[], Tablo 4.2.1.f.1.2, s.201); nested placeholder, expansion is v0.3 scope",
+          "description": "Added-drug records, expanded as the MajistralEklenenIlacDVO registry entity (Tablo 4.2.1.f.1.2, s.223-224)",
           "sensitive": false,
           "syntheticOnlyRecommended": false,
           "sourceRefs": [

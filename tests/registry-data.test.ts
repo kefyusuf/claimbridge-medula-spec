@@ -48,6 +48,7 @@ const EXPECTED_DVO_FILES = [
   "hizmet-kayit/kayitli-islem-bilgisi-dvo.yml",
   "hizmet-kayit/majistral-ilac-dvo.yml",
   "hizmet-kayit/gen-bilgisi-dvo.yml",
+  "hizmet-kayit/majistral-eklenen-ilac-dvo.yml",
   "hizmet-kayit/majistral-ham-madde-dvo.yml",
   "hizmet-kayit/muayene-bilgisi-dvo.yml",
   "hizmet-kayit/tahlil-sonuc-dvo.yml",
