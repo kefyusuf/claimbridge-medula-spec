@@ -1,0 +1,21 @@
+id: malzeme-turu
+displayName: Malzeme Turu
+values:
+  - code: "1"
+    label: SUT kodlu
+    description: Material coded in the SUT.
+  - code: "2"
+    label: Emekli Sandigi Protokol kodlu
+    description: Material coded in the Emekli Sandigi protocol.
+  - code: "3"
+    label: Kodsuz malzeme
+    description: Uncoded material; kodsuzMalzemeAdi must be filled.
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: "3.1.1"
+    fetchedAt: "2026-11-15"
+    page: 225
+    section: Tablo 4.2.1.h - MalzemeBilgisiDVO (malzemeTuru)
+    confidence: extracted
+status: reviewed
