@@ -1,0 +1,22 @@
+# NOTE: generated outputs (dist/, docs/generated/, diagrams/generated/) are
+# intentionally NOT ignored — they are committed and guarded by `pnpm check`
+# (PRD §18.4).
+
+# dependencies
+node_modules/
+
+# logs & coverage
+*.log
+coverage/
+
+# environment & secrets (hard requirement: never commit secrets, PRD §17.1)
+.env
+.env.*
+!.env.example
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+
+# local tool state
+.mimosa/
