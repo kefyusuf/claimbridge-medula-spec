@@ -1,6 +1,39 @@
 %% This file is generated. Do not edit manually.
 
 erDiagram
+  AmeliyatveGirisimBilgisiDVO {
+    string aciklama
+    integer adet
+    enum ayniFarkliKesi
+    string bransKodu
+    string drTescilNo
+    string hizmetSunucuRefNo
+    string islemSiraNo
+    date islemTarihi
+    string sagSol
+    string sutKodu
+    enum euroscore
+    string ozelDurum
+    array cokluOzelDurum
+    string raporTakipNo
+  }
+  DigerIslemBilgisiDVO {
+    integer adet
+    string bransKodu
+    string sutKodu
+    string drTescilNo
+    string hizmetSunucuRefNo
+    string islemSiraNo
+    date islemTarihi
+    string raporTakipNo
+    string ozelDurum
+    enum ayniFarkliKesi
+    array cokluOzelDurum
+    string aciklama
+    string sagSol
+    string istemYapanDrTescilNo
+    string istemYapanDrBrans
+  }
   FaturaCevapDVO {
     string sonucKodu
     string sonucMesaji
@@ -231,6 +264,9 @@ erDiagram
   medula_hastane_hizmet_kayit_hizmet_kaydi_oku ||--|| HizmetOkuCevapDVO : outputDvo
   medula_hastane_hizmet_kayit_hizmet_kayit ||--|| HizmetKayitGirisDVO : inputDvo
   medula_hastane_hizmet_kayit_hizmet_kayit ||--|| HizmetKayitCevapDVO : outputDvo
+  AmeliyatveGirisimBilgisiDVO }o--|| ayni_farkli_kesi : enumRef
+  AmeliyatveGirisimBilgisiDVO }o--|| euroscore : enumRef
+  DigerIslemBilgisiDVO }o--|| ayni_farkli_kesi : enumRef
   FaturaCevapDetayDVO }o--|| taburcu_kodu : enumRef
   HizmetDVO }o--|| odeme_sorgu_durum : enumRef
   HizmetDetayDVO }o--|| taburcu_kodu : enumRef

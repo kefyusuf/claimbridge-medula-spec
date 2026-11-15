@@ -2,6 +2,49 @@
 
 # DVOs
 
+## `AmeliyatveGirisimBilgisiDVO`
+
+Domain: `hizmet-kayit` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19, medula-hastane-guide-3-1-1-2026-10-19, medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `aciklama` | string |  | — |  | Description of the performed operation (s.190). |
+| `adet` | integer |  | — |  | Quantity of the operation (s.191). |
+| `ayniFarkliKesi` | enum |  | ayni-farkli-kesi |  | Same-session/same-incision relation code (s.191); codes 1-5. |
+| `bransKodu` | string |  | — |  | Branch code of the operation (s.191). |
+| `drTescilNo` | string |  | — |  | Diploma registration number of the performing doctor (s.191). |
+| `hizmetSunucuRefNo` | string |  | — |  | Institution-assigned reference used to pair the record with the Medula-generated islemSiraNo (s.191). |
+| `islemSiraNo` | string |  | — |  | Sequence number of the registered service; send null while registering, Medula fills and returns it (s.191). Null-on-input pattern. |
+| `islemTarihi` | date |  | — |  | Operation date in dd.mm.yyyy format (s.191). |
+| `sagSol` | string |  | — |  | Side code 1/2/3 (Sag, Sol, Sag-Sol ayrimi yok); null saves as 3 (s.191). The DigerIslem table uses R/L instead - divergence noted. |
+| `sutKodu` | string |  | — |  | SUT-defined operation code (s.191). |
+| `euroscore` | enum |  | euroscore |  | Euroscore risk code (s.191); codes 0-3 in the euroscore registry enum. |
+| `ozelDurum` | string |  | — |  | Special condition code; see guide Tablo 5.1 OzelDurumVO (s.192). |
+| `cokluOzelDurum` | array |  | — |  | Multiple special-condition codes (s.192). |
+| `raporTakipNo` | string |  | — |  | Report tracking number (s.192). |
+
+## `DigerIslemBilgisiDVO`
+
+Domain: `hizmet-kayit` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19, medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `adet` | integer |  | — |  | Quantity of the operation (s.192). |
+| `bransKodu` | string |  | — |  | Branch code of the operation (s.192). |
+| `sutKodu` | string |  | — |  | SUT-defined operation code (s.192). |
+| `drTescilNo` | string |  | — |  | Diploma registration number of the performing doctor (s.192); optional for operations coded 530140 and 530150 per the guide note. |
+| `hizmetSunucuRefNo` | string |  | — |  | Institution-assigned reference used to pair the record with the Medula-generated islemSiraNo (s.192). |
+| `islemSiraNo` | string |  | — |  | Sequence number of the registered service; send null while registering, Medula fills and returns it (s.192). Null-on-input pattern. |
+| `islemTarihi` | date |  | — |  | Operation date in dd.mm.yyyy format (s.192). |
+| `raporTakipNo` | string |  | — |  | Medula record number of a registered report (s.192); mandatory for report-requiring operations (Diyaliz, FTR, etc.). |
+| `ozelDurum` | string |  | — |  | Special condition code; see guide Tablo 5.1 OzelDurumVO (s.192). |
+| `ayniFarkliKesi` | enum |  | ayni-farkli-kesi |  | Same-session/same-incision relation code (s.192-193); codes 1-5. |
+| `cokluOzelDurum` | array |  | — |  | Multiple special-condition codes (s.193). |
+| `aciklama` | string |  | — |  | Operation description (s.193). |
+| `sagSol` | string |  | — |  | Side code using R (Sag) / L (Sol) letters in this table (s.193) - diverges from the AmeliyatveGirisim 1/2/3 codes; divergence noted. |
+| `istemYapanDrTescilNo` | string |  | — |  | Registration number of the requesting doctor (s.193). |
+| `istemYapanDrBrans` | string |  | — |  | Branch code of the requesting doctor (s.193). |
+
 ## `FaturaCevapDVO`
 
 Domain: `fatura-kayit` · Direction: `output` · Status: `draft` · Source refs: medula-hastane-guide-2026-06-17

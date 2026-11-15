@@ -128,7 +128,7 @@ describe("v0.3 entries 1 (Group 17)", () => {
       ),
     );
     expect(a).toContain("1/2/3");
-    expect(d).toContain("R/L");
+    expect(d).toContain("R (Sag)");
   });
 
   it("updates the manifest counts", () => {
