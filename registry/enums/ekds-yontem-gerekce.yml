@@ -1,0 +1,51 @@
+id: ekds-yontem-gerekce
+displayName: EKDS Yontem Gerekce
+values:
+  - code: "10"
+    label: Kisiye ait TCKKda parmak izi verisi yok
+    description: No fingerprint data exists for the person's T.C. record.
+  - code: "11"
+    label: Parmak izi verisini cihaz okumuyor
+    description: The device cannot read the person's fingerprint data.
+  - code: "12"
+    label: KEC cihazina temas etmek istemiyor
+    description: The person refuses to touch the KEC device for fingerprint reading.
+  - code: "13"
+    label: Biyometrik verisini paylasmak istemiyor
+    description: The person refuses to share biometric data.
+  - code: "20"
+    label: KEC cihazina temas etmek istemiyor (pin)
+    description: The person refuses to touch the KEC device to enter the PIN.
+  - code: "21"
+    label: E-Devletten pin koduna ulasamiyorum
+    description: The person cannot reach the PIN code through e-Government.
+  - code: "30"
+    label: Kisiye ait TCKK yaninda yok
+    description: The person does not have their T.C. identity card with them.
+  - code: "31"
+    label: Kisiye ait TCKK kayip
+    description: The person's T.C. identity card is lost.
+  - code: "32"
+    label: Kisi EKDS istemiyor
+    description: The person refuses the EKDS verification.
+  - code: "33"
+    label: Kisiye ait TCKK yok
+    description: No T.C. identity card exists for the person.
+  - code: "34"
+    label: EKDS dogrulama yontemleri uygulanamadi
+    description: None of the EKDS verification methods could be applied.
+  - code: "35"
+    label: Kisinin fotograf dogrulamasi yapilamadi
+    description: Photo verification of the person failed.
+  - code: "99"
+    label: EKDS'den saglik sebebiyle muaftir
+    description: The person is exempt from health services per EKDS.
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: "3.1.1"
+    fetchedAt: "2026-11-15"
+    page: 167
+    section: ekdsYontemGerekce codes (Pin/fotograf/fiziksel dogrulama gerekceleri)
+    confidence: extracted
+status: reviewed

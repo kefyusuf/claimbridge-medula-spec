@@ -1,0 +1,50 @@
+id: istisnai-hal
+displayName: Istisnai Hal
+values:
+  - code: "1"
+    label: Acil hal
+    description: Emergency condition.
+  - code: "2"
+    label: Is kazasi ile meslek hastaligi
+    description: Occupational accident or disease condition.
+  - code: "3"
+    label: Bildirimi zorunlu bulasici hastalik
+    description: Notifiable infectious disease condition.
+  - code: "4"
+    label: Kisiye yonelik koruyucu saglik hizmeti
+    description: Person-specific preventive health service condition.
+  - code: "5"
+    label: Analik hali
+    description: Maternity condition.
+  - code: "6"
+    label: Afet ve savas ile grev ve lokavt hali
+    description: Disaster, war, strike, or lockout condition.
+  - code: "7"
+    label: 18 yas alti cocuklar
+    description: Children under 18.
+  - code: "8"
+    label: Tibben baskasinin bakimina muhtac kisiler
+    description: Persons medically dependent on others' care.
+  - code: "9"
+    label: BKK na gore Borclular
+    description: Debtors under BKK.
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: "3.1.1"
+    fetchedAt: "2026-11-15"
+    page: 157
+    section: ProvizyonGirisDVO istisnaiHal codes 1-4
+    confidence: extracted
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: "3.1.1"
+    fetchedAt: "2026-11-15"
+    page: 158
+    section: ProvizyonGirisDVO istisnaiHal codes 5-9
+    confidence: extracted
+    notes: >-
+      Codes 5-9 continue on s.158 before the devredilenKurum letter codes
+      (I/M/B/V). Column-flow inference noted; a visual pass of pages
+      157-158 would remove any residual doubt.
+status: reviewed

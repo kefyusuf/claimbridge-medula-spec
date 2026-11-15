@@ -135,6 +135,7 @@ erDiagram
     string hastaTelefon
     string hastaAdres
     string ktsHbysKodu
+    enum ekdsYontemGerekce
     string doktorTescilNo
   }
   TakipDVO {
@@ -144,6 +145,7 @@ erDiagram
     enum takipDurumu
     string hastaBasvuruNo
     string bransKodu
+    enum ekdsYontemGerekce
   }
   TakipOkuGirisDVO {
     integer saglikTesisKodu
@@ -185,5 +187,7 @@ erDiagram
   ProvizyonGirisDVO }o--|| tedavi_turu : enumRef
   ProvizyonGirisDVO }o--|| tedavi_tipi : enumRef
   ProvizyonGirisDVO }o--|| takip_tipi : enumRef
+  ProvizyonGirisDVO }o--|| ekds_yontem_gerekce : enumRef
   TakipDVO }o--|| takip_tipi : enumRef
   TakipDVO }o--|| takip_durumu : enumRef
+  TakipDVO }o--|| ekds_yontem_gerekce : enumRef

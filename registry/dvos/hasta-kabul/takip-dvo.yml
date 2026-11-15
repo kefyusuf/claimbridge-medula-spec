@@ -123,4 +123,22 @@ fields:
     conditionalRequired: []
     introducedIn: null
     deprecatedIn: null
+  - name: ekdsYontemGerekce
+    displayName: EKDS Yontem Gerekce
+    type: enum
+    enumRef: ekds-yontem-gerekce
+    required: false
+    length: null
+    description: EKDS verification method justification codes; Integer[] in the guide, modeled as an array of ekds-yontem-gerekce codes (s.167, changelog s.13).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 167
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
 status: reviewed

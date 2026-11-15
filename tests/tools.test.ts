@@ -16,7 +16,7 @@ describe("tools (Group 5)", () => {
     expect(reg.services).toHaveLength(3);
     expect(reg.methods).toHaveLength(10);
     expect(reg.dvos).toHaveLength(20);
-    expect(reg.enums).toHaveLength(7);
+    expect(reg.enums).toHaveLength(9);
     expect(reg.rules).toHaveLength(5);
     expect(reg.workflows).toHaveLength(4);
     expect(reg.scenarios).toHaveLength(6);
