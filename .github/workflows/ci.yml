@@ -17,6 +17,7 @@ jobs:
           node-version: 22
           cache: pnpm
       - run: pnpm install --frozen-lockfile
+      - run: pnpm format:check
       - run: pnpm validate
       - run: pnpm test
-      # Group 7 adds: pnpm format:check and pnpm check.
+      - run: pnpm check
