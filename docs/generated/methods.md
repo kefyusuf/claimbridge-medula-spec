@@ -98,6 +98,126 @@
 | deletes | — |
 | generates | — |
 
+## `medula.hastane.hasta-kabul.basvuru-altindaki-takipleri-oku`
+
+| Field | Value |
+| --- | --- |
+| Service | medula.hastane.hasta-kabul |
+| Documentation heading | BasvuruAltindakiTakipleriOku |
+| Operation name | BasvuruAltindakiTakipleriOku |
+| Input DVO | null |
+| Output DVO | null |
+| Success | sonucKodu = 0000 (sonucMesaji) |
+| Sandbox supported |  |
+| Status | draft |
+| Source refs | medula-hastane-guide-3-1-1-2026-10-19 |
+
+**State effects**
+
+| Effect | Targets |
+| --- | --- |
+| creates | — |
+| reads | — |
+| updates | — |
+| deletes | — |
+| generates | — |
+
+## `medula.hastane.hasta-kabul.ekds-belge-gereken-takip-sorgu`
+
+| Field | Value |
+| --- | --- |
+| Service | medula.hastane.hasta-kabul |
+| Documentation heading | ekdsBelgeGerekenTakipSorgu |
+| Operation name | ekdsBelgeGerekenTakipSorgu |
+| Input DVO | null |
+| Output DVO | null |
+| Success | sonucKodu = 0000 (sonucMesaji) |
+| Sandbox supported |  |
+| Status | draft |
+| Source refs | medula-hastane-guide-3-1-1-2026-10-19 |
+
+**State effects**
+
+| Effect | Targets |
+| --- | --- |
+| creates | — |
+| reads | — |
+| updates | — |
+| deletes | — |
+| generates | — |
+
+## `medula.hastane.hasta-kabul.ekds-kisi-dogrulama-sorgu`
+
+| Field | Value |
+| --- | --- |
+| Service | medula.hastane.hasta-kabul |
+| Documentation heading | ekdsKisiDogrulamaSorgu |
+| Operation name | ekdsKisiDogrulamaSorgu |
+| Input DVO | null |
+| Output DVO | null |
+| Success | sonucKodu = 0000 (sonucMesaji) |
+| Sandbox supported |  |
+| Status | draft |
+| Source refs | medula-hastane-guide-3-1-1-2026-10-19 |
+
+**State effects**
+
+| Effect | Targets |
+| --- | --- |
+| creates | — |
+| reads | — |
+| updates | — |
+| deletes | — |
+| generates | — |
+
+## `medula.hastane.hasta-kabul.hasta-cikis-iptal`
+
+| Field | Value |
+| --- | --- |
+| Service | medula.hastane.hasta-kabul |
+| Documentation heading | HastaCikisIptal |
+| Operation name | HastaCikisIptal |
+| Input DVO | null |
+| Output DVO | null |
+| Success | sonucKodu = 0000 (sonucMesaji) |
+| Sandbox supported |  |
+| Status | draft |
+| Source refs | medula-hastane-guide-3-1-1-2026-10-19 |
+
+**State effects**
+
+| Effect | Targets |
+| --- | --- |
+| creates | — |
+| reads | — |
+| updates | — |
+| deletes | — |
+| generates | — |
+
+## `medula.hastane.hasta-kabul.hasta-cikis-kayit`
+
+| Field | Value |
+| --- | --- |
+| Service | medula.hastane.hasta-kabul |
+| Documentation heading | HastaCikisKayit |
+| Operation name | HastaCikisKayit |
+| Input DVO | null |
+| Output DVO | null |
+| Success | sonucKodu = 0000 (sonucMesaji) |
+| Sandbox supported |  |
+| Status | draft |
+| Source refs | medula-hastane-guide-3-1-1-2026-10-19 |
+
+**State effects**
+
+| Effect | Targets |
+| --- | --- |
+| creates | — |
+| reads | — |
+| updates | — |
+| deletes | — |
+| generates | — |
+
 ## `medula.hastane.hasta-kabul.hasta-kabul`
 
 | Field | Value |
@@ -146,6 +266,30 @@
 | deletes | `takip` |
 | generates | — |
 
+## `medula.hastane.hasta-kabul.hasta-kabul-kimlik-dogrulama`
+
+| Field | Value |
+| --- | --- |
+| Service | medula.hastane.hasta-kabul |
+| Documentation heading | HastaKabulKimlikDogrulama |
+| Operation name | HastaKabulKimlikDogrulama |
+| Input DVO | null |
+| Output DVO | null |
+| Success | sonucKodu = 0000 (sonucMesaji) |
+| Sandbox supported |  |
+| Status | draft |
+| Source refs | medula-hastane-guide-3-1-1-2026-10-19 |
+
+**State effects**
+
+| Effect | Targets |
+| --- | --- |
+| creates | — |
+| reads | — |
+| updates | — |
+| deletes | — |
+| generates | — |
+
 ## `medula.hastane.hasta-kabul.hasta-kabul-oku`
 
 | Field | Value |
@@ -166,6 +310,222 @@
 | --- | --- |
 | creates | — |
 | reads | `patientAdmission`, `takip` |
+| updates | — |
+| deletes | — |
+| generates | — |
+
+## `medula.hastane.hasta-kabul.hasta-yatis-oku`
+
+| Field | Value |
+| --- | --- |
+| Service | medula.hastane.hasta-kabul |
+| Documentation heading | HastaYatisOku |
+| Operation name | HastaYatisOku |
+| Input DVO | null |
+| Output DVO | null |
+| Success | sonucKodu = 0000 (sonucMesaji) |
+| Sandbox supported |  |
+| Status | draft |
+| Source refs | medula-hastane-guide-3-1-1-2026-10-19 |
+
+**State effects**
+
+| Effect | Targets |
+| --- | --- |
+| creates | — |
+| reads | — |
+| updates | — |
+| deletes | — |
+| generates | — |
+
+## `medula.hastane.hasta-kabul.kemik-iligi-iptal`
+
+| Field | Value |
+| --- | --- |
+| Service | medula.hastane.hasta-kabul |
+| Documentation heading | KemikIligiIptal |
+| Operation name | KemikIligiIptal |
+| Input DVO | null |
+| Output DVO | null |
+| Success | sonucKodu = 0000 (sonucMesaji) |
+| Sandbox supported |  |
+| Status | draft |
+| Source refs | medula-hastane-guide-3-1-1-2026-10-19 |
+
+**State effects**
+
+| Effect | Targets |
+| --- | --- |
+| creates | — |
+| reads | — |
+| updates | — |
+| deletes | — |
+| generates | — |
+
+## `medula.hastane.hasta-kabul.kemik-iligi-islem-duzeltme`
+
+| Field | Value |
+| --- | --- |
+| Service | medula.hastane.hasta-kabul |
+| Documentation heading | KemikIligiIslemDuzeltme |
+| Operation name | KemikIligiIslemDuzeltme |
+| Input DVO | null |
+| Output DVO | null |
+| Success | sonucKodu = 0000 (sonucMesaji) |
+| Sandbox supported |  |
+| Status | draft |
+| Source refs | medula-hastane-guide-3-1-1-2026-10-19 |
+
+**State effects**
+
+| Effect | Targets |
+| --- | --- |
+| creates | — |
+| reads | — |
+| updates | — |
+| deletes | — |
+| generates | — |
+
+## `medula.hastane.hasta-kabul.kemik-iligi-kabul`
+
+| Field | Value |
+| --- | --- |
+| Service | medula.hastane.hasta-kabul |
+| Documentation heading | KemikIligiKabul |
+| Operation name | KemikIligiKabul |
+| Input DVO | null |
+| Output DVO | null |
+| Success | sonucKodu = 0000 (sonucMesaji) |
+| Sandbox supported |  |
+| Status | draft |
+| Source refs | medula-hastane-guide-3-1-1-2026-10-19 |
+
+**State effects**
+
+| Effect | Targets |
+| --- | --- |
+| creates | — |
+| reads | — |
+| updates | — |
+| deletes | — |
+| generates | — |
+
+## `medula.hastane.hasta-kabul.kemik-iligi-oku`
+
+| Field | Value |
+| --- | --- |
+| Service | medula.hastane.hasta-kabul |
+| Documentation heading | KemikIligiOku |
+| Operation name | KemikIligiOku |
+| Input DVO | null |
+| Output DVO | null |
+| Success | sonucKodu = 0000 (sonucMesaji) |
+| Sandbox supported |  |
+| Status | draft |
+| Source refs | medula-hastane-guide-3-1-1-2026-10-19 |
+
+**State effects**
+
+| Effect | Targets |
+| --- | --- |
+| creates | — |
+| reads | — |
+| updates | — |
+| deletes | — |
+| generates | — |
+
+## `medula.hastane.hasta-kabul.kemik-iligi-tc-ile-sorgu`
+
+| Field | Value |
+| --- | --- |
+| Service | medula.hastane.hasta-kabul |
+| Documentation heading | KemikIligiTCIleSorgu |
+| Operation name | KemikIligiTCIleSorgu |
+| Input DVO | null |
+| Output DVO | null |
+| Success | sonucKodu = 0000 (sonucMesaji) |
+| Sandbox supported |  |
+| Status | draft |
+| Source refs | medula-hastane-guide-3-1-1-2026-10-19 |
+
+**State effects**
+
+| Effect | Targets |
+| --- | --- |
+| creates | — |
+| reads | — |
+| updates | — |
+| deletes | — |
+| generates | — |
+
+## `medula.hastane.hasta-kabul.sevk-bildir`
+
+| Field | Value |
+| --- | --- |
+| Service | medula.hastane.hasta-kabul |
+| Documentation heading | SevkBildir |
+| Operation name | SevkBildir |
+| Input DVO | null |
+| Output DVO | null |
+| Success | sonucKodu = 0000 (sonucMesaji) |
+| Sandbox supported |  |
+| Status | draft |
+| Source refs | medula-hastane-guide-3-1-1-2026-10-19 |
+
+**State effects**
+
+| Effect | Targets |
+| --- | --- |
+| creates | — |
+| reads | — |
+| updates | — |
+| deletes | — |
+| generates | — |
+
+## `medula.hastane.hasta-kabul.update-provizyon-tipi`
+
+| Field | Value |
+| --- | --- |
+| Service | medula.hastane.hasta-kabul |
+| Documentation heading | UpdateProvizyonTipi |
+| Operation name | UpdateProvizyonTipi |
+| Input DVO | null |
+| Output DVO | null |
+| Success | sonucKodu = 0000 (sonucMesaji) |
+| Sandbox supported |  |
+| Status | draft |
+| Source refs | medula-hastane-guide-3-1-1-2026-10-19 |
+
+**State effects**
+
+| Effect | Targets |
+| --- | --- |
+| creates | — |
+| reads | — |
+| updates | — |
+| deletes | — |
+| generates | — |
+
+## `medula.hastane.hasta-kabul.update-tedavi-tipi`
+
+| Field | Value |
+| --- | --- |
+| Service | medula.hastane.hasta-kabul |
+| Documentation heading | UpdateTedaviTipi |
+| Operation name | UpdateTedaviTipi |
+| Input DVO | null |
+| Output DVO | null |
+| Success | sonucKodu = 0000 (sonucMesaji) |
+| Sandbox supported |  |
+| Status | draft |
+| Source refs | medula-hastane-guide-3-1-1-2026-10-19 |
+
+**State effects**
+
+| Effect | Targets |
+| --- | --- |
+| creates | — |
+| reads | — |
 | updates | — |
 | deletes | — |
 | generates | — |

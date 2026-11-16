@@ -38,6 +38,21 @@ Patient admission process that creates a patient application number and an assoc
 - `medula.hastane.hasta-kabul.hasta-kabul`
 - `medula.hastane.hasta-kabul.hasta-kabul-oku`
 - `medula.hastane.hasta-kabul.hasta-kabul-iptal`
+- `medula.hastane.hasta-kabul.hasta-kabul-kimlik-dogrulama`
+- `medula.hastane.hasta-kabul.hasta-cikis-kayit`
+- `medula.hastane.hasta-kabul.hasta-cikis-iptal`
+- `medula.hastane.hasta-kabul.hasta-yatis-oku`
+- `medula.hastane.hasta-kabul.basvuru-altindaki-takipleri-oku`
+- `medula.hastane.hasta-kabul.sevk-bildir`
+- `medula.hastane.hasta-kabul.update-tedavi-tipi`
+- `medula.hastane.hasta-kabul.update-provizyon-tipi`
+- `medula.hastane.hasta-kabul.kemik-iligi-kabul`
+- `medula.hastane.hasta-kabul.kemik-iligi-iptal`
+- `medula.hastane.hasta-kabul.kemik-iligi-oku`
+- `medula.hastane.hasta-kabul.kemik-iligi-islem-duzeltme`
+- `medula.hastane.hasta-kabul.kemik-iligi-tc-ile-sorgu`
+- `medula.hastane.hasta-kabul.ekds-kisi-dogrulama-sorgu`
+- `medula.hastane.hasta-kabul.ekds-belge-gereken-takip-sorgu`
 
 ## Hizmet Kayit (`medula.hastane.hizmet-kayit`)
 

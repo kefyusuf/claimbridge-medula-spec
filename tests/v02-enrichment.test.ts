@@ -161,7 +161,7 @@ describe("v0.2 enrichment (Group 10)", () => {
     ) as { counts: Record<string, number> };
     expect(manifest.counts.dvos).toBe(42);
     expect(manifest.counts.enums).toBe(19);
-    expect(manifest.counts.methods).toBe(10);
+    expect(manifest.counts.methods).toBe(25);
   });
 
   it("records the PRD 13.4 amendment for the guide-aligned names", () => {
