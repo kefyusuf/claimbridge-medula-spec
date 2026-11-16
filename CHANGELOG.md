@@ -6,6 +6,32 @@ Format: [Keep a Changelog](https://keepachangelog.com); versioning: SemVer
 
 ## [Unreleased]
 
+### Group 24 — feat/hasta-kabul-methods (2026-11-16)
+
+Local group: no remote yet, so the PR step is replaced by a local
+`--no-ff` merge to `main` (PRD §28 step 6 fallback).
+
+- TDD red first: HastaKabul expansion suite (5 checks) committed and
+  verified failing (5/5 red) before the methods existed (`1d07686`).
+- Fifteen guide-listed HastaKabul methods registered as draft entries
+  (method list verified on s.149): HastaCikisKayit/Iptal, HastaYatisOku,
+  BasvuruAltindakiTakipleriOku, SevkBildir, UpdateTedaviTipi/
+  UpdateProvizyonTipi, KemikIligi* (5), ekdsKisiDogrulamaSorgu,
+  ekdsBelgeGerekenTakipSorgu, HastaKabulKimlikDogrulama.
+- `HastaKabulKimlikDogrulama` sandbox-disabled with the devre-disi
+  changelog citation (s.13, 04.03.2025); all new methods stay on null
+  draft contracts until their tables are read.
+- hasta-kabul service method list extended; reference-validation suite
+  updated (25 methods; draft null contracts allowed per the amended
+  §12.2).
+- Registry now: **25 methods** across 3 services; dist regenerated.
+
+Validation output: `pnpm test` → 159/159 passed (25 suites); `tsc
+--noEmit` → clean; `pnpm validate` → OK; `pnpm check` → OK;
+`pnpm format:check` → OK.
+
+Remaining TODOs: none for this group.
+
 ### Group 23 — feat/v03-nested-3 (2026-11-15)
 
 Local group: no remote yet, so the PR step is replaced by a local

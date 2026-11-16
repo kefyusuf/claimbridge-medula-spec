@@ -1,6 +1,6 @@
 {
   "specVersion": "0.1.0",
-  "generatedAt": "2026-11-16T16:28:54.778Z",
+  "generatedAt": "2026-11-16T16:32:21.662Z",
   "sources": [
     {
       "id": "medula-hastane-guide-2026-06-17",
@@ -88,7 +88,22 @@
       "methods": [
         "medula.hastane.hasta-kabul.hasta-kabul",
         "medula.hastane.hasta-kabul.hasta-kabul-oku",
-        "medula.hastane.hasta-kabul.hasta-kabul-iptal"
+        "medula.hastane.hasta-kabul.hasta-kabul-iptal",
+        "medula.hastane.hasta-kabul.hasta-kabul-kimlik-dogrulama",
+        "medula.hastane.hasta-kabul.hasta-cikis-kayit",
+        "medula.hastane.hasta-kabul.hasta-cikis-iptal",
+        "medula.hastane.hasta-kabul.hasta-yatis-oku",
+        "medula.hastane.hasta-kabul.basvuru-altindaki-takipleri-oku",
+        "medula.hastane.hasta-kabul.sevk-bildir",
+        "medula.hastane.hasta-kabul.update-tedavi-tipi",
+        "medula.hastane.hasta-kabul.update-provizyon-tipi",
+        "medula.hastane.hasta-kabul.kemik-iligi-kabul",
+        "medula.hastane.hasta-kabul.kemik-iligi-iptal",
+        "medula.hastane.hasta-kabul.kemik-iligi-oku",
+        "medula.hastane.hasta-kabul.kemik-iligi-islem-duzeltme",
+        "medula.hastane.hasta-kabul.kemik-iligi-tc-ile-sorgu",
+        "medula.hastane.hasta-kabul.ekds-kisi-dogrulama-sorgu",
+        "medula.hastane.hasta-kabul.ekds-belge-gereken-takip-sorgu"
       ],
       "status": "draft"
     },
@@ -344,6 +359,211 @@
       "status": "reviewed"
     },
     {
+      "id": "medula.hastane.hasta-kabul.basvuru-altindaki-takipleri-oku",
+      "service": "medula.hastane.hasta-kabul",
+      "names": {
+        "documentationHeading": "BasvuruAltindakiTakipleriOku",
+        "operationName": "BasvuruAltindakiTakipleriOku",
+        "aliases": []
+      },
+      "contract": {
+        "inputDvo": null,
+        "outputDvo": null
+      },
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "fetchedAt": "2026-11-15",
+          "page": 149,
+          "section": "Hasta Kabul sureci metot listesi",
+          "confidence": "extracted"
+        }
+      ],
+      "stateEffects": {
+        "creates": [],
+        "reads": [],
+        "updates": [],
+        "deletes": [],
+        "generates": []
+      },
+      "success": {
+        "resultCodeField": "sonucKodu",
+        "successCode": "0000",
+        "messageField": "sonucMesaji"
+      },
+      "sandbox": {
+        "supported": true,
+        "defaultScenario": null
+      },
+      "status": "draft"
+    },
+    {
+      "id": "medula.hastane.hasta-kabul.ekds-belge-gereken-takip-sorgu",
+      "service": "medula.hastane.hasta-kabul",
+      "names": {
+        "documentationHeading": "ekdsBelgeGerekenTakipSorgu",
+        "operationName": "ekdsBelgeGerekenTakipSorgu",
+        "aliases": []
+      },
+      "contract": {
+        "inputDvo": null,
+        "outputDvo": null
+      },
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "fetchedAt": "2026-11-15",
+          "page": 149,
+          "section": "Hasta Kabul sureci metot listesi",
+          "confidence": "extracted"
+        }
+      ],
+      "stateEffects": {
+        "creates": [],
+        "reads": [],
+        "updates": [],
+        "deletes": [],
+        "generates": []
+      },
+      "success": {
+        "resultCodeField": "sonucKodu",
+        "successCode": "0000",
+        "messageField": "sonucMesaji"
+      },
+      "sandbox": {
+        "supported": true,
+        "defaultScenario": null
+      },
+      "status": "draft"
+    },
+    {
+      "id": "medula.hastane.hasta-kabul.ekds-kisi-dogrulama-sorgu",
+      "service": "medula.hastane.hasta-kabul",
+      "names": {
+        "documentationHeading": "ekdsKisiDogrulamaSorgu",
+        "operationName": "ekdsKisiDogrulamaSorgu",
+        "aliases": []
+      },
+      "contract": {
+        "inputDvo": null,
+        "outputDvo": null
+      },
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "fetchedAt": "2026-11-15",
+          "page": 149,
+          "section": "Hasta Kabul sureci metot listesi",
+          "confidence": "extracted"
+        }
+      ],
+      "stateEffects": {
+        "creates": [],
+        "reads": [],
+        "updates": [],
+        "deletes": [],
+        "generates": []
+      },
+      "success": {
+        "resultCodeField": "sonucKodu",
+        "successCode": "0000",
+        "messageField": "sonucMesaji"
+      },
+      "sandbox": {
+        "supported": true,
+        "defaultScenario": null
+      },
+      "status": "draft"
+    },
+    {
+      "id": "medula.hastane.hasta-kabul.hasta-cikis-iptal",
+      "service": "medula.hastane.hasta-kabul",
+      "names": {
+        "documentationHeading": "HastaCikisIptal",
+        "operationName": "HastaCikisIptal",
+        "aliases": []
+      },
+      "contract": {
+        "inputDvo": null,
+        "outputDvo": null
+      },
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "fetchedAt": "2026-11-15",
+          "page": 149,
+          "section": "Hasta Kabul sureci metot listesi",
+          "confidence": "extracted"
+        }
+      ],
+      "stateEffects": {
+        "creates": [],
+        "reads": [],
+        "updates": [],
+        "deletes": [],
+        "generates": []
+      },
+      "success": {
+        "resultCodeField": "sonucKodu",
+        "successCode": "0000",
+        "messageField": "sonucMesaji"
+      },
+      "sandbox": {
+        "supported": true,
+        "defaultScenario": null
+      },
+      "status": "draft"
+    },
+    {
+      "id": "medula.hastane.hasta-kabul.hasta-cikis-kayit",
+      "service": "medula.hastane.hasta-kabul",
+      "names": {
+        "documentationHeading": "HastaCikisKayit",
+        "operationName": "HastaCikisKayit",
+        "aliases": []
+      },
+      "contract": {
+        "inputDvo": null,
+        "outputDvo": null
+      },
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "fetchedAt": "2026-11-15",
+          "page": 149,
+          "section": "Hasta Kabul sureci metot listesi",
+          "confidence": "extracted"
+        }
+      ],
+      "stateEffects": {
+        "creates": [],
+        "reads": [],
+        "updates": [],
+        "deletes": [],
+        "generates": []
+      },
+      "success": {
+        "resultCodeField": "sonucKodu",
+        "successCode": "0000",
+        "messageField": "sonucMesaji"
+      },
+      "sandbox": {
+        "supported": true,
+        "defaultScenario": null
+      },
+      "status": "draft"
+    },
+    {
       "id": "medula.hastane.hasta-kabul.hasta-kabul",
       "service": "medula.hastane.hasta-kabul",
       "names": {
@@ -455,6 +675,48 @@
       "status": "reviewed"
     },
     {
+      "id": "medula.hastane.hasta-kabul.hasta-kabul-kimlik-dogrulama",
+      "service": "medula.hastane.hasta-kabul",
+      "names": {
+        "documentationHeading": "HastaKabulKimlikDogrulama",
+        "operationName": "HastaKabulKimlikDogrulama",
+        "aliases": []
+      },
+      "contract": {
+        "inputDvo": null,
+        "outputDvo": null
+      },
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "fetchedAt": "2026-11-15",
+          "page": 149,
+          "section": "Hasta Kabul sureci metot listesi",
+          "confidence": "extracted",
+          "notes": "Method devre disi per the guide changelog (edition 3.1.1, s.13, dated 04.03.2025)."
+        }
+      ],
+      "stateEffects": {
+        "creates": [],
+        "reads": [],
+        "updates": [],
+        "deletes": [],
+        "generates": []
+      },
+      "success": {
+        "resultCodeField": "sonucKodu",
+        "successCode": "0000",
+        "messageField": "sonucMesaji"
+      },
+      "sandbox": {
+        "supported": false,
+        "defaultScenario": null
+      },
+      "status": "draft"
+    },
+    {
       "id": "medula.hastane.hasta-kabul.hasta-kabul-oku",
       "service": "medula.hastane.hasta-kabul",
       "names": {
@@ -506,6 +768,375 @@
         "defaultScenario": null
       },
       "status": "reviewed"
+    },
+    {
+      "id": "medula.hastane.hasta-kabul.hasta-yatis-oku",
+      "service": "medula.hastane.hasta-kabul",
+      "names": {
+        "documentationHeading": "HastaYatisOku",
+        "operationName": "HastaYatisOku",
+        "aliases": []
+      },
+      "contract": {
+        "inputDvo": null,
+        "outputDvo": null
+      },
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "fetchedAt": "2026-11-15",
+          "page": 149,
+          "section": "Hasta Kabul sureci metot listesi",
+          "confidence": "extracted"
+        }
+      ],
+      "stateEffects": {
+        "creates": [],
+        "reads": [],
+        "updates": [],
+        "deletes": [],
+        "generates": []
+      },
+      "success": {
+        "resultCodeField": "sonucKodu",
+        "successCode": "0000",
+        "messageField": "sonucMesaji"
+      },
+      "sandbox": {
+        "supported": true,
+        "defaultScenario": null
+      },
+      "status": "draft"
+    },
+    {
+      "id": "medula.hastane.hasta-kabul.kemik-iligi-iptal",
+      "service": "medula.hastane.hasta-kabul",
+      "names": {
+        "documentationHeading": "KemikIligiIptal",
+        "operationName": "KemikIligiIptal",
+        "aliases": []
+      },
+      "contract": {
+        "inputDvo": null,
+        "outputDvo": null
+      },
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "fetchedAt": "2026-11-15",
+          "page": 149,
+          "section": "Hasta Kabul sureci metot listesi",
+          "confidence": "extracted"
+        }
+      ],
+      "stateEffects": {
+        "creates": [],
+        "reads": [],
+        "updates": [],
+        "deletes": [],
+        "generates": []
+      },
+      "success": {
+        "resultCodeField": "sonucKodu",
+        "successCode": "0000",
+        "messageField": "sonucMesaji"
+      },
+      "sandbox": {
+        "supported": true,
+        "defaultScenario": null
+      },
+      "status": "draft"
+    },
+    {
+      "id": "medula.hastane.hasta-kabul.kemik-iligi-islem-duzeltme",
+      "service": "medula.hastane.hasta-kabul",
+      "names": {
+        "documentationHeading": "KemikIligiIslemDuzeltme",
+        "operationName": "KemikIligiIslemDuzeltme",
+        "aliases": []
+      },
+      "contract": {
+        "inputDvo": null,
+        "outputDvo": null
+      },
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "fetchedAt": "2026-11-15",
+          "page": 149,
+          "section": "Hasta Kabul sureci metot listesi",
+          "confidence": "extracted"
+        }
+      ],
+      "stateEffects": {
+        "creates": [],
+        "reads": [],
+        "updates": [],
+        "deletes": [],
+        "generates": []
+      },
+      "success": {
+        "resultCodeField": "sonucKodu",
+        "successCode": "0000",
+        "messageField": "sonucMesaji"
+      },
+      "sandbox": {
+        "supported": true,
+        "defaultScenario": null
+      },
+      "status": "draft"
+    },
+    {
+      "id": "medula.hastane.hasta-kabul.kemik-iligi-kabul",
+      "service": "medula.hastane.hasta-kabul",
+      "names": {
+        "documentationHeading": "KemikIligiKabul",
+        "operationName": "KemikIligiKabul",
+        "aliases": []
+      },
+      "contract": {
+        "inputDvo": null,
+        "outputDvo": null
+      },
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "fetchedAt": "2026-11-15",
+          "page": 149,
+          "section": "Hasta Kabul sureci metot listesi",
+          "confidence": "extracted"
+        }
+      ],
+      "stateEffects": {
+        "creates": [],
+        "reads": [],
+        "updates": [],
+        "deletes": [],
+        "generates": []
+      },
+      "success": {
+        "resultCodeField": "sonucKodu",
+        "successCode": "0000",
+        "messageField": "sonucMesaji"
+      },
+      "sandbox": {
+        "supported": true,
+        "defaultScenario": null
+      },
+      "status": "draft"
+    },
+    {
+      "id": "medula.hastane.hasta-kabul.kemik-iligi-oku",
+      "service": "medula.hastane.hasta-kabul",
+      "names": {
+        "documentationHeading": "KemikIligiOku",
+        "operationName": "KemikIligiOku",
+        "aliases": []
+      },
+      "contract": {
+        "inputDvo": null,
+        "outputDvo": null
+      },
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "fetchedAt": "2026-11-15",
+          "page": 149,
+          "section": "Hasta Kabul sureci metot listesi",
+          "confidence": "extracted"
+        }
+      ],
+      "stateEffects": {
+        "creates": [],
+        "reads": [],
+        "updates": [],
+        "deletes": [],
+        "generates": []
+      },
+      "success": {
+        "resultCodeField": "sonucKodu",
+        "successCode": "0000",
+        "messageField": "sonucMesaji"
+      },
+      "sandbox": {
+        "supported": true,
+        "defaultScenario": null
+      },
+      "status": "draft"
+    },
+    {
+      "id": "medula.hastane.hasta-kabul.kemik-iligi-tc-ile-sorgu",
+      "service": "medula.hastane.hasta-kabul",
+      "names": {
+        "documentationHeading": "KemikIligiTCIleSorgu",
+        "operationName": "KemikIligiTCIleSorgu",
+        "aliases": []
+      },
+      "contract": {
+        "inputDvo": null,
+        "outputDvo": null
+      },
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "fetchedAt": "2026-11-15",
+          "page": 149,
+          "section": "Hasta Kabul sureci metot listesi",
+          "confidence": "extracted"
+        }
+      ],
+      "stateEffects": {
+        "creates": [],
+        "reads": [],
+        "updates": [],
+        "deletes": [],
+        "generates": []
+      },
+      "success": {
+        "resultCodeField": "sonucKodu",
+        "successCode": "0000",
+        "messageField": "sonucMesaji"
+      },
+      "sandbox": {
+        "supported": true,
+        "defaultScenario": null
+      },
+      "status": "draft"
+    },
+    {
+      "id": "medula.hastane.hasta-kabul.sevk-bildir",
+      "service": "medula.hastane.hasta-kabul",
+      "names": {
+        "documentationHeading": "SevkBildir",
+        "operationName": "SevkBildir",
+        "aliases": []
+      },
+      "contract": {
+        "inputDvo": null,
+        "outputDvo": null
+      },
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "fetchedAt": "2026-11-15",
+          "page": 149,
+          "section": "Hasta Kabul sureci metot listesi",
+          "confidence": "extracted"
+        }
+      ],
+      "stateEffects": {
+        "creates": [],
+        "reads": [],
+        "updates": [],
+        "deletes": [],
+        "generates": []
+      },
+      "success": {
+        "resultCodeField": "sonucKodu",
+        "successCode": "0000",
+        "messageField": "sonucMesaji"
+      },
+      "sandbox": {
+        "supported": true,
+        "defaultScenario": null
+      },
+      "status": "draft"
+    },
+    {
+      "id": "medula.hastane.hasta-kabul.update-provizyon-tipi",
+      "service": "medula.hastane.hasta-kabul",
+      "names": {
+        "documentationHeading": "UpdateProvizyonTipi",
+        "operationName": "UpdateProvizyonTipi",
+        "aliases": []
+      },
+      "contract": {
+        "inputDvo": null,
+        "outputDvo": null
+      },
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "fetchedAt": "2026-11-15",
+          "page": 149,
+          "section": "Hasta Kabul sureci metot listesi",
+          "confidence": "extracted"
+        }
+      ],
+      "stateEffects": {
+        "creates": [],
+        "reads": [],
+        "updates": [],
+        "deletes": [],
+        "generates": []
+      },
+      "success": {
+        "resultCodeField": "sonucKodu",
+        "successCode": "0000",
+        "messageField": "sonucMesaji"
+      },
+      "sandbox": {
+        "supported": true,
+        "defaultScenario": null
+      },
+      "status": "draft"
+    },
+    {
+      "id": "medula.hastane.hasta-kabul.update-tedavi-tipi",
+      "service": "medula.hastane.hasta-kabul",
+      "names": {
+        "documentationHeading": "UpdateTedaviTipi",
+        "operationName": "UpdateTedaviTipi",
+        "aliases": []
+      },
+      "contract": {
+        "inputDvo": null,
+        "outputDvo": null
+      },
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "fetchedAt": "2026-11-15",
+          "page": 149,
+          "section": "Hasta Kabul sureci metot listesi",
+          "confidence": "extracted"
+        }
+      ],
+      "stateEffects": {
+        "creates": [],
+        "reads": [],
+        "updates": [],
+        "deletes": [],
+        "generates": []
+      },
+      "success": {
+        "resultCodeField": "sonucKodu",
+        "successCode": "0000",
+        "messageField": "sonucMesaji"
+      },
+      "sandbox": {
+        "supported": true,
+        "defaultScenario": null
+      },
+      "status": "draft"
     },
     {
       "id": "medula.hastane.hizmet-kayit.hizmet-kaydi-iptal",

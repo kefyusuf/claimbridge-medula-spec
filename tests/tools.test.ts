@@ -14,7 +14,7 @@ describe("tools (Group 5)", () => {
   it("loads the full v0.1 registry", () => {
     const reg = loadRegistry(root);
     expect(reg.services).toHaveLength(3);
-    expect(reg.methods).toHaveLength(10);
+    expect(reg.methods).toHaveLength(25);
     expect(reg.dvos).toHaveLength(42);
     expect(reg.enums).toHaveLength(19);
     expect(reg.rules).toHaveLength(5);

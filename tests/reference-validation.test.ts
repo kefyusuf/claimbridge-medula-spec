@@ -100,15 +100,30 @@ describe("reference-validation (Group 2)", () => {
     ]);
   });
 
-  it("has exactly 10 method registry files in 3 domains", () => {
+  it("has exactly 25 method registry files in 3 domains", () => {
     expect(methods.map((m) => m.file).sort()).toEqual([
       "fatura-kayit/fatura-iptal.yml",
       "fatura-kayit/fatura-kayit.yml",
       "fatura-kayit/fatura-oku.yml",
       "fatura-kayit/fatura-tutar-oku.yml",
+      "hasta-kabul/basvuru-altindaki-takipleri-oku.yml",
+      "hasta-kabul/ekds-belge-gereken-takip-sorgu.yml",
+      "hasta-kabul/ekds-kisi-dogrulama-sorgu.yml",
+      "hasta-kabul/hasta-cikis-iptal.yml",
+      "hasta-kabul/hasta-cikis-kayit.yml",
       "hasta-kabul/hasta-kabul-iptal.yml",
+      "hasta-kabul/hasta-kabul-kimlik-dogrulama.yml",
       "hasta-kabul/hasta-kabul-oku.yml",
       "hasta-kabul/hasta-kabul.yml",
+      "hasta-kabul/hasta-yatis-oku.yml",
+      "hasta-kabul/kemik-iligi-iptal.yml",
+      "hasta-kabul/kemik-iligi-islem-duzeltme.yml",
+      "hasta-kabul/kemik-iligi-kabul.yml",
+      "hasta-kabul/kemik-iligi-oku.yml",
+      "hasta-kabul/kemik-iligi-tc-ile-sorgu.yml",
+      "hasta-kabul/sevk-bildir.yml",
+      "hasta-kabul/update-provizyon-tipi.yml",
+      "hasta-kabul/update-tedavi-tipi.yml",
       "hizmet-kayit/hizmet-kaydi-iptal.yml",
       "hizmet-kayit/hizmet-kaydi-oku.yml",
       "hizmet-kayit/hizmet-kayit.yml",
@@ -184,12 +199,19 @@ describe("reference-validation (Group 2)", () => {
     }
   });
 
-  it("resolves every method contract after the Group 11 pass", () => {
+  it("resolves contracts for reviewed methods and allows draft nulls", () => {
     for (const m of methods) {
       const contract = m.data.contract as {
-        inputDvo: string;
-        outputDvo: string;
+        inputDvo: string | null;
+        outputDvo: string | null;
       };
+      if (m.data.status === "draft") {
+        expect(
+          contract.inputDvo === null || typeof contract.inputDvo === "string",
+          `${m.file} draft inputDvo must be null or a string`,
+        ).toBe(true);
+        continue;
+      }
       expect(contract.inputDvo, `${m.file} inputDvo must resolve`).toBeTruthy();
       expect(
         contract.outputDvo,

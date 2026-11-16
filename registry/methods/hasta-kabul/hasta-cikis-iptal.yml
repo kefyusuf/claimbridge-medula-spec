@@ -1,0 +1,32 @@
+id: medula.hastane.hasta-kabul.hasta-cikis-iptal
+service: medula.hastane.hasta-kabul
+names:
+  documentationHeading: HastaCikisIptal
+  operationName: HastaCikisIptal
+  aliases: []
+contract:
+  inputDvo: null
+  outputDvo: null
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: "3.1.1"
+    fetchedAt: "2026-11-15"
+    page: 149
+    section: Hasta Kabul sureci metot listesi
+    confidence: extracted
+
+stateEffects:
+  creates: []
+  reads: []
+  updates: []
+  deletes: []
+  generates: []
+success:
+  resultCodeField: sonucKodu
+  successCode: "0000"
+  messageField: sonucMesaji
+sandbox:
+  supported: true
+  defaultScenario: null
+status: draft
