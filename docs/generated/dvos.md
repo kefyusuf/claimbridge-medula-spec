@@ -481,6 +481,49 @@ Domain: `hizmet-kayit` · Direction: `output` · Status: `reviewed` · Source re
 | `hizmetSunucuRefNo` | string |  | — |  | Institution-assigned reference of the registered operation (s.235). |
 | `islemSiraNo` | string |  | — |  | Medula-assigned sequence number of the registered operation (s.235). |
 
+## `KemikIligiIptalCevapDVO`
+
+Domain: `hasta-kabul` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `hastaTcNo` | string |  | — |  | Patient T.C. identity number (s.181) |
+| `sonucKodu` | string |  | — |  | Result code; 0000 means success (s.181) |
+| `sonucMesaji` | string |  | — |  | Result explanation (s.181) |
+
+## `KemikIligiIptalGirisDVO`
+
+Domain: `hasta-kabul` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `hastaTcNo` | string |  | — |  | Patient T.C. identity number (s.181) |
+| `saglikTesisKodu` | integer |  | — |  | GSS-assigned institution code (s.181) |
+| `bildirimNo` | integer |  | — |  | Notification number of the registered bone-marrow admission (s.181) |
+
+## `KemikIligiKabulCevapDVO`
+
+Domain: `hasta-kabul` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `hastaTcNo` | string |  | — |  | Patient T.C. identity number of the registered bone-marrow admission (s.180) |
+| `islemTarihi` | date |  | — |  | Date of the registered bone-marrow admission (s.180) |
+| `bildirimNo` | integer |  | — |  | Unique notification number of the registered bone-marrow admission (s.180) |
+| `sonucKodu` | string |  | — |  | Result code; 0000 means success (s.180) |
+| `sonucMesaji` | string |  | — |  | Result explanation (s.180) |
+
+## `KemikIligiKabulDVO`
+
+Domain: `hasta-kabul` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `hastaTcNo` | string |  | — |  | Patient T.C. identity number (s.180) |
+| `islemTarihi` | date |  | — |  | Planned operation date, dd.mm.yyyy (s.180) |
+| `islemKodu` | string |  | — |  | SUT operation code of the planned bone-marrow procedure (s.180) |
+| `saglikTesisKodu` | integer |  | — |  | GSS-assigned institution code (s.180) |
+
 ## `KonsultasyonBilgisiDVO`
 
 Domain: `hizmet-kayit` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19

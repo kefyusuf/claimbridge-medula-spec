@@ -6,6 +6,26 @@ Format: [Keep a Changelog](https://keepachangelog.com); versioning: SemVer
 
 ## [Unreleased]
 
+### Group 28 — feat/v03-kemik-iligi (2026-11-17)
+
+Local group: no remote yet, so the PR step is replaced by a local
+`--no-ff` merge to `main` (PRD §28 step 6 fallback).
+
+- TDD red first: KemikIligi contract suite (4 checks) committed and
+  verified failing (4/4 red) before the composites existed (`1b74ab0`).
+- Four new reviewed DVOs: KemikIligiKabulDVO/CevapDVO (4.1.16.a/b,
+  s.180) and KemikIligiIptalGiris/CevapDVO (4.1.17.a/b, s.181) — hastaTcNo
+  flagged sensitive, `bildirimNo` Integer response identifier.
+- Two more contracts resolved and reviewed: kemik-iligi-kabul and
+  kemik-iligi-iptal — reviewed methods now 20/25.
+- Registry now: **59 DVOs**; dist regenerated.
+
+Validation output: `pnpm test` → 178/178 passed (29 suites); `tsc
+--noEmit` → clean; `pnpm validate` → OK; `pnpm check` → OK;
+`pnpm format:check` → OK.
+
+Remaining TODOs: none for this group.
+
 ### Group 27 — feat/v03-sevk (2026-11-16)
 
 Local group: no remote yet, so the PR step is replaced by a local

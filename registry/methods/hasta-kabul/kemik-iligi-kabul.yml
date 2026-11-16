@@ -5,8 +5,8 @@ names:
   operationName: KemikIligiKabul
   aliases: []
 contract:
-  inputDvo: null
-  outputDvo: null
+  inputDvo: KemikIligiKabulDVO
+  outputDvo: KemikIligiKabulCevapDVO
 sourceRefs:
   - id: medula-hastane-guide-3-1-1-2026-10-19
     sourceType: official-guide
@@ -14,6 +14,13 @@ sourceRefs:
     fetchedAt: "2026-11-15"
     page: 149
     section: Hasta Kabul sureci metot listesi
+    confidence: extracted
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: "3.1.1"
+    fetchedAt: "2026-11-16"
+    page: 180
+    section: "4.1.16 KemikIligiKabul Metodu"
     confidence: extracted
 
 stateEffects:
@@ -29,4 +36,4 @@ success:
 sandbox:
   supported: true
   defaultScenario: null
-status: draft
+status: reviewed

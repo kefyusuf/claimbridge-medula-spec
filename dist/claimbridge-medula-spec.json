@@ -1,6 +1,6 @@
 {
   "specVersion": "0.1.0",
-  "generatedAt": "2026-11-16T21:00:16.999Z",
+  "generatedAt": "2026-11-16T21:05:36.700Z",
   "sources": [
     {
       "id": "medula-hastane-guide-2026-06-17",
@@ -857,8 +857,8 @@
         "aliases": []
       },
       "contract": {
-        "inputDvo": null,
-        "outputDvo": null
+        "inputDvo": "KemikIligiIptalGirisDVO",
+        "outputDvo": "KemikIligiIptalCevapDVO"
       },
       "sourceRefs": [
         {
@@ -868,6 +868,15 @@
           "fetchedAt": "2026-11-15",
           "page": 149,
           "section": "Hasta Kabul sureci metot listesi",
+          "confidence": "extracted"
+        },
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "fetchedAt": "2026-11-16",
+          "page": 181,
+          "section": "4.1.17 KemikIligiIptal Metodu",
           "confidence": "extracted"
         }
       ],
@@ -887,7 +896,7 @@
         "supported": true,
         "defaultScenario": null
       },
-      "status": "draft"
+      "status": "reviewed"
     },
     {
       "id": "medula.hastane.hasta-kabul.kemik-iligi-islem-duzeltme",
@@ -939,8 +948,8 @@
         "aliases": []
       },
       "contract": {
-        "inputDvo": null,
-        "outputDvo": null
+        "inputDvo": "KemikIligiKabulDVO",
+        "outputDvo": "KemikIligiKabulCevapDVO"
       },
       "sourceRefs": [
         {
@@ -950,6 +959,15 @@
           "fetchedAt": "2026-11-15",
           "page": 149,
           "section": "Hasta Kabul sureci metot listesi",
+          "confidence": "extracted"
+        },
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "fetchedAt": "2026-11-16",
+          "page": 180,
+          "section": "4.1.16 KemikIligiKabul Metodu",
           "confidence": "extracted"
         }
       ],
@@ -969,7 +987,7 @@
         "supported": true,
         "defaultScenario": null
       },
-      "status": "draft"
+      "status": "reviewed"
     },
     {
       "id": "medula.hastane.hasta-kabul.kemik-iligi-oku",
@@ -7575,6 +7593,427 @@
               "sourceType": "official-guide",
               "guideVersion": "3.1.1",
               "page": 235,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
+      "id": "KemikIligiIptalCevapDVO",
+      "domain": "hasta-kabul",
+      "direction": "output",
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "fetchedAt": "2026-11-15",
+          "page": 181,
+          "section": "Tablo 4.1.17.b - KemikIligiIptalCevapDVO",
+          "confidence": "extracted"
+        }
+      ],
+      "fields": [
+        {
+          "name": "hastaTcNo",
+          "displayName": "Tc Kimlik No",
+          "type": "string",
+          "enumRef": null,
+          "required": false,
+          "length": null,
+          "description": "Patient T.C. identity number (s.181)",
+          "sensitive": true,
+          "syntheticOnlyRecommended": true,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 181,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "sonucKodu",
+          "displayName": "Sonuc Kodu",
+          "type": "string",
+          "enumRef": null,
+          "required": true,
+          "length": null,
+          "description": "Result code; 0000 means success (s.181)",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 181,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "sonucMesaji",
+          "displayName": "Sonuc Mesaji",
+          "type": "string",
+          "enumRef": null,
+          "required": true,
+          "length": null,
+          "description": "Result explanation (s.181)",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 181,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
+      "id": "KemikIligiIptalGirisDVO",
+      "domain": "hasta-kabul",
+      "direction": "input",
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "fetchedAt": "2026-11-15",
+          "page": 181,
+          "section": "Tablo 4.1.17.a - KemikIligiIptalGirisDVO",
+          "confidence": "extracted"
+        }
+      ],
+      "fields": [
+        {
+          "name": "hastaTcNo",
+          "displayName": "Tc Kimlik No",
+          "type": "string",
+          "enumRef": null,
+          "required": true,
+          "length": 11,
+          "description": "Patient T.C. identity number (s.181)",
+          "sensitive": true,
+          "syntheticOnlyRecommended": true,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 181,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "saglikTesisKodu",
+          "displayName": "Saglik Tesisi Kodu",
+          "type": "integer",
+          "enumRef": null,
+          "required": true,
+          "length": null,
+          "description": "GSS-assigned institution code (s.181)",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 181,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "bildirimNo",
+          "displayName": "Bildirim Numarasi",
+          "type": "integer",
+          "enumRef": null,
+          "required": true,
+          "length": null,
+          "description": "Notification number of the registered bone-marrow admission (s.181)",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 181,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
+      "id": "KemikIligiKabulCevapDVO",
+      "domain": "hasta-kabul",
+      "direction": "output",
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "fetchedAt": "2026-11-15",
+          "page": 180,
+          "section": "Tablo 4.1.16.b - KemikIligiKabulCevapDVO",
+          "confidence": "extracted"
+        }
+      ],
+      "fields": [
+        {
+          "name": "hastaTcNo",
+          "displayName": "Tc Kimlik No",
+          "type": "string",
+          "enumRef": null,
+          "required": false,
+          "length": null,
+          "description": "Patient T.C. identity number of the registered bone-marrow admission (s.180)",
+          "sensitive": true,
+          "syntheticOnlyRecommended": true,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 180,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "islemTarihi",
+          "displayName": "Islem Tarihi",
+          "type": "date",
+          "enumRef": null,
+          "required": false,
+          "length": null,
+          "description": "Date of the registered bone-marrow admission (s.180)",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 180,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "bildirimNo",
+          "displayName": "Bildirim Numarasi",
+          "type": "integer",
+          "enumRef": null,
+          "required": false,
+          "length": null,
+          "description": "Unique notification number of the registered bone-marrow admission (s.180)",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 180,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "sonucKodu",
+          "displayName": "Sonuc Kodu",
+          "type": "string",
+          "enumRef": null,
+          "required": true,
+          "length": null,
+          "description": "Result code; 0000 means success (s.180)",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 180,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "sonucMesaji",
+          "displayName": "Sonuc Mesaji",
+          "type": "string",
+          "enumRef": null,
+          "required": true,
+          "length": null,
+          "description": "Result explanation (s.180)",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 180,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
+      "id": "KemikIligiKabulDVO",
+      "domain": "hasta-kabul",
+      "direction": "input",
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "fetchedAt": "2026-11-15",
+          "page": 180,
+          "section": "Tablo 4.1.16.a - KemikIligiKabulDVO",
+          "confidence": "extracted"
+        }
+      ],
+      "fields": [
+        {
+          "name": "hastaTcNo",
+          "displayName": "Tc Kimlik No",
+          "type": "string",
+          "enumRef": null,
+          "required": true,
+          "length": 11,
+          "description": "Patient T.C. identity number (s.180)",
+          "sensitive": true,
+          "syntheticOnlyRecommended": true,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 180,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "islemTarihi",
+          "displayName": "Islem Tarihi",
+          "type": "date",
+          "enumRef": null,
+          "required": true,
+          "length": 10,
+          "description": "Planned operation date, dd.mm.yyyy (s.180)",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 180,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "islemKodu",
+          "displayName": "SUT Islem Kodu",
+          "type": "string",
+          "enumRef": null,
+          "required": true,
+          "length": 10,
+          "description": "SUT operation code of the planned bone-marrow procedure (s.180)",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 180,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.2.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "saglikTesisKodu",
+          "displayName": "Saglik Tesisi Kodu",
+          "type": "integer",
+          "enumRef": null,
+          "required": true,
+          "length": null,
+          "description": "GSS-assigned institution code (s.180)",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 180,
               "confidence": "extracted"
             }
           ],
