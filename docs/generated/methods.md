@@ -465,12 +465,12 @@
 | Service | medula.hastane.hasta-kabul |
 | Documentation heading | SevkBildir |
 | Operation name | SevkBildir |
-| Input DVO | null |
-| Output DVO | null |
+| Input DVO | SevkBildirGirisDVO |
+| Output DVO | SevkBildirSonucDVO |
 | Success | sonucKodu = 0000 (sonucMesaji) |
 | Sandbox supported |  |
-| Status | draft |
-| Source refs | medula-hastane-guide-3-1-1-2026-10-19 |
+| Status | reviewed |
+| Source refs | medula-hastane-guide-3-1-1-2026-10-19, medula-hastane-guide-3-1-1-2026-10-19 |
 
 **State effects**
 
@@ -489,12 +489,12 @@
 | Service | medula.hastane.hasta-kabul |
 | Documentation heading | UpdateProvizyonTipi |
 | Operation name | UpdateProvizyonTipi |
-| Input DVO | null |
-| Output DVO | null |
+| Input DVO | ProvizyonDegistirGirisDVO |
+| Output DVO | ProvizyonDegistirCevapDVO |
 | Success | sonucKodu = 0000 (sonucMesaji) |
 | Sandbox supported |  |
-| Status | draft |
-| Source refs | medula-hastane-guide-3-1-1-2026-10-19 |
+| Status | reviewed |
+| Source refs | medula-hastane-guide-3-1-1-2026-10-19, medula-hastane-guide-3-1-1-2026-10-19 |
 
 **State effects**
 
@@ -513,12 +513,12 @@
 | Service | medula.hastane.hasta-kabul |
 | Documentation heading | UpdateTedaviTipi |
 | Operation name | UpdateTedaviTipi |
-| Input DVO | null |
-| Output DVO | null |
+| Input DVO | TakipOkuGirisDVO |
+| Output DVO | TakipDVO |
 | Success | sonucKodu = 0000 (sonucMesaji) |
 | Sandbox supported |  |
-| Status | draft |
-| Source refs | medula-hastane-guide-3-1-1-2026-10-19 |
+| Status | reviewed |
+| Source refs | medula-hastane-guide-3-1-1-2026-10-19, medula-hastane-guide-3-1-1-2026-10-19 |
 
 **State effects**
 

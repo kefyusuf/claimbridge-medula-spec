@@ -102,7 +102,7 @@ describe("v0.3 sevk + update (Group 27)", () => {
     );
     const refs = JSON.stringify(m?.data["sourceRefs"]);
     expect(refs).toContain('"page":174');
-    expect(refs).toContain("Tablo 4.1.2.a");
+    expect(refs).toContain("TakipOkuGirisDVO/TakipDVO yeniden kullanim");
   });
 
   it("updates the manifest counts", () => {
