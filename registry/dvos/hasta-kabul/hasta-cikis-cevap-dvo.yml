@@ -1,0 +1,89 @@
+id: HastaCikisCevapDVO
+domain: hasta-kabul
+direction: output
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: "3.1.1"
+    fetchedAt: "2026-11-15"
+    page: 169
+    section: Tablo 4.1.4.b - HastaCikisCevapDVO
+    confidence: extracted
+fields:
+  - name: sonucKodu
+    displayName: Sonuc Kodu
+    type: string
+    enumRef: null
+    required: true
+    length: 4
+    description: Result code; 0000 means success, any other value is an error (s.169)
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 169
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: sonucMesaji
+    displayName: Sonuc Mesaji
+    type: string
+    enumRef: null
+    required: true
+    length: null
+    description: Result explanation; the error cause is reported here (s.169)
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 169
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: yatisBaslangicTarihi
+    displayName: Yatis Baslangic Tarihi
+    type: date
+    enumRef: null
+    required: false
+    length: 10
+    description: Hospitalization start date of the discharge (s.169)
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 169
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: yatisBitisTarihi
+    displayName: Yatis Bitis Tarihi
+    type: date
+    enumRef: null
+    required: false
+    length: 10
+    description: Hospitalization end date of the discharge (s.169)
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 169
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+status: reviewed
