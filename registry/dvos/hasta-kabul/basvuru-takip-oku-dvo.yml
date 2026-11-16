@@ -1,0 +1,51 @@
+id: BasvuruTakipOkuDVO
+domain: hasta-kabul
+direction: input
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: "3.1.1"
+    fetchedAt: "2026-11-15"
+    page: 171
+    section: Tablo 4.1.7.a - BasvuruTakipOkuDVO
+    confidence: extracted
+fields:
+  - name: hastaBasvuruNo
+    displayName: Hasta Basvuru No
+    type: string
+    enumRef: null
+    required: true
+    length: null
+    description: Application number whose takips are read (s.172)
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 172
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: saglikTesisKodu
+    displayName: Tesis Kodu
+    type: integer
+    enumRef: null
+    required: true
+    length: null
+    description: GSS-assigned institution code (s.172)
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 172
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+status: reviewed

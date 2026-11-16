@@ -2,11 +2,12 @@ id: medula.hastane.hasta-kabul.basvuru-altindaki-takipleri-oku
 service: medula.hastane.hasta-kabul
 names:
   documentationHeading: BasvuruAltindakiTakipleriOku
-  operationName: BasvuruAltindakiTakipleriOku
-  aliases: []
+  operationName: BasvuruTakipOku
+  aliases:
+    - BasvuruTakipOku
 contract:
-  inputDvo: null
-  outputDvo: null
+  inputDvo: BasvuruTakipOkuDVO
+  outputDvo: BasvuruTakipOkuCevapDVO
 sourceRefs:
   - id: medula-hastane-guide-3-1-1-2026-10-19
     sourceType: official-guide
@@ -14,6 +15,13 @@ sourceRefs:
     fetchedAt: "2026-11-15"
     page: 149
     section: Hasta Kabul sureci metot listesi
+    confidence: extracted
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: "3.1.1"
+    fetchedAt: "2026-11-15"
+    page: 172
+    section: "4.1.7 Basvuru Takip Oku Metodu"
     confidence: extracted
 
 stateEffects:
@@ -29,4 +37,4 @@ success:
 sandbox:
   supported: true
   defaultScenario: null
-status: draft
+status: reviewed

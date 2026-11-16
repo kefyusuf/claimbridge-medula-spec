@@ -38,9 +38,14 @@ describe("v0.3 hasta-kabul methods (Group 24)", () => {
       expect(m, `missing method ${id}`).toBeTruthy();
       expect(
         m?.data["status"],
-        `${id} status matches the Group 25 resolution`,
+        `${id} status matches the Group 25/26 resolutions`,
       ).toBe(
-        id === "medula.hastane.hasta-kabul.hasta-cikis-kayit"
+        [
+          "medula.hastane.hasta-kabul.hasta-cikis-kayit",
+          "medula.hastane.hasta-kabul.hasta-cikis-iptal",
+          "medula.hastane.hasta-kabul.hasta-yatis-oku",
+          "medula.hastane.hasta-kabul.basvuru-altindaki-takipleri-oku",
+        ].includes(id)
           ? "reviewed"
           : "draft",
       );
@@ -74,10 +79,28 @@ describe("v0.3 hasta-kabul methods (Group 24)", () => {
   it("keeps draft null contracts except the resolved hasta-cikis-kayit", () => {
     for (const id of NEW_METHOD_IDS) {
       const m = reg.methods.find((x) => x.data["id"] === id);
-      if (id === "medula.hastane.hasta-kabul.hasta-cikis-kayit") {
+      const resolved: Record<string, [string, string]> = {
+        "medula.hastane.hasta-kabul.hasta-cikis-kayit": [
+          "HastaCikisDVO",
+          "HastaCikisCevapDVO",
+        ],
+        "medula.hastane.hasta-kabul.hasta-cikis-iptal": [
+          "HastaCikisIptalDVO",
+          "HastaCikisCevapDVO",
+        ],
+        "medula.hastane.hasta-kabul.hasta-yatis-oku": [
+          "HastaYatisOkuDVO",
+          "HastaYatisOkuCevapDVO",
+        ],
+        "medula.hastane.hasta-kabul.basvuru-altindaki-takipleri-oku": [
+          "BasvuruTakipOkuDVO",
+          "BasvuruTakipOkuCevapDVO",
+        ],
+      };
+      if (resolved[id]) {
         expect(m?.data["contract"]).toEqual({
-          inputDvo: "HastaCikisDVO",
-          outputDvo: "HastaCikisCevapDVO",
+          inputDvo: resolved[id][0],
+          outputDvo: resolved[id][1],
         });
         continue;
       }

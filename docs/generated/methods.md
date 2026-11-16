@@ -104,13 +104,13 @@
 | --- | --- |
 | Service | medula.hastane.hasta-kabul |
 | Documentation heading | BasvuruAltindakiTakipleriOku |
-| Operation name | BasvuruAltindakiTakipleriOku |
-| Input DVO | null |
-| Output DVO | null |
+| Operation name | BasvuruTakipOku |
+| Input DVO | BasvuruTakipOkuDVO |
+| Output DVO | BasvuruTakipOkuCevapDVO |
 | Success | sonucKodu = 0000 (sonucMesaji) |
 | Sandbox supported |  |
-| Status | draft |
-| Source refs | medula-hastane-guide-3-1-1-2026-10-19 |
+| Status | reviewed |
+| Source refs | medula-hastane-guide-3-1-1-2026-10-19, medula-hastane-guide-3-1-1-2026-10-19 |
 
 **State effects**
 
@@ -177,12 +177,12 @@
 | Service | medula.hastane.hasta-kabul |
 | Documentation heading | HastaCikisIptal |
 | Operation name | HastaCikisIptal |
-| Input DVO | null |
-| Output DVO | null |
+| Input DVO | HastaCikisIptalDVO |
+| Output DVO | HastaCikisCevapDVO |
 | Success | sonucKodu = 0000 (sonucMesaji) |
 | Sandbox supported |  |
-| Status | draft |
-| Source refs | medula-hastane-guide-3-1-1-2026-10-19 |
+| Status | reviewed |
+| Source refs | medula-hastane-guide-3-1-1-2026-10-19, medula-hastane-guide-3-1-1-2026-10-19 |
 
 **State effects**
 
@@ -321,12 +321,12 @@
 | Service | medula.hastane.hasta-kabul |
 | Documentation heading | HastaYatisOku |
 | Operation name | HastaYatisOku |
-| Input DVO | null |
-| Output DVO | null |
+| Input DVO | HastaYatisOkuDVO |
+| Output DVO | HastaYatisOkuCevapDVO |
 | Success | sonucKodu = 0000 (sonucMesaji) |
 | Sandbox supported |  |
-| Status | draft |
-| Source refs | medula-hastane-guide-3-1-1-2026-10-19 |
+| Status | reviewed |
+| Source refs | medula-hastane-guide-3-1-1-2026-10-19, medula-hastane-guide-3-1-1-2026-10-19 |
 
 **State effects**
 

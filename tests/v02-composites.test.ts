@@ -82,7 +82,7 @@ describe("v0.2 composites (Group 13)", () => {
     const manifest = JSON.parse(
       readFileSync(resolve(root, "dist", "manifest.json"), "utf8"),
     ) as { counts: Record<string, number> };
-    expect(manifest.counts.dvos).toBe(44);
+    expect(manifest.counts.dvos).toBe(51);
     expect(manifest.counts.enums).toBe(19);
   });
 });

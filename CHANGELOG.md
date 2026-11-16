@@ -6,6 +6,33 @@ Format: [Keep a Changelog](https://keepachangelog.com); versioning: SemVer
 
 ## [Unreleased]
 
+### Group 26 — feat/v03-cikis-iptal (2026-11-16)
+
+Local group: no remote yet, so the PR step is replaced by a local
+`--no-ff` merge to `main` (PRD §28 step 6 fallback).
+
+- TDD red first: cikis-iptal/oku suite (6 checks) committed and verified
+  failing (6/6 red) before the composites existed (`3b0317d`).
+- Seven new reviewed DVOs: HastaCikisIptalDVO (4.1.5, s.169-170 — reuses
+  HastaCikisCevapDVO with the yeniHastaCikisTarihi correction field),
+  HastaYatisOkuDVO/CevapDVO (4.1.6, s.170-171) with the saglikTesisiKodu
+  spelling noted, BasvuruYatisBilgileriDVO (4.1.6.c — faturalanma
+  durumu 0/1), BasvuruTakipOkuDVO/CevapDVO + BasvuruTakipDVO (4.1.7,
+  s.171-172 — takipFaturaDurumu 0/1/2).
+- Three more contracts resolved and reviewed: hasta-cikis-iptal,
+  hasta-yatis-oku, basvuru-altindaki-takipleri-oku — reviewed methods
+  now 14/25.
+- §12.2 living proof: BasvuruAltindakiTakipleriOku (guide list, s.149)
+  vs BasvuruTakipOku (method table, s.172) captured as
+  documentationHeading vs operationName with the alias.
+- Registry now: **51 DVOs**; dist regenerated.
+
+Validation output: `pnpm test` → 169/169 passed (27 suites); `tsc
+--noEmit` → clean; `pnpm validate` → OK; `pnpm check` → OK;
+`pnpm format:check` → OK.
+
+Remaining TODOs: none for this group.
+
 ### Group 25 — feat/v03-cikis (2026-11-16)
 
 Local group: no remote yet, so the PR step is replaced by a local
