@@ -305,6 +305,29 @@ erDiagram
     string hizmetSunucuRefNo
     string islemSiraNo
   }
+  KemikIligiIptalCevapDVO {
+    string hastaTcNo
+    string sonucKodu
+    string sonucMesaji
+  }
+  KemikIligiIptalGirisDVO {
+    string hastaTcNo
+    integer saglikTesisKodu
+    integer bildirimNo
+  }
+  KemikIligiKabulCevapDVO {
+    string hastaTcNo
+    date islemTarihi
+    integer bildirimNo
+    string sonucKodu
+    string sonucMesaji
+  }
+  KemikIligiKabulDVO {
+    string hastaTcNo
+    date islemTarihi
+    string islemKodu
+    integer saglikTesisKodu
+  }
   KonsultasyonBilgisiDVO {
     string bransKodu
     string drTescilNo
@@ -507,6 +530,10 @@ erDiagram
   medula_hastane_hasta_kabul_hasta_kabul_oku ||--|| TakipDVO : outputDvo
   medula_hastane_hasta_kabul_hasta_yatis_oku ||--|| HastaYatisOkuDVO : inputDvo
   medula_hastane_hasta_kabul_hasta_yatis_oku ||--|| HastaYatisOkuCevapDVO : outputDvo
+  medula_hastane_hasta_kabul_kemik_iligi_iptal ||--|| KemikIligiIptalGirisDVO : inputDvo
+  medula_hastane_hasta_kabul_kemik_iligi_iptal ||--|| KemikIligiIptalCevapDVO : outputDvo
+  medula_hastane_hasta_kabul_kemik_iligi_kabul ||--|| KemikIligiKabulDVO : inputDvo
+  medula_hastane_hasta_kabul_kemik_iligi_kabul ||--|| KemikIligiKabulCevapDVO : outputDvo
   medula_hastane_hasta_kabul_sevk_bildir ||--|| SevkBildirGirisDVO : inputDvo
   medula_hastane_hasta_kabul_sevk_bildir ||--|| SevkBildirSonucDVO : outputDvo
   medula_hastane_hasta_kabul_update_provizyon_tipi ||--|| ProvizyonDegistirGirisDVO : inputDvo

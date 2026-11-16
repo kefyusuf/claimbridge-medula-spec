@@ -38,7 +38,7 @@ describe("v0.3 hasta-kabul methods (Group 24)", () => {
       expect(m, `missing method ${id}`).toBeTruthy();
       expect(
         m?.data["status"],
-        `${id} status matches the Group 25/26/27 resolutions`,
+        `${id} status matches the Group 25/26/27/28 resolutions`,
       ).toBe(
         [
           "medula.hastane.hasta-kabul.hasta-cikis-kayit",
@@ -48,6 +48,8 @@ describe("v0.3 hasta-kabul methods (Group 24)", () => {
           "medula.hastane.hasta-kabul.sevk-bildir",
           "medula.hastane.hasta-kabul.update-tedavi-tipi",
           "medula.hastane.hasta-kabul.update-provizyon-tipi",
+          "medula.hastane.hasta-kabul.kemik-iligi-kabul",
+          "medula.hastane.hasta-kabul.kemik-iligi-iptal",
         ].includes(id)
           ? "reviewed"
           : "draft",
@@ -110,6 +112,14 @@ describe("v0.3 hasta-kabul methods (Group 24)", () => {
         "medula.hastane.hasta-kabul.update-provizyon-tipi": [
           "ProvizyonDegistirGirisDVO",
           "ProvizyonDegistirCevapDVO",
+        ],
+        "medula.hastane.hasta-kabul.kemik-iligi-kabul": [
+          "KemikIligiKabulDVO",
+          "KemikIligiKabulCevapDVO",
+        ],
+        "medula.hastane.hasta-kabul.kemik-iligi-iptal": [
+          "KemikIligiIptalGirisDVO",
+          "KemikIligiIptalCevapDVO",
         ],
       };
       if (resolved[id]) {

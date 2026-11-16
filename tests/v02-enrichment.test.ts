@@ -159,7 +159,7 @@ describe("v0.2 enrichment (Group 10)", () => {
     const manifest = JSON.parse(
       readFileSync(resolve(root, "dist", "manifest.json"), "utf8"),
     ) as { counts: Record<string, number> };
-    expect(manifest.counts.dvos).toBe(55);
+    expect(manifest.counts.dvos).toBe(59);
     expect(manifest.counts.enums).toBe(19);
     expect(manifest.counts.methods).toBe(25);
   });

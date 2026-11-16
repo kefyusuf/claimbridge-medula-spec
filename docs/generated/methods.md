@@ -345,12 +345,12 @@
 | Service | medula.hastane.hasta-kabul |
 | Documentation heading | KemikIligiIptal |
 | Operation name | KemikIligiIptal |
-| Input DVO | null |
-| Output DVO | null |
+| Input DVO | KemikIligiIptalGirisDVO |
+| Output DVO | KemikIligiIptalCevapDVO |
 | Success | sonucKodu = 0000 (sonucMesaji) |
 | Sandbox supported |  |
-| Status | draft |
-| Source refs | medula-hastane-guide-3-1-1-2026-10-19 |
+| Status | reviewed |
+| Source refs | medula-hastane-guide-3-1-1-2026-10-19, medula-hastane-guide-3-1-1-2026-10-19 |
 
 **State effects**
 
@@ -393,12 +393,12 @@
 | Service | medula.hastane.hasta-kabul |
 | Documentation heading | KemikIligiKabul |
 | Operation name | KemikIligiKabul |
-| Input DVO | null |
-| Output DVO | null |
+| Input DVO | KemikIligiKabulDVO |
+| Output DVO | KemikIligiKabulCevapDVO |
 | Success | sonucKodu = 0000 (sonucMesaji) |
 | Sandbox supported |  |
-| Status | draft |
-| Source refs | medula-hastane-guide-3-1-1-2026-10-19 |
+| Status | reviewed |
+| Source refs | medula-hastane-guide-3-1-1-2026-10-19, medula-hastane-guide-3-1-1-2026-10-19 |
 
 **State effects**
 
