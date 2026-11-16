@@ -600,6 +600,28 @@ Domain: `hasta-kabul` · Direction: `output` · Status: `draft` · Source refs: 
 | `takipNo` | string |  | — |  | Primary tracking number generated on successful admission; null on failure. |
 | `takipler` | array |  | — |  | List of TakipDVO records; a bagli-takip request can return more than one tracking record. |
 
+## `ProvizyonDegistirCevapDVO`
+
+Domain: `hasta-kabul` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `takipNo` | string |  | — |  | Tracking number (s.174) |
+| `yeniProvizyonTipi` | string |  | — |  | New provision type applied (s.174) |
+| `hastaBasvuruNo` | string |  | — |  | Application number (length per the guide is 4) (s.174) |
+| `sonucKodu` | string |  | — |  | Result code; 0000 means success (guide lists N/A length here) (s.174) |
+| `sonucMesaji` | string |  | — |  | Result explanation (s.174) |
+
+## `ProvizyonDegistirGirisDVO`
+
+Domain: `hasta-kabul` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `takipNo` | string |  | — |  | Tracking number whose provision type changes (s.174) |
+| `tesisKodu` | integer |  | — |  | GSS-assigned institution code (s.174) |
+| `yeniProvizyonTipi` | string |  | — |  | New provision type (provizyon-tipi codes) (s.174) |
+
 ## `ProvizyonGirisDVO`
 
 Domain: `hasta-kabul` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
@@ -623,6 +645,30 @@ Domain: `hasta-kabul` · Direction: `input` · Status: `reviewed` · Source refs
 | `ktsHbysKodu` | string |  | — |  | Software vendor KTS code (s.159). Verification correction - the guide marks this required. |
 | `ekdsYontemGerekce` | enum |  | ekds-yontem-gerekce |  | EKDS verification method justification codes; Integer[] in the guide, modeled as an array of ekds-yontem-gerekce codes (s.167, changelog s.13). |
 | `doktorTescilNo` | string |  | — |  | Registration number of the admitting doctor. Verification finding - this field does not appear in Tablo 4.1.1.a; kept for PRD 13.4 compatibility and slated for removal in 0.2.0. |
+
+## `SevkBildirGirisDVO`
+
+Domain: `hasta-kabul` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `takipNo` | string |  | — |  | Tracking number being referred (s.173) |
+| `tesisKodu` | integer |  | — |  | GSS-assigned institution code (s.173) |
+| `sevkEdilisTarihi` | date |  | — |  | Referral date, dd.mm.yyyy (s.173) |
+| `yesilKartSevkEdilenBransKodu` | string |  | — |  | Branch code of the green-card referral target (s.173) |
+| `yesilKartSevkEdilenTedaviTipi` | integer |  | — |  | Treatment type of the green-card referral target (s.173) |
+| `yesilKartSevkEdilenTakipTipi` | string |  | — |  | Takip type of the green-card referral target (s.173) |
+
+## `SevkBildirSonucDVO`
+
+Domain: `hasta-kabul` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `takipNo` | string |  | — |  | Tracking number (s.173) |
+| `sevkEdilisTarihi` | date |  | — |  | Referral date, dd.mm.yyyy (s.173) |
+| `sonucKodu` | string |  | — |  | Result code; 0000 means success (s.173) |
+| `sonucMesaji` | string |  | — |  | Result explanation (s.173) |
 
 ## `TahlilBilgisiDVO`
 

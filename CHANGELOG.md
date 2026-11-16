@@ -6,6 +6,28 @@ Format: [Keep a Changelog](https://keepachangelog.com); versioning: SemVer
 
 ## [Unreleased]
 
+### Group 27 — feat/v03-sevk (2026-11-16)
+
+Local group: no remote yet, so the PR step is replaced by a local
+`--no-ff` merge to `main` (PRD §28 step 6 fallback).
+
+- TDD red first: sevk/update suite (5 checks) committed and verified
+  failing (5/5 red) before the composites existed (`0a4397a`).
+- Four new reviewed DVOs: SevkBildirGirisDVO (4.1.8.a, s.173 — yesil kart
+  referral fields), SevkBildirSonucDVO (4.1.8.b), ProvizyonDegistirGiris/
+  CevapDVO (4.1.10.a/b, s.174).
+- Three more contracts resolved and reviewed: sevk-bildir,
+  update-tedavi-tipi (zero-new-DVO reuse of TakipOkuGirisDVO/TakipDVO
+  per 4.1.9), update-provizyon-tipi — reviewed methods now 18/25.
+- A YAML colon-in-plain-scalar issue (length per guide: 4) caught by the
+  validator before commit and fixed.
+
+Validation output: `pnpm test` → 174/174 passed (28 suites); `tsc
+--noEmit` → clean; `pnpm validate` → OK; `pnpm check` → OK;
+`pnpm format:check` → OK.
+
+Remaining TODOs: none for this group.
+
 ### Group 26 — feat/v03-cikis-iptal (2026-11-16)
 
 Local group: no remote yet, so the PR step is replaced by a local

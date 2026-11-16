@@ -1,0 +1,89 @@
+id: SevkBildirSonucDVO
+domain: hasta-kabul
+direction: output
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: "3.1.1"
+    fetchedAt: "2026-11-15"
+    page: 173
+    section: Tablo 4.1.8.b - SevkBildirSonucDVO
+    confidence: extracted
+fields:
+  - name: takipNo
+    displayName: Takip Numarasi
+    type: string
+    enumRef: null
+    required: false
+    length: null
+    description: Tracking number (s.173)
+    sensitive: false
+    syntheticOnlyRecommended: true
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 173
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: sevkEdilisTarihi
+    displayName: Sevk Edilis Tarihi
+    type: date
+    enumRef: null
+    required: false
+    length: 10
+    description: Referral date, dd.mm.yyyy (s.173)
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 173
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: sonucKodu
+    displayName: Sonuc Kodu
+    type: string
+    enumRef: null
+    required: true
+    length: 4
+    description: Result code; 0000 means success (s.173)
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 173
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: sonucMesaji
+    displayName: Sonuc Mesaji
+    type: string
+    enumRef: null
+    required: true
+    length: null
+    description: Result explanation (s.173)
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 173
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+status: reviewed

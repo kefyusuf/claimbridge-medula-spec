@@ -38,13 +38,16 @@ describe("v0.3 hasta-kabul methods (Group 24)", () => {
       expect(m, `missing method ${id}`).toBeTruthy();
       expect(
         m?.data["status"],
-        `${id} status matches the Group 25/26 resolutions`,
+        `${id} status matches the Group 25/26/27 resolutions`,
       ).toBe(
         [
           "medula.hastane.hasta-kabul.hasta-cikis-kayit",
           "medula.hastane.hasta-kabul.hasta-cikis-iptal",
           "medula.hastane.hasta-kabul.hasta-yatis-oku",
           "medula.hastane.hasta-kabul.basvuru-altindaki-takipleri-oku",
+          "medula.hastane.hasta-kabul.sevk-bildir",
+          "medula.hastane.hasta-kabul.update-tedavi-tipi",
+          "medula.hastane.hasta-kabul.update-provizyon-tipi",
         ].includes(id)
           ? "reviewed"
           : "draft",
@@ -76,7 +79,7 @@ describe("v0.3 hasta-kabul methods (Group 24)", () => {
     );
   });
 
-  it("keeps draft null contracts except the resolved hasta-cikis-kayit", () => {
+  it("keeps draft null contracts except the resolved methods", () => {
     for (const id of NEW_METHOD_IDS) {
       const m = reg.methods.find((x) => x.data["id"] === id);
       const resolved: Record<string, [string, string]> = {
@@ -95,6 +98,18 @@ describe("v0.3 hasta-kabul methods (Group 24)", () => {
         "medula.hastane.hasta-kabul.basvuru-altindaki-takipleri-oku": [
           "BasvuruTakipOkuDVO",
           "BasvuruTakipOkuCevapDVO",
+        ],
+        "medula.hastane.hasta-kabul.sevk-bildir": [
+          "SevkBildirGirisDVO",
+          "SevkBildirSonucDVO",
+        ],
+        "medula.hastane.hasta-kabul.update-tedavi-tipi": [
+          "TakipOkuGirisDVO",
+          "TakipDVO",
+        ],
+        "medula.hastane.hasta-kabul.update-provizyon-tipi": [
+          "ProvizyonDegistirGirisDVO",
+          "ProvizyonDegistirCevapDVO",
         ],
       };
       if (resolved[id]) {

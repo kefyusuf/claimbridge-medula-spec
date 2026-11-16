@@ -384,6 +384,18 @@ erDiagram
     string takipNo
     array takipler
   }
+  ProvizyonDegistirCevapDVO {
+    string takipNo
+    string yeniProvizyonTipi
+    string hastaBasvuruNo
+    string sonucKodu
+    string sonucMesaji
+  }
+  ProvizyonDegistirGirisDVO {
+    string takipNo
+    integer tesisKodu
+    string yeniProvizyonTipi
+  }
   ProvizyonGirisDVO {
     integer saglikTesisKodu
     string hastaTCKimlikNo
@@ -402,6 +414,20 @@ erDiagram
     string ktsHbysKodu
     enum ekdsYontemGerekce
     string doktorTescilNo
+  }
+  SevkBildirGirisDVO {
+    string takipNo
+    integer tesisKodu
+    date sevkEdilisTarihi
+    string yesilKartSevkEdilenBransKodu
+    integer yesilKartSevkEdilenTedaviTipi
+    string yesilKartSevkEdilenTakipTipi
+  }
+  SevkBildirSonucDVO {
+    string takipNo
+    date sevkEdilisTarihi
+    string sonucKodu
+    string sonucMesaji
   }
   TahlilBilgisiDVO {
     string bransKodu
@@ -481,6 +507,12 @@ erDiagram
   medula_hastane_hasta_kabul_hasta_kabul_oku ||--|| TakipDVO : outputDvo
   medula_hastane_hasta_kabul_hasta_yatis_oku ||--|| HastaYatisOkuDVO : inputDvo
   medula_hastane_hasta_kabul_hasta_yatis_oku ||--|| HastaYatisOkuCevapDVO : outputDvo
+  medula_hastane_hasta_kabul_sevk_bildir ||--|| SevkBildirGirisDVO : inputDvo
+  medula_hastane_hasta_kabul_sevk_bildir ||--|| SevkBildirSonucDVO : outputDvo
+  medula_hastane_hasta_kabul_update_provizyon_tipi ||--|| ProvizyonDegistirGirisDVO : inputDvo
+  medula_hastane_hasta_kabul_update_provizyon_tipi ||--|| ProvizyonDegistirCevapDVO : outputDvo
+  medula_hastane_hasta_kabul_update_tedavi_tipi ||--|| TakipOkuGirisDVO : inputDvo
+  medula_hastane_hasta_kabul_update_tedavi_tipi ||--|| TakipDVO : outputDvo
   medula_hastane_hizmet_kayit_hizmet_kaydi_iptal ||--|| HizmetIptalGirisDVO : inputDvo
   medula_hastane_hizmet_kayit_hizmet_kaydi_iptal ||--|| HizmetIptalCevapDVO : outputDvo
   medula_hastane_hizmet_kayit_hizmet_kaydi_oku ||--|| HizmetOkuGirisDVO : inputDvo

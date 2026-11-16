@@ -1,0 +1,108 @@
+id: ProvizyonDegistirCevapDVO
+domain: hasta-kabul
+direction: output
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: "3.1.1"
+    fetchedAt: "2026-11-15"
+    page: 174
+    section: Tablo 4.1.10.b - ProvizyonDegistirCevapDVO
+    confidence: extracted
+fields:
+  - name: takipNo
+    displayName: Takip Numarasi
+    type: string
+    enumRef: null
+    required: false
+    length: null
+    description: Tracking number (s.174)
+    sensitive: false
+    syntheticOnlyRecommended: true
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 174
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: yeniProvizyonTipi
+    displayName: Yeni Provizyon Tipi
+    type: string
+    enumRef: null
+    required: false
+    length: null
+    description: New provision type applied (s.174)
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 174
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: hastaBasvuruNo
+    displayName: Hasta Basvuru No
+    type: string
+    enumRef: null
+    required: false
+    length: 4
+    description: Application number (length per the guide is 4) (s.174)
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 174
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: sonucKodu
+    displayName: Sonuc Kodu
+    type: string
+    enumRef: null
+    required: true
+    length: null
+    description: Result code; 0000 means success (guide lists N/A length here) (s.174)
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 174
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: sonucMesaji
+    displayName: Sonuc Mesaji
+    type: string
+    enumRef: null
+    required: true
+    length: null
+    description: Result explanation (s.174)
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 174
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+status: reviewed
