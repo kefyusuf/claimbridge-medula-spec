@@ -23,6 +23,45 @@ Domain: `hizmet-kayit` · Direction: `input` · Status: `reviewed` · Source ref
 | `cokluOzelDurum` | array |  | — |  | Multiple special-condition codes (s.192). |
 | `raporTakipNo` | string |  | — |  | Report tracking number (s.192). |
 
+## `BasvuruTakipDVO`
+
+Domain: `hasta-kabul` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `takipNo` | string |  | — |  | Tracking number (s.172) |
+| `takipFaturaDurumu` | string |  | — |  | 0 Odeme sorgusu yapilmamis / 1 sorgulanmis faturalanmamis / 2 sorgulanmis faturalanmis (s.172) |
+
+## `BasvuruTakipOkuCevapDVO`
+
+Domain: `hasta-kabul` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `basvuruTakip` | array |  | — |  | Takip list (BasvuruTakipDVO[], Tablo 4.1.7.c), expanded as a registry entity (s.172) |
+| `hastaBasvuruNo` | string |  | — |  | Application number (s.172) |
+| `sonucKodu` | string |  | — |  | Result code; 0000 means success (s.172) |
+| `sonucMesaji` | string |  | — |  | Result explanation (s.172) |
+
+## `BasvuruTakipOkuDVO`
+
+Domain: `hasta-kabul` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `hastaBasvuruNo` | string |  | — |  | Application number whose takips are read (s.172) |
+| `saglikTesisKodu` | integer |  | — |  | GSS-assigned institution code (s.172) |
+
+## `BasvuruYatisBilgileriDVO`
+
+Domain: `hasta-kabul` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `baslangicTarihi` | date |  | — |  | Hospitalization start date (s.171) |
+| `bitisTarihi` | date |  | — |  | Discharge date (s.171) |
+| `durum` | string |  | — |  | 0 Faturalanmamis / 1 Faturalanmis (s.171) |
+
 ## `DigerIslemBilgisiDVO`
 
 Domain: `hizmet-kayit` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19, medula-hastane-guide-3-1-1-2026-10-19
@@ -203,6 +242,17 @@ Domain: `hasta-kabul` · Direction: `input` · Status: `reviewed` · Source refs
 | `hastaCikisTarihi` | date |  | — |  | Discharge date of the hospitalized patient, dd.mm.yyyy (s.168) |
 | `saglikTesisKodu` | integer |  | — |  | GSS-assigned code of the institution (s.168) |
 
+## `HastaCikisIptalDVO`
+
+Domain: `hasta-kabul` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19, medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `hastaBasvuruNo` | string |  | — |  | Application number the discharge cancellation is recorded against (s.169) |
+| `hastaCikisTarihi` | date |  | — |  | Original discharge date being cancelled (s.170) |
+| `yeniHastaCikisTarihi` | date |  | — |  | New discharge date replacing the cancelled one (s.170) |
+| `saglikTesisKodu` | integer |  | — |  | GSS-assigned institution code (s.170) |
+
 ## `HastaYatisBilgisiDVO`
 
 Domain: `hizmet-kayit` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
@@ -220,6 +270,30 @@ Domain: `hizmet-kayit` · Direction: `input` · Status: `reviewed` · Source ref
 | `ozelDurum` | string |  | — |  | Special condition code, Tablo 5.1 OzelDurumVO (s.234) |
 | `aciklama` | string |  | — |  | Hospitalization description (s.234) |
 | `cokluOzelDurum` | array |  | — |  | Multiple special-condition codes (s.234) |
+
+## `HastaYatisOkuCevapDVO`
+
+Domain: `hasta-kabul` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19, medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `saglikTesisiKodu` | string |  | — |  | Institution code (spelled saglikTesisiKodu in the guide) (s.170) |
+| `hastaBasvuruNo` | string |  | — |  | Application number (s.170) |
+| `basvuruYatisBilgileri` | array |  | — |  | Hospitalization records (BasvuruYatisBilgileriDVO[], Tablo 4.1.6.c, s.171), expanded as a registry entity (s.171) |
+| `sonucKodu` | string |  | — |  | Result code; 0000 means success (s.171) |
+| `sonucMesaji` | string |  | — |  | Result explanation (s.171) |
+| `yeniDoganDogumTarihi` | date |  | — |  | Birth date when the hospitalization is a newborn episode (s.171) |
+| `yeniDoganCocukSiraNo` | string |  | — |  | Child order when the hospitalization is a newborn episode (s.171) |
+| `donorTck` | string |  | — |  | Donor identity number when the episode is a donation (s.171) |
+
+## `HastaYatisOkuDVO`
+
+Domain: `hasta-kabul` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `hastaBasvuruNo` | string |  | — |  | Application number whose hospitalizations are read (s.170) |
+| `saglikTesisKodu` | integer |  | — |  | GSS-assigned institution code (s.170) |
 
 ## `HataliIslemBilgisiDVO`
 

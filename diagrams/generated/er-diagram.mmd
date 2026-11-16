@@ -17,6 +17,25 @@ erDiagram
     array cokluOzelDurum
     string raporTakipNo
   }
+  BasvuruTakipDVO {
+    string takipNo
+    string takipFaturaDurumu
+  }
+  BasvuruTakipOkuCevapDVO {
+    array basvuruTakip
+    string hastaBasvuruNo
+    string sonucKodu
+    string sonucMesaji
+  }
+  BasvuruTakipOkuDVO {
+    string hastaBasvuruNo
+    integer saglikTesisKodu
+  }
+  BasvuruYatisBilgileriDVO {
+    date baslangicTarihi
+    date bitisTarihi
+    string durum
+  }
   DigerIslemBilgisiDVO {
     integer adet
     string bransKodu
@@ -132,6 +151,12 @@ erDiagram
     date hastaCikisTarihi
     integer saglikTesisKodu
   }
+  HastaCikisIptalDVO {
+    string hastaBasvuruNo
+    date hastaCikisTarihi
+    date yeniHastaCikisTarihi
+    integer saglikTesisKodu
+  }
   HastaYatisBilgisiDVO {
     string bransKodu
     string drTescilNo
@@ -144,6 +169,20 @@ erDiagram
     string ozelDurum
     string aciklama
     array cokluOzelDurum
+  }
+  HastaYatisOkuCevapDVO {
+    string saglikTesisiKodu
+    string hastaBasvuruNo
+    array basvuruYatisBilgileri
+    string sonucKodu
+    string sonucMesaji
+    date yeniDoganDogumTarihi
+    string yeniDoganCocukSiraNo
+    string donorTck
+  }
+  HastaYatisOkuDVO {
+    string hastaBasvuruNo
+    integer saglikTesisKodu
   }
   HataliIslemBilgisiDVO {
     string hataKodu
@@ -428,6 +467,10 @@ erDiagram
   medula_hastane_fatura_kayit_fatura_oku ||--|| FaturaOkuCevapDVO : outputDvo
   medula_hastane_fatura_kayit_fatura_tutar_oku ||--|| FaturaGirisDVO : inputDvo
   medula_hastane_fatura_kayit_fatura_tutar_oku ||--|| FaturaCevapDVO : outputDvo
+  medula_hastane_hasta_kabul_basvuru_altindaki_takipleri_oku ||--|| BasvuruTakipOkuDVO : inputDvo
+  medula_hastane_hasta_kabul_basvuru_altindaki_takipleri_oku ||--|| BasvuruTakipOkuCevapDVO : outputDvo
+  medula_hastane_hasta_kabul_hasta_cikis_iptal ||--|| HastaCikisIptalDVO : inputDvo
+  medula_hastane_hasta_kabul_hasta_cikis_iptal ||--|| HastaCikisCevapDVO : outputDvo
   medula_hastane_hasta_kabul_hasta_cikis_kayit ||--|| HastaCikisDVO : inputDvo
   medula_hastane_hasta_kabul_hasta_cikis_kayit ||--|| HastaCikisCevapDVO : outputDvo
   medula_hastane_hasta_kabul_hasta_kabul ||--|| ProvizyonGirisDVO : inputDvo
@@ -436,6 +479,8 @@ erDiagram
   medula_hastane_hasta_kabul_hasta_kabul_iptal ||--|| TakipSilCevapDVO : outputDvo
   medula_hastane_hasta_kabul_hasta_kabul_oku ||--|| TakipOkuGirisDVO : inputDvo
   medula_hastane_hasta_kabul_hasta_kabul_oku ||--|| TakipDVO : outputDvo
+  medula_hastane_hasta_kabul_hasta_yatis_oku ||--|| HastaYatisOkuDVO : inputDvo
+  medula_hastane_hasta_kabul_hasta_yatis_oku ||--|| HastaYatisOkuCevapDVO : outputDvo
   medula_hastane_hizmet_kayit_hizmet_kaydi_iptal ||--|| HizmetIptalGirisDVO : inputDvo
   medula_hastane_hizmet_kayit_hizmet_kaydi_iptal ||--|| HizmetIptalCevapDVO : outputDvo
   medula_hastane_hizmet_kayit_hizmet_kaydi_oku ||--|| HizmetOkuGirisDVO : inputDvo
