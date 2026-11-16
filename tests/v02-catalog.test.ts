@@ -85,6 +85,6 @@ describe("v0.2 catalog (Group 12)", () => {
       readFileSync(resolve(root, "dist", "manifest.json"), "utf8"),
     ) as { counts: Record<string, number> };
     expect(manifest.counts.enums).toBe(19);
-    expect(manifest.counts.dvos).toBe(42);
+    expect(manifest.counts.dvos).toBe(44);
   });
 });

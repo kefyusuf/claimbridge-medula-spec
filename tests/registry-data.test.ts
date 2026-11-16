@@ -25,6 +25,8 @@ const EXPECTED_DVO_FILES = [
   "fatura-kayit/fatura-cevap-dvo.yml",
   "fatura-kayit/fatura-giris-dvo.yml",
   "fatura-kayit/fatura-hizmet-detay-dvo.yml",
+  "hasta-kabul/hasta-cikis-cevap-dvo.yml",
+  "hasta-kabul/hasta-cikis-dvo.yml",
   "hasta-kabul/provizyon-cevap-dvo.yml",
   "hasta-kabul/provizyon-giris-dvo.yml",
   "hasta-kabul/takip-dvo.yml",

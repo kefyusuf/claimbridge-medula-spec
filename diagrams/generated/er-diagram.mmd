@@ -121,6 +121,17 @@ erDiagram
   GenBilgisiDVO {
     string genKodu
   }
+  HastaCikisCevapDVO {
+    string sonucKodu
+    string sonucMesaji
+    date yatisBaslangicTarihi
+    date yatisBitisTarihi
+  }
+  HastaCikisDVO {
+    string hastaBasvuruNo
+    date hastaCikisTarihi
+    integer saglikTesisKodu
+  }
   HastaYatisBilgisiDVO {
     string bransKodu
     string drTescilNo
@@ -417,6 +428,8 @@ erDiagram
   medula_hastane_fatura_kayit_fatura_oku ||--|| FaturaOkuCevapDVO : outputDvo
   medula_hastane_fatura_kayit_fatura_tutar_oku ||--|| FaturaGirisDVO : inputDvo
   medula_hastane_fatura_kayit_fatura_tutar_oku ||--|| FaturaCevapDVO : outputDvo
+  medula_hastane_hasta_kabul_hasta_cikis_kayit ||--|| HastaCikisDVO : inputDvo
+  medula_hastane_hasta_kabul_hasta_cikis_kayit ||--|| HastaCikisCevapDVO : outputDvo
   medula_hastane_hasta_kabul_hasta_kabul ||--|| ProvizyonGirisDVO : inputDvo
   medula_hastane_hasta_kabul_hasta_kabul ||--|| ProvizyonCevapDVO : outputDvo
   medula_hastane_hasta_kabul_hasta_kabul_iptal ||--|| TakipSilGirisDVO : inputDvo

@@ -6,6 +6,26 @@ Format: [Keep a Changelog](https://keepachangelog.com); versioning: SemVer
 
 ## [Unreleased]
 
+### Group 25 — feat/v03-cikis (2026-11-16)
+
+Local group: no remote yet, so the PR step is replaced by a local
+`--no-ff` merge to `main` (PRD §28 step 6 fallback).
+
+- TDD red first: HastaCikis contract suite (4 checks) committed and
+  verified failing (4/4 red) before the DVOs existed (`883e71a`).
+- `HastaCikisDVO` (4.1.4.a, s.168) and `HastaCikisCevapDVO` (4.1.4.b,
+  s.169) registered as reviewed; `hasta-cikis-kayit` contract resolved
+  and promoted to `reviewed` (s.169) — the first expanded method beyond
+  the original vertical slice.
+- The G24 draft-entry expectations updated to reflect the resolution
+  (14 draft + 1 reviewed within the expansion set).
+
+Validation output: `pnpm test` → 163/163 passed (26 suites); `tsc
+--noEmit` → clean; `pnpm validate` → OK; `pnpm check` → OK;
+`pnpm format:check` → OK.
+
+Remaining TODOs: none for this group.
+
 ### Group 24 — feat/hasta-kabul-methods (2026-11-16)
 
 Local group: no remote yet, so the PR step is replaced by a local

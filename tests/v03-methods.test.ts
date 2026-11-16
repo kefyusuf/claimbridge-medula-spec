@@ -36,7 +36,14 @@ describe("v0.3 hasta-kabul methods (Group 24)", () => {
     for (const id of NEW_METHOD_IDS) {
       const m = reg.methods.find((x) => x.data["id"] === id);
       expect(m, `missing method ${id}`).toBeTruthy();
-      expect(m?.data["status"], `${id} starts as draft`).toBe("draft");
+      expect(
+        m?.data["status"],
+        `${id} status matches the Group 25 resolution`,
+      ).toBe(
+        id === "medula.hastane.hasta-kabul.hasta-cikis-kayit"
+          ? "reviewed"
+          : "draft",
+      );
       expect(m?.data["service"]).toBe("medula.hastane.hasta-kabul");
       const refs = JSON.stringify(m?.data["sourceRefs"]);
       expect(refs, `${id} must cite the method list`).toContain(GUIDE_ID);
@@ -64,9 +71,16 @@ describe("v0.3 hasta-kabul methods (Group 24)", () => {
     );
   });
 
-  it("keeps every new method on a null draft contract", () => {
+  it("keeps draft null contracts except the resolved hasta-cikis-kayit", () => {
     for (const id of NEW_METHOD_IDS) {
       const m = reg.methods.find((x) => x.data["id"] === id);
+      if (id === "medula.hastane.hasta-kabul.hasta-cikis-kayit") {
+        expect(m?.data["contract"]).toEqual({
+          inputDvo: "HastaCikisDVO",
+          outputDvo: "HastaCikisCevapDVO",
+        });
+        continue;
+      }
       expect(
         m?.data["contract"],
         `${id} contract stays null while draft`,

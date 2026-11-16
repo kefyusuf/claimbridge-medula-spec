@@ -182,6 +182,27 @@ Domain: `hizmet-kayit` · Direction: `input` · Status: `reviewed` · Source ref
 | --- | --- | --- | --- | --- | --- |
 | `genKodu` | string |  | — |  | Gene code; the table closes at s.232 with TaniBilgisiDVO following (s.231) |
 
+## `HastaCikisCevapDVO`
+
+Domain: `hasta-kabul` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `sonucKodu` | string |  | — |  | Result code; 0000 means success, any other value is an error (s.169) |
+| `sonucMesaji` | string |  | — |  | Result explanation; the error cause is reported here (s.169) |
+| `yatisBaslangicTarihi` | date |  | — |  | Hospitalization start date of the discharge (s.169) |
+| `yatisBitisTarihi` | date |  | — |  | Hospitalization end date of the discharge (s.169) |
+
+## `HastaCikisDVO`
+
+Domain: `hasta-kabul` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `hastaBasvuruNo` | string |  | — |  | Application number the discharge is recorded against (s.168) |
+| `hastaCikisTarihi` | date |  | — |  | Discharge date of the hospitalized patient, dd.mm.yyyy (s.168) |
+| `saglikTesisKodu` | integer |  | — |  | GSS-assigned code of the institution (s.168) |
+
 ## `HastaYatisBilgisiDVO`
 
 Domain: `hizmet-kayit` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19

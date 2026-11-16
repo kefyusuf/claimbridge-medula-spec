@@ -201,12 +201,12 @@
 | Service | medula.hastane.hasta-kabul |
 | Documentation heading | HastaCikisKayit |
 | Operation name | HastaCikisKayit |
-| Input DVO | null |
-| Output DVO | null |
+| Input DVO | HastaCikisDVO |
+| Output DVO | HastaCikisCevapDVO |
 | Success | sonucKodu = 0000 (sonucMesaji) |
 | Sandbox supported |  |
-| Status | draft |
-| Source refs | medula-hastane-guide-3-1-1-2026-10-19 |
+| Status | reviewed |
+| Source refs | medula-hastane-guide-3-1-1-2026-10-19, medula-hastane-guide-3-1-1-2026-10-19 |
 
 **State effects**
 
