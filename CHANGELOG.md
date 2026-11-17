@@ -6,6 +6,19 @@ Format: [Keep a Changelog](https://keepachangelog.com); versioning: SemVer
 
 ## [Unreleased]
 
+_Nothing yet — v0.2.0 scope is complete._
+
+## [0.2.0] — 2026-11-18
+
+Second release: the official guide (3.1.1, 19/10/2026, 354 pages) verified
+the core registry page-by-page — 24/25 methods reviewed with page
+references, 15 contract resolutions beyond the vertical slice, the
+composite and enum layer expanded to 70 DVOs and 21 enums (incl. the 72-
+value tahlilTipi catalog and the 30-code ambalajBoyutu catalog), and the
+HastaKabul method set registered in full. Mimosa deep scan: zero findings.
+Naming decision retained: claimbridge-medula-spec (descriptive
+compatibility use; see README Naming).
+
 ### Group 33 — feat/v03-tahlil-tipi (2026-11-18)
 
 Local group: no remote yet, so the PR step is replaced by a local
