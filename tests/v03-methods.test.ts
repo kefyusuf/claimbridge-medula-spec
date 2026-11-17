@@ -50,6 +50,8 @@ describe("v0.3 hasta-kabul methods (Group 24)", () => {
           "medula.hastane.hasta-kabul.update-provizyon-tipi",
           "medula.hastane.hasta-kabul.kemik-iligi-kabul",
           "medula.hastane.hasta-kabul.kemik-iligi-iptal",
+          "medula.hastane.hasta-kabul.kemik-iligi-oku",
+          "medula.hastane.hasta-kabul.kemik-iligi-islem-duzeltme",
         ].includes(id)
           ? "reviewed"
           : "draft",
@@ -120,6 +122,14 @@ describe("v0.3 hasta-kabul methods (Group 24)", () => {
         "medula.hastane.hasta-kabul.kemik-iligi-iptal": [
           "KemikIligiIptalGirisDVO",
           "KemikIligiIptalCevapDVO",
+        ],
+        "medula.hastane.hasta-kabul.kemik-iligi-oku": [
+          "KemikIligiOkuGirisDVO",
+          "KemikIligiOkuCevapDVO",
+        ],
+        "medula.hastane.hasta-kabul.kemik-iligi-islem-duzeltme": [
+          "KemikIligiIslemDuzeltmeGirisDVO",
+          "KemikIligiIslemDuzeltmeCevapDVO",
         ],
       };
       if (resolved[id]) {

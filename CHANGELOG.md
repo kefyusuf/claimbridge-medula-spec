@@ -6,6 +6,30 @@ Format: [Keep a Changelog](https://keepachangelog.com); versioning: SemVer
 
 ## [Unreleased]
 
+### Group 29 — feat/v03-kemik-oku (2026-11-18)
+
+Local group: no remote yet, so the PR step is replaced by a local
+`--no-ff` merge to `main` (PRD §28 step 6 fallback).
+
+- TDD red first: KemikIligiOku/IslemDuzeltme suite (4 checks) committed
+  and verified failing (4/4 red) before the composites existed
+  (`f5214fe`).
+- Four new reviewed DVOs: KemikIligiOkuGiris/CevapDVO (4.1.18.a/b,
+  s.182 — 5-field read input incl. bildirimNo, 7-field response with
+  the aktifPasif form-state) and KemikIligiIslemDuzeltmeGiris/CevapDVO
+  (4.1.19.a/b, s.183 — the Eski/Yeni SUT code correction pair).
+- Two more contracts resolved and reviewed: kemik-iligi-oku and
+  kemik-iligi-islem-duzeltme — reviewed methods now 22/25. Only
+  kemik-iligi-tc-ile-sorgu, ekds×2, and the disabled KimlikDogrulama
+  remain draft.
+- Registry now: **63 DVOs**; dist regenerated.
+
+Validation output: `pnpm test` → 182/182 passed (30 suites); `tsc
+--noEmit` → clean; `pnpm validate` → OK; `pnpm check` → OK;
+`pnpm format:check` → OK.
+
+Remaining TODOs: none for this group.
+
 ### Group 28 — feat/v03-kemik-iligi (2026-11-17)
 
 Local group: no remote yet, so the PR step is replaced by a local
