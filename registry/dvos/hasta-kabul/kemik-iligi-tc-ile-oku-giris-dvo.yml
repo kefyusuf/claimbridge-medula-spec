@@ -1,0 +1,51 @@
+id: KemikIligiTCIleOkuGirisDVO
+domain: hasta-kabul
+direction: input
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: "3.1.1"
+    fetchedAt: "2026-11-15"
+    page: 184
+    section: Tablo 4.1.20.a - KemikIligiTCIleOkuGirisDVO
+    confidence: extracted
+fields:
+  - name: tcNo
+    displayName: Tc Kimlik No
+    type: string
+    enumRef: null
+    required: true
+    length: 11
+    description: Patient T.C. identity number (s.184)
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 184
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+  - name: tesisKodu
+    displayName: Saglik Tesisi Kodu
+    type: integer
+    enumRef: null
+    required: true
+    length: null
+    description: GSS-assigned institution code (s.184)
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 184
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.2.0"
+    deprecatedIn: null
+
+status: reviewed

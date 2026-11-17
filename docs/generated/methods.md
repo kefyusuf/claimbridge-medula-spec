@@ -129,12 +129,12 @@
 | Service | medula.hastane.hasta-kabul |
 | Documentation heading | ekdsBelgeGerekenTakipSorgu |
 | Operation name | ekdsBelgeGerekenTakipSorgu |
-| Input DVO | null |
-| Output DVO | null |
+| Input DVO | EKDSBelgeGerekenTakipSorguGirisDVO |
+| Output DVO | EKDSBelgeGerekenTakipCevapDVO |
 | Success | sonucKodu = 0000 (sonucMesaji) |
 | Sandbox supported |  |
-| Status | draft |
-| Source refs | medula-hastane-guide-3-1-1-2026-10-19 |
+| Status | reviewed |
+| Source refs | medula-hastane-guide-3-1-1-2026-10-19, medula-hastane-guide-3-1-1-2026-10-19 |
 
 **State effects**
 
@@ -153,12 +153,12 @@
 | Service | medula.hastane.hasta-kabul |
 | Documentation heading | ekdsKisiDogrulamaSorgu |
 | Operation name | ekdsKisiDogrulamaSorgu |
-| Input DVO | null |
-| Output DVO | null |
+| Input DVO | BKDSDogrulamaKisiSorguGirisDVO |
+| Output DVO | BKDSDogrulamaKisiSorguCevapDVO |
 | Success | sonucKodu = 0000 (sonucMesaji) |
 | Sandbox supported |  |
-| Status | draft |
-| Source refs | medula-hastane-guide-3-1-1-2026-10-19 |
+| Status | reviewed |
+| Source refs | medula-hastane-guide-3-1-1-2026-10-19, medula-hastane-guide-3-1-1-2026-10-19 |
 
 **State effects**
 
@@ -441,12 +441,12 @@
 | Service | medula.hastane.hasta-kabul |
 | Documentation heading | KemikIligiTCIleSorgu |
 | Operation name | KemikIligiTCIleSorgu |
-| Input DVO | null |
-| Output DVO | null |
+| Input DVO | KemikIligiTCIleOkuGirisDVO |
+| Output DVO | KemikIligiTCIleOkuCevapDVO |
 | Success | sonucKodu = 0000 (sonucMesaji) |
 | Sandbox supported |  |
-| Status | draft |
-| Source refs | medula-hastane-guide-3-1-1-2026-10-19 |
+| Status | reviewed |
+| Source refs | medula-hastane-guide-3-1-1-2026-10-19, medula-hastane-guide-3-1-1-2026-10-19 |
 
 **State effects**
 
