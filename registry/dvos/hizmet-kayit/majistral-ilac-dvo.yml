@@ -97,8 +97,8 @@ fields:
 
   - name: ambalajBoyutu
     displayName: Ambalaj Boyutu
-    type: string
-    enumRef: null
+    type: enum
+    enumRef: ambalaj-boyutu
     required: true
     length: 4
     description: Packaging size code; the guide lists ~30 codes (1-19, 21-31) - enum candidate for v0.3 (s.200)

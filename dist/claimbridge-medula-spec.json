@@ -1,6 +1,6 @@
 {
   "specVersion": "0.1.0",
-  "generatedAt": "2026-11-17T21:23:58.901Z",
+  "generatedAt": "2026-11-17T21:36:22.415Z",
   "sources": [
     {
       "id": "medula-hastane-guide-2026-06-17",
@@ -9895,8 +9895,8 @@
         {
           "name": "ambalajBoyutu",
           "displayName": "Ambalaj Boyutu",
-          "type": "string",
-          "enumRef": null,
+          "type": "enum",
+          "enumRef": "ambalaj-boyutu",
           "required": true,
           "length": 4,
           "description": "Packaging size code; the guide lists ~30 codes (1-19, 21-31) - enum candidate for v0.3 (s.200)",
@@ -13055,6 +13055,174 @@
     }
   ],
   "enums": [
+    {
+      "id": "ambalaj-boyutu",
+      "displayName": "Ambalaj Boyutu",
+      "values": [
+        {
+          "code": "1",
+          "label": "10 cc. Ecza Sisesi",
+          "description": "Packaging size code 1 per the guide list (s.200)."
+        },
+        {
+          "code": "2",
+          "label": "20 cc. Ecza Sisesi",
+          "description": "Packaging size code 2 per the guide list (s.200)."
+        },
+        {
+          "code": "3",
+          "label": "30 cc. Ecza Sisesi",
+          "description": "Packaging size code 3 per the guide list (s.200)."
+        },
+        {
+          "code": "4",
+          "label": "50 cc. Ecza Sisesi",
+          "description": "Packaging size code 4 per the guide list (s.200)."
+        },
+        {
+          "code": "5",
+          "label": "100 cc. Ecza Sisesi",
+          "description": "Packaging size code 5 per the guide list (s.200)."
+        },
+        {
+          "code": "6",
+          "label": "150 cc. Ecza Sisesi",
+          "description": "Packaging size code 6 per the guide list (s.200)."
+        },
+        {
+          "code": "7",
+          "label": "200 cc. Ecza Sisesi",
+          "description": "Packaging size code 7 per the guide list (s.200)."
+        },
+        {
+          "code": "8",
+          "label": "250 cc. Ecza Sisesi",
+          "description": "Packaging size code 8 per the guide list (s.200)."
+        },
+        {
+          "code": "9",
+          "label": "500 cc. Ecza Sisesi",
+          "description": "Packaging size code 9 per the guide list (s.200)."
+        },
+        {
+          "code": "10",
+          "label": "1000 cc. Ecza Sisesi",
+          "description": "Packaging size code 10 per the guide list (s.200)."
+        },
+        {
+          "code": "11",
+          "label": "30 cc. Merhem Kutusu",
+          "description": "Packaging size code 11 per the guide list (s.200)."
+        },
+        {
+          "code": "12",
+          "label": "50 cc. Merhem Kutusu",
+          "description": "Packaging size code 12 per the guide list (s.200)."
+        },
+        {
+          "code": "13",
+          "label": "100 cc. Merhem Kutusu",
+          "description": "Packaging size code 13 per the guide list (s.200)."
+        },
+        {
+          "code": "14",
+          "label": "150 cc. Merhem Kutusu",
+          "description": "Packaging size code 14 per the guide list (s.200)."
+        },
+        {
+          "code": "15",
+          "label": "200 cc. Merhem Kutusu",
+          "description": "Packaging size code 15 per the guide list (s.200)."
+        },
+        {
+          "code": "16",
+          "label": "500 cc. Merhem Kutusu",
+          "description": "Packaging size code 16 per the guide list (s.200)."
+        },
+        {
+          "code": "17",
+          "label": "700 cc. Merhem Kutusu",
+          "description": "Packaging size code 17 per the guide list (s.200)."
+        },
+        {
+          "code": "18",
+          "label": "1200 cc. Merhem Kutusu",
+          "description": "Packaging size code 18 per the guide list (s.200)."
+        },
+        {
+          "code": "19",
+          "label": "300 cc. Merhem Kutusu",
+          "description": "Packaging size code 19 per the guide list (s.200)."
+        },
+        {
+          "code": "21",
+          "label": "Kilitli Torba (07x06)",
+          "description": "Packaging size code 21 per the guide list (s.200)."
+        },
+        {
+          "code": "22",
+          "label": "Kilitli Torba (10x08)",
+          "description": "Packaging size code 22 per the guide list (s.200)."
+        },
+        {
+          "code": "23",
+          "label": "Kilitli Torba (12x10)",
+          "description": "Packaging size code 23 per the guide list (s.200)."
+        },
+        {
+          "code": "24",
+          "label": "Kilitli Torba (14x11)",
+          "description": "Packaging size code 24 per the guide list (s.200)."
+        },
+        {
+          "code": "25",
+          "label": "Kilitli Torba (16x13)",
+          "description": "Packaging size code 25 per the guide list (s.200)."
+        },
+        {
+          "code": "26",
+          "label": "Kilitli Torba (18x15)",
+          "description": "Packaging size code 26 per the guide list (s.200)."
+        },
+        {
+          "code": "27",
+          "label": "Kilitli Torba (20x16)",
+          "description": "Packaging size code 27 per the guide list (s.200)."
+        },
+        {
+          "code": "28",
+          "label": "Kilitli Torba (23x17)",
+          "description": "Packaging size code 28 per the guide list (s.200)."
+        },
+        {
+          "code": "29",
+          "label": "Kilitli Torba (25x19)",
+          "description": "Packaging size code 29 per the guide list (s.200)."
+        },
+        {
+          "code": "30",
+          "label": "Kilitli Torba (27x21)",
+          "description": "Packaging size code 30 per the guide list (s.200)."
+        },
+        {
+          "code": "31",
+          "label": "Kilitli Torba (31x23)",
+          "description": "Packaging size code 31 per the guide list (s.200)."
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "fetchedAt": "2026-11-15",
+          "page": 200,
+          "section": "Tablo 4.2.1.f.1 - MajistralIlacDVO (ambalajBoyutu, kod 20 kılavuzda tanımlı değil)",
+          "confidence": "extracted"
+        }
+      ],
+      "status": "reviewed"
+    },
     {
       "id": "ambalaj-turu",
       "displayName": "Ambalaj Turu",

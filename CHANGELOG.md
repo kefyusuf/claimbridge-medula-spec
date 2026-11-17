@@ -6,6 +6,25 @@ Format: [Keep a Changelog](https://keepachangelog.com); versioning: SemVer
 
 ## [Unreleased]
 
+### Group 32 — feat/v03-ambalaj-boyutu (2026-11-18)
+
+Local group: no remote yet, so the PR step is replaced by a local
+`--no-ff` merge to `main` (PRD §28 step 6 fallback).
+
+- TDD red first: ambalaj-boyutu suite (3 checks) committed and verified
+  failing (3/3 red) before the enum existed (`dc33c23`).
+- New enum `ambalaj-boyutu` (30 codes, s.200): 1-10 ecza şişesi
+  (10-1000 cc), 11-19 merhem kutusu (30-1200 cc), 21-31 kilitli torba
+  (07x06-31x23) — code 20 is skipped by the guide itself.
+- MajistralIlacDVO `ambalajBoyutu` bound via enumRef (string → enum).
+- Registry now: **20 enums**; dist regenerated.
+
+Validation output: `pnpm test` → 191/191 passed (32 suites); `tsc
+--noEmit` → clean; `pnpm validate` → OK; `pnpm check` → OK;
+`pnpm format:check` → OK.
+
+Remaining TODOs: none for this group.
+
 ### Group 31 — audit/mimosa-scan (2026-11-18)
 
 Local group: no file changes — a verification-only pass closing the audit
