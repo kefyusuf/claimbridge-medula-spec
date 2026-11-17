@@ -6,6 +6,20 @@ Format: [Keep a Changelog](https://keepachangelog.com); versioning: SemVer
 
 ## [Unreleased]
 
+### Group 31 — audit/mimosa-scan (2026-11-18)
+
+Local group: no file changes — a verification-only pass closing the audit
+debt accumulated from the PreToolUse hook's compat-mode warnings.
+
+- Full Mimosa deep security scan run on the merged `main` state:
+  scanId `scan-2026-11-17T21-31-13.877Z-a5d72b72ee19`, seal
+  `sha256:d09ee177…`, 8 packages scanned, **0 findings**, 0 matched
+  advisories.
+- Confirms the registry/spec content and tooling carry no security
+  findings; the compat-mode warnings from earlier commits are cleared.
+
+No registry, tooling, or test changes. No TODOs.
+
 ### Group 30 — feat/v03-final-contracts (2026-11-18)
 
 Local group: no remote yet, so the PR step is replaced by a local
