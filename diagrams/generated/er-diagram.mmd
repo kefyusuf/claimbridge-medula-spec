@@ -17,6 +17,25 @@ erDiagram
     array cokluOzelDurum
     string raporTakipNo
   }
+  BKDSDogrulamaDetayDVO {
+    string dogrulananTckNo
+    integer tesisKodu
+    date dogrulamaTarihi
+    string araciTckNo
+    string dogrulamaYontemi
+    string dogrulamaYontemAciklama
+    string takipReceteNo
+  }
+  BKDSDogrulamaKisiSorguCevapDVO {
+    array bkdsDogrulamaDetayDVO
+    string sonucKodu
+    string sonucMesaji
+  }
+  BKDSDogrulamaKisiSorguGirisDVO {
+    string tckNo
+    date islemTarihi
+    integer tesisKodu
+  }
   BasvuruTakipDVO {
     string takipNo
     string takipFaturaDurumu
@@ -75,6 +94,15 @@ erDiagram
     string solUstCeneAnomaliDis
     string sutKodu
     string ayniFarkliKesi
+  }
+  EKDSBelgeGerekenTakipCevapDVO {
+    array ekdsBelgeGerekenTakipDVO
+    string sonucKodu
+    string sonucMesaji
+  }
+  EKDSBelgeGerekenTakipSorguGirisDVO {
+    integer tesisKodu
+    integer evrakID
   }
   FaturaCevapDVO {
     string sonucKodu
@@ -320,6 +348,8 @@ erDiagram
     date islemTarihi
     string sonucKodu
     string sonucMesaji
+    string yeniIslemKodu
+    integer bildirimNo
   }
   KemikIligiIslemDuzeltmeGirisDVO {
     string hastaTcNo
@@ -357,6 +387,15 @@ erDiagram
     string islemKodu
     integer saglikTesisKodu
     integer bildirimNo
+  }
+  KemikIligiTCIleOkuCevapDVO {
+    array kemikIligiCevapDVO
+    string sonucKodu
+    string sonucMesaji
+  }
+  KemikIligiTCIleOkuGirisDVO {
+    string tcNo
+    integer tesisKodu
   }
   KonsultasyonBilgisiDVO {
     string bransKodu
@@ -548,6 +587,10 @@ erDiagram
   medula_hastane_fatura_kayit_fatura_tutar_oku ||--|| FaturaCevapDVO : outputDvo
   medula_hastane_hasta_kabul_basvuru_altindaki_takipleri_oku ||--|| BasvuruTakipOkuDVO : inputDvo
   medula_hastane_hasta_kabul_basvuru_altindaki_takipleri_oku ||--|| BasvuruTakipOkuCevapDVO : outputDvo
+  medula_hastane_hasta_kabul_ekds_belge_gereken_takip_sorgu ||--|| EKDSBelgeGerekenTakipSorguGirisDVO : inputDvo
+  medula_hastane_hasta_kabul_ekds_belge_gereken_takip_sorgu ||--|| EKDSBelgeGerekenTakipCevapDVO : outputDvo
+  medula_hastane_hasta_kabul_ekds_kisi_dogrulama_sorgu ||--|| BKDSDogrulamaKisiSorguGirisDVO : inputDvo
+  medula_hastane_hasta_kabul_ekds_kisi_dogrulama_sorgu ||--|| BKDSDogrulamaKisiSorguCevapDVO : outputDvo
   medula_hastane_hasta_kabul_hasta_cikis_iptal ||--|| HastaCikisIptalDVO : inputDvo
   medula_hastane_hasta_kabul_hasta_cikis_iptal ||--|| HastaCikisCevapDVO : outputDvo
   medula_hastane_hasta_kabul_hasta_cikis_kayit ||--|| HastaCikisDVO : inputDvo
@@ -568,6 +611,8 @@ erDiagram
   medula_hastane_hasta_kabul_kemik_iligi_kabul ||--|| KemikIligiKabulCevapDVO : outputDvo
   medula_hastane_hasta_kabul_kemik_iligi_oku ||--|| KemikIligiOkuGirisDVO : inputDvo
   medula_hastane_hasta_kabul_kemik_iligi_oku ||--|| KemikIligiOkuCevapDVO : outputDvo
+  medula_hastane_hasta_kabul_kemik_iligi_tc_ile_sorgu ||--|| KemikIligiTCIleOkuGirisDVO : inputDvo
+  medula_hastane_hasta_kabul_kemik_iligi_tc_ile_sorgu ||--|| KemikIligiTCIleOkuCevapDVO : outputDvo
   medula_hastane_hasta_kabul_sevk_bildir ||--|| SevkBildirGirisDVO : inputDvo
   medula_hastane_hasta_kabul_sevk_bildir ||--|| SevkBildirSonucDVO : outputDvo
   medula_hastane_hasta_kabul_update_provizyon_tipi ||--|| ProvizyonDegistirGirisDVO : inputDvo

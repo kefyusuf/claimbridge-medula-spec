@@ -6,6 +6,32 @@ Format: [Keep a Changelog](https://keepachangelog.com); versioning: SemVer
 
 ## [Unreleased]
 
+### Group 30 — feat/v03-final-contracts (2026-11-18)
+
+Local group: no remote yet, so the PR step is replaced by a local
+`--no-ff` merge to `main` (PRD §28 step 6 fallback).
+
+- TDD red first: final contract suite (6 checks) committed and verified
+  failing (6/6 red) before the composites existed (`2cfe637`).
+- Seven new reviewed DVOs: KemikIligiTCIleOkuGiris/CevapDVO (4.1.20,
+  s.184 — the Cevap reuses KemikIligiOkuCevapDVO as a list),
+  BKDSDogrulamaKisiSorguGiris/CevapDVO + BKDSDogrulamaDetayDVO (4.1.21,
+  s.185-186 — 7-field verification record), EKDSBelgeGerekenTakipSorgu
+  Giris/CevapDVO (4.1.22, s.186-187) with the nested
+  EKDSBelgeGerekenTakipDVO placeholder.
+- IslemDuzeltmeCevapDVO enriched with the s.184 tail fields
+  (yeniIslemKodu, bildirimNo).
+- **All three final contracts resolved** — reviewed methods now **24/25**
+  (only the guide-disabled HastaKabulKimlikDogrulama stays draft, per
+  the changelog s.13).
+- Registry now: **70 DVOs, 19 enums**; dist regenerated.
+
+Validation output: `pnpm test` → 188/188 passed (31 suites); `tsc
+--noEmit` → clean; `pnpm validate` → OK; `pnpm check` → OK;
+`pnpm format:check` → OK.
+
+Remaining TODOs: none for this group.
+
 ### Group 29 — feat/v03-kemik-oku (2026-11-18)
 
 Local group: no remote yet, so the PR step is replaced by a local

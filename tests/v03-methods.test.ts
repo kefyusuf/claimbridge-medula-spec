@@ -52,6 +52,9 @@ describe("v0.3 hasta-kabul methods (Group 24)", () => {
           "medula.hastane.hasta-kabul.kemik-iligi-iptal",
           "medula.hastane.hasta-kabul.kemik-iligi-oku",
           "medula.hastane.hasta-kabul.kemik-iligi-islem-duzeltme",
+          "medula.hastane.hasta-kabul.kemik-iligi-tc-ile-sorgu",
+          "medula.hastane.hasta-kabul.ekds-kisi-dogrulama-sorgu",
+          "medula.hastane.hasta-kabul.ekds-belge-gereken-takip-sorgu",
         ].includes(id)
           ? "reviewed"
           : "draft",
@@ -130,6 +133,18 @@ describe("v0.3 hasta-kabul methods (Group 24)", () => {
         "medula.hastane.hasta-kabul.kemik-iligi-islem-duzeltme": [
           "KemikIligiIslemDuzeltmeGirisDVO",
           "KemikIligiIslemDuzeltmeCevapDVO",
+        ],
+        "medula.hastane.hasta-kabul.kemik-iligi-tc-ile-sorgu": [
+          "KemikIligiTCIleOkuGirisDVO",
+          "KemikIligiTCIleOkuCevapDVO",
+        ],
+        "medula.hastane.hasta-kabul.ekds-kisi-dogrulama-sorgu": [
+          "BKDSDogrulamaKisiSorguGirisDVO",
+          "BKDSDogrulamaKisiSorguCevapDVO",
+        ],
+        "medula.hastane.hasta-kabul.ekds-belge-gereken-takip-sorgu": [
+          "EKDSBelgeGerekenTakipSorguGirisDVO",
+          "EKDSBelgeGerekenTakipCevapDVO",
         ],
       };
       if (resolved[id]) {

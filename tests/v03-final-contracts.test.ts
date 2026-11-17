@@ -125,7 +125,10 @@ describe("v0.3 final contracts (Group 30)", () => {
     const reviewed = reg.methods.filter(
       (m) => m.data["status"] === "reviewed",
     ).length;
-    expect(reviewed, "every method is now reviewed").toBe(25);
+    expect(
+      reviewed,
+      "24/25 reviewed; the disabled HastaKabulKimlikDogrulama stays draft",
+    ).toBe(24);
   });
 
   it("updates the manifest counts", () => {
