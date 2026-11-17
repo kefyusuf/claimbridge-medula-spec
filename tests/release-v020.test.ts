@@ -25,7 +25,7 @@ describe("release v0.2.0 (Group 34)", () => {
 
   it("records the naming decision in the README", () => {
     const readme = readFileSync(resolve(root, "README.md"), "utf8");
-    expect(readme).toContain("naming");
+    expect(readme).toContain("Naming");
     expect(readme).toContain("compatibility");
   });
 

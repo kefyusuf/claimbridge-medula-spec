@@ -127,12 +127,23 @@ This project is not affiliated with, endorsed by, or maintained by SGK or
 the official Medula system. It does not provide legal, medical, regulatory,
 reimbursement, or billing advice. See [DISCLAIMER.md](DISCLAIMER.md).
 
+- Publicly available reference: the official guide PDF is downloadable without credentials
+  from medula.sgk.gov.tr — verified during the Group 9-30 verification passes.
+
 ## Source policy
 
 - Official PDF/WSDL artifacts are **not vendored**; only URLs, fetch dates,
   version metadata, and hash fields are stored (PRD §16.3).
 - No real T.C. identity numbers, credentials, or production logs — ever
   (PRD §17); the synthetic guard fails CI on violations.
+
+## Naming
+
+The repo name uses "medula" descriptively for compatibility and
+interoperability targeting — the DISCLAIMER covers non-affiliation. The
+ClaimBridge prefix ties this spec to its downstream ecosystem (sandbox,
+clients, gateway). Naming alternatives were evaluated against the PRD §10
+list and the current name was retained (see CHANGELOG Group 34).
 
 ## License
 
