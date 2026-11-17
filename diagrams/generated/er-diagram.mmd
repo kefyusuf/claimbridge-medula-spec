@@ -423,7 +423,7 @@ erDiagram
     enum preparatTuru
     string bolunmusTozTuru
     enum ambalajTuru
-    string ambalajBoyutu
+    enum ambalajBoyutu
     string ambalajAdet
     array hamMaddeler
     array eklenenIlaclar
@@ -635,6 +635,7 @@ erDiagram
   MajistralHamMaddeDVO }o--|| ham_madde_birimi : enumRef
   MajistralIlacDVO }o--|| preparat_turu : enumRef
   MajistralIlacDVO }o--|| ambalaj_turu : enumRef
+  MajistralIlacDVO }o--|| ambalaj_boyutu : enumRef
   MalzemeBilgisiDVO }o--|| malzeme_turu : enumRef
   ProvizyonGirisDVO }o--|| sigortali_turu : enumRef
   ProvizyonGirisDVO }o--|| provizyon_tipi : enumRef

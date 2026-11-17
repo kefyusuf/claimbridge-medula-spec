@@ -27,7 +27,7 @@ describe("v0.3 ambalaj-boyutu (Group 32)", () => {
     expect(codes[10]).toBe("11");
     expect(codes[29]).toBe("31");
     expect(JSON.stringify(e?.data["sourceRefs"])).toContain('"page":200');
-    expect(JSON.stringify(e?.data["sourceRefs"])).toContain("no 20");
+    expect(JSON.stringify(e?.data["sourceRefs"])).toContain("kod 20");
   });
 
   it("binds MajistralIlacDVO ambalajBoyutu to the enum", () => {
@@ -44,6 +44,6 @@ describe("v0.3 ambalaj-boyutu (Group 32)", () => {
       readFileSync(resolve(root, "dist", "manifest.json"), "utf8"),
     ) as { counts: Record<string, number> };
     expect(manifest.counts.enums).toBe(20);
-    expect(manifest.counts.dvos).toBe(42);
+    expect(manifest.counts.dvos).toBe(70);
   });
 });

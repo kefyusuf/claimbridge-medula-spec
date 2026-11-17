@@ -694,7 +694,7 @@ Domain: `hizmet-kayit` · Direction: `input` · Status: `reviewed` · Source ref
 | `preparatTuru` | enum |  | preparat-turu |  | Preparation type - codes 1-8 in the preparat-turu registry enum (s.199) |
 | `bolunmusTozTuru` | string |  | — |  | Powder-division type; required when preparatTuru is 3 (s.199) |
 | `ambalajTuru` | enum |  | ambalaj-turu |  | Packaging type - codes 1-3 in the ambalaj-turu registry enum (s.200) |
-| `ambalajBoyutu` | string |  | — |  | Packaging size code; the guide lists ~30 codes (1-19, 21-31) - enum candidate for v0.3 (s.200) |
+| `ambalajBoyutu` | enum |  | ambalaj-boyutu |  | Packaging size code; the guide lists ~30 codes (1-19, 21-31) - enum candidate for v0.3 (s.200) |
 | `ambalajAdet` | string |  | — |  | Packaging quantity (s.200) |
 | `hamMaddeler` | array |  | — |  | Raw-material records, expanded as the MajistralHamMaddeDVO registry entity (Tablo 4.2.1.f.1.1, s.201) |
 | `eklenenIlaclar` | array |  | — |  | Added-drug records, expanded as the MajistralEklenenIlacDVO registry entity (Tablo 4.2.1.f.1.2, s.223-224) |

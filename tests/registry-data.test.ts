@@ -107,6 +107,7 @@ const EXPECTED_ENUM_IDS = [
   "istisnai-hal",
   "taburcu-kodu",
   "malzeme-turu",
+  "ambalaj-boyutu",
   "ilac-turu",
   "ham-madde-birimi",
   "preparat-turu",
