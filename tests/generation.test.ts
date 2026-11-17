@@ -30,7 +30,7 @@ describe("generation (Group 6)", () => {
     expect(bundle.services).toHaveLength(3);
     expect(bundle.methods).toHaveLength(25);
     expect(bundle.dvos).toHaveLength(70);
-    expect(bundle.enums).toHaveLength(20);
+    expect(bundle.enums).toHaveLength(21);
     expect(bundle.rules).toHaveLength(5);
     expect(bundle.workflows).toHaveLength(4);
     expect(bundle.scenarios).toHaveLength(6);
@@ -45,7 +45,7 @@ describe("generation (Group 6)", () => {
       services: 3,
       methods: 25,
       dvos: 70,
-      enums: 20,
+      enums: 21,
       rules: 5,
       workflows: 4,
       scenarios: 6,

@@ -247,11 +247,11 @@ fields:
 
   - name: tahlilTipi
     displayName: Tahlil Tipi
-    type: string
-    enumRef: null
+    type: enum
+    enumRef: tahlil-tipi
     required: true
     length: 6
-    description: Lab-type code catalog (HEM/IDR/KGAZ/OGTT prefixes, s.229-231); catalog enum is v0.3 scope
+    description: Lab-type code - codes 0, HEM102-121, IDR102-128, KGAZ01-17, OGTT01-08 in the tahlil-tipi registry enum
     sensitive: false
     syntheticOnlyRecommended: false
     sourceRefs:

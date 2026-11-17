@@ -18,7 +18,7 @@ describe("v0.3 tahlil-tipi (Group 33)", () => {
     expect(e, "tahlil-tipi must exist").toBeTruthy();
     expect(e?.data["status"]).toBe("reviewed");
     const values = e?.data["values"] as Array<{ code: string; label: string }>;
-    expect(values.length).toBe(71);
+    expect(values.length).toBe(72);
     expect(values[0]).toEqual({
       code: "0",
       label: "Diger",

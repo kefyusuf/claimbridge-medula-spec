@@ -1,6 +1,6 @@
 {
   "specVersion": "0.1.0",
-  "generatedAt": "2026-11-17T21:52:06.858Z",
+  "generatedAt": "2026-11-17T21:56:24.823Z",
   "sources": [
     {
       "id": "medula-hastane-guide-2026-06-17",
@@ -12247,11 +12247,11 @@
         {
           "name": "tahlilTipi",
           "displayName": "Tahlil Tipi",
-          "type": "string",
-          "enumRef": null,
+          "type": "enum",
+          "enumRef": "tahlil-tipi",
           "required": true,
           "length": 6,
-          "description": "Lab-type code catalog (HEM/IDR/KGAZ/OGTT prefixes, s.229-231); catalog enum is v0.3 scope",
+          "description": "Lab-type code - codes 0, HEM102-121, IDR102-128, KGAZ01-17, OGTT01-08 in the tahlil-tipi registry enum",
           "sensitive": false,
           "syntheticOnlyRecommended": false,
           "sourceRefs": [
@@ -13942,6 +13942,394 @@
           "page": 241,
           "section": "Tablo 4.3.1.c - HizmetDetayDVO (taburcuKodu, list continues on s.242)",
           "confidence": "extracted"
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
+      "id": "tahlil-tipi",
+      "displayName": "Tahlil Tipi",
+      "values": [
+        {
+          "code": "0",
+          "label": "Diger",
+          "description": "Catch-all for lab types outside the listed catalogs.."
+        },
+        {
+          "code": "HEM102",
+          "label": "WBC",
+          "description": "Hemogram - white blood cell count.."
+        },
+        {
+          "code": "HEM103",
+          "label": "NE%",
+          "description": "Hemogram - neutrophil percentage.."
+        },
+        {
+          "code": "HEM104",
+          "label": "NE#",
+          "description": "Hemogram - neutrophil count.."
+        },
+        {
+          "code": "HEM105",
+          "label": "LYM%",
+          "description": "Hemogram - lymphocyte percentage.."
+        },
+        {
+          "code": "HEM106",
+          "label": "LYM#",
+          "description": "Hemogram - lymphocyte count.."
+        },
+        {
+          "code": "HEM107",
+          "label": "MONO%",
+          "description": "Hemogram - monocyte percentage.."
+        },
+        {
+          "code": "HEM108",
+          "label": "MONO#",
+          "description": "Hemogram - monocyte count.."
+        },
+        {
+          "code": "HEM109",
+          "label": "EOS%",
+          "description": "Hemogram - eosinophil percentage.."
+        },
+        {
+          "code": "HEM110",
+          "label": "EOS#",
+          "description": "Hemogram - eosinophil count.."
+        },
+        {
+          "code": "HEM111",
+          "label": "BASO%",
+          "description": "Hemogram - basophil percentage.."
+        },
+        {
+          "code": "HEM112",
+          "label": "BASO#",
+          "description": "Hemogram - basophil count.."
+        },
+        {
+          "code": "HEM113",
+          "label": "RBC",
+          "description": "Hemogram - red blood cell count.."
+        },
+        {
+          "code": "HEM114",
+          "label": "HGB",
+          "description": "Hemogram - hemoglobin.."
+        },
+        {
+          "code": "HEM115",
+          "label": "HCT",
+          "description": "Hemogram - hematocrit.."
+        },
+        {
+          "code": "HEM116",
+          "label": "MCV",
+          "description": "Hemogram - mean corpuscular volume.."
+        },
+        {
+          "code": "HEM117",
+          "label": "MCH",
+          "description": "Hemogram - mean corpuscular hemoglobin.."
+        },
+        {
+          "code": "HEM118",
+          "label": "MCHC",
+          "description": "Hemogram - mean corpuscular hemoglobin concentration.."
+        },
+        {
+          "code": "HEM119",
+          "label": "RDW",
+          "description": "Hemogram - red cell distribution width.."
+        },
+        {
+          "code": "HEM120",
+          "label": "PLT",
+          "description": "Hemogram - platelet count.."
+        },
+        {
+          "code": "HEM121",
+          "label": "MPV",
+          "description": "Hemogram - mean platelet volume.."
+        },
+        {
+          "code": "IDR102",
+          "label": "Glukoz",
+          "description": "Urinalysis - glucose.."
+        },
+        {
+          "code": "IDR103",
+          "label": "Protein",
+          "description": "Urinalysis - protein.."
+        },
+        {
+          "code": "IDR104",
+          "label": "(ERY) Hemoglobin",
+          "description": "Urinalysis - erythrocyte hemoglobin.."
+        },
+        {
+          "code": "IDR105",
+          "label": "Lokosit",
+          "description": "Urinalysis - leukocytes.."
+        },
+        {
+          "code": "IDR106",
+          "label": "Spesifik G (Dansite)",
+          "description": "Urinalysis - specific gravity.."
+        },
+        {
+          "code": "IDR107",
+          "label": "pH",
+          "description": "Urinalysis - pH.."
+        },
+        {
+          "code": "IDR108",
+          "label": "Keton",
+          "description": "Urinalysis - ketones.."
+        },
+        {
+          "code": "IDR109",
+          "label": "Bilirubin",
+          "description": "Urinalysis - bilirubin.."
+        },
+        {
+          "code": "IDR110",
+          "label": "Urobilinojen",
+          "description": "Urinalysis - urobilinogen.."
+        },
+        {
+          "code": "IDR111",
+          "label": "Nitrit",
+          "description": "Urinalysis - nitrites.."
+        },
+        {
+          "code": "IDR112",
+          "label": "Idrar Askorbik asit",
+          "description": "Urinalysis - ascorbic acid.."
+        },
+        {
+          "code": "IDR113",
+          "label": "Eritrosit",
+          "description": "Urinalysis - erythrocytes.."
+        },
+        {
+          "code": "IDR115",
+          "label": "Lokosit",
+          "description": "Urinalysis - leukocytes (second IDR series).."
+        },
+        {
+          "code": "IDR116",
+          "label": "Bakteri",
+          "description": "Urinalysis - bacteria.."
+        },
+        {
+          "code": "IDR117",
+          "label": "Mantar",
+          "description": "Urinalysis - yeast/fungi.."
+        },
+        {
+          "code": "IDR118",
+          "label": "Yassi Epitel",
+          "description": "Urinalysis - squamous epithelial cells.."
+        },
+        {
+          "code": "IDR119",
+          "label": "Renal Epitel",
+          "description": "Urinalysis - renal epithelial cells.."
+        },
+        {
+          "code": "IDR120",
+          "label": "Sperm",
+          "description": "Urinalysis - sperm cells.."
+        },
+        {
+          "code": "IDR121",
+          "label": "Hiyalen Slendir",
+          "description": "Urinalysis - hyaline casts.."
+        },
+        {
+          "code": "IDR122",
+          "label": "Granuler Slendir",
+          "description": "Urinalysis - granular casts.."
+        },
+        {
+          "code": "IDR123",
+          "label": "Triple Fosfat Krista",
+          "description": "Urinalysis - triple phosphate crystals.."
+        },
+        {
+          "code": "IDR125",
+          "label": "CaOxm",
+          "description": "Urinalysis - calcium oxalate monohydrate crystals.."
+        },
+        {
+          "code": "IDR126",
+          "label": "Amorf Kristali",
+          "description": "Urinalysis - amorphous crystals.."
+        },
+        {
+          "code": "IDR127",
+          "label": "Urik Asit Kristali",
+          "description": "Urinalysis - uric acid crystals.."
+        },
+        {
+          "code": "IDR128",
+          "label": "CaOxd",
+          "description": "Urinalysis - calcium oxalate dihydrate crystals.."
+        },
+        {
+          "code": "IDR114",
+          "label": "Lok",
+          "description": "Urinalysis - leukocytes (listed out of sequence after IDR128 in the guide).."
+        },
+        {
+          "code": "KGAZ01",
+          "label": "pH",
+          "description": "Blood gas - pH.."
+        },
+        {
+          "code": "KGAZ02",
+          "label": "pCO2",
+          "description": "Blood gas - partial pressure of CO2.."
+        },
+        {
+          "code": "KGAZ03",
+          "label": "pO2",
+          "description": "Blood gas - partial pressure of O2.."
+        },
+        {
+          "code": "KGAZ04",
+          "label": "SO2",
+          "description": "Blood gas - oxygen saturation.."
+        },
+        {
+          "code": "KGAZ05",
+          "label": "Na",
+          "description": "Blood gas - sodium.."
+        },
+        {
+          "code": "KGAZ06",
+          "label": "K",
+          "description": "Blood gas - potassium.."
+        },
+        {
+          "code": "KGAZ07",
+          "label": "iCa",
+          "description": "Blood gas - ionized calcium.."
+        },
+        {
+          "code": "KGAZ08",
+          "label": "tHb",
+          "description": "Blood gas - total hemoglobin.."
+        },
+        {
+          "code": "KGAZ09",
+          "label": "Hct",
+          "description": "Blood gas - hematocrit.."
+        },
+        {
+          "code": "KGAZ10",
+          "label": "BEECF",
+          "description": "Blood gas - base excess extracellular fluid.."
+        },
+        {
+          "code": "KGAZ11",
+          "label": "BE",
+          "description": "Blood gas - base excess.."
+        },
+        {
+          "code": "KGAZ12",
+          "label": "BB",
+          "description": "Blood gas - buffer base.."
+        },
+        {
+          "code": "KGAZ13",
+          "label": "CHCO3",
+          "description": "Blood gas - bicarbonate concentration.."
+        },
+        {
+          "code": "KGAZ14",
+          "label": "tcO2",
+          "description": "Blood gas - transcutaneous O2.."
+        },
+        {
+          "code": "KGAZ15",
+          "label": "niCa",
+          "description": "Blood gas - non-ionized calcium.."
+        },
+        {
+          "code": "KGAZ16",
+          "label": "PAO2",
+          "description": "Blood gas - alveolar O2 pressure.."
+        },
+        {
+          "code": "KGAZ17",
+          "label": "Osm",
+          "description": "Blood gas - osmolality.."
+        },
+        {
+          "code": "OGTT01",
+          "label": "AKS",
+          "description": "Glucose tolerance test - fasting blood sugar.."
+        },
+        {
+          "code": "OGTT02",
+          "label": "30 DAKIKA",
+          "description": "Glucose tolerance test - 30-minute value.."
+        },
+        {
+          "code": "OGTT03",
+          "label": "1 SAAT",
+          "description": "Glucose tolerance test - 1-hour value.."
+        },
+        {
+          "code": "OGTT04",
+          "label": "90 DAKIKA",
+          "description": "Glucose tolerance test - 90-minute value.."
+        },
+        {
+          "code": "OGTT05",
+          "label": "2 SAAT",
+          "description": "Glucose tolerance test - 2-hour value.."
+        },
+        {
+          "code": "OGTT06",
+          "label": "3 SAAT",
+          "description": "Glucose tolerance test - 3-hour value.."
+        },
+        {
+          "code": "OGTT07",
+          "label": "4 SAAT",
+          "description": "Glucose tolerance test - 4-hour value.."
+        },
+        {
+          "code": "OGTT08",
+          "label": "5 SAAT",
+          "description": "Glucose tolerance test - 5-hour value.."
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "fetchedAt": "2026-11-15",
+          "page": 229,
+          "section": "Tablo 4.2.1.j - TahlilBilgisiDVO (tahlilTipi katalogu, devam s.230-231)",
+          "confidence": "extracted"
+        },
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "fetchedAt": "2026-11-15",
+          "page": 231,
+          "section": "Tablo 4.2.1.j - TahlilBilgisiDVO (tahlilTipi katalogu sonu)",
+          "confidence": "extracted",
+          "notes": "Guide numbering irregularities preserved - IDR114 appears out of sequence after IDR128 (as \"Lok\"), and IDR124 is skipped."
         }
       ],
       "status": "reviewed"

@@ -855,7 +855,7 @@ Domain: `hizmet-kayit` · Direction: `input` · Status: `reviewed` · Source ref
 | `raporTakipNo` | string |  | — |  | Report tracking number (s.228) |
 | `istemYapanDrBrans` | string |  | — |  | Branch code of the requesting doctor (s.228) |
 | `genBilgisi` | array |  | — |  | Gene details, expanded as the GenBilgisiDVO registry entity (Tablo 4.2.1.j.2, s.231) (s.228) |
-| `tahlilTipi` | string |  | — |  | Lab-type code catalog (HEM/IDR/KGAZ/OGTT prefixes, s.229-231); catalog enum is v0.3 scope |
+| `tahlilTipi` | enum |  | tahlil-tipi |  | Lab-type code - codes 0, HEM102-121, IDR102-128, KGAZ01-17, OGTT01-08 in the tahlil-tipi registry enum |
 | `birim` | string |  | — |  | Result unit (s.231) |
 | `sagSol` | string |  | — |  | R (Sag) / L (Sol) side code (s.231) |
 | `ayniFarkliKesi` | enum |  | ayni-farkli-kesi |  | Incision/session relation; codes 1-5 match the ayni-farkli-kesi enum (s.231) |
