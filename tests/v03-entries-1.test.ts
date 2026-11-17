@@ -136,6 +136,6 @@ describe("v0.3 entries 1 (Group 17)", () => {
       readFileSync(resolve(root, "dist", "manifest.json"), "utf8"),
     ) as { counts: Record<string, number> };
     expect(manifest.counts.dvos).toBe(70);
-    expect(manifest.counts.enums).toBe(20);
+    expect(manifest.counts.enums).toBe(21);
   });
 });

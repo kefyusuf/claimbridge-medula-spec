@@ -6,6 +6,27 @@ Format: [Keep a Changelog](https://keepachangelog.com); versioning: SemVer
 
 ## [Unreleased]
 
+### Group 33 — feat/v03-tahlil-tipi (2026-11-18)
+
+Local group: no remote yet, so the PR step is replaced by a local
+`--no-ff` merge to `main` (PRD §28 step 6 fallback).
+
+- TDD red first: tahlilTipi catalog suite (4 checks) committed and
+  verified failing (4/4 red) before the enum existed (`b5c0925`).
+- New enum `tahlil-tipi` (72 values, s.229-231, both pages cited): code
+  0 Diğer + HEM102-121 hemogram (20) + IDR102-128 idrar (26) + KGAZ01-17
+  kan gazları (17) + OGTT01-08 tolerans (8).
+- Guide numbering irregularities preserved in the notes: IDR114 appears
+  out of sequence after IDR128 (as "Lok") and IDR124 is skipped.
+- TahlilBilgisiDVO `tahlilTipi` bound via enumRef (string → enum).
+- Registry now: **21 enums**; dist regenerated.
+
+Validation output: `pnpm test` → 195/195 passed (33 suites); `tsc
+--noEmit` → clean; `pnpm validate` → OK; `pnpm check` → OK;
+`pnpm format:check` → OK.
+
+Remaining TODOs: none for this group.
+
 ### Group 32 — feat/v03-ambalaj-boyutu (2026-11-18)
 
 Local group: no remote yet, so the PR step is replaced by a local

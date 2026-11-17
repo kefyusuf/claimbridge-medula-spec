@@ -534,7 +534,7 @@ erDiagram
     string raporTakipNo
     string istemYapanDrBrans
     array genBilgisi
-    string tahlilTipi
+    enum tahlilTipi
     string birim
     string sagSol
     enum ayniFarkliKesi
@@ -643,6 +643,7 @@ erDiagram
   ProvizyonGirisDVO }o--|| tedavi_tipi : enumRef
   ProvizyonGirisDVO }o--|| takip_tipi : enumRef
   ProvizyonGirisDVO }o--|| ekds_yontem_gerekce : enumRef
+  TahlilBilgisiDVO }o--|| tahlil_tipi : enumRef
   TahlilBilgisiDVO }o--|| ayni_farkli_kesi : enumRef
   TakipDVO }o--|| takip_tipi : enumRef
   TakipDVO }o--|| takip_durumu : enumRef
