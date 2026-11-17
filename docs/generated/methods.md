@@ -369,12 +369,12 @@
 | Service | medula.hastane.hasta-kabul |
 | Documentation heading | KemikIligiIslemDuzeltme |
 | Operation name | KemikIligiIslemDuzeltme |
-| Input DVO | null |
-| Output DVO | null |
+| Input DVO | KemikIligiIslemDuzeltmeGirisDVO |
+| Output DVO | KemikIligiIslemDuzeltmeCevapDVO |
 | Success | sonucKodu = 0000 (sonucMesaji) |
 | Sandbox supported |  |
-| Status | draft |
-| Source refs | medula-hastane-guide-3-1-1-2026-10-19 |
+| Status | reviewed |
+| Source refs | medula-hastane-guide-3-1-1-2026-10-19, medula-hastane-guide-3-1-1-2026-10-19 |
 
 **State effects**
 
@@ -417,12 +417,12 @@
 | Service | medula.hastane.hasta-kabul |
 | Documentation heading | KemikIligiOku |
 | Operation name | KemikIligiOku |
-| Input DVO | null |
-| Output DVO | null |
+| Input DVO | KemikIligiOkuGirisDVO |
+| Output DVO | KemikIligiOkuCevapDVO |
 | Success | sonucKodu = 0000 (sonucMesaji) |
 | Sandbox supported |  |
-| Status | draft |
-| Source refs | medula-hastane-guide-3-1-1-2026-10-19 |
+| Status | reviewed |
+| Source refs | medula-hastane-guide-3-1-1-2026-10-19, medula-hastane-guide-3-1-1-2026-10-19 |
 
 **State effects**
 

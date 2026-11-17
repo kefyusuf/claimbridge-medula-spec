@@ -315,6 +315,20 @@ erDiagram
     integer saglikTesisKodu
     integer bildirimNo
   }
+  KemikIligiIslemDuzeltmeCevapDVO {
+    string hastaTcNo
+    date islemTarihi
+    string sonucKodu
+    string sonucMesaji
+  }
+  KemikIligiIslemDuzeltmeGirisDVO {
+    string hastaTcNo
+    date islemTarihi
+    string islemKodu
+    integer saglikTesisKodu
+    integer bildirimNo
+    string yeniIslemKodu
+  }
   KemikIligiKabulCevapDVO {
     string hastaTcNo
     date islemTarihi
@@ -327,6 +341,22 @@ erDiagram
     date islemTarihi
     string islemKodu
     integer saglikTesisKodu
+  }
+  KemikIligiOkuCevapDVO {
+    string hastaTcNo
+    date islemTarihi
+    string islemKodu
+    string aktifPasif
+    integer bildirimNo
+    string sonucKodu
+    string sonucMesaji
+  }
+  KemikIligiOkuGirisDVO {
+    string hastaTcNo
+    date islemTarihi
+    string islemKodu
+    integer saglikTesisKodu
+    integer bildirimNo
   }
   KonsultasyonBilgisiDVO {
     string bransKodu
@@ -532,8 +562,12 @@ erDiagram
   medula_hastane_hasta_kabul_hasta_yatis_oku ||--|| HastaYatisOkuCevapDVO : outputDvo
   medula_hastane_hasta_kabul_kemik_iligi_iptal ||--|| KemikIligiIptalGirisDVO : inputDvo
   medula_hastane_hasta_kabul_kemik_iligi_iptal ||--|| KemikIligiIptalCevapDVO : outputDvo
+  medula_hastane_hasta_kabul_kemik_iligi_islem_duzeltme ||--|| KemikIligiIslemDuzeltmeGirisDVO : inputDvo
+  medula_hastane_hasta_kabul_kemik_iligi_islem_duzeltme ||--|| KemikIligiIslemDuzeltmeCevapDVO : outputDvo
   medula_hastane_hasta_kabul_kemik_iligi_kabul ||--|| KemikIligiKabulDVO : inputDvo
   medula_hastane_hasta_kabul_kemik_iligi_kabul ||--|| KemikIligiKabulCevapDVO : outputDvo
+  medula_hastane_hasta_kabul_kemik_iligi_oku ||--|| KemikIligiOkuGirisDVO : inputDvo
+  medula_hastane_hasta_kabul_kemik_iligi_oku ||--|| KemikIligiOkuCevapDVO : outputDvo
   medula_hastane_hasta_kabul_sevk_bildir ||--|| SevkBildirGirisDVO : inputDvo
   medula_hastane_hasta_kabul_sevk_bildir ||--|| SevkBildirSonucDVO : outputDvo
   medula_hastane_hasta_kabul_update_provizyon_tipi ||--|| ProvizyonDegistirGirisDVO : inputDvo
