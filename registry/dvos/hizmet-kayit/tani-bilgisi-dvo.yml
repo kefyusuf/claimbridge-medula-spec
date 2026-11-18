@@ -75,10 +75,11 @@ fields:
   - name: taniKodu
     displayName: Tani Kodu
     type: string
+    codeSystem: ICD-10-WHO
     enumRef: null
     required: true
     length: 10
-    description: ICD-10 diagnosis code (s.232).
+    description: ICD-10 diagnosis code; belongs to the ICD-10-WHO code system (s.232).
     sensitive: false
     syntheticOnlyRecommended: false
     sourceRefs:

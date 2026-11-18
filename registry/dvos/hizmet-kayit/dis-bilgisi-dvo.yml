@@ -381,6 +381,7 @@ fields:
   - name: sutKodu
     displayName: SUT Kodu
     type: string
+    codeSystem: SUT
     enumRef: null
     required: true
     length: 7
