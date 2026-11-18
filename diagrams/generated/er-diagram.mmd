@@ -414,7 +414,7 @@ erDiagram
   }
   MajistralHamMaddeDVO {
     string islemSiraNo
-    integer majistralHamMaddeKodu
+    enum majistralHamMaddeKodu
     integer miktar
     enum hamMaddeBirimi
   }
@@ -632,6 +632,7 @@ erDiagram
   HizmetDVO }o--|| odeme_sorgu_durum : enumRef
   HizmetDetayDVO }o--|| taburcu_kodu : enumRef
   IlacBilgisiDVO }o--|| ilac_turu : enumRef
+  MajistralHamMaddeDVO }o--|| majistral_ham_madde : enumRef
   MajistralHamMaddeDVO }o--|| ham_madde_birimi : enumRef
   MajistralIlacDVO }o--|| preparat_turu : enumRef
   MajistralIlacDVO }o--|| ambalaj_turu : enumRef

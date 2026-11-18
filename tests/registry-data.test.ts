@@ -106,6 +106,7 @@ const EXPECTED_ENUM_IDS = [
   "tani-tipi",
   "ekds-yontem-gerekce",
   "istisnai-hal",
+  "majistral-ham-madde",
   "taburcu-kodu",
   "tahlil-tipi",
   "malzeme-turu",

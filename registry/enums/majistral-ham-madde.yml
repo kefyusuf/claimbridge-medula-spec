@@ -1,0 +1,1875 @@
+id: majistral-ham-madde
+displayName: Majistral Ham Madde
+values:
+  - code: "1"
+    label: Acetanilide
+    description: Raw material #1 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "2"
+    label: Acetarsol
+    description: Raw material #2 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "3"
+    label: Acetate d'Alumine Sol.
+    description: Raw material #3 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "4"
+    label: Acetate d'Ammoniaque Liquide
+    description: Raw material #4 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "5"
+    label: Acetate de Plombe crist.
+    description: Raw material #5 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "6"
+    label: Acetate de Plombe Liquide
+    description: Raw material #6 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "7"
+    label: Acetate de Zinc
+    description: Raw material #7 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "8"
+    label: Acide Acetique-glacial
+    description: Raw material #8 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "9"
+    label: Acide Acetylsalicylique
+    description: Raw material #9 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "10"
+    label: Acide Ascorbique
+    description: Raw material #10 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "11"
+    label: Acide Benzoique
+    description: Raw material #11 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "12"
+    label: Acide Borique
+    description: Raw material #12 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "13"
+    label: Acide Chlorhydrique
+    description: Raw material #13 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "14"
+    label: Acide Chlorhydrique dilue
+    description: Raw material #14 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "15"
+    label: Acide Citrique
+    description: Raw material #15 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "16"
+    label: Acide Diethylbarbiturique
+    description: Raw material #16 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "17"
+    label: Acide Folique
+    description: Raw material #17 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "18"
+    label: Acide Lactique
+    description: Raw material #18 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "19"
+    label: Acide Oxalique
+    description: Raw material #19 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "20"
+    label: Acide Phenique Crist.
+    description: Raw material #20 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "21"
+    label: Acide Phenique Liquide
+    description: Raw material #21 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "22"
+    label: Acide Phosphorique
+    description: Raw material #22 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "23"
+    label: Acide Pyrogallique
+    description: Raw material #23 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "24"
+    label: Acide Salicylique
+    description: Raw material #24 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "25"
+    label: Acide Tannique
+    description: Raw material #25 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "26"
+    label: Acide Tartarique
+    description: Raw material #26 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "27"
+    label: Acide Trichlor Acetique
+    description: Raw material #27 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "28"
+    label: Acide Undecylenique
+    description: Raw material #28 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "29"
+    label: Acrinol
+    description: Raw material #29 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "30"
+    label: Adrenaline
+    description: Raw material #30 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "31"
+    label: Adrenaline Sol. (%0.1)
+    description: Raw material #31 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "32"
+    label: Agar Agar
+    description: Raw material #32 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "33"
+    label: Aktif Kömür
+    description: Raw material #33 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "34"
+    label: Alcool (% 96'lık)
+    description: Raw material #34 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "35"
+    label: Alcoolat d'Anis
+    description: Raw material #35 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "36"
+    label: Alcoolat de Canelle
+    description: Raw material #36 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "37"
+    label: Alcoolat de Citron
+    description: Raw material #37 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "38"
+    label: Alcoolat de Cola
+    description: Raw material #38 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "39"
+    label: Alcoolat de Garus
+    description: Raw material #39 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "40"
+    label: Alcoolat de Lavande
+    description: Raw material #40 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "41"
+    label: Alcoolat de Melisse
+    description: Raw material #41 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "42"
+    label: Alcoolat de Melisse Comp.
+    description: Raw material #42 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "43"
+    label: Alcoolat de Menthe
+    description: Raw material #43 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "44"
+    label: Aluminium Chloride
+    description: Raw material #44 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "45"
+    label: Aluminyum Hidroksit Koll.
+    description: Raw material #45 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "46"
+    label: Aluminyum Klorür
+    description: Raw material #46 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "47"
+    label: Aluminyum Subasetat Çöz. %8.5
+    description: Raw material #47 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "48"
+    label: Amidon
+    description: Raw material #48 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "49"
+    label: Aminophylline
+    description: Raw material #49 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "50"
+    label: Aminopyrin
+    description: Raw material #50 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "51"
+    label: Amonyak Çözeltisi
+    description: Raw material #51 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "52"
+    label: Amonyum Klorür
+    description: Raw material #52 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "53"
+    label: Anesthesine
+    description: Raw material #53 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "54"
+    label: Aneurine
+    description: Raw material #54 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "55"
+    label: Anthralin
+    description: Raw material #55 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "56"
+    label: Antifebrin
+    description: Raw material #56 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "57"
+    label: Antipyrine
+    description: Raw material #57 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "58"
+    label: Arap Zamkı
+    description: Raw material #58 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "59"
+    label: Ardıç Katranı
+    description: Raw material #59 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "60"
+    label: Argent Colloidal
+    description: Raw material #60 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "61"
+    label: Argent Nitrate Crayon
+    description: Raw material #61 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "62"
+    label: Argent Nitrate Crist.
+    description: Raw material #62 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "63"
+    label: Argent Vitellinate
+    description: Raw material #63 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "64"
+    label: Argyrol
+    description: Raw material #64 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "65"
+    label: Arrhenal
+    description: Raw material #65 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "66"
+    label: Asetik Asit (Buzlu)
+    description: Raw material #66 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "67"
+    label: Aseton
+    description: Raw material #67 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "68"
+    label: Aspirin
+    description: Raw material #68 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "69"
+    label: Atropin Sülfat (Nötr)
+    description: Raw material #69 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "70"
+    label: Axonge
+    description: Raw material #70 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "71"
+    label: Axonge Benzoinee
+    description: Raw material #71 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "72"
+    label: Badem Yağı (Tatlı)
+    description: Raw material #72 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "73"
+    label: Bakır Sülfat
+    description: Raw material #73 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "74"
+    label: Balık Nefsi
+    description: Raw material #74 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "75"
+    label: Basit Şurup
+    description: Raw material #75 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "76"
+    label: Baume de Perou
+    description: Raw material #76 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "77"
+    label: Baume de Tolu
+    description: Raw material #77 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "78"
+    label: Baume de Tranquille
+    description: Raw material #78 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "79"
+    label: Belladon Tentürü
+    description: Raw material #79 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "80"
+    label: Benjoin Tentürü
+    description: Raw material #80 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "81"
+    label: Benzil Benzoat
+    description: Raw material #81 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "82"
+    label: Benzoate de Lithium
+    description: Raw material #82 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "83"
+    label: Benzoate de Soude
+    description: Raw material #83 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "84"
+    label: Benzocaine
+    description: Raw material #84 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "85"
+    label: Benzoik Asit
+    description: Raw material #85 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "86"
+    label: Benzonaphtole
+    description: Raw material #86 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "87"
+    label: Beta-Naphtole
+    description: Raw material #87 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "88"
+    label: Beurre de Cacao
+    description: Raw material #88 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "89"
+    label: Beyaz Balmumu
+    description: Raw material #89 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "90"
+    label: Biborate de Soude
+    description: Raw material #90 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "91"
+    label: Bicarbonate de Potassium
+    description: Raw material #91 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "92"
+    label: Bicarbonate de Soude
+    description: Raw material #92 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "93"
+    label: Bichlorure de Mercure
+    description: Raw material #93 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "94"
+    label: Bizmut Subgallat
+    description: Raw material #94 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "95"
+    label: Bizmut Subkarbonat
+    description: Raw material #95 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "96"
+    label: Bizmut Subnitrat
+    description: Raw material #96 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "97"
+    label: Blanc de Baleine
+    description: Raw material #97 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "98"
+    label: Bleu de Methylene
+    description: Raw material #98 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "99"
+    label: Boraks
+    description: Raw material #99 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "100"
+    label: Borik Asit
+    description: Raw material #100 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "101"
+    label: Brillant Green
+    description: Raw material #101 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "102"
+    label: Bromhydrate Homatropine
+    description: Raw material #102 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "103"
+    label: Bromhydrate Scopolamine
+    description: Raw material #103 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "104"
+    label: Bromoforme
+    description: Raw material #104 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "105"
+    label: Bromural
+    description: Raw material #105 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "106"
+    label: Bromure d'Ammonium
+    description: Raw material #106 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "107"
+    label: Bromure de Calcium
+    description: Raw material #107 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "108"
+    label: Bromure de Camphre
+    description: Raw material #108 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "109"
+    label: Bromure de Potassium
+    description: Raw material #109 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "110"
+    label: Bromure de Sodium Sec.
+    description: Raw material #110 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "111"
+    label: Bromure de Strontium
+    description: Raw material #111 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "112"
+    label: Cacodylate de Soude
+    description: Raw material #112 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "113"
+    label: Cafeine
+    description: Raw material #113 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "114"
+    label: Calomel
+    description: Raw material #114 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "115"
+    label: Camomille Ordinare
+    description: Raw material #115 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "116"
+    label: Camomille Romaine
+    description: Raw material #116 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "117"
+    label: Camperilan
+    description: Raw material #117 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "118"
+    label: Camphre Cris.
+    description: Raw material #118 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "119"
+    label: Carbon Active Offic.
+    description: Raw material #119 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "120"
+    label: Carbonate d'Ammonium
+    description: Raw material #120 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "121"
+    label: Carbonate de Calcium prec.
+    description: Raw material #121 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "122"
+    label: Carbonate de Fer
+    description: Raw material #122 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "123"
+    label: Carbonate de Lithium
+    description: Raw material #123 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "124"
+    label: Carbonate de Magnesium
+    description: Raw material #124 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "125"
+    label: Carbonate de Potassium
+    description: Raw material #125 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "126"
+    label: Carbonate de Sodium
+    description: Raw material #126 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "127"
+    label: Castor Oil
+    description: Raw material #127 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "128"
+    label: Cetaceum
+    description: Raw material #128 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "129"
+    label: Castellani Çözeltisi
+    description: Raw material #129 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "130"
+    label: Cetiol HE
+    description: Raw material #130 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "131"
+    label: Cetiol V
+    description: Raw material #131 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "132"
+    label: Charbon Animal
+    description: Raw material #132 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "133"
+    label: Charbon Vegetal Offic.
+    description: Raw material #133 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "134"
+    label: Chloral Hydrate
+    description: Raw material #134 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "135"
+    label: Chlorate de Potasse
+    description: Raw material #135 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "136"
+    label: Chlorhydrate de Morphine
+    description: Raw material #136 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "137"
+    label: Chlorhydrate de Papaverine
+    description: Raw material #137 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "138"
+    label: Chlorhydrate de Pilocarpine
+    description: Raw material #138 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "139"
+    label: Chlorhydrate d'Ephedrine
+    description: Raw material #139 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "140"
+    label: Chloroforme
+    description: Raw material #140 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "141"
+    label: Chlorure d'Ammonium
+    description: Raw material #141 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "142"
+    label: Chlorure de Calcium Crist.
+    description: Raw material #142 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "143"
+    label: Chlorure de Calcium Sec.
+    description: Raw material #143 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "144"
+    label: Chlorure de Potassium
+    description: Raw material #144 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "145"
+    label: Chlorure de Sodium
+    description: Raw material #145 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "146"
+    label: Cholesterine
+    description: Raw material #146 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "147"
+    label: Cignolin
+    description: Raw material #147 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "148"
+    label: Cire Blanche
+    description: Raw material #148 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "149"
+    label: Citrate de Cafeine
+    description: Raw material #149 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "150"
+    label: Citrate de Fer Ammoniacal
+    description: Raw material #150 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "151"
+    label: Citrate de Magnesium
+    description: Raw material #151 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "152"
+    label: Citrate de Potasse
+    description: Raw material #152 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "153"
+    label: Citrate de Soude
+    description: Raw material #153 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "154"
+    label: Coal Tar
+    description: Raw material #154 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "155"
+    label: Codeine
+    description: Raw material #155 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "156"
+    label: Colchicine
+    description: Raw material #156 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "157"
+    label: Cold Creme
+    description: Raw material #157 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "158"
+    label: Collargol
+    description: Raw material #158 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "159"
+    label: Collodion
+    description: Raw material #159 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "160"
+    label: Collodion Elastique
+    description: Raw material #160 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "161"
+    label: Crai Preparee prec.
+    description: Raw material #161 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "162"
+    label: Crem d'Tart
+    description: Raw material #162 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "163"
+    label: Creosote
+    description: Raw material #163 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "164"
+    label: Cryogenine
+    description: Raw material #164 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "621"
+    label: Çeşme Suyu
+    description: Raw material #621 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "165"
+    label: Çinko Asetat
+    description: Raw material #165 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "166"
+    label: Çinko Oksit
+    description: Raw material #166 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "167"
+    label: Çinko Sülfat
+    description: Raw material #167 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "168"
+    label: D-Panthenol pure
+    description: Raw material #168 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "169"
+    label: Dermatol
+    description: Raw material #169 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "170"
+    label: Dexametazon
+    description: Raw material #170 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "171"
+    label: Dextrose
+    description: Raw material #171 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "172"
+    label: Di-Etil Eter
+    description: Raw material #172 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "173"
+    label: Diastase
+    description: Raw material #173 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "174"
+    label: Dionin
+    description: Raw material #174 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "175"
+    label: Distile Su
+    description: Raw material #175 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "176"
+    label: Dithranol
+    description: Raw material #176 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "177"
+    label: Diüretin
+    description: Raw material #177 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "178"
+    label: Eau Oxygene
+    description: Raw material #178 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "179"
+    label: Eau d'Alibour
+    description: Raw material #179 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "180"
+    label: Eau d'Alibour Forte
+    description: Raw material #180 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "181"
+    label: Eau de Canelle
+    description: Raw material #181 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "182"
+    label: Eau de Chaux
+    description: Raw material #182 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "183"
+    label: Eau de Chloroforme
+    description: Raw material #183 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "184"
+    label: Eau de Cologne
+    description: Raw material #184 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "185"
+    label: Eau de Distilee
+    description: Raw material #185 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "186"
+    label: Eau de Fleur d'Oranger
+    description: Raw material #186 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "187"
+    label: Eau de Laurier Cerise
+    description: Raw material #187 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "188"
+    label: Eau de Melisse
+    description: Raw material #188 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "189"
+    label: Eau de Menthe
+    description: Raw material #189 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "190"
+    label: Eau de Rose
+    description: Raw material #190 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "191"
+    label: Eau de Vie Allemande
+    description: Raw material #191 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "192"
+    label: Efedrin HCl
+    description: Raw material #192 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "193"
+    label: Elixir Garus
+    description: Raw material #193 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "194"
+    label: Elixir Pregorique
+    description: Raw material #194 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "195"
+    label: Eozin
+    description: Raw material #195 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "196"
+    label: Ephetonine
+    description: Raw material #196 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "197"
+    label: Ergotine
+    description: Raw material #197 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "198"
+    label: Especes Pektorales
+    description: Raw material #198 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "199"
+    label: Essence d'Anis
+    description: Raw material #199 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "200"
+    label: Essence de Bergamote
+    description: Raw material #200 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "201"
+    label: Essence de Canelle
+    description: Raw material #201 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "202"
+    label: Essence de Citron
+    description: Raw material #202 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "203"
+    label: Essence de Girofle
+    description: Raw material #203 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "204"
+    label: Essence de Lavande
+    description: Raw material #204 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "205"
+    label: Essence de Melisse
+    description: Raw material #205 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "206"
+    label: Essence de Menthe
+    description: Raw material #206 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "207"
+    label: Essence de Neroli
+    description: Raw material #207 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "208"
+    label: Essence de Niauli
+    description: Raw material #208 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "209"
+    label: Essence de Rose
+    description: Raw material #209 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "210"
+    label: Essence de Terebenthine
+    description: Raw material #210 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "211"
+    label: Eter
+    description: Raw material #211 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "212"
+    label: Ethacridin Lactate
+    description: Raw material #212 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "213"
+    label: Ether Sulphurique
+    description: Raw material #213 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "214"
+    label: Ethylmorphine HCl
+    description: Raw material #214 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "215"
+    label: Etil Alkol %96
+    description: Raw material #215 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "216"
+    label: Eucalyptol
+    description: Raw material #216 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "217"
+    label: Extrait de Belladone mou.
+    description: Raw material #217 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "218"
+    label: Extrait de Belladone sec.
+    description: Raw material #218 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "219"
+    label: Extrait de Crataegus
+    description: Raw material #219 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "220"
+    label: Extrait de fluide d'Ecorce d'Or
+    description: Raw material #220 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "221"
+    label: Extrait de Gentianae
+    description: Raw material #221 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "222"
+    label: Extrait de Jusquiame
+    description: Raw material #222 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "223"
+    label: Extrait de Opium
+    description: Raw material #223 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "224"
+    label: Extrait de Ratanhia
+    description: Raw material #224 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "225"
+    label: Extrait de Valeriane mou.
+    description: Raw material #225 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "226"
+    label: Extrait de Valeriane sec.
+    description: Raw material #226 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "227"
+    label: Extrait d'Ethere de Fougere Mal
+    description: Raw material #227 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "228"
+    label: Extrait Fluide Baume de Tolu
+    description: Raw material #228 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "229"
+    label: Extrait Fluide de Coca
+    description: Raw material #229 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "230"
+    label: Extrait Fluide de Cola
+    description: Raw material #230 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "231"
+    label: Extrait Fluide de Crataegus
+    description: Raw material #231 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "232"
+    label: Extrait Fluide de Passiflore
+    description: Raw material #232 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "233"
+    label: Extrait Fluide de Quinquina
+    description: Raw material #233 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "234"
+    label: Extrait Fluide de Ratanhia
+    description: Raw material #234 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "235"
+    label: Extrait Fluide de Valeriane
+    description: Raw material #235 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "236"
+    label: Extrait Fluide d'Hamamelis
+    description: Raw material #236 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "237"
+    label: Extrait Fluide d'Hydrastis
+    description: Raw material #237 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "238"
+    label: Extrait Fluide d'İpeca
+    description: Raw material #238 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "239"
+    label: Fenazon
+    description: Raw material #239 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "240"
+    label: Fenol (Sıvılaştırılmış)
+    description: Raw material #240 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "241"
+    label: Fenol Kristal
+    description: Raw material #241 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "242"
+    label: Feuilles Uvae Ursi
+    description: Raw material #242 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "243"
+    label: Fleurs Guimauve
+    description: Raw material #243 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "244"
+    label: Fleurs Tilleul
+    description: Raw material #244 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "245"
+    label: Flexible Colldium
+    description: Raw material #245 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "246"
+    label: Fluorure de Sodium
+    description: Raw material #246 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "247"
+    label: Formaldehit Çözeltisi
+    description: Raw material #247 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "248"
+    label: Fosforik Asit
+    description: Raw material #248 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "249"
+    label: Fowler Likörü
+    description: Raw material #249 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "250"
+    label: Fuksin - Bazik
+    description: Raw material #250 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "251"
+    label: Gliserin
+    description: Raw material #251 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "252"
+    label: Gluconate de Calcium
+    description: Raw material #252 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "253"
+    label: Glukoz
+    description: Raw material #253 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "254"
+    label: Glycero-Phosphate de Chaux Liq
+    description: Raw material #254 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "255"
+    label: Glycero-Phosphate de Chaux Pou
+    description: Raw material #255 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "256"
+    label: Glycero-Phosphate de Soude Liq
+    description: Raw material #256 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "257"
+    label: Glycero-Phosphate de Soude Pou
+    description: Raw material #257 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "258"
+    label: Glycerolle d'Amidon
+    description: Raw material #258 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "259"
+    label: Gomenol
+    description: Raw material #259 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "260"
+    label: Gomme Arabique
+    description: Raw material #260 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "261"
+    label: Goudron de Houille
+    description: Raw material #261 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "262"
+    label: Goudron Vegetal
+    description: Raw material #262 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "263"
+    label: Guaiacol Liquide
+    description: Raw material #263 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "264"
+    label: Guarana Pudra
+    description: Raw material #264 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "265"
+    label: Gül Suyu
+    description: Raw material #265 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "266"
+    label: Gümüş Nitrat Kalem
+    description: Raw material #266 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "267"
+    label: Gümüş Nitrat Kristal
+    description: Raw material #267 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "268"
+    label: Helmitol
+    description: Raw material #268 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "269"
+    label: Hemoglobine Liq.
+    description: Raw material #269 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "270"
+    label: Hexamethylene Tetraaminae
+    description: Raw material #270 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "271"
+    label: Hidrokinon
+    description: Raw material #271 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "272"
+    label: Hidroklorik Asit
+    description: Raw material #272 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "273"
+    label: Hint Yağı
+    description: Raw material #273 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "274"
+    label: Huile d'Amande Douce
+    description: Raw material #274 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "275"
+    label: Huile de Belladone
+    description: Raw material #275 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "276"
+    label: Huile de Cade
+    description: Raw material #276 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "277"
+    label: Huile de Camomille
+    description: Raw material #277 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "278"
+    label: Huile de Camphre
+    description: Raw material #278 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "279"
+    label: Huile de Foie de Morue
+    description: Raw material #279 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "280"
+    label: Huile de Ricine
+    description: Raw material #280 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "281"
+    label: Huile de Sesami
+    description: Raw material #281 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "282"
+    label: Huile de Vaseline
+    description: Raw material #282 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "283"
+    label: Huile d'Olive (nötr)
+    description: Raw material #283 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "284"
+    label: Hydroxide d'Alumine colloidal
+    description: Raw material #284 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "285"
+    label: Hypophosphite de Sodium
+    description: Raw material #285 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "286"
+    label: Hyposulfite de Soude
+    description: Raw material #286 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "287"
+    label: Ichthyol
+    description: Raw material #287 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "288"
+    label: Ihlamur Çiçeği
+    description: Raw material #288 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "289"
+    label: Ihtiyol Pür
+    description: Raw material #289 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "290"
+    label: Infusion d'Althae Guimauve % 2
+    description: Raw material #290 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "291"
+    label: Infusion d'Colombo % 2
+    description: Raw material #291 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "292"
+    label: Infusion de Camomille % 2
+    description: Raw material #292 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "293"
+    label: Infusion de Polygale % 4
+    description: Raw material #293 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "294"
+    label: Infusion de Tilleul % 2
+    description: Raw material #294 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "295"
+    label: Infusion d'Eucalyptus
+    description: Raw material #295 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "296"
+    label: Iode
+    description: Raw material #296 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "297"
+    label: Iodoforme
+    description: Raw material #297 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "298"
+    label: Iodure de Potassium
+    description: Raw material #298 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "299"
+    label: Iodure de Sodium
+    description: Raw material #299 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "300"
+    label: Isopropyl Alcohol
+    description: Raw material #300 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "301"
+    label: Jansiyan Viyole
+    description: Raw material #301 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "302"
+    label: Jelatin
+    description: Raw material #302 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "303"
+    label: Kafein
+    description: Raw material #303 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "304"
+    label: Kafur Kristal
+    description: Raw material #304 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "305"
+    label: Kakao Yağı
+    description: Raw material #305 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "306"
+    label: Kalomel
+    description: Raw material #306 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "307"
+    label: Kalsiyum Glukonat
+    description: Raw material #307 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "308"
+    label: Kalsiyum Karbonat (Çökt.)
+    description: Raw material #308 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "309"
+    label: Kalsiyum Laktat
+    description: Raw material #309 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "310"
+    label: Kaolin
+    description: Raw material #310 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "311"
+    label: Karbon Tetra Klorür (CCL4)
+    description: Raw material #311 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "312"
+    label: Karlspad Tuzu (Yapay)
+    description: Raw material #312 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "313"
+    label: Kloral Hidrat
+    description: Raw material #313 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "314"
+    label: Kloroform
+    description: Raw material #314 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "315"
+    label: Kodein Fosfat
+    description: Raw material #315 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "316"
+    label: Kodein Pür
+    description: Raw material #316 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "317"
+    label: Kollodyon
+    description: Raw material #317 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "318"
+    label: Kollodyon Elastik
+    description: Raw material #318 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "319"
+    label: Kurşun Subasetat Çöz.
+    description: Raw material #319 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "320"
+    label: Kükürt (Çöktürülmüş)
+    description: Raw material #320 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "321"
+    label: L-Arginin Monohydrochloride
+    description: Raw material #321 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "322"
+    label: L-Cystine
+    description: Raw material #322 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "323"
+    label: Lactate de Chaux
+    description: Raw material #323 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "324"
+    label: Lactose
+    description: Raw material #324 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "325"
+    label: Laktik Asit
+    description: Raw material #325 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "326"
+    label: Lanoline -Anhidr
+    description: Raw material #326 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "327"
+    label: Laudanum Sydenham
+    description: Raw material #327 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "328"
+    label: Limonade Chlorhydrique
+    description: Raw material #328 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "329"
+    label: Limonade Lactique
+    description: Raw material #329 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "330"
+    label: Liqueur Ammoniacal Anisee
+    description: Raw material #330 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "331"
+    label: Liqueur de Fehling
+    description: Raw material #331 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "332"
+    label: Liqueur de Fowler
+    description: Raw material #332 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "333"
+    label: Liqueur d'Hoffmann
+    description: Raw material #333 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "334"
+    label: Liquor Kalii Arsenitis
+    description: Raw material #334 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "335"
+    label: Luminal
+    description: Raw material #335 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "336"
+    label: Luminal Sodique
+    description: Raw material #336 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "337"
+    label: Lupulin
+    description: Raw material #337 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "338"
+    label: Maden Kömürü Katranı
+    description: Raw material #338 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "339"
+    label: Magnesie Calcine -legers
+    description: Raw material #339 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "340"
+    label: Magnesie Hydrate
+    description: Raw material #340 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "341"
+    label: Magnesie Perhydrole % 25
+    description: Raw material #341 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "342"
+    label: Magnezyum Oksit -hafif
+    description: Raw material #342 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "343"
+    label: Magnezyum Sülfat
+    description: Raw material #343 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "344"
+    label: Malahit Yeşili
+    description: Raw material #344 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "345"
+    label: Malahite Green
+    description: Raw material #345 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "346"
+    label: Medinal
+    description: Raw material #346 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "347"
+    label: Melissa Suyu
+    description: Raw material #347 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "348"
+    label: Menthol
+    description: Raw material #348 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "349"
+    label: Merbromin
+    description: Raw material #349 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "350"
+    label: Mercurochrom
+    description: Raw material #350 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "351"
+    label: Metamizol Na
+    description: Raw material #351 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "352"
+    label: Metil Morfin
+    description: Raw material #352 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "353"
+    label: Metil Paraben
+    description: Raw material #353 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "354"
+    label: Metil Salisilat
+    description: Raw material #354 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "355"
+    label: Metilen Mavisi
+    description: Raw material #355 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "356"
+    label: Monobrome Isovaleryl Uree
+    description: Raw material #356 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "357"
+    label: Morfin HCl
+    description: Raw material #357 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "358"
+    label: Nane Suyu
+    description: Raw material #358 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "359"
+    label: Naphtol - beta
+    description: Raw material #359 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "360"
+    label: Nipagine-m
+    description: Raw material #360 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "361"
+    label: Nipasol
+    description: Raw material #361 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "362"
+    label: Nişasta
+    description: Raw material #362 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "363"
+    label: Nitrate d'Argent crist.
+    description: Raw material #363 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "364"
+    label: Nitrate de Pilocarpine
+    description: Raw material #364 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "365"
+    label: Nitrate de Potassium
+    description: Raw material #365 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "366"
+    label: Nitroglicerin
+    description: Raw material #366 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "367"
+    label: Novalgine
+    description: Raw material #367 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "368"
+    label: Novocaine
+    description: Raw material #368 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "369"
+    label: Oksijenli Su
+    description: Raw material #369 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "370"
+    label: Okzalik Asit
+    description: Raw material #370 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "371"
+    label: Oleum Cacao
+    description: Raw material #371 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "372"
+    label: Onguent Althea
+    description: Raw material #372 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "373"
+    label: Onguent Belladone
+    description: Raw material #373 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "374"
+    label: Onguent Mercuriel
+    description: Raw material #374 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "375"
+    label: Onguent Mercuriel Belladonne
+    description: Raw material #375 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "376"
+    label: Onguent Mercuriel double
+    description: Raw material #376 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "377"
+    label: Onguent Populeum
+    description: Raw material #377 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "378"
+    label: Oxycyanure de Mercure
+    description: Raw material #378 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "379"
+    label: Oxyde de Zinc
+    description: Raw material #379 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "380"
+    label: Oxyde Jaune de Mercure
+    description: Raw material #380 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "381"
+    label: Oxyde Rouge de Mercure
+    description: Raw material #381 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "382"
+    label: Paba
+    description: Raw material #382 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "383"
+    label: Pancreatine
+    description: Raw material #383 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "384"
+    label: Pantocaine
+    description: Raw material #384 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "385"
+    label: Papaverin HCl
+    description: Raw material #385 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "386"
+    label: para-Amino Benzoik Asit
+    description: Raw material #386 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "387"
+    label: Paraffine Liquide
+    description: Raw material #387 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "388"
+    label: Parafin (Katı)
+    description: Raw material #388 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "389"
+    label: Parasetamol
+    description: Raw material #389 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "390"
+    label: Pellidol
+    description: Raw material #390 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "391"
+    label: Pepsine en pallettes
+    description: Raw material #391 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "392"
+    label: Pepsine en poudre
+    description: Raw material #392 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "393"
+    label: Perhydrol
+    description: Raw material #393 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "394"
+    label: Permanganate de Potassium
+    description: Raw material #394 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "395"
+    label: Peru Balsamı
+    description: Raw material #395 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "396"
+    label: Phenobarbital
+    description: Raw material #396 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "397"
+    label: Phenobarbital Sodique
+    description: Raw material #397 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "398"
+    label: Phenol crist.
+    description: Raw material #398 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "399"
+    label: Phenol Liquide
+    description: Raw material #399 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "400"
+    label: Phenolphtaleine
+    description: Raw material #400 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "401"
+    label: Phenosalyl
+    description: Raw material #401 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "402"
+    label: Phosphate de Chaux bi basique
+    description: Raw material #402 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "403"
+    label: Phosphate de Chaux neutre prima
+    description: Raw material #403 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "404"
+    label: Phosphate de Chaux neutre terti
+    description: Raw material #404 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "405"
+    label: Phosphate de Chaux neutre trica
+    description: Raw material #405 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "406"
+    label: Phosphate de Codeine
+    description: Raw material #406 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "407"
+    label: Pilokarpin HCl
+    description: Raw material #407 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "408"
+    label: Pilokarpin Nitrat
+    description: Raw material #408 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "409"
+    label: Pirogallol
+    description: Raw material #409 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "410"
+    label: Podophylline
+    description: Raw material #410 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "411"
+    label: Pommade de Populeium
+    description: Raw material #411 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "412"
+    label: Pommade d'Helmerich
+    description: Raw material #412 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "413"
+    label: Pommade Ichthyolee % 10
+    description: Raw material #413 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "414"
+    label: Pommade Iodoformee
+    description: Raw material #414 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "415"
+    label: Pommade Mercurielle faible
+    description: Raw material #415 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "416"
+    label: Pommade Oxyde de Zinc
+    description: Raw material #416 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "417"
+    label: Pommade Soufree
+    description: Raw material #417 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "418"
+    label: Pommade Wilkinson
+    description: Raw material #418 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "419"
+    label: Potasyum İyodür
+    description: Raw material #419 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "420"
+    label: Potasyum Klorat
+    description: Raw material #420 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "421"
+    label: Potasyum Klorür
+    description: Raw material #421 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "422"
+    label: Potasyum Permanganat
+    description: Raw material #422 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "423"
+    label: Potasyum Sitrat -tri
+    description: Raw material #423 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "424"
+    label: Potion Cordiale
+    description: Raw material #424 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "425"
+    label: Potion Cordiale ethere
+    description: Raw material #425 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "426"
+    label: Potion de Riviere (A+B)
+    description: Raw material #426 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "427"
+    label: Potion de Todd
+    description: Raw material #427 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "428"
+    label: Poudre Belladonne
+    description: Raw material #428 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "429"
+    label: Poudre de Gomme Arabique
+    description: Raw material #429 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "430"
+    label: Poudre de Quinquine
+    description: Raw material #430 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "431"
+    label: Poudre de Ratanhia
+    description: Raw material #431 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "432"
+    label: Poudre de Reglisse
+    description: Raw material #432 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "433"
+    label: Poudre de Reglisse Comp.
+    description: Raw material #433 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "434"
+    label: Poudre d'İpeca
+    description: Raw material #434 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "435"
+    label: Poudre d'Opium
+    description: Raw material #435 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "436"
+    label: Precipite Blanche
+    description: Raw material #436 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "437"
+    label: Prokain HCl
+    description: Raw material #437 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "438"
+    label: Propil Paraben
+    description: Raw material #438 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "439"
+    label: Propilen Glikol
+    description: Raw material #439 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "440"
+    label: Protargol
+    description: Raw material #440 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "441"
+    label: Proteinate d'Argent
+    description: Raw material #441 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "442"
+    label: Protochlorure de Mercure
+    description: Raw material #442 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "443"
+    label: Protoiodure de Mercure
+    description: Raw material #443 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "444"
+    label: Protoxalate de Fer
+    description: Raw material #444 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "445"
+    label: Pyramidon
+    description: Raw material #445 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "446"
+    label: Racine de Polygala
+    description: Raw material #446 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "447"
+    label: Racine d'Ipeca
+    description: Raw material #447 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "448"
+    label: Resorcine
+    description: Raw material #448 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "449"
+    label: Retinoik Asit
+    description: Raw material #449 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "450"
+    label: Rivanol
+    description: Raw material #450 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "451"
+    label: Sakarin
+    description: Raw material #451 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "452"
+    label: Salicylate d'Antipyrine
+    description: Raw material #452 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "453"
+    label: Salicylate de Phenol
+    description: Raw material #453 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "454"
+    label: Salicylate de Soude
+    description: Raw material #454 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "455"
+    label: Salicylate de Theobromine
+    description: Raw material #455 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "456"
+    label: Salisilik Asit
+    description: Raw material #456 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "457"
+    label: Salol
+    description: Raw material #457 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "458"
+    label: Santonine
+    description: Raw material #458 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "459"
+    label: Savon Medicinale
+    description: Raw material #459 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "460"
+    label: Savon Noir
+    description: Raw material #460 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "461"
+    label: Sel de Carisbad artificiel
+    description: Raw material #461 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "462"
+    label: Serum Physıologique % 09 (Non
+    description: Raw material #462 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "463"
+    label: Signolin
+    description: Raw material #463 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "464"
+    label: Sirop d'Acide Citrique
+    description: Raw material #464 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "465"
+    label: Sirop de Belladone
+    description: Raw material #465 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "466"
+    label: Sirop de Canelle
+    description: Raw material #466 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "467"
+    label: Sirop de Codeine
+    description: Raw material #467 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "468"
+    label: Sirop de Dessesartz
+    description: Raw material #468 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "469"
+    label: Sirop de Fleur d'Oranger
+    description: Raw material #469 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "470"
+    label: Sirop de Guimauve
+    description: Raw material #470 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "471"
+    label: Sirop de Menthe
+    description: Raw material #471 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "472"
+    label: Sirop de Mures
+    description: Raw material #472 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "473"
+    label: Sirop de Nerprun
+    description: Raw material #473 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "474"
+    label: Sirop de Tolu
+    description: Raw material #474 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "475"
+    label: Sirop d'Ecorce d'Orange amere
+    description: Raw material #475 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "476"
+    label: Sirop d'Ipeca
+    description: Raw material #476 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "477"
+    label: Sirop Iodotannique
+    description: Raw material #477 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "478"
+    label: Sirop Simple
+    description: Raw material #478 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "479"
+    label: Sitrik Asit
+    description: Raw material #479 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "480"
+    label: Sodium Lauryl Sulfate
+    description: Raw material #480 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "481"
+    label: Sodyum Benzoat
+    description: Raw material #481 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "482"
+    label: Sodyum Bikarbonat
+    description: Raw material #482 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "620"
+    label: Sodyum dichloroacetate
+    description: Raw material #620 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "483"
+    label: Sodyum Florür
+    description: Raw material #483 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "484"
+    label: Sodyum Fosfat - (di-bazik) [Na
+    description: Raw material #484 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "485"
+    label: Sodyum Fosfat - (mono-bazik) [N
+    description: Raw material #485 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "486"
+    label: Sodyum Fosfat - (tri-bazik) [N
+    description: Raw material #486 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "487"
+    label: Sodyum Hiposülfit
+    description: Raw material #487 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "488"
+    label: Sodyum İyodür
+    description: Raw material #488 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "489"
+    label: Sodyum Klorür
+    description: Raw material #489 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "490"
+    label: Sodyum Salisilat
+    description: Raw material #490 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "491"
+    label: Sodyum Sitrat - tri (Citrate
+    description: Raw material #491 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "492"
+    label: Sodyum Sülfat
+    description: Raw material #492 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "493"
+    label: Sodyum Tiyosülfat
+    description: Raw material #493 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "494"
+    label: Soufre Laves
+    description: Raw material #494 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "495"
+    label: Soufre Precipite
+    description: Raw material #495 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "496"
+    label: Soufre Sublime
+    description: Raw material #496 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "497"
+    label: Sous Carbonate de Bismuth
+    description: Raw material #497 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "498"
+    label: Sous Gallate de Bismouth
+    description: Raw material #498 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "499"
+    label: Sous Nitrate de Bismuth
+    description: Raw material #499 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "500"
+    label: Sprocide Pallicide
+    description: Raw material #500 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "501"
+    label: Stearil Alkol
+    description: Raw material #501 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "502"
+    label: Stovaine
+    description: Raw material #502 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "503"
+    label: Stovarsol
+    description: Raw material #503 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "504"
+    label: Sucre de Poudre
+    description: Raw material #504 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "505"
+    label: Sulfadiazine
+    description: Raw material #505 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "506"
+    label: Sulfanilamide
+    description: Raw material #506 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "507"
+    label: Sulfate d'Aluminium
+    description: Raw material #507 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "508"
+    label: Sulfate de Barium
+    description: Raw material #508 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "509"
+    label: Sulfate de Chaux
+    description: Raw material #509 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "510"
+    label: Sulfate de Cuivre
+    description: Raw material #510 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "511"
+    label: Sulfate de Magnesium
+    description: Raw material #511 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "512"
+    label: Sulfate de Quinidine
+    description: Raw material #512 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "513"
+    label: Sulfate de Soude
+    description: Raw material #513 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "514"
+    label: Sulfate de Styrchnine
+    description: Raw material #514 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "515"
+    label: Sulfate de Zinc
+    description: Raw material #515 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "516"
+    label: Sulfate Neutre d'Atropine
+    description: Raw material #516 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "517"
+    label: Sulfatiazol
+    description: Raw material #517 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "518"
+    label: Sulfogaicolate de Potassium
+    description: Raw material #518 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "519"
+    label: Sulfopon
+    description: Raw material #519 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "520"
+    label: Süblime
+    description: Raw material #520 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "521"
+    label: Talc
+    description: Raw material #521 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "522"
+    label: Tanin
+    description: Raw material #522 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "523"
+    label: Tannate d'Albumine
+    description: Raw material #523 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "524"
+    label: Tannigene
+    description: Raw material #524 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "525"
+    label: Tannnalbin
+    description: Raw material #525 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "526"
+    label: Tartarik Asit
+    description: Raw material #526 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "527"
+    label: Teinture Badiane
+    description: Raw material #527 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "528"
+    label: Teinture Baume de Tolu
+    description: Raw material #528 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "529"
+    label: Teinture d'Aconit -Racine. Feu
+    description: Raw material #529 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "530"
+    label: Teinture d'Amers
+    description: Raw material #530 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "531"
+    label: Teinture de Benzoin
+    description: Raw material #531 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "532"
+    label: Teinture de Benzoique
+    description: Raw material #532 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "533"
+    label: Teinture de Canelle
+    description: Raw material #533 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "534"
+    label: Teinture de Cantharides
+    description: Raw material #534 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "535"
+    label: Teinture de Capillaire
+    description: Raw material #535 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "536"
+    label: Teinture de Capsicum
+    description: Raw material #536 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "537"
+    label: Teinture de Coca
+    description: Raw material #537 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "538"
+    label: Teinture de Cola
+    description: Raw material #538 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "539"
+    label: Teinture de Colombo
+    description: Raw material #539 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "540"
+    label: Teinture de Condurango
+    description: Raw material #540 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "541"
+    label: Teinture de Crataegus
+    description: Raw material #541 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "542"
+    label: Teinture de Digitale
+    description: Raw material #542 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "543"
+    label: Teinture de Drosera
+    description: Raw material #543 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "544"
+    label: Teinture de Gentiane
+    description: Raw material #544 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "545"
+    label: Teinture de Gentiane comp.
+    description: Raw material #545 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "546"
+    label: Teinture de Girofle
+    description: Raw material #546 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "547"
+    label: Teinture de Grindella
+    description: Raw material #547 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "548"
+    label: Teinture de Jaborandi
+    description: Raw material #548 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "549"
+    label: Teinture de Jusquiame
+    description: Raw material #549 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "550"
+    label: Teinture de Lavande
+    description: Raw material #550 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "551"
+    label: Teinture de Lobelle
+    description: Raw material #551 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "552"
+    label: Teinture de Myrrhe
+    description: Raw material #552 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "553"
+    label: Teinture de Noix Vomique
+    description: Raw material #553 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "554"
+    label: Teinture de Panama
+    description: Raw material #554 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "555"
+    label: Teinture de Passiflore
+    description: Raw material #555 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "556"
+    label: Teinture de Polygala
+    description: Raw material #556 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "557"
+    label: Teinture de Quassia
+    description: Raw material #557 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "558"
+    label: Teinture de Quillaia
+    description: Raw material #558 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "559"
+    label: Teinture de Quinquina
+    description: Raw material #559 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "560"
+    label: Teinture de Quinquina comp.
+    description: Raw material #560 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "561"
+    label: Teinture de Ratanhia
+    description: Raw material #561 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "562"
+    label: Teinture de Rhubarbe
+    description: Raw material #562 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "563"
+    label: Teinture de Safranee
+    description: Raw material #563 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "564"
+    label: Teinture de Strophantus
+    description: Raw material #564 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "565"
+    label: Teinture de Valeriane Ethere
+    description: Raw material #565 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "566"
+    label: Teinture de Vibrum
+    description: Raw material #566 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "567"
+    label: Teinture d'Ecalyptus
+    description: Raw material #567 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "568"
+    label: Teinture d'Ecorce d'orange amer
+    description: Raw material #568 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "569"
+    label: Teinture d'Hamamelis
+    description: Raw material #569 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "570"
+    label: Teinture d'Hydrastis
+    description: Raw material #570 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "571"
+    label: Teinture d'Iode
+    description: Raw material #571 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "572"
+    label: Teinture d'Ipeca
+    description: Raw material #572 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "573"
+    label: Teinture d'Opium
+    description: Raw material #573 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "574"
+    label: Teinture Jalap compose
+    description: Raw material #574 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "575"
+    label: Tenture de Belladone
+    description: Raw material #575 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "576"
+    label: Tentürdiyot
+    description: Raw material #576 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "577"
+    label: Terebenthine
+    description: Raw material #577 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "578"
+    label: Terpine Hydrate
+    description: Raw material #578 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "579"
+    label: Tetracaine HCl
+    description: Raw material #579 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "580"
+    label: Theobromine
+    description: Raw material #580 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "581"
+    label: Theophylline
+    description: Raw material #581 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "582"
+    label: Theophylline Ethylen Diamin
+    description: Raw material #582 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "583"
+    label: Thiamine HCl
+    description: Raw material #583 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "584"
+    label: Thiocol
+    description: Raw material #584 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "585"
+    label: Thymol
+    description: Raw material #585 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "586"
+    label: Tıbbi Kömür (Bitkisel)
+    description: Raw material #586 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "587"
+    label: Toluidin Blue
+    description: Raw material #587 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "588"
+    label: Tretinoin
+    description: Raw material #588 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "589"
+    label: Triethanolamine
+    description: Raw material #589 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "590"
+    label: Triklor Asetik Asit
+    description: Raw material #590 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "591"
+    label: Tumenol
+    description: Raw material #591 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "592"
+    label: Undesilenik Asit
+    description: Raw material #592 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "593"
+    label: Urea
+    description: Raw material #593 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "594"
+    label: Urotropin
+    description: Raw material #594 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "595"
+    label: Valerianate de Methyl
+    description: Raw material #595 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "596"
+    label: Validol
+    description: Raw material #596 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "597"
+    label: Vaniline
+    description: Raw material #597 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "598"
+    label: Vaseline Blanche
+    description: Raw material #598 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "599"
+    label: Vaseline Liquide
+    description: Raw material #599 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "600"
+    label: Vazelin (Beyaz)
+    description: Raw material #600 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "601"
+    label: Vazelin (Sıvı)
+    description: Raw material #601 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "602"
+    label: Veronal
+    description: Raw material #602 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "603"
+    label: Veronal Sodique
+    description: Raw material #603 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "604"
+    label: Violette de Gentiane
+    description: Raw material #604 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "605"
+    label: Vitamin B1
+    description: Raw material #605 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "606"
+    label: Vitamin B12
+    description: Raw material #606 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "607"
+    label: Vitamin B2
+    description: Raw material #607 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "608"
+    label: Vitamin B6
+    description: Raw material #608 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "609"
+    label: Vitamin C (Acide Ascorbique)
+    description: Raw material #609 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "610"
+    label: Vitamin D2
+    description: Raw material #610 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "611"
+    label: Vitamin E
+    description: Raw material #611 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "612"
+    label: Vitamin F
+    description: Raw material #612 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "613"
+    label: Vitamin K
+    description: Raw material #613 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "614"
+    label: Vitamine A
+    description: Raw material #614 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "615"
+    label: Vitamine PP
+    description: Raw material #615 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "616"
+    label: Vitellinate d'Argent
+    description: Raw material #616 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "617"
+    label: Xeroforme
+    description: Raw material #617 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+  - code: "618"
+    label: Xylol
+    description: Raw material #618 in the Majistral catalog (Tablo 4.2.1.f.1.1.1, s.201-223).
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: "3.1.1"
+    fetchedAt: "2026-11-15"
+    page: 201
+    section: Tablo 4.2.1.f.1.1.1 - Majistral Ham Madde Listesi (s.201-223)
+    confidence: extracted
+    notes: 620 codes parsed from the guide catalog; code 619 is skipped by
+      the guide itself (620 follows 618). Names preserve the guide's
+      spelling; leading typographic dots stripped.
+status: reviewed
