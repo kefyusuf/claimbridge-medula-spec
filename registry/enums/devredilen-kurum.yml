@@ -1,0 +1,138 @@
+id: devredilen-kurum
+displayName: Devredilen Kurum
+values:
+  - code: "1"
+    label: SSK
+    description: Social Insurance Institution coverage..
+  - code: "2"
+    label: Bagkur
+    description: Bag-Kur coverage..
+  - code: "3"
+    label: Emekli Sandigi
+    description: Retirement Fund (Emekli Sandigi) coverage..
+  - code: "4"
+    label: Yesil Kart
+    description: Green Card coverage..
+  - code: "5"
+    label: Vatansiz ve siginmacilar
+    description: Stateless persons and asylum seekers..
+  - code: "6"
+    label: 65 Yas Yukseltilmis Aylik
+    description: Persons receiving old-age pension under law 2022 (65+, needy, destitute Turkish citizens)..
+  - code: "7"
+    label: Istiklal Madalyasi Seref Ayligi
+    description: Honor pension under law 1005 (Independence Medal recipients)..
+  - code: "10"
+    label: 2828 Sosyal Hizmetler
+    description: Free protection/care/rehabilitation services under law 2828..
+  - code: "12"
+    label: S.G.K.
+    description: Direct SGK coverage..
+  - code: "14"
+    label: Mutekabiliyetli Oturma Izinli Yabanci
+    description: Foreign residents without coverage under another country's legislation (reciprocity considered)..
+  - code: "15"
+    label: 4447 Isizlik Odeneigi
+    description: Persons receiving unemployment pay under law 4447 / short-time work allowance..
+  - code: "17"
+    label: 60-g Istege Bagli Sigortali
+    description: Voluntarily insured persons under 60-g..
+  - code: "18"
+    label: 18 Yas Alti Kapsam Disi
+    description: Under-18 persons outside social security coverage..
+  - code: "19"
+    label: Universite Yabanci Uyruklu Ogrenciler
+    description: Foreign-national university students..
+  - code: "20"
+    label: Stajyer Avukat
+    description: Intern lawyers..
+  - code: "21"
+    label: Kapsam Disi
+    description: Outside coverage..
+  - code: "22"
+    label: Acil Hal
+    description: Emergency condition..
+  - code: "23"
+    label: TBMM
+    description: Grand National Assembly coverage..
+  - code: "25"
+    label: Ceza Infaz ve Tutukevi Kursiyeri
+    description: Inmates of penal execution facilities and prisons..
+  - code: "26"
+    label: AIHM
+    description: ECtHR (European Court of Human Rights) decisions..
+  - code: "27"
+    label: 60/c1-c3-c9
+    description: Coverage under 60/c1-c3-c9..
+  - code: "28"
+    label: 3713/21
+    description: Coverage under law 3713 article 21..
+  - code: "31"
+    label: 60/f12-f13-f14
+    description: Insured under 60/f12, f13, f14..
+  - code: "32"
+    label: Diyanet Akademisi Ogrencileri
+    description: Diyanet Academy students..
+  - code: "97"
+    label: Gecici Koruma V174
+    description: Temporary protection under law V174..
+  - code: "98"
+    label: Gecici Koruma 6458
+    description: Temporary protection under law 6458..
+  - code: "99"
+    label: Yurtdisi Sigortalilar
+    description: Insured abroad..
+  - code: "100"
+    label: 8105 CK Kapsaminda Ozel Duzenlemeye Tabi Kisiler
+    description: Persons subject to special arrangement under 8105 CK..
+  - code: "147"
+    label: 60/15f Milli Egitim Akademisi Aday Ogretmenleri
+    description: Teacher candidates of the National Education Academy (60/15f)..
+  - code: "148"
+    label: 60/16f YTB Kapsamindaki Ogrenciler
+    description: Students under YTB scope (60/16f)..
+  - code: "149"
+    label: 60/c2 Uluslararasi Koruma
+    description: Recognized international protection applicants/status holders (60/c2)..
+  - code: "I"
+    label: Is kazasi
+    description: Occupational accident transfer..
+  - code: "M"
+    label: Meslek Hastaligi
+    description: Occupational disease transfer..
+  - code: "B"
+    label: Madde Bagimliligi
+    description: Substance dependence transfer..
+  - code: "V"
+    label: Acil Hal
+    description: Emergency (forensic-case) transfer..
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: "3.1.1"
+    fetchedAt: "2026-11-15"
+    page: 154
+    section: Tablo 4.1.1.a - ProvizyonGirisDVO (devredilenKurum, liste s.155-156 ve s.158 harf kodlariyla devam eder)
+    confidence: extracted
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: "3.1.1"
+    fetchedAt: "2026-11-15"
+    page: 155
+    section: devredilenKurum kodlari (1-31, 98-99)
+    confidence: extracted
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: "3.1.1"
+    fetchedAt: "2026-11-15"
+    page: 156
+    section: devredilenKurum kodlari (32-149)
+    confidence: extracted
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: "3.1.1"
+    fetchedAt: "2026-11-15"
+    page: 158
+    section: devredilenKurum harf kodlari (I/M/B/V)
+    confidence: extracted
+status: reviewed
