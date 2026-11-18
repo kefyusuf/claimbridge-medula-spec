@@ -6,7 +6,18 @@ Format: [Keep a Changelog](https://keepachangelog.com); versioning: SemVer
 
 ## [Unreleased]
 
-_Nothing yet — v0.3.0 scope is complete._
+_Nothing yet — v0.4.0 scope is complete._
+
+## [0.4.0] — 2026-11-19
+
+Fourth release: the Field schema gained the optional codeSystem
+attribute (HL7 FHIR CodeSystem reference norm) and the full sweep
+annotated every externally-coded field across all 70 DVOs (taniKodu →
+ICD-10-WHO, sutKodu/islemKodu/yeniIslemKodu/malzemeKodu → SUT, barkod →
+GS1). Registry-enum-bound fields normalized to explicit codeSystem:
+null. Invariant suite added to keep the two attributes mutually
+exclusive. Majistral raw-material catalog registered (620 values,
+s.201-223). Mimosa deep scan re-run: zero findings.
 
 ## [0.3.0] — 2026-11-18
 
