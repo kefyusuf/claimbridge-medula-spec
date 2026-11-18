@@ -54,6 +54,7 @@ fields:
     displayName: Sigortali Turu
     type: enum
     enumRef: sigortali-turu
+    codeSystem: null
     required: true
     length: 1
     description: Insured person type (s.154). Codes 1-4 in the sigortali-turu registry enum.
@@ -94,6 +95,7 @@ fields:
     displayName: Devredilen Kurum
     type: enum
     enumRef: devredilen-kurum
+    codeSystem: null
     required: true
     length: 1
     description: Institution the person was transferred from before the SGK merger (s.154-158); 34 codes in the devredilen-kurum registry enum.
@@ -134,6 +136,7 @@ fields:
     displayName: Provizyon Tipi
     type: enum
     enumRef: provizyon-tipi
+    codeSystem: null
     required: true
     length: 1
     description: Provision type controlling how SGK covers the admission (s.156-157).
@@ -153,6 +156,7 @@ fields:
     displayName: Tedavi Turu
     type: enum
     enumRef: tedavi-turu
+    codeSystem: null
     required: true
     length: 1
     description: Treatment type of the admission - A/Y/G letter codes (s.158).
@@ -172,6 +176,7 @@ fields:
     displayName: Tedavi Tipi
     type: enum
     enumRef: tedavi-tipi
+    codeSystem: null
     required: true
     length: 1
     description: Detailed treatment profile (s.158-159); codes 0-22 (no 3) in the tedavi-tipi registry enum.
@@ -191,6 +196,7 @@ fields:
     displayName: Takip Tipi
     type: enum
     enumRef: takip-tipi
+    codeSystem: null
     required: true
     length: 1
     description: Tracking record type (s.157). Linked takips are requested through takipNo, not through this field.
@@ -309,6 +315,7 @@ fields:
     displayName: EKDS Yontem Gerekce
     type: enum
     enumRef: ekds-yontem-gerekce
+    codeSystem: null
     required: false
     length: null
     description: EKDS verification method justification codes; Integer[] in the guide, modeled as an array of ekds-yontem-gerekce codes (s.167, changelog s.13).

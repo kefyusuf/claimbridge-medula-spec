@@ -268,6 +268,7 @@ fields:
     displayName: Odeme Sorgu Durumu
     type: enum
     enumRef: odeme-sorgu-durum
+    codeSystem: null
     required: false
     length: 1
     description: Payment-inquiry state of the registered services (s.238); codes 0-6 and X.

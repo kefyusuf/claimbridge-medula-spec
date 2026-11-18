@@ -52,6 +52,7 @@ fields:
     displayName: SUT Islem Kodu
     type: string
     enumRef: null
+    codeSystem: SUT
     required: true
     length: 10
     description: SUT operation code of the planned bone-marrow procedure (s.182)

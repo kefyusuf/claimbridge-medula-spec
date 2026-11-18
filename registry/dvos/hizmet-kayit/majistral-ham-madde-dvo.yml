@@ -33,6 +33,7 @@ fields:
     displayName: Majistral Ham Madde Kodu
     type: enum
     enumRef: majistral-ham-madde
+    codeSystem: null
     required: true
     length: null
     description: Raw-material code (guide declares Integer; semantically a coded value) - codes 1-620 in the majistral-ham-madde registry enum (s.201)
@@ -71,6 +72,7 @@ fields:
     displayName: Ham Madde Birimi
     type: enum
     enumRef: ham-madde-birimi
+    codeSystem: null
     required: true
     length: null
     description: Raw-material unit - 1 Gram / 2 Miligram (s.201)

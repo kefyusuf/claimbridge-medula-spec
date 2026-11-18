@@ -59,6 +59,7 @@ fields:
     displayName: SUT Kodu
     type: string
     enumRef: null
+    codeSystem: SUT
     required: true
     length: 7
     description: SUT-defined operation code (s.235)

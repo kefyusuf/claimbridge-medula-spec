@@ -52,6 +52,7 @@ fields:
     displayName: Taburcu Kodu
     type: enum
     enumRef: taburcu-kodu
+    codeSystem: null
     required: false
     length: 1
     description: Discharge code (s.241-242); codes 1-13 in the taburcu-kodu registry enum.

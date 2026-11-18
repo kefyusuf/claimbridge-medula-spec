@@ -68,6 +68,7 @@ fields:
     displayName: UBB Malzeme Barkod Bilgisi
     type: string
     enumRef: null
+    codeSystem: GS1
     required: false
     length: 20
     description: UBB material barcode; required since 01.02.2008 (s.225)
@@ -163,6 +164,7 @@ fields:
     displayName: Malzemenin Kodu
     type: string
     enumRef: null
+    codeSystem: SUT
     required: false
     length: 20
     description: Material code; required for SUT and protocol materials (s.225)
@@ -182,6 +184,7 @@ fields:
     displayName: Malzemenin Turu
     type: enum
     enumRef: malzeme-turu
+    codeSystem: null
     required: true
     length: 1
     description: Material type - 1 SUT kodlu, 2 Emekli Sandigi protokol kodlu, 3 kodsuz (s.225)
