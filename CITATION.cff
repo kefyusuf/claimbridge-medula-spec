@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+title: "claimbridge-medula-spec: a guide-verified, machine-readable specification for MEDULA-compatible healthcare claim integrations"
+message: >-
+  If you use this specification in your work, please cite it using this
+  metadata.
+authors:
+  - alias: kefyusuf
+version: 0.3.0
+date-released: "2026-11-18"
+license: MIT
+repository-code: "https://github.com/kefyusuf/claimbridge-medula-spec"
+keywords:
+  - MEDULA
+  - SGK
+  - healthcare
+  - claims
+  - interoperability
+  - specification
+  - registry
+abstract: >-
+  A language-neutral, machine-readable, registry-first specification for
+  MEDULA-compatible healthcare claim integrations. It models services,
+  methods, DVOs, enums, rules, workflows, and sandbox scenarios as a
+  JSON-Schema-validated YAML registry with a generated, checksum-guarded
+  distribution bundle. All content is guide-verified with page-level
+  provenance; the repository contains no real patient data.

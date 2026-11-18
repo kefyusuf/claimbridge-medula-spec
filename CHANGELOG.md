@@ -6,6 +6,25 @@ Format: [Keep a Changelog](https://keepachangelog.com); versioning: SemVer
 
 ## [Unreleased]
 
+_Nothing yet — v0.3.0 scope is complete._
+
+## [0.3.0] — 2026-11-18
+
+Third release: the composite and enum layer reached full guide coverage
+for the HastaKabul section (KemikIligi oku/duzeltme, SevkBildir, ekds*,
+ProvizyonDegistir composites), the transfer-institution code system
+(devredilen-kurum, 35 codes) and the lab-type catalog tahlil-tipi
+(72 values) registered as reviewed enums, and repository governance
+landed (SECURITY.md, CONTRIBUTING.md, CITATION.cff, Dependabot) per
+public-repo norms. Mimosa deep scan: zero findings.
+
+### Group 37 — release/v0.3.0 governance (2026-11-18)
+
+TDD-first governance suite (6 checks) pinned the release contract:
+SECURITY.md, CONTRIBUTING.md, CITATION.cff (v0.3.0), Dependabot config,
+and the SPEC_VERSION/package.json bump — all verified red before the
+artifacts landed.
+
 ### Group 36 — feat/v03-devredilen-kurum (2026-11-18)
 
 First group merged through a real GitHub PR (#2) after the remote setup.
