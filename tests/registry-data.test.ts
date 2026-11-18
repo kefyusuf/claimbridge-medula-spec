@@ -95,6 +95,7 @@ const EXPECTED_DVO_FILES = [
 
 const EXPECTED_ENUM_IDS = [
   "provizyon-tipi",
+  "devredilen-kurum",
   "sigortali-turu",
   "sonuc-kodu",
   "takip-durumu",

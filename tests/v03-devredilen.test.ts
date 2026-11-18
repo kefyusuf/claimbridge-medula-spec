@@ -20,7 +20,7 @@ describe("v0.3 devredilen-kurum (Group 36)", () => {
     const codes = (e?.data["values"] as Array<{ code: string }>).map(
       (v) => v.code,
     );
-    expect(codes).toHaveLength(34);
+    expect(codes).toHaveLength(35);
     for (const c of [
       "1",
       "2",

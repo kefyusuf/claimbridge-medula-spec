@@ -92,14 +92,11 @@ fields:
 
   - name: devredilenKurum
     displayName: Devredilen Kurum
-    type: string
-    enumRef: null
+    type: enum
+    enumRef: devredilen-kurum
     required: true
     length: 1
-    description: >-
-      Institution the person was transferred from before the SGK merger
-      (s.154-155). Codes include 1-9, 32, 97, 100, 147-149, I, M, B, V.
-      Enum registry candidate for v0.2.
+    description: Institution the person was transferred from before the SGK merger (s.154-158); 34 codes in the devredilen-kurum registry enum.
     sensitive: false
     syntheticOnlyRecommended: false
     sourceRefs:

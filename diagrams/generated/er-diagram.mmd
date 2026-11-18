@@ -493,7 +493,7 @@ erDiagram
     string hastaTCKimlikNo
     enum sigortaliTuru
     string bransKodu
-    string devredilenKurum
+    enum devredilenKurum
     date provizyonTarihi
     enum provizyonTipi
     enum tedaviTuru
@@ -638,6 +638,7 @@ erDiagram
   MajistralIlacDVO }o--|| ambalaj_boyutu : enumRef
   MalzemeBilgisiDVO }o--|| malzeme_turu : enumRef
   ProvizyonGirisDVO }o--|| sigortali_turu : enumRef
+  ProvizyonGirisDVO }o--|| devredilen_kurum : enumRef
   ProvizyonGirisDVO }o--|| provizyon_tipi : enumRef
   ProvizyonGirisDVO }o--|| tedavi_turu : enumRef
   ProvizyonGirisDVO }o--|| tedavi_tipi : enumRef

@@ -799,7 +799,7 @@ Domain: `hasta-kabul` · Direction: `input` · Status: `reviewed` · Source refs
 | `hastaTCKimlikNo` | string |  | — |  | Patient identity number (s.154). Examples must use synthetic placeholders only. |
 | `sigortaliTuru` | enum |  | sigortali-turu |  | Insured person type (s.154). Codes 1-4 in the sigortali-turu registry enum. |
 | `bransKodu` | string |  | — |  | Medical branch (specialty) code (s.154). Verification correction - the guide defines String(4), not integer. |
-| `devredilenKurum` | string |  | — |  | Institution the person was transferred from before the SGK merger (s.154-155). Codes include 1-9, 32, 97, 100, 147-149, I, M, B, V. Enum registry candidate for v0.2. |
+| `devredilenKurum` | enum |  | devredilen-kurum |  | Institution the person was transferred from before the SGK merger (s.154-158); 34 codes in the devredilen-kurum registry enum. |
 | `provizyonTarihi` | date |  | — |  | Date the provision was requested, dd.mm.yyyy format in the guide (s.156). |
 | `provizyonTipi` | enum |  | provizyon-tipi |  | Provision type controlling how SGK covers the admission (s.156-157). |
 | `tedaviTuru` | enum |  | tedavi-turu |  | Treatment type of the admission - A/Y/G letter codes (s.158). |
