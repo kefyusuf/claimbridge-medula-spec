@@ -1768,9 +1768,16 @@ If using a non-pnpm environment, document the alternative clearly.
 
 ---
 
-## 30. Handoff to Next Repository
+## 30. Handoff to Next Repository — FULFILLED (Group 40, 2026-11-18)
 
-After this repository reaches v0.1, create a separate PRD for:
+The sandbox PRD was delivered as docs/CLAIMBRIDGE_SANDBOX_PRD.md
+(Group 40): it consumes dist/claimbridge-medula-spec.json (v0.3.0+),
+implements the state model per the workflows, replays the six scenario
+contracts, enforces the rules layer, and treats SANDBOX_* codes as
+never-official. The handoff checklist in that document is the sandbox
+repo M0 backlog.
+
+Original instruction: after this repository reaches v0.1, create a separate PRD for:
 
 ```text
 claimbridge-sandbox

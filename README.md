@@ -119,6 +119,7 @@ v0.1.
 | [docs/03-workflows.md](docs/03-workflows.md) | Core claim flow and state effects |
 | [docs/04-sandbox-contract.md](docs/04-sandbox-contract.md) | How the sandbox consumes this spec |
 | [docs/05-code-generation.md](docs/05-code-generation.md) | Future codegen targets |
+| [docs/CLAIMBRIDGE_SANDBOX_PRD.md](docs/CLAIMBRIDGE_SANDBOX_PRD.md) | **Handoff PRD for the claimbridge-sandbox repository** |
 | [docs/generated/](docs/generated/) | Generated reference docs (do not edit) |
 
 ## Disclaimer summary
