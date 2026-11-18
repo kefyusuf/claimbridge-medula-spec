@@ -66,6 +66,7 @@ fields:
     displayName: Ayni Kesi / Seans Bilgisi
     type: enum
     enumRef: ayni-farkli-kesi
+    codeSystem: null
     required: false
     length: 1
     description: Same-session/same-incision relation code (s.191); codes 1-5.
@@ -226,6 +227,7 @@ fields:
     displayName: Euroscore
     type: enum
     enumRef: euroscore
+    codeSystem: null
     required: true
     length: 1
     description: Euroscore risk code (s.191); codes 0-3 in the euroscore registry enum.

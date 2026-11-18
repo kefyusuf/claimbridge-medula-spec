@@ -96,6 +96,7 @@ fields:
     displayName: Tani Tipi
     type: enum
     enumRef: tani-tipi
+    codeSystem: null
     required: true
     length: 1
     description: Diagnosis type - 1 On tani, 2 Kesin tani, 3 Ayirici tani (s.232).

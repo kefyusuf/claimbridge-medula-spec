@@ -40,6 +40,7 @@ fields:
     displayName: Ilac Barkod No
     type: string
     enumRef: null
+    codeSystem: GS1
     required: true
     length: 14
     description: Barcode of the added drug registered in GSS (s.224)

@@ -78,6 +78,7 @@ fields:
     displayName: SUT Kodu
     type: string
     enumRef: null
+    codeSystem: SUT
     required: true
     length: 7
     description: SUT-defined operation code (s.227)
@@ -249,6 +250,7 @@ fields:
     displayName: Tahlil Tipi
     type: enum
     enumRef: tahlil-tipi
+    codeSystem: null
     required: true
     length: 6
     description: Lab-type code - codes 0, HEM102-121, IDR102-128, KGAZ01-17, OGTT01-08 in the tahlil-tipi registry enum
@@ -306,6 +308,7 @@ fields:
     displayName: Kesi Bilgisi
     type: enum
     enumRef: ayni-farkli-kesi
+    codeSystem: null
     required: false
     length: 1
     description: Incision/session relation; codes 1-5 match the ayni-farkli-kesi enum (s.231)

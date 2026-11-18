@@ -52,6 +52,7 @@ fields:
     displayName: Takip Tipi
     type: enum
     enumRef: takip-tipi
+    codeSystem: null
     required: true
     length: 1
     description: Tracking record type (s.157, Tablo 4.1.1.a; mirrored in TakipDVO context s.166).
@@ -71,6 +72,7 @@ fields:
     displayName: Takip Durumu
     type: enum
     enumRef: takip-durumu
+    codeSystem: null
     required: true
     length: 1
     description: Payment-inquiry state of the tracking record - 0/1 only (s.166).
@@ -127,6 +129,7 @@ fields:
     displayName: EKDS Yontem Gerekce
     type: enum
     enumRef: ekds-yontem-gerekce
+    codeSystem: null
     required: false
     length: null
     description: EKDS verification method justification codes; Integer[] in the guide, modeled as an array of ekds-yontem-gerekce codes (s.167, changelog s.13).

@@ -67,6 +67,7 @@ fields:
     displayName: Ilacin Barkodu
     type: string
     enumRef: null
+    codeSystem: GS1
     required: false
     length: 13
     description: Drug barcode registered in GSS; mandatory except for majistral drugs (s.198)
@@ -107,6 +108,7 @@ fields:
     displayName: Ilacin Turu
     type: enum
     enumRef: ilac-turu
+    codeSystem: null
     required: true
     length: 1
     description: Drug type - 1 Barkodlu, 2 Majistral, 3 Radyofarmasotik Ajan (s.198)

@@ -206,6 +206,7 @@ fields:
     displayName: Ayni Kesi / Seans Bilgisi
     type: enum
     enumRef: ayni-farkli-kesi
+    codeSystem: null
     required: false
     length: 1
     description: Same-session/same-incision relation code (s.192-193); codes 1-5.

@@ -90,6 +90,7 @@ fields:
     displayName: Yeni (Degistirilen) SUT Islem Kodu
     type: string
     enumRef: null
+    codeSystem: SUT
     required: false
     length: 10
     description: New (corrected) SUT operation code (s.184)

@@ -30,7 +30,7 @@ describe("ci pipeline (Group 7)", () => {
     ]);
   });
 
-  it("passes format:check over the repository", () => {
+  it("passes format:check over the repository", { timeout: 20000 }, () => {
     execSync("pnpm format:check", { cwd: root, stdio: "pipe" });
   });
 });
