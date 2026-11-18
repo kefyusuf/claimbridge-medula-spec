@@ -680,7 +680,7 @@ Domain: `hizmet-kayit` · Direction: `input` · Status: `reviewed` · Source ref
 | Field | Type | Required | Enum ref | Sensitive | Description |
 | --- | --- | --- | --- | --- | --- |
 | `islemSiraNo` | string |  | — |  | Sequence number; null-on-input pattern (s.201) |
-| `majistralHamMaddeKodu` | integer |  | — |  | Raw-material code from the guide catalog (Tablo 4.2.1.f.1.1.1, s.201+); catalog enum is v0.3 scope (s.201) |
+| `majistralHamMaddeKodu` | enum |  | majistral-ham-madde |  | Raw-material code (guide declares Integer; semantically a coded value) - codes 1-620 in the majistral-ham-madde registry enum (s.201) |
 | `miktar` | integer |  | — |  | Raw-material quantity (s.201) |
 | `hamMaddeBirimi` | enum |  | ham-madde-birimi |  | Raw-material unit - 1 Gram / 2 Miligram (s.201) |
 

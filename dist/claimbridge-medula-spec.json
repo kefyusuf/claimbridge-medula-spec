@@ -1,6 +1,6 @@
 {
   "specVersion": "0.3.0",
-  "generatedAt": "2026-11-18T19:39:50.486Z",
+  "generatedAt": "2026-11-18T19:42:25.598Z",
   "sources": [
     {
       "id": "medula-hastane-guide-2026-06-17",
@@ -9701,11 +9701,11 @@
         {
           "name": "majistralHamMaddeKodu",
           "displayName": "Majistral Ham Madde Kodu",
-          "type": "integer",
-          "enumRef": null,
+          "type": "enum",
+          "enumRef": "majistral-ham-madde",
           "required": true,
           "length": null,
-          "description": "Raw-material code from the guide catalog (Tablo 4.2.1.f.1.1.1, s.201+); catalog enum is v0.3 scope (s.201)",
+          "description": "Raw-material code (guide declares Integer; semantically a coded value) - codes 1-620 in the majistral-ham-madde registry enum (s.201)",
           "sensitive": false,
           "syntheticOnlyRecommended": false,
           "sourceRefs": [
@@ -13770,6 +13770,3125 @@
           "section": "ProvizyonGirisDVO istisnaiHal codes 5-9",
           "confidence": "extracted",
           "notes": "Codes 5-9 continue on s.158 before the devredilenKurum letter codes (I/M/B/V). Column-flow inference noted; a visual pass of pages 157-158 would remove any residual doubt."
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
+      "id": "majistral-ham-madde",
+      "displayName": "Majistral Ham Madde",
+      "values": [
+        {
+          "code": "1",
+          "label": "Acetanilide",
+          "description": "Raw material"
+        },
+        {
+          "code": "2",
+          "label": "Acetarsol",
+          "description": "Raw material"
+        },
+        {
+          "code": "3",
+          "label": "Acetate d'Alumine Sol.",
+          "description": "Raw material"
+        },
+        {
+          "code": "4",
+          "label": "Acetate d'Ammoniaque Liquide",
+          "description": "Raw material"
+        },
+        {
+          "code": "5",
+          "label": "Acetate de Plombe crist.",
+          "description": "Raw material"
+        },
+        {
+          "code": "6",
+          "label": "Acetate de Plombe Liquide",
+          "description": "Raw material"
+        },
+        {
+          "code": "7",
+          "label": "Acetate de Zinc",
+          "description": "Raw material"
+        },
+        {
+          "code": "8",
+          "label": "Acide Acetique-glacial",
+          "description": "Raw material"
+        },
+        {
+          "code": "9",
+          "label": "Acide Acetylsalicylique",
+          "description": "Raw material"
+        },
+        {
+          "code": "10",
+          "label": "Acide Ascorbique",
+          "description": "Raw material"
+        },
+        {
+          "code": "11",
+          "label": "Acide Benzoique",
+          "description": "Raw material"
+        },
+        {
+          "code": "12",
+          "label": "Acide Borique",
+          "description": "Raw material"
+        },
+        {
+          "code": "13",
+          "label": "Acide Chlorhydrique",
+          "description": "Raw material"
+        },
+        {
+          "code": "14",
+          "label": "Acide Chlorhydrique dilue",
+          "description": "Raw material"
+        },
+        {
+          "code": "15",
+          "label": "Acide Citrique",
+          "description": "Raw material"
+        },
+        {
+          "code": "16",
+          "label": "Acide Diethylbarbiturique",
+          "description": "Raw material"
+        },
+        {
+          "code": "17",
+          "label": "Acide Folique",
+          "description": "Raw material"
+        },
+        {
+          "code": "18",
+          "label": "Acide Lactique",
+          "description": "Raw material"
+        },
+        {
+          "code": "19",
+          "label": "Acide Oxalique",
+          "description": "Raw material"
+        },
+        {
+          "code": "20",
+          "label": "Acide Phenique Crist.",
+          "description": "Raw material"
+        },
+        {
+          "code": "21",
+          "label": "Acide Phenique Liquide",
+          "description": "Raw material"
+        },
+        {
+          "code": "22",
+          "label": "Acide Phosphorique",
+          "description": "Raw material"
+        },
+        {
+          "code": "23",
+          "label": "Acide Pyrogallique",
+          "description": "Raw material"
+        },
+        {
+          "code": "24",
+          "label": "Acide Salicylique",
+          "description": "Raw material"
+        },
+        {
+          "code": "25",
+          "label": "Acide Tannique",
+          "description": "Raw material"
+        },
+        {
+          "code": "26",
+          "label": "Acide Tartarique",
+          "description": "Raw material"
+        },
+        {
+          "code": "27",
+          "label": "Acide Trichlor Acetique",
+          "description": "Raw material"
+        },
+        {
+          "code": "28",
+          "label": "Acide Undecylenique",
+          "description": "Raw material"
+        },
+        {
+          "code": "29",
+          "label": "Acrinol",
+          "description": "Raw material"
+        },
+        {
+          "code": "30",
+          "label": "Adrenaline",
+          "description": "Raw material"
+        },
+        {
+          "code": "31",
+          "label": "Adrenaline Sol. (%0.1)",
+          "description": "Raw material"
+        },
+        {
+          "code": "32",
+          "label": "Agar Agar",
+          "description": "Raw material"
+        },
+        {
+          "code": "33",
+          "label": "Aktif Kömür",
+          "description": "Raw material"
+        },
+        {
+          "code": "34",
+          "label": "Alcool (% 96'lık)",
+          "description": "Raw material"
+        },
+        {
+          "code": "35",
+          "label": "Alcoolat d'Anis",
+          "description": "Raw material"
+        },
+        {
+          "code": "36",
+          "label": "Alcoolat de Canelle",
+          "description": "Raw material"
+        },
+        {
+          "code": "37",
+          "label": "Alcoolat de Citron",
+          "description": "Raw material"
+        },
+        {
+          "code": "38",
+          "label": "Alcoolat de Cola",
+          "description": "Raw material"
+        },
+        {
+          "code": "39",
+          "label": "Alcoolat de Garus",
+          "description": "Raw material"
+        },
+        {
+          "code": "40",
+          "label": "Alcoolat de Lavande",
+          "description": "Raw material"
+        },
+        {
+          "code": "41",
+          "label": "Alcoolat de Melisse",
+          "description": "Raw material"
+        },
+        {
+          "code": "42",
+          "label": "Alcoolat de Melisse Comp.",
+          "description": "Raw material"
+        },
+        {
+          "code": "43",
+          "label": "Alcoolat de Menthe",
+          "description": "Raw material"
+        },
+        {
+          "code": "44",
+          "label": "Aluminium Chloride",
+          "description": "Raw material"
+        },
+        {
+          "code": "45",
+          "label": "Aluminyum Hidroksit Koll.",
+          "description": "Raw material"
+        },
+        {
+          "code": "46",
+          "label": "Aluminyum Klorür",
+          "description": "Raw material"
+        },
+        {
+          "code": "47",
+          "label": "Aluminyum Subasetat Çöz. %8.5",
+          "description": "Raw material"
+        },
+        {
+          "code": "48",
+          "label": "Amidon",
+          "description": "Raw material"
+        },
+        {
+          "code": "49",
+          "label": "Aminophylline",
+          "description": "Raw material"
+        },
+        {
+          "code": "50",
+          "label": "Aminopyrin",
+          "description": "Raw material"
+        },
+        {
+          "code": "51",
+          "label": "Amonyak Çözeltisi",
+          "description": "Raw material"
+        },
+        {
+          "code": "52",
+          "label": "Amonyum Klorür",
+          "description": "Raw material"
+        },
+        {
+          "code": "53",
+          "label": "Anesthesine",
+          "description": "Raw material"
+        },
+        {
+          "code": "54",
+          "label": "Aneurine",
+          "description": "Raw material"
+        },
+        {
+          "code": "55",
+          "label": "Anthralin",
+          "description": "Raw material"
+        },
+        {
+          "code": "56",
+          "label": "Antifebrin",
+          "description": "Raw material"
+        },
+        {
+          "code": "57",
+          "label": "Antipyrine",
+          "description": "Raw material"
+        },
+        {
+          "code": "58",
+          "label": "Arap Zamkı",
+          "description": "Raw material"
+        },
+        {
+          "code": "59",
+          "label": "Ardıç Katranı",
+          "description": "Raw material"
+        },
+        {
+          "code": "60",
+          "label": "Argent Colloidal",
+          "description": "Raw material"
+        },
+        {
+          "code": "61",
+          "label": "Argent Nitrate Crayon",
+          "description": "Raw material"
+        },
+        {
+          "code": "62",
+          "label": "Argent Nitrate Crist.",
+          "description": "Raw material"
+        },
+        {
+          "code": "63",
+          "label": "Argent Vitellinate",
+          "description": "Raw material"
+        },
+        {
+          "code": "64",
+          "label": "Argyrol",
+          "description": "Raw material"
+        },
+        {
+          "code": "65",
+          "label": "Arrhenal",
+          "description": "Raw material"
+        },
+        {
+          "code": "66",
+          "label": "Asetik Asit (Buzlu)",
+          "description": "Raw material"
+        },
+        {
+          "code": "67",
+          "label": "Aseton",
+          "description": "Raw material"
+        },
+        {
+          "code": "68",
+          "label": "Aspirin",
+          "description": "Raw material"
+        },
+        {
+          "code": "69",
+          "label": "Atropin Sülfat (Nötr)",
+          "description": "Raw material"
+        },
+        {
+          "code": "70",
+          "label": "Axonge",
+          "description": "Raw material"
+        },
+        {
+          "code": "71",
+          "label": "Axonge Benzoinee",
+          "description": "Raw material"
+        },
+        {
+          "code": "72",
+          "label": "Badem Yağı (Tatlı)",
+          "description": "Raw material"
+        },
+        {
+          "code": "73",
+          "label": "Bakır Sülfat",
+          "description": "Raw material"
+        },
+        {
+          "code": "74",
+          "label": "Balık Nefsi",
+          "description": "Raw material"
+        },
+        {
+          "code": "75",
+          "label": "Basit Şurup",
+          "description": "Raw material"
+        },
+        {
+          "code": "76",
+          "label": "Baume de Perou",
+          "description": "Raw material"
+        },
+        {
+          "code": "77",
+          "label": "Baume de Tolu",
+          "description": "Raw material"
+        },
+        {
+          "code": "78",
+          "label": "Baume de Tranquille",
+          "description": "Raw material"
+        },
+        {
+          "code": "79",
+          "label": "Belladon Tentürü",
+          "description": "Raw material"
+        },
+        {
+          "code": "80",
+          "label": "Benjoin Tentürü",
+          "description": "Raw material"
+        },
+        {
+          "code": "81",
+          "label": "Benzil Benzoat",
+          "description": "Raw material"
+        },
+        {
+          "code": "82",
+          "label": "Benzoate de Lithium",
+          "description": "Raw material"
+        },
+        {
+          "code": "83",
+          "label": "Benzoate de Soude",
+          "description": "Raw material"
+        },
+        {
+          "code": "84",
+          "label": "Benzocaine",
+          "description": "Raw material"
+        },
+        {
+          "code": "85",
+          "label": "Benzoik Asit",
+          "description": "Raw material"
+        },
+        {
+          "code": "86",
+          "label": "Benzonaphtole",
+          "description": "Raw material"
+        },
+        {
+          "code": "87",
+          "label": "Beta-Naphtole",
+          "description": "Raw material"
+        },
+        {
+          "code": "88",
+          "label": "Beurre de Cacao",
+          "description": "Raw material"
+        },
+        {
+          "code": "89",
+          "label": "Beyaz Balmumu",
+          "description": "Raw material"
+        },
+        {
+          "code": "90",
+          "label": "Biborate de Soude",
+          "description": "Raw material"
+        },
+        {
+          "code": "91",
+          "label": "Bicarbonate de Potassium",
+          "description": "Raw material"
+        },
+        {
+          "code": "92",
+          "label": "Bicarbonate de Soude",
+          "description": "Raw material"
+        },
+        {
+          "code": "93",
+          "label": "Bichlorure de Mercure",
+          "description": "Raw material"
+        },
+        {
+          "code": "94",
+          "label": "Bizmut Subgallat",
+          "description": "Raw material"
+        },
+        {
+          "code": "95",
+          "label": "Bizmut Subkarbonat",
+          "description": "Raw material"
+        },
+        {
+          "code": "96",
+          "label": "Bizmut Subnitrat",
+          "description": "Raw material"
+        },
+        {
+          "code": "97",
+          "label": "Blanc de Baleine",
+          "description": "Raw material"
+        },
+        {
+          "code": "98",
+          "label": "Bleu de Methylene",
+          "description": "Raw material"
+        },
+        {
+          "code": "99",
+          "label": "Boraks",
+          "description": "Raw material"
+        },
+        {
+          "code": "100",
+          "label": "Borik Asit",
+          "description": "Raw material"
+        },
+        {
+          "code": "101",
+          "label": "Brillant Green",
+          "description": "Raw material"
+        },
+        {
+          "code": "102",
+          "label": "Bromhydrate Homatropine",
+          "description": "Raw material"
+        },
+        {
+          "code": "103",
+          "label": "Bromhydrate Scopolamine",
+          "description": "Raw material"
+        },
+        {
+          "code": "104",
+          "label": "Bromoforme",
+          "description": "Raw material"
+        },
+        {
+          "code": "105",
+          "label": "Bromural",
+          "description": "Raw material"
+        },
+        {
+          "code": "106",
+          "label": "Bromure d'Ammonium",
+          "description": "Raw material"
+        },
+        {
+          "code": "107",
+          "label": "Bromure de Calcium",
+          "description": "Raw material"
+        },
+        {
+          "code": "108",
+          "label": "Bromure de Camphre",
+          "description": "Raw material"
+        },
+        {
+          "code": "109",
+          "label": "Bromure de Potassium",
+          "description": "Raw material"
+        },
+        {
+          "code": "110",
+          "label": "Bromure de Sodium Sec.",
+          "description": "Raw material"
+        },
+        {
+          "code": "111",
+          "label": "Bromure de Strontium",
+          "description": "Raw material"
+        },
+        {
+          "code": "112",
+          "label": "Cacodylate de Soude",
+          "description": "Raw material"
+        },
+        {
+          "code": "113",
+          "label": "Cafeine",
+          "description": "Raw material"
+        },
+        {
+          "code": "114",
+          "label": "Calomel",
+          "description": "Raw material"
+        },
+        {
+          "code": "115",
+          "label": "Camomille Ordinare",
+          "description": "Raw material"
+        },
+        {
+          "code": "116",
+          "label": "Camomille Romaine",
+          "description": "Raw material"
+        },
+        {
+          "code": "117",
+          "label": "Camperilan",
+          "description": "Raw material"
+        },
+        {
+          "code": "118",
+          "label": "Camphre Cris.",
+          "description": "Raw material"
+        },
+        {
+          "code": "119",
+          "label": "Carbon Active Offic.",
+          "description": "Raw material"
+        },
+        {
+          "code": "120",
+          "label": "Carbonate d'Ammonium",
+          "description": "Raw material"
+        },
+        {
+          "code": "121",
+          "label": "Carbonate de Calcium prec.",
+          "description": "Raw material"
+        },
+        {
+          "code": "122",
+          "label": "Carbonate de Fer",
+          "description": "Raw material"
+        },
+        {
+          "code": "123",
+          "label": "Carbonate de Lithium",
+          "description": "Raw material"
+        },
+        {
+          "code": "124",
+          "label": "Carbonate de Magnesium",
+          "description": "Raw material"
+        },
+        {
+          "code": "125",
+          "label": "Carbonate de Potassium",
+          "description": "Raw material"
+        },
+        {
+          "code": "126",
+          "label": "Carbonate de Sodium",
+          "description": "Raw material"
+        },
+        {
+          "code": "127",
+          "label": "Castor Oil",
+          "description": "Raw material"
+        },
+        {
+          "code": "128",
+          "label": "Cetaceum",
+          "description": "Raw material"
+        },
+        {
+          "code": "129",
+          "label": "Castellani Çözeltisi",
+          "description": "Raw material"
+        },
+        {
+          "code": "130",
+          "label": "Cetiol HE",
+          "description": "Raw material"
+        },
+        {
+          "code": "131",
+          "label": "Cetiol V",
+          "description": "Raw material"
+        },
+        {
+          "code": "132",
+          "label": "Charbon Animal",
+          "description": "Raw material"
+        },
+        {
+          "code": "133",
+          "label": "Charbon Vegetal Offic.",
+          "description": "Raw material"
+        },
+        {
+          "code": "134",
+          "label": "Chloral Hydrate",
+          "description": "Raw material"
+        },
+        {
+          "code": "135",
+          "label": "Chlorate de Potasse",
+          "description": "Raw material"
+        },
+        {
+          "code": "136",
+          "label": "Chlorhydrate de Morphine",
+          "description": "Raw material"
+        },
+        {
+          "code": "137",
+          "label": "Chlorhydrate de Papaverine",
+          "description": "Raw material"
+        },
+        {
+          "code": "138",
+          "label": "Chlorhydrate de Pilocarpine",
+          "description": "Raw material"
+        },
+        {
+          "code": "139",
+          "label": "Chlorhydrate d'Ephedrine",
+          "description": "Raw material"
+        },
+        {
+          "code": "140",
+          "label": "Chloroforme",
+          "description": "Raw material"
+        },
+        {
+          "code": "141",
+          "label": "Chlorure d'Ammonium",
+          "description": "Raw material"
+        },
+        {
+          "code": "142",
+          "label": "Chlorure de Calcium Crist.",
+          "description": "Raw material"
+        },
+        {
+          "code": "143",
+          "label": "Chlorure de Calcium Sec.",
+          "description": "Raw material"
+        },
+        {
+          "code": "144",
+          "label": "Chlorure de Potassium",
+          "description": "Raw material"
+        },
+        {
+          "code": "145",
+          "label": "Chlorure de Sodium",
+          "description": "Raw material"
+        },
+        {
+          "code": "146",
+          "label": "Cholesterine",
+          "description": "Raw material"
+        },
+        {
+          "code": "147",
+          "label": "Cignolin",
+          "description": "Raw material"
+        },
+        {
+          "code": "148",
+          "label": "Cire Blanche",
+          "description": "Raw material"
+        },
+        {
+          "code": "149",
+          "label": "Citrate de Cafeine",
+          "description": "Raw material"
+        },
+        {
+          "code": "150",
+          "label": "Citrate de Fer Ammoniacal",
+          "description": "Raw material"
+        },
+        {
+          "code": "151",
+          "label": "Citrate de Magnesium",
+          "description": "Raw material"
+        },
+        {
+          "code": "152",
+          "label": "Citrate de Potasse",
+          "description": "Raw material"
+        },
+        {
+          "code": "153",
+          "label": "Citrate de Soude",
+          "description": "Raw material"
+        },
+        {
+          "code": "154",
+          "label": "Coal Tar",
+          "description": "Raw material"
+        },
+        {
+          "code": "155",
+          "label": "Codeine",
+          "description": "Raw material"
+        },
+        {
+          "code": "156",
+          "label": "Colchicine",
+          "description": "Raw material"
+        },
+        {
+          "code": "157",
+          "label": "Cold Creme",
+          "description": "Raw material"
+        },
+        {
+          "code": "158",
+          "label": "Collargol",
+          "description": "Raw material"
+        },
+        {
+          "code": "159",
+          "label": "Collodion",
+          "description": "Raw material"
+        },
+        {
+          "code": "160",
+          "label": "Collodion Elastique",
+          "description": "Raw material"
+        },
+        {
+          "code": "161",
+          "label": "Crai Preparee prec.",
+          "description": "Raw material"
+        },
+        {
+          "code": "162",
+          "label": "Crem d'Tart",
+          "description": "Raw material"
+        },
+        {
+          "code": "163",
+          "label": "Creosote",
+          "description": "Raw material"
+        },
+        {
+          "code": "164",
+          "label": "Cryogenine",
+          "description": "Raw material"
+        },
+        {
+          "code": "621",
+          "label": "Çeşme Suyu",
+          "description": "Raw material"
+        },
+        {
+          "code": "165",
+          "label": "Çinko Asetat",
+          "description": "Raw material"
+        },
+        {
+          "code": "166",
+          "label": "Çinko Oksit",
+          "description": "Raw material"
+        },
+        {
+          "code": "167",
+          "label": "Çinko Sülfat",
+          "description": "Raw material"
+        },
+        {
+          "code": "168",
+          "label": "D-Panthenol pure",
+          "description": "Raw material"
+        },
+        {
+          "code": "169",
+          "label": "Dermatol",
+          "description": "Raw material"
+        },
+        {
+          "code": "170",
+          "label": "Dexametazon",
+          "description": "Raw material"
+        },
+        {
+          "code": "171",
+          "label": "Dextrose",
+          "description": "Raw material"
+        },
+        {
+          "code": "172",
+          "label": "Di-Etil Eter",
+          "description": "Raw material"
+        },
+        {
+          "code": "173",
+          "label": "Diastase",
+          "description": "Raw material"
+        },
+        {
+          "code": "174",
+          "label": "Dionin",
+          "description": "Raw material"
+        },
+        {
+          "code": "175",
+          "label": "Distile Su",
+          "description": "Raw material"
+        },
+        {
+          "code": "176",
+          "label": "Dithranol",
+          "description": "Raw material"
+        },
+        {
+          "code": "177",
+          "label": "Diüretin",
+          "description": "Raw material"
+        },
+        {
+          "code": "178",
+          "label": "Eau Oxygene",
+          "description": "Raw material"
+        },
+        {
+          "code": "179",
+          "label": "Eau d'Alibour",
+          "description": "Raw material"
+        },
+        {
+          "code": "180",
+          "label": "Eau d'Alibour Forte",
+          "description": "Raw material"
+        },
+        {
+          "code": "181",
+          "label": "Eau de Canelle",
+          "description": "Raw material"
+        },
+        {
+          "code": "182",
+          "label": "Eau de Chaux",
+          "description": "Raw material"
+        },
+        {
+          "code": "183",
+          "label": "Eau de Chloroforme",
+          "description": "Raw material"
+        },
+        {
+          "code": "184",
+          "label": "Eau de Cologne",
+          "description": "Raw material"
+        },
+        {
+          "code": "185",
+          "label": "Eau de Distilee",
+          "description": "Raw material"
+        },
+        {
+          "code": "186",
+          "label": "Eau de Fleur d'Oranger",
+          "description": "Raw material"
+        },
+        {
+          "code": "187",
+          "label": "Eau de Laurier Cerise",
+          "description": "Raw material"
+        },
+        {
+          "code": "188",
+          "label": "Eau de Melisse",
+          "description": "Raw material"
+        },
+        {
+          "code": "189",
+          "label": "Eau de Menthe",
+          "description": "Raw material"
+        },
+        {
+          "code": "190",
+          "label": "Eau de Rose",
+          "description": "Raw material"
+        },
+        {
+          "code": "191",
+          "label": "Eau de Vie Allemande",
+          "description": "Raw material"
+        },
+        {
+          "code": "192",
+          "label": "Efedrin HCl",
+          "description": "Raw material"
+        },
+        {
+          "code": "193",
+          "label": "Elixir Garus",
+          "description": "Raw material"
+        },
+        {
+          "code": "194",
+          "label": "Elixir Pregorique",
+          "description": "Raw material"
+        },
+        {
+          "code": "195",
+          "label": "Eozin",
+          "description": "Raw material"
+        },
+        {
+          "code": "196",
+          "label": "Ephetonine",
+          "description": "Raw material"
+        },
+        {
+          "code": "197",
+          "label": "Ergotine",
+          "description": "Raw material"
+        },
+        {
+          "code": "198",
+          "label": "Especes Pektorales",
+          "description": "Raw material"
+        },
+        {
+          "code": "199",
+          "label": "Essence d'Anis",
+          "description": "Raw material"
+        },
+        {
+          "code": "200",
+          "label": "Essence de Bergamote",
+          "description": "Raw material"
+        },
+        {
+          "code": "201",
+          "label": "Essence de Canelle",
+          "description": "Raw material"
+        },
+        {
+          "code": "202",
+          "label": "Essence de Citron",
+          "description": "Raw material"
+        },
+        {
+          "code": "203",
+          "label": "Essence de Girofle",
+          "description": "Raw material"
+        },
+        {
+          "code": "204",
+          "label": "Essence de Lavande",
+          "description": "Raw material"
+        },
+        {
+          "code": "205",
+          "label": "Essence de Melisse",
+          "description": "Raw material"
+        },
+        {
+          "code": "206",
+          "label": "Essence de Menthe",
+          "description": "Raw material"
+        },
+        {
+          "code": "207",
+          "label": "Essence de Neroli",
+          "description": "Raw material"
+        },
+        {
+          "code": "208",
+          "label": "Essence de Niauli",
+          "description": "Raw material"
+        },
+        {
+          "code": "209",
+          "label": "Essence de Rose",
+          "description": "Raw material"
+        },
+        {
+          "code": "210",
+          "label": "Essence de Terebenthine",
+          "description": "Raw material"
+        },
+        {
+          "code": "211",
+          "label": "Eter",
+          "description": "Raw material"
+        },
+        {
+          "code": "212",
+          "label": "Ethacridin Lactate",
+          "description": "Raw material"
+        },
+        {
+          "code": "213",
+          "label": "Ether Sulphurique",
+          "description": "Raw material"
+        },
+        {
+          "code": "214",
+          "label": "Ethylmorphine HCl",
+          "description": "Raw material"
+        },
+        {
+          "code": "215",
+          "label": "Etil Alkol %96",
+          "description": "Raw material"
+        },
+        {
+          "code": "216",
+          "label": "Eucalyptol",
+          "description": "Raw material"
+        },
+        {
+          "code": "217",
+          "label": "Extrait de Belladone mou.",
+          "description": "Raw material"
+        },
+        {
+          "code": "218",
+          "label": "Extrait de Belladone sec.",
+          "description": "Raw material"
+        },
+        {
+          "code": "219",
+          "label": "Extrait de Crataegus",
+          "description": "Raw material"
+        },
+        {
+          "code": "220",
+          "label": "Extrait de fluide d'Ecorce d'Or",
+          "description": "Raw material"
+        },
+        {
+          "code": "221",
+          "label": "Extrait de Gentianae",
+          "description": "Raw material"
+        },
+        {
+          "code": "222",
+          "label": "Extrait de Jusquiame",
+          "description": "Raw material"
+        },
+        {
+          "code": "223",
+          "label": "Extrait de Opium",
+          "description": "Raw material"
+        },
+        {
+          "code": "224",
+          "label": "Extrait de Ratanhia",
+          "description": "Raw material"
+        },
+        {
+          "code": "225",
+          "label": "Extrait de Valeriane mou.",
+          "description": "Raw material"
+        },
+        {
+          "code": "226",
+          "label": "Extrait de Valeriane sec.",
+          "description": "Raw material"
+        },
+        {
+          "code": "227",
+          "label": "Extrait d'Ethere de Fougere Mal",
+          "description": "Raw material"
+        },
+        {
+          "code": "228",
+          "label": "Extrait Fluide Baume de Tolu",
+          "description": "Raw material"
+        },
+        {
+          "code": "229",
+          "label": "Extrait Fluide de Coca",
+          "description": "Raw material"
+        },
+        {
+          "code": "230",
+          "label": "Extrait Fluide de Cola",
+          "description": "Raw material"
+        },
+        {
+          "code": "231",
+          "label": "Extrait Fluide de Crataegus",
+          "description": "Raw material"
+        },
+        {
+          "code": "232",
+          "label": "Extrait Fluide de Passiflore",
+          "description": "Raw material"
+        },
+        {
+          "code": "233",
+          "label": "Extrait Fluide de Quinquina",
+          "description": "Raw material"
+        },
+        {
+          "code": "234",
+          "label": "Extrait Fluide de Ratanhia",
+          "description": "Raw material"
+        },
+        {
+          "code": "235",
+          "label": "Extrait Fluide de Valeriane",
+          "description": "Raw material"
+        },
+        {
+          "code": "236",
+          "label": "Extrait Fluide d'Hamamelis",
+          "description": "Raw material"
+        },
+        {
+          "code": "237",
+          "label": "Extrait Fluide d'Hydrastis",
+          "description": "Raw material"
+        },
+        {
+          "code": "238",
+          "label": "Extrait Fluide d'İpeca",
+          "description": "Raw material"
+        },
+        {
+          "code": "239",
+          "label": "Fenazon",
+          "description": "Raw material"
+        },
+        {
+          "code": "240",
+          "label": "Fenol (Sıvılaştırılmış)",
+          "description": "Raw material"
+        },
+        {
+          "code": "241",
+          "label": "Fenol Kristal",
+          "description": "Raw material"
+        },
+        {
+          "code": "242",
+          "label": "Feuilles Uvae Ursi",
+          "description": "Raw material"
+        },
+        {
+          "code": "243",
+          "label": "Fleurs Guimauve",
+          "description": "Raw material"
+        },
+        {
+          "code": "244",
+          "label": "Fleurs Tilleul",
+          "description": "Raw material"
+        },
+        {
+          "code": "245",
+          "label": "Flexible Colldium",
+          "description": "Raw material"
+        },
+        {
+          "code": "246",
+          "label": "Fluorure de Sodium",
+          "description": "Raw material"
+        },
+        {
+          "code": "247",
+          "label": "Formaldehit Çözeltisi",
+          "description": "Raw material"
+        },
+        {
+          "code": "248",
+          "label": "Fosforik Asit",
+          "description": "Raw material"
+        },
+        {
+          "code": "249",
+          "label": "Fowler Likörü",
+          "description": "Raw material"
+        },
+        {
+          "code": "250",
+          "label": "Fuksin - Bazik",
+          "description": "Raw material"
+        },
+        {
+          "code": "251",
+          "label": "Gliserin",
+          "description": "Raw material"
+        },
+        {
+          "code": "252",
+          "label": "Gluconate de Calcium",
+          "description": "Raw material"
+        },
+        {
+          "code": "253",
+          "label": "Glukoz",
+          "description": "Raw material"
+        },
+        {
+          "code": "254",
+          "label": "Glycero-Phosphate de Chaux Liq",
+          "description": "Raw material"
+        },
+        {
+          "code": "255",
+          "label": "Glycero-Phosphate de Chaux Pou",
+          "description": "Raw material"
+        },
+        {
+          "code": "256",
+          "label": "Glycero-Phosphate de Soude Liq",
+          "description": "Raw material"
+        },
+        {
+          "code": "257",
+          "label": "Glycero-Phosphate de Soude Pou",
+          "description": "Raw material"
+        },
+        {
+          "code": "258",
+          "label": "Glycerolle d'Amidon",
+          "description": "Raw material"
+        },
+        {
+          "code": "259",
+          "label": "Gomenol",
+          "description": "Raw material"
+        },
+        {
+          "code": "260",
+          "label": "Gomme Arabique",
+          "description": "Raw material"
+        },
+        {
+          "code": "261",
+          "label": "Goudron de Houille",
+          "description": "Raw material"
+        },
+        {
+          "code": "262",
+          "label": "Goudron Vegetal",
+          "description": "Raw material"
+        },
+        {
+          "code": "263",
+          "label": "Guaiacol Liquide",
+          "description": "Raw material"
+        },
+        {
+          "code": "264",
+          "label": "Guarana Pudra",
+          "description": "Raw material"
+        },
+        {
+          "code": "265",
+          "label": "Gül Suyu",
+          "description": "Raw material"
+        },
+        {
+          "code": "266",
+          "label": "Gümüş Nitrat Kalem",
+          "description": "Raw material"
+        },
+        {
+          "code": "267",
+          "label": "Gümüş Nitrat Kristal",
+          "description": "Raw material"
+        },
+        {
+          "code": "268",
+          "label": "Helmitol",
+          "description": "Raw material"
+        },
+        {
+          "code": "269",
+          "label": "Hemoglobine Liq.",
+          "description": "Raw material"
+        },
+        {
+          "code": "270",
+          "label": "Hexamethylene Tetraaminae",
+          "description": "Raw material"
+        },
+        {
+          "code": "271",
+          "label": "Hidrokinon",
+          "description": "Raw material"
+        },
+        {
+          "code": "272",
+          "label": "Hidroklorik Asit",
+          "description": "Raw material"
+        },
+        {
+          "code": "273",
+          "label": "Hint Yağı",
+          "description": "Raw material"
+        },
+        {
+          "code": "274",
+          "label": "Huile d'Amande Douce",
+          "description": "Raw material"
+        },
+        {
+          "code": "275",
+          "label": "Huile de Belladone",
+          "description": "Raw material"
+        },
+        {
+          "code": "276",
+          "label": "Huile de Cade",
+          "description": "Raw material"
+        },
+        {
+          "code": "277",
+          "label": "Huile de Camomille",
+          "description": "Raw material"
+        },
+        {
+          "code": "278",
+          "label": "Huile de Camphre",
+          "description": "Raw material"
+        },
+        {
+          "code": "279",
+          "label": "Huile de Foie de Morue",
+          "description": "Raw material"
+        },
+        {
+          "code": "280",
+          "label": "Huile de Ricine",
+          "description": "Raw material"
+        },
+        {
+          "code": "281",
+          "label": "Huile de Sesami",
+          "description": "Raw material"
+        },
+        {
+          "code": "282",
+          "label": "Huile de Vaseline",
+          "description": "Raw material"
+        },
+        {
+          "code": "283",
+          "label": "Huile d'Olive (nötr)",
+          "description": "Raw material"
+        },
+        {
+          "code": "284",
+          "label": "Hydroxide d'Alumine colloidal",
+          "description": "Raw material"
+        },
+        {
+          "code": "285",
+          "label": "Hypophosphite de Sodium",
+          "description": "Raw material"
+        },
+        {
+          "code": "286",
+          "label": "Hyposulfite de Soude",
+          "description": "Raw material"
+        },
+        {
+          "code": "287",
+          "label": "Ichthyol",
+          "description": "Raw material"
+        },
+        {
+          "code": "288",
+          "label": "Ihlamur Çiçeği",
+          "description": "Raw material"
+        },
+        {
+          "code": "289",
+          "label": "Ihtiyol Pür",
+          "description": "Raw material"
+        },
+        {
+          "code": "290",
+          "label": "Infusion d'Althae Guimauve % 2",
+          "description": "Raw material"
+        },
+        {
+          "code": "291",
+          "label": "Infusion d'Colombo % 2",
+          "description": "Raw material"
+        },
+        {
+          "code": "292",
+          "label": "Infusion de Camomille % 2",
+          "description": "Raw material"
+        },
+        {
+          "code": "293",
+          "label": "Infusion de Polygale % 4",
+          "description": "Raw material"
+        },
+        {
+          "code": "294",
+          "label": "Infusion de Tilleul % 2",
+          "description": "Raw material"
+        },
+        {
+          "code": "295",
+          "label": "Infusion d'Eucalyptus",
+          "description": "Raw material"
+        },
+        {
+          "code": "296",
+          "label": "Iode",
+          "description": "Raw material"
+        },
+        {
+          "code": "297",
+          "label": "Iodoforme",
+          "description": "Raw material"
+        },
+        {
+          "code": "298",
+          "label": "Iodure de Potassium",
+          "description": "Raw material"
+        },
+        {
+          "code": "299",
+          "label": "Iodure de Sodium",
+          "description": "Raw material"
+        },
+        {
+          "code": "300",
+          "label": "Isopropyl Alcohol",
+          "description": "Raw material"
+        },
+        {
+          "code": "301",
+          "label": "Jansiyan Viyole",
+          "description": "Raw material"
+        },
+        {
+          "code": "302",
+          "label": "Jelatin",
+          "description": "Raw material"
+        },
+        {
+          "code": "303",
+          "label": "Kafein",
+          "description": "Raw material"
+        },
+        {
+          "code": "304",
+          "label": "Kafur Kristal",
+          "description": "Raw material"
+        },
+        {
+          "code": "305",
+          "label": "Kakao Yağı",
+          "description": "Raw material"
+        },
+        {
+          "code": "306",
+          "label": "Kalomel",
+          "description": "Raw material"
+        },
+        {
+          "code": "307",
+          "label": "Kalsiyum Glukonat",
+          "description": "Raw material"
+        },
+        {
+          "code": "308",
+          "label": "Kalsiyum Karbonat (Çökt.)",
+          "description": "Raw material"
+        },
+        {
+          "code": "309",
+          "label": "Kalsiyum Laktat",
+          "description": "Raw material"
+        },
+        {
+          "code": "310",
+          "label": "Kaolin",
+          "description": "Raw material"
+        },
+        {
+          "code": "311",
+          "label": "Karbon Tetra Klorür (CCL4)",
+          "description": "Raw material"
+        },
+        {
+          "code": "312",
+          "label": "Karlspad Tuzu (Yapay)",
+          "description": "Raw material"
+        },
+        {
+          "code": "313",
+          "label": "Kloral Hidrat",
+          "description": "Raw material"
+        },
+        {
+          "code": "314",
+          "label": "Kloroform",
+          "description": "Raw material"
+        },
+        {
+          "code": "315",
+          "label": "Kodein Fosfat",
+          "description": "Raw material"
+        },
+        {
+          "code": "316",
+          "label": "Kodein Pür",
+          "description": "Raw material"
+        },
+        {
+          "code": "317",
+          "label": "Kollodyon",
+          "description": "Raw material"
+        },
+        {
+          "code": "318",
+          "label": "Kollodyon Elastik",
+          "description": "Raw material"
+        },
+        {
+          "code": "319",
+          "label": "Kurşun Subasetat Çöz.",
+          "description": "Raw material"
+        },
+        {
+          "code": "320",
+          "label": "Kükürt (Çöktürülmüş)",
+          "description": "Raw material"
+        },
+        {
+          "code": "321",
+          "label": "L-Arginin Monohydrochloride",
+          "description": "Raw material"
+        },
+        {
+          "code": "322",
+          "label": "L-Cystine",
+          "description": "Raw material"
+        },
+        {
+          "code": "323",
+          "label": "Lactate de Chaux",
+          "description": "Raw material"
+        },
+        {
+          "code": "324",
+          "label": "Lactose",
+          "description": "Raw material"
+        },
+        {
+          "code": "325",
+          "label": "Laktik Asit",
+          "description": "Raw material"
+        },
+        {
+          "code": "326",
+          "label": "Lanoline -Anhidr",
+          "description": "Raw material"
+        },
+        {
+          "code": "327",
+          "label": "Laudanum Sydenham",
+          "description": "Raw material"
+        },
+        {
+          "code": "328",
+          "label": "Limonade Chlorhydrique",
+          "description": "Raw material"
+        },
+        {
+          "code": "329",
+          "label": "Limonade Lactique",
+          "description": "Raw material"
+        },
+        {
+          "code": "330",
+          "label": "Liqueur Ammoniacal Anisee",
+          "description": "Raw material"
+        },
+        {
+          "code": "331",
+          "label": "Liqueur de Fehling",
+          "description": "Raw material"
+        },
+        {
+          "code": "332",
+          "label": "Liqueur de Fowler",
+          "description": "Raw material"
+        },
+        {
+          "code": "333",
+          "label": "Liqueur d'Hoffmann",
+          "description": "Raw material"
+        },
+        {
+          "code": "334",
+          "label": "Liquor Kalii Arsenitis",
+          "description": "Raw material"
+        },
+        {
+          "code": "335",
+          "label": "Luminal",
+          "description": "Raw material"
+        },
+        {
+          "code": "336",
+          "label": "Luminal Sodique",
+          "description": "Raw material"
+        },
+        {
+          "code": "337",
+          "label": "Lupulin",
+          "description": "Raw material"
+        },
+        {
+          "code": "338",
+          "label": "Maden Kömürü Katranı",
+          "description": "Raw material"
+        },
+        {
+          "code": "339",
+          "label": "Magnesie Calcine -legers",
+          "description": "Raw material"
+        },
+        {
+          "code": "340",
+          "label": "Magnesie Hydrate",
+          "description": "Raw material"
+        },
+        {
+          "code": "341",
+          "label": "Magnesie Perhydrole % 25",
+          "description": "Raw material"
+        },
+        {
+          "code": "342",
+          "label": "Magnezyum Oksit -hafif",
+          "description": "Raw material"
+        },
+        {
+          "code": "343",
+          "label": "Magnezyum Sülfat",
+          "description": "Raw material"
+        },
+        {
+          "code": "344",
+          "label": "Malahit Yeşili",
+          "description": "Raw material"
+        },
+        {
+          "code": "345",
+          "label": "Malahite Green",
+          "description": "Raw material"
+        },
+        {
+          "code": "346",
+          "label": "Medinal",
+          "description": "Raw material"
+        },
+        {
+          "code": "347",
+          "label": "Melissa Suyu",
+          "description": "Raw material"
+        },
+        {
+          "code": "348",
+          "label": "Menthol",
+          "description": "Raw material"
+        },
+        {
+          "code": "349",
+          "label": "Merbromin",
+          "description": "Raw material"
+        },
+        {
+          "code": "350",
+          "label": "Mercurochrom",
+          "description": "Raw material"
+        },
+        {
+          "code": "351",
+          "label": "Metamizol Na",
+          "description": "Raw material"
+        },
+        {
+          "code": "352",
+          "label": "Metil Morfin",
+          "description": "Raw material"
+        },
+        {
+          "code": "353",
+          "label": "Metil Paraben",
+          "description": "Raw material"
+        },
+        {
+          "code": "354",
+          "label": "Metil Salisilat",
+          "description": "Raw material"
+        },
+        {
+          "code": "355",
+          "label": "Metilen Mavisi",
+          "description": "Raw material"
+        },
+        {
+          "code": "356",
+          "label": "Monobrome Isovaleryl Uree",
+          "description": "Raw material"
+        },
+        {
+          "code": "357",
+          "label": "Morfin HCl",
+          "description": "Raw material"
+        },
+        {
+          "code": "358",
+          "label": "Nane Suyu",
+          "description": "Raw material"
+        },
+        {
+          "code": "359",
+          "label": "Naphtol - beta",
+          "description": "Raw material"
+        },
+        {
+          "code": "360",
+          "label": "Nipagine-m",
+          "description": "Raw material"
+        },
+        {
+          "code": "361",
+          "label": "Nipasol",
+          "description": "Raw material"
+        },
+        {
+          "code": "362",
+          "label": "Nişasta",
+          "description": "Raw material"
+        },
+        {
+          "code": "363",
+          "label": "Nitrate d'Argent crist.",
+          "description": "Raw material"
+        },
+        {
+          "code": "364",
+          "label": "Nitrate de Pilocarpine",
+          "description": "Raw material"
+        },
+        {
+          "code": "365",
+          "label": "Nitrate de Potassium",
+          "description": "Raw material"
+        },
+        {
+          "code": "366",
+          "label": "Nitroglicerin",
+          "description": "Raw material"
+        },
+        {
+          "code": "367",
+          "label": "Novalgine",
+          "description": "Raw material"
+        },
+        {
+          "code": "368",
+          "label": "Novocaine",
+          "description": "Raw material"
+        },
+        {
+          "code": "369",
+          "label": "Oksijenli Su",
+          "description": "Raw material"
+        },
+        {
+          "code": "370",
+          "label": "Okzalik Asit",
+          "description": "Raw material"
+        },
+        {
+          "code": "371",
+          "label": "Oleum Cacao",
+          "description": "Raw material"
+        },
+        {
+          "code": "372",
+          "label": "Onguent Althea",
+          "description": "Raw material"
+        },
+        {
+          "code": "373",
+          "label": "Onguent Belladone",
+          "description": "Raw material"
+        },
+        {
+          "code": "374",
+          "label": "Onguent Mercuriel",
+          "description": "Raw material"
+        },
+        {
+          "code": "375",
+          "label": "Onguent Mercuriel Belladonne",
+          "description": "Raw material"
+        },
+        {
+          "code": "376",
+          "label": "Onguent Mercuriel double",
+          "description": "Raw material"
+        },
+        {
+          "code": "377",
+          "label": "Onguent Populeum",
+          "description": "Raw material"
+        },
+        {
+          "code": "378",
+          "label": "Oxycyanure de Mercure",
+          "description": "Raw material"
+        },
+        {
+          "code": "379",
+          "label": "Oxyde de Zinc",
+          "description": "Raw material"
+        },
+        {
+          "code": "380",
+          "label": "Oxyde Jaune de Mercure",
+          "description": "Raw material"
+        },
+        {
+          "code": "381",
+          "label": "Oxyde Rouge de Mercure",
+          "description": "Raw material"
+        },
+        {
+          "code": "382",
+          "label": "Paba",
+          "description": "Raw material"
+        },
+        {
+          "code": "383",
+          "label": "Pancreatine",
+          "description": "Raw material"
+        },
+        {
+          "code": "384",
+          "label": "Pantocaine",
+          "description": "Raw material"
+        },
+        {
+          "code": "385",
+          "label": "Papaverin HCl",
+          "description": "Raw material"
+        },
+        {
+          "code": "386",
+          "label": "para-Amino Benzoik Asit",
+          "description": "Raw material"
+        },
+        {
+          "code": "387",
+          "label": "Paraffine Liquide",
+          "description": "Raw material"
+        },
+        {
+          "code": "388",
+          "label": "Parafin (Katı)",
+          "description": "Raw material"
+        },
+        {
+          "code": "389",
+          "label": "Parasetamol",
+          "description": "Raw material"
+        },
+        {
+          "code": "390",
+          "label": "Pellidol",
+          "description": "Raw material"
+        },
+        {
+          "code": "391",
+          "label": "Pepsine en pallettes",
+          "description": "Raw material"
+        },
+        {
+          "code": "392",
+          "label": "Pepsine en poudre",
+          "description": "Raw material"
+        },
+        {
+          "code": "393",
+          "label": "Perhydrol",
+          "description": "Raw material"
+        },
+        {
+          "code": "394",
+          "label": "Permanganate de Potassium",
+          "description": "Raw material"
+        },
+        {
+          "code": "395",
+          "label": "Peru Balsamı",
+          "description": "Raw material"
+        },
+        {
+          "code": "396",
+          "label": "Phenobarbital",
+          "description": "Raw material"
+        },
+        {
+          "code": "397",
+          "label": "Phenobarbital Sodique",
+          "description": "Raw material"
+        },
+        {
+          "code": "398",
+          "label": "Phenol crist.",
+          "description": "Raw material"
+        },
+        {
+          "code": "399",
+          "label": "Phenol Liquide",
+          "description": "Raw material"
+        },
+        {
+          "code": "400",
+          "label": "Phenolphtaleine",
+          "description": "Raw material"
+        },
+        {
+          "code": "401",
+          "label": "Phenosalyl",
+          "description": "Raw material"
+        },
+        {
+          "code": "402",
+          "label": "Phosphate de Chaux bi basique",
+          "description": "Raw material"
+        },
+        {
+          "code": "403",
+          "label": "Phosphate de Chaux neutre prima",
+          "description": "Raw material"
+        },
+        {
+          "code": "404",
+          "label": "Phosphate de Chaux neutre terti",
+          "description": "Raw material"
+        },
+        {
+          "code": "405",
+          "label": "Phosphate de Chaux neutre trica",
+          "description": "Raw material"
+        },
+        {
+          "code": "406",
+          "label": "Phosphate de Codeine",
+          "description": "Raw material"
+        },
+        {
+          "code": "407",
+          "label": "Pilokarpin HCl",
+          "description": "Raw material"
+        },
+        {
+          "code": "408",
+          "label": "Pilokarpin Nitrat",
+          "description": "Raw material"
+        },
+        {
+          "code": "409",
+          "label": "Pirogallol",
+          "description": "Raw material"
+        },
+        {
+          "code": "410",
+          "label": "Podophylline",
+          "description": "Raw material"
+        },
+        {
+          "code": "411",
+          "label": "Pommade de Populeium",
+          "description": "Raw material"
+        },
+        {
+          "code": "412",
+          "label": "Pommade d'Helmerich",
+          "description": "Raw material"
+        },
+        {
+          "code": "413",
+          "label": "Pommade Ichthyolee % 10",
+          "description": "Raw material"
+        },
+        {
+          "code": "414",
+          "label": "Pommade Iodoformee",
+          "description": "Raw material"
+        },
+        {
+          "code": "415",
+          "label": "Pommade Mercurielle faible",
+          "description": "Raw material"
+        },
+        {
+          "code": "416",
+          "label": "Pommade Oxyde de Zinc",
+          "description": "Raw material"
+        },
+        {
+          "code": "417",
+          "label": "Pommade Soufree",
+          "description": "Raw material"
+        },
+        {
+          "code": "418",
+          "label": "Pommade Wilkinson",
+          "description": "Raw material"
+        },
+        {
+          "code": "419",
+          "label": "Potasyum İyodür",
+          "description": "Raw material"
+        },
+        {
+          "code": "420",
+          "label": "Potasyum Klorat",
+          "description": "Raw material"
+        },
+        {
+          "code": "421",
+          "label": "Potasyum Klorür",
+          "description": "Raw material"
+        },
+        {
+          "code": "422",
+          "label": "Potasyum Permanganat",
+          "description": "Raw material"
+        },
+        {
+          "code": "423",
+          "label": "Potasyum Sitrat -tri",
+          "description": "Raw material"
+        },
+        {
+          "code": "424",
+          "label": "Potion Cordiale",
+          "description": "Raw material"
+        },
+        {
+          "code": "425",
+          "label": "Potion Cordiale ethere",
+          "description": "Raw material"
+        },
+        {
+          "code": "426",
+          "label": "Potion de Riviere (A+B)",
+          "description": "Raw material"
+        },
+        {
+          "code": "427",
+          "label": "Potion de Todd",
+          "description": "Raw material"
+        },
+        {
+          "code": "428",
+          "label": "Poudre Belladonne",
+          "description": "Raw material"
+        },
+        {
+          "code": "429",
+          "label": "Poudre de Gomme Arabique",
+          "description": "Raw material"
+        },
+        {
+          "code": "430",
+          "label": "Poudre de Quinquine",
+          "description": "Raw material"
+        },
+        {
+          "code": "431",
+          "label": "Poudre de Ratanhia",
+          "description": "Raw material"
+        },
+        {
+          "code": "432",
+          "label": "Poudre de Reglisse",
+          "description": "Raw material"
+        },
+        {
+          "code": "433",
+          "label": "Poudre de Reglisse Comp.",
+          "description": "Raw material"
+        },
+        {
+          "code": "434",
+          "label": "Poudre d'İpeca",
+          "description": "Raw material"
+        },
+        {
+          "code": "435",
+          "label": "Poudre d'Opium",
+          "description": "Raw material"
+        },
+        {
+          "code": "436",
+          "label": "Precipite Blanche",
+          "description": "Raw material"
+        },
+        {
+          "code": "437",
+          "label": "Prokain HCl",
+          "description": "Raw material"
+        },
+        {
+          "code": "438",
+          "label": "Propil Paraben",
+          "description": "Raw material"
+        },
+        {
+          "code": "439",
+          "label": "Propilen Glikol",
+          "description": "Raw material"
+        },
+        {
+          "code": "440",
+          "label": "Protargol",
+          "description": "Raw material"
+        },
+        {
+          "code": "441",
+          "label": "Proteinate d'Argent",
+          "description": "Raw material"
+        },
+        {
+          "code": "442",
+          "label": "Protochlorure de Mercure",
+          "description": "Raw material"
+        },
+        {
+          "code": "443",
+          "label": "Protoiodure de Mercure",
+          "description": "Raw material"
+        },
+        {
+          "code": "444",
+          "label": "Protoxalate de Fer",
+          "description": "Raw material"
+        },
+        {
+          "code": "445",
+          "label": "Pyramidon",
+          "description": "Raw material"
+        },
+        {
+          "code": "446",
+          "label": "Racine de Polygala",
+          "description": "Raw material"
+        },
+        {
+          "code": "447",
+          "label": "Racine d'Ipeca",
+          "description": "Raw material"
+        },
+        {
+          "code": "448",
+          "label": "Resorcine",
+          "description": "Raw material"
+        },
+        {
+          "code": "449",
+          "label": "Retinoik Asit",
+          "description": "Raw material"
+        },
+        {
+          "code": "450",
+          "label": "Rivanol",
+          "description": "Raw material"
+        },
+        {
+          "code": "451",
+          "label": "Sakarin",
+          "description": "Raw material"
+        },
+        {
+          "code": "452",
+          "label": "Salicylate d'Antipyrine",
+          "description": "Raw material"
+        },
+        {
+          "code": "453",
+          "label": "Salicylate de Phenol",
+          "description": "Raw material"
+        },
+        {
+          "code": "454",
+          "label": "Salicylate de Soude",
+          "description": "Raw material"
+        },
+        {
+          "code": "455",
+          "label": "Salicylate de Theobromine",
+          "description": "Raw material"
+        },
+        {
+          "code": "456",
+          "label": "Salisilik Asit",
+          "description": "Raw material"
+        },
+        {
+          "code": "457",
+          "label": "Salol",
+          "description": "Raw material"
+        },
+        {
+          "code": "458",
+          "label": "Santonine",
+          "description": "Raw material"
+        },
+        {
+          "code": "459",
+          "label": "Savon Medicinale",
+          "description": "Raw material"
+        },
+        {
+          "code": "460",
+          "label": "Savon Noir",
+          "description": "Raw material"
+        },
+        {
+          "code": "461",
+          "label": "Sel de Carisbad artificiel",
+          "description": "Raw material"
+        },
+        {
+          "code": "462",
+          "label": "Serum Physıologique % 09 (Non",
+          "description": "Raw material"
+        },
+        {
+          "code": "463",
+          "label": "Signolin",
+          "description": "Raw material"
+        },
+        {
+          "code": "464",
+          "label": "Sirop d'Acide Citrique",
+          "description": "Raw material"
+        },
+        {
+          "code": "465",
+          "label": "Sirop de Belladone",
+          "description": "Raw material"
+        },
+        {
+          "code": "466",
+          "label": "Sirop de Canelle",
+          "description": "Raw material"
+        },
+        {
+          "code": "467",
+          "label": "Sirop de Codeine",
+          "description": "Raw material"
+        },
+        {
+          "code": "468",
+          "label": "Sirop de Dessesartz",
+          "description": "Raw material"
+        },
+        {
+          "code": "469",
+          "label": "Sirop de Fleur d'Oranger",
+          "description": "Raw material"
+        },
+        {
+          "code": "470",
+          "label": "Sirop de Guimauve",
+          "description": "Raw material"
+        },
+        {
+          "code": "471",
+          "label": "Sirop de Menthe",
+          "description": "Raw material"
+        },
+        {
+          "code": "472",
+          "label": "Sirop de Mures",
+          "description": "Raw material"
+        },
+        {
+          "code": "473",
+          "label": "Sirop de Nerprun",
+          "description": "Raw material"
+        },
+        {
+          "code": "474",
+          "label": "Sirop de Tolu",
+          "description": "Raw material"
+        },
+        {
+          "code": "475",
+          "label": "Sirop d'Ecorce d'Orange amere",
+          "description": "Raw material"
+        },
+        {
+          "code": "476",
+          "label": "Sirop d'Ipeca",
+          "description": "Raw material"
+        },
+        {
+          "code": "477",
+          "label": "Sirop Iodotannique",
+          "description": "Raw material"
+        },
+        {
+          "code": "478",
+          "label": "Sirop Simple",
+          "description": "Raw material"
+        },
+        {
+          "code": "479",
+          "label": "Sitrik Asit",
+          "description": "Raw material"
+        },
+        {
+          "code": "480",
+          "label": "Sodium Lauryl Sulfate",
+          "description": "Raw material"
+        },
+        {
+          "code": "481",
+          "label": "Sodyum Benzoat",
+          "description": "Raw material"
+        },
+        {
+          "code": "482",
+          "label": "Sodyum Bikarbonat",
+          "description": "Raw material"
+        },
+        {
+          "code": "620",
+          "label": "Sodyum dichloroacetate",
+          "description": "Raw material"
+        },
+        {
+          "code": "483",
+          "label": "Sodyum Florür",
+          "description": "Raw material"
+        },
+        {
+          "code": "484",
+          "label": "Sodyum Fosfat - (di-bazik) [Na",
+          "description": "Raw material"
+        },
+        {
+          "code": "485",
+          "label": "Sodyum Fosfat - (mono-bazik) [N",
+          "description": "Raw material"
+        },
+        {
+          "code": "486",
+          "label": "Sodyum Fosfat - (tri-bazik) [N",
+          "description": "Raw material"
+        },
+        {
+          "code": "487",
+          "label": "Sodyum Hiposülfit",
+          "description": "Raw material"
+        },
+        {
+          "code": "488",
+          "label": "Sodyum İyodür",
+          "description": "Raw material"
+        },
+        {
+          "code": "489",
+          "label": "Sodyum Klorür",
+          "description": "Raw material"
+        },
+        {
+          "code": "490",
+          "label": "Sodyum Salisilat",
+          "description": "Raw material"
+        },
+        {
+          "code": "491",
+          "label": "Sodyum Sitrat - tri (Citrate",
+          "description": "Raw material"
+        },
+        {
+          "code": "492",
+          "label": "Sodyum Sülfat",
+          "description": "Raw material"
+        },
+        {
+          "code": "493",
+          "label": "Sodyum Tiyosülfat",
+          "description": "Raw material"
+        },
+        {
+          "code": "494",
+          "label": "Soufre Laves",
+          "description": "Raw material"
+        },
+        {
+          "code": "495",
+          "label": "Soufre Precipite",
+          "description": "Raw material"
+        },
+        {
+          "code": "496",
+          "label": "Soufre Sublime",
+          "description": "Raw material"
+        },
+        {
+          "code": "497",
+          "label": "Sous Carbonate de Bismuth",
+          "description": "Raw material"
+        },
+        {
+          "code": "498",
+          "label": "Sous Gallate de Bismouth",
+          "description": "Raw material"
+        },
+        {
+          "code": "499",
+          "label": "Sous Nitrate de Bismuth",
+          "description": "Raw material"
+        },
+        {
+          "code": "500",
+          "label": "Sprocide Pallicide",
+          "description": "Raw material"
+        },
+        {
+          "code": "501",
+          "label": "Stearil Alkol",
+          "description": "Raw material"
+        },
+        {
+          "code": "502",
+          "label": "Stovaine",
+          "description": "Raw material"
+        },
+        {
+          "code": "503",
+          "label": "Stovarsol",
+          "description": "Raw material"
+        },
+        {
+          "code": "504",
+          "label": "Sucre de Poudre",
+          "description": "Raw material"
+        },
+        {
+          "code": "505",
+          "label": "Sulfadiazine",
+          "description": "Raw material"
+        },
+        {
+          "code": "506",
+          "label": "Sulfanilamide",
+          "description": "Raw material"
+        },
+        {
+          "code": "507",
+          "label": "Sulfate d'Aluminium",
+          "description": "Raw material"
+        },
+        {
+          "code": "508",
+          "label": "Sulfate de Barium",
+          "description": "Raw material"
+        },
+        {
+          "code": "509",
+          "label": "Sulfate de Chaux",
+          "description": "Raw material"
+        },
+        {
+          "code": "510",
+          "label": "Sulfate de Cuivre",
+          "description": "Raw material"
+        },
+        {
+          "code": "511",
+          "label": "Sulfate de Magnesium",
+          "description": "Raw material"
+        },
+        {
+          "code": "512",
+          "label": "Sulfate de Quinidine",
+          "description": "Raw material"
+        },
+        {
+          "code": "513",
+          "label": "Sulfate de Soude",
+          "description": "Raw material"
+        },
+        {
+          "code": "514",
+          "label": "Sulfate de Styrchnine",
+          "description": "Raw material"
+        },
+        {
+          "code": "515",
+          "label": "Sulfate de Zinc",
+          "description": "Raw material"
+        },
+        {
+          "code": "516",
+          "label": "Sulfate Neutre d'Atropine",
+          "description": "Raw material"
+        },
+        {
+          "code": "517",
+          "label": "Sulfatiazol",
+          "description": "Raw material"
+        },
+        {
+          "code": "518",
+          "label": "Sulfogaicolate de Potassium",
+          "description": "Raw material"
+        },
+        {
+          "code": "519",
+          "label": "Sulfopon",
+          "description": "Raw material"
+        },
+        {
+          "code": "520",
+          "label": "Süblime",
+          "description": "Raw material"
+        },
+        {
+          "code": "521",
+          "label": "Talc",
+          "description": "Raw material"
+        },
+        {
+          "code": "522",
+          "label": "Tanin",
+          "description": "Raw material"
+        },
+        {
+          "code": "523",
+          "label": "Tannate d'Albumine",
+          "description": "Raw material"
+        },
+        {
+          "code": "524",
+          "label": "Tannigene",
+          "description": "Raw material"
+        },
+        {
+          "code": "525",
+          "label": "Tannnalbin",
+          "description": "Raw material"
+        },
+        {
+          "code": "526",
+          "label": "Tartarik Asit",
+          "description": "Raw material"
+        },
+        {
+          "code": "527",
+          "label": "Teinture Badiane",
+          "description": "Raw material"
+        },
+        {
+          "code": "528",
+          "label": "Teinture Baume de Tolu",
+          "description": "Raw material"
+        },
+        {
+          "code": "529",
+          "label": "Teinture d'Aconit -Racine. Feu",
+          "description": "Raw material"
+        },
+        {
+          "code": "530",
+          "label": "Teinture d'Amers",
+          "description": "Raw material"
+        },
+        {
+          "code": "531",
+          "label": "Teinture de Benzoin",
+          "description": "Raw material"
+        },
+        {
+          "code": "532",
+          "label": "Teinture de Benzoique",
+          "description": "Raw material"
+        },
+        {
+          "code": "533",
+          "label": "Teinture de Canelle",
+          "description": "Raw material"
+        },
+        {
+          "code": "534",
+          "label": "Teinture de Cantharides",
+          "description": "Raw material"
+        },
+        {
+          "code": "535",
+          "label": "Teinture de Capillaire",
+          "description": "Raw material"
+        },
+        {
+          "code": "536",
+          "label": "Teinture de Capsicum",
+          "description": "Raw material"
+        },
+        {
+          "code": "537",
+          "label": "Teinture de Coca",
+          "description": "Raw material"
+        },
+        {
+          "code": "538",
+          "label": "Teinture de Cola",
+          "description": "Raw material"
+        },
+        {
+          "code": "539",
+          "label": "Teinture de Colombo",
+          "description": "Raw material"
+        },
+        {
+          "code": "540",
+          "label": "Teinture de Condurango",
+          "description": "Raw material"
+        },
+        {
+          "code": "541",
+          "label": "Teinture de Crataegus",
+          "description": "Raw material"
+        },
+        {
+          "code": "542",
+          "label": "Teinture de Digitale",
+          "description": "Raw material"
+        },
+        {
+          "code": "543",
+          "label": "Teinture de Drosera",
+          "description": "Raw material"
+        },
+        {
+          "code": "544",
+          "label": "Teinture de Gentiane",
+          "description": "Raw material"
+        },
+        {
+          "code": "545",
+          "label": "Teinture de Gentiane comp.",
+          "description": "Raw material"
+        },
+        {
+          "code": "546",
+          "label": "Teinture de Girofle",
+          "description": "Raw material"
+        },
+        {
+          "code": "547",
+          "label": "Teinture de Grindella",
+          "description": "Raw material"
+        },
+        {
+          "code": "548",
+          "label": "Teinture de Jaborandi",
+          "description": "Raw material"
+        },
+        {
+          "code": "549",
+          "label": "Teinture de Jusquiame",
+          "description": "Raw material"
+        },
+        {
+          "code": "550",
+          "label": "Teinture de Lavande",
+          "description": "Raw material"
+        },
+        {
+          "code": "551",
+          "label": "Teinture de Lobelle",
+          "description": "Raw material"
+        },
+        {
+          "code": "552",
+          "label": "Teinture de Myrrhe",
+          "description": "Raw material"
+        },
+        {
+          "code": "553",
+          "label": "Teinture de Noix Vomique",
+          "description": "Raw material"
+        },
+        {
+          "code": "554",
+          "label": "Teinture de Panama",
+          "description": "Raw material"
+        },
+        {
+          "code": "555",
+          "label": "Teinture de Passiflore",
+          "description": "Raw material"
+        },
+        {
+          "code": "556",
+          "label": "Teinture de Polygala",
+          "description": "Raw material"
+        },
+        {
+          "code": "557",
+          "label": "Teinture de Quassia",
+          "description": "Raw material"
+        },
+        {
+          "code": "558",
+          "label": "Teinture de Quillaia",
+          "description": "Raw material"
+        },
+        {
+          "code": "559",
+          "label": "Teinture de Quinquina",
+          "description": "Raw material"
+        },
+        {
+          "code": "560",
+          "label": "Teinture de Quinquina comp.",
+          "description": "Raw material"
+        },
+        {
+          "code": "561",
+          "label": "Teinture de Ratanhia",
+          "description": "Raw material"
+        },
+        {
+          "code": "562",
+          "label": "Teinture de Rhubarbe",
+          "description": "Raw material"
+        },
+        {
+          "code": "563",
+          "label": "Teinture de Safranee",
+          "description": "Raw material"
+        },
+        {
+          "code": "564",
+          "label": "Teinture de Strophantus",
+          "description": "Raw material"
+        },
+        {
+          "code": "565",
+          "label": "Teinture de Valeriane Ethere",
+          "description": "Raw material"
+        },
+        {
+          "code": "566",
+          "label": "Teinture de Vibrum",
+          "description": "Raw material"
+        },
+        {
+          "code": "567",
+          "label": "Teinture d'Ecalyptus",
+          "description": "Raw material"
+        },
+        {
+          "code": "568",
+          "label": "Teinture d'Ecorce d'orange amer",
+          "description": "Raw material"
+        },
+        {
+          "code": "569",
+          "label": "Teinture d'Hamamelis",
+          "description": "Raw material"
+        },
+        {
+          "code": "570",
+          "label": "Teinture d'Hydrastis",
+          "description": "Raw material"
+        },
+        {
+          "code": "571",
+          "label": "Teinture d'Iode",
+          "description": "Raw material"
+        },
+        {
+          "code": "572",
+          "label": "Teinture d'Ipeca",
+          "description": "Raw material"
+        },
+        {
+          "code": "573",
+          "label": "Teinture d'Opium",
+          "description": "Raw material"
+        },
+        {
+          "code": "574",
+          "label": "Teinture Jalap compose",
+          "description": "Raw material"
+        },
+        {
+          "code": "575",
+          "label": "Tenture de Belladone",
+          "description": "Raw material"
+        },
+        {
+          "code": "576",
+          "label": "Tentürdiyot",
+          "description": "Raw material"
+        },
+        {
+          "code": "577",
+          "label": "Terebenthine",
+          "description": "Raw material"
+        },
+        {
+          "code": "578",
+          "label": "Terpine Hydrate",
+          "description": "Raw material"
+        },
+        {
+          "code": "579",
+          "label": "Tetracaine HCl",
+          "description": "Raw material"
+        },
+        {
+          "code": "580",
+          "label": "Theobromine",
+          "description": "Raw material"
+        },
+        {
+          "code": "581",
+          "label": "Theophylline",
+          "description": "Raw material"
+        },
+        {
+          "code": "582",
+          "label": "Theophylline Ethylen Diamin",
+          "description": "Raw material"
+        },
+        {
+          "code": "583",
+          "label": "Thiamine HCl",
+          "description": "Raw material"
+        },
+        {
+          "code": "584",
+          "label": "Thiocol",
+          "description": "Raw material"
+        },
+        {
+          "code": "585",
+          "label": "Thymol",
+          "description": "Raw material"
+        },
+        {
+          "code": "586",
+          "label": "Tıbbi Kömür (Bitkisel)",
+          "description": "Raw material"
+        },
+        {
+          "code": "587",
+          "label": "Toluidin Blue",
+          "description": "Raw material"
+        },
+        {
+          "code": "588",
+          "label": "Tretinoin",
+          "description": "Raw material"
+        },
+        {
+          "code": "589",
+          "label": "Triethanolamine",
+          "description": "Raw material"
+        },
+        {
+          "code": "590",
+          "label": "Triklor Asetik Asit",
+          "description": "Raw material"
+        },
+        {
+          "code": "591",
+          "label": "Tumenol",
+          "description": "Raw material"
+        },
+        {
+          "code": "592",
+          "label": "Undesilenik Asit",
+          "description": "Raw material"
+        },
+        {
+          "code": "593",
+          "label": "Urea",
+          "description": "Raw material"
+        },
+        {
+          "code": "594",
+          "label": "Urotropin",
+          "description": "Raw material"
+        },
+        {
+          "code": "595",
+          "label": "Valerianate de Methyl",
+          "description": "Raw material"
+        },
+        {
+          "code": "596",
+          "label": "Validol",
+          "description": "Raw material"
+        },
+        {
+          "code": "597",
+          "label": "Vaniline",
+          "description": "Raw material"
+        },
+        {
+          "code": "598",
+          "label": "Vaseline Blanche",
+          "description": "Raw material"
+        },
+        {
+          "code": "599",
+          "label": "Vaseline Liquide",
+          "description": "Raw material"
+        },
+        {
+          "code": "600",
+          "label": "Vazelin (Beyaz)",
+          "description": "Raw material"
+        },
+        {
+          "code": "601",
+          "label": "Vazelin (Sıvı)",
+          "description": "Raw material"
+        },
+        {
+          "code": "602",
+          "label": "Veronal",
+          "description": "Raw material"
+        },
+        {
+          "code": "603",
+          "label": "Veronal Sodique",
+          "description": "Raw material"
+        },
+        {
+          "code": "604",
+          "label": "Violette de Gentiane",
+          "description": "Raw material"
+        },
+        {
+          "code": "605",
+          "label": "Vitamin B1",
+          "description": "Raw material"
+        },
+        {
+          "code": "606",
+          "label": "Vitamin B12",
+          "description": "Raw material"
+        },
+        {
+          "code": "607",
+          "label": "Vitamin B2",
+          "description": "Raw material"
+        },
+        {
+          "code": "608",
+          "label": "Vitamin B6",
+          "description": "Raw material"
+        },
+        {
+          "code": "609",
+          "label": "Vitamin C (Acide Ascorbique)",
+          "description": "Raw material"
+        },
+        {
+          "code": "610",
+          "label": "Vitamin D2",
+          "description": "Raw material"
+        },
+        {
+          "code": "611",
+          "label": "Vitamin E",
+          "description": "Raw material"
+        },
+        {
+          "code": "612",
+          "label": "Vitamin F",
+          "description": "Raw material"
+        },
+        {
+          "code": "613",
+          "label": "Vitamin K",
+          "description": "Raw material"
+        },
+        {
+          "code": "614",
+          "label": "Vitamine A",
+          "description": "Raw material"
+        },
+        {
+          "code": "615",
+          "label": "Vitamine PP",
+          "description": "Raw material"
+        },
+        {
+          "code": "616",
+          "label": "Vitellinate d'Argent",
+          "description": "Raw material"
+        },
+        {
+          "code": "617",
+          "label": "Xeroforme",
+          "description": "Raw material"
+        },
+        {
+          "code": "618",
+          "label": "Xylol",
+          "description": "Raw material"
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "fetchedAt": "2026-11-15",
+          "page": 201,
+          "section": "Tablo 4.2.1.f.1.1.1 - Majistral Ham Madde Listesi (s.201-223)",
+          "confidence": "extracted",
+          "notes": "620 codes parsed from the guide catalog; code 619 is skipped by the guide itself (620 follows 618). Names preserve the guide's spelling; leading typographic dots stripped."
         }
       ],
       "status": "reviewed"

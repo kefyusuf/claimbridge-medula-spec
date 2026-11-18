@@ -116,7 +116,7 @@ describe("v0.3 nested 2 (Group 22)", () => {
       readFileSync(resolve(root, "dist", "manifest.json"), "utf8"),
     ) as { counts: Record<string, number> };
     expect(manifest.counts.dvos).toBe(70);
-    expect(manifest.counts.enums).toBe(22);
+    expect(manifest.counts.enums).toBe(23);
   });
 });
 
