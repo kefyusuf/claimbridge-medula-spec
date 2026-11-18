@@ -27,6 +27,10 @@
       "type": ["string", "null"],
       "description": "Registry enum id; required (non-null) when type is enum, null otherwise (PRD 12.4 amendment)."
     },
+    "codeSystem": {
+      "type": ["string", "null"],
+      "description": "External code system the value belongs to (e.g. ICD-10-WHO for diagnosis codes, SUT for operation codes); null for registry-internal enums and free values (FHIR CodeSystem reference norm). Optional until the full sweep (v0.4)."
+    },
     "required": { "type": "boolean" },
     "length": { "type": ["integer", "string", "null"] },
     "description": { "type": ["string", "null"] },

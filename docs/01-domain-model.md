@@ -79,6 +79,15 @@ payload, `expected.result` (`sonucKodu`/`sonucMesaji`) plus
 `latencyMs`). Six scenarios ship in v0.1 — see
 [04-sandbox-contract.md](04-sandbox-contract.md).
 
+## Code system references
+
+Fields whose values come from **external** code systems declare their
+system via `codeSystem` (e.g. `ICD-10-WHO` for `taniKodu`, `SUT` for
+operation codes) — the HL7 FHIR CodeSystem reference norm. Fields bound
+to registry enums use `enumRef` instead: the registry **is** the code
+system in that case. Both attributes are mutually exclusive per field
+and enforced by the validator.
+
 ## Source reference
 
 The provenance record every entity embeds — `sourceType`, optional
