@@ -6,7 +6,17 @@ Format: [Keep a Changelog](https://keepachangelog.com); versioning: SemVer
 
 ## [Unreleased]
 
-_Nothing yet — v0.2.0 scope is complete._
+### Group 35 — infra/remote-setup (2026-11-18)
+
+GitHub remote established (first PR via the real PR flow — PRD §28
+step 6 no longer applies).
+
+- Public repo: https://github.com/kefyusuf/claimbridge-medula-spec
+- 128 local commits + the v0.2.0 tag pushed; main tracking origin/main
+- First remote CI run: all steps green (install, format:check, validate,
+  test, check) — the PRD §29 checklist verified on GitHub infrastructure
+- Mimosa deep scan re-confirmed clean on the published state
+- Naming decision documented in README (descriptive compatibility use)
 
 ## [0.2.0] — 2026-11-18
 
