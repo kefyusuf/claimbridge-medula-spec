@@ -5,7 +5,7 @@ message: >-
   metadata.
 authors:
   - alias: kefyusuf
-version: 0.3.0
+version: 0.4.0
 date-released: "2026-11-18"
 license: MIT
 repository-code: "https://github.com/kefyusuf/claimbridge-medula-spec"

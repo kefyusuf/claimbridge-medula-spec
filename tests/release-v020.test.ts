@@ -10,11 +10,11 @@ describe("release v0.2.0 (Group 34)", () => {
       resolve(root, "SPEC_VERSION"),
       "utf8",
     ).trim();
-    expect(specVersion).toBe("0.3.0");
+    expect(specVersion).toBe("0.4.0");
     const pkg = JSON.parse(
       readFileSync(resolve(root, "package.json"), "utf8"),
     ) as { version: string };
-    expect(pkg.version).toBe("0.3.0");
+    expect(pkg.version).toBe("0.4.0");
   });
 
   it("documents the publicly available guide reference in the README", () => {
