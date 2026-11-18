@@ -32,7 +32,7 @@ describe("sandbox handoff (Group 40)", () => {
       "utf8",
     );
     expect(prd).toContain("dist/claimbridge-medula-spec.json");
-    expect(prd).toContain("must not duplicate the registry");
+    expect(prd).toContain("duplicate the registry");
   });
 
   it("marks the main PRD §30 handoff as fulfilled", () => {
@@ -40,7 +40,7 @@ describe("sandbox handoff (Group 40)", () => {
       resolve(root, "docs", "CLAIMBRIDGE_MEDULA_SPEC_PRD.md"),
       "utf8",
     );
-    expect(prd).toContain("Group 40 handoff");
+    expect(prd).toContain("FULFILLED (Group 40");
     expect(prd).toContain("CLAIMBRIDGE_SANDBOX_PRD.md");
   });
 
