@@ -6,6 +6,26 @@ Format: [Keep a Changelog](https://keepachangelog.com); versioning: SemVer
 
 ## [Unreleased]
 
+### Group 36 — feat/v03-devredilen-kurum (2026-11-18)
+
+First group merged through a real GitHub PR (#2) after the remote setup.
+
+- TDD red first: devredilen-kurum suite (4 checks) committed and verified
+  failing (4/4 red) before the enum existed (`60e786c`).
+- New enum `devredilen-kurum` (35 codes, s.154-158, four page citations):
+  31 numeric codes (1 SSK, 2 Bagkur, 3 Emekli Sandigi, 4 Yesil Kart,
+  5-31 exceptional/other coverage, 32, 97/98 gecici koruma, 99 yurtdisi,
+  100 8105 CK, 147-149) + 4 letter codes (I Is kazasi, M Meslek
+  hastaligi, B Madde bagimliligi, V Acil hal).
+- ProvizyonGirisDVO `devredilenKurum` bound via enumRef (string → enum).
+- Registry now: **22 enums**; dist regenerated.
+
+Validation output: `pnpm test` → 203/203 passed (35 suites); `tsc
+--noEmit` → clean; `pnpm validate` → OK; `pnpm check` → OK;
+`pnpm format:check` → OK.
+
+Remaining TODOs: none for this group.
+
 ### Group 35 — infra/remote-setup (2026-11-18)
 
 GitHub remote established (first PR via the real PR flow — PRD §28
