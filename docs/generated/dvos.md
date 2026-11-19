@@ -206,6 +206,29 @@ Domain: `rapor` · Direction: `input` · Status: `reviewed` · Source refs: medu
 | `seansSayi` | integer |  | — |  | Session count of the report (s.273). |
 | `butKodu` | string |  | — |  | SUT procedure code (s.273). |
 
+## `DoktorAraCevapDVO`
+
+Domain: `yardimci-islemler` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `sonucKodu` | string |  | — |  | Result code; "0000" means success (s.285). |
+| `sonucMesaji` | string |  | — |  | Result description (s.285). |
+| `doktorlar` | array |  | — |  | Physicians; item shape Tablo 4.5.2.c (DoktorListDVO, this registry) (s.285). |
+
+## `DoktorAraGirisDVO`
+
+Domain: `yardimci-islemler` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `drAdi` | string |  | — |  | Searched physician first name (s.284). |
+| `drSoyadi` | string |  | — |  | Searched physician last name (s.285). |
+| `drBransKodu` | string |  | — |  | Searched physician branch code (s.285). |
+| `drDiplomaNo` | string |  | — |  | Searched physician diploma number (s.285). |
+| `drTescilNo` | string |  | — |  | Searched physician diploma registration number (s.285). |
+| `saglikTesisKodu` | integer |  | — |  | GSS-assigned code of the calling facility (s.285). |
+
 ## `DoktorBilgisiDVO`
 
 Domain: `rapor` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
@@ -217,6 +240,17 @@ Domain: `rapor` · Direction: `input` · Status: `reviewed` · Source refs: medu
 | `drSoyadi` | string |  | — |  | Physician last name (s.272). |
 | `drBransKodu` | string |  | — |  | Physician branch code per the Health Ministry list (s.272). |
 | `tipi` | enum |  | doktor-tipi |  | Physician role in the report (s.272). |
+
+## `DoktorListDVO`
+
+Domain: `yardimci-islemler` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `drAdi` | string |  | — |  | Physician first name (s.285). |
+| `drSoyadi` | string |  | — |  | Physician last name (s.285). |
+| `drDiplomaNo` | string |  | — |  | Physician diploma number (s.285). |
+| `drTescilNo` | string |  | — |  | Physician diploma registration number (s.285). |
 
 ## `EKDSBelgeGerekenTakipCevapDVO`
 
@@ -394,6 +428,15 @@ Domain: `fatura-kayit` · Direction: `input` · Status: `reviewed` · Source ref
 | `faturaRefNo` | string |  | — |  | Reference number of the invoice to read (s.244). |
 | `faturaTarihi` | date |  | — |  | Invoice date in dd.mm.yyyy format per the guide (s.244). |
 | `ktsHbysKodu` | string |  | — |  | Software vendor KTS code (s.244). |
+
+## `FiyatListDVO`
+
+Domain: `yardimci-islemler` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `fiyat` | decimal |  | — |  | Drug price; KDV-inclusive per the Health Ministry publication — discounts and KDV are subtracted from this figure during payment queries (s.289). |
+| `gecerlilikTarihi` | string |  | — |  | Price validity date (s.289). |
 
 ## `GenBilgisiDVO`
 
@@ -662,6 +705,26 @@ Domain: `hizmet-kayit` · Direction: `input` · Status: `reviewed` · Source ref
 | `takipNo` | string |  | — |  | Tracking number whose registered operations are read (s.237). |
 | `ktsHbysKodu` | string |  | — |  | Software vendor KTS code (s.237). |
 
+## `IlacAraCevapDVO`
+
+Domain: `yardimci-islemler` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `sonucKodu` | string |  | — |  | Result code; "0000" means success (s.287). |
+| `sonucMesaji` | string |  | — |  | Result description (s.287). |
+| `ilaclar` | array |  | — |  | Drugs; item shape Tablo 4.5.4.c (IlacListDVO, this registry) (s.287). |
+
+## `IlacAraGirisDVO`
+
+Domain: `yardimci-islemler` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `barkod` | string |  | — |  | Drug barcode (s.287). |
+| `ilacAdi` | string |  | — |  | Drug name (s.287). |
+| `saglikTesisKodu` | integer |  | — |  | Code of the searching facility (s.287). |
+
 ## `IlacBilgisiDVO`
 
 Domain: `hizmet-kayit` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19, medula-hastane-guide-3-1-1-2026-10-19, medula-hastane-guide-3-1-1-2026-10-19
@@ -686,6 +749,50 @@ Domain: `hizmet-kayit` · Direction: `input` · Status: `reviewed` · Source ref
 | `majistralIlac` | object |  | — |  | Majistral drug composite, expanded as the MajistralIlacDVO registry entity (Tablo 4.2.1.f.1, s.199-200) (s.199) |
 | `birlikteYapilanIslemSUTKodu` | string |  | — |  | SUT code of the concurrently performed operation (s.199) |
 | `birlikteYapilanIslemHizmetSunucuRefNo` | string |  | — |  | Institution reference of the concurrently performed operation (s.199) |
+
+## `IlacIndirimDVO`
+
+Domain: `yardimci-islemler` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `kamuIndOranAlt` | decimal |  | — |  | Public discount lower rate (s.289). |
+| `kamuIndOranUst` | decimal |  | — |  | Public discount upper rate (s.289). |
+| `gecerlilikTarihi` | string |  | — |  | Validity date (s.289). |
+| `ilac_id` | integer |  | — |  | Drug unique id (s.290). |
+| `indirimOrani1` | decimal |  | — |  | Discount rate 1 (s.290). |
+| `indirimOrani2` | decimal |  | — |  | Discount rate 2 (s.290). |
+| `indirimOrani3` | decimal |  | — |  | Discount rate 3 (s.290). |
+| `indirimOrani4` | decimal |  | — |  | Discount rate 4; the guide's description column erroneously repeats "İndirim Oranı 3" (s.290). |
+
+## `IlacListDVO`
+
+Domain: `yardimci-islemler` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `ilacFiyatlari` | array |  | — |  | Price history; item shape Tablo 4.5.4.d (FiyatListDVO, this registry) (s.287). |
+| `ambalajToplamBirimMiktari` | decimal |  | — |  | Total unit quantity per package (s.287; renamed from kullanimBirimi per the 3.1.1 changelog s.7). |
+| `barkod` | string |  | — |  | Drug barcode (s.287). |
+| `ilacAdi` | string |  | — |  | Drug name (s.288). |
+| `eczAktifPasif` | enum |  | aktif-pasif |  | Pharmacy activity state (s.288). |
+| `hasAktifPasif` | enum |  | aktif-pasif |  | Hospital activity state (s.288). |
+| `ayaktanOdenme` | enum |  | odenme-durumu |  | Outpatient reimbursement state (s.288). |
+| `yatanOdenme` | enum |  | odenme-durumu |  | Inpatient reimbursement state (s.288). |
+| `guncelKamuIndirimliFiyati` | decimal |  | — |  | Current public discounted rate (s.288). |
+| `ilacIndirimDVO` | array |  | — |  | Discount rates; item shape Tablo 4.5.4.e (IlacIndirimDVO, this registry) (s.288). |
+| `yatanMaksimumKullanimPeriyot` | integer |  | — |  | Maximum usage period for inpatient takips (s.288). |
+| `yatanMaksimumKullanimPeriyotBirim` | integer |  | — |  | Maximum usage period unit for inpatient takips (s.288). |
+| `yatanMaksimumKullanimDoz1` | integer |  | — |  | Maximum usage doze-1 multiplier for inpatient takips (s.288). |
+| `yatanMaksimumKullanimDoz2` | decimal |  | — |  | Maximum usage doze-2 multiplier for inpatient takips (s.288). |
+| `ayaktanMaksimumKullanimPeriyot` | integer |  | — |  | Maximum usage period for outpatient takips (s.288). |
+| `ayaktanMaksimumKullanimPeriyotBirim` | integer |  | — |  | Maximum usage period unit for outpatient takips (s.288). |
+| `ayaktanMaksimumKullanimDoz1` | integer |  | — |  | Maximum usage doze-1 multiplier for outpatient takips (s.289). |
+| `ayaktanMaksimumKullanimDoz2` | decimal |  | — |  | Maximum usage doze-2 multiplier for outpatient takips (s.289). |
+| `esdegerGrupFiyati` | decimal |  | — |  | Price computed over the equivalent group (s.289). |
+| `esdegerKullanimBirimi` | decimal |  | — |  | Usage unit computed over the equivalent group (s.289). |
+| `esdegerBarkod` | string |  | — |  | Barcode of the equivalent-group drug (s.289). |
+| `farmasotikFormAdi` | string |  | — |  | Pharmaceutical form name (s.289). |
 
 ## `IlacRaporDVO`
 
@@ -1277,6 +1384,44 @@ Domain: `rapor` · Direction: `input` · Status: `reviewed` · Source refs: medu
 | `raporBilgisi` | object |  | — |  | Report lookup key object; shape in Tablo 4.4.3.c (RaporOkuDVO, this registry). |
 | `kullaniciTesisKodu` | integer |  | — |  | Health facility code of the caller (s.279). |
 
+## `SaglikTesisiAraCevapDVO`
+
+Domain: `yardimci-islemler` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `sonucKodu` | string |  | — |  | Result code; "0000" means success (s.283) — this group uses the String 0000 pattern. |
+| `sonucMesaji` | string |  | — |  | Result description; the failure reason is stated here (s.284). |
+| `tesisler` | array |  | — |  | Facilities; item shape Tablo 4.5.1.c (SaglikTesisiListDVO, this registry) (s.284). |
+
+## `SaglikTesisiAraGirisDVO`
+
+Domain: `yardimci-islemler` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `saglikTesisKodu` | integer |  | — |  | Code of the facility calling the method (s.283). |
+| `saglikTesisAdi` | string |  | — |  | Searched facility name; partial-letter search supported (s.283). |
+| `tesisIlKodu` | string |  | — |  | Province code of the searched facility (s.283). |
+| `tesisKodu` | integer |  | — |  | Facility code when known — the remaining fields are then fetched for it; otherwise empty (s.283). |
+| `tesisTuru` | string |  | — |  | Facility type code; the type list lives in the FAQ section (s.283). |
+
+## `SaglikTesisiListDVO`
+
+Domain: `yardimci-islemler` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `tesisIl` | string |  | — |  | Facility province code (s.284). |
+| `tesisAdi` | string |  | — |  | Facility name (s.284). |
+| `tesisKodu` | integer |  | — |  | Facility code (s.284). |
+| `tesisSinifKodu` | string |  | — |  | Facility class code (s.284). |
+| `tesisTuru` | string |  | — |  | Facility type code (s.284). |
+| `tesisIlAdi` | string |  | — |  | Facility province name — the guide states length 2 for a NAME column, likely an extraction or guide-table artifact (s.284). |
+| `tesisIlceKodu` | string |  | — |  | Facility district code (s.284). |
+| `tesisIlceAdi` | string |  | — |  | Facility district name (s.284). |
+| `tesisTuruAdi` | string |  | — |  | Facility type name (s.284). |
+
 ## `SevkBildirGirisDVO`
 
 Domain: `hasta-kabul` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
@@ -1333,6 +1478,29 @@ Domain: `hizmet-kayit` · Direction: `output` · Status: `reviewed` · Source re
 | --- | --- | --- | --- | --- | --- |
 | `islemSiraNo` | string |  | — |  | Sequence number; null-on-input pattern while registering (s.228) |
 | `sonuc` | string |  | — |  | Lab result value; must be +, - or a numeric value (s.228) |
+
+## `TakipAraCevapDVO`
+
+Domain: `yardimci-islemler` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `sonucKodu` | string |  | — |  | Result code; "0000" means success (s.286). |
+| `sonucMesaji` | string |  | — |  | Result description (s.286). |
+| `takipler` | array |  | — |  | Tracking records; item shape Tablo 4.1.2.b (TakipDVO, hasta-kabul group) (s.286). |
+
+## `TakipAraGirisDVO`
+
+Domain: `yardimci-islemler` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `hastaTCK` | string |  | — |  | Patient citizen ID (s.286). |
+| `baslangicTarihi` | string |  | — |  | Search-window start, "dd.mm.yyyy" (s.286). |
+| `bitisTarihi` | string |  | — |  | Search-window end, "dd.mm.yyyy"; guide note: the window may not exceed one month (s.286). |
+| `sevkDurumu` | enum |  | evet-hayir |  | E: referred notifications in the window across all facilities; H: the calling facility's own takips in the window (s.286). |
+| `saglikTesisKodu` | integer |  | — |  | Code of the searching facility (s.286). |
+| `ktsHbysKodu` | string |  | — |  | Software vendor KTS code (s.286). |
 
 ## `TakipDVO`
 

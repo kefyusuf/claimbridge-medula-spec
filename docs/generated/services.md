@@ -94,3 +94,22 @@ Report information registry operations: report lookup by report key, deletion, d
 - `medula.hastane.rapor.rapor-bilgisi-kaydet`
 - `medula.hastane.rapor.takip-no-ile-rapor-bilgisi-kaydet`
 
+## Yardimci Web Servis Metotlari (`medula.hastane.yardimci-islemler`)
+
+Helper operations: facility, physician, tracking-record and drug searches, plus the remaining helper queries landing in G44b-c. The takip-ara search window may not exceed one month (s.286).
+
+| Field | Value |
+| --- | --- |
+| Slug | yardimci-islemler |
+| Status | reviewed |
+| Production WSDL | wsdl.yardimci-islemler.production |
+| Test WSDL | wsdl.yardimci-islemler.test |
+| Source refs | medula-hastane-guide-3-1-1-2026-10-19 |
+
+**Methods**
+
+- `medula.hastane.yardimci-islemler.saglik-tesisi-ara`
+- `medula.hastane.yardimci-islemler.doktor-ara`
+- `medula.hastane.yardimci-islemler.takip-ara`
+- `medula.hastane.yardimci-islemler.ilac-ara`
+
