@@ -23,6 +23,36 @@ Domain: `hizmet-kayit` · Direction: `input` · Status: `reviewed` · Source ref
 | `cokluOzelDurum` | array |  | — |  | Multiple special-condition codes (s.192). |
 | `raporTakipNo` | string |  | — |  | Report tracking number (s.192). |
 
+## `AnalikRaporDVO`
+
+Domain: `rapor` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `baslangicTarihi` | string |  | — |  | Start date, "dd.mm.yyyy"; mandatory when the report is without hospitalization (s.260). |
+| `bitisTarihi` | string |  | — |  | End date, "dd.mm.yyyy"; mandatory when the report is without hospitalization (s.260). |
+| `raporDurumu` | enum |  | calisma-durumu |  | Fit-to-work or control state; mandatory when there was hospitalization (s.260). |
+| `isKontTarihi` | string |  | — |  | Return-to-work or control date, "dd.mm.yyyy" (s.260). |
+| `hastaneYatisTarihi` | string |  | — |  | Hospital admission date, "dd.mm.yyyy"; mandatory when yatisDevam = 2 (s.260). |
+| `hastaneCikisTarihi` | string |  | — |  | Hospital discharge date, "dd.mm.yyyy"; mandatory when yatisDevam = 3 (s.260). |
+| `bebekDogumTarihi` | string |  | — |  | Birth date of the child, "dd.mm.yyyy" (s.259). |
+| `dogumOncBasTarihi` | string |  | — |  | Start of the transferred report period, "dd.mm.yyyy" (s.259). |
+| `canliCocukSayisi` | integer |  | — |  | Children alive after the birth (s.259). |
+| `doganCocukSayisi` | integer |  | — |  | Children delivered (s.259). |
+| `norSezFor` | enum |  | nor-sez-for |  | Birth type: Normal / Sezeryan / Forsebs (s.259). |
+| `yatisDevam` | enum |  | yatis-devam-is-kazasi |  | Hospitalization state; three-value list shared with the work-accident branch (s.260). |
+| `aktarmaRaporVarmi` | enum |  | aktarma-rapor |  | Transfer-report flag (s.260). |
+| `aktarmaRaporTarihi` | string |  | — |  | Date of the week-32 doctor control, "dd.mm.yyyy" (s.260). |
+| `gebelikHaftasi` | integer |  | — |  | Pregnancy week at the time of the report (s.260). |
+| `taburcuTarihi` | string |  | — |  | Discharge date, "dd.mm.yyyy"; mandatory when yatisDevam = 3 (s.260). |
+| `taburcuKodu` | enum |  | taburcu-kodu |  | Thirteen-value discharge code list, identical to the hasta-kabul group's taburcu-kodu enum (s.260). |
+| `analikRaporTipi` | enum |  | analik-rapor-tipi |  | Pre-birth or post-birth maternity report (s.260). |
+| `gebelikTipi` | enum |  | gebelik-tipi |  | Single or multiple pregnancy (s.260). |
+| `gebelikHaftasi1` | integer |  | — |  | Week at the pre-birth report visit, typically 32 (s.260). |
+| `gebelikHaftasi2` | integer |  | — |  | Week until which work may continue when the pre-birth report is issued as fit, typically 37 (s.260). |
+| `bebekDogumHaftasi` | integer |  | — |  | Week of the birth, typically 40 (s.261). |
+| `aktarmaHaftasi` | integer |  | — |  | Weeks transferred from the pre-birth leave to the post-birth period; system-calculated (s.261). |
+
 ## `BKDSDogrulamaDetayDVO`
 
 Domain: `hasta-kabul` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
@@ -95,6 +125,25 @@ Domain: `hasta-kabul` · Direction: `output` · Status: `reviewed` · Source ref
 | `baslangicTarihi` | date |  | — |  | Hospitalization start date (s.171) |
 | `bitisTarihi` | date |  | — |  | Discharge date (s.171) |
 | `durum` | string |  | — |  | 0 Faturalanmamis / 1 Faturalanmis (s.171) |
+
+## `BransGorusBilgisiDVO`
+
+Domain: `rapor` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `bransKodu` | string |  | — |  | Health-Ministry branch code of the opining department (s.267). |
+| `aciklama` | string |  | — |  | Department opinion (s.267). |
+
+## `CocukBilgisiDVO`
+
+Domain: `rapor` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `cinsiyet` | enum |  | cinsiyet |  | Gender of the newborn (s.266). |
+| `kilo` | string |  | — |  | Birth weight, e.g. 3,45 (s.266). |
+| `dogumSaati` | string |  | — |  | Birth time, hh:mm (s.266). |
 
 ## `DigerIslemBilgisiDVO`
 
@@ -176,6 +225,18 @@ Domain: `hasta-kabul` · Direction: `input` · Status: `reviewed` · Source refs
 | --- | --- | --- | --- | --- | --- |
 | `tesisKodu` | integer |  | — |  | GSS-assigned institution code (s.186) |
 | `evrakID` | integer |  | — |  | Period document reference number to query (s.186) |
+
+## `EmzirmeRaporDVO`
+
+Domain: `rapor` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `bebekDogumTarihi` | string |  | — |  | Birth date of the child, "dd.mm.yyyy" (s.261). |
+| `dogumOncBasTarihi` | string |  | — |  | Start of the transferred report period, "dd.mm.yyyy" (s.261). |
+| `canliCocukSayisi` | integer |  | — |  | Children alive after the birth (s.261). |
+| `anneTcKimlikNo` | string |  | — |  | Mother's citizen ID when the nursing report is issued on behalf of the father (s.261). |
+| `doganCocukSayisi` | integer |  | — |  | Children delivered (s.261). |
 
 ## `FaturaCevapDVO`
 
@@ -360,6 +421,15 @@ Domain: `hizmet-kayit` · Direction: `input` · Status: `reviewed` · Source ref
 | `aciklama` | string |  | — |  | Hospitalization description (s.234) |
 | `cokluOzelDurum` | array |  | — |  | Multiple special-condition codes (s.234) |
 
+## `HastaYatisBilgisiRaporDVO`
+
+Domain: `rapor` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `yatisTarihi` | string |  | — |  | Hospital admission date, "dd.mm.yyyy" (s.266). |
+| `cikisTarihi` | string |  | — |  | Hospital discharge date, "dd.mm.yyyy" (s.266). |
+
 ## `HastaYatisOkuCevapDVO`
 
 Domain: `hasta-kabul` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19, medula-hastane-guide-3-1-1-2026-10-19
@@ -383,6 +453,23 @@ Domain: `hasta-kabul` · Direction: `input` · Status: `reviewed` · Source refs
 | --- | --- | --- | --- | --- | --- |
 | `hastaBasvuruNo` | string |  | — |  | Application number whose hospitalizations are read (s.170) |
 | `saglikTesisKodu` | integer |  | — |  | GSS-assigned institution code (s.170) |
+
+## `HastalikRaporDVO`
+
+Domain: `rapor` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `baslangicTarihi` | string |  | — |  | Start date, "dd.mm.yyyy"; mandatory when the report is without hospitalization (s.263). |
+| `bitisTarihi` | string |  | — |  | End date, "dd.mm.yyyy"; mandatory when the report is without hospitalization (s.263). |
+| `raporDurumu` | enum |  | calisma-durumu |  | Fit-to-work or control state; mandatory when there was hospitalization (s.263). |
+| `isKontTarihi` | string |  | — |  | Return-to-work or control date, "dd.mm.yyyy" (s.263). |
+| `hastaneYatisTarihi` | string |  | — |  | Hospital admission date, "dd.mm.yyyy"; mandatory when yatisDevam = 2 (s.263). |
+| `hastaneCikisTarihi` | string |  | — |  | Hospital discharge date, "dd.mm.yyyy"; mandatory when yatisDevam = 3 (s.263). |
+| `nuks` | enum |  | nuks-durumu |  | Relapse status; no length given in the illness branch (s.263). |
+| `yatisDevam` | enum |  | yatis-devam-is-kazasi |  | Hospitalization state; three-value list shared with the work-accident branch (s.263). |
+| `taburcuTarihi` | string |  | — |  | Discharge date, "dd.mm.yyyy"; mandatory when yatisDevam = 3 (s.263). |
+| `taburcuKodu` | enum |  | taburcu-kodu |  | Thirteen-value discharge code list, identical to the hasta-kabul group's taburcu-kodu enum (s.263). |
 
 ## `HataliIslemBilgisiDVO`
 
@@ -534,6 +621,16 @@ Domain: `hizmet-kayit` · Direction: `input` · Status: `reviewed` · Source ref
 | `birlikteYapilanIslemSUTKodu` | string |  | — |  | SUT code of the concurrently performed operation (s.199) |
 | `birlikteYapilanIslemHizmetSunucuRefNo` | string |  | — |  | Institution reference of the concurrently performed operation (s.199) |
 
+## `IlacRaporDVO`
+
+Domain: `rapor` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `raporDVO` | object |  | — |  | Report core; shape Tablo 4.4.1.k (RaporDVO, this registry). |
+| `raporEtkinMaddeler` | array |  | — |  | Active ingredients; item shape Tablo 4.4.1.ff (RaporEtkinMaddeDVO, this registry). The required column is not visible in the text extraction (s.261). |
+| `takipFormuNo` | string |  | — |  | Follow-up form number when the drug report is filed with a diabetes diagnosis (s.261). |
+
 ## `IlacRaporDuzeltDVO`
 
 Domain: `rapor` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
@@ -579,6 +676,8 @@ Domain: `rapor` · Direction: `input` · Status: `reviewed` · Source refs: medu
 | `yaraninTuru` | string |  | — |  | Wound type; the guide states "TABLOLAR TARAFIMIZCA SONRA YAYINLANACAKTIR" — no code list published (s.257). |
 | `yaraninYeri` | string |  | — |  | Wound site; the guide states "TABLOLAR TARAFIMIZCA SONRA YAYINLANACAKTIR" — no code list published (s.257). |
 | `taburcuTarihi` | string |  | — |  | Discharge date, "dd.mm.yyyy"; mandatory when yatisDevam = 3 (s.257). |
+| `taburcuKodu` | enum |  | taburcu-kodu |  | Thirteen-value discharge code list, identical to the hasta-kabul group's taburcu-kodu enum (s.257). |
+| `isKazasiTarihi` | string |  | — |  | Work-accident date, "dd.mm.yyyy"; filled when the relapse flag is set (s.257). |
 
 ## `IsgoremezlikRaporDVO`
 
@@ -611,6 +710,27 @@ Domain: `rapor` · Direction: `input` · Status: `reviewed` · Source refs: medu
 | `hakSahibi` | object |  | — |  | Beneficiary; shape Tablo 4.4.1.s (HakSahibiBilgisiDVO, this registry). |
 | `devammi` | enum |  | devam-durumu |  | Continuation selector from the pre-selection answer (s.256). |
 | `yatisDevam` | enum |  | yatis-devam-durumu |  | Hospitalization state (s.256). |
+
+## `IsgoremezlikRaporEkDVO`
+
+Domain: `rapor` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `aciklama` | string |  | — |  | Attachment description (s.276). |
+| `bitisTarihi` | string |  | — |  | Attachment end date, "dd.mm.yyyy" (s.276). |
+| `durum` | enum |  | ek-durumu |  | Initial or attachment report (s.276). |
+| `duzenlemeTuru` | enum |  | rapor-duzenleme-turu |  | Issuing style (s.276). |
+| `hastaYatisVarMi` | enum |  | evet-hayir |  | E when hospitalized (H when not) — the yatislar array must then carry at least one stay (s.276). |
+| `kontrolMu` | enum |  | evet-hayir |  | Control examination flag: E = Evet, H = Hayir (s.276). |
+| `kontrolTarihi` | string |  | — |  | Control date, "dd.mm.yyyy" (s.276). |
+| `protokolNo` | string |  | — |  | Protocol number (s.277). |
+| `protokolTarihi` | string |  | — |  | Protocol date, "dd.mm.yyyy" (s.277). |
+| `yatislar` | array |  | — |  | Hospital stays; item shape Tablo 4.4.1.l (HastaYatisBilgisiRaporDVO, this registry); mandatory when hastaYatisVarMi = E (s.277). |
+| `raporBilgisiDVO` | object |  | — |  | Report key; shape Tablo 4.4.1.r (RaporBilgisiDVO, this registry); the guide's parameter name carries a DVO suffix here. |
+| `doktorlar` | array |  | — |  | Physicians; item shape Tablo 4.4.1.t (DoktorBilgisiDVO, this registry) (s.277). |
+| `tanilar` | array |  | — |  | Diagnoses; item shape Tablo 4.4.1.u (TaniBilgisiDVO, hizmet-kayit group); parameter name capitalized (Tanilar) in the guide (s.277). |
+| `kullaniciTesisKodu` | integer |  | — |  | Health facility code of the caller (s.277). |
 
 ## `IslemDetayDVO`
 
@@ -843,6 +963,37 @@ Domain: `hizmet-kayit` · Direction: `input` · Status: `reviewed` · Source ref
 | `birlikteYapilanIslemSUTKodu` | string |  | — |  | SUT code of the concurrently performed operation (s.226) |
 | `birlikteYapilanIslemHizmetSunucuRefNo` | string |  | — |  | Institution reference of the concurrently performed operation (s.226) |
 
+## `MalzemeBilgisiRaporDVO`
+
+Domain: `rapor` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `malzemeKodu` | string |  | — |  | Material code; mandatory when malzemeTuru is 1 or 2 (s.266). Coded per SUT — externally-coded codeSystem annotation per the G42 sweep norm. |
+| `malzemeAdi` | string |  | — |  | Material name; mandatory when malzemeTuru is 3 (s.266). |
+| `malzemeTuru` | enum |  | malzeme-turu |  | SUT-coded / retirement-fund-protocol / uncoded material (s.266). |
+| `adet` | integer |  | — |  | Material count (s.266). |
+
+## `MeslekHastaligiRaporDVO`
+
+Domain: `rapor` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `baslangicTarihi` | string |  | — |  | Start date, "dd.mm.yyyy"; mandatory when the report is without hospitalization (s.258). |
+| `bitisTarihi` | string |  | — |  | End date, "dd.mm.yyyy"; mandatory when the report is without hospitalization (s.258). |
+| `raporDurumu` | enum |  | calisma-durumu |  | Fit-to-work or control state; mandatory when there was hospitalization (s.258). |
+| `isKontTarihi` | string |  | — |  | Return-to-work or control date, "dd.mm.yyyy" (s.258). |
+| `hastaneYatisTarihi` | string |  | — |  | Hospital admission date, "dd.mm.yyyy"; mandatory when yatisDevam = 2 (s.258). |
+| `hastaneCikisTarihi` | string |  | — |  | Hospital discharge date, "dd.mm.yyyy"; mandatory when yatisDevam = 3 (s.258). |
+| `nuks` | enum |  | nuks-durumu |  | Relapse status (s.258). |
+| `yatisDevam` | enum |  | yatis-devam-is-kazasi |  | Hospitalization state; three-value list shared with the work-accident branch (s.258). |
+| `yaraninTuru` | string |  | — |  | Wound type; the guide states "TABLOLAR TARAFIMIZCA SONRA YAYINLANACAKTIR" — no code list published (s.258). |
+| `yaraninYeri` | string |  | — |  | Wound site; the guide states "TABLOLAR TARAFIMIZCA SONRA YAYINLANACAKTIR" — no code list published (s.258). |
+| `taburcuTarihi` | string |  | — |  | Discharge date, "dd.mm.yyyy"; mandatory when yatisDevam = 3 (s.258). |
+| `taburcuKodu` | enum |  | taburcu-kodu |  | Thirteen-value discharge code list, identical to the hasta-kabul group's taburcu-kodu enum (s.258). |
+| `isKazasiTarihi` | string |  | — |  | Work-accident date; present here too, mirroring IsKazasiRaporDVO (s.258-259 table continuation). |
+
 ## `MuayeneBilgisiDVO`
 
 Domain: `hizmet-kayit` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19, medula-hastane-guide-3-1-1-2026-10-19
@@ -969,6 +1120,30 @@ Domain: `rapor` · Direction: `output` · Status: `reviewed` · Source refs: med
 | `raporlar` | array |  | — |  | Reports found for the citizen; items are RaporCevapDVO (this registry). |
 | `sonucAciklamasi` | string |  | — |  | Result description; the failure reason is stated here (s.283). |
 | `sonucKodu` | integer |  | — |  | Result code; 0 (zero) means success, any other value is an error (s.283). |
+
+## `RaporDVO`
+
+Domain: `rapor` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `raporBilgisi` | object |  | — |  | Report key; shape Tablo 4.4.1.r (RaporBilgisiDVO, this registry). |
+| `turu` | enum |  | rapor-turu |  | Report type (s.263-264). |
+| `baslangicTarihi` | string |  | — |  | Report start date, "dd.mm.yyyy"; guide: Evet for all reports except prosthesis and fit-to-work-before-birth (s.264). |
+| `bitisTarihi` | string |  | — |  | Report end date, "dd.mm.yyyy"; same exception rule (s.264). |
+| `duzenlemeTuru` | enum |  | rapor-duzenleme-turu |  | Issuing style (s.264). |
+| `hakSahibi` | object |  | — |  | Beneficiary; shape Tablo 4.4.1.s (HakSahibiBilgisiDVO, this registry); NULL when TakipNoileRaporBilgisiKaydet is used — resolved from the tracking number (s.264). |
+| `protokolNo` | string |  | — |  | Report protocol number (s.264). |
+| `protokolTarihi` | string |  | — |  | Report protocol date, "dd.mm.yyyy" (s.264). |
+| `durum` | string |  | — |  | Sent empty; value list contains 1 = Taslak (draft) (s.264). |
+| `aciklama` | string |  | — |  | Report description (s.264). |
+| `doktorlar` | array |  | — |  | Physicians; item shape Tablo 4.4.1.t (DoktorBilgisiDVO, this registry); sent as an array (s.264). |
+| `tanilar` | array |  | — |  | Diagnoses; item shape Tablo 4.4.1.u (TaniBilgisiDVO, hizmet-kayit group); NOT sent for drug reports (s.264). |
+| `teshisler` | array |  | — |  | Diagnosis details; item shape Tablo 4.4.1.v (TeshisBilgisiDVO) — deferred to G43d; NOT sent for drug reports (s.264). |
+| `ilacTeshisler` | array |  | — |  | Drug diagnoses; item shape Tablo 4.4.1.gg (IlacTeshisBilgiDVO, this registry); MANDATORY for drug reports (s.264). |
+| `takipNo` | string |  | — |  | GSS-generated tracking number from the admission; filled when TakipNoileRaporBilgisiKaydet is used (s.265). |
+| `klinikTani` | string |  | — |  | Clinical diagnosis (s.265; parameter name row-wrapped in the guide). |
+| `ozelDurum` | integer |  | — |  | Special-case code; 0 when none. 1 = surgery/botulinum for mobility, 2-3 = 3713-law disability categories (s.265). Full catalogue in Tablo 5.1 OzelDurumVO per the changelog. |
 
 ## `RaporEtkinMaddeDVO`
 
@@ -1150,4 +1325,29 @@ Domain: `hizmet-kayit` · Direction: `shared` · Status: `reviewed` · Source re
 | `taniTipi` | enum |  | tani-tipi |  | Diagnosis type - 1 On tani, 2 Kesin tani, 3 Ayirici tani (s.232). |
 | `ozelDurum` | string |  | — |  | Special condition code; see guide Tablo 5.1 OzelDurumVO (s.232). |
 | `cokluOzelDurum` | array |  | — |  | Multiple special-condition codes, valid alongside ozelDurum (s.232). |
+
+## `TedaviIslemBilgisiDVO`
+
+Domain: `rapor` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `diyalizRaporBilgisi` | object |  | — |  | Populated when the treatment type is dialysis; shape Tablo 4.4.1.w (DiyalizRaporBilgisiDVO) — deferred to G43d. |
+| `eswlRaporBilgisi` | object |  | — |  | Populated for ESWL; shape Tablo 4.4.1.x (ESWLRaporBilgisiDVO) — deferred to G43d. |
+| `eswtRaporBilgisi` | object |  | — |  | Populated for ESWT; shape Tablo 4.4.1.y (ESWTRaporBilgisiDVO) — deferred to G43d. |
+| `ftrRaporBilgisi` | object |  | — |  | Populated for physical therapy; shape Tablo 4.4.1.z (FTRRaporBilgisiDVO) — deferred to G43d. |
+| `hotRaporBilgisi` | object |  | — |  | Populated for hyperbaric oxygen; shape Tablo 4.4.1.aa (HOTRaporBilgisiDVO) — deferred to G43d. |
+| `tupBebekRaporBilgisi` | object |  | — |  | Populated for IVF; shape Tablo 4.4.1.bb (TupBebekRaporBilgisiDVO) — deferred to G43d. |
+| `evHemodiyaliziRaporBilgisi` | object |  | — |  | Populated for home haemodialysis; shape Tablo 4.4.1.hh (EvHemodiyaliziRaporBilgisiDVO) — deferred to G43d. The guide's reference column says 4.4.1.bb, a cross-reference typo (4.4.1.hh is the home-haemodialysis table, s.278). |
+| `pulmonerRaporBilgisi` | object |  | — |  | Populated for pulmonary rehabilitation; shape Tablo 4.4.1.ii (PulmonerRaporBilgisiDVO) — deferred to G43d. |
+
+## `TedaviRaporDVO`
+
+Domain: `rapor` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `raporDVO` | object |  | — |  | Report core; shape Tablo 4.4.1.k (RaporDVO, this registry). |
+| `islemler` | array |  | — |  | Treatment procedures; only the object matching tedaviRaporTuru is populated, the rest NULL; item shape Tablo 4.4.1.o (TedaviIslemBilgisiDVO, this registry) (s.262). |
+| `tedaviRaporTuru` | enum |  | tedavi-rapor-turu |  | Nine-value treatment type list (s.262). |
 
