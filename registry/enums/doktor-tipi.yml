@@ -1,0 +1,16 @@
+id: doktor-tipi
+displayName: Doktor Tipi
+values:
+  - code: "1"
+    label: Raporu Isteyen Doktor Hekim
+    description: Requesting physician.
+  - code: "2"
+    label: Raporu Duzenleyen Doktor Dis Hekimi
+    description: Issuing dentist/physician.
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 272
+    confidence: extracted
+status: reviewed

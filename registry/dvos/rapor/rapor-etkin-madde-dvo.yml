@@ -1,0 +1,126 @@
+id: RaporEtkinMaddeDVO
+domain: rapor
+direction: input
+fields:
+  - name: etkinMaddeKodu
+    displayName: Etkin Madde Kodu
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: null
+    description: Active-ingredient code (s.277).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 277
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: kullanimDoz1
+    displayName: Kullanim Doz 1
+    type: integer
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Times per day, e.g. 3 (s.277).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 277
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: kullanimDoz2
+    displayName: Kullanim Doz 2
+    type: integer
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Dose per intake, e.g. 1 tablet, 100 IU (s.277).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 277
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: kullanimDozBirim
+    displayName: Doz Birimi
+    type: enum
+    enumRef: doz-birimi
+    codeSystem: null
+    required: false
+    length: 1
+    description: Dose unit code list (s.277).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 277
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: kullanimPeriyot
+    displayName: Kullanim Periyot
+    type: integer
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Usage interval value, e.g. every 7 days (s.277).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 277
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: kullanimPeriyotBirim
+    displayName: Kullanim Periyot Birimi
+    type: enum
+    enumRef: periyot-birimi
+    codeSystem: null
+    required: false
+    length: 1
+    description: Usage interval unit (s.278).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 278
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 277
+    confidence: extracted
+    section: 4.4 Rapor Bilgisi Kayit Metotlari
+status: reviewed

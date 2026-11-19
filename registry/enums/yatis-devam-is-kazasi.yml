@@ -1,0 +1,20 @@
+id: yatis-devam-is-kazasi
+displayName: Yatis Devam Durumu (Is Kazasi Dali)
+values:
+  - code: "1"
+    label: Yatis Yok
+    description: No hospitalization.
+  - code: "2"
+    label: Yatis Devam
+    description: Hospitalization ongoing.
+  - code: "3"
+    label: Taburcu
+    description: Discharged.
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 257
+    confidence: extracted
+    notes: IsKazasiRaporDVO.yatisDevam (s.257) — three-value variant of yatis-devam-durumu.
+status: reviewed

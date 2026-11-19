@@ -66,7 +66,7 @@ describe("rapor query service group (G43a, guide s.252-283)", () => {
     expect(wsdl["production"]).toBe("wsdl.rapor.production");
     expect(wsdl["test"]).toBe("wsdl.rapor.test");
     const methodList = service["methods"] as string[];
-    expect(methodList).toHaveLength(5);
+    expect(methodList).toHaveLength(7);
   });
 
   it("binds the five method contracts to their guide tables", () => {

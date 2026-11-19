@@ -1,0 +1,104 @@
+id: devredilen-kurum-rapor
+displayName: Devredilen Kurum (Rapor Grubu Varyanti)
+values:
+  - code: "1"
+    label: SSK
+    description: Social Insurance Institution coverage.
+  - code: "2"
+    label: Bagkur
+    description: Bag-Kur coverage.
+  - code: "3"
+    label: Emekli Sandigi
+    description: Retirement Fund coverage.
+  - code: "4"
+    label: Yesil Kart
+    description: Green Card.
+  - code: "5"
+    label: Vatansiz ve sininmacilar
+    description: Stateless persons and refugees.
+  - code: "6"
+    label: 2022 sayili kanun kapsami
+    description: Monthly aid under law no. 2022 (65+ needy citizens).
+  - code: "7"
+    label: 1005 sayili seref ayligi
+    description: Independence Medal veteran pension under law no. 1005.
+  - code: "10"
+    label: 2828 sayili SHCEK
+    description: Free social-services care under law no. 2828.
+  - code: "12"
+    label: S.G.K.
+    description: Social Security Institution.
+  - code: "14"
+    label: Mutekabiliyet oturma izni
+    description: Foreign residents under reciprocity, uninsured abroad.
+  - code: "15"
+    label: 4447 issizlik / kisa calisma odenegi
+    description: Unemployment or short-time work benefit under law no. 4447.
+  - code: "17"
+    label: Baska ulkede sigortasi yok / istege tabi
+    description: No foreign coverage; voluntary insured.
+  - code: "18"
+    label: 18 yas alti kapsam disi
+    description: Under-18 persons outside social security.
+  - code: "19"
+    label: Universite yabanci uyruklu ogrenci
+    description: Foreign university students.
+  - code: "20"
+    label: Stajyer Avukat
+    description: Trainee lawyers.
+  - code: "21"
+    label: Kapsam Disi
+    description: Outside coverage.
+  - code: "99"
+    label: Yurtdisi sigortali
+    description: Insured abroad.
+  - code: "22"
+    label: Acil Hal
+    description: Emergency case.
+  - code: "23"
+    label: TBMM
+    description: Grand National Assembly.
+  - code: "25"
+    label: Ceza Infaz ve Tutukevi Kursiyeri
+    description: Prison inmates.
+  - code: "26"
+    label: AIHM
+    description: European Court of Human Rights.
+  - code: "27"
+    label: 60/c1-c3-c9
+    description: Law 5510 article 60/c1-c3-c9.
+  - code: "28"
+    label: 3713/21
+    description: Law 3713 article 21.
+  - code: "31"
+    label: 60/f12-f13-f14
+    description: Law 5510 article 60/f12-f14.
+  - code: "98"
+    label: Gecici Koruma 6458
+    description: Temporary protection under law 6458.
+  - code: "32"
+    label: Diyanet Akademisi Ogrencileri
+    description: Religious-affairs academy students.
+  - code: "97"
+    label: Gecici Koruma V174
+    description: Temporary protection (V174).
+  - code: "100"
+    label: 8105 CK ozel duzenleme
+    description: Private arrangement under law 8105.
+  - code: "147"
+    label: 60/15f Milli Egitim Akademisi Aday Ogretmenleri
+    description: Trainee teachers of the education academy.
+  - code: "148"
+    label: 60/16f YTB Kapsamindaki Ogrenciler
+    description: Students under the presidency for foreigners.
+  - code: "149"
+    label: 60/c2 Uluslararasi Koruma
+    description: International protection status holders.
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 269
+    confidence: extracted
+    notes: "Verbatim from the HakSahibiBilgisiDVO.devredilenKurum table (s.269-270) — a LONGER variant than the hasta-kabul group's devredilen-kurum (s.154-158). The 3.1.1 changelog (s.6) renames 147 → 33 and removes 148/149, but this table still lists 147/148/149; the conflict is preserved as-is per the guide-verification norm. Note on s.271: certain pension groups must send code 3 (Emekli Sandigi)."
+status: reviewed

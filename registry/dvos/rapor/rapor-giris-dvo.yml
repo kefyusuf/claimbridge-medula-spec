@@ -1,0 +1,115 @@
+id: RaporGirisDVO
+domain: rapor
+direction: input
+fields:
+  - name: ilacRapor
+    displayName: Ilac Raporu
+    type: object
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Drug report branch (use or exemption); shape Tablo 4.4.1.h (IlacRaporDVO) — deferred to G43c. All other branches must be NULL when this is filled.
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 252
+        confidence: extracted
+    conditionalRequired:
+      - condition: exactly one report branch is populated
+        note: "guide: diğer alanlar NULL gönderilmelidir (s.252)"
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: maluliyetRapor
+    displayName: Maluliyet Raporu
+    type: object
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Disability report branch; shape Tablo 4.4.1.j (MaluliyetRaporDVO) — deferred to G43c with the remaining report branches.
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 252
+        confidence: extracted
+    conditionalRequired:
+      - condition: exactly one report branch is populated
+        note: "guide: diğer alanlar NULL gönderilmelidir (s.252)"
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: tedaviRapor
+    displayName: Tedavi Raporu
+    type: object
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Treatment report branch; shape Tablo 4.4.1.i (TedaviRaporDVO) — deferred to G43c with the remaining report branches.
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 252
+        confidence: extracted
+    conditionalRequired:
+      - condition: exactly one report branch is populated
+        note: "guide: diğer alanlar NULL gönderilmelidir (s.252)"
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: isgoremezlikRapor
+    displayName: Isgoremezlik Raporu
+    type: object
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Incapacity report branch (work accident, occupational disease or illness); shape Tablo 4.4.1.c (IsgoremezlikRaporDVO, this registry).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 252
+        confidence: extracted
+    conditionalRequired:
+      - condition: exactly one report branch is populated
+        note: "guide: diğer alanlar NULL gönderilmelidir (s.252)"
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: kullaniciTesisKodu
+    displayName: Kullanici Tesis Kodu
+    type: integer
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: null
+    description: Health facility code of the caller (s.253).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 253
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 252
+    confidence: extracted
+    section: 4.4 Rapor Bilgisi Kayit Metotlari
+status: reviewed

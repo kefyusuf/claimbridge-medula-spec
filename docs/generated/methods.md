@@ -698,6 +698,30 @@
 | deletes | — |
 | generates | — |
 
+## `medula.hastane.rapor.rapor-bilgisi-kaydet`
+
+| Field | Value |
+| --- | --- |
+| Service | medula.hastane.rapor |
+| Documentation heading | RaporBilgisiKaydet |
+| Operation name | RaporBilgisiKaydet |
+| Input DVO | RaporGirisDVO |
+| Output DVO | RaporCevapDVO |
+| Success | sonucKodu = 0 (sonucAciklamasi) |
+| Sandbox supported |  |
+| Status | reviewed |
+| Source refs | medula-hastane-guide-3-1-1-2026-10-19 |
+
+**State effects**
+
+| Effect | Targets |
+| --- | --- |
+| creates | `rapor` |
+| reads | — |
+| updates | — |
+| deletes | — |
+| generates | `raporTakipNo` |
+
 ## `medula.hastane.rapor.rapor-bilgisi-sil`
 
 | Field | Value |
@@ -721,4 +745,28 @@
 | updates | — |
 | deletes | — |
 | generates | — |
+
+## `medula.hastane.rapor.takip-no-ile-rapor-bilgisi-kaydet`
+
+| Field | Value |
+| --- | --- |
+| Service | medula.hastane.rapor |
+| Documentation heading | TakipNoileRaporBilgisiKaydet |
+| Operation name | TakipNoileRaporBilgisiKaydet |
+| Input DVO | RaporGirisDVO |
+| Output DVO | RaporCevapDVO |
+| Success | sonucKodu = 0 (sonucAciklamasi) |
+| Sandbox supported |  |
+| Status | reviewed |
+| Source refs | medula-hastane-guide-3-1-1-2026-10-19 |
+
+**State effects**
+
+| Effect | Targets |
+| --- | --- |
+| creates | `rapor` |
+| reads | — |
+| updates | — |
+| deletes | — |
+| generates | `raporTakipNo` |
 

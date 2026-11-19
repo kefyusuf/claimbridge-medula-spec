@@ -1,0 +1,34 @@
+id: medula.hastane.rapor.takip-no-ile-rapor-bilgisi-kaydet
+service: medula.hastane.rapor
+names:
+  documentationHeading: TakipNoileRaporBilgisiKaydet
+  operationName: TakipNoileRaporBilgisiKaydet
+  aliases:
+    - TakipNoileRaporBilgisiKaydet
+contract:
+  inputDvo: RaporGirisDVO
+  outputDvo: RaporCevapDVO
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 279
+    confidence: extracted
+    section: 4.4 4.4.2 TakipNoileRaporBilgisiKaydet Metodu
+    notes: Registration variant reusing RaporGirisDVO (s.279); RaporBilgisiDVO.raporTesisKodu is resolved from the tracking number and ignored (s.268).
+stateEffects:
+  creates:
+    - rapor
+  reads: []
+  updates: []
+  deletes: []
+  generates:
+    - raporTakipNo
+success:
+  resultCodeField: sonucKodu
+  successCode: "0"
+  messageField: sonucAciklamasi
+sandbox:
+  supported: false
+  defaultScenario: null
+status: reviewed

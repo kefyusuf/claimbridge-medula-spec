@@ -1,0 +1,20 @@
+id: devam-durumu
+displayName: Devam Durumu
+values:
+  - code: "-1"
+    label: Hayir
+    description: No continuation (pre-selection answer).
+  - code: "1"
+    label: Gecmiste gitmedigi kontrol var, devam mi (evet)
+    description: Past missed control exists; continue.
+  - code: "2"
+    label: Devam eden raporu var, devam mi (evet)
+    description: Ongoing report exists; continue.
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 256
+    confidence: extracted
+    notes: Per the pre-selection web service answer (s.256).
+status: reviewed

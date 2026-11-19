@@ -1,0 +1,23 @@
+id: yatis-devam-durumu
+displayName: Yatis Devam Durumu
+values:
+  - code: "1"
+    label: Yatis Yok
+    description: No hospitalization.
+  - code: "2"
+    label: Yatis Devam Ediyor
+    description: Hospitalization ongoing.
+  - code: "3"
+    label: Yatis Var, Taburcu Olmus
+    description: Hospitalized, discharged.
+  - code: "4"
+    label: Karma
+    description: After discharge, outpatient rest issued.
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 256
+    confidence: extracted
+    notes: "IsgoremezlikRaporDVO.yatisDevam (s.256). The work-accident branch uses a three-value variant: yatis-devam-is-kazasi."
+status: reviewed

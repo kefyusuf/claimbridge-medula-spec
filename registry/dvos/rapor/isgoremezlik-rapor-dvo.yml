@@ -1,0 +1,497 @@
+id: IsgoremezlikRaporDVO
+domain: rapor
+direction: input
+fields:
+  - name: raporBilgisi
+    displayName: Rapor Bilgileri
+    type: object
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: null
+    description: Report registry key; shape Tablo 4.4.1.r (RaporBilgisiDVO, this registry).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 254
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: isGoremezlikRaporTuru
+    displayName: Is Goremezlik Rapor Turu
+    type: enum
+    enumRef: isgoremezlik-rapor-turu
+    codeSystem: null
+    required: true
+    length: 1
+    description: Incapacity report branch selector (s.254).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 254
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: bransKodu
+    displayName: Brans Kodu
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: 4
+    description: Branch code (s.254).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 254
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: protokolNo
+    displayName: Protokol Numarasi
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: 20
+    description: Report protocol number (s.254).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 254
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: protokolTarihi
+    displayName: Protokol Tarihi
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: 10
+    description: Report protocol date, "dd.mm.yyyy" (s.254).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 254
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: duzenlemeTuru
+    displayName: Rapor Duzenleme Turu
+    type: enum
+    enumRef: rapor-duzenleme-turu
+    codeSystem: null
+    required: true
+    length: 1
+    description: Issuing style (s.255).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 255
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: teshis
+    displayName: Teshis
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: null
+    description: Diagnosis; an ICD-10 code must be used (s.255).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 255
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: aciklama
+    displayName: Aciklama
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: 255
+    description: Branch opinion (s.255).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 255
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: saglikKuruluRaporTarihi
+    displayName: Saglik Kurulu Rapor Tarihi
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: 20
+    description: Health-board report date (s.255; parameter name row-wrapped in the guide).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 255
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: olum
+    displayName: Sigortalinin Olup Olmadigi
+    type: enum
+    enumRef: olum-durumu
+    codeSystem: null
+    required: true
+    length: 1
+    description: Alive/deceased selector (s.255).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 255
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: ilkRaporTakipNo
+    displayName: Ilk Rapor Takip No
+    type: integer
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: MEDULA tracking number of the initial report when this report is a continuation (s.255).
+    sensitive: false
+    syntheticOnlyRecommended: true
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 255
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: isKazasiRaporu
+    displayName: Is Kazasi Raporu
+    type: object
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Work-accident detail; shape Tablo 4.4.1.d (IsKazasiRaporDVO, this registry).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 255
+        confidence: extracted
+    conditionalRequired:
+      - condition: isGoremezlikRaporTuru = 1
+        note: "guide: isGoremezlikRaporTuru 1 ise zorunlu (s.255)"
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: meslekHastaligiRaporu
+    displayName: Meslek Hastaligi Raporu
+    type: object
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Occupational-disease detail; shape Tablo 4.4.1.e (MeslekHastaligiRaporDVO) — deferred to G43c with the remaining report branches.
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 255
+        confidence: extracted
+    conditionalRequired:
+      - condition: isGoremezlikRaporTuru = 2
+        note: "guide: isGoremezlikRaporTuru 2 ise zorunlu (s.255)"
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: analikRaporu
+    displayName: Analik Raporu
+    type: object
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Maternity detail; shape Tablo 4.4.1.f (AnalikRaporDVO) — deferred to G43c with the remaining report branches.
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 255
+        confidence: extracted
+    conditionalRequired:
+      - condition: isGoremezlikRaporTuru = 4
+        note: "guide: isGoremezlikRaporTuru 4 ise zorunlu (s.255)"
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: emzirmeRaporu
+    displayName: Emzirme Raporu
+    type: object
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Nursing detail; shape Tablo 4.4.1.g (EmzirmeRaporDVO) — deferred to G43c with the remaining report branches.
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 255
+        confidence: extracted
+    conditionalRequired:
+      - condition: isGoremezlikRaporTuru = 5
+        note: "guide: isGoremezlikRaporTuru 5 ise zorunlu (s.255)"
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: hastalikRaporu
+    displayName: Hastalik Raporu
+    type: object
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Illness detail; shape Tablo 4.4.1.j (HastalikRaporDVO) — deferred to G43c with the remaining report branches.
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 255
+        confidence: extracted
+    conditionalRequired:
+      - condition: isGoremezlikRaporTuru = 3
+        note: "guide: isGoremezlikRaporTuru 3 ise zorunlu (s.255)"
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: klinikBulgular
+    displayName: Klinik Bulgular
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: 20
+    description: Clinical findings (s.255).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 255
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: ronLabBilgileri
+    displayName: Ron Lab Bilgileri
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Radiology/laboratory findings (s.255; no length given).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 255
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: karar
+    displayName: Karar
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: 20
+    description: Board decision (s.255).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 255
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: doktorlar
+    displayName: Doktor Bilgileri
+    type: array
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: null
+    description: Physicians; item shape Tablo 4.4.1.t (DoktorBilgisiDVO, this registry); sent as an array (s.255).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 255
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: bashekimOnayDurumu
+    displayName: Bashekim Onay Durumu
+    type: integer
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Chief-physician approval state (s.255; no code list given).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 255
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: bashekimTCNo
+    displayName: Bashekim TC No
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: 20
+    description: Chief-physician citizen ID (s.255).
+    sensitive: true
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 255
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: hakSahibi
+    displayName: Hak Sahibi Bilgisi
+    type: object
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: null
+    description: Beneficiary; shape Tablo 4.4.1.s (HakSahibiBilgisiDVO, this registry).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 256
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: devammi
+    displayName: Devam Durumu
+    type: enum
+    enumRef: devam-durumu
+    codeSystem: null
+    required: true
+    length: 1
+    description: Continuation selector from the pre-selection answer (s.256).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 256
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: yatisDevam
+    displayName: Yatis Devam
+    type: enum
+    enumRef: yatis-devam-durumu
+    codeSystem: null
+    required: true
+    length: 1
+    description: Hospitalization state (s.256).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 256
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 254
+    confidence: extracted
+    section: 4.4 Rapor Bilgisi Kayit Metotlari
+status: reviewed

@@ -52,7 +52,15 @@ to the PDF text extraction of `local-guide/official-guide.pdf`
 | Tablo 4.4.6.a IlacRaporDuzeltDVO | 281 | ilac-rapor-duzelt input (G43a; drTescilNo description column is a guide copy-paste error) |
 | Tablo 4.4.7.a RaporOkuRaporTakipNodanDVO | 281-282 | lookup by report tracking no (G43a) |
 | Tablo 4.4.8.a/b RaporOku/CevapTCKimlikNodanDVO | 282-283 | lookup by citizen ID (G43a; tckimlikNo description column is a guide copy-paste error) |
+| Tablo 4.4.1.a RaporGirisDVO + kullaniciTesisKodu | 252-253 | registration dispatch composite (G43b) |
+| Tablo 4.4.1.c IsgoremezlikRaporDVO | 254-256 | incapacity branch (G43b, 25 fields) |
+| Tablo 4.4.1.d IsKazasiRaporDVO | 256-257 | work-accident branch (G43b; yaraninTuru/yeri "sonra yayınlanacak" quirks) |
+| Tablo 4.4.1.r RaporBilgisiDVO | 268 | report key (G43b; raporSiraNo Integer divergence) |
+| Tablo 4.4.1.s HakSahibiBilgisiDVO | 268-272 | beneficiary (G43b; devredilenKurum variant list 269-270, duplicate address rows) |
+| Tablo 4.4.1.t DoktorBilgisiDVO | 272 | physicians (G43b; drTescilNo length 16 vs 20 divergence) |
+| Tablo 4.4.1.ff RaporEtkinMaddeDVO / 4.4.1.gg IlacTeshisBilgiDVO | 277-278 | drug-report item tables (G43b; ICD10Kodu typed TaniBilgisiDVO[] quirk) |
 | rapor-turu values (11) | 280, 282, 254 | registry enum rapor-turu |
+| rapor group code lists (10) | 254-258, 268-278 | isgoremezlik-rapor-turu, rapor-duzenleme-turu, olum-durumu, devam-durumu, yatis-devam-durumu, yatis-devam-is-kazasi, adli-vaka-durumu, doktor-tipi, doz-birimi, periyot-birimi |
 | WSDL raporIslemleriWS | 91, 353 | production + test endpoints |
 
 ## Not yet extracted
@@ -63,10 +71,13 @@ to the PDF text extraction of `local-guide/official-guide.pdf`
 - Nested composites (Tablo 4.2.1.c-l, 4.3.1.c-e, 4.3.3.c) — v0.3 scope.
 - New HastaKabul methods: ekds*, SevkBildir, HastaCikis*, KemikIligi*,
   HastaKabulKimlikDogrulama (disabled), UTS kesinleştirme.
-- Rapor registration composites (G43b): RaporGirisDVO (Tablo 4.4.1.a,
-  pages 252-279) with IlacRaporDVO/MaluliyetRaporDVO/TedaviRaporDVO/
-  IsgoremezlikRaporDVO (4.4.1.c-j) and ekleri 4.4.1.ee; plus
-  RaporEtkinMaddeDVO (4.4.1.ff) and IlacTeshisBilgiDVO (4.4.1.gg).
+- Rapor remaining report branches (G43c): Tablo 4.4.1.e MeslekHastaligiRaporDVO,
+  4.4.1.f AnalikRaporDVO, 4.4.1.g EmzirmeRaporDVO, 4.4.1.h IlacRaporDVO,
+  4.4.1.i TedaviRaporDVO, 4.4.1.j HastalikRaporDVO, 4.4.1.k RaporDVO,
+  4.4.1.l-n composites (HastaYatis/Cocuk/Malzeme), 4.4.1.o-p
+  (TedaviIslem/BransGorus), uzman rapor tabloları 4.4.1.w-ii
+  (Diyaliz/ESWL/ESWT/FTR/HOT/TupBebek/EvHemodiyalizi/Pulmoner),
+  4.4.1.ee IsgoremezlikRaporEkDVO.
 - E-İmzalı Rapor methods (section 4.6, pages 329-351, 12 methods) — v0.5+
   roadmap; requires the signature workflow states.
 - Yardımcı Web Servis methods (section 4.5, pages 283-321, 20 methods).

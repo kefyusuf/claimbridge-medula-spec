@@ -1,7 +1,7 @@
 id: medula.hastane.rapor
 slug: rapor
 displayName: Rapor Bilgisi Kayit
-description: "Report information registry operations: report lookup by report key, deletion, drug report correction and lookups by report tracking number or citizen ID. Registration (RaporBilgisiKaydet / TakipNoileRaporBilgisiKaydet) lands with G43b once the RaporGirisDVO composite set is extracted."
+description: "Report information registry operations: report lookup by report key, deletion, drug report correction, lookups by report tracking number or citizen ID, and report registration (RaporBilgisiKaydet dispatching exactly one report branch; the drug/disability/treatment/illness sub-branch shapes land incrementally)."
 sourceRefs:
   - id: medula-hastane-guide-3-1-1-2026-10-19
     sourceType: official-guide
@@ -18,4 +18,6 @@ methods:
   - medula.hastane.rapor.ilac-rapor-duzelt
   - medula.hastane.rapor.rapor-bilgisi-bul-rapor-takip-nodan
   - medula.hastane.rapor.rapor-bilgisi-bul-tc-kimlik-nodan
+  - medula.hastane.rapor.rapor-bilgisi-kaydet
+  - medula.hastane.rapor.takip-no-ile-rapor-bilgisi-kaydet
 status: reviewed

@@ -1,0 +1,20 @@
+id: adli-vaka-durumu
+displayName: Adli Vaka / Trafik Kazasi
+values:
+  - code: "1"
+    label: Adli Vaka
+    description: Legal case.
+  - code: "2"
+    label: Trafik Kazasi
+    description: Traffic accident.
+  - code: "3"
+    label: Yok
+    description: Neither.
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 268
+    confidence: extracted
+    notes: "RaporBilgisiDVO.aVakaTKaza (s.268): applies to illness, occupational-disease and work-accident cases."
+status: reviewed

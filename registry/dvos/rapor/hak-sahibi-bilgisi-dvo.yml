@@ -1,0 +1,341 @@
+id: HakSahibiBilgisiDVO
+domain: rapor
+direction: input
+fields:
+  - name: tckimlikNo
+    displayName: T.C. Kimlik Numarasi
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: 11
+    description: Beneficiary citizen ID; mandatory when neither karneNo nor sosyalGuvenlikNo is provided (s.268).
+    sensitive: true
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 268
+        confidence: extracted
+    conditionalRequired:
+      - condition: karneNo ve sosyalGuvenlikNo girilmemisse
+        note: "guide: Karne No ve Sosyal Güvenlik numarası girilmemiş ise girilmelidir (s.268)"
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: karneNo
+    displayName: Karne No
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Beneficiary card number; mandatory when tckimlikNo is not provided (s.268).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 268
+        confidence: extracted
+    conditionalRequired:
+      - condition: tckimlikNo girilmemisse
+        note: "guide: T.C. Kimlik numarası girilmemiş ise girilmelidir (s.268)"
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: sosyalGuvenlikNo
+    displayName: Sosyal Guvenlik Numarasi
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Beneficiary social-security number; mandatory when tckimlikNo is not provided (s.269).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 269
+        confidence: extracted
+    conditionalRequired:
+      - condition: tckimlikNo girilmemisse
+        note: "guide: T.C. Kimlik numarası girilmemiş ise girilmelidir (s.269)"
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: yakinlikKodu
+    displayName: Yakinlik Kodu
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: 4
+    description: Four-digit kinship code for Bag-Kur patients; empty for other institutions (s.269).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 269
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: sigortaliTuru
+    displayName: Sigortali Turu
+    type: enum
+    enumRef: sigortali-turu
+    codeSystem: null
+    required: true
+    length: 1
+    description: "Insured type: 1 = Çalışan, 2 = Emekli, 3 = Diğer (s.269). This three-value list is the rapor-group variant of the hasta-kabul sigortali-turu enum."
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 269
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: devredilenKurum
+    displayName: Devredilen Kurum
+    type: enum
+    enumRef: devredilen-kurum-rapor
+    codeSystem: null
+    required: true
+    length: 1
+    description: Pre-merger institution of the insured; the rapor-group variant code list (s.269-270) is longer than the hasta-kabul one and conflicts with the changelog — see the devredilen-kurum-rapor enum notes.
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 269
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: adres
+    displayName: Adres
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Beneficiary address — first occurrence (s.271; lowercase guide row without a length).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 271
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: telefon
+    displayName: Telefon
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Beneficiary phone — first occurrence (s.271; lowercase guide row without a length).
+    sensitive: true
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 271
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: baglibulunanbirim
+    displayName: Bagli Bulunan Birim
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Beneficiary unit — first occurrence (s.271; lowercase guide row without a length).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 271
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: provizyonTipi
+    displayName: Provizyon Tipi
+    type: enum
+    enumRef: provizyon-tipi
+    codeSystem: null
+    required: true
+    length: 1
+    description: "Admission type for the report examination: N = Normal, I = İş kazası, A = Acil (s.271)."
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 271
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: provizyonTarihi
+    displayName: Provizyon Tarihi
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: 10
+    description: Entitlement examination date — NOT the report date; "dd.mm.yyyy" (s.272).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 272
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: adi
+    displayName: Sigortalinin Adi
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: 50
+    description: Beneficiary first name; the guide states "bu alan boş bırakılacaktır" (s.272).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 272
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: soyadi
+    displayName: Sigortalinin Soyadi
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: 50
+    description: Beneficiary last name; the guide states "bu alan boş bırakılacaktır" (s.272).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 272
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: adresDetay
+    displayName: Sigortalinin Adresi
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: 100
+    description: Beneficiary address — second occurrence with length 100 (s.272); the guide documents both a lowercase and a camelCase address row.
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 272
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: telefonDetay
+    displayName: Sigortalinin Telefonu
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: 50
+    description: Beneficiary phone — second occurrence with length 50 (s.272).
+    sensitive: true
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 272
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: bagliBulunanBirim
+    displayName: Sigortalinin Bagli Oldugu Birim
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: 50
+    description: Beneficiary unit — second occurrence with length 50 (s.272).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 272
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: emeklimi
+    displayName: Sigortalinin Emeklilik Bilgisi
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: 50
+    description: Beneficiary retirement info (s.272).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 272
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 268
+    confidence: extracted
+    section: 4.4 Rapor Bilgisi Kayit Metotlari
+status: reviewed

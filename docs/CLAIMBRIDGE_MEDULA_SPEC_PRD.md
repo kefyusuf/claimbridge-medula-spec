@@ -1637,9 +1637,17 @@ No real patient/credential data exists.
 1. Add Rapor service group.
    <!-- G43a (2026-11-19): rapor query group LANDED — service medula.hastane.rapor
         + 5 query/correction methods + 7 DVOs + enum rapor-turu (11 values, s.280),
-        guide pages 279-283 verified; Integer 0-based sonucKodu divergence documented.
-        G43b next: RaporBilgisiKaydet/TakipNoileRaporBilgisiKaydet with the
-        RaporGirisDVO composite set (pages 252-279). -->
+        guide pages 279-283 verified; Integer 0-based sonucKodu divergence documented. -->
+   <!-- G43b (2026-11-19): registration composite LANDED — RaporBilgisiKaydet +
+        TakipNoileRaporBilgisiKaydet methods; RaporGirisDVO dispatch composite,
+        IsgoremezlikRaporDVO (25 fields), IsKazasiRaporDVO, shared leaves
+        (RaporBilgisiDVO / HakSahibiBilgisiDVO / DoktorBilgisiDVO) and the
+        IlacRaporDuzelt item tables (RaporEtkinMaddeDVO / IlacTeshisBilgiDVO);
+        10 new code-list enums incl. devredilen-kurum-rapor (31 values, s.269-270,
+        conflicts with the changelog's 147→33 rename — preserved verbatim);
+        guide pages 252-278 verified. G43c next: remaining report branches
+        (MeslekHastaligi/Analik/Emzirme/Hastalik/Ilac/Tedavi/Maluliyet/Dogum/
+        DogumOncesi/Protez/uzman tablolar 4.4.1.e-l + ekleri ee). -->
 2. Add Yardimci Islemler service group.
 3. Add more enums.
 4. Add richer scenario definitions.
