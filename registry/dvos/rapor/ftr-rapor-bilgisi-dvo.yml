@@ -1,0 +1,126 @@
+id: FTRRaporBilgisiDVO
+domain: rapor
+direction: input
+fields:
+  - name: ftrVucutBolgesiKodu
+    displayName: FTR Vucut Bolgesi Kodu
+    type: enum
+    enumRef: ftr-vucut-bolgesi
+    codeSystem: null
+    required: true
+    length: null
+    description: Seventeen-value body-region list; guide order preserved (11 listed last on s.275) (s.274-275).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 274
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: seansGun
+    displayName: Seans Gun Sayisi
+    type: integer
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: null
+    description: Session day count (s.275).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 275
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: seansSayi
+    displayName: Seans Sayisi
+    type: integer
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: null
+    description: Session count (s.275).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 275
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: butKodu
+    displayName: But Kodu
+    type: string
+    enumRef: null
+    codeSystem: SUT
+    required: true
+    length: null
+    description: SUT procedure code (s.275).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 275
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: tedaviTuru
+    displayName: Tedavi Turu
+    type: enum
+    enumRef: tedavi-turu
+    codeSystem: null
+    required: true
+    length: 1
+    description: A = Ayaktan, Y = Yatarak (s.275); binds the hasta-kabul group's tedavi-turu enum.
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 275
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: robotikRehabilitasyon
+    displayName: Robotik Rehabilitasyon
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: null
+    description: Guide row carries NO length, value list or description — registered verbatim as an empty-description required string (s.275).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 275
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 274
+    confidence: extracted
+    section: 4.4 Rapor Bilgisi Kayit Metotlari
+status: reviewed

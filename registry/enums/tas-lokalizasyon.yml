@@ -1,0 +1,20 @@
+id: tas-lokalizasyon
+displayName: Tas Lokalizasyonu
+values:
+  - code: "2"
+    label: Alt Ureter
+    description: Lower ureter.
+  - code: "3"
+    label: Ust Ureter
+    description: Upper ureter.
+  - code: "4"
+    label: Bobrek
+    description: Kidney.
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 276
+    confidence: extracted
+    notes: The guide lists only codes 2-4; no code 1 exists in the published list.
+status: reviewed

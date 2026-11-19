@@ -1,0 +1,62 @@
+id: ftr-vucut-bolgesi
+displayName: FTR Vucut Bolgesi
+values:
+  - code: "1"
+    label: Yuz Bolgesi
+    description: Face region (temporomandibular joint and facial nerve; right and left applications are reimbursed as one).
+  - code: "2"
+    label: Boyun Bolgesi
+    description: Neck region (cervical application).
+  - code: "3"
+    label: Sirt Bolgesi
+    description: Back region (thoracic-dorsal applications).
+  - code: "4"
+    label: Bel Bolgesi
+    description: Lumbar region (lumbosacral applications).
+  - code: "12"
+    label: Sag Omuz Bolgesi
+    description: Right shoulder region.
+  - code: "13"
+    label: Sol Omuz Bolgesi
+    description: Left shoulder region.
+  - code: "14"
+    label: Sag Dirsek Bolgesi
+    description: Right elbow region.
+  - code: "15"
+    label: Sol Dirsek Bolgesi
+    description: Left elbow region.
+  - code: "16"
+    label: Sag El-El Bilegi Bolgesi
+    description: Right hand-wrist region.
+  - code: "17"
+    label: Sol El-El Bilegi Bolgesi
+    description: Left hand-wrist region.
+  - code: "18"
+    label: Sag Kalca Bolgesi
+    description: Right hip region.
+  - code: "19"
+    label: Sol Kalca Bolgesi
+    description: Left hip region.
+  - code: "20"
+    label: Sag Diz Bolgesi
+    description: Right knee region.
+  - code: "21"
+    label: Sol Diz Bolgesi
+    description: Left knee region.
+  - code: "22"
+    label: Sag Ayak-Ayak Bilegi Bolgesi
+    description: Right foot-ankle region.
+  - code: "23"
+    label: Sol Ayak-Ayak Bilegi Bolgesi
+    description: Left foot-ankle region.
+  - code: "11"
+    label: Tum Vucut Bolgesi
+    description: Whole-body region.
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 274
+    confidence: extracted
+    notes: "Guide order preserved verbatim: the whole-body code 11 is listed AFTER codes 12-23 on s.275 — an ordering anomaly, not a registration choice."
+status: reviewed
