@@ -1,0 +1,126 @@
+id: RaporBilgisiDVO
+domain: rapor
+direction: input
+fields:
+  - name: raporTesisKodu
+    displayName: Rapor Tesis Kodu
+    type: integer
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: null
+    description: Code of the facility that issued the report. Ignored when TakipNoileRaporBilgisiKaydet is used — the facility is resolved from the tracking number (s.268).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 268
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: raporTarih
+    displayName: Rapor Tarihi
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: 10
+    description: 'Report issue date, "dd.mm.yyyy"; guide note: rapor veriliş tarihi girilmelidir. Parameter name row-wrapped ("tarih") in the guide — aligned with the RaporOkuDVO naming (4.4.3.c).'
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 268
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: raporNo
+    displayName: Rapor No
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: 20
+    description: Report number. Parameter name row-wrapped ("no") in the guide — aligned with the RaporOkuDVO naming (4.4.3.c).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 268
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: raporTakipNo
+    displayName: Rapor Takip No
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: 20
+    description: Report tracking number (s.268).
+    sensitive: false
+    syntheticOnlyRecommended: true
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 268
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: raporSiraNo
+    displayName: Rapor Sira No
+    type: integer
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: null
+    description: Report sequence number; Integer here unlike RaporOkuDVO's String raporSiraNo — intra-guide divergence preserved (s.268 vs s.280).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 268
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: aVakaTKaza
+    displayName: Adli Vaka / Trafik Kazasi
+    type: enum
+    enumRef: adli-vaka-durumu
+    codeSystem: null
+    required: true
+    length: null
+    description: Legal-case / traffic-accident flag for illness, occupational-disease and work-accident cases (s.268).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 268
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 268
+    confidence: extracted
+    section: 4.4 Rapor Bilgisi Kayit Metotlari
+status: reviewed

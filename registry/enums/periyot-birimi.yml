@@ -1,0 +1,31 @@
+id: periyot-birimi
+displayName: Kullanim Periyot Birimi
+values:
+  - code: "1"
+    label: Dakika
+    description: Minute.
+  - code: "2"
+    label: Saat
+    description: Hour.
+  - code: "3"
+    label: Gun
+    description: Day.
+  - code: "4"
+    label: Hafta
+    description: Week.
+  - code: "5"
+    label: Ay
+    description: Month.
+  - code: "6"
+    label: Yil
+    description: Year.
+  - code: "7"
+    label: Omur Boyu
+    description: Lifetime.
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 278
+    confidence: extracted
+status: reviewed

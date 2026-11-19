@@ -1,0 +1,16 @@
+id: olum-durumu
+displayName: Olum Durumu
+values:
+  - code: "1"
+    label: Sag
+    description: Insured alive.
+  - code: "2"
+    label: Olu
+    description: Insured deceased.
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 255
+    confidence: extracted
+status: reviewed

@@ -1,0 +1,26 @@
+id: isgoremezlik-rapor-turu
+displayName: Isgoremezlik Rapor Turu
+values:
+  - code: "1"
+    label: Is Kazasi
+    description: Work incapacity report branch.
+  - code: "2"
+    label: Meslek Hastaligi
+    description: Occupational disease branch.
+  - code: "3"
+    label: Hastalik
+    description: Illness branch.
+  - code: "4"
+    label: Analik
+    description: Maternity branch.
+  - code: "5"
+    label: Emzirme
+    description: Nursing branch.
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 254
+    confidence: extracted
+    notes: "Drives the conditional branches of IsgoremezlikRaporDVO (s.255): turu 1 → isKazasiRaporu, 2 → meslekHastaligiRaporu, 3 → hastalikRaporu, 4 → analikRaporu, 5 → emzirmeRaporu zorunlu."
+status: reviewed
