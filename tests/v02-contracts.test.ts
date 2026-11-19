@@ -105,8 +105,8 @@ describe("v0.2 contracts (Group 11)", () => {
     const manifest = JSON.parse(
       readFileSync(resolve(root, "dist", "manifest.json"), "utf8"),
     ) as { counts: Record<string, number> };
-    expect(manifest.counts.dvos).toBe(106);
-    expect(manifest.counts.methods).toBe(32);
+    expect(manifest.counts.dvos).toBe(119);
+    expect(manifest.counts.methods).toBe(36);
   });
 
   it("ships the non-authoritative extraction workspace (PRD 25.4)", () => {

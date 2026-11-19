@@ -92,16 +92,17 @@ function schemaValidate(
 }
 
 describe("reference-validation (Group 2)", () => {
-  it("has exactly 4 service registry files", () => {
+  it("has exactly 5 service registry files", () => {
     expect(services.map((s) => s.file).sort()).toEqual([
       "fatura-kayit.yml",
       "hasta-kabul.yml",
       "hizmet-kayit.yml",
       "rapor.yml",
+      "yardimci-islemler.yml",
     ]);
   });
 
-  it("has exactly 30 method registry files in 4 domains", () => {
+  it("has exactly 36 method registry files in 5 domains", () => {
     expect(methods.map((m) => m.file).sort()).toEqual([
       "fatura-kayit/fatura-iptal.yml",
       "fatura-kayit/fatura-kayit.yml",
@@ -135,6 +136,10 @@ describe("reference-validation (Group 2)", () => {
       "rapor/rapor-bilgisi-kaydet.yml",
       "rapor/rapor-bilgisi-sil.yml",
       "rapor/takip-no-ile-rapor-bilgisi-kaydet.yml",
+      "yardimci-islemler/doktor-ara.yml",
+      "yardimci-islemler/ilac-ara.yml",
+      "yardimci-islemler/saglik-tesisi-ara.yml",
+      "yardimci-islemler/takip-ara.yml",
     ]);
   });
 
@@ -251,7 +256,7 @@ describe("reference-validation (Group 2)", () => {
   });
 
   it("resolves every service WSDL reference in the manifest", () => {
-    expect(wsdlManifest.length).toBe(8);
+    expect(wsdlManifest.length).toBe(10);
     for (const s of services) {
       const slug = s.data.slug as string;
       const wsdl = s.data.wsdl as {

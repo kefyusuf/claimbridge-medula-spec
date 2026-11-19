@@ -136,8 +136,8 @@ describe("v0.3 cikis-iptal + oku (Group 26)", () => {
     const manifest = JSON.parse(
       readFileSync(resolve(root, "dist", "manifest.json"), "utf8"),
     ) as { counts: Record<string, number> };
-    expect(manifest.counts.dvos).toBe(106);
-    expect(manifest.counts.methods).toBe(32);
+    expect(manifest.counts.dvos).toBe(119);
+    expect(manifest.counts.methods).toBe(36);
   });
 });
 

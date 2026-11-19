@@ -127,6 +127,19 @@ const EXPECTED_DVO_FILES = [
   "rapor/hot-rapor-bilgisi-dvo.yml",
   "rapor/tup-bebek-rapor-bilgisi-dvo.yml",
   "rapor/eswl-tas-bilgisi-dvo.yml",
+  "yardimci-islemler/saglik-tesisi-ara-giris-dvo.yml",
+  "yardimci-islemler/saglik-tesisi-ara-cevap-dvo.yml",
+  "yardimci-islemler/saglik-tesisi-list-dvo.yml",
+  "yardimci-islemler/doktor-ara-giris-dvo.yml",
+  "yardimci-islemler/doktor-ara-cevap-dvo.yml",
+  "yardimci-islemler/doktor-list-dvo.yml",
+  "yardimci-islemler/takip-ara-giris-dvo.yml",
+  "yardimci-islemler/takip-ara-cevap-dvo.yml",
+  "yardimci-islemler/ilac-ara-giris-dvo.yml",
+  "yardimci-islemler/ilac-ara-cevap-dvo.yml",
+  "yardimci-islemler/ilac-list-dvo.yml",
+  "yardimci-islemler/fiyat-list-dvo.yml",
+  "yardimci-islemler/ilac-indirim-dvo.yml",
 ];
 
 const EXPECTED_ENUM_IDS = [
@@ -180,6 +193,8 @@ const EXPECTED_ENUM_IDS = [
   "ftr-vucut-bolgesi",
   "tup-bebek-turu",
   "tas-lokalizasyon",
+  "odenme-durumu",
+  "aktif-pasif",
 ];
 
 const EXPECTED_RULE_FILES = [
