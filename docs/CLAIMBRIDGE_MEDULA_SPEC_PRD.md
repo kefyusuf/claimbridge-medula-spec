@@ -1635,6 +1635,11 @@ No real patient/credential data exists.
 ### v0.3
 
 1. Add Rapor service group.
+   <!-- G43a (2026-11-19): rapor query group LANDED — service medula.hastane.rapor
+        + 5 query/correction methods + 7 DVOs + enum rapor-turu (11 values, s.280),
+        guide pages 279-283 verified; Integer 0-based sonucKodu divergence documented.
+        G43b next: RaporBilgisiKaydet/TakipNoileRaporBilgisiKaydet with the
+        RaporGirisDVO composite set (pages 252-279). -->
 2. Add Yardimci Islemler service group.
 3. Add more enums.
 4. Add richer scenario definitions.

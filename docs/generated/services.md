@@ -72,3 +72,23 @@ Service registration process that records medical services against an existing p
 - `medula.hastane.hizmet-kayit.hizmet-kaydi-oku`
 - `medula.hastane.hizmet-kayit.hizmet-kaydi-iptal`
 
+## Rapor Bilgisi Kayit (`medula.hastane.rapor`)
+
+Report information registry operations: report lookup by report key, deletion, drug report correction and lookups by report tracking number or citizen ID. Registration (RaporBilgisiKaydet / TakipNoileRaporBilgisiKaydet) lands with G43b once the RaporGirisDVO composite set is extracted.
+
+| Field | Value |
+| --- | --- |
+| Slug | rapor |
+| Status | reviewed |
+| Production WSDL | wsdl.rapor.production |
+| Test WSDL | wsdl.rapor.test |
+| Source refs | medula-hastane-guide-3-1-1-2026-10-19 |
+
+**Methods**
+
+- `medula.hastane.rapor.rapor-bilgisi-bul`
+- `medula.hastane.rapor.rapor-bilgisi-sil`
+- `medula.hastane.rapor.ilac-rapor-duzelt`
+- `medula.hastane.rapor.rapor-bilgisi-bul-rapor-takip-nodan`
+- `medula.hastane.rapor.rapor-bilgisi-bul-tc-kimlik-nodan`
+

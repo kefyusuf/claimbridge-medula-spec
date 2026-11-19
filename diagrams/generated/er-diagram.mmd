@@ -312,6 +312,18 @@ erDiagram
     string birlikteYapilanIslemSUTKodu
     string birlikteYapilanIslemHizmetSunucuRefNo
   }
+  IlacRaporDuzeltDVO {
+    string drTescilNo
+    string duzeltmeBilgisi
+    string duzeltmeTarihi
+    string raporNo
+    string raporTarihi
+    enum raporTuru
+    integer tesisKodu
+    array raporEtkinMaddeler
+    array tanilar
+    array ilacTeshisler
+  }
   IslemDetayDVO {
     string islemSiraNo
     decimal islemTutari
@@ -507,6 +519,47 @@ erDiagram
     enum ekdsYontemGerekce
     string doktorTescilNo
   }
+  RaporCevapDVO {
+    integer raporTakipNo
+    object analikRapor
+    object dogumOncesiCalisabilirRapor
+    object dogumRapor
+    object ilacRapor
+    object maluliyetRapor
+    object protezRapor
+    object tedaviRapor
+    object isgoremezlikRapor
+    array isgoremezlikRaporEkleri
+    string sonucAciklamasi
+    integer sonucKodu
+    enum raporTuru
+  }
+  RaporCevapTCKimlikNodanDVO {
+    array raporlar
+    string sonucAciklamasi
+    integer sonucKodu
+  }
+  RaporOkuDVO {
+    integer raporTesisKodu
+    string raporNo
+    string raporTarih
+    enum raporTuru
+    string raporSiraNo
+  }
+  RaporOkuRaporTakipNodanDVO {
+    string raporTakipNo
+    integer kullaniciTesisKodu
+    string raporSiraNo
+  }
+  RaporOkuTCKimlikNodanDVO {
+    string tckimlikNo
+    enum raporTuru
+    integer kullaniciTesisKodu
+  }
+  RaporSorguDVO {
+    object raporBilgisi
+    integer kullaniciTesisKodu
+  }
   SevkBildirGirisDVO {
     string takipNo
     integer tesisKodu
@@ -625,6 +678,16 @@ erDiagram
   medula_hastane_hizmet_kayit_hizmet_kaydi_oku ||--|| HizmetOkuCevapDVO : outputDvo
   medula_hastane_hizmet_kayit_hizmet_kayit ||--|| HizmetKayitGirisDVO : inputDvo
   medula_hastane_hizmet_kayit_hizmet_kayit ||--|| HizmetKayitCevapDVO : outputDvo
+  medula_hastane_rapor_ilac_rapor_duzelt ||--|| IlacRaporDuzeltDVO : inputDvo
+  medula_hastane_rapor_ilac_rapor_duzelt ||--|| RaporCevapDVO : outputDvo
+  medula_hastane_rapor_rapor_bilgisi_bul ||--|| RaporSorguDVO : inputDvo
+  medula_hastane_rapor_rapor_bilgisi_bul ||--|| RaporCevapDVO : outputDvo
+  medula_hastane_rapor_rapor_bilgisi_bul_rapor_takip_nodan ||--|| RaporOkuRaporTakipNodanDVO : inputDvo
+  medula_hastane_rapor_rapor_bilgisi_bul_rapor_takip_nodan ||--|| RaporCevapDVO : outputDvo
+  medula_hastane_rapor_rapor_bilgisi_bul_tc_kimlik_nodan ||--|| RaporOkuTCKimlikNodanDVO : inputDvo
+  medula_hastane_rapor_rapor_bilgisi_bul_tc_kimlik_nodan ||--|| RaporCevapTCKimlikNodanDVO : outputDvo
+  medula_hastane_rapor_rapor_bilgisi_sil ||--|| RaporSorguDVO : inputDvo
+  medula_hastane_rapor_rapor_bilgisi_sil ||--|| RaporCevapDVO : outputDvo
   AmeliyatveGirisimBilgisiDVO }o--|| ayni_farkli_kesi : enumRef
   AmeliyatveGirisimBilgisiDVO }o--|| euroscore : enumRef
   DigerIslemBilgisiDVO }o--|| ayni_farkli_kesi : enumRef
@@ -632,6 +695,7 @@ erDiagram
   HizmetDVO }o--|| odeme_sorgu_durum : enumRef
   HizmetDetayDVO }o--|| taburcu_kodu : enumRef
   IlacBilgisiDVO }o--|| ilac_turu : enumRef
+  IlacRaporDuzeltDVO }o--|| rapor_turu : enumRef
   MajistralHamMaddeDVO }o--|| majistral_ham_madde : enumRef
   MajistralHamMaddeDVO }o--|| ham_madde_birimi : enumRef
   MajistralIlacDVO }o--|| preparat_turu : enumRef
@@ -645,6 +709,9 @@ erDiagram
   ProvizyonGirisDVO }o--|| tedavi_tipi : enumRef
   ProvizyonGirisDVO }o--|| takip_tipi : enumRef
   ProvizyonGirisDVO }o--|| ekds_yontem_gerekce : enumRef
+  RaporCevapDVO }o--|| rapor_turu : enumRef
+  RaporOkuDVO }o--|| rapor_turu : enumRef
+  RaporOkuTCKimlikNodanDVO }o--|| rapor_turu : enumRef
   TahlilBilgisiDVO }o--|| tahlil_tipi : enumRef
   TahlilBilgisiDVO }o--|| ayni_farkli_kesi : enumRef
   TakipDVO }o--|| takip_tipi : enumRef

@@ -602,3 +602,123 @@
 | deletes | — |
 | generates | `islemSiraNo` |
 
+## `medula.hastane.rapor.ilac-rapor-duzelt`
+
+| Field | Value |
+| --- | --- |
+| Service | medula.hastane.rapor |
+| Documentation heading | IlacRaporDuzelt |
+| Operation name | IlacRaporDuzelt |
+| Input DVO | IlacRaporDuzeltDVO |
+| Output DVO | RaporCevapDVO |
+| Success | sonucKodu = 0 (sonucAciklamasi) |
+| Sandbox supported |  |
+| Status | reviewed |
+| Source refs | medula-hastane-guide-3-1-1-2026-10-19 |
+
+**State effects**
+
+| Effect | Targets |
+| --- | --- |
+| creates | — |
+| reads | `rapor` |
+| updates | — |
+| deletes | — |
+| generates | — |
+
+## `medula.hastane.rapor.rapor-bilgisi-bul`
+
+| Field | Value |
+| --- | --- |
+| Service | medula.hastane.rapor |
+| Documentation heading | RaporBilgisiBul |
+| Operation name | RaporBilgisiBul |
+| Input DVO | RaporSorguDVO |
+| Output DVO | RaporCevapDVO |
+| Success | sonucKodu = 0 (sonucAciklamasi) |
+| Sandbox supported |  |
+| Status | reviewed |
+| Source refs | medula-hastane-guide-3-1-1-2026-10-19 |
+
+**State effects**
+
+| Effect | Targets |
+| --- | --- |
+| creates | — |
+| reads | `rapor` |
+| updates | — |
+| deletes | — |
+| generates | — |
+
+## `medula.hastane.rapor.rapor-bilgisi-bul-rapor-takip-nodan`
+
+| Field | Value |
+| --- | --- |
+| Service | medula.hastane.rapor |
+| Documentation heading | RaporBilgisiBulRaporTakipNodan |
+| Operation name | RaporBilgisiBulRaporTakipNodan |
+| Input DVO | RaporOkuRaporTakipNodanDVO |
+| Output DVO | RaporCevapDVO |
+| Success | sonucKodu = 0 (sonucAciklamasi) |
+| Sandbox supported |  |
+| Status | reviewed |
+| Source refs | medula-hastane-guide-3-1-1-2026-10-19 |
+
+**State effects**
+
+| Effect | Targets |
+| --- | --- |
+| creates | — |
+| reads | `rapor` |
+| updates | — |
+| deletes | — |
+| generates | — |
+
+## `medula.hastane.rapor.rapor-bilgisi-bul-tc-kimlik-nodan`
+
+| Field | Value |
+| --- | --- |
+| Service | medula.hastane.rapor |
+| Documentation heading | RaporBilgisiBulTCKimlikNodan |
+| Operation name | RaporBilgisiBulTCKimlikNodan |
+| Input DVO | RaporOkuTCKimlikNodanDVO |
+| Output DVO | RaporCevapTCKimlikNodanDVO |
+| Success | sonucKodu = 0 (sonucAciklamasi) |
+| Sandbox supported |  |
+| Status | reviewed |
+| Source refs | medula-hastane-guide-3-1-1-2026-10-19 |
+
+**State effects**
+
+| Effect | Targets |
+| --- | --- |
+| creates | — |
+| reads | `rapor` |
+| updates | — |
+| deletes | — |
+| generates | — |
+
+## `medula.hastane.rapor.rapor-bilgisi-sil`
+
+| Field | Value |
+| --- | --- |
+| Service | medula.hastane.rapor |
+| Documentation heading | RaporBilgisiSil |
+| Operation name | RaporBilgisiSil |
+| Input DVO | RaporSorguDVO |
+| Output DVO | RaporCevapDVO |
+| Success | sonucKodu = 0 (sonucAciklamasi) |
+| Sandbox supported |  |
+| Status | reviewed |
+| Source refs | medula-hastane-guide-3-1-1-2026-10-19 |
+
+**State effects**
+
+| Effect | Targets |
+| --- | --- |
+| creates | — |
+| reads | `rapor` |
+| updates | — |
+| deletes | — |
+| generates | — |
+
