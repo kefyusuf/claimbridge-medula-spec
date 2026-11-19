@@ -93,7 +93,7 @@ describe("v0.3 kemik-oku (Group 29)", () => {
     const manifest = JSON.parse(
       readFileSync(resolve(root, "dist", "manifest.json"), "utf8"),
     ) as { counts: Record<string, number> };
-    expect(manifest.counts.dvos).toBe(77);
-    expect(manifest.counts.methods).toBe(30);
+    expect(manifest.counts.dvos).toBe(85);
+    expect(manifest.counts.methods).toBe(32);
   });
 });

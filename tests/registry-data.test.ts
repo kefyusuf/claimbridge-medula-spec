@@ -98,6 +98,14 @@ const EXPECTED_DVO_FILES = [
   "rapor/rapor-oku-tc-kimlik-nodan-dvo.yml",
   "rapor/rapor-sorgu-dvo.yml",
   "rapor/ilac-rapor-duzelt-dvo.yml",
+  "rapor/rapor-giris-dvo.yml",
+  "rapor/isgoremezlik-rapor-dvo.yml",
+  "rapor/is-kazasi-rapor-dvo.yml",
+  "rapor/rapor-bilgisi-dvo.yml",
+  "rapor/hak-sahibi-bilgisi-dvo.yml",
+  "rapor/doktor-bilgisi-dvo.yml",
+  "rapor/rapor-etkin-madde-dvo.yml",
+  "rapor/ilac-teshis-bilgi-dvo.yml",
 ];
 
 const EXPECTED_ENUM_IDS = [
@@ -125,6 +133,17 @@ const EXPECTED_ENUM_IDS = [
   "ayni-farkli-kesi",
   "euroscore",
   "rapor-turu",
+  "isgoremezlik-rapor-turu",
+  "rapor-duzenleme-turu",
+  "olum-durumu",
+  "devam-durumu",
+  "yatis-devam-durumu",
+  "yatis-devam-is-kazasi",
+  "adli-vaka-durumu",
+  "doktor-tipi",
+  "doz-birimi",
+  "periyot-birimi",
+  "devredilen-kurum-rapor",
 ];
 
 const EXPECTED_RULE_FILES = [

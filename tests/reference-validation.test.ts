@@ -132,7 +132,9 @@ describe("reference-validation (Group 2)", () => {
       "rapor/rapor-bilgisi-bul-rapor-takip-nodan.yml",
       "rapor/rapor-bilgisi-bul-tc-kimlik-nodan.yml",
       "rapor/rapor-bilgisi-bul.yml",
+      "rapor/rapor-bilgisi-kaydet.yml",
       "rapor/rapor-bilgisi-sil.yml",
+      "rapor/takip-no-ile-rapor-bilgisi-kaydet.yml",
     ]);
   });
 
