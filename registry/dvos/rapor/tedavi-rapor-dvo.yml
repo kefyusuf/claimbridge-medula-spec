@@ -1,0 +1,69 @@
+id: TedaviRaporDVO
+domain: rapor
+direction: input
+fields:
+  - name: raporDVO
+    displayName: Rapor Bilgileri
+    type: object
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: null
+    description: Report core; shape Tablo 4.4.1.k (RaporDVO, this registry).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 261
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: islemler
+    displayName: Tedavi Islem Bilgileri
+    type: array
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: null
+    description: Treatment procedures; only the object matching tedaviRaporTuru is populated, the rest NULL; item shape Tablo 4.4.1.o (TedaviIslemBilgisiDVO, this registry) (s.262).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 262
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: tedaviRaporTuru
+    displayName: Tedavi Rapor Turu
+    type: enum
+    enumRef: tedavi-rapor-turu
+    codeSystem: null
+    required: true
+    length: null
+    description: Nine-value treatment type list (s.262).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 262
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 261
+    confidence: extracted
+    section: 4.4 Rapor Bilgisi Kayit Metotlari
+status: reviewed

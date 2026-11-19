@@ -17,6 +17,31 @@ erDiagram
     array cokluOzelDurum
     string raporTakipNo
   }
+  AnalikRaporDVO {
+    string baslangicTarihi
+    string bitisTarihi
+    enum raporDurumu
+    string isKontTarihi
+    string hastaneYatisTarihi
+    string hastaneCikisTarihi
+    string bebekDogumTarihi
+    string dogumOncBasTarihi
+    integer canliCocukSayisi
+    integer doganCocukSayisi
+    enum norSezFor
+    enum yatisDevam
+    enum aktarmaRaporVarmi
+    string aktarmaRaporTarihi
+    integer gebelikHaftasi
+    string taburcuTarihi
+    enum taburcuKodu
+    enum analikRaporTipi
+    enum gebelikTipi
+    integer gebelikHaftasi1
+    integer gebelikHaftasi2
+    integer bebekDogumHaftasi
+    integer aktarmaHaftasi
+  }
   BKDSDogrulamaDetayDVO {
     string dogrulananTckNo
     integer tesisKodu
@@ -54,6 +79,15 @@ erDiagram
     date baslangicTarihi
     date bitisTarihi
     string durum
+  }
+  BransGorusBilgisiDVO {
+    string bransKodu
+    string aciklama
+  }
+  CocukBilgisiDVO {
+    enum cinsiyet
+    string kilo
+    string dogumSaati
   }
   DigerIslemBilgisiDVO {
     integer adet
@@ -110,6 +144,13 @@ erDiagram
   EKDSBelgeGerekenTakipSorguGirisDVO {
     integer tesisKodu
     integer evrakID
+  }
+  EmzirmeRaporDVO {
+    string bebekDogumTarihi
+    string dogumOncBasTarihi
+    integer canliCocukSayisi
+    string anneTcKimlikNo
+    integer doganCocukSayisi
   }
   FaturaCevapDVO {
     string sonucKodu
@@ -224,6 +265,10 @@ erDiagram
     string aciklama
     array cokluOzelDurum
   }
+  HastaYatisBilgisiRaporDVO {
+    string yatisTarihi
+    string cikisTarihi
+  }
   HastaYatisOkuCevapDVO {
     string saglikTesisiKodu
     string hastaBasvuruNo
@@ -237,6 +282,18 @@ erDiagram
   HastaYatisOkuDVO {
     string hastaBasvuruNo
     integer saglikTesisKodu
+  }
+  HastalikRaporDVO {
+    string baslangicTarihi
+    string bitisTarihi
+    enum raporDurumu
+    string isKontTarihi
+    string hastaneYatisTarihi
+    string hastaneCikisTarihi
+    enum nuks
+    enum yatisDevam
+    string taburcuTarihi
+    enum taburcuKodu
   }
   HataliIslemBilgisiDVO {
     string hataKodu
@@ -338,6 +395,11 @@ erDiagram
     string birlikteYapilanIslemSUTKodu
     string birlikteYapilanIslemHizmetSunucuRefNo
   }
+  IlacRaporDVO {
+    object raporDVO
+    array raporEtkinMaddeler
+    string takipFormuNo
+  }
   IlacRaporDuzeltDVO {
     string drTescilNo
     string duzeltmeBilgisi
@@ -368,6 +430,8 @@ erDiagram
     string yaraninTuru
     string yaraninYeri
     string taburcuTarihi
+    enum taburcuKodu
+    string isKazasiTarihi
   }
   IsgoremezlikRaporDVO {
     object raporBilgisi
@@ -395,6 +459,22 @@ erDiagram
     object hakSahibi
     enum devammi
     enum yatisDevam
+  }
+  IsgoremezlikRaporEkDVO {
+    string aciklama
+    string bitisTarihi
+    enum durum
+    enum duzenlemeTuru
+    enum hastaYatisVarMi
+    enum kontrolMu
+    string kontrolTarihi
+    string protokolNo
+    string protokolTarihi
+    array yatislar
+    object raporBilgisiDVO
+    array doktorlar
+    array tanilar
+    integer kullaniciTesisKodu
   }
   IslemDetayDVO {
     string islemSiraNo
@@ -537,6 +617,27 @@ erDiagram
     string birlikteYapilanIslemSUTKodu
     string birlikteYapilanIslemHizmetSunucuRefNo
   }
+  MalzemeBilgisiRaporDVO {
+    string malzemeKodu
+    string malzemeAdi
+    enum malzemeTuru
+    integer adet
+  }
+  MeslekHastaligiRaporDVO {
+    string baslangicTarihi
+    string bitisTarihi
+    enum raporDurumu
+    string isKontTarihi
+    string hastaneYatisTarihi
+    string hastaneCikisTarihi
+    enum nuks
+    enum yatisDevam
+    string yaraninTuru
+    string yaraninYeri
+    string taburcuTarihi
+    enum taburcuKodu
+    string isKazasiTarihi
+  }
   MuayeneBilgisiDVO {
     string bransKodu
     string drTescilNo
@@ -618,6 +719,25 @@ erDiagram
     array raporlar
     string sonucAciklamasi
     integer sonucKodu
+  }
+  RaporDVO {
+    object raporBilgisi
+    enum turu
+    string baslangicTarihi
+    string bitisTarihi
+    enum duzenlemeTuru
+    object hakSahibi
+    string protokolNo
+    string protokolTarihi
+    string durum
+    string aciklama
+    array doktorlar
+    array tanilar
+    array teshisler
+    array ilacTeshisler
+    string takipNo
+    string klinikTani
+    integer ozelDurum
   }
   RaporEtkinMaddeDVO {
     string etkinMaddeKodu
@@ -725,6 +845,21 @@ erDiagram
     string ozelDurum
     array cokluOzelDurum
   }
+  TedaviIslemBilgisiDVO {
+    object diyalizRaporBilgisi
+    object eswlRaporBilgisi
+    object eswtRaporBilgisi
+    object ftrRaporBilgisi
+    object hotRaporBilgisi
+    object tupBebekRaporBilgisi
+    object evHemodiyaliziRaporBilgisi
+    object pulmonerRaporBilgisi
+  }
+  TedaviRaporDVO {
+    object raporDVO
+    array islemler
+    enum tedaviRaporTuru
+  }
   medula_hastane_fatura_kayit_fatura_iptal ||--|| FaturaIptalGirisDVO : inputDvo
   medula_hastane_fatura_kayit_fatura_iptal ||--|| FaturaIptalCevapDVO : outputDvo
   medula_hastane_fatura_kayit_fatura_kayit ||--|| FaturaGirisDVO : inputDvo
@@ -789,28 +924,50 @@ erDiagram
   medula_hastane_rapor_takip_no_ile_rapor_bilgisi_kaydet ||--|| RaporCevapDVO : outputDvo
   AmeliyatveGirisimBilgisiDVO }o--|| ayni_farkli_kesi : enumRef
   AmeliyatveGirisimBilgisiDVO }o--|| euroscore : enumRef
+  AnalikRaporDVO }o--|| calisma_durumu : enumRef
+  AnalikRaporDVO }o--|| nor_sez_for : enumRef
+  AnalikRaporDVO }o--|| yatis_devam_is_kazasi : enumRef
+  AnalikRaporDVO }o--|| aktarma_rapor : enumRef
+  AnalikRaporDVO }o--|| taburcu_kodu : enumRef
+  AnalikRaporDVO }o--|| analik_rapor_tipi : enumRef
+  AnalikRaporDVO }o--|| gebelik_tipi : enumRef
+  CocukBilgisiDVO }o--|| cinsiyet : enumRef
   DigerIslemBilgisiDVO }o--|| ayni_farkli_kesi : enumRef
   DoktorBilgisiDVO }o--|| doktor_tipi : enumRef
   FaturaCevapDetayDVO }o--|| taburcu_kodu : enumRef
   HakSahibiBilgisiDVO }o--|| sigortali_turu : enumRef
   HakSahibiBilgisiDVO }o--|| devredilen_kurum_rapor : enumRef
   HakSahibiBilgisiDVO }o--|| provizyon_tipi : enumRef
+  HastalikRaporDVO }o--|| calisma_durumu : enumRef
+  HastalikRaporDVO }o--|| nuks_durumu : enumRef
+  HastalikRaporDVO }o--|| yatis_devam_is_kazasi : enumRef
+  HastalikRaporDVO }o--|| taburcu_kodu : enumRef
   HizmetDVO }o--|| odeme_sorgu_durum : enumRef
   HizmetDetayDVO }o--|| taburcu_kodu : enumRef
   IlacBilgisiDVO }o--|| ilac_turu : enumRef
   IlacRaporDuzeltDVO }o--|| rapor_turu : enumRef
   IsKazasiRaporDVO }o--|| yatis_devam_is_kazasi : enumRef
+  IsKazasiRaporDVO }o--|| taburcu_kodu : enumRef
   IsgoremezlikRaporDVO }o--|| isgoremezlik_rapor_turu : enumRef
   IsgoremezlikRaporDVO }o--|| rapor_duzenleme_turu : enumRef
   IsgoremezlikRaporDVO }o--|| olum_durumu : enumRef
   IsgoremezlikRaporDVO }o--|| devam_durumu : enumRef
   IsgoremezlikRaporDVO }o--|| yatis_devam_durumu : enumRef
+  IsgoremezlikRaporEkDVO }o--|| ek_durumu : enumRef
+  IsgoremezlikRaporEkDVO }o--|| rapor_duzenleme_turu : enumRef
+  IsgoremezlikRaporEkDVO }o--|| evet_hayir : enumRef
+  IsgoremezlikRaporEkDVO }o--|| evet_hayir : enumRef
   MajistralHamMaddeDVO }o--|| majistral_ham_madde : enumRef
   MajistralHamMaddeDVO }o--|| ham_madde_birimi : enumRef
   MajistralIlacDVO }o--|| preparat_turu : enumRef
   MajistralIlacDVO }o--|| ambalaj_turu : enumRef
   MajistralIlacDVO }o--|| ambalaj_boyutu : enumRef
   MalzemeBilgisiDVO }o--|| malzeme_turu : enumRef
+  MalzemeBilgisiRaporDVO }o--|| malzeme_turu : enumRef
+  MeslekHastaligiRaporDVO }o--|| calisma_durumu : enumRef
+  MeslekHastaligiRaporDVO }o--|| nuks_durumu : enumRef
+  MeslekHastaligiRaporDVO }o--|| yatis_devam_is_kazasi : enumRef
+  MeslekHastaligiRaporDVO }o--|| taburcu_kodu : enumRef
   ProvizyonGirisDVO }o--|| sigortali_turu : enumRef
   ProvizyonGirisDVO }o--|| devredilen_kurum : enumRef
   ProvizyonGirisDVO }o--|| provizyon_tipi : enumRef
@@ -820,6 +977,8 @@ erDiagram
   ProvizyonGirisDVO }o--|| ekds_yontem_gerekce : enumRef
   RaporBilgisiDVO }o--|| adli_vaka_durumu : enumRef
   RaporCevapDVO }o--|| rapor_turu : enumRef
+  RaporDVO }o--|| rapor_turu : enumRef
+  RaporDVO }o--|| rapor_duzenleme_turu : enumRef
   RaporEtkinMaddeDVO }o--|| doz_birimi : enumRef
   RaporEtkinMaddeDVO }o--|| periyot_birimi : enumRef
   RaporOkuDVO }o--|| rapor_turu : enumRef
@@ -830,3 +989,4 @@ erDiagram
   TakipDVO }o--|| takip_durumu : enumRef
   TakipDVO }o--|| ekds_yontem_gerekce : enumRef
   TaniBilgisiDVO }o--|| tani_tipi : enumRef
+  TedaviRaporDVO }o--|| tedavi_rapor_turu : enumRef

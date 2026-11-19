@@ -1,0 +1,37 @@
+id: tedavi-rapor-turu
+displayName: Tedavi Rapor Turu
+values:
+  - code: "1"
+    label: Diyaliz
+    description: Dialysis.
+  - code: "2"
+    label: Hiperbarik Oksijen Tedavisi
+    description: Hyperbaric oxygen therapy.
+  - code: "3"
+    label: ESWT
+    description: Extracorporeal shockwave therapy.
+  - code: "4"
+    label: Tupbebek Tedavisi
+    description: IVF treatment.
+  - code: "5"
+    label: Fizik Tedavi ve Rehabilitasyon
+    description: Physical therapy and rehabilitation.
+  - code: "6"
+    label: ESWL
+    description: Extracorporeal shockwave lithotripsy.
+  - code: "7"
+    label: Fizik Tedavi ve Rehabilitasyon - Trafik Kazasi
+    description: Physical therapy — traffic accident.
+  - code: "8"
+    label: Ev Hemodiyalizi
+    description: Home haemodialysis.
+  - code: "9"
+    label: Pulmoner Rehabilitasyon
+    description: Pulmonary rehabilitation.
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 262
+    confidence: extracted
+status: reviewed

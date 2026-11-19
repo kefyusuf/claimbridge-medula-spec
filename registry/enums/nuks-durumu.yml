@@ -1,0 +1,17 @@
+id: nuks-durumu
+displayName: Nuks Durumu
+values:
+  - code: "1"
+    label: Nuks Var
+    description: Relapse present.
+  - code: "2"
+    label: Nuks Yok
+    description: No relapse.
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 257
+    confidence: extracted
+    notes: Recurring across IsKazasiRaporDVO (s.257), MeslekHastaligiRaporDVO (s.258) and HastalikRaporDVO (s.263); the illness branch gives no length.
+status: reviewed

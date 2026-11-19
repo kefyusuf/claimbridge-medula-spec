@@ -1,0 +1,343 @@
+id: RaporDVO
+domain: rapor
+direction: input
+fields:
+  - name: raporBilgisi
+    displayName: Rapor Bilgisi
+    type: object
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: null
+    description: Report key; shape Tablo 4.4.1.r (RaporBilgisiDVO, this registry).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 263
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: turu
+    displayName: Raporun Turu
+    type: enum
+    enumRef: rapor-turu
+    codeSystem: null
+    required: true
+    length: 1
+    description: Report type (s.263-264).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 263
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: baslangicTarihi
+    displayName: Rapor Baslangic Tarihi
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: 10
+    description: 'Report start date, "dd.mm.yyyy"; guide: Evet for all reports except prosthesis and fit-to-work-before-birth (s.264).'
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 264
+        confidence: extracted
+    conditionalRequired:
+      - condition: the report is not a prosthesis or fit-to-work-before-birth report
+        note: "guide: Protez ve Doğum öncesi çalışabilir raporu dışında kalan tüm raporlar için Evet (s.264)"
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: bitisTarihi
+    displayName: Rapor Bitis Tarihi
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: 10
+    description: Report end date, "dd.mm.yyyy"; same exception rule (s.264).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 264
+        confidence: extracted
+    conditionalRequired:
+      - condition: the report is not a prosthesis or fit-to-work-before-birth report
+        note: "guide: Protez raporu ve Doğum öncesi çalışabilir raporu dışında kalan tüm raporlar için Evet (s.264)"
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: duzenlemeTuru
+    displayName: Rapor Duzenleme Turu
+    type: enum
+    enumRef: rapor-duzenleme-turu
+    codeSystem: null
+    required: true
+    length: 1
+    description: Issuing style (s.264).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 264
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: hakSahibi
+    displayName: Hak Sahibi Bilgisi
+    type: object
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: null
+    description: Beneficiary; shape Tablo 4.4.1.s (HakSahibiBilgisiDVO, this registry); NULL when TakipNoileRaporBilgisiKaydet is used — resolved from the tracking number (s.264).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 264
+        confidence: extracted
+    conditionalRequired:
+      - condition: TakipNoileRaporBilgisiKaydet is used
+        note: "guide: bu alan NULL olarak gönderilmelidir (s.264)"
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: protokolNo
+    displayName: Protokol Numarasi
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: 20
+    description: Report protocol number (s.264).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 264
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: protokolTarihi
+    displayName: Protokol Tarihi
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: 10
+    description: Report protocol date, "dd.mm.yyyy" (s.264).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 264
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: durum
+    displayName: Rapor Durumu
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: 1
+    description: Sent empty; value list contains 1 = Taslak (draft) (s.264).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 264
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: aciklama
+    displayName: Aciklama
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: 5000
+    description: Report description (s.264).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 264
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: doktorlar
+    displayName: Doktor Bilgileri
+    type: array
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: null
+    description: Physicians; item shape Tablo 4.4.1.t (DoktorBilgisiDVO, this registry); sent as an array (s.264).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 264
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: tanilar
+    displayName: Tani Bilgileri
+    type: array
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Diagnoses; item shape Tablo 4.4.1.u (TaniBilgisiDVO, hizmet-kayit group); NOT sent for drug reports (s.264).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 264
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: teshisler
+    displayName: Teshis Bilgileri
+    type: array
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Diagnosis details; item shape Tablo 4.4.1.v (TeshisBilgisiDVO) — deferred to G43d; NOT sent for drug reports (s.264).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 264
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: ilacTeshisler
+    displayName: Ilac Teshis Bilgileri
+    type: array
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Drug diagnoses; item shape Tablo 4.4.1.gg (IlacTeshisBilgiDVO, this registry); MANDATORY for drug reports (s.264).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 264
+        confidence: extracted
+    conditionalRequired:
+      - condition: the report is a drug report
+        note: "guide: ilaç raporlarında gönderilmesi zorunlu (s.264)"
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: takipNo
+    displayName: Takip No
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: GSS-generated tracking number from the admission; filled when TakipNoileRaporBilgisiKaydet is used (s.265).
+    sensitive: false
+    syntheticOnlyRecommended: true
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 265
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: klinikTani
+    displayName: Klinik Tani
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: 255
+    description: Clinical diagnosis (s.265; parameter name row-wrapped in the guide).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 265
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: ozelDurum
+    displayName: Ozel Durum
+    type: integer
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Special-case code; 0 when none. 1 = surgery/botulinum for mobility, 2-3 = 3713-law disability categories (s.265). Full catalogue in Tablo 5.1 OzelDurumVO per the changelog.
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 265
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 263
+    confidence: extracted
+    section: 4.4 Rapor Bilgisi Kayit Metotlari
+status: reviewed

@@ -1,0 +1,17 @@
+id: evet-hayir
+displayName: Evet / Hayir
+values:
+  - code: E
+    label: Evet
+    description: Yes.
+  - code: H
+    label: Hayir
+    description: No.
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 276
+    confidence: extracted
+    notes: Generic E/H flag used by hastaYatisVarMi and kontrolMu on IsgoremezlikRaporEkDVO (s.276). The hasta-kabul group models its E/H fields as plain strings — the rapor group binds them.
+status: reviewed

@@ -61,6 +61,8 @@ to the PDF text extraction of `local-guide/official-guide.pdf`
 | Tablo 4.4.1.ff RaporEtkinMaddeDVO / 4.4.1.gg IlacTeshisBilgiDVO | 277-278 | drug-report item tables (G43b; ICD10Kodu typed TaniBilgisiDVO[] quirk) |
 | rapor-turu values (11) | 280, 282, 254 | registry enum rapor-turu |
 | rapor group code lists (10) | 254-258, 268-278 | isgoremezlik-rapor-turu, rapor-duzenleme-turu, olum-durumu, devam-durumu, yatis-devam-durumu, yatis-devam-is-kazasi, adli-vaka-durumu, doktor-tipi, doz-birimi, periyot-birimi |
+| G43c branch tables | 257-267, 276-277 | 4.4.1.e MeslekHastaligi, 4.4.1.f Analik, 4.4.1.g Emzirme, 4.4.1.h Ilac, 4.4.1.i Tedavi, 4.4.1.j Hastalik, 4.4.1.k RaporDVO, 4.4.1.l-p small composites, 4.4.1.ee IsgoremezlikRaporEk |
+| G43c code lists (10) | 259-262, 266, 276 | nor-sez-for, aktarma-rapor, analik-rapor-tipi, gebelik-tipi, cinsiyet, tedavi-rapor-turu, calisma-durumu, nuks-durumu, ek-durumu, evet-hayir |
 | WSDL raporIslemleriWS | 91, 353 | production + test endpoints |
 
 ## Not yet extracted
@@ -71,13 +73,11 @@ to the PDF text extraction of `local-guide/official-guide.pdf`
 - Nested composites (Tablo 4.2.1.c-l, 4.3.1.c-e, 4.3.3.c) — v0.3 scope.
 - New HastaKabul methods: ekds*, SevkBildir, HastaCikis*, KemikIligi*,
   HastaKabulKimlikDogrulama (disabled), UTS kesinleştirme.
-- Rapor remaining report branches (G43c): Tablo 4.4.1.e MeslekHastaligiRaporDVO,
-  4.4.1.f AnalikRaporDVO, 4.4.1.g EmzirmeRaporDVO, 4.4.1.h IlacRaporDVO,
-  4.4.1.i TedaviRaporDVO, 4.4.1.j HastalikRaporDVO, 4.4.1.k RaporDVO,
-  4.4.1.l-n composites (HastaYatis/Cocuk/Malzeme), 4.4.1.o-p
-  (TedaviIslem/BransGorus), uzman rapor tabloları 4.4.1.w-ii
-  (Diyaliz/ESWL/ESWT/FTR/HOT/TupBebek/EvHemodiyalizi/Pulmoner),
-  4.4.1.ee IsgoremezlikRaporEkDVO.
+- Rapor remaining uzman rapor tabloları (G43d): Tablo 4.4.1.v TeshisBilgisiDVO,
+  4.4.1.w DiyalizRaporBilgisiDVO, 4.4.1.x ESWLRaporBilgisiDVO,
+  4.4.1.y ESWTRaporBilgisiDVO, 4.4.1.z FTRRaporBilgisiDVO,
+  4.4.1.aa HOTRaporBilgisiDVO, 4.4.1.bb TupBebekRaporBilgisiDVO,
+  4.4.1.cc ESWLTasBilgisiDVO (pages 273-276).
 - E-İmzalı Rapor methods (section 4.6, pages 329-351, 12 methods) — v0.5+
   roadmap; requires the signature workflow states.
 - Yardımcı Web Servis methods (section 4.5, pages 283-321, 20 methods).

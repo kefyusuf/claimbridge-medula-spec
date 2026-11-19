@@ -1648,6 +1648,17 @@ No real patient/credential data exists.
         guide pages 252-278 verified. G43c next: remaining report branches
         (MeslekHastaligi/Analik/Emzirme/Hastalik/Ilac/Tedavi/Maluliyet/Dogum/
         DogumOncesi/Protez/uzman tablolar 4.4.1.e-l + ekleri ee). -->
+   <!-- G43c (2026-11-19): report-branch composites LANDED — MeslekHastaligi/
+        Analik/Emzirme/Ilac/Tedavi/Hastalik branches, shared RaporDVO core
+        (4.4.1.k), HastaYatisRapor/Cocuk/MalzemeRapor (id-disambiguated vs
+        hizmet-kayit) /TedaviIslem/BransGorus composites and
+        IsgoremezlikRaporEkDVO (ee); 10 new code-list enums incl. evet-hayir
+        (PRD 12.4 forced the enum bind) and IsKazasiRaporDVO completed with
+        the p.257 continuation rows (taburcuKodu + isKazasiTarihi);
+        guide pages 257-278 verified; MalzemeBilgisiRaporDVO.malzemeKodu
+        annotated codeSystem SUT per the sweep norm. G43d next: uzman rapor
+        tabloları (4.4.1.w-ii: Diyaliz/ESWL/ESWT/FTR/HOT/TupBebek/
+        ESWLTas/EvHemodiyalizi/Pulmoner) + TeshisBilgisiDVO (4.4.1.v). -->
 2. Add Yardimci Islemler service group.
 3. Add more enums.
 4. Add richer scenario definitions.

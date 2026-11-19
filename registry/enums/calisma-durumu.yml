@@ -1,0 +1,17 @@
+id: calisma-durumu
+displayName: Rapor Durumu (Calisir / Kontrol)
+values:
+  - code: "1"
+    label: Calisir
+    description: Fit to work.
+  - code: "2"
+    label: Kontrol
+    description: Under control examination.
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 256
+    confidence: extracted
+    notes: Recurring two-value list across the incapacity branches (IsKazasiRaporDVO s.256, MeslekHastaligiRaporDVO s.258, AnalikRaporDVO s.259, HastalikRaporDVO s.262); mandatory when there was hospitalization.
+status: reviewed

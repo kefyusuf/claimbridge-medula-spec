@@ -1,0 +1,107 @@
+id: EmzirmeRaporDVO
+domain: rapor
+direction: input
+fields:
+  - name: bebekDogumTarihi
+    displayName: Bebek Dogum Tarihi
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: 10
+    description: Birth date of the child, "dd.mm.yyyy" (s.261).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 261
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: dogumOncBasTarihi
+    displayName: Aktarma Raporunun Baslayacagi Zaman
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: 10
+    description: Start of the transferred report period, "dd.mm.yyyy" (s.261).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 261
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: canliCocukSayisi
+    displayName: Canli Cocuk Sayisi
+    type: integer
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Children alive after the birth (s.261).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 261
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: anneTcKimlikNo
+    displayName: Annenin TC Kimlik Numarasi
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: 11
+    description: Mother's citizen ID when the nursing report is issued on behalf of the father (s.261).
+    sensitive: true
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 261
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: doganCocukSayisi
+    displayName: Dogan Cocuk Sayisi
+    type: integer
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Children delivered (s.261).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 261
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 261
+    confidence: extracted
+    section: 4.4 Rapor Bilgisi Kayit Metotlari
+status: reviewed

@@ -1,0 +1,16 @@
+id: cinsiyet
+displayName: Cinsiyet
+values:
+  - code: K
+    label: Kiz
+    description: Girl.
+  - code: E
+    label: Erkek
+    description: Boy.
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 266
+    confidence: extracted
+status: reviewed

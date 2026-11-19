@@ -1,0 +1,20 @@
+id: nor-sez-for
+displayName: Dogum Cesidi
+values:
+  - code: "1"
+    label: Normal
+    description: Natural birth.
+  - code: "2"
+    label: Sezeryan
+    description: Caesarean birth.
+  - code: "3"
+    label: Forsebs
+    description: Forceps birth.
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 259
+    confidence: extracted
+    notes: Parameter name row-wrapped (norSezFor / Forsebs) in the guide; the three-value list is authoritative.
+status: reviewed

@@ -1,0 +1,449 @@
+id: AnalikRaporDVO
+domain: rapor
+direction: input
+fields:
+  - name: baslangicTarihi
+    displayName: Baslangic Tarihi
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: 10
+    description: Start date, "dd.mm.yyyy"; mandatory when the report is without hospitalization (s.260).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 260
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: bitisTarihi
+    displayName: Bitis Tarihi
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: 10
+    description: End date, "dd.mm.yyyy"; mandatory when the report is without hospitalization (s.260).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 260
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: raporDurumu
+    displayName: Rapor Durumu
+    type: enum
+    enumRef: calisma-durumu
+    codeSystem: null
+    required: false
+    length: 1
+    description: Fit-to-work or control state; mandatory when there was hospitalization (s.260).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 260
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: isKontTarihi
+    displayName: Isbasi / Kontrol Tarihi
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: 10
+    description: Return-to-work or control date, "dd.mm.yyyy" (s.260).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 260
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: hastaneYatisTarihi
+    displayName: Hastane Yatis Tarihi
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: 10
+    description: Hospital admission date, "dd.mm.yyyy"; mandatory when yatisDevam = 2 (s.260).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 260
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: hastaneCikisTarihi
+    displayName: Hastane Cikis Tarihi
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: 10
+    description: Hospital discharge date, "dd.mm.yyyy"; mandatory when yatisDevam = 3 (s.260).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 260
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: bebekDogumTarihi
+    displayName: Bebek Dogum Tarihi
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: 10
+    description: Birth date of the child, "dd.mm.yyyy" (s.259).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 259
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: dogumOncBasTarihi
+    displayName: Aktarma Raporunun Baslayacagi Zaman
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: 10
+    description: Start of the transferred report period, "dd.mm.yyyy" (s.259).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 259
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: canliCocukSayisi
+    displayName: Canli Cocuk Sayisi
+    type: integer
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Children alive after the birth (s.259).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 259
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: doganCocukSayisi
+    displayName: Dogan Cocuk Sayisi
+    type: integer
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Children delivered (s.259).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 259
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: norSezFor
+    displayName: Dogum Cesidi
+    type: enum
+    enumRef: nor-sez-for
+    codeSystem: null
+    required: true
+    length: 1
+    description: "Birth type: Normal / Sezeryan / Forsebs (s.259)."
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 259
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: yatisDevam
+    displayName: Yatis Devam
+    type: enum
+    enumRef: yatis-devam-is-kazasi
+    codeSystem: null
+    required: true
+    length: 1
+    description: Hospitalization state; three-value list shared with the work-accident branch (s.260).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 260
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: aktarmaRaporVarmi
+    displayName: Aktarma Raporu Varmi
+    type: enum
+    enumRef: aktarma-rapor
+    codeSystem: null
+    required: true
+    length: 1
+    description: Transfer-report flag (s.260).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 260
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: aktarmaRaporTarihi
+    displayName: Aktarma Rapor Tarihi
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: 10
+    description: Date of the week-32 doctor control, "dd.mm.yyyy" (s.260).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 260
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: gebelikHaftasi
+    displayName: Gebelik Haftasi
+    type: integer
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Pregnancy week at the time of the report (s.260).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 260
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: taburcuTarihi
+    displayName: Taburcu Tarihi
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: 10
+    description: Discharge date, "dd.mm.yyyy"; mandatory when yatisDevam = 3 (s.260).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 260
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: taburcuKodu
+    displayName: Taburcu Kodu
+    type: enum
+    enumRef: taburcu-kodu
+    codeSystem: null
+    required: false
+    length: null
+    description: Thirteen-value discharge code list, identical to the hasta-kabul group's taburcu-kodu enum (s.260).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 260
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: analikRaporTipi
+    displayName: Analik Rapor Tipi
+    type: enum
+    enumRef: analik-rapor-tipi
+    codeSystem: null
+    required: false
+    length: null
+    description: Pre-birth or post-birth maternity report (s.260).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 260
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: gebelikTipi
+    displayName: Gebelik Tipi
+    type: enum
+    enumRef: gebelik-tipi
+    codeSystem: null
+    required: false
+    length: null
+    description: Single or multiple pregnancy (s.260).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 260
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: gebelikHaftasi1
+    displayName: Gebelik Haftasi 1
+    type: integer
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Week at the pre-birth report visit, typically 32 (s.260).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 260
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: gebelikHaftasi2
+    displayName: Gebelik Haftasi 2
+    type: integer
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Week until which work may continue when the pre-birth report is issued as fit, typically 37 (s.260).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 260
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: bebekDogumHaftasi
+    displayName: Bebek Dogum Haftasi
+    type: integer
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Week of the birth, typically 40 (s.261).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 261
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: aktarmaHaftasi
+    displayName: Aktarma Haftasi
+    type: integer
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Weeks transferred from the pre-birth leave to the post-birth period; system-calculated (s.261).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 261
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 260
+    confidence: extracted
+    section: 4.4 Rapor Bilgisi Kayit Metotlari
+status: reviewed

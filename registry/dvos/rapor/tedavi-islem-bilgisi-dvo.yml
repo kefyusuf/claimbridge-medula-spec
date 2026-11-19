@@ -1,0 +1,164 @@
+id: TedaviIslemBilgisiDVO
+domain: rapor
+direction: input
+fields:
+  - name: diyalizRaporBilgisi
+    displayName: Diyaliz Rapor Bilgisi
+    type: object
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Populated when the treatment type is dialysis; shape Tablo 4.4.1.w (DiyalizRaporBilgisiDVO) — deferred to G43d.
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 267
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: eswlRaporBilgisi
+    displayName: ESWL Rapor Bilgisi
+    type: object
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Populated for ESWL; shape Tablo 4.4.1.x (ESWLRaporBilgisiDVO) — deferred to G43d.
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 267
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: eswtRaporBilgisi
+    displayName: ESWT Rapor Bilgisi
+    type: object
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Populated for ESWT; shape Tablo 4.4.1.y (ESWTRaporBilgisiDVO) — deferred to G43d.
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 267
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: ftrRaporBilgisi
+    displayName: FTR Rapor Bilgisi
+    type: object
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Populated for physical therapy; shape Tablo 4.4.1.z (FTRRaporBilgisiDVO) — deferred to G43d.
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 267
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: hotRaporBilgisi
+    displayName: HOT Rapor Bilgisi
+    type: object
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Populated for hyperbaric oxygen; shape Tablo 4.4.1.aa (HOTRaporBilgisiDVO) — deferred to G43d.
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 267
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: tupBebekRaporBilgisi
+    displayName: Tup Bebek Rapor Bilgisi
+    type: object
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Populated for IVF; shape Tablo 4.4.1.bb (TupBebekRaporBilgisiDVO) — deferred to G43d.
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 267
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: evHemodiyaliziRaporBilgisi
+    displayName: Ev Hemodiyalizi Rapor Bilgisi
+    type: object
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Populated for home haemodialysis; shape Tablo 4.4.1.hh (EvHemodiyaliziRaporBilgisiDVO) — deferred to G43d. The guide's reference column says 4.4.1.bb, a cross-reference typo (4.4.1.hh is the home-haemodialysis table, s.278).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 267
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: pulmonerRaporBilgisi
+    displayName: Pulmoner Rapor Bilgisi
+    type: object
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Populated for pulmonary rehabilitation; shape Tablo 4.4.1.ii (PulmonerRaporBilgisiDVO) — deferred to G43d.
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 267
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 267
+    confidence: extracted
+    section: 4.4 Rapor Bilgisi Kayit Metotlari
+status: reviewed
