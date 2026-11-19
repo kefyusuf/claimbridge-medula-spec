@@ -1,6 +1,6 @@
 {
   "specVersion": "0.4.0",
-  "generatedAt": "2026-11-18T21:08:48.582Z",
+  "generatedAt": "2026-11-19T18:34:33.059Z",
   "sources": [
     {
       "id": "medula-hastane-guide-2026-06-17",
@@ -131,6 +131,34 @@
         "medula.hastane.hizmet-kayit.hizmet-kaydi-iptal"
       ],
       "status": "draft"
+    },
+    {
+      "id": "medula.hastane.rapor",
+      "slug": "rapor",
+      "displayName": "Rapor Bilgisi Kayit",
+      "description": "Report information registry operations: report lookup by report key, deletion, drug report correction and lookups by report tracking number or citizen ID. Registration (RaporBilgisiKaydet / TakipNoileRaporBilgisiKaydet) lands with G43b once the RaporGirisDVO composite set is extracted.",
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 252,
+          "confidence": "extracted",
+          "section": "4.4 Rapor Bilgisi Kayit Metotlari"
+        }
+      ],
+      "wsdl": {
+        "production": "wsdl.rapor.production",
+        "test": "wsdl.rapor.test"
+      },
+      "methods": [
+        "medula.hastane.rapor.rapor-bilgisi-bul",
+        "medula.hastane.rapor.rapor-bilgisi-sil",
+        "medula.hastane.rapor.ilac-rapor-duzelt",
+        "medula.hastane.rapor.rapor-bilgisi-bul-rapor-takip-nodan",
+        "medula.hastane.rapor.rapor-bilgisi-bul-tc-kimlik-nodan"
+      ],
+      "status": "reviewed"
     }
   ],
   "methods": [
@@ -1433,6 +1461,231 @@
       "sandbox": {
         "supported": true,
         "defaultScenario": "happy-path"
+      },
+      "status": "reviewed"
+    },
+    {
+      "id": "medula.hastane.rapor.ilac-rapor-duzelt",
+      "service": "medula.hastane.rapor",
+      "names": {
+        "documentationHeading": "IlacRaporDuzelt",
+        "operationName": "IlacRaporDuzelt",
+        "aliases": [
+          "IlacRaporDuzelt"
+        ]
+      },
+      "contract": {
+        "inputDvo": "IlacRaporDuzeltDVO",
+        "outputDvo": "RaporCevapDVO"
+      },
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 280,
+          "confidence": "extracted",
+          "section": "4.4 4.4.5 IlacRaporDuzelt Metodu",
+          "notes": "Integer 0-based success code (s.254)."
+        }
+      ],
+      "stateEffects": {
+        "creates": [],
+        "reads": [
+          "rapor"
+        ],
+        "updates": [],
+        "deletes": [],
+        "generates": []
+      },
+      "success": {
+        "resultCodeField": "sonucKodu",
+        "successCode": "0",
+        "messageField": "sonucAciklamasi"
+      },
+      "sandbox": {
+        "supported": false,
+        "defaultScenario": null
+      },
+      "status": "reviewed"
+    },
+    {
+      "id": "medula.hastane.rapor.rapor-bilgisi-bul",
+      "service": "medula.hastane.rapor",
+      "names": {
+        "documentationHeading": "RaporBilgisiBul",
+        "operationName": "RaporBilgisiBul",
+        "aliases": [
+          "RaporBilgisiBul"
+        ]
+      },
+      "contract": {
+        "inputDvo": "RaporSorguDVO",
+        "outputDvo": "RaporCevapDVO"
+      },
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 279,
+          "confidence": "extracted",
+          "section": "4.4 4.4.3 RaporBilgisiBul Metodu",
+          "notes": "Integer 0-based success code (s.254) — not the \"0000\" string of the hasta-kabul group."
+        }
+      ],
+      "stateEffects": {
+        "creates": [],
+        "reads": [
+          "rapor"
+        ],
+        "updates": [],
+        "deletes": [],
+        "generates": []
+      },
+      "success": {
+        "resultCodeField": "sonucKodu",
+        "successCode": "0",
+        "messageField": "sonucAciklamasi"
+      },
+      "sandbox": {
+        "supported": false,
+        "defaultScenario": null
+      },
+      "status": "reviewed"
+    },
+    {
+      "id": "medula.hastane.rapor.rapor-bilgisi-bul-rapor-takip-nodan",
+      "service": "medula.hastane.rapor",
+      "names": {
+        "documentationHeading": "RaporBilgisiBulRaporTakipNodan",
+        "operationName": "RaporBilgisiBulRaporTakipNodan",
+        "aliases": [
+          "RaporBilgisiBulRaporTakipNodan"
+        ]
+      },
+      "contract": {
+        "inputDvo": "RaporOkuRaporTakipNodanDVO",
+        "outputDvo": "RaporCevapDVO"
+      },
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 281,
+          "confidence": "extracted",
+          "section": "4.4 4.4.6 RaporBilgisiBulRaporTakipNodan Metodu",
+          "notes": "Integer 0-based success code (s.254)."
+        }
+      ],
+      "stateEffects": {
+        "creates": [],
+        "reads": [
+          "rapor"
+        ],
+        "updates": [],
+        "deletes": [],
+        "generates": []
+      },
+      "success": {
+        "resultCodeField": "sonucKodu",
+        "successCode": "0",
+        "messageField": "sonucAciklamasi"
+      },
+      "sandbox": {
+        "supported": false,
+        "defaultScenario": null
+      },
+      "status": "reviewed"
+    },
+    {
+      "id": "medula.hastane.rapor.rapor-bilgisi-bul-tc-kimlik-nodan",
+      "service": "medula.hastane.rapor",
+      "names": {
+        "documentationHeading": "RaporBilgisiBulTCKimlikNodan",
+        "operationName": "RaporBilgisiBulTCKimlikNodan",
+        "aliases": [
+          "RaporBilgisiBulTCKimlikNodan"
+        ]
+      },
+      "contract": {
+        "inputDvo": "RaporOkuTCKimlikNodanDVO",
+        "outputDvo": "RaporCevapTCKimlikNodanDVO"
+      },
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 282,
+          "confidence": "extracted",
+          "section": "4.4 4.4.7 RaporBilgisiBulTCKimlikNodan Metodu",
+          "notes": "Integer 0-based success code (s.283)."
+        }
+      ],
+      "stateEffects": {
+        "creates": [],
+        "reads": [
+          "rapor"
+        ],
+        "updates": [],
+        "deletes": [],
+        "generates": []
+      },
+      "success": {
+        "resultCodeField": "sonucKodu",
+        "successCode": "0",
+        "messageField": "sonucAciklamasi"
+      },
+      "sandbox": {
+        "supported": false,
+        "defaultScenario": null
+      },
+      "status": "reviewed"
+    },
+    {
+      "id": "medula.hastane.rapor.rapor-bilgisi-sil",
+      "service": "medula.hastane.rapor",
+      "names": {
+        "documentationHeading": "RaporBilgisiSil",
+        "operationName": "RaporBilgisiSil",
+        "aliases": [
+          "RaporBilgisiSil"
+        ]
+      },
+      "contract": {
+        "inputDvo": "RaporSorguDVO",
+        "outputDvo": "RaporCevapDVO"
+      },
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 280,
+          "confidence": "extracted",
+          "section": "4.4 4.4.4 RaporBilgisiSil Metodu",
+          "notes": "Integer 0-based success code (s.254)."
+        }
+      ],
+      "stateEffects": {
+        "creates": [],
+        "reads": [
+          "rapor"
+        ],
+        "updates": [],
+        "deletes": [],
+        "generates": []
+      },
+      "success": {
+        "resultCodeField": "sonucKodu",
+        "successCode": "0",
+        "messageField": "sonucAciklamasi"
+      },
+      "sandbox": {
+        "supported": false,
+        "defaultScenario": null
       },
       "status": "reviewed"
     }
@@ -7760,6 +8013,269 @@
       "status": "reviewed"
     },
     {
+      "id": "IlacRaporDuzeltDVO",
+      "domain": "rapor",
+      "direction": "input",
+      "fields": [
+        {
+          "name": "drTescilNo",
+          "displayName": "Dr Diploma Tescil Numarasi",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": 20,
+          "description": "Doctor diploma registration number. The guide's description column erroneously repeats the RaporCevapDVO result-code text here; the parameter name and clear name (Dr diploma tescil numarası) are authoritative.",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 281,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "duzeltmeBilgisi",
+          "displayName": "Duzeltme Aciklamasi",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": 2000,
+          "description": "Additional annotation appended to the drug report (s.281).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 281,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "duzeltmeTarihi",
+          "displayName": "Duzeltme Tarihi",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": 10,
+          "description": "Correction date, \"dd.mm.yyyy\" format (s.281).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 281,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "raporNo",
+          "displayName": "Rapor Numarasi",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": 20,
+          "description": "Report number (s.281).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 281,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "raporTarihi",
+          "displayName": "Rapor Tarihi",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": 10,
+          "description": "Report date, \"dd.mm.yyyy\" format (s.281).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 281,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "raporTuru",
+          "displayName": "Rapor Turu",
+          "type": "enum",
+          "enumRef": "rapor-turu",
+          "codeSystem": null,
+          "required": true,
+          "length": 1,
+          "description": "Report type; this method only applies to drug reports: 10 = İlaç Kullanım (s.281).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 281,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "tesisKodu",
+          "displayName": "Raporu Veren Tesis Kodu",
+          "type": "integer",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Code of the facility that issued the report (s.281).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 281,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "raporEtkinMaddeler",
+          "displayName": "Etkin Maddeler",
+          "type": "array",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Active ingredients; item shape in Tablo 4.4.1.ff (RaporEtkinMaddeDVO) — deferred to G43b with the RaporBilgisiKaydet composite set.",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 281,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "tanilar",
+          "displayName": "ICD10 Tanilar",
+          "type": "array",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "ICD-10 diagnoses; item shape in Tablo 4.2.1.k (TaniBilgisiDVO) — already used by the hizmet-kayit group.",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 281,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "ilacTeshisler",
+          "displayName": "Ilac Teshisler",
+          "type": "array",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Drug report diagnoses; item shape in Tablo 4.4.1.gg (IlacTeshisBilgiDVO). The guide marks this field mandatory for drug reports (s.281) despite listing it as optional in the required column.",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 281,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [
+            {
+              "condition": "the report is a drug report (raporTuru 10)",
+              "note": "guide text: ilaç raporlarında gönderilmesi zorunlu (s.281)"
+            }
+          ],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 279,
+          "confidence": "extracted",
+          "section": "Tablo 4.4.6.a (s.281)"
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
       "id": "IslemDetayDVO",
       "domain": "fatura-kayit",
       "direction": "output",
@@ -11709,6 +12225,810 @@
           "conditionalRequired": [],
           "introducedIn": null,
           "deprecatedIn": "0.2.0"
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
+      "id": "RaporCevapDVO",
+      "domain": "rapor",
+      "direction": "output",
+      "fields": [
+        {
+          "name": "raporTakipNo",
+          "displayName": "Rapor Takip No",
+          "type": "integer",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "System-generated unique number of the saved report (s.253).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": true,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 253,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "analikRapor",
+          "displayName": "Analik Isgoremezlik Raporu",
+          "type": "object",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Populated when the saved report is a maternity incapacity report; shape Tablo 4.4.1.f (AnalikIsgoremezlikRaporDVO) — deferred to G43b.",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 253,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "dogumOncesiCalisabilirRapor",
+          "displayName": "Dogum Oncesi Calisabilir Raporu",
+          "type": "object",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Populated when the saved report is a fit-to-work-before-birth report; shape Tablo 4.4.1.d (DogumOncesiCalisabilirRaporDVO) — deferred to G43b.",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 253,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "dogumRapor",
+          "displayName": "Dogum Raporu",
+          "type": "object",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Populated when the saved report is a birth report; shape Tablo 4.4.1.e (DogumRaporDVO) — deferred to G43b.",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 253,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "ilacRapor",
+          "displayName": "Ilac Raporu",
+          "type": "object",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Populated when the saved report is a drug report (use or exemption); shape Tablo 4.4.1.h (IlacRaporDVO) — deferred to G43b.",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 253,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "maluliyetRapor",
+          "displayName": "Maluliyet Raporu",
+          "type": "object",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Populated when the saved report is a disability report; shape Tablo 4.4.1.j (MaluliyetRaporDVO) — deferred to G43b.",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 253,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "protezRapor",
+          "displayName": "Protez Raporu",
+          "type": "object",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Populated when the saved report is a prosthesis report; shape Tablo 4.4.1.g (ProtezRaporDVO) — deferred to G43b.",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 253,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "tedaviRapor",
+          "displayName": "Tedavi Raporu",
+          "type": "object",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Populated when the saved report is a treatment report; shape Tablo 4.4.1.i (TedaviRaporDVO) — deferred to G43b.",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 253,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "isgoremezlikRapor",
+          "displayName": "Isgoremezlik Raporu",
+          "type": "object",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Populated when the saved report is an incapacity report (work accident, occupational disease or illness); shape Tablo 4.4.1.c (IsgoremezlikRaporDVO) — deferred to G43b.",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 253,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "isgoremezlikRaporEkleri",
+          "displayName": "Isgoremezlik Raporu Ekleri",
+          "type": "array",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Incapacity report attachments; item shape Tablo 4.4.1.ee (IsgoremezlikRaporEkDVO) — deferred to G43b.",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 253,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "sonucAciklamasi",
+          "displayName": "Sonuc Aciklamasi",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Result description; the failure reason is stated here (s.253).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 253,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "sonucKodu",
+          "displayName": "Sonuc Kodu",
+          "type": "integer",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Result code; 0 (zero) means success, any other value is an error. Intra-guide divergence: this group is Integer 0-based, unlike the hasta-kabul group's String \"0000\".",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 254,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "raporTuru",
+          "displayName": "Rapor Turu",
+          "type": "enum",
+          "enumRef": "rapor-turu",
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Type of the saved report; Raporun türü (s.280): 1 Tedavi, 2 İş Kazası, 3 Meslek Hastalığı, 4 Hastalık, 5 Doğum Öncesi Çalışabilir, 6 Analık, 7 Doğum, 8 Protez, 9 Maluliyet, 10 İlaç Kullanım, 11 İlaç Muafiyet.",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 254,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 279,
+          "confidence": "extracted",
+          "section": "Tablo 4.4.1.b (s.253-254)"
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
+      "id": "RaporCevapTCKimlikNodanDVO",
+      "domain": "rapor",
+      "direction": "output",
+      "fields": [
+        {
+          "name": "raporlar",
+          "displayName": "Raporlar",
+          "type": "array",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Reports found for the citizen; items are RaporCevapDVO (this registry).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 283,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "sonucAciklamasi",
+          "displayName": "Sonuc Aciklamasi",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Result description; the failure reason is stated here (s.283).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 283,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "sonucKodu",
+          "displayName": "Sonuc Kodu",
+          "type": "integer",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Result code; 0 (zero) means success, any other value is an error (s.283).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 283,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 279,
+          "confidence": "extracted",
+          "section": "Tablo 4.4.8.b (s.283)"
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
+      "id": "RaporOkuDVO",
+      "domain": "rapor",
+      "direction": "input",
+      "fields": [
+        {
+          "name": "raporTesisKodu",
+          "displayName": "Rapor Veren Tesis Kodu",
+          "type": "integer",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Code of the facility that issued the report (s.280).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 280,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "raporNo",
+          "displayName": "Rapor Numarasi",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": 20,
+          "description": "Report number (s.280).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 280,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "raporTarih",
+          "displayName": "Rapor Tarihi",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": 10,
+          "description": "Report date, \"dd.mm.yyyy\" format (s.280).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 280,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "raporTuru",
+          "displayName": "Rapor Turu",
+          "type": "enum",
+          "enumRef": "rapor-turu",
+          "codeSystem": null,
+          "required": true,
+          "length": 1,
+          "description": "Raporun türü (s.280): 1 Tedavi, 2 İş Kazası, 3 Meslek Hastalığı, 4 Hastalık, 5 Doğum Öncesi Çalışabilir, 6 Analık, 7 Doğum, 8 Protez, 9 Maluliyet, 10 İlaç Kullanım, 11 İlaç Muafiyet.",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 280,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "raporSiraNo",
+          "displayName": "Rapor Sira No",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Report sequence number (s.280).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 280,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 279,
+          "confidence": "extracted",
+          "section": "Tablo 4.4.3.c (s.279-280)"
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
+      "id": "RaporOkuRaporTakipNodanDVO",
+      "domain": "rapor",
+      "direction": "input",
+      "fields": [
+        {
+          "name": "raporTakipNo",
+          "displayName": "Rapor Takip Numarasi",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Report tracking number (s.281).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": true,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 281,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "kullaniciTesisKodu",
+          "displayName": "Kullanici Tesis Kodu",
+          "type": "integer",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Health facility code of the caller (s.282).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 282,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "raporSiraNo",
+          "displayName": "Rapor Sira No",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Report sequence number (s.282).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 282,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 279,
+          "confidence": "extracted",
+          "section": "Tablo 4.4.7.a (s.281-282)"
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
+      "id": "RaporOkuTCKimlikNodanDVO",
+      "domain": "rapor",
+      "direction": "input",
+      "fields": [
+        {
+          "name": "tckimlikNo",
+          "displayName": "TC Kimlik Numarasi",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Citizen ID of the report owner. The guide's description column erroneously repeats 'Rapor Takip Numarası'; the parameter name tckimlikNo is authoritative.",
+          "sensitive": true,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 282,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "raporTuru",
+          "displayName": "Rapor Turu",
+          "type": "enum",
+          "enumRef": "rapor-turu",
+          "codeSystem": null,
+          "required": true,
+          "length": 1,
+          "description": "Raporun türü (s.280): 1 Tedavi, 2 İş Kazası, 3 Meslek Hastalığı, 4 Hastalık, 5 Doğum Öncesi Çalışabilir, 6 Analık, 7 Doğum, 8 Protez, 9 Maluliyet, 10 İlaç Kullanım, 11 İlaç Muafiyet.",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 282,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "kullaniciTesisKodu",
+          "displayName": "Kullanici Tesis Kodu",
+          "type": "integer",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Health facility code of the caller (s.282).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 282,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 279,
+          "confidence": "extracted",
+          "section": "Tablo 4.4.8.a (s.282)"
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
+      "id": "RaporSorguDVO",
+      "domain": "rapor",
+      "direction": "input",
+      "fields": [
+        {
+          "name": "raporBilgisi",
+          "displayName": "Rapor Bilgisi",
+          "type": "object",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Report lookup key object; shape in Tablo 4.4.3.c (RaporOkuDVO, this registry).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 279,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "kullaniciTesisKodu",
+          "displayName": "Kullanici Tesis Kodu",
+          "type": "integer",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Health facility code of the caller (s.279).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 279,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 279,
+          "confidence": "extracted",
+          "section": "Tablo 4.4.3.a (s.279)"
         }
       ],
       "status": "reviewed"
@@ -17182,6 +18502,78 @@
           "page": 156,
           "section": "Tablo 4.1.1.a - ProvizyonGirisDVO (provizyonTipi)",
           "confidence": "extracted"
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
+      "id": "rapor-turu",
+      "displayName": "Rapor Turu",
+      "values": [
+        {
+          "code": "1",
+          "label": "Tedavi",
+          "description": "Treatment report."
+        },
+        {
+          "code": "2",
+          "label": "Is Kazasi",
+          "description": "Work accident report."
+        },
+        {
+          "code": "3",
+          "label": "Meslek Hastaligi",
+          "description": "Occupational disease report."
+        },
+        {
+          "code": "4",
+          "label": "Hastalik",
+          "description": "Illness report."
+        },
+        {
+          "code": "5",
+          "label": "Dogum Oncesi Calisabilir",
+          "description": "Fit-to-work-before-birth report."
+        },
+        {
+          "code": "6",
+          "label": "Analik",
+          "description": "Maternity report."
+        },
+        {
+          "code": "7",
+          "label": "Dogum",
+          "description": "Birth report."
+        },
+        {
+          "code": "8",
+          "label": "Protez",
+          "description": "Prosthesis report."
+        },
+        {
+          "code": "9",
+          "label": "Maluliyet",
+          "description": "Disability report."
+        },
+        {
+          "code": "10",
+          "label": "Ilac Kullanim",
+          "description": "Drug use report."
+        },
+        {
+          "code": "11",
+          "label": "Ilac Muafiyet",
+          "description": "Drug exemption report."
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 280,
+          "confidence": "extracted",
+          "notes": "Value list reproduced identically on s.282 (RaporOkuTCKimlikNodanDVO.raporTuru) and s.254 (RaporCevapDVO.raporTuru, Integer)."
         }
       ],
       "status": "reviewed"

@@ -1,0 +1,33 @@
+id: medula.hastane.rapor.rapor-bilgisi-bul
+service: medula.hastane.rapor
+names:
+  documentationHeading: RaporBilgisiBul
+  operationName: RaporBilgisiBul
+  aliases:
+    - RaporBilgisiBul
+contract:
+  inputDvo: RaporSorguDVO
+  outputDvo: RaporCevapDVO
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 279
+    confidence: extracted
+    section: 4.4 4.4.3 RaporBilgisiBul Metodu
+    notes: Integer 0-based success code (s.254) — not the "0000" string of the hasta-kabul group.
+stateEffects:
+  creates: []
+  reads:
+    - rapor
+  updates: []
+  deletes: []
+  generates: []
+success:
+  resultCodeField: sonucKodu
+  successCode: "0"
+  messageField: sonucAciklamasi
+sandbox:
+  supported: false
+  defaultScenario: null
+status: reviewed
