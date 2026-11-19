@@ -1,0 +1,20 @@
+id: odenme-durumu
+displayName: Odenme Durumu
+values:
+  - code: "1"
+    label: Odenir
+    description: Reimbursed.
+  - code: "2"
+    label: Raporla Odenir
+    description: Reimbursed with a report.
+  - code: "3"
+    label: Odenmez
+    description: Not reimbursed (in the hospital application everything not equal to 3 is reimbursed).
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 288
+    confidence: extracted
+    notes: Used by both IlacListDVO.ayaktanOdenme and IlacListDVO.yatanOdenme (s.288).
+status: reviewed

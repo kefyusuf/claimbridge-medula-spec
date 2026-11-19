@@ -1,0 +1,31 @@
+id: medula.hastane.yardimci-islemler.saglik-tesisi-ara
+service: medula.hastane.yardimci-islemler
+names:
+  documentationHeading: SaglikTesisiAra
+  operationName: SaglikTesisiAra
+  aliases:
+    - SaglikTesisiAra
+contract:
+  inputDvo: SaglikTesisiAraGirisDVO
+  outputDvo: SaglikTesisiAraCevapDVO
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 283
+    confidence: extracted
+    section: 4.5 4.5.1 SaglikTesisiAra Metodu
+stateEffects:
+  creates: []
+  reads: []
+  updates: []
+  deletes: []
+  generates: []
+success:
+  resultCodeField: sonucKodu
+  successCode: "0000"
+  messageField: sonucMesaji
+sandbox:
+  supported: false
+  defaultScenario: null
+status: reviewed

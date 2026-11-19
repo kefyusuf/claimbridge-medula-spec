@@ -1,0 +1,183 @@
+id: SaglikTesisiListDVO
+domain: yardimci-islemler
+direction: output
+fields:
+  - name: tesisIl
+    displayName: Tesisin Il Kodu
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: 2
+    description: Facility province code (s.284).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 284
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: tesisAdi
+    displayName: Tesis Adi
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: 100
+    description: Facility name (s.284).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 284
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: tesisKodu
+    displayName: Tesisin Kodu
+    type: integer
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Facility code (s.284).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 284
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: tesisSinifKodu
+    displayName: Tesis Sinif Kodu
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: 2
+    description: Facility class code (s.284).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 284
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: tesisTuru
+    displayName: Tesisin Turu
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: 2
+    description: Facility type code (s.284).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 284
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: tesisIlAdi
+    displayName: Tesisin Il Adi
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: 2
+    description: Facility province name — the guide states length 2 for a NAME column, likely an extraction or guide-table artifact (s.284).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 284
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: tesisIlceKodu
+    displayName: Tesisin Ilce Kodu
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: 2
+    description: Facility district code (s.284).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 284
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: tesisIlceAdi
+    displayName: Tesis Ilce Adi
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: 100
+    description: Facility district name (s.284).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 284
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: tesisTuruAdi
+    displayName: Tesisin Tur Adi
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: 300
+    description: Facility type name (s.284).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 284
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 283
+    confidence: extracted
+    section: 4.5 Yardimci Web Servis Metotlari
+status: reviewed

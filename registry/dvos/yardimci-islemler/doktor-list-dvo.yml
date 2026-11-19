@@ -1,0 +1,88 @@
+id: DoktorListDVO
+domain: yardimci-islemler
+direction: output
+fields:
+  - name: drAdi
+    displayName: Doktor Adi
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: 30
+    description: Physician first name (s.285).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 285
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: drSoyadi
+    displayName: Doktor Soyadi
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: 30
+    description: Physician last name (s.285).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 285
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: drDiplomaNo
+    displayName: Doktor Diploma No
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: 20
+    description: Physician diploma number (s.285).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 285
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: drTescilNo
+    displayName: Doktor Tescil No
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: 16
+    description: Physician diploma registration number (s.285).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 285
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 283
+    confidence: extracted
+    section: 4.5 Yardimci Web Servis Metotlari
+status: reviewed
