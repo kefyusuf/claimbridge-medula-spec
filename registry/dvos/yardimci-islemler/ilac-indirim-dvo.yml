@@ -1,0 +1,164 @@
+id: IlacIndirimDVO
+domain: yardimci-islemler
+direction: output
+fields:
+  - name: kamuIndOranAlt
+    displayName: Kamu Indirim Alt Orani
+    type: decimal
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Public discount lower rate (s.289).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 289
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: kamuIndOranUst
+    displayName: Kamu Indirim Ust Orani
+    type: decimal
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Public discount upper rate (s.289).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 289
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: gecerlilikTarihi
+    displayName: Gecerlilik Tarihi
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: 10
+    description: Validity date (s.289).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 289
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: ilac_id
+    displayName: Ilac Tekil Numarasi
+    type: integer
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Drug unique id (s.290).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 290
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: indirimOrani1
+    displayName: Indirim Orani 1
+    type: decimal
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Discount rate 1 (s.290).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 290
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: indirimOrani2
+    displayName: Indirim Orani 2
+    type: decimal
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Discount rate 2 (s.290).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 290
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: indirimOrani3
+    displayName: Indirim Orani 3
+    type: decimal
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Discount rate 3 (s.290).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 290
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: indirimOrani4
+    displayName: Indirim Orani 4
+    type: decimal
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Discount rate 4; the guide's description column erroneously repeats "İndirim Oranı 3" (s.290).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 290
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 283
+    confidence: extracted
+    section: 4.5 Yardimci Web Servis Metotlari
+status: reviewed

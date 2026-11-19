@@ -1,0 +1,31 @@
+id: medula.hastane.yardimci-islemler.ilac-ara
+service: medula.hastane.yardimci-islemler
+names:
+  documentationHeading: IlacAra
+  operationName: IlacAra
+  aliases:
+    - IlacAra
+contract:
+  inputDvo: IlacAraGirisDVO
+  outputDvo: IlacAraCevapDVO
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 287
+    confidence: extracted
+    section: 4.5 4.5.4 IlacAra Metodu
+stateEffects:
+  creates: []
+  reads: []
+  updates: []
+  deletes: []
+  generates: []
+success:
+  resultCodeField: sonucKodu
+  successCode: "0000"
+  messageField: sonucMesaji
+sandbox:
+  supported: false
+  defaultScenario: null
+status: reviewed

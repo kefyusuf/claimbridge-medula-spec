@@ -38,3 +38,13 @@ wsdls:
     service: rapor
     environment: test
     url: https://sgkt.sgk.gov.tr/medula/hastane/raporIslemleriWS?wsdl
+
+  - id: wsdl.yardimci-islemler.production
+    service: yardimci-islemler
+    environment: production
+    url: https://medula.sgk.gov.tr/medula/hastane/yardimciIslemlerWS?wsdl
+
+  - id: wsdl.yardimci-islemler.test
+    service: yardimci-islemler
+    environment: test
+    url: https://sgkt.sgk.gov.tr/medula/hastane/yardimciIslemlerWS?wsdl

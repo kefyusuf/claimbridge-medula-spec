@@ -1,0 +1,20 @@
+id: medula.hastane.yardimci-islemler
+slug: yardimci-islemler
+displayName: Yardimci Web Servis Metotlari
+description: "Helper operations: facility, physician, tracking-record and drug searches, plus the remaining helper queries landing in G44b-c. The takip-ara search window may not exceed one month (s.286)."
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 283
+    confidence: extracted
+    section: 4.5 Yardimci Web Servis Metotlari
+wsdl:
+  production: wsdl.yardimci-islemler.production
+  test: wsdl.yardimci-islemler.test
+methods:
+  - medula.hastane.yardimci-islemler.saglik-tesisi-ara
+  - medula.hastane.yardimci-islemler.doktor-ara
+  - medula.hastane.yardimci-islemler.takip-ara
+  - medula.hastane.yardimci-islemler.ilac-ara
+status: reviewed

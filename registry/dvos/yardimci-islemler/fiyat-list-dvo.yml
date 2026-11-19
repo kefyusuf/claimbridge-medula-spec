@@ -1,0 +1,50 @@
+id: FiyatListDVO
+domain: yardimci-islemler
+direction: output
+fields:
+  - name: fiyat
+    displayName: Ilac Fiyat Bilgisi
+    type: decimal
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Drug price; KDV-inclusive per the Health Ministry publication — discounts and KDV are subtracted from this figure during payment queries (s.289).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 289
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: gecerlilikTarihi
+    displayName: Ilac Gecerlilik Tarihi
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: 10
+    description: Price validity date (s.289).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 289
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 283
+    confidence: extracted
+    section: 4.5 Yardimci Web Servis Metotlari
+status: reviewed

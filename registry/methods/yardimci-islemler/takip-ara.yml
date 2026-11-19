@@ -1,0 +1,31 @@
+id: medula.hastane.yardimci-islemler.takip-ara
+service: medula.hastane.yardimci-islemler
+names:
+  documentationHeading: TakipAra
+  operationName: TakipAra
+  aliases:
+    - TakipAra
+contract:
+  inputDvo: TakipAraGirisDVO
+  outputDvo: TakipAraCevapDVO
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 286
+    confidence: extracted
+    section: 4.5 4.5.3 TakipAra Metodu
+stateEffects:
+  creates: []
+  reads: []
+  updates: []
+  deletes: []
+  generates: []
+success:
+  resultCodeField: sonucKodu
+  successCode: "0000"
+  messageField: sonucMesaji
+sandbox:
+  supported: false
+  defaultScenario: null
+status: reviewed

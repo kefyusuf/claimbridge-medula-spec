@@ -770,3 +770,99 @@
 | deletes | — |
 | generates | `raporTakipNo` |
 
+## `medula.hastane.yardimci-islemler.doktor-ara`
+
+| Field | Value |
+| --- | --- |
+| Service | medula.hastane.yardimci-islemler |
+| Documentation heading | DoktorAra |
+| Operation name | DoktorAra |
+| Input DVO | DoktorAraGirisDVO |
+| Output DVO | DoktorAraCevapDVO |
+| Success | sonucKodu = 0000 (sonucMesaji) |
+| Sandbox supported |  |
+| Status | reviewed |
+| Source refs | medula-hastane-guide-3-1-1-2026-10-19 |
+
+**State effects**
+
+| Effect | Targets |
+| --- | --- |
+| creates | — |
+| reads | — |
+| updates | — |
+| deletes | — |
+| generates | — |
+
+## `medula.hastane.yardimci-islemler.ilac-ara`
+
+| Field | Value |
+| --- | --- |
+| Service | medula.hastane.yardimci-islemler |
+| Documentation heading | IlacAra |
+| Operation name | IlacAra |
+| Input DVO | IlacAraGirisDVO |
+| Output DVO | IlacAraCevapDVO |
+| Success | sonucKodu = 0000 (sonucMesaji) |
+| Sandbox supported |  |
+| Status | reviewed |
+| Source refs | medula-hastane-guide-3-1-1-2026-10-19 |
+
+**State effects**
+
+| Effect | Targets |
+| --- | --- |
+| creates | — |
+| reads | — |
+| updates | — |
+| deletes | — |
+| generates | — |
+
+## `medula.hastane.yardimci-islemler.saglik-tesisi-ara`
+
+| Field | Value |
+| --- | --- |
+| Service | medula.hastane.yardimci-islemler |
+| Documentation heading | SaglikTesisiAra |
+| Operation name | SaglikTesisiAra |
+| Input DVO | SaglikTesisiAraGirisDVO |
+| Output DVO | SaglikTesisiAraCevapDVO |
+| Success | sonucKodu = 0000 (sonucMesaji) |
+| Sandbox supported |  |
+| Status | reviewed |
+| Source refs | medula-hastane-guide-3-1-1-2026-10-19 |
+
+**State effects**
+
+| Effect | Targets |
+| --- | --- |
+| creates | — |
+| reads | — |
+| updates | — |
+| deletes | — |
+| generates | — |
+
+## `medula.hastane.yardimci-islemler.takip-ara`
+
+| Field | Value |
+| --- | --- |
+| Service | medula.hastane.yardimci-islemler |
+| Documentation heading | TakipAra |
+| Operation name | TakipAra |
+| Input DVO | TakipAraGirisDVO |
+| Output DVO | TakipAraCevapDVO |
+| Success | sonucKodu = 0000 (sonucMesaji) |
+| Sandbox supported |  |
+| Status | reviewed |
+| Source refs | medula-hastane-guide-3-1-1-2026-10-19 |
+
+**State effects**
+
+| Effect | Targets |
+| --- | --- |
+| creates | — |
+| reads | — |
+| updates | — |
+| deletes | — |
+| generates | — |
+
