@@ -74,7 +74,7 @@ Service registration process that records medical services against an existing p
 
 ## Rapor Bilgisi Kayit (`medula.hastane.rapor`)
 
-Report information registry operations: report lookup by report key, deletion, drug report correction and lookups by report tracking number or citizen ID. Registration (RaporBilgisiKaydet / TakipNoileRaporBilgisiKaydet) lands with G43b once the RaporGirisDVO composite set is extracted.
+Report information registry operations: report lookup by report key, deletion, drug report correction, lookups by report tracking number or citizen ID, and report registration (RaporBilgisiKaydet dispatching exactly one report branch; the drug/disability/treatment/illness sub-branch shapes land incrementally).
 
 | Field | Value |
 | --- | --- |
@@ -91,4 +91,6 @@ Report information registry operations: report lookup by report key, deletion, d
 - `medula.hastane.rapor.ilac-rapor-duzelt`
 - `medula.hastane.rapor.rapor-bilgisi-bul-rapor-takip-nodan`
 - `medula.hastane.rapor.rapor-bilgisi-bul-tc-kimlik-nodan`
+- `medula.hastane.rapor.rapor-bilgisi-kaydet`
+- `medula.hastane.rapor.takip-no-ile-rapor-bilgisi-kaydet`
 
