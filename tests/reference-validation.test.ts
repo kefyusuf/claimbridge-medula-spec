@@ -92,15 +92,16 @@ function schemaValidate(
 }
 
 describe("reference-validation (Group 2)", () => {
-  it("has exactly 3 service registry files", () => {
+  it("has exactly 4 service registry files", () => {
     expect(services.map((s) => s.file).sort()).toEqual([
       "fatura-kayit.yml",
       "hasta-kabul.yml",
       "hizmet-kayit.yml",
+      "rapor.yml",
     ]);
   });
 
-  it("has exactly 25 method registry files in 3 domains", () => {
+  it("has exactly 30 method registry files in 4 domains", () => {
     expect(methods.map((m) => m.file).sort()).toEqual([
       "fatura-kayit/fatura-iptal.yml",
       "fatura-kayit/fatura-kayit.yml",
@@ -127,6 +128,11 @@ describe("reference-validation (Group 2)", () => {
       "hizmet-kayit/hizmet-kaydi-iptal.yml",
       "hizmet-kayit/hizmet-kaydi-oku.yml",
       "hizmet-kayit/hizmet-kayit.yml",
+      "rapor/ilac-rapor-duzelt.yml",
+      "rapor/rapor-bilgisi-bul-rapor-takip-nodan.yml",
+      "rapor/rapor-bilgisi-bul-tc-kimlik-nodan.yml",
+      "rapor/rapor-bilgisi-bul.yml",
+      "rapor/rapor-bilgisi-sil.yml",
     ]);
   });
 
@@ -220,18 +226,30 @@ describe("reference-validation (Group 2)", () => {
     }
   });
 
-  it("shares the sonucKodu/0000/sonucMesaji success pattern across all methods", () => {
+  it("shares the guide's success patterns across all methods", () => {
     for (const m of methods) {
-      expect(m.data.success).toEqual({
-        resultCodeField: "sonucKodu",
-        successCode: "0000",
-        messageField: "sonucMesaji",
-      });
+      const success = m.data.success as Record<string, string>;
+      // Intra-guide divergence (G43a): the rapor group is Integer 0-based
+      // (s.254) with sonucAciklamasi as the message field, unlike the
+      // other groups' String "0000" + sonucMesaji.
+      if (m.data.service === "medula.hastane.rapor") {
+        expect(success).toEqual({
+          resultCodeField: "sonucKodu",
+          successCode: "0",
+          messageField: "sonucAciklamasi",
+        });
+      } else {
+        expect(success).toEqual({
+          resultCodeField: "sonucKodu",
+          successCode: "0000",
+          messageField: "sonucMesaji",
+        });
+      }
     }
   });
 
   it("resolves every service WSDL reference in the manifest", () => {
-    expect(wsdlManifest.length).toBe(6);
+    expect(wsdlManifest.length).toBe(8);
     for (const s of services) {
       const slug = s.data.slug as string;
       const wsdl = s.data.wsdl as {

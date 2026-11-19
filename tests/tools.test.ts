@@ -13,15 +13,15 @@ const root = resolve(import.meta.dirname, "..");
 describe("tools (Group 5)", () => {
   it("loads the full v0.1 registry", () => {
     const reg = loadRegistry(root);
-    expect(reg.services).toHaveLength(3);
-    expect(reg.methods).toHaveLength(25);
-    expect(reg.dvos).toHaveLength(70);
-    expect(reg.enums).toHaveLength(23);
+    expect(reg.services).toHaveLength(4);
+    expect(reg.methods).toHaveLength(30);
+    expect(reg.dvos).toHaveLength(77);
+    expect(reg.enums).toHaveLength(24);
     expect(reg.rules).toHaveLength(5);
     expect(reg.workflows).toHaveLength(4);
     expect(reg.scenarios).toHaveLength(6);
     expect(reg.sourceIds.has("medula-hastane-guide-2026-06-17")).toBe(true);
-    expect(reg.wsdlIds.size).toBe(6);
+    expect(reg.wsdlIds.size).toBe(8);
   });
 
   it("finds no schema issues on the committed registry", () => {

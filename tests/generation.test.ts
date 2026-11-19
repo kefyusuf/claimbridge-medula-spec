@@ -27,10 +27,10 @@ describe("generation (Group 6)", () => {
     );
     expect(bundle.generatedAt).toBe(PINNED);
     expect(bundle.sources.length).toBeGreaterThanOrEqual(1);
-    expect(bundle.services).toHaveLength(3);
-    expect(bundle.methods).toHaveLength(25);
-    expect(bundle.dvos).toHaveLength(70);
-    expect(bundle.enums).toHaveLength(23);
+    expect(bundle.services).toHaveLength(4);
+    expect(bundle.methods).toHaveLength(30);
+    expect(bundle.dvos).toHaveLength(77);
+    expect(bundle.enums).toHaveLength(24);
     expect(bundle.rules).toHaveLength(5);
     expect(bundle.workflows).toHaveLength(4);
     expect(bundle.scenarios).toHaveLength(6);
@@ -42,10 +42,10 @@ describe("generation (Group 6)", () => {
     const minified = renderMinified(bundle);
     const manifest = buildManifest(bundle, pretty, minified, PINNED);
     expect(manifest.counts).toEqual({
-      services: 3,
-      methods: 25,
-      dvos: 70,
-      enums: 23,
+      services: 4,
+      methods: 30,
+      dvos: 77,
+      enums: 24,
       rules: 5,
       workflows: 4,
       scenarios: 6,
