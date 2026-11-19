@@ -1,0 +1,16 @@
+id: ek-durumu
+displayName: Rapor Ek Durumu
+values:
+  - code: "1"
+    label: Ilk
+    description: Initial report.
+  - code: "2"
+    label: Ek
+    description: Attachment report.
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 276
+    confidence: extracted
+status: reviewed

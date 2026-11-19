@@ -1,0 +1,280 @@
+id: IsgoremezlikRaporEkDVO
+domain: rapor
+direction: input
+fields:
+  - name: aciklama
+    displayName: Aciklama
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: null
+    description: Attachment description (s.276).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 276
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: bitisTarihi
+    displayName: Bitis Tarihi
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: null
+    description: Attachment end date, "dd.mm.yyyy" (s.276).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 276
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: durum
+    displayName: Durum
+    type: enum
+    enumRef: ek-durumu
+    codeSystem: null
+    required: true
+    length: null
+    description: Initial or attachment report (s.276).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 276
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: duzenlemeTuru
+    displayName: Duzenleme Turu
+    type: enum
+    enumRef: rapor-duzenleme-turu
+    codeSystem: null
+    required: true
+    length: null
+    description: Issuing style (s.276).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 276
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: hastaYatisVarMi
+    displayName: Hasta Yatisi Var Mi
+    type: enum
+    enumRef: evet-hayir
+    codeSystem: null
+    required: true
+    length: 1
+    description: E when hospitalized (H when not) — the yatislar array must then carry at least one stay (s.276).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 276
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: kontrolMu
+    displayName: Kontrol Mu
+    type: enum
+    enumRef: evet-hayir
+    codeSystem: null
+    required: true
+    length: null
+    description: "Control examination flag: E = Evet, H = Hayir (s.276)."
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 276
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: kontrolTarihi
+    displayName: Kontrol Tarihi
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: null
+    description: Control date, "dd.mm.yyyy" (s.276).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 276
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: protokolNo
+    displayName: Protokol No
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Protocol number (s.277).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 277
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: protokolTarihi
+    displayName: Protokol Tarihi
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Protocol date, "dd.mm.yyyy" (s.277).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 277
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: yatislar
+    displayName: Yatis Bilgileri
+    type: array
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: null
+    description: Hospital stays; item shape Tablo 4.4.1.l (HastaYatisBilgisiRaporDVO, this registry); mandatory when hastaYatisVarMi = E (s.277).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 277
+        confidence: extracted
+    conditionalRequired:
+      - condition: hastaYatisVarMi = E
+        note: "guide: en az bir hasta yatış bilgisi gönderilmelidir (s.277)"
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: raporBilgisiDVO
+    displayName: Rapor Bilgisi
+    type: object
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: null
+    description: Report key; shape Tablo 4.4.1.r (RaporBilgisiDVO, this registry); the guide's parameter name carries a DVO suffix here.
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 277
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: doktorlar
+    displayName: Doktor Bilgileri
+    type: array
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: null
+    description: Physicians; item shape Tablo 4.4.1.t (DoktorBilgisiDVO, this registry) (s.277).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 277
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: tanilar
+    displayName: Tanilar
+    type: array
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: null
+    description: Diagnoses; item shape Tablo 4.4.1.u (TaniBilgisiDVO, hizmet-kayit group); parameter name capitalized (Tanilar) in the guide (s.277).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 277
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: kullaniciTesisKodu
+    displayName: Kullanici Tesis Kodu
+    type: integer
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: null
+    description: Health facility code of the caller (s.277).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 277
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 276
+    confidence: extracted
+    section: 4.4 Rapor Bilgisi Kayit Metotlari
+status: reviewed

@@ -211,6 +211,44 @@ fields:
     conditionalRequired: []
     introducedIn: 0.5.0
     deprecatedIn: null
+  - name: taburcuKodu
+    displayName: Taburcu Kodu
+    type: enum
+    enumRef: taburcu-kodu
+    codeSystem: null
+    required: false
+    length: null
+    description: Thirteen-value discharge code list, identical to the hasta-kabul group's taburcu-kodu enum (s.257).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 257
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: isKazasiTarihi
+    displayName: Is Kazasi Tarihi
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: 10
+    description: Work-accident date, "dd.mm.yyyy"; filled when the relapse flag is set (s.257).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 257
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
 sourceRefs:
   - id: medula-hastane-guide-3-1-1-2026-10-19
     sourceType: official-guide
