@@ -119,6 +119,14 @@ const EXPECTED_DVO_FILES = [
   "rapor/tedavi-islem-bilgisi-dvo.yml",
   "rapor/brans-gorus-bilgisi-dvo.yml",
   "rapor/isgoremezlik-rapor-ek-dvo.yml",
+  "rapor/teshis-bilgisi-dvo.yml",
+  "rapor/diyaliz-rapor-bilgisi-dvo.yml",
+  "rapor/eswl-rapor-bilgisi-dvo.yml",
+  "rapor/eswt-rapor-bilgisi-dvo.yml",
+  "rapor/ftr-rapor-bilgisi-dvo.yml",
+  "rapor/hot-rapor-bilgisi-dvo.yml",
+  "rapor/tup-bebek-rapor-bilgisi-dvo.yml",
+  "rapor/eswl-tas-bilgisi-dvo.yml",
 ];
 
 const EXPECTED_ENUM_IDS = [
@@ -167,6 +175,11 @@ const EXPECTED_ENUM_IDS = [
   "nuks-durumu",
   "ek-durumu",
   "evet-hayir",
+  "bobrek-tarafi",
+  "eswt-vucut-bolgesi",
+  "ftr-vucut-bolgesi",
+  "tup-bebek-turu",
+  "tas-lokalizasyon",
 ];
 
 const EXPECTED_RULE_FILES = [

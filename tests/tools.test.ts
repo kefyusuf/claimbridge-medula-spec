@@ -15,8 +15,8 @@ describe("tools (Group 5)", () => {
     const reg = loadRegistry(root);
     expect(reg.services).toHaveLength(4);
     expect(reg.methods).toHaveLength(32);
-    expect(reg.dvos).toHaveLength(98);
-    expect(reg.enums).toHaveLength(45);
+    expect(reg.dvos).toHaveLength(106);
+    expect(reg.enums).toHaveLength(50);
     expect(reg.rules).toHaveLength(5);
     expect(reg.workflows).toHaveLength(4);
     expect(reg.scenarios).toHaveLength(6);
