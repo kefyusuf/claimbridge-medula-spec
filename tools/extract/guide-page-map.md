@@ -41,6 +41,20 @@ to the PDF text extraction of `local-guide/official-guide.pdf`
 | Tablo 4.3.3.a/b/c FaturaOku* | 244-245 | fatura-oku contract |
 | 4.3.4 FaturaTutarOku | 246 | contract reuses FaturaGirisDVO/FaturaCevapDVO |
 
+## Rapor Bilgisi Kayıt (section 4.4)
+
+| Table / section | Pages | Registry usage |
+|---|---|---|
+| 4.4.1 RaporBilgisiKaydet + Tablo 4.4.1.a RaporGirisDVO | 252-279 | registration composite (G43b) |
+| Tablo 4.4.1.b RaporCevapDVO | 253-254 | response DVO (G43a: top-level fields verified; nested report VOs 4.4.1.c-j/ee deferred to G43b) |
+| 4.4.2 TakipNoileRaporBilgisiKaydet | 279 | registration variant reusing RaporGirisDVO (G43b) |
+| Tablo 4.4.3.a/c RaporSorguDVO / RaporOkuDVO | 279-280 | rapor-bilgisi-bul / sil input (G43a) |
+| Tablo 4.4.6.a IlacRaporDuzeltDVO | 281 | ilac-rapor-duzelt input (G43a; drTescilNo description column is a guide copy-paste error) |
+| Tablo 4.4.7.a RaporOkuRaporTakipNodanDVO | 281-282 | lookup by report tracking no (G43a) |
+| Tablo 4.4.8.a/b RaporOku/CevapTCKimlikNodanDVO | 282-283 | lookup by citizen ID (G43a; tckimlikNo description column is a guide copy-paste error) |
+| rapor-turu values (11) | 280, 282, 254 | registry enum rapor-turu |
+| WSDL raporIslemleriWS | 91, 353 | production + test endpoints |
+
 ## Not yet extracted
 
 - Complete sonucKodu error catalogs per method (pages beyond 167-168).
@@ -49,3 +63,10 @@ to the PDF text extraction of `local-guide/official-guide.pdf`
 - Nested composites (Tablo 4.2.1.c-l, 4.3.1.c-e, 4.3.3.c) — v0.3 scope.
 - New HastaKabul methods: ekds*, SevkBildir, HastaCikis*, KemikIligi*,
   HastaKabulKimlikDogrulama (disabled), UTS kesinleştirme.
+- Rapor registration composites (G43b): RaporGirisDVO (Tablo 4.4.1.a,
+  pages 252-279) with IlacRaporDVO/MaluliyetRaporDVO/TedaviRaporDVO/
+  IsgoremezlikRaporDVO (4.4.1.c-j) and ekleri 4.4.1.ee; plus
+  RaporEtkinMaddeDVO (4.4.1.ff) and IlacTeshisBilgiDVO (4.4.1.gg).
+- E-İmzalı Rapor methods (section 4.6, pages 329-351, 12 methods) — v0.5+
+  roadmap; requires the signature workflow states.
+- Yardımcı Web Servis methods (section 4.5, pages 283-321, 20 methods).

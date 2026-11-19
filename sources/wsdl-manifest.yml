@@ -28,3 +28,13 @@ wsdls:
     service: fatura-kayit
     environment: test
     url: https://sgkt.sgk.gov.tr/medula/hastane/faturaKayitIslemleriWS?wsdl
+
+  - id: wsdl.rapor.production
+    service: rapor
+    environment: production
+    url: https://medula.sgk.gov.tr/medula/hastane/raporIslemleriWS?wsdl
+
+  - id: wsdl.rapor.test
+    service: rapor
+    environment: test
+    url: https://sgkt.sgk.gov.tr/medula/hastane/raporIslemleriWS?wsdl

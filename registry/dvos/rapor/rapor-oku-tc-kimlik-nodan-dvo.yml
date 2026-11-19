@@ -1,0 +1,69 @@
+id: RaporOkuTCKimlikNodanDVO
+domain: rapor
+direction: input
+fields:
+  - name: tckimlikNo
+    displayName: TC Kimlik Numarasi
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: null
+    description: Citizen ID of the report owner. The guide's description column erroneously repeats 'Rapor Takip Numarası'; the parameter name tckimlikNo is authoritative.
+    sensitive: true
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 282
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: raporTuru
+    displayName: Rapor Turu
+    type: enum
+    enumRef: rapor-turu
+    codeSystem: null
+    required: true
+    length: 1
+    description: "Raporun türü (s.280): 1 Tedavi, 2 İş Kazası, 3 Meslek Hastalığı, 4 Hastalık, 5 Doğum Öncesi Çalışabilir, 6 Analık, 7 Doğum, 8 Protez, 9 Maluliyet, 10 İlaç Kullanım, 11 İlaç Muafiyet."
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 282
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: kullaniciTesisKodu
+    displayName: Kullanici Tesis Kodu
+    type: integer
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: null
+    description: Health facility code of the caller (s.282).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 282
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 279
+    confidence: extracted
+    section: Tablo 4.4.8.a (s.282)
+status: reviewed

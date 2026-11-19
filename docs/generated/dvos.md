@@ -498,6 +498,23 @@ Domain: `hizmet-kayit` · Direction: `input` · Status: `reviewed` · Source ref
 | `birlikteYapilanIslemSUTKodu` | string |  | — |  | SUT code of the concurrently performed operation (s.199) |
 | `birlikteYapilanIslemHizmetSunucuRefNo` | string |  | — |  | Institution reference of the concurrently performed operation (s.199) |
 
+## `IlacRaporDuzeltDVO`
+
+Domain: `rapor` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `drTescilNo` | string |  | — |  | Doctor diploma registration number. The guide's description column erroneously repeats the RaporCevapDVO result-code text here; the parameter name and clear name (Dr diploma tescil numarası) are authoritative. |
+| `duzeltmeBilgisi` | string |  | — |  | Additional annotation appended to the drug report (s.281). |
+| `duzeltmeTarihi` | string |  | — |  | Correction date, "dd.mm.yyyy" format (s.281). |
+| `raporNo` | string |  | — |  | Report number (s.281). |
+| `raporTarihi` | string |  | — |  | Report date, "dd.mm.yyyy" format (s.281). |
+| `raporTuru` | enum |  | rapor-turu |  | Report type; this method only applies to drug reports: 10 = İlaç Kullanım (s.281). |
+| `tesisKodu` | integer |  | — |  | Code of the facility that issued the report (s.281). |
+| `raporEtkinMaddeler` | array |  | — |  | Active ingredients; item shape in Tablo 4.4.1.ff (RaporEtkinMaddeDVO) — deferred to G43b with the RaporBilgisiKaydet composite set. |
+| `tanilar` | array |  | — |  | ICD-10 diagnoses; item shape in Tablo 4.2.1.k (TaniBilgisiDVO) — already used by the hizmet-kayit group. |
+| `ilacTeshisler` | array |  | — |  | Drug report diagnoses; item shape in Tablo 4.4.1.gg (IlacTeshisBilgiDVO). The guide marks this field mandatory for drug reports (s.281) despite listing it as optional in the required column. |
+
 ## `IslemDetayDVO`
 
 Domain: `fatura-kayit` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
@@ -812,6 +829,77 @@ Domain: `hasta-kabul` · Direction: `input` · Status: `reviewed` · Source refs
 | `ktsHbysKodu` | string |  | — |  | Software vendor KTS code (s.159). Verification correction - the guide marks this required. |
 | `ekdsYontemGerekce` | enum |  | ekds-yontem-gerekce |  | EKDS verification method justification codes; Integer[] in the guide, modeled as an array of ekds-yontem-gerekce codes (s.167, changelog s.13). |
 | `doktorTescilNo` | string |  | — |  | Registration number of the admitting doctor. Verification finding - this field does not appear in Tablo 4.1.1.a; kept for PRD 13.4 compatibility and slated for removal in 0.2.0. |
+
+## `RaporCevapDVO`
+
+Domain: `rapor` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `raporTakipNo` | integer |  | — |  | System-generated unique number of the saved report (s.253). |
+| `analikRapor` | object |  | — |  | Populated when the saved report is a maternity incapacity report; shape Tablo 4.4.1.f (AnalikIsgoremezlikRaporDVO) — deferred to G43b. |
+| `dogumOncesiCalisabilirRapor` | object |  | — |  | Populated when the saved report is a fit-to-work-before-birth report; shape Tablo 4.4.1.d (DogumOncesiCalisabilirRaporDVO) — deferred to G43b. |
+| `dogumRapor` | object |  | — |  | Populated when the saved report is a birth report; shape Tablo 4.4.1.e (DogumRaporDVO) — deferred to G43b. |
+| `ilacRapor` | object |  | — |  | Populated when the saved report is a drug report (use or exemption); shape Tablo 4.4.1.h (IlacRaporDVO) — deferred to G43b. |
+| `maluliyetRapor` | object |  | — |  | Populated when the saved report is a disability report; shape Tablo 4.4.1.j (MaluliyetRaporDVO) — deferred to G43b. |
+| `protezRapor` | object |  | — |  | Populated when the saved report is a prosthesis report; shape Tablo 4.4.1.g (ProtezRaporDVO) — deferred to G43b. |
+| `tedaviRapor` | object |  | — |  | Populated when the saved report is a treatment report; shape Tablo 4.4.1.i (TedaviRaporDVO) — deferred to G43b. |
+| `isgoremezlikRapor` | object |  | — |  | Populated when the saved report is an incapacity report (work accident, occupational disease or illness); shape Tablo 4.4.1.c (IsgoremezlikRaporDVO) — deferred to G43b. |
+| `isgoremezlikRaporEkleri` | array |  | — |  | Incapacity report attachments; item shape Tablo 4.4.1.ee (IsgoremezlikRaporEkDVO) — deferred to G43b. |
+| `sonucAciklamasi` | string |  | — |  | Result description; the failure reason is stated here (s.253). |
+| `sonucKodu` | integer |  | — |  | Result code; 0 (zero) means success, any other value is an error. Intra-guide divergence: this group is Integer 0-based, unlike the hasta-kabul group's String "0000". |
+| `raporTuru` | enum |  | rapor-turu |  | Type of the saved report; Raporun türü (s.280): 1 Tedavi, 2 İş Kazası, 3 Meslek Hastalığı, 4 Hastalık, 5 Doğum Öncesi Çalışabilir, 6 Analık, 7 Doğum, 8 Protez, 9 Maluliyet, 10 İlaç Kullanım, 11 İlaç Muafiyet. |
+
+## `RaporCevapTCKimlikNodanDVO`
+
+Domain: `rapor` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `raporlar` | array |  | — |  | Reports found for the citizen; items are RaporCevapDVO (this registry). |
+| `sonucAciklamasi` | string |  | — |  | Result description; the failure reason is stated here (s.283). |
+| `sonucKodu` | integer |  | — |  | Result code; 0 (zero) means success, any other value is an error (s.283). |
+
+## `RaporOkuDVO`
+
+Domain: `rapor` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `raporTesisKodu` | integer |  | — |  | Code of the facility that issued the report (s.280). |
+| `raporNo` | string |  | — |  | Report number (s.280). |
+| `raporTarih` | string |  | — |  | Report date, "dd.mm.yyyy" format (s.280). |
+| `raporTuru` | enum |  | rapor-turu |  | Raporun türü (s.280): 1 Tedavi, 2 İş Kazası, 3 Meslek Hastalığı, 4 Hastalık, 5 Doğum Öncesi Çalışabilir, 6 Analık, 7 Doğum, 8 Protez, 9 Maluliyet, 10 İlaç Kullanım, 11 İlaç Muafiyet. |
+| `raporSiraNo` | string |  | — |  | Report sequence number (s.280). |
+
+## `RaporOkuRaporTakipNodanDVO`
+
+Domain: `rapor` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `raporTakipNo` | string |  | — |  | Report tracking number (s.281). |
+| `kullaniciTesisKodu` | integer |  | — |  | Health facility code of the caller (s.282). |
+| `raporSiraNo` | string |  | — |  | Report sequence number (s.282). |
+
+## `RaporOkuTCKimlikNodanDVO`
+
+Domain: `rapor` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `tckimlikNo` | string |  | — |  | Citizen ID of the report owner. The guide's description column erroneously repeats 'Rapor Takip Numarası'; the parameter name tckimlikNo is authoritative. |
+| `raporTuru` | enum |  | rapor-turu |  | Raporun türü (s.280): 1 Tedavi, 2 İş Kazası, 3 Meslek Hastalığı, 4 Hastalık, 5 Doğum Öncesi Çalışabilir, 6 Analık, 7 Doğum, 8 Protez, 9 Maluliyet, 10 İlaç Kullanım, 11 İlaç Muafiyet. |
+| `kullaniciTesisKodu` | integer |  | — |  | Health facility code of the caller (s.282). |
+
+## `RaporSorguDVO`
+
+Domain: `rapor` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `raporBilgisi` | object |  | — |  | Report lookup key object; shape in Tablo 4.4.3.c (RaporOkuDVO, this registry). |
+| `kullaniciTesisKodu` | integer |  | — |  | Health facility code of the caller (s.279). |
 
 ## `SevkBildirGirisDVO`
 

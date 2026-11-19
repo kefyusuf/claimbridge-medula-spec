@@ -91,6 +91,13 @@ const EXPECTED_DVO_FILES = [
   "fatura-kayit/fatura-oku-giris-dvo.yml",
   "fatura-kayit/hizmet-detay-dvo.yml",
   "fatura-kayit/islem-detay-dvo.yml",
+  "rapor/rapor-cevap-dvo.yml",
+  "rapor/rapor-cevap-tc-kimlik-nodan-dvo.yml",
+  "rapor/rapor-oku-dvo.yml",
+  "rapor/rapor-oku-rapor-takip-nodan-dvo.yml",
+  "rapor/rapor-oku-tc-kimlik-nodan-dvo.yml",
+  "rapor/rapor-sorgu-dvo.yml",
+  "rapor/ilac-rapor-duzelt-dvo.yml",
 ];
 
 const EXPECTED_ENUM_IDS = [
@@ -117,6 +124,7 @@ const EXPECTED_ENUM_IDS = [
   "ambalaj-turu",
   "ayni-farkli-kesi",
   "euroscore",
+  "rapor-turu",
 ];
 
 const EXPECTED_RULE_FILES = [
