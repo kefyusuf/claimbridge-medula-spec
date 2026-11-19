@@ -129,6 +129,12 @@ erDiagram
     string sutKodu
     string ayniFarkliKesi
   }
+  DiyalizRaporBilgisiDVO {
+    enum refakatVarMi
+    integer seansGun
+    integer seansSayi
+    string butKodu
+  }
   DoktorBilgisiDVO {
     string drTescilNo
     string drAdi
@@ -145,12 +151,37 @@ erDiagram
     integer tesisKodu
     integer evrakID
   }
+  ESWLRaporBilgisiDVO {
+    string butKodu
+    integer eswlRaporuTasSayisi
+    integer eswlRaporuSeansSayisi
+    enum bobrekBilgisi
+    array eswlRaporuTasBilgileri
+  }
+  ESWLTasBilgisiDVO {
+    string tasBoyutu
+    enum tasLokalizasyonKodu
+  }
+  ESWTRaporBilgisiDVO {
+    enum eswtVucutBolgesiKodu
+    integer seansGun
+    integer seansSayi
+    string butKodu
+  }
   EmzirmeRaporDVO {
     string bebekDogumTarihi
     string dogumOncBasTarihi
     integer canliCocukSayisi
     string anneTcKimlikNo
     integer doganCocukSayisi
+  }
+  FTRRaporBilgisiDVO {
+    enum ftrVucutBolgesiKodu
+    integer seansGun
+    integer seansSayi
+    string butKodu
+    enum tedaviTuru
+    string robotikRehabilitasyon
   }
   FaturaCevapDVO {
     string sonucKodu
@@ -215,6 +246,11 @@ erDiagram
   }
   GenBilgisiDVO {
     string genKodu
+  }
+  HOTRaporBilgisiDVO {
+    integer seansGun
+    integer seansSayi
+    integer tedaviSuresi
   }
   HakSahibiBilgisiDVO {
     string tckimlikNo
@@ -860,6 +896,15 @@ erDiagram
     array islemler
     enum tedaviRaporTuru
   }
+  TeshisBilgisiDVO {
+    string baslangicTarihi
+    string bitisTarihi
+    integer teshisKodu
+  }
+  TupBebekRaporBilgisiDVO {
+    enum tupBebekRaporTuru
+    string butKodu
+  }
   medula_hastane_fatura_kayit_fatura_iptal ||--|| FaturaIptalGirisDVO : inputDvo
   medula_hastane_fatura_kayit_fatura_iptal ||--|| FaturaIptalCevapDVO : outputDvo
   medula_hastane_fatura_kayit_fatura_kayit ||--|| FaturaGirisDVO : inputDvo
@@ -933,7 +978,13 @@ erDiagram
   AnalikRaporDVO }o--|| gebelik_tipi : enumRef
   CocukBilgisiDVO }o--|| cinsiyet : enumRef
   DigerIslemBilgisiDVO }o--|| ayni_farkli_kesi : enumRef
+  DiyalizRaporBilgisiDVO }o--|| evet_hayir : enumRef
   DoktorBilgisiDVO }o--|| doktor_tipi : enumRef
+  ESWLRaporBilgisiDVO }o--|| bobrek_tarafi : enumRef
+  ESWLTasBilgisiDVO }o--|| tas_lokalizasyon : enumRef
+  ESWTRaporBilgisiDVO }o--|| eswt_vucut_bolgesi : enumRef
+  FTRRaporBilgisiDVO }o--|| ftr_vucut_bolgesi : enumRef
+  FTRRaporBilgisiDVO }o--|| tedavi_turu : enumRef
   FaturaCevapDetayDVO }o--|| taburcu_kodu : enumRef
   HakSahibiBilgisiDVO }o--|| sigortali_turu : enumRef
   HakSahibiBilgisiDVO }o--|| devredilen_kurum_rapor : enumRef
@@ -990,3 +1041,4 @@ erDiagram
   TakipDVO }o--|| ekds_yontem_gerekce : enumRef
   TaniBilgisiDVO }o--|| tani_tipi : enumRef
   TedaviRaporDVO }o--|| tedavi_rapor_turu : enumRef
+  TupBebekRaporBilgisiDVO }o--|| tup_bebek_turu : enumRef

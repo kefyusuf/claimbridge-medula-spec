@@ -1,0 +1,46 @@
+id: eswt-vucut-bolgesi
+displayName: ESWT Vucut Bolgesi
+values:
+  - code: "12"
+    label: Sag Omuz Bolgesi
+    description: Right shoulder region.
+  - code: "13"
+    label: Sol Omuz Bolgesi
+    description: Left shoulder region.
+  - code: "14"
+    label: Sag Dirsek Bolgesi
+    description: Right elbow region.
+  - code: "15"
+    label: Sol Dirsek Bolgesi
+    description: Left elbow region.
+  - code: "16"
+    label: Sag El-El Bilegi Bolgesi
+    description: Right hand-wrist region.
+  - code: "17"
+    label: Sol El-El Bilegi Bolgesi
+    description: Left hand-wrist region.
+  - code: "18"
+    label: Sag Kalca Bolgesi
+    description: Right hip region.
+  - code: "19"
+    label: Sol Kalca Bolgesi
+    description: Left hip region.
+  - code: "20"
+    label: Sag Diz Bolgesi
+    description: Right knee region.
+  - code: "21"
+    label: Sol Diz Bolgesi
+    description: Left knee region.
+  - code: "22"
+    label: Sag Ayak-Ayak Bilegi Bolgesi
+    description: Right foot-ankle region.
+  - code: "23"
+    label: Sol Ayak-Ayak Bilegi Bolgesi
+    description: Left foot-ankle region.
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 274
+    confidence: extracted
+status: reviewed
