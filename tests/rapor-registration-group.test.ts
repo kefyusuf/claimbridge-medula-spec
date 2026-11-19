@@ -164,7 +164,7 @@ describe("rapor registration composite (G43b, guide s.252-278)", () => {
   });
 
   it("verifies IsKazasiRaporDVO with its publish-later quirks (Tablo 4.4.1.d)", () => {
-    expect(fields("is-kazasi-rapor-dvo")).toHaveLength(11);
+    expect(fields("is-kazasi-rapor-dvo")).toHaveLength(13);
     expect(field("is-kazasi-rapor-dvo", "yatisDevam")["enumRef"]).toBe(
       "yatis-devam-is-kazasi",
     );

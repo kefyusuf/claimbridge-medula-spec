@@ -106,6 +106,19 @@ const EXPECTED_DVO_FILES = [
   "rapor/doktor-bilgisi-dvo.yml",
   "rapor/rapor-etkin-madde-dvo.yml",
   "rapor/ilac-teshis-bilgi-dvo.yml",
+  "rapor/meslek-hastaligi-rapor-dvo.yml",
+  "rapor/analik-rapor-dvo.yml",
+  "rapor/emzirme-rapor-dvo.yml",
+  "rapor/ilac-rapor-dvo.yml",
+  "rapor/tedavi-rapor-dvo.yml",
+  "rapor/hastalik-rapor-dvo.yml",
+  "rapor/rapor-dvo.yml",
+  "rapor/hasta-yatis-rapor-dvo.yml",
+  "rapor/cocuk-bilgisi-dvo.yml",
+  "rapor/malzeme-rapor-dvo.yml",
+  "rapor/tedavi-islem-bilgisi-dvo.yml",
+  "rapor/brans-gorus-bilgisi-dvo.yml",
+  "rapor/isgoremezlik-rapor-ek-dvo.yml",
 ];
 
 const EXPECTED_ENUM_IDS = [
@@ -144,6 +157,16 @@ const EXPECTED_ENUM_IDS = [
   "doz-birimi",
   "periyot-birimi",
   "devredilen-kurum-rapor",
+  "nor-sez-for",
+  "aktarma-rapor",
+  "analik-rapor-tipi",
+  "gebelik-tipi",
+  "cinsiyet",
+  "tedavi-rapor-turu",
+  "calisma-durumu",
+  "nuks-durumu",
+  "ek-durumu",
+  "evet-hayir",
 ];
 
 const EXPECTED_RULE_FILES = [

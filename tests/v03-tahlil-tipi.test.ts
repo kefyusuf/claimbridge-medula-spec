@@ -56,7 +56,7 @@ describe("v0.3 tahlil-tipi (Group 33)", () => {
     const manifest = JSON.parse(
       readFileSync(resolve(root, "dist", "manifest.json"), "utf8"),
     ) as { counts: Record<string, number> };
-    expect(manifest.counts.enums).toBe(35);
-    expect(manifest.counts.dvos).toBe(85);
+    expect(manifest.counts.enums).toBe(45);
+    expect(manifest.counts.dvos).toBe(98);
   });
 });
