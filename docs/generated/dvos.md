@@ -195,6 +195,17 @@ Domain: `hizmet-kayit` · Direction: `input` · Status: `reviewed` · Source ref
 | `sutKodu` | string |  | — |  | SUT-defined operation code (s.194) |
 | `ayniFarkliKesi` | string |  | — |  | Incision/session relation; values diverge from the ameliyat table (cut in extraction, s.194) (s.194) |
 
+## `DiyalizRaporBilgisiDVO`
+
+Domain: `rapor` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `refakatVarMi` | enum |  | evet-hayir |  | Companion flag, E/H (s.273). |
+| `seansGun` | integer |  | — |  | Session day count of the report (s.273). |
+| `seansSayi` | integer |  | — |  | Session count of the report (s.273). |
+| `butKodu` | string |  | — |  | SUT procedure code (s.273). |
+
 ## `DoktorBilgisiDVO`
 
 Domain: `rapor` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
@@ -226,6 +237,38 @@ Domain: `hasta-kabul` · Direction: `input` · Status: `reviewed` · Source refs
 | `tesisKodu` | integer |  | — |  | GSS-assigned institution code (s.186) |
 | `evrakID` | integer |  | — |  | Period document reference number to query (s.186) |
 
+## `ESWLRaporBilgisiDVO`
+
+Domain: `rapor` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `butKodu` | string |  | — |  | SUT procedure code (s.273). |
+| `eswlRaporuTasSayisi` | integer |  | — |  | Stone count of the report (s.273). |
+| `eswlRaporuSeansSayisi` | integer |  | — |  | Session count of the report (s.273). |
+| `bobrekBilgisi` | enum |  | bobrek-tarafi |  | Kidney side (s.273). |
+| `eswlRaporuTasBilgileri` | array |  | — |  | Stone details; item shape Tablo 4.4.1.cc (ESWLTasBilgisiDVO, this registry) (s.274). |
+
+## `ESWLTasBilgisiDVO`
+
+Domain: `rapor` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `tasBoyutu` | string |  | — |  | Stone size in millimetres, e.g. "2x5" (s.276). |
+| `tasLokalizasyonKodu` | enum |  | tas-lokalizasyon |  | Stone localization; the published list has no code 1 (s.276). |
+
+## `ESWTRaporBilgisiDVO`
+
+Domain: `rapor` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `eswtVucutBolgesiKodu` | enum |  | eswt-vucut-bolgesi |  | Twelve-value body-region list (s.274). |
+| `seansGun` | integer |  | — |  | Session day count (s.274). |
+| `seansSayi` | integer |  | — |  | Session count (s.274). |
+| `butKodu` | string |  | — |  | SUT procedure code (s.274). |
+
 ## `EmzirmeRaporDVO`
 
 Domain: `rapor` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
@@ -237,6 +280,19 @@ Domain: `rapor` · Direction: `input` · Status: `reviewed` · Source refs: medu
 | `canliCocukSayisi` | integer |  | — |  | Children alive after the birth (s.261). |
 | `anneTcKimlikNo` | string |  | — |  | Mother's citizen ID when the nursing report is issued on behalf of the father (s.261). |
 | `doganCocukSayisi` | integer |  | — |  | Children delivered (s.261). |
+
+## `FTRRaporBilgisiDVO`
+
+Domain: `rapor` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `ftrVucutBolgesiKodu` | enum |  | ftr-vucut-bolgesi |  | Seventeen-value body-region list; guide order preserved (11 listed last on s.275) (s.274-275). |
+| `seansGun` | integer |  | — |  | Session day count (s.275). |
+| `seansSayi` | integer |  | — |  | Session count (s.275). |
+| `butKodu` | string |  | — |  | SUT procedure code (s.275). |
+| `tedaviTuru` | enum |  | tedavi-turu |  | A = Ayaktan, Y = Yatarak (s.275); binds the hasta-kabul group's tedavi-turu enum. |
+| `robotikRehabilitasyon` | string |  | — |  | Guide row carries NO length, value list or description — registered verbatim as an empty-description required string (s.275). |
 
 ## `FaturaCevapDVO`
 
@@ -346,6 +402,16 @@ Domain: `hizmet-kayit` · Direction: `input` · Status: `reviewed` · Source ref
 | Field | Type | Required | Enum ref | Sensitive | Description |
 | --- | --- | --- | --- | --- | --- |
 | `genKodu` | string |  | — |  | Gene code; the table closes at s.232 with TaniBilgisiDVO following (s.231) |
+
+## `HOTRaporBilgisiDVO`
+
+Domain: `rapor` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `seansGun` | integer |  | — |  | Session day count (s.275). |
+| `seansSayi` | integer |  | — |  | Session count (s.275). |
+| `tedaviSuresi` | integer |  | — |  | Report treatment duration (s.275). |
 
 ## `HakSahibiBilgisiDVO`
 
@@ -1350,4 +1416,23 @@ Domain: `rapor` · Direction: `input` · Status: `reviewed` · Source refs: medu
 | `raporDVO` | object |  | — |  | Report core; shape Tablo 4.4.1.k (RaporDVO, this registry). |
 | `islemler` | array |  | — |  | Treatment procedures; only the object matching tedaviRaporTuru is populated, the rest NULL; item shape Tablo 4.4.1.o (TedaviIslemBilgisiDVO, this registry) (s.262). |
 | `tedaviRaporTuru` | enum |  | tedavi-rapor-turu |  | Nine-value treatment type list (s.262). |
+
+## `TeshisBilgisiDVO`
+
+Domain: `rapor` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `baslangicTarihi` | string |  | — |  | Report start date, "dd.mm.yyyy" (s.273). |
+| `bitisTarihi` | string |  | — |  | Report end date, "dd.mm.yyyy" (s.273). |
+| `teshisKodu` | integer |  | — |  | Report diagnosis code (s.273). |
+
+## `TupBebekRaporBilgisiDVO`
+
+Domain: `rapor` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `tupBebekRaporTuru` | enum |  | tup-bebek-turu |  | Disease-treatment vs other IVF procedures (s.276). |
+| `butKodu` | string |  | — |  | SUT procedure code (s.276). |
 

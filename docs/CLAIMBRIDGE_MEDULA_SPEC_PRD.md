@@ -1656,9 +1656,15 @@ No real patient/credential data exists.
         (PRD 12.4 forced the enum bind) and IsKazasiRaporDVO completed with
         the p.257 continuation rows (taburcuKodu + isKazasiTarihi);
         guide pages 257-278 verified; MalzemeBilgisiRaporDVO.malzemeKodu
-        annotated codeSystem SUT per the sweep norm. G43d next: uzman rapor
-        tabloları (4.4.1.w-ii: Diyaliz/ESWL/ESWT/FTR/HOT/TupBebek/
-        ESWLTas/EvHemodiyalizi/Pulmoner) + TeshisBilgisiDVO (4.4.1.v). -->
+        annotated codeSystem SUT per the sweep norm. -->
+   <!-- G43d + RELEASE (2026-11-19): uzman rapor tabloları LANDED —
+        TeshisBilgisiDVO (4.4.1.v) + Diyaliz/ESWL/ESWT/FTR/HOT/TupBebek/
+        ESWLTas (4.4.1.w-cc) + 5 new enums (bobrek-tarafi, eswt/ftr-vucut-
+        bolgesi with the code-11-ordering anomaly preserved, tup-bebek-turu,
+        tas-lokalizasyon with its missing code 1 documented); every butKodu
+        annotated codeSystem SUT. Section 4.4 is now FULLY extracted —
+        v0.5.0 RELEASED. Registry: 4 services, 32 methods, 106 DVOs, 50
+        enums, 260/260 tests (46 suites). -->
 2. Add Yardimci Islemler service group.
 3. Add more enums.
 4. Add richer scenario definitions.

@@ -1,6 +1,6 @@
 {
-  "specVersion": "0.4.0",
-  "generatedAt": "2026-11-19T19:45:30.049Z",
+  "specVersion": "0.5.0",
+  "generatedAt": "2026-11-19T19:58:01.835Z",
   "sources": [
     {
       "id": "medula-hastane-guide-2026-06-17",
@@ -4458,6 +4458,120 @@
       "status": "reviewed"
     },
     {
+      "id": "DiyalizRaporBilgisiDVO",
+      "domain": "rapor",
+      "direction": "input",
+      "fields": [
+        {
+          "name": "refakatVarMi",
+          "displayName": "Refakat Var Mi",
+          "type": "enum",
+          "enumRef": "evet-hayir",
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Companion flag, E/H (s.273).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 273,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "seansGun",
+          "displayName": "Seans Gun Sayisi",
+          "type": "integer",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Session day count of the report (s.273).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 273,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "seansSayi",
+          "displayName": "Seans Sayisi",
+          "type": "integer",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Session count of the report (s.273).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 273,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "butKodu",
+          "displayName": "But Kodu",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": "SUT",
+          "required": true,
+          "length": null,
+          "description": "SUT procedure code (s.273).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 273,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 273,
+          "confidence": "extracted",
+          "section": "4.4 Rapor Bilgisi Kayit Metotlari"
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
       "id": "DoktorBilgisiDVO",
       "domain": "rapor",
       "direction": "input",
@@ -4749,6 +4863,324 @@
       "status": "reviewed"
     },
     {
+      "id": "ESWLRaporBilgisiDVO",
+      "domain": "rapor",
+      "direction": "input",
+      "fields": [
+        {
+          "name": "butKodu",
+          "displayName": "But Kodu",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": "SUT",
+          "required": true,
+          "length": null,
+          "description": "SUT procedure code (s.273).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 273,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "eswlRaporuTasSayisi",
+          "displayName": "Tas Sayisi",
+          "type": "integer",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Stone count of the report (s.273).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 273,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "eswlRaporuSeansSayisi",
+          "displayName": "Seans Sayisi",
+          "type": "integer",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Session count of the report (s.273).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 273,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "bobrekBilgisi",
+          "displayName": "Bobrek Tarafi",
+          "type": "enum",
+          "enumRef": "bobrek-tarafi",
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Kidney side (s.273).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 273,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "eswlRaporuTasBilgileri",
+          "displayName": "ESWL Raporu Tas Bilgileri",
+          "type": "array",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Stone details; item shape Tablo 4.4.1.cc (ESWLTasBilgisiDVO, this registry) (s.274).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 274,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 273,
+          "confidence": "extracted",
+          "section": "4.4 Rapor Bilgisi Kayit Metotlari"
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
+      "id": "ESWLTasBilgisiDVO",
+      "domain": "rapor",
+      "direction": "input",
+      "fields": [
+        {
+          "name": "tasBoyutu",
+          "displayName": "Tas Boyut Bilgisi",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Stone size in millimetres, e.g. \"2x5\" (s.276).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 276,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "tasLokalizasyonKodu",
+          "displayName": "Tas Lokalizasyonu Kodu",
+          "type": "enum",
+          "enumRef": "tas-lokalizasyon",
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Stone localization; the published list has no code 1 (s.276).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 276,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 276,
+          "confidence": "extracted",
+          "section": "4.4 Rapor Bilgisi Kayit Metotlari"
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
+      "id": "ESWTRaporBilgisiDVO",
+      "domain": "rapor",
+      "direction": "input",
+      "fields": [
+        {
+          "name": "eswtVucutBolgesiKodu",
+          "displayName": "ESWT Vucut Bolgesi Kodu",
+          "type": "enum",
+          "enumRef": "eswt-vucut-bolgesi",
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Twelve-value body-region list (s.274).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 274,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "seansGun",
+          "displayName": "Seans Gun Sayisi",
+          "type": "integer",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Session day count (s.274).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 274,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "seansSayi",
+          "displayName": "Seans Sayisi",
+          "type": "integer",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Session count (s.274).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 274,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "butKodu",
+          "displayName": "But Kodu",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": "SUT",
+          "required": true,
+          "length": null,
+          "description": "SUT procedure code (s.274).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 274,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 274,
+          "confidence": "extracted",
+          "section": "4.4 Rapor Bilgisi Kayit Metotlari"
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
       "id": "EmzirmeRaporDVO",
       "domain": "rapor",
       "direction": "input",
@@ -4880,6 +5312,168 @@
           "sourceType": "official-guide",
           "guideVersion": "3.1.1",
           "page": 261,
+          "confidence": "extracted",
+          "section": "4.4 Rapor Bilgisi Kayit Metotlari"
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
+      "id": "FTRRaporBilgisiDVO",
+      "domain": "rapor",
+      "direction": "input",
+      "fields": [
+        {
+          "name": "ftrVucutBolgesiKodu",
+          "displayName": "FTR Vucut Bolgesi Kodu",
+          "type": "enum",
+          "enumRef": "ftr-vucut-bolgesi",
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Seventeen-value body-region list; guide order preserved (11 listed last on s.275) (s.274-275).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 274,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "seansGun",
+          "displayName": "Seans Gun Sayisi",
+          "type": "integer",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Session day count (s.275).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 275,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "seansSayi",
+          "displayName": "Seans Sayisi",
+          "type": "integer",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Session count (s.275).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 275,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "butKodu",
+          "displayName": "But Kodu",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": "SUT",
+          "required": true,
+          "length": null,
+          "description": "SUT procedure code (s.275).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 275,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "tedaviTuru",
+          "displayName": "Tedavi Turu",
+          "type": "enum",
+          "enumRef": "tedavi-turu",
+          "codeSystem": null,
+          "required": true,
+          "length": 1,
+          "description": "A = Ayaktan, Y = Yatarak (s.275); binds the hasta-kabul group's tedavi-turu enum.",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 275,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "robotikRehabilitasyon",
+          "displayName": "Robotik Rehabilitasyon",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Guide row carries NO length, value list or description — registered verbatim as an empty-description required string (s.275).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 275,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 274,
           "confidence": "extracted",
           "section": "4.4 Rapor Bilgisi Kayit Metotlari"
         }
@@ -6131,6 +6725,96 @@
           "conditionalRequired": [],
           "introducedIn": "0.2.0",
           "deprecatedIn": null
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
+      "id": "HOTRaporBilgisiDVO",
+      "domain": "rapor",
+      "direction": "input",
+      "fields": [
+        {
+          "name": "seansGun",
+          "displayName": "Seans Gun Sayisi",
+          "type": "integer",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Session day count (s.275).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 275,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "seansSayi",
+          "displayName": "Seans Sayisi",
+          "type": "integer",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Session count (s.275).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 275,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "tedaviSuresi",
+          "displayName": "Tedavi Suresi",
+          "type": "integer",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Report treatment duration (s.275).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 275,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 275,
+          "confidence": "extracted",
+          "section": "4.4 Rapor Bilgisi Kayit Metotlari"
         }
       ],
       "status": "reviewed"
@@ -19499,6 +20183,162 @@
         }
       ],
       "status": "reviewed"
+    },
+    {
+      "id": "TeshisBilgisiDVO",
+      "domain": "rapor",
+      "direction": "input",
+      "fields": [
+        {
+          "name": "baslangicTarihi",
+          "displayName": "Rapor Baslangic Tarihi",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": 10,
+          "description": "Report start date, \"dd.mm.yyyy\" (s.273).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 273,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "bitisTarihi",
+          "displayName": "Rapor Bitis Tarihi",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": 10,
+          "description": "Report end date, \"dd.mm.yyyy\" (s.273).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 273,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "teshisKodu",
+          "displayName": "Teshis Kodu",
+          "type": "integer",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Report diagnosis code (s.273).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 273,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 273,
+          "confidence": "extracted",
+          "section": "4.4 Rapor Bilgisi Kayit Metotlari"
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
+      "id": "TupBebekRaporBilgisiDVO",
+      "domain": "rapor",
+      "direction": "input",
+      "fields": [
+        {
+          "name": "tupBebekRaporTuru",
+          "displayName": "Tup Bebek Turu",
+          "type": "enum",
+          "enumRef": "tup-bebek-turu",
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Disease-treatment vs other IVF procedures (s.276).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 276,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "butKodu",
+          "displayName": "But Kodu",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": "SUT",
+          "required": true,
+          "length": null,
+          "description": "SUT procedure code (s.276).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 276,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 276,
+          "confidence": "extracted",
+          "section": "4.4 Rapor Bilgisi Kayit Metotlari"
+        }
+      ],
+      "status": "reviewed"
     }
   ],
   "enums": [
@@ -19825,6 +20665,32 @@
           "fetchedAt": "2026-11-15",
           "page": 191,
           "section": "Tablo 4.2.1.c - AmeliyatveGirisimBilgisiDVO (ayniFarkliKesi)",
+          "confidence": "extracted"
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
+      "id": "bobrek-tarafi",
+      "displayName": "Bobrek Tarafi",
+      "values": [
+        {
+          "code": "1",
+          "label": "Sag Bobrek",
+          "description": "Right kidney."
+        },
+        {
+          "code": "2",
+          "label": "Sol Bobrek",
+          "description": "Left kidney."
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 273,
           "confidence": "extracted"
         }
       ],
@@ -20514,6 +21380,82 @@
       "status": "reviewed"
     },
     {
+      "id": "eswt-vucut-bolgesi",
+      "displayName": "ESWT Vucut Bolgesi",
+      "values": [
+        {
+          "code": "12",
+          "label": "Sag Omuz Bolgesi",
+          "description": "Right shoulder region."
+        },
+        {
+          "code": "13",
+          "label": "Sol Omuz Bolgesi",
+          "description": "Left shoulder region."
+        },
+        {
+          "code": "14",
+          "label": "Sag Dirsek Bolgesi",
+          "description": "Right elbow region."
+        },
+        {
+          "code": "15",
+          "label": "Sol Dirsek Bolgesi",
+          "description": "Left elbow region."
+        },
+        {
+          "code": "16",
+          "label": "Sag El-El Bilegi Bolgesi",
+          "description": "Right hand-wrist region."
+        },
+        {
+          "code": "17",
+          "label": "Sol El-El Bilegi Bolgesi",
+          "description": "Left hand-wrist region."
+        },
+        {
+          "code": "18",
+          "label": "Sag Kalca Bolgesi",
+          "description": "Right hip region."
+        },
+        {
+          "code": "19",
+          "label": "Sol Kalca Bolgesi",
+          "description": "Left hip region."
+        },
+        {
+          "code": "20",
+          "label": "Sag Diz Bolgesi",
+          "description": "Right knee region."
+        },
+        {
+          "code": "21",
+          "label": "Sol Diz Bolgesi",
+          "description": "Left knee region."
+        },
+        {
+          "code": "22",
+          "label": "Sag Ayak-Ayak Bilegi Bolgesi",
+          "description": "Right foot-ankle region."
+        },
+        {
+          "code": "23",
+          "label": "Sol Ayak-Ayak Bilegi Bolgesi",
+          "description": "Left foot-ankle region."
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 274,
+          "confidence": "extracted"
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
       "id": "euroscore",
       "displayName": "Euroscore",
       "values": [
@@ -20574,6 +21516,108 @@
           "page": 276,
           "confidence": "extracted",
           "notes": "Generic E/H flag used by hastaYatisVarMi and kontrolMu on IsgoremezlikRaporEkDVO (s.276). The hasta-kabul group models its E/H fields as plain strings — the rapor group binds them."
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
+      "id": "ftr-vucut-bolgesi",
+      "displayName": "FTR Vucut Bolgesi",
+      "values": [
+        {
+          "code": "1",
+          "label": "Yuz Bolgesi",
+          "description": "Face region (temporomandibular joint and facial nerve; right and left applications are reimbursed as one)."
+        },
+        {
+          "code": "2",
+          "label": "Boyun Bolgesi",
+          "description": "Neck region (cervical application)."
+        },
+        {
+          "code": "3",
+          "label": "Sirt Bolgesi",
+          "description": "Back region (thoracic-dorsal applications)."
+        },
+        {
+          "code": "4",
+          "label": "Bel Bolgesi",
+          "description": "Lumbar region (lumbosacral applications)."
+        },
+        {
+          "code": "12",
+          "label": "Sag Omuz Bolgesi",
+          "description": "Right shoulder region."
+        },
+        {
+          "code": "13",
+          "label": "Sol Omuz Bolgesi",
+          "description": "Left shoulder region."
+        },
+        {
+          "code": "14",
+          "label": "Sag Dirsek Bolgesi",
+          "description": "Right elbow region."
+        },
+        {
+          "code": "15",
+          "label": "Sol Dirsek Bolgesi",
+          "description": "Left elbow region."
+        },
+        {
+          "code": "16",
+          "label": "Sag El-El Bilegi Bolgesi",
+          "description": "Right hand-wrist region."
+        },
+        {
+          "code": "17",
+          "label": "Sol El-El Bilegi Bolgesi",
+          "description": "Left hand-wrist region."
+        },
+        {
+          "code": "18",
+          "label": "Sag Kalca Bolgesi",
+          "description": "Right hip region."
+        },
+        {
+          "code": "19",
+          "label": "Sol Kalca Bolgesi",
+          "description": "Left hip region."
+        },
+        {
+          "code": "20",
+          "label": "Sag Diz Bolgesi",
+          "description": "Right knee region."
+        },
+        {
+          "code": "21",
+          "label": "Sol Diz Bolgesi",
+          "description": "Left knee region."
+        },
+        {
+          "code": "22",
+          "label": "Sag Ayak-Ayak Bilegi Bolgesi",
+          "description": "Right foot-ankle region."
+        },
+        {
+          "code": "23",
+          "label": "Sol Ayak-Ayak Bilegi Bolgesi",
+          "description": "Left foot-ankle region."
+        },
+        {
+          "code": "11",
+          "label": "Tum Vucut Bolgesi",
+          "description": "Whole-body region."
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 274,
+          "confidence": "extracted",
+          "notes": "Guide order preserved verbatim: the whole-body code 11 is listed AFTER codes 12-23 on s.275 — an ordering anomaly, not a registration choice."
         }
       ],
       "status": "reviewed"
@@ -25050,6 +26094,38 @@
       "status": "reviewed"
     },
     {
+      "id": "tas-lokalizasyon",
+      "displayName": "Tas Lokalizasyonu",
+      "values": [
+        {
+          "code": "2",
+          "label": "Alt Ureter",
+          "description": "Lower ureter."
+        },
+        {
+          "code": "3",
+          "label": "Ust Ureter",
+          "description": "Upper ureter."
+        },
+        {
+          "code": "4",
+          "label": "Bobrek",
+          "description": "Kidney."
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 276,
+          "confidence": "extracted",
+          "notes": "The guide lists only codes 2-4; no code 1 exists in the published list."
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
       "id": "tedavi-rapor-turu",
       "displayName": "Tedavi Rapor Turu",
       "values": [
@@ -25269,6 +26345,32 @@
           "section": "Tablo 4.1.1.a - ProvizyonGirisDVO (tedaviTuru)",
           "confidence": "extracted",
           "notes": "Verification correction: the v0.1 draft modeled numeric codes 1/2. The guide uses letter codes A/Y/G; the detailed treatment profile lives in the separate tedaviTipi field (codes 0-22)."
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
+      "id": "tup-bebek-turu",
+      "displayName": "Tup Bebek Turu",
+      "values": [
+        {
+          "code": "1",
+          "label": "Bir hastaligin tedavisi amaciyla uygulanan tup bebek islemleri",
+          "description": "IVF performed for the treatment of a disease."
+        },
+        {
+          "code": "2",
+          "label": "Diger tup bebek tedavisi islemleri",
+          "description": "Other IVF procedures."
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 276,
+          "confidence": "extracted"
         }
       ],
       "status": "reviewed"

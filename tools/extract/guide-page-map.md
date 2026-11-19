@@ -63,7 +63,14 @@ to the PDF text extraction of `local-guide/official-guide.pdf`
 | rapor group code lists (10) | 254-258, 268-278 | isgoremezlik-rapor-turu, rapor-duzenleme-turu, olum-durumu, devam-durumu, yatis-devam-durumu, yatis-devam-is-kazasi, adli-vaka-durumu, doktor-tipi, doz-birimi, periyot-birimi |
 | G43c branch tables | 257-267, 276-277 | 4.4.1.e MeslekHastaligi, 4.4.1.f Analik, 4.4.1.g Emzirme, 4.4.1.h Ilac, 4.4.1.i Tedavi, 4.4.1.j Hastalik, 4.4.1.k RaporDVO, 4.4.1.l-p small composites, 4.4.1.ee IsgoremezlikRaporEk |
 | G43c code lists (10) | 259-262, 266, 276 | nor-sez-for, aktarma-rapor, analik-rapor-tipi, gebelik-tipi, cinsiyet, tedavi-rapor-turu, calisma-durumu, nuks-durumu, ek-durumu, evet-hayir |
+| G43d specialist tables | 273-276 | 4.4.1.v TeshisBilgisiDVO, 4.4.1.w Diyaliz, 4.4.1.x ESWL, 4.4.1.y ESWT, 4.4.1.z FTR (code-11-ordering anomaly), 4.4.1.aa HOT, 4.4.1.bb TupBebek, 4.4.1.cc ESWLTas (no code 1) |
+| G43d code lists (5) | 273-276 | bobrek-tarafi, eswt-vucut-bolgesi, ftr-vucut-bolgesi, tup-bebek-turu, tas-lokalizasyon |
 | WSDL raporIslemleriWS | 91, 353 | production + test endpoints |
+
+**Section 4.4 status: FULLY EXTRACTED as of v0.5.0** — every table in
+§4.4 Rapor Bilgisi Kayit Metotları (pages 252-283) is registered; the only
+open rapor item is the §4.6 E-İmzalı Rapor group (separate service, v0.5+
+roadmap).
 
 ## Not yet extracted
 

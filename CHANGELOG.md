@@ -6,7 +6,26 @@ Format: [Keep a Changelog](https://keepachangelog.com); versioning: SemVer
 
 ## [Unreleased]
 
-_Nothing yet — v0.4.0 scope is complete._
+_Nothing yet — v0.5.0 scope is complete._
+
+## [0.5.0] — 2026-11-19
+
+Fifth release: the **Rapor Bilgisi Kayit** service group landed in four
+work groups (G43a-d) from guide section 4.4 (pages 252-283) — the
+`medula.hastane.rapor` service with guide-verified WSDL endpoints, seven
+reviewed methods (report lookup, deletion, drug-report correction, two
+citizen/tracking-number lookups, and the two registration variants), the
+full report-composite set (26 report-domain DVOs including the
+exactly-one-branch RaporGirisDVO dispatch, the incapacity branch, the
+maternity model, the shared RaporDVO core and the seven treatment-specific
+specialist tables), and twenty-one new guide-verified code-list enums
+(rapor-turu, devredilen-kurum-rapor variant, two distinct yatisDevam lists,
+ESWT/FTR body regions, and more). Intra-guide divergences preserved with
+annotations: Integer 0-based sonucKodu in this group, drTescilNo length
+16-vs-20, raporSiraNo Integer-vs-String, the changelog-vs-table conflict on
+codes 147/148/149, the "TABLOLAR TARAFIMIZCA SONRA YAYINLANACAKTIR" wound
+fields, and the unnumbered code-1 gap in tas-lokalizasyon. Registry now:
+4 services, 32 methods (31 reviewed + 1 draft), 106 DVOs, 50 enums.
 
 ## [0.4.0] — 2026-11-19
 
