@@ -85,9 +85,9 @@ function values(enumId: string): Array<Record<string, string>> {
 }
 
 describe("yardimci query methods (G44b, guide s.290-298)", () => {
-  it("extends the yardimci-islemler service to ten methods", () => {
+  it("extends the yardimci-islemler service beyond the G44a searches", () => {
     const serviceMethods = service["methods"] as string[];
-    expect(serviceMethods).toHaveLength(10);
+    expect(serviceMethods).toHaveLength(19);
     expect(serviceMethods).toContain(
       "medula.hastane.yardimci-islemler.guncel-sut-kodlari",
     );

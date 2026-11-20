@@ -82,7 +82,7 @@ describe("yardimci search methods (G44a, guide s.283-290)", () => {
     expect(service["id"]).toBe("medula.hastane.yardimci-islemler");
     const wsdl = service["wsdl"] as Record<string, string>;
     expect(wsdl["production"]).toBe("wsdl.yardimci-islemler.production");
-    expect(service["methods"] as string[]).toHaveLength(10);
+    expect(service["methods"] as string[]).toHaveLength(19);
     const manifest = readYaml("sources/wsdl-manifest.yml");
     const wsdls = manifest["wsdls"] as Array<Record<string, string>>;
     const yardimci = wsdls.filter((w) => w["service"] === "yardimci-islemler");

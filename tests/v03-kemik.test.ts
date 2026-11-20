@@ -87,8 +87,8 @@ describe("v0.3 kemik-iligi (Group 28)", () => {
     const manifest = JSON.parse(
       readFileSync(resolve(root, "dist", "manifest.json"), "utf8"),
     ) as { counts: Record<string, number> };
-    expect(manifest.counts.dvos).toBe(137);
-    expect(manifest.counts.methods).toBe(42);
+    expect(manifest.counts.dvos).toBe(163);
+    expect(manifest.counts.methods).toBe(51);
   });
 });
 
