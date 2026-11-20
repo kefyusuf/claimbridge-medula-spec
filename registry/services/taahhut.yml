@@ -1,0 +1,20 @@
+id: medula.hastane.taahhut
+slug: taahhut
+displayName: Taahhut Kayit Metotlari
+description: "Dental-prosthesis commitment operations: save (restricted to SUT annex-7 prosthesis codes 404010…404420), read by commitment number, delete, and read a person's prior commitments. Dental codes follow the mouth schema Tablo 4.7.4 (s.325-326)."
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 322
+    confidence: extracted
+    section: 4.4 Taahhut Kayit Metotlari
+wsdl:
+  production: wsdl.taahhut.production
+  test: wsdl.taahhut.test
+methods:
+  - medula.hastane.taahhut.dis-taahhut-kaydet
+  - medula.hastane.taahhut.dis-taahhut-oku
+  - medula.hastane.taahhut.dis-taahhut-sil
+  - medula.hastane.taahhut.kisi-dis-taahhut-oku
+status: reviewed

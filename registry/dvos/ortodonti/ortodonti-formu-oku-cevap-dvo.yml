@@ -1,0 +1,259 @@
+id: OrtodontiFormuOkuCevapDVO
+domain: ortodonti
+direction: output
+fields:
+  - name: formNo
+    displayName: Form No
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Orthodontic form number (s.329).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 329
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: islemTuru
+    displayName: Islem Turu
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Orthodontic procedure type, e.g. Sınıf I, Sınıf II (s.329).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 329
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: tesis_kodu_1
+    displayName: Tesis Kodu 1
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Facility code of the first procedure; underscored parameter names are guide-verbatim (s.329).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 329
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: tesis_kodu_2
+    displayName: Tesis Kodu 2
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Facility code of the second procedure (s.329).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 329
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: tesis_kodu_3
+    displayName: Tesis Kodu 3
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Facility code of the third procedure (s.329).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 329
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: islem_tarihi_1
+    displayName: Islem Tarihi 1
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Date of the first procedure (s.329).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 329
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: islem_tarihi_2
+    displayName: Islem Tarihi 2
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Date of the second procedure (s.329).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 329
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: islem_tarihi_3
+    displayName: Islem Tarihi 3
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Date of the third procedure (s.329).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 329
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: provizyonNo1
+    displayName: Provizyon No 1
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Provision number of the first procedure (s.329).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 329
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: provizyonNo2
+    displayName: Provizyon No 2
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Provision number of the second procedure (s.329).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 329
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: provizyonNo3
+    displayName: Provizyon No 3
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Provision number of the third procedure (s.329).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 329
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: sonucKodu
+    displayName: Sonuc Kodu
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: 4
+    description: Result code; "0000" means success (s.329).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 329
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: sonucMesaji
+    displayName: Sonuc Mesaji
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Result description (s.329).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 329
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 329
+    confidence: extracted
+    section: 4.5 Ortodonti Formu Kayit Metotlari
+status: reviewed
