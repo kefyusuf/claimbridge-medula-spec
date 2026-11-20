@@ -184,6 +184,19 @@ const EXPECTED_DVO_FILES = [
   "yardimci-islemler/kurum-sevk-talep-no-sorgu-detay-dvo.yml",
   "yardimci-islemler/kisi-gen-sorgu-giris-dvo.yml",
   "yardimci-islemler/kisi-gen-sorgu-cevap-dvo.yml",
+  "takip-formu/takip-formu-kaydet-giris-dvo.yml",
+  "takip-formu/takip-formu-kaydet-cevap-dvo.yml",
+  "takip-formu/diabet-takip-formu-kayit-dvo.yml",
+  "takip-formu/diabet-takip-formu-dvo.yml",
+  "takip-formu/takip-formu-doktor-bilgisi-dvo.yml",
+  "takip-formu/takip-formu-diabet-egitimi-dvo.yml",
+  "takip-formu/takip-formu-hastalik-dvo.yml",
+  "takip-formu/takip-formu-aliskanlik-dvo.yml",
+  "takip-formu/takip-formu-kullanilan-ilaclar-dvo.yml",
+  "takip-formu/takip-formu-oku-giris-dvo.yml",
+  "takip-formu/takip-formu-oku-cevap-dvo.yml",
+  "takip-formu/takip-formu-sil-giris-dvo.yml",
+  "takip-formu/takip-formu-sil-cevap-dvo.yml",
 ];
 
 const EXPECTED_ENUM_IDS = [
@@ -245,6 +258,17 @@ const EXPECTED_ENUM_IDS = [
   "tescil-turu",
   "yatak-seviyesi",
   "ara-karar",
+  "ikamet-turu",
+  "tbt-durumu",
+  "egzersiz-durumu",
+  "basvuru-nedeni",
+  "var-yok-bilinmiyor",
+  "anti-gad",
+  "ekg-durumu",
+  "goz-muayenesi",
+  "akut-komplikasyon",
+  "diabet-hastalik",
+  "aliskanlik",
 ];
 
 const EXPECTED_RULE_FILES = [
