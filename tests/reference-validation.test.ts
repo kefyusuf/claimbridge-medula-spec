@@ -102,7 +102,7 @@ describe("reference-validation (Group 2)", () => {
     ]);
   });
 
-  it("has exactly 36 method registry files in 5 domains", () => {
+  it("has exactly 42 method registry files in 5 domains", () => {
     expect(methods.map((m) => m.file).sort()).toEqual([
       "fatura-kayit/fatura-iptal.yml",
       "fatura-kayit/fatura-kayit.yml",
@@ -137,9 +137,15 @@ describe("reference-validation (Group 2)", () => {
       "rapor/rapor-bilgisi-sil.yml",
       "rapor/takip-no-ile-rapor-bilgisi-kaydet.yml",
       "yardimci-islemler/doktor-ara.yml",
+      "yardimci-islemler/guncel-sut-kodlari.yml",
       "yardimci-islemler/ilac-ara.yml",
+      "yardimci-islemler/katilim-payi-ucreti.yml",
+      "yardimci-islemler/kesinti-yapilmis-islemler.yml",
+      "yardimci-islemler/orneklenmis-takipler.yml",
       "yardimci-islemler/saglik-tesisi-ara.yml",
       "yardimci-islemler/takip-ara.yml",
+      "yardimci-islemler/takip-bilgileri-listesi.yml",
+      "yardimci-islemler/yurt-disi-yardim-hakki-getir.yml",
     ]);
   });
 
