@@ -1,0 +1,31 @@
+id: goz-muayenesi
+displayName: Goz Muayenesi Durumu
+values:
+  - code: "1"
+    label: Normal
+    description: Normal.
+  - code: "2"
+    label: Nonproliferatif RP
+    description: Non-proliferative retinopathy.
+  - code: "3"
+    label: Proliferatif RP
+    description: Proliferative retinopathy.
+  - code: "4"
+    label: Makula Donemi
+    description: Macular degeneration.
+  - code: "5"
+    label: Katarakt
+    description: Cataract.
+  - code: "6"
+    label: Glokom
+    description: Glaucoma.
+  - code: "7"
+    label: Bilinmiyor
+    description: Unknown.
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 313
+    confidence: extracted
+status: reviewed

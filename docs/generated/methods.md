@@ -770,6 +770,78 @@
 | deletes | — |
 | generates | `raporTakipNo` |
 
+## `medula.hastane.takip-formu.takip-formu-kaydet`
+
+| Field | Value |
+| --- | --- |
+| Service | medula.hastane.takip-formu |
+| Documentation heading | takipFormuKaydet |
+| Operation name | takipFormuKaydet |
+| Input DVO | TakipFormuKaydetGirisDVO |
+| Output DVO | TakipFormuKaydetCevapDVO |
+| Success | sonucKodu = 0000 (sonucMesaji) |
+| Sandbox supported |  |
+| Status | reviewed |
+| Source refs | medula-hastane-guide-3-1-1-2026-10-19 |
+
+**State effects**
+
+| Effect | Targets |
+| --- | --- |
+| creates | `takipFormu` |
+| reads | — |
+| updates | — |
+| deletes | — |
+| generates | `takipFormuNo` |
+
+## `medula.hastane.takip-formu.takip-formu-oku`
+
+| Field | Value |
+| --- | --- |
+| Service | medula.hastane.takip-formu |
+| Documentation heading | takipFormuOku |
+| Operation name | takipFormuOku |
+| Input DVO | TakipFormuOkuGirisDVO |
+| Output DVO | TakipFormuOkuCevapDVO |
+| Success | sonucKodu = 0000 (sonucMesaji) |
+| Sandbox supported |  |
+| Status | reviewed |
+| Source refs | medula-hastane-guide-3-1-1-2026-10-19 |
+
+**State effects**
+
+| Effect | Targets |
+| --- | --- |
+| creates | — |
+| reads | `takipFormu` |
+| updates | — |
+| deletes | — |
+| generates | — |
+
+## `medula.hastane.takip-formu.takip-formu-sil`
+
+| Field | Value |
+| --- | --- |
+| Service | medula.hastane.takip-formu |
+| Documentation heading | takipFormuSil |
+| Operation name | takipFormuSil |
+| Input DVO | TakipFormuSilGirisDVO |
+| Output DVO | TakipFormuSilCevapDVO |
+| Success | sonucKodu = 0000 (sonucMesaji) |
+| Sandbox supported |  |
+| Status | reviewed |
+| Source refs | medula-hastane-guide-3-1-1-2026-10-19 |
+
+**State effects**
+
+| Effect | Targets |
+| --- | --- |
+| creates | — |
+| reads | — |
+| updates | — |
+| deletes | `takipFormu` |
+| generates | — |
+
 ## `medula.hastane.yardimci-islemler.barkod-sut-eslesme-sorgu`
 
 | Field | Value |

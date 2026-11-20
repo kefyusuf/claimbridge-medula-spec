@@ -1,0 +1,52 @@
+id: TakipFormuHastalikDVO
+domain: takip-formu
+direction: input
+fields:
+  - name: hastalikKodu
+    displayName: Hastalik Kodu
+    type: enum
+    enumRef: diabet-hastalik
+    codeSystem: null
+    required: true
+    length: null
+    description: Fifteen-value disease list including 0 = Diğer (s.319).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 319
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: digerHastalikTaniKodu
+    displayName: Hastalik Tani Kodu
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Diagnosis code of a disease outside the list; filled when hastalikKodu = 0 (s.319).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 319
+        confidence: extracted
+    conditionalRequired:
+      - condition: hastalikKodu = 0
+        note: "guide: Eğer hastalık kodu 0:Diğer seçilmiş ise (s.319)"
+    introducedIn: 0.5.0
+    deprecatedIn: null
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 310
+    confidence: extracted
+    section: 4.3 Takip Formu Kayit Metotlari
+status: reviewed

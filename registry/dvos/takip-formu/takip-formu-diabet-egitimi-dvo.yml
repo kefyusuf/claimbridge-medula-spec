@@ -1,0 +1,69 @@
+id: TakipFormuDiabetEgitimiDVO
+domain: takip-formu
+direction: input
+fields:
+  - name: bireyselEgitimSayisi
+    displayName: Bireysel Egitim Sayisi
+    type: integer
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: null
+    description: Individual DM education count (s.319).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 319
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: grupEgitimSayisi
+    displayName: Grup Egitim Sayisi
+    type: integer
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: null
+    description: Group DM education count (s.319).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 319
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: dmEgitimiAlmisMi
+    displayName: DM Egitim Almis Mi
+    type: enum
+    enumRef: evet-hayir
+    codeSystem: null
+    required: true
+    length: null
+    description: E/H (s.319).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 319
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 310
+    confidence: extracted
+    section: 4.3 Takip Formu Kayit Metotlari
+status: reviewed

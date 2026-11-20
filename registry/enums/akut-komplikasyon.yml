@@ -1,0 +1,22 @@
+id: akut-komplikasyon
+displayName: Akut Komplikasyon (Son 3 Ay)
+values:
+  - code: "1"
+    label: Yasanmadi
+    description: Did not occur.
+  - code: "2"
+    label: DKA
+    description: Diabetic ketoacidosis.
+  - code: "3"
+    label: HHD
+    description: Hyperosmolar hyperglycemic state.
+  - code: "4"
+    label: Hipoglisemi
+    description: Hypoglycemia.
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 314
+    confidence: extracted
+status: reviewed

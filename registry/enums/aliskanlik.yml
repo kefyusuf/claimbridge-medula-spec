@@ -1,0 +1,22 @@
+id: aliskanlik
+displayName: Aliskanlik Kodu
+values:
+  - code: "1"
+    label: Sigara
+    description: Smoking.
+  - code: "2"
+    label: Alkol
+    description: Alcohol.
+  - code: "3"
+    label: Cay Kahve
+    description: Tea/coffee.
+  - code: "4"
+    label: Diger
+    description: Other.
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 319
+    confidence: extracted
+status: reviewed

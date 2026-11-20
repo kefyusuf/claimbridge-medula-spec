@@ -1,0 +1,32 @@
+id: medula.hastane.takip-formu.takip-formu-oku
+service: medula.hastane.takip-formu
+names:
+  documentationHeading: takipFormuOku
+  operationName: takipFormuOku
+  aliases:
+    - takipFormuOku
+contract:
+  inputDvo: TakipFormuOkuGirisDVO
+  outputDvo: TakipFormuOkuCevapDVO
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 320
+    confidence: extracted
+    section: 4.3 4.3.2 takipFormuOku Metodu
+stateEffects:
+  creates: []
+  reads:
+    - takipFormu
+  updates: []
+  deletes: []
+  generates: []
+success:
+  resultCodeField: sonucKodu
+  successCode: "0000"
+  messageField: sonucMesaji
+sandbox:
+  supported: false
+  defaultScenario: null
+status: reviewed

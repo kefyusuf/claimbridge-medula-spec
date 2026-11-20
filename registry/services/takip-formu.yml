@@ -1,0 +1,19 @@
+id: medula.hastane.takip-formu
+slug: takip-formu
+displayName: Takip Formu Kayit Metotlari
+description: "Diabetes Mellitus follow-up form operations: save, read and delete the DM follow-up form (guide section renumbered 4.3/4.6.1 across editions)."
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 310
+    confidence: extracted
+    section: 4.3 Takip Formu Kayit Metotlari
+wsdl:
+  production: wsdl.takip-formu.production
+  test: wsdl.takip-formu.test
+methods:
+  - medula.hastane.takip-formu.takip-formu-kaydet
+  - medula.hastane.takip-formu.takip-formu-oku
+  - medula.hastane.takip-formu.takip-formu-sil
+status: reviewed

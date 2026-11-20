@@ -1,0 +1,55 @@
+id: diabet-hastalik
+displayName: Diabet Takip Formu Hastalik Kodu
+values:
+  - code: "1"
+    label: Hipertansiyon
+    description: Hypertension.
+  - code: "2"
+    label: Koroner Arter Hst.
+    description: Coronary artery disease.
+  - code: "3"
+    label: Kanser
+    description: Cancer.
+  - code: "4"
+    label: Solunum S. Hst.
+    description: Respiratory system disease.
+  - code: "5"
+    label: Kalp Yetmezligi
+    description: Heart failure.
+  - code: "6"
+    label: Kronik KC Hst.
+    description: Chronic liver disease.
+  - code: "7"
+    label: Periferik Arter Hst.
+    description: Peripheral artery disease.
+  - code: "8"
+    label: Diabetik Ayak.
+    description: Diabetic foot.
+  - code: "9"
+    label: Amputasyon
+    description: Amputation.
+  - code: "10"
+    label: KBY
+    description: Chronic kidney failure.
+  - code: "11"
+    label: Osteoporoz
+    description: Osteoporosis.
+  - code: "12"
+    label: Hiperkolesterolemi
+    description: Hypercholesterolemia.
+  - code: "13"
+    label: Hiperlipidemi
+    description: Hyperlipidemia.
+  - code: "14"
+    label: Ek hastalik yok.
+    description: No additional disease.
+  - code: "0"
+    label: Diger
+    description: Other — digerHastalikTaniKodu then carries the code.
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 319
+    confidence: extracted
+status: reviewed

@@ -48,3 +48,13 @@ wsdls:
     service: yardimci-islemler
     environment: test
     url: https://sgkt.sgk.gov.tr/medula/hastane/yardimciIslemlerWS?wsdl
+
+  - id: wsdl.takip-formu.production
+    service: takip-formu
+    environment: production
+    url: https://medula.sgk.gov.tr/medula/hastane/takipFormuIslemleriWS?wsdl
+
+  - id: wsdl.takip-formu.test
+    service: takip-formu
+    environment: test
+    url: https://sgkt.sgk.gov.tr/medula/hastane/takipFormuIslemleriWS?wsdl

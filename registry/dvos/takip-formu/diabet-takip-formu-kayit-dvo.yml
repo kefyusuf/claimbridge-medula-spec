@@ -1,0 +1,909 @@
+id: DiabetTakipFormuKayitDVO
+domain: takip-formu
+direction: input
+fields:
+  - name: tcKimlikNo
+    displayName: T.C. Kimlik Numarasi
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: 11
+    description: Patient citizen ID (s.311).
+    sensitive: true
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 311
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: ad
+    displayName: Ad
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: null
+    description: Patient first name (s.311).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 311
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: soyad
+    displayName: Soyad
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: null
+    description: Patient last name (s.311).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 311
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: cepTel
+    displayName: Cep Telefonu
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: 10
+    description: Mobile number, e.g. 5xxxxxxxxx (s.311).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 311
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: protokolNo
+    displayName: Protokol No
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: null
+    description: Protocol number (s.311).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 311
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: vizitTarihi
+    displayName: Vizit Tarihi
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: 10
+    description: Visit date, "dd.mm.yyyy" (s.311).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 311
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: saglikTesisiKodu
+    displayName: Saglik Tesis Kodu
+    type: integer
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: null
+    description: Facility code; the guide spells this parameter saglikTesisiKodu (extra i) unlike saglikTesisKodu elsewhere — preserved verbatim (s.311).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 311
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: cinsiyet
+    displayName: Hastanin Cinsiyeti
+    type: enum
+    enumRef: cinsiyet
+    codeSystem: null
+    required: true
+    length: 1
+    description: E = Erkek, K = Kadın (s.311).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 311
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: ikametTuru
+    displayName: Ikamet Turu
+    type: enum
+    enumRef: ikamet-turu
+    codeSystem: null
+    required: true
+    length: null
+    description: Six-value residence list (s.311).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 311
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: doktorBilgileri
+    displayName: Doktor Bilgileri
+    type: array
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: null
+    description: Physicians; item shape Tablo 4.6.1.e (TakipFormuDoktorBilgisiDVO, this registry) (s.311).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 311
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: tani
+    displayName: Hasta Tanisi
+    type: string
+    enumRef: null
+    codeSystem: ICD-10-WHO
+    required: true
+    length: null
+    description: Diagnosis ICD-10 code (s.311).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 311
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: taniTarihi
+    displayName: Tani Tarihi
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: 10
+    description: First date the patient received the diagnosis (s.311).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 311
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: diabetEgitimi
+    displayName: Diabet Egitimi Bilgisi
+    type: object
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: null
+    description: Diabetes education; shape Tablo 4.6.1.f (TakipFormuDiabetEgitimiDVO, this registry) (s.311).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 311
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: tibbiBeslenmeTedavisi
+    displayName: Tibbi Beslenme Tedavisi (TBT)
+    type: enum
+    enumRef: tbt-durumu
+    codeSystem: null
+    required: true
+    length: null
+    description: Six-value medical-nutrition adherence list (s.311).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 311
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: egzersiz
+    displayName: Egzersiz
+    type: enum
+    enumRef: egzersiz-durumu
+    codeSystem: null
+    required: true
+    length: null
+    description: Seven-value exercise adherence list (s.311-312).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 311
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: hastaliklar
+    displayName: Hastaliklar
+    type: array
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: null
+    description: Diseases besides DM; item shape Tablo 4.6.1.g (TakipFormuHastalikDVO, this registry) (s.312).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 312
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: basvuruNedeni
+    displayName: Basvuru Nedeni
+    type: enum
+    enumRef: basvuru-nedeni
+    codeSystem: null
+    required: true
+    length: null
+    description: Six-value admission-reason list (s.312).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 312
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: aliskanliklar
+    displayName: Aliskanliklar
+    type: array
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: null
+    description: Habits; item shape Tablo 4.6.1.h (TakipFormuAliskanlikDVO, this registry) (s.312).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 312
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: glukoMetre
+    displayName: Gluko Metre
+    type: enum
+    enumRef: var-yok-bilinmiyor
+    codeSystem: null
+    required: true
+    length: 1
+    description: Glucometer presence (s.312).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 312
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: kanSekeriTakipSayisi
+    displayName: Kan Sekeri Takip Sayisi
+    type: integer
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: null
+    description: Daily blood-sugar measurement count (s.312).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 312
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: kullanilanIlaclar
+    displayName: Hastanin Kullandigi Ilac Bilgileri
+    type: array
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: null
+    description: Medications; item shape Tablo 4.6.1.i (TakipFormuKullanilanIlaclarDVO, this registry) (s.312).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 312
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: sistolikKanBasinci
+    displayName: Sistolik Kan Basinci
+    type: integer
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Systolic blood pressure; the guide's required column is empty in the extraction (s.312).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 312
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: diyastolikKanBasinci
+    displayName: Diyastolik Kan Basinci
+    type: integer
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Diastolic blood pressure; required column empty in the extraction (s.312).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 312
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: boy
+    displayName: Boy
+    type: decimal
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: null
+    description: Height (s.312).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 312
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: kilo
+    displayName: Kilo
+    type: decimal
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: null
+    description: Weight (s.312).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 312
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: vki
+    displayName: VKI
+    type: decimal
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: null
+    description: Body-mass index, e.g. 22.3 (s.312).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 312
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: apg
+    displayName: APG
+    type: decimal
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: null
+    description: Fasting blood sugar; 0 when unknown (s.313).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 313
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: tpg
+    displayName: TPG
+    type: decimal
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: null
+    description: Postprandial blood sugar; 0 when unknown (s.313).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 313
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: hbA1c
+    displayName: HbA1c
+    type: decimal
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: null
+    description: HbA1c; 0 when unknown (s.313).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 313
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: kreatinin
+    displayName: Kreatinin
+    type: decimal
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: null
+    description: Creatinine; 0 when unknown (s.313).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 313
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: trigliserid
+    displayName: Trigliserid
+    type: decimal
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: null
+    description: Triglyceride; 0 when unknown (s.313).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 313
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: ldlKol
+    displayName: LDL-Kol
+    type: decimal
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: null
+    description: LDL cholesterol; 0 when unknown (s.313).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 313
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: hdlKol
+    displayName: HDL-Kol
+    type: decimal
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: null
+    description: HDL cholesterol; 0 when unknown (s.313).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 313
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: alt
+    displayName: ALT
+    type: decimal
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: null
+    description: ALT; 0 when unknown (s.313).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 313
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: antiGAD
+    displayName: AntiGAD
+    type: enum
+    enumRef: anti-gad
+    codeSystem: null
+    required: true
+    length: 1
+    description: P/N/B result (s.313).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 313
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: ekg
+    displayName: EKG
+    type: enum
+    enumRef: ekg-durumu
+    codeSystem: null
+    required: true
+    length: null
+    description: Three-value ECG state (s.313).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 313
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: mikroalbuminuri
+    displayName: Mikroalbuminuri
+    type: enum
+    enumRef: var-yok-bilinmiyor
+    codeSystem: null
+    required: true
+    length: 1
+    description: V/Y/B (s.313).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 313
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: gozMuayenesi
+    displayName: Goz Muayenesi
+    type: enum
+    enumRef: goz-muayenesi
+    codeSystem: null
+    required: true
+    length: null
+    description: Seven-value eye-examination state (s.313).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 313
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: periferikSensoryalNoropati
+    displayName: Periferik Sensoryal Noropati
+    type: enum
+    enumRef: var-yok-bilinmiyor
+    codeSystem: null
+    required: true
+    length: 1
+    description: V/Y/B (s.313).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 313
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: koronerArterH
+    displayName: Koroner Arter H
+    type: enum
+    enumRef: var-yok-bilinmiyor
+    codeSystem: null
+    required: true
+    length: 1
+    description: V/Y/B; the guide's required column is empty in the extraction (s.314).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 314
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: serebrovaskulerH
+    displayName: Serebrovaskuler H
+    type: enum
+    enumRef: var-yok-bilinmiyor
+    codeSystem: null
+    required: true
+    length: 1
+    description: V/Y/B (s.314).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 314
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: ayakMuayenesi
+    displayName: Ayak Muayenesi
+    type: enum
+    enumRef: var-yok-bilinmiyor
+    codeSystem: null
+    required: true
+    length: 1
+    description: V = diabetik ülser var, Y = yok, B = bilinmiyor (s.314).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 314
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: akutKomplikasyon
+    displayName: Akut Komplikasyon (Son 3 Ay)
+    type: enum
+    enumRef: akut-komplikasyon
+    codeSystem: null
+    required: true
+    length: null
+    description: Four-value complication list (s.314).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 314
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: yatisGun
+    displayName: Hasta Yatis Gun
+    type: integer
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: null
+    description: Hospitalization day count of the visit (s.314).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 314
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: insulinPompasi
+    displayName: Insulin Pompasi
+    type: enum
+    enumRef: var-yok-bilinmiyor
+    codeSystem: null
+    required: true
+    length: 1
+    description: Pump presence; the guide's parameter name carries the Turkish capital İ (İnsulinPompasi) — preserved verbatim (s.314).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 314
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: insulinPompasiVerTarihi
+    displayName: Insulin Pompasi Verilis Tarihi
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: 10
+    description: Pump start date, "dd.mm.yyyy"; filled when a pump exists (s.314).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 314
+        confidence: extracted
+    conditionalRequired:
+      - condition: insulinPompasi = V
+        note: "guide: Verilmiş ise (s.314)"
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: insulinPompasiDegTarihi
+    displayName: Insulin Pompasi Degistirme Tarihi
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: 10
+    description: Pump change date; filled when a pump exists (s.314).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 314
+        confidence: extracted
+    conditionalRequired:
+      - condition: insulinPompasi = V
+        note: "guide: Verilmiş ise (s.314)"
+    introducedIn: 0.5.0
+    deprecatedIn: null
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 310
+    confidence: extracted
+    section: 4.3 Takip Formu Kayit Metotlari
+status: reviewed

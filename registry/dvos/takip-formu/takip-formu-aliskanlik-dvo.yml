@@ -1,0 +1,31 @@
+id: TakipFormuAliskanlikDVO
+domain: takip-formu
+direction: input
+fields:
+  - name: aliskanlik
+    displayName: Aliskanlik Kodu
+    type: enum
+    enumRef: aliskanlik
+    codeSystem: null
+    required: true
+    length: null
+    description: Four-value habit list (s.319).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 319
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 310
+    confidence: extracted
+    section: 4.3 Takip Formu Kayit Metotlari
+status: reviewed

@@ -1,0 +1,31 @@
+id: egzersiz-durumu
+displayName: Egzersiz Durumu
+values:
+  - code: "1"
+    label: Onerilmis -> duzenli yapiyor
+    description: Recommended, exercising regularly.
+  - code: "2"
+    label: Onerilmis -> duzensiz yapiyor
+    description: Recommended, exercising irregularly.
+  - code: "3"
+    label: Onerilmis -> yapmiyor
+    description: Recommended, not exercising.
+  - code: "4"
+    label: Onerilmis -> uygun hasta degil
+    description: Recommended, not a suitable patient.
+  - code: "5"
+    label: Onerilmis -> Bilinmiyor
+    description: Recommended, adherence unknown.
+  - code: "6"
+    label: Onerilmemis
+    description: Not recommended.
+  - code: "7"
+    label: Bilinmiyor
+    description: Unknown.
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 311
+    confidence: extracted
+status: reviewed
