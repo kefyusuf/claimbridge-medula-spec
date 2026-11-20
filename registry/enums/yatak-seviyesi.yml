@@ -1,0 +1,20 @@
+id: yatak-seviyesi
+displayName: Yatak Seviyesi
+values:
+  - code: "1"
+    label: 1. Basamak Yogum Bakim
+    description: First-level intensive care.
+  - code: "2"
+    label: 2. Basamak Yogum Bakim
+    description: Second-level intensive care.
+  - code: "3"
+    label: 3. Basamak Yogum Bakim
+    description: Third-level intensive care.
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 301
+    confidence: extracted
+    notes: Guide's parameter-name row reads 'Seviye' (capitalized) — registered lowercase per the naming convention.
+status: reviewed

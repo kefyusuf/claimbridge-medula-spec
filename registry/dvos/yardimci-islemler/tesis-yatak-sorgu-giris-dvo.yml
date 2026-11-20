@@ -1,0 +1,52 @@
+id: TesisYatakSorguGirisDVO
+domain: yardimci-islemler
+direction: input
+fields:
+  - name: saglikTesisKodu
+    displayName: Tesis Kodu
+    type: integer
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: null
+    description: Code of the calling facility (s.300).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 300
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: tarih
+    displayName: Tarih
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Empty returns the whole bed list; filled returns the beds valid on that date (s.300).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 300
+        confidence: extracted
+    conditionalRequired:
+      - condition: empty vs filled has full-list vs snapshot semantics
+        note: "guide: gönderilmez ise tüm yatak listesi döner (s.300)"
+    introducedIn: 0.5.0
+    deprecatedIn: null
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 299
+    confidence: extracted
+    section: 4.5 Yardimci Web Servis Metotlari
+status: reviewed

@@ -1,0 +1,19 @@
+id: yatak-turu
+displayName: Yatak Turu
+values:
+  - code: E
+    label: Erisgin
+    description: Adult bed.
+  - code: Y
+    label: Yenidogan
+    description: Neonatal bed.
+  - code: P
+    label: Palyatif
+    description: Palliative bed.
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 300
+    confidence: extracted
+status: reviewed

@@ -1,0 +1,19 @@
+id: tescil-turu
+displayName: Yatak Tescil Turu
+values:
+  - code: "0"
+    label: Seviyesi Belirsiz
+    description: Level undetermined.
+  - code: "1"
+    label: Tescilli
+    description: Registered.
+  - code: "2"
+    label: Gecici Tescilli
+    description: Temporarily registered.
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 300
+    confidence: extracted
+status: reviewed

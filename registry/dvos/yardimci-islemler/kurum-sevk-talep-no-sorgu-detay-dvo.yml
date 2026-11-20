@@ -1,0 +1,202 @@
+id: KurumSevkTalepNoSorguDetayDVO
+domain: yardimci-islemler
+direction: output
+fields:
+  - name: kurumSevkTalepNo
+    displayName: Kurum Sevk Talep No
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: 11
+    description: The "e-Talep MALULİYET SEVK FORMU" number issued by the province directorate / social-security center (s.308).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 308
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: tcKimlikNo
+    displayName: T.C. Kimlik No
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: 11
+    description: Patient citizen ID (s.308).
+    sensitive: true
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 308
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: sevkTarihi
+    displayName: Sevk Tarihi
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: 10
+    description: '"dd.MM.yyyy" referral date (s.308).'
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 308
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: saglikTesisKodu
+    displayName: Saglik Tesis Kodu
+    type: integer
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Facility code (s.308).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 308
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: hastaBasvuruNo
+    displayName: Provizyon Numarasi
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Populated when a takip was taken with this referral number (s.308).
+    sensitive: false
+    syntheticOnlyRecommended: true
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 308
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: raporTakipNo
+    displayName: Rapor Takip No
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Populated when a report was registered with this referral number (s.308).
+    sensitive: false
+    syntheticOnlyRecommended: true
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 308
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: aciklama
+    displayName: Aciklama
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Report remark (s.308).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 308
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: sigortaliTcNo
+    displayName: Sigortali TC Kimlik No
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Citizen ID of the applicant's insured person (s.308).
+    sensitive: true
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 308
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: ucret
+    displayName: Ucret
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Whether treatment costs are covered by the "Kurum" or the "Sigortalı" (s.308).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 308
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: araKarar
+    displayName: Ara Karar
+    type: enum
+    enumRef: ara-karar
+    codeSystem: null
+    required: false
+    length: null
+    description: Referral decision type (s.309).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 309
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 299
+    confidence: extracted
+    section: 4.5 Yardimci Web Servis Metotlari
+status: reviewed

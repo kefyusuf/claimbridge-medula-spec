@@ -1,0 +1,107 @@
+id: BarkodSutDVO
+domain: yardimci-islemler
+direction: output
+fields:
+  - name: barkod
+    displayName: Barkod
+    type: string
+    enumRef: null
+    codeSystem: GS1
+    required: false
+    length: null
+    description: Barcode (s.302).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 302
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: firmaTanimlayiciNo
+    displayName: Firma Tanimlayici No
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Company identifier (s.302).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 302
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: sutKodu
+    displayName: Sut Kodu
+    type: string
+    enumRef: null
+    codeSystem: SUT
+    required: false
+    length: null
+    description: SUT code (s.302).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 302
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: baslangicTarihi
+    displayName: Baslangic Tarihi
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: 10
+    description: Validity start (s.302).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 302
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: bitisTarihi
+    displayName: Bitis Tarihi
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: 10
+    description: Validity end (s.302).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 302
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 299
+    confidence: extracted
+    section: 4.5 Yardimci Web Servis Metotlari
+status: reviewed

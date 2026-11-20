@@ -1,0 +1,22 @@
+id: ara-karar
+displayName: Ara Karar Durumu
+values:
+  - code: H
+    label: Ilk Sevk
+    description: Initial referral.
+  - code: E
+    label: Ara Karar Sevk
+    description: Interim-decision referral.
+  - code: K
+    label: Kontrol Muayenesi
+    description: Control examination.
+  - code: Y
+    label: YSK Ara Karar
+    description: YSK interim decision.
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 309
+    confidence: extracted
+status: reviewed
