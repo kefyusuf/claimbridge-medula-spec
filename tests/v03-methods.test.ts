@@ -64,7 +64,7 @@ describe("v0.3 hasta-kabul methods (Group 24)", () => {
       expect(refs, `${id} must cite the method list`).toContain(GUIDE_ID);
       expect(refs, `${id} must cite page 149`).toContain('"page":149');
     }
-    expect(reg.methods).toHaveLength(61);
+    expect(reg.methods).toHaveLength(72);
   });
 
   it("marks HastaKabulKimlikDogrulama as disabled in the sandbox", () => {
@@ -179,6 +179,6 @@ describe("v0.3 hasta-kabul methods (Group 24)", () => {
     const manifest = JSON.parse(
       readFileSync(resolve(root, "dist", "manifest.json"), "utf8"),
     ) as { counts: Record<string, number> };
-    expect(manifest.counts.methods).toBe(61);
+    expect(manifest.counts.methods).toBe(72);
   });
 });

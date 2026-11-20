@@ -210,6 +210,19 @@ const EXPECTED_DVO_FILES = [
   "ortodonti/ortodonti-formu-iptal-cevap-dvo.yml",
   "ortodonti/ortodonti-formu-oku-giris-dvo.yml",
   "ortodonti/ortodonti-formu-oku-cevap-dvo.yml",
+  "imzali-rapor/rapor-onay-dvo.yml",
+  "imzali-rapor/imzali-rapor-onay-giris-dvo.yml",
+  "imzali-rapor/imzali-rapor-sorgu-giris-dvo.yml",
+  "imzali-rapor/imzali-rapor-onay-bekleyen-sorgu-giris-dvo.yml",
+  "imzali-rapor/rapor-onay-bekleyen-sorgu-dvo.yml",
+  "imzali-rapor/imzali-rapor-sil-giris-dvo.yml",
+  "imzali-rapor/onay-dvo.yml",
+  "imzali-rapor/rapor-onay-cevap-dvo.yml",
+  "imzali-rapor/rapor-sorgu-cevap-dvo.yml",
+  "imzali-rapor/imzali-rapor-dvo.yml",
+  "imzali-rapor/onay-cevap-dvo.yml",
+  "imzali-rapor/onay-bekleyen-cevap-dvo.yml",
+  "imzali-rapor/sonuc-dvo.yml",
 ];
 
 const EXPECTED_ENUM_IDS = [
@@ -282,6 +295,9 @@ const EXPECTED_ENUM_IDS = [
   "akut-komplikasyon",
   "diabet-hastalik",
   "aliskanlik",
+  "imzali-rapor-turu",
+  "onay-veren-turu",
+  "onay-islem-turu",
 ];
 
 const EXPECTED_RULE_FILES = [
