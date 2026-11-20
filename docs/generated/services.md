@@ -118,4 +118,13 @@ Helper operations: facility, physician, tracking-record and drug searches, plus 
 - `medula.hastane.yardimci-islemler.takip-bilgileri-listesi`
 - `medula.hastane.yardimci-islemler.yurt-disi-yardim-hakki-getir`
 - `medula.hastane.yardimci-islemler.guncel-sut-kodlari`
+- `medula.hastane.yardimci-islemler.evrak-takip-grup-kodlari-sorgu`
+- `medula.hastane.yardimci-islemler.tesis-yatak-sorgu`
+- `medula.hastane.yardimci-islemler.barkod-sut-eslesme-sorgu`
+- `medula.hastane.yardimci-islemler.kisi-gecmis-islem-sorgu`
+- `medula.hastane.yardimci-islemler.tani-ara`
+- `medula.hastane.yardimci-islemler.e-nabiz-bildirim-sorgu`
+- `medula.hastane.yardimci-islemler.kisi-vefat-kayit`
+- `medula.hastane.yardimci-islemler.kurum-sevk-talep-no-sorgu`
+- `medula.hastane.yardimci-islemler.kisi-gen-sorgula`
 

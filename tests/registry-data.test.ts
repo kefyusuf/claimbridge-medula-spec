@@ -158,6 +158,32 @@ const EXPECTED_DVO_FILES = [
   "yardimci-islemler/guncel-sut-sorgu-giris-dvo.yml",
   "yardimci-islemler/guncel-sut-sorgu-cevap-dvo.yml",
   "yardimci-islemler/sut-fiyat-dvo.yml",
+  "yardimci-islemler/evrak-takip-grup-kodu-sorgu-giris-dvo.yml",
+  "yardimci-islemler/evrak-takip-grup-kodu-sorgu-cevap-dvo.yml",
+  "yardimci-islemler/evrak-takip-grup-kodu-dvo.yml",
+  "yardimci-islemler/tesis-yatak-sorgu-giris-dvo.yml",
+  "yardimci-islemler/tesis-yatak-sorgu-cevap-dvo.yml",
+  "yardimci-islemler/tesis-yatak-bilgi-dvo.yml",
+  "yardimci-islemler/barkod-sut-eslesme-sorgu-giris-dvo.yml",
+  "yardimci-islemler/barkod-sut-eslesme-sorgu-cevap-dvo.yml",
+  "yardimci-islemler/barkod-sut-dvo.yml",
+  "yardimci-islemler/kisi-gecmis-islemler-giris-dvo.yml",
+  "yardimci-islemler/kisi-gecmis-islemler-cevap-dvo.yml",
+  "yardimci-islemler/kisi-islem-dvo.yml",
+  "yardimci-islemler/tani-ara-giris-wsdvo.yml",
+  "yardimci-islemler/tani-ara-cevap-dvo.yml",
+  "yardimci-islemler/tani-list-dvo.yml",
+  "yardimci-islemler/e-nabiz-bildirim-sorgu-giris-dvo.yml",
+  "yardimci-islemler/e-nabiz-bildirim-sorgu-cevap-dvo.yml",
+  "yardimci-islemler/e-nabiz-hizmet-bilgi-dvo.yml",
+  "yardimci-islemler/kisi-olum-kayit-giris-dvo.yml",
+  "yardimci-islemler/kisi-olum-kayit-cevap-dvo.yml",
+  "yardimci-islemler/kisi-olum-kayit-detay-dvo.yml",
+  "yardimci-islemler/kurum-sevk-talep-no-sorgu-giris-dvo.yml",
+  "yardimci-islemler/kurum-sevk-talep-no-sorgu-cevap-dvo.yml",
+  "yardimci-islemler/kurum-sevk-talep-no-sorgu-detay-dvo.yml",
+  "yardimci-islemler/kisi-gen-sorgu-giris-dvo.yml",
+  "yardimci-islemler/kisi-gen-sorgu-cevap-dvo.yml",
 ];
 
 const EXPECTED_ENUM_IDS = [
@@ -215,6 +241,10 @@ const EXPECTED_ENUM_IDS = [
   "aktif-pasif",
   "grup-turu",
   "sut-hizmet-turu",
+  "yatak-turu",
+  "tescil-turu",
+  "yatak-seviyesi",
+  "ara-karar",
 ];
 
 const EXPECTED_RULE_FILES = [

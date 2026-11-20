@@ -1,0 +1,126 @@
+id: TesisYatakBilgiDVO
+domain: yardimci-islemler
+direction: output
+fields:
+  - name: yatakKodu
+    displayName: Yatak Kodu
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: 15
+    description: Bed code (s.300).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 300
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: turu
+    displayName: Yatak Turu
+    type: enum
+    enumRef: yatak-turu
+    codeSystem: null
+    required: false
+    length: 1
+    description: Adult / neonatal / palliative (s.300).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 300
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: tescilTuru
+    displayName: Tescil Turu
+    type: enum
+    enumRef: tescil-turu
+    codeSystem: null
+    required: false
+    length: null
+    description: Registration state (s.300).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 300
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: seviye
+    displayName: Yatak Seviye
+    type: enum
+    enumRef: yatak-seviyesi
+    codeSystem: null
+    required: false
+    length: null
+    description: Intensive-care level (s.301).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 301
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: gecerlilikBaslangicTarihi
+    displayName: Gecerlilik Baslangic Tarihi
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: 10
+    description: Validity start date (s.301).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 301
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: gecerlilikBitisTarihi
+    displayName: Gecerlilik Bitis Tarihi
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: 10
+    description: Validity end date (s.301).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 301
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 299
+    confidence: extracted
+    section: 4.5 Yardimci Web Servis Metotlari
+status: reviewed

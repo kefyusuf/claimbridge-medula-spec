@@ -115,8 +115,8 @@ describe("v0.3 nested 2 (Group 22)", () => {
     const manifest = JSON.parse(
       readFileSync(resolve(root, "dist", "manifest.json"), "utf8"),
     ) as { counts: Record<string, number> };
-    expect(manifest.counts.dvos).toBe(137);
-    expect(manifest.counts.enums).toBe(54);
+    expect(manifest.counts.dvos).toBe(163);
+    expect(manifest.counts.enums).toBe(58);
   });
 });
 

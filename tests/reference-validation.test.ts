@@ -102,7 +102,7 @@ describe("reference-validation (Group 2)", () => {
     ]);
   });
 
-  it("has exactly 42 method registry files in 5 domains", () => {
+  it("has exactly 51 method registry files in 5 domains", () => {
     expect(methods.map((m) => m.file).sort()).toEqual([
       "fatura-kayit/fatura-iptal.yml",
       "fatura-kayit/fatura-kayit.yml",
@@ -136,15 +136,24 @@ describe("reference-validation (Group 2)", () => {
       "rapor/rapor-bilgisi-kaydet.yml",
       "rapor/rapor-bilgisi-sil.yml",
       "rapor/takip-no-ile-rapor-bilgisi-kaydet.yml",
+      "yardimci-islemler/barkod-sut-eslesme-sorgu.yml",
       "yardimci-islemler/doktor-ara.yml",
+      "yardimci-islemler/e-nabiz-bildirim-sorgu.yml",
+      "yardimci-islemler/evrak-takip-grup-kodlari-sorgu.yml",
       "yardimci-islemler/guncel-sut-kodlari.yml",
       "yardimci-islemler/ilac-ara.yml",
       "yardimci-islemler/katilim-payi-ucreti.yml",
       "yardimci-islemler/kesinti-yapilmis-islemler.yml",
+      "yardimci-islemler/kisi-gecmis-islem-sorgu.yml",
+      "yardimci-islemler/kisi-gen-sorgula.yml",
+      "yardimci-islemler/kisi-vefat-kayit.yml",
+      "yardimci-islemler/kurum-sevk-talep-no-sorgu.yml",
       "yardimci-islemler/orneklenmis-takipler.yml",
       "yardimci-islemler/saglik-tesisi-ara.yml",
       "yardimci-islemler/takip-ara.yml",
       "yardimci-islemler/takip-bilgileri-listesi.yml",
+      "yardimci-islemler/tani-ara.yml",
+      "yardimci-islemler/tesis-yatak-sorgu.yml",
       "yardimci-islemler/yurt-disi-yardim-hakki-getir.yml",
     ]);
   });

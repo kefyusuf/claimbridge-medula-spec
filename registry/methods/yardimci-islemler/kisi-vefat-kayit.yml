@@ -1,0 +1,31 @@
+id: medula.hastane.yardimci-islemler.kisi-vefat-kayit
+service: medula.hastane.yardimci-islemler
+names:
+  documentationHeading: kisiVefatKayit
+  operationName: kisiVefatKayit
+  aliases:
+    - kisiVefatKayit
+contract:
+  inputDvo: KisiOlumKayitGirisDVO
+  outputDvo: KisiOlumKayitCevapDVO
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 306
+    confidence: extracted
+    section: 4.5 4.5.17 Kişi Vefat Kayıt
+stateEffects:
+  creates: []
+  reads: []
+  updates: []
+  deletes: []
+  generates: []
+success:
+  resultCodeField: sonucKodu
+  successCode: "0000"
+  messageField: sonucMesaji
+sandbox:
+  supported: false
+  defaultScenario: null
+status: reviewed

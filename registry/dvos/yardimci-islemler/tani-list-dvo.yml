@@ -1,0 +1,50 @@
+id: TaniListDVO
+domain: yardimci-islemler
+direction: output
+fields:
+  - name: icd10Kodu
+    displayName: ICD 10 Kodu
+    type: string
+    enumRef: null
+    codeSystem: ICD-10-WHO
+    required: false
+    length: null
+    description: ICD-10 code (s.304).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 304
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: taniAdi
+    displayName: Tani Adi
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Diagnosis name (s.304).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 304
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 299
+    confidence: extracted
+    section: 4.5 Yardimci Web Servis Metotlari
+status: reviewed

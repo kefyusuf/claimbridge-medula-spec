@@ -1,0 +1,109 @@
+id: BarkodSutEslesmeSorguGirisDVO
+domain: yardimci-islemler
+direction: input
+fields:
+  - name: saglikTesisKodu
+    displayName: Tesis Kodu
+    type: integer
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: null
+    description: Code of the calling facility (s.301).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 301
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: tarih
+    displayName: Tarih
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Empty returns the whole mapping list; filled returns mappings valid on that date (s.301).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 301
+        confidence: extracted
+    conditionalRequired:
+      - condition: empty vs filled has full-list vs snapshot semantics
+        note: "guide: gönderilmez ise tüm eşleşme listesi döner (s.301)"
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: barkod
+    displayName: Barkod
+    type: string
+    enumRef: null
+    codeSystem: GS1
+    required: false
+    length: null
+    description: Sent when querying by barcode + company identifier (s.301).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 301
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: firmaTanimlayiciNo
+    displayName: Firma Tanimlayici No
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Sent when querying by barcode + company identifier (s.301).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 301
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: sutKodu
+    displayName: Sut Kodu
+    type: string
+    enumRef: null
+    codeSystem: SUT
+    required: false
+    length: null
+    description: Sent when querying by SUT code (s.301).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 301
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 299
+    confidence: extracted
+    section: 4.5 Yardimci Web Servis Metotlari
+status: reviewed

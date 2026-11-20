@@ -128,14 +128,14 @@ describe("v0.3 final contracts (Group 30)", () => {
     expect(
       reviewed,
       "29/30 reviewed; the disabled HastaKabulKimlikDogrulama stays draft",
-    ).toBe(41);
+    ).toBe(50);
   });
 
   it("updates the manifest counts", () => {
     const manifest = JSON.parse(
       readFileSync(resolve(root, "dist", "manifest.json"), "utf8"),
     ) as { counts: Record<string, number> };
-    expect(manifest.counts.dvos).toBe(137);
-    expect(manifest.counts.methods).toBe(42);
+    expect(manifest.counts.dvos).toBe(163);
+    expect(manifest.counts.methods).toBe(51);
   });
 });
