@@ -1,0 +1,28 @@
+id: ikamet-turu
+displayName: Ikamet Turu
+values:
+  - code: "1"
+    label: Il Merkezi
+    description: Province center.
+  - code: "2"
+    label: Ilce Merkezi
+    description: District center.
+  - code: "3"
+    label: Belde
+    description: Town.
+  - code: "4"
+    label: Koy
+    description: Village.
+  - code: "5"
+    label: Mezra
+    description: Hamlet.
+  - code: "6"
+    label: Diger
+    description: Other.
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 311
+    confidence: extracted
+status: reviewed

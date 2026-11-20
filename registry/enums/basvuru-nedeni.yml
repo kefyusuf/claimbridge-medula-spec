@@ -1,0 +1,28 @@
+id: basvuru-nedeni
+displayName: Basvuru Nedeni
+values:
+  - code: "1"
+    label: Genel Kontrol
+    description: General check.
+  - code: "2"
+    label: Rutin muayene ve kontrol
+    description: Routine examination related to the disease.
+  - code: "3"
+    label: Baska branstan konsultasyon
+    description: Consultation from another department.
+  - code: "4"
+    label: Akut metabolik komplikasyonlar
+    description: Acute metabolic complications.
+  - code: "5"
+    label: Akut kronik komplikasyon
+    description: Acute chronic complication.
+  - code: "6"
+    label: Ilac Yazdirma
+    description: Prescription request.
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 312
+    confidence: extracted
+status: reviewed
