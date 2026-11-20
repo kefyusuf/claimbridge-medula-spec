@@ -223,6 +223,16 @@ const EXPECTED_DVO_FILES = [
   "imzali-rapor/onay-cevap-dvo.yml",
   "imzali-rapor/onay-bekleyen-cevap-dvo.yml",
   "imzali-rapor/sonuc-dvo.yml",
+  "imzali-rapor/imzali-rapor-giris-dvo.yml",
+  "imzali-rapor/imzali-rapor-cevap-dvo.yml",
+  "imzali-rapor/maluliyet-rapor-dvo.yml",
+  "imzali-rapor/maluliyet-brans-gorus-bilgisi-dvo.yml",
+  "imzali-rapor/maluliyet-brans-gorus-tani-bilgisi-dvo.yml",
+  "imzali-rapor/imzali-doktor-bilgisi-dvo.yml",
+  "imzali-rapor/engellilik-rapor-dvo.yml",
+  "imzali-rapor/imzali-tani-bilgisi-dvo.yml",
+  "imzali-rapor/engellilik-brans-gorus-bilgisi-dvo.yml",
+  "imzali-rapor/tibbi-gereklilik-rapor-dvo.yml",
 ];
 
 const EXPECTED_ENUM_IDS = [
@@ -298,6 +308,15 @@ const EXPECTED_ENUM_IDS = [
   "imzali-rapor-turu",
   "onay-veren-turu",
   "onay-islem-turu",
+  "maluliyet-rapor-turu",
+  "sevk-nedeni",
+  "basvuru-sekli",
+  "doktor-personel-tipi",
+  "muracaat-turu",
+  "muracaat-nedeni",
+  "bagimlilik-durumu",
+  "istek-nedeni",
+  "tani-neden",
 ];
 
 const EXPECTED_RULE_FILES = [

@@ -5,22 +5,16 @@ import { describe, expect, it } from "vitest";
 const root = resolve(import.meta.dirname, "..");
 
 describe("release v0.5.0 (Group 44)", () => {
-  it("bumps SPEC_VERSION and package.json to 0.5.0", () => {
+  it("keeps the pre-0.6.0 version history coherent (release superseded)", () => {
     const specVersion = readFileSync(
       resolve(root, "SPEC_VERSION"),
       "utf8",
     ).trim();
-    expect(specVersion).toBe("0.5.0");
+    expect(specVersion).toBe("0.6.0");
     const pkg = JSON.parse(
       readFileSync(resolve(root, "package.json"), "utf8"),
     ) as { version: string };
-    expect(pkg.version).toBe("0.5.0");
-  });
-
-  it("bumps CITATION.cff to 0.5.0", () => {
-    const citation = readFileSync(resolve(root, "CITATION.cff"), "utf8");
-    expect(citation).toContain("version: 0.5.0");
-    expect(citation).toContain('date-released: "2026-11-19"');
+    expect(pkg.version).toBe("0.6.0");
   });
 
   it("records the 0.5.0 release in the changelog", () => {
@@ -42,14 +36,14 @@ describe("release v0.5.0 (Group 44)", () => {
       dvos: Array<{ id: string }>;
       enums: Array<{ id: string }>;
     };
-    expect(bundle.specVersion).toBe("0.5.0");
+    expect(bundle.specVersion).toBe("0.6.0");
     expect(bundle.services.map((s) => s.id)).toContain("medula.hastane.rapor");
     const raporMethods = bundle.methods.filter((m) =>
       m.id.startsWith("medula.hastane.rapor."),
     );
     expect(raporMethods).toHaveLength(7);
     expect(raporMethods.every((m) => m.status === "reviewed")).toBe(true);
-    expect(bundle.dvos).toHaveLength(202);
-    expect(bundle.enums).toHaveLength(72);
+    expect(bundle.dvos).toHaveLength(212);
+    expect(bundle.enums).toHaveLength(81);
   });
 });
