@@ -1,6 +1,6 @@
 {
   "specVersion": "0.5.0",
-  "generatedAt": "2026-11-20T15:19:01.615Z",
+  "generatedAt": "2026-11-20T15:47:17.498Z",
   "sources": [
     {
       "id": "medula-hastane-guide-2026-06-17",
@@ -159,6 +159,32 @@
         "medula.hastane.rapor.rapor-bilgisi-bul-tc-kimlik-nodan",
         "medula.hastane.rapor.rapor-bilgisi-kaydet",
         "medula.hastane.rapor.takip-no-ile-rapor-bilgisi-kaydet"
+      ],
+      "status": "reviewed"
+    },
+    {
+      "id": "medula.hastane.takip-formu",
+      "slug": "takip-formu",
+      "displayName": "Takip Formu Kayit Metotlari",
+      "description": "Diabetes Mellitus follow-up form operations: save, read and delete the DM follow-up form (guide section renumbered 4.3/4.6.1 across editions).",
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 310,
+          "confidence": "extracted",
+          "section": "4.3 Takip Formu Kayit Metotlari"
+        }
+      ],
+      "wsdl": {
+        "production": "wsdl.takip-formu.production",
+        "test": "wsdl.takip-formu.test"
+      },
+      "methods": [
+        "medula.hastane.takip-formu.takip-formu-kaydet",
+        "medula.hastane.takip-formu.takip-formu-oku",
+        "medula.hastane.takip-formu.takip-formu-sil"
       ],
       "status": "reviewed"
     },
@@ -1820,6 +1846,140 @@
         "resultCodeField": "sonucKodu",
         "successCode": "0",
         "messageField": "sonucAciklamasi"
+      },
+      "sandbox": {
+        "supported": false,
+        "defaultScenario": null
+      },
+      "status": "reviewed"
+    },
+    {
+      "id": "medula.hastane.takip-formu.takip-formu-kaydet",
+      "service": "medula.hastane.takip-formu",
+      "names": {
+        "documentationHeading": "takipFormuKaydet",
+        "operationName": "takipFormuKaydet",
+        "aliases": [
+          "takipFormuKaydet"
+        ]
+      },
+      "contract": {
+        "inputDvo": "TakipFormuKaydetGirisDVO",
+        "outputDvo": "TakipFormuKaydetCevapDVO"
+      },
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 310,
+          "confidence": "extracted",
+          "section": "4.3 4.3.1 takipFormuKaydet Metodu"
+        }
+      ],
+      "stateEffects": {
+        "creates": [
+          "takipFormu"
+        ],
+        "reads": [],
+        "updates": [],
+        "deletes": [],
+        "generates": [
+          "takipFormuNo"
+        ]
+      },
+      "success": {
+        "resultCodeField": "sonucKodu",
+        "successCode": "0000",
+        "messageField": "sonucMesaji"
+      },
+      "sandbox": {
+        "supported": false,
+        "defaultScenario": null
+      },
+      "status": "reviewed"
+    },
+    {
+      "id": "medula.hastane.takip-formu.takip-formu-oku",
+      "service": "medula.hastane.takip-formu",
+      "names": {
+        "documentationHeading": "takipFormuOku",
+        "operationName": "takipFormuOku",
+        "aliases": [
+          "takipFormuOku"
+        ]
+      },
+      "contract": {
+        "inputDvo": "TakipFormuOkuGirisDVO",
+        "outputDvo": "TakipFormuOkuCevapDVO"
+      },
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 320,
+          "confidence": "extracted",
+          "section": "4.3 4.3.2 takipFormuOku Metodu"
+        }
+      ],
+      "stateEffects": {
+        "creates": [],
+        "reads": [
+          "takipFormu"
+        ],
+        "updates": [],
+        "deletes": [],
+        "generates": []
+      },
+      "success": {
+        "resultCodeField": "sonucKodu",
+        "successCode": "0000",
+        "messageField": "sonucMesaji"
+      },
+      "sandbox": {
+        "supported": false,
+        "defaultScenario": null
+      },
+      "status": "reviewed"
+    },
+    {
+      "id": "medula.hastane.takip-formu.takip-formu-sil",
+      "service": "medula.hastane.takip-formu",
+      "names": {
+        "documentationHeading": "takipFormuSil",
+        "operationName": "takipFormuSil",
+        "aliases": [
+          "takipFormuSil"
+        ]
+      },
+      "contract": {
+        "inputDvo": "TakipFormuSilGirisDVO",
+        "outputDvo": "TakipFormuSilCevapDVO"
+      },
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 321,
+          "confidence": "extracted",
+          "section": "4.3 4.3.3 takipFormuSil Metodu"
+        }
+      ],
+      "stateEffects": {
+        "creates": [],
+        "reads": [],
+        "updates": [],
+        "deletes": [
+          "takipFormu"
+        ],
+        "generates": []
+      },
+      "success": {
+        "resultCodeField": "sonucKodu",
+        "successCode": "0000",
+        "messageField": "sonucMesaji"
       },
       "sandbox": {
         "supported": false,
@@ -4767,6 +4927,2342 @@
           "page": 266,
           "confidence": "extracted",
           "section": "4.4 Rapor Bilgisi Kayit Metotlari"
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
+      "id": "DiabetTakipFormuDVO",
+      "domain": "takip-formu",
+      "direction": "output",
+      "fields": [
+        {
+          "name": "takipFormuNo",
+          "displayName": "Takip Formu No",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "System-generated follow-up form number (s.314).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": true,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 314,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "tcKimlikNo",
+          "displayName": "T.C. Kimlik Numarasi",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": 11,
+          "description": "Patient citizen ID (s.311).",
+          "sensitive": true,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 311,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "ad",
+          "displayName": "Ad",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Patient first name (s.311).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 311,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "soyad",
+          "displayName": "Soyad",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Patient last name (s.311).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 311,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "cepTel",
+          "displayName": "Cep Telefonu",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": 10,
+          "description": "Mobile number, e.g. 5xxxxxxxxx (s.311).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 311,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "protokolNo",
+          "displayName": "Protokol No",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Protocol number (s.311).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 311,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "vizitTarihi",
+          "displayName": "Vizit Tarihi",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": 10,
+          "description": "Visit date, \"dd.mm.yyyy\" (s.311).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 311,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "saglikTesisiKodu",
+          "displayName": "Saglik Tesis Kodu",
+          "type": "integer",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Facility code; the guide spells this parameter saglikTesisiKodu (extra i) unlike saglikTesisKodu elsewhere — preserved verbatim (s.311).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 311,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "cinsiyet",
+          "displayName": "Hastanin Cinsiyeti",
+          "type": "enum",
+          "enumRef": "cinsiyet",
+          "codeSystem": null,
+          "required": true,
+          "length": 1,
+          "description": "E = Erkek, K = Kadın (s.311).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 311,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "ikametTuru",
+          "displayName": "Ikamet Turu",
+          "type": "enum",
+          "enumRef": "ikamet-turu",
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Six-value residence list (s.311).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 311,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "doktorBilgileri",
+          "displayName": "Doktor Bilgileri",
+          "type": "array",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Physicians; item shape Tablo 4.6.1.e (TakipFormuDoktorBilgisiDVO, this registry) (s.311).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 311,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "tani",
+          "displayName": "Hasta Tanisi",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": "ICD-10-WHO",
+          "required": true,
+          "length": null,
+          "description": "Diagnosis ICD-10 code (s.311).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 311,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "taniTarihi",
+          "displayName": "Tani Tarihi",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": 10,
+          "description": "First date the patient received the diagnosis (s.311).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 311,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "diabetEgitimi",
+          "displayName": "Diabet Egitimi Bilgisi",
+          "type": "object",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Diabetes education; shape Tablo 4.6.1.f (TakipFormuDiabetEgitimiDVO, this registry) (s.311).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 311,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "tibbiBeslenmeTedavisi",
+          "displayName": "Tibbi Beslenme Tedavisi (TBT)",
+          "type": "enum",
+          "enumRef": "tbt-durumu",
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Six-value medical-nutrition adherence list (s.311).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 311,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "egzersiz",
+          "displayName": "Egzersiz",
+          "type": "enum",
+          "enumRef": "egzersiz-durumu",
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Seven-value exercise adherence list (s.311-312).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 311,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "hastaliklar",
+          "displayName": "Hastaliklar",
+          "type": "array",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Diseases besides DM; item shape Tablo 4.6.1.g (TakipFormuHastalikDVO, this registry) (s.312).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 312,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "basvuruNedeni",
+          "displayName": "Basvuru Nedeni",
+          "type": "enum",
+          "enumRef": "basvuru-nedeni",
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Six-value admission-reason list (s.312).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 312,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "aliskanliklar",
+          "displayName": "Aliskanliklar",
+          "type": "array",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Habits; item shape Tablo 4.6.1.h (TakipFormuAliskanlikDVO, this registry) (s.312).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 312,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "glukoMetre",
+          "displayName": "Gluko Metre",
+          "type": "enum",
+          "enumRef": "var-yok-bilinmiyor",
+          "codeSystem": null,
+          "required": true,
+          "length": 1,
+          "description": "Glucometer presence (s.312).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 312,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "kanSekeriTakipSayisi",
+          "displayName": "Kan Sekeri Takip Sayisi",
+          "type": "integer",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Daily blood-sugar measurement count (s.312).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 312,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "kullanilanIlaclar",
+          "displayName": "Hastanin Kullandigi Ilac Bilgileri",
+          "type": "array",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Medications; item shape Tablo 4.6.1.i (TakipFormuKullanilanIlaclarDVO, this registry) (s.312).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 312,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "sistolikKanBasinci",
+          "displayName": "Sistolik Kan Basinci",
+          "type": "integer",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Systolic blood pressure; the guide's required column is empty in the extraction (s.312).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 312,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "diyastolikKanBasinci",
+          "displayName": "Diyastolik Kan Basinci",
+          "type": "integer",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Diastolic blood pressure; required column empty in the extraction (s.312).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 312,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "boy",
+          "displayName": "Boy",
+          "type": "decimal",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Height (s.312).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 312,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "kilo",
+          "displayName": "Kilo",
+          "type": "decimal",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Weight (s.312).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 312,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "vki",
+          "displayName": "VKI",
+          "type": "decimal",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Body-mass index, e.g. 22.3 (s.312).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 312,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "apg",
+          "displayName": "APG",
+          "type": "decimal",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Fasting blood sugar; 0 when unknown (s.313).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 313,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "tpg",
+          "displayName": "TPG",
+          "type": "decimal",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Postprandial blood sugar; 0 when unknown (s.313).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 313,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "hbA1c",
+          "displayName": "HbA1c",
+          "type": "decimal",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "HbA1c; 0 when unknown (s.313).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 313,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "kreatinin",
+          "displayName": "Kreatinin",
+          "type": "decimal",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Creatinine; 0 when unknown (s.313).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 313,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "trigliserid",
+          "displayName": "Trigliserid",
+          "type": "decimal",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Triglyceride; 0 when unknown (s.313).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 313,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "ldlKol",
+          "displayName": "LDL-Kol",
+          "type": "decimal",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "LDL cholesterol; 0 when unknown (s.313).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 313,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "hdlKol",
+          "displayName": "HDL-Kol",
+          "type": "decimal",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "HDL cholesterol; 0 when unknown (s.313).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 313,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "alt",
+          "displayName": "ALT",
+          "type": "decimal",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "ALT; 0 when unknown (s.313).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 313,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "antiGAD",
+          "displayName": "AntiGAD",
+          "type": "enum",
+          "enumRef": "anti-gad",
+          "codeSystem": null,
+          "required": true,
+          "length": 1,
+          "description": "P/N/B result (s.313).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 313,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "ekg",
+          "displayName": "EKG",
+          "type": "enum",
+          "enumRef": "ekg-durumu",
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Three-value ECG state (s.313).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 313,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "mikroalbuminuri",
+          "displayName": "Mikroalbuminuri",
+          "type": "enum",
+          "enumRef": "var-yok-bilinmiyor",
+          "codeSystem": null,
+          "required": true,
+          "length": 1,
+          "description": "V/Y/B (s.313).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 313,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "gozMuayenesi",
+          "displayName": "Goz Muayenesi",
+          "type": "enum",
+          "enumRef": "goz-muayenesi",
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Seven-value eye-examination state (s.313).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 313,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "periferikSensoryalNoropati",
+          "displayName": "Periferik Sensoryal Noropati",
+          "type": "enum",
+          "enumRef": "var-yok-bilinmiyor",
+          "codeSystem": null,
+          "required": true,
+          "length": 1,
+          "description": "V/Y/B (s.313).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 313,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "koronerArterH",
+          "displayName": "Koroner Arter H",
+          "type": "enum",
+          "enumRef": "var-yok-bilinmiyor",
+          "codeSystem": null,
+          "required": true,
+          "length": 1,
+          "description": "V/Y/B; the guide's required column is empty in the extraction (s.314).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 314,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "serebrovaskulerH",
+          "displayName": "Serebrovaskuler H",
+          "type": "enum",
+          "enumRef": "var-yok-bilinmiyor",
+          "codeSystem": null,
+          "required": true,
+          "length": 1,
+          "description": "V/Y/B (s.314).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 314,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "ayakMuayenesi",
+          "displayName": "Ayak Muayenesi",
+          "type": "enum",
+          "enumRef": "var-yok-bilinmiyor",
+          "codeSystem": null,
+          "required": true,
+          "length": 1,
+          "description": "V = diabetik ülser var, Y = yok, B = bilinmiyor (s.314).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 314,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "akutKomplikasyon",
+          "displayName": "Akut Komplikasyon (Son 3 Ay)",
+          "type": "enum",
+          "enumRef": "akut-komplikasyon",
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Four-value complication list (s.314).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 314,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "yatisGun",
+          "displayName": "Hasta Yatis Gun",
+          "type": "integer",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Hospitalization day count of the visit (s.314).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 314,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "insulinPompasi",
+          "displayName": "Insulin Pompasi",
+          "type": "enum",
+          "enumRef": "var-yok-bilinmiyor",
+          "codeSystem": null,
+          "required": true,
+          "length": 1,
+          "description": "Pump presence; the guide's parameter name carries the Turkish capital İ (İnsulinPompasi) — preserved verbatim (s.314).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 314,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "insulinPompasiVerTarihi",
+          "displayName": "Insulin Pompasi Verilis Tarihi",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": 10,
+          "description": "Pump start date, \"dd.mm.yyyy\"; filled when a pump exists (s.314).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 314,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [
+            {
+              "condition": "insulinPompasi = V",
+              "note": "guide: Verilmiş ise (s.314)"
+            }
+          ],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "insulinPompasiDegTarihi",
+          "displayName": "Insulin Pompasi Degistirme Tarihi",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": 10,
+          "description": "Pump change date; filled when a pump exists (s.314).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 314,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [
+            {
+              "condition": "insulinPompasi = V",
+              "note": "guide: Verilmiş ise (s.314)"
+            }
+          ],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 310,
+          "confidence": "extracted",
+          "section": "4.3 Takip Formu Kayit Metotlari"
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
+      "id": "DiabetTakipFormuKayitDVO",
+      "domain": "takip-formu",
+      "direction": "input",
+      "fields": [
+        {
+          "name": "tcKimlikNo",
+          "displayName": "T.C. Kimlik Numarasi",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": 11,
+          "description": "Patient citizen ID (s.311).",
+          "sensitive": true,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 311,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "ad",
+          "displayName": "Ad",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Patient first name (s.311).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 311,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "soyad",
+          "displayName": "Soyad",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Patient last name (s.311).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 311,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "cepTel",
+          "displayName": "Cep Telefonu",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": 10,
+          "description": "Mobile number, e.g. 5xxxxxxxxx (s.311).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 311,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "protokolNo",
+          "displayName": "Protokol No",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Protocol number (s.311).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 311,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "vizitTarihi",
+          "displayName": "Vizit Tarihi",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": 10,
+          "description": "Visit date, \"dd.mm.yyyy\" (s.311).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 311,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "saglikTesisiKodu",
+          "displayName": "Saglik Tesis Kodu",
+          "type": "integer",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Facility code; the guide spells this parameter saglikTesisiKodu (extra i) unlike saglikTesisKodu elsewhere — preserved verbatim (s.311).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 311,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "cinsiyet",
+          "displayName": "Hastanin Cinsiyeti",
+          "type": "enum",
+          "enumRef": "cinsiyet",
+          "codeSystem": null,
+          "required": true,
+          "length": 1,
+          "description": "E = Erkek, K = Kadın (s.311).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 311,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "ikametTuru",
+          "displayName": "Ikamet Turu",
+          "type": "enum",
+          "enumRef": "ikamet-turu",
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Six-value residence list (s.311).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 311,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "doktorBilgileri",
+          "displayName": "Doktor Bilgileri",
+          "type": "array",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Physicians; item shape Tablo 4.6.1.e (TakipFormuDoktorBilgisiDVO, this registry) (s.311).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 311,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "tani",
+          "displayName": "Hasta Tanisi",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": "ICD-10-WHO",
+          "required": true,
+          "length": null,
+          "description": "Diagnosis ICD-10 code (s.311).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 311,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "taniTarihi",
+          "displayName": "Tani Tarihi",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": 10,
+          "description": "First date the patient received the diagnosis (s.311).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 311,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "diabetEgitimi",
+          "displayName": "Diabet Egitimi Bilgisi",
+          "type": "object",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Diabetes education; shape Tablo 4.6.1.f (TakipFormuDiabetEgitimiDVO, this registry) (s.311).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 311,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "tibbiBeslenmeTedavisi",
+          "displayName": "Tibbi Beslenme Tedavisi (TBT)",
+          "type": "enum",
+          "enumRef": "tbt-durumu",
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Six-value medical-nutrition adherence list (s.311).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 311,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "egzersiz",
+          "displayName": "Egzersiz",
+          "type": "enum",
+          "enumRef": "egzersiz-durumu",
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Seven-value exercise adherence list (s.311-312).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 311,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "hastaliklar",
+          "displayName": "Hastaliklar",
+          "type": "array",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Diseases besides DM; item shape Tablo 4.6.1.g (TakipFormuHastalikDVO, this registry) (s.312).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 312,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "basvuruNedeni",
+          "displayName": "Basvuru Nedeni",
+          "type": "enum",
+          "enumRef": "basvuru-nedeni",
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Six-value admission-reason list (s.312).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 312,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "aliskanliklar",
+          "displayName": "Aliskanliklar",
+          "type": "array",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Habits; item shape Tablo 4.6.1.h (TakipFormuAliskanlikDVO, this registry) (s.312).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 312,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "glukoMetre",
+          "displayName": "Gluko Metre",
+          "type": "enum",
+          "enumRef": "var-yok-bilinmiyor",
+          "codeSystem": null,
+          "required": true,
+          "length": 1,
+          "description": "Glucometer presence (s.312).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 312,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "kanSekeriTakipSayisi",
+          "displayName": "Kan Sekeri Takip Sayisi",
+          "type": "integer",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Daily blood-sugar measurement count (s.312).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 312,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "kullanilanIlaclar",
+          "displayName": "Hastanin Kullandigi Ilac Bilgileri",
+          "type": "array",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Medications; item shape Tablo 4.6.1.i (TakipFormuKullanilanIlaclarDVO, this registry) (s.312).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 312,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "sistolikKanBasinci",
+          "displayName": "Sistolik Kan Basinci",
+          "type": "integer",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Systolic blood pressure; the guide's required column is empty in the extraction (s.312).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 312,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "diyastolikKanBasinci",
+          "displayName": "Diyastolik Kan Basinci",
+          "type": "integer",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Diastolic blood pressure; required column empty in the extraction (s.312).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 312,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "boy",
+          "displayName": "Boy",
+          "type": "decimal",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Height (s.312).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 312,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "kilo",
+          "displayName": "Kilo",
+          "type": "decimal",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Weight (s.312).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 312,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "vki",
+          "displayName": "VKI",
+          "type": "decimal",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Body-mass index, e.g. 22.3 (s.312).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 312,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "apg",
+          "displayName": "APG",
+          "type": "decimal",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Fasting blood sugar; 0 when unknown (s.313).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 313,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "tpg",
+          "displayName": "TPG",
+          "type": "decimal",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Postprandial blood sugar; 0 when unknown (s.313).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 313,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "hbA1c",
+          "displayName": "HbA1c",
+          "type": "decimal",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "HbA1c; 0 when unknown (s.313).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 313,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "kreatinin",
+          "displayName": "Kreatinin",
+          "type": "decimal",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Creatinine; 0 when unknown (s.313).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 313,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "trigliserid",
+          "displayName": "Trigliserid",
+          "type": "decimal",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Triglyceride; 0 when unknown (s.313).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 313,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "ldlKol",
+          "displayName": "LDL-Kol",
+          "type": "decimal",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "LDL cholesterol; 0 when unknown (s.313).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 313,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "hdlKol",
+          "displayName": "HDL-Kol",
+          "type": "decimal",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "HDL cholesterol; 0 when unknown (s.313).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 313,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "alt",
+          "displayName": "ALT",
+          "type": "decimal",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "ALT; 0 when unknown (s.313).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 313,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "antiGAD",
+          "displayName": "AntiGAD",
+          "type": "enum",
+          "enumRef": "anti-gad",
+          "codeSystem": null,
+          "required": true,
+          "length": 1,
+          "description": "P/N/B result (s.313).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 313,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "ekg",
+          "displayName": "EKG",
+          "type": "enum",
+          "enumRef": "ekg-durumu",
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Three-value ECG state (s.313).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 313,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "mikroalbuminuri",
+          "displayName": "Mikroalbuminuri",
+          "type": "enum",
+          "enumRef": "var-yok-bilinmiyor",
+          "codeSystem": null,
+          "required": true,
+          "length": 1,
+          "description": "V/Y/B (s.313).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 313,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "gozMuayenesi",
+          "displayName": "Goz Muayenesi",
+          "type": "enum",
+          "enumRef": "goz-muayenesi",
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Seven-value eye-examination state (s.313).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 313,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "periferikSensoryalNoropati",
+          "displayName": "Periferik Sensoryal Noropati",
+          "type": "enum",
+          "enumRef": "var-yok-bilinmiyor",
+          "codeSystem": null,
+          "required": true,
+          "length": 1,
+          "description": "V/Y/B (s.313).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 313,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "koronerArterH",
+          "displayName": "Koroner Arter H",
+          "type": "enum",
+          "enumRef": "var-yok-bilinmiyor",
+          "codeSystem": null,
+          "required": true,
+          "length": 1,
+          "description": "V/Y/B; the guide's required column is empty in the extraction (s.314).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 314,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "serebrovaskulerH",
+          "displayName": "Serebrovaskuler H",
+          "type": "enum",
+          "enumRef": "var-yok-bilinmiyor",
+          "codeSystem": null,
+          "required": true,
+          "length": 1,
+          "description": "V/Y/B (s.314).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 314,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "ayakMuayenesi",
+          "displayName": "Ayak Muayenesi",
+          "type": "enum",
+          "enumRef": "var-yok-bilinmiyor",
+          "codeSystem": null,
+          "required": true,
+          "length": 1,
+          "description": "V = diabetik ülser var, Y = yok, B = bilinmiyor (s.314).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 314,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "akutKomplikasyon",
+          "displayName": "Akut Komplikasyon (Son 3 Ay)",
+          "type": "enum",
+          "enumRef": "akut-komplikasyon",
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Four-value complication list (s.314).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 314,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "yatisGun",
+          "displayName": "Hasta Yatis Gun",
+          "type": "integer",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Hospitalization day count of the visit (s.314).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 314,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "insulinPompasi",
+          "displayName": "Insulin Pompasi",
+          "type": "enum",
+          "enumRef": "var-yok-bilinmiyor",
+          "codeSystem": null,
+          "required": true,
+          "length": 1,
+          "description": "Pump presence; the guide's parameter name carries the Turkish capital İ (İnsulinPompasi) — preserved verbatim (s.314).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 314,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "insulinPompasiVerTarihi",
+          "displayName": "Insulin Pompasi Verilis Tarihi",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": 10,
+          "description": "Pump start date, \"dd.mm.yyyy\"; filled when a pump exists (s.314).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 314,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [
+            {
+              "condition": "insulinPompasi = V",
+              "note": "guide: Verilmiş ise (s.314)"
+            }
+          ],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "insulinPompasiDegTarihi",
+          "displayName": "Insulin Pompasi Degistirme Tarihi",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": 10,
+          "description": "Pump change date; filled when a pump exists (s.314).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 314,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [
+            {
+              "condition": "insulinPompasi = V",
+              "note": "guide: Verilmiş ise (s.314)"
+            }
+          ],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 310,
+          "confidence": "extracted",
+          "section": "4.3 Takip Formu Kayit Metotlari"
         }
       ],
       "status": "reviewed"
@@ -26231,6 +28727,809 @@
       "status": "reviewed"
     },
     {
+      "id": "TakipFormuAliskanlikDVO",
+      "domain": "takip-formu",
+      "direction": "input",
+      "fields": [
+        {
+          "name": "aliskanlik",
+          "displayName": "Aliskanlik Kodu",
+          "type": "enum",
+          "enumRef": "aliskanlik",
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Four-value habit list (s.319).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 319,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 310,
+          "confidence": "extracted",
+          "section": "4.3 Takip Formu Kayit Metotlari"
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
+      "id": "TakipFormuDiabetEgitimiDVO",
+      "domain": "takip-formu",
+      "direction": "input",
+      "fields": [
+        {
+          "name": "bireyselEgitimSayisi",
+          "displayName": "Bireysel Egitim Sayisi",
+          "type": "integer",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Individual DM education count (s.319).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 319,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "grupEgitimSayisi",
+          "displayName": "Grup Egitim Sayisi",
+          "type": "integer",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Group DM education count (s.319).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 319,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "dmEgitimiAlmisMi",
+          "displayName": "DM Egitim Almis Mi",
+          "type": "enum",
+          "enumRef": "evet-hayir",
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "E/H (s.319).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 319,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 310,
+          "confidence": "extracted",
+          "section": "4.3 Takip Formu Kayit Metotlari"
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
+      "id": "TakipFormuDoktorBilgisiDVO",
+      "domain": "takip-formu",
+      "direction": "input",
+      "fields": [
+        {
+          "name": "drTescilNo",
+          "displayName": "Doktor Tescil Numarasi",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Physician registration number (s.318).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 318,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "drBransKodu",
+          "displayName": "Doktor Brans Kodu",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": 4,
+          "description": "Physician branch code (s.318).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 318,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "dmEgitimiAlmisMi",
+          "displayName": "DM Egitim Almis Mi",
+          "type": "enum",
+          "enumRef": "evet-hayir",
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "E/H (s.318).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 318,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 310,
+          "confidence": "extracted",
+          "section": "4.3 Takip Formu Kayit Metotlari"
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
+      "id": "TakipFormuHastalikDVO",
+      "domain": "takip-formu",
+      "direction": "input",
+      "fields": [
+        {
+          "name": "hastalikKodu",
+          "displayName": "Hastalik Kodu",
+          "type": "enum",
+          "enumRef": "diabet-hastalik",
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Fifteen-value disease list including 0 = Diğer (s.319).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 319,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "digerHastalikTaniKodu",
+          "displayName": "Hastalik Tani Kodu",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Diagnosis code of a disease outside the list; filled when hastalikKodu = 0 (s.319).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 319,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [
+            {
+              "condition": "hastalikKodu = 0",
+              "note": "guide: Eğer hastalık kodu 0:Diğer seçilmiş ise (s.319)"
+            }
+          ],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 310,
+          "confidence": "extracted",
+          "section": "4.3 Takip Formu Kayit Metotlari"
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
+      "id": "TakipFormuKaydetCevapDVO",
+      "domain": "takip-formu",
+      "direction": "output",
+      "fields": [
+        {
+          "name": "diabetTakipFormu",
+          "displayName": "Diabetes Mellitus Takip Formu",
+          "type": "object",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Saved form; shape Tablo 4.6.1.d (DiabetTakipFormuDVO, this registry) (s.310).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 310,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "sonucKodu",
+          "displayName": "Sonuc Kodu",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": 4,
+          "description": "Result code; \"0000\" means success (s.310).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 310,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "sonucMesaji",
+          "displayName": "Sonuc Mesaji",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Result description (s.310).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 310,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 310,
+          "confidence": "extracted",
+          "section": "4.3 Takip Formu Kayit Metotlari"
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
+      "id": "TakipFormuKaydetGirisDVO",
+      "domain": "takip-formu",
+      "direction": "input",
+      "fields": [
+        {
+          "name": "diabetTakipFormu",
+          "displayName": "Diabetes Mellitus Takip Formu",
+          "type": "object",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Diabetes follow-up form; shape Tablo 4.6.1.c (DiabetTakipFormuKayitDVO, this registry) (s.310).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 310,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "kullaniciTesisKodu",
+          "displayName": "Saglik Tesis Kodu",
+          "type": "integer",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Facility code (s.310).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 310,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 310,
+          "confidence": "extracted",
+          "section": "4.3 Takip Formu Kayit Metotlari"
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
+      "id": "TakipFormuKullanilanIlaclarDVO",
+      "domain": "takip-formu",
+      "direction": "input",
+      "fields": [
+        {
+          "name": "barkod",
+          "displayName": "Barkod",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": "GS1",
+          "required": true,
+          "length": null,
+          "description": "Drug barcode (s.320).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 320,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "gunlukDoz",
+          "displayName": "Gunluk Doz",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Daily dose; units written for insulin (s.320).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 320,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 310,
+          "confidence": "extracted",
+          "section": "4.3 Takip Formu Kayit Metotlari"
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
+      "id": "TakipFormuOkuCevapDVO",
+      "domain": "takip-formu",
+      "direction": "output",
+      "fields": [
+        {
+          "name": "diabetTakipFormu",
+          "displayName": "Diabetes Mellitus Takip Formu",
+          "type": "array",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Saved forms; item shape Tablo 4.6.1.d (DiabetTakipFormuDVO, this registry) (s.320).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 320,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "sonucKodu",
+          "displayName": "Sonuc Kodu",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": 4,
+          "description": "Result code; \"0000\" means success (s.320).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 320,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "sonucMesaji",
+          "displayName": "Sonuc Mesaji",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Result description (s.320).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 320,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 310,
+          "confidence": "extracted",
+          "section": "4.3 Takip Formu Kayit Metotlari"
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
+      "id": "TakipFormuOkuGirisDVO",
+      "domain": "takip-formu",
+      "direction": "input",
+      "fields": [
+        {
+          "name": "tcKimlikNo",
+          "displayName": "Hasta T.C. Kimlik Numarasi",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Patient citizen ID (s.320).",
+          "sensitive": true,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 320,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "saglikTesisKodu",
+          "displayName": "Saglik Tesis Kodu",
+          "type": "integer",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Facility code (s.320).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 320,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 310,
+          "confidence": "extracted",
+          "section": "4.3 Takip Formu Kayit Metotlari"
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
+      "id": "TakipFormuSilCevapDVO",
+      "domain": "takip-formu",
+      "direction": "output",
+      "fields": [
+        {
+          "name": "sonucKodu",
+          "displayName": "Sonuc Kodu",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": 4,
+          "description": "Result code; \"0000\" means success (s.321).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 321,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "sonucMesaji",
+          "displayName": "Sonuc Mesaji",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Result description (s.321).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 321,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 310,
+          "confidence": "extracted",
+          "section": "4.3 Takip Formu Kayit Metotlari"
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
+      "id": "TakipFormuSilGirisDVO",
+      "domain": "takip-formu",
+      "direction": "input",
+      "fields": [
+        {
+          "name": "takipFormuNo",
+          "displayName": "Takip Formu No",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Follow-up form number (s.321).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": true,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 321,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "saglikTesisKodu",
+          "displayName": "Saglik Tesis Kodu",
+          "type": "integer",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Facility code (s.321).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 321,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 310,
+          "confidence": "extracted",
+          "section": "4.3 Takip Formu Kayit Metotlari"
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
       "id": "TakipIslemKesintiDVO",
       "domain": "yardimci-islemler",
       "direction": "output",
@@ -28391,6 +31690,78 @@
       "status": "reviewed"
     },
     {
+      "id": "akut-komplikasyon",
+      "displayName": "Akut Komplikasyon (Son 3 Ay)",
+      "values": [
+        {
+          "code": "1",
+          "label": "Yasanmadi",
+          "description": "Did not occur."
+        },
+        {
+          "code": "2",
+          "label": "DKA",
+          "description": "Diabetic ketoacidosis."
+        },
+        {
+          "code": "3",
+          "label": "HHD",
+          "description": "Hyperosmolar hyperglycemic state."
+        },
+        {
+          "code": "4",
+          "label": "Hipoglisemi",
+          "description": "Hypoglycemia."
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 314,
+          "confidence": "extracted"
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
+      "id": "aliskanlik",
+      "displayName": "Aliskanlik Kodu",
+      "values": [
+        {
+          "code": "1",
+          "label": "Sigara",
+          "description": "Smoking."
+        },
+        {
+          "code": "2",
+          "label": "Alkol",
+          "description": "Alcohol."
+        },
+        {
+          "code": "3",
+          "label": "Cay Kahve",
+          "description": "Tea/coffee."
+        },
+        {
+          "code": "4",
+          "label": "Diger",
+          "description": "Other."
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 319,
+          "confidence": "extracted"
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
       "id": "ambalaj-boyutu",
       "displayName": "Ambalaj Boyutu",
       "values": [
@@ -28618,6 +31989,37 @@
       "status": "reviewed"
     },
     {
+      "id": "anti-gad",
+      "displayName": "AntiGAD Durumu",
+      "values": [
+        {
+          "code": "P",
+          "label": "Pozitif",
+          "description": "Positive."
+        },
+        {
+          "code": "N",
+          "label": "Negatif",
+          "description": "Negative."
+        },
+        {
+          "code": "B",
+          "label": "Bilinmiyor",
+          "description": "Unknown."
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 313,
+          "confidence": "extracted"
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
       "id": "ara-karar",
       "displayName": "Ara Karar Durumu",
       "values": [
@@ -28691,6 +32093,52 @@
           "fetchedAt": "2026-11-15",
           "page": 191,
           "section": "Tablo 4.2.1.c - AmeliyatveGirisimBilgisiDVO (ayniFarkliKesi)",
+          "confidence": "extracted"
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
+      "id": "basvuru-nedeni",
+      "displayName": "Basvuru Nedeni",
+      "values": [
+        {
+          "code": "1",
+          "label": "Genel Kontrol",
+          "description": "General check."
+        },
+        {
+          "code": "2",
+          "label": "Rutin muayene ve kontrol",
+          "description": "Routine examination related to the disease."
+        },
+        {
+          "code": "3",
+          "label": "Baska branstan konsultasyon",
+          "description": "Consultation from another department."
+        },
+        {
+          "code": "4",
+          "label": "Akut metabolik komplikasyonlar",
+          "description": "Acute metabolic complications."
+        },
+        {
+          "code": "5",
+          "label": "Akut kronik komplikasyon",
+          "description": "Acute chronic complication."
+        },
+        {
+          "code": "6",
+          "label": "Ilac Yazdirma",
+          "description": "Prescription request."
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 312,
           "confidence": "extracted"
         }
       ],
@@ -29200,6 +32648,97 @@
       "status": "reviewed"
     },
     {
+      "id": "diabet-hastalik",
+      "displayName": "Diabet Takip Formu Hastalik Kodu",
+      "values": [
+        {
+          "code": "1",
+          "label": "Hipertansiyon",
+          "description": "Hypertension."
+        },
+        {
+          "code": "2",
+          "label": "Koroner Arter Hst.",
+          "description": "Coronary artery disease."
+        },
+        {
+          "code": "3",
+          "label": "Kanser",
+          "description": "Cancer."
+        },
+        {
+          "code": "4",
+          "label": "Solunum S. Hst.",
+          "description": "Respiratory system disease."
+        },
+        {
+          "code": "5",
+          "label": "Kalp Yetmezligi",
+          "description": "Heart failure."
+        },
+        {
+          "code": "6",
+          "label": "Kronik KC Hst.",
+          "description": "Chronic liver disease."
+        },
+        {
+          "code": "7",
+          "label": "Periferik Arter Hst.",
+          "description": "Peripheral artery disease."
+        },
+        {
+          "code": "8",
+          "label": "Diabetik Ayak.",
+          "description": "Diabetic foot."
+        },
+        {
+          "code": "9",
+          "label": "Amputasyon",
+          "description": "Amputation."
+        },
+        {
+          "code": "10",
+          "label": "KBY",
+          "description": "Chronic kidney failure."
+        },
+        {
+          "code": "11",
+          "label": "Osteoporoz",
+          "description": "Osteoporosis."
+        },
+        {
+          "code": "12",
+          "label": "Hiperkolesterolemi",
+          "description": "Hypercholesterolemia."
+        },
+        {
+          "code": "13",
+          "label": "Hiperlipidemi",
+          "description": "Hyperlipidemia."
+        },
+        {
+          "code": "14",
+          "label": "Ek hastalik yok.",
+          "description": "No additional disease."
+        },
+        {
+          "code": "0",
+          "label": "Diger",
+          "description": "Other — digerHastalikTaniKodu then carries the code."
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 319,
+          "confidence": "extracted"
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
       "id": "doktor-tipi",
       "displayName": "Doktor Tipi",
       "values": [
@@ -29291,6 +32830,57 @@
           "sourceType": "official-guide",
           "guideVersion": "3.1.1",
           "page": 277,
+          "confidence": "extracted"
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
+      "id": "egzersiz-durumu",
+      "displayName": "Egzersiz Durumu",
+      "values": [
+        {
+          "code": "1",
+          "label": "Onerilmis -> duzenli yapiyor",
+          "description": "Recommended, exercising regularly."
+        },
+        {
+          "code": "2",
+          "label": "Onerilmis -> duzensiz yapiyor",
+          "description": "Recommended, exercising irregularly."
+        },
+        {
+          "code": "3",
+          "label": "Onerilmis -> yapmiyor",
+          "description": "Recommended, not exercising."
+        },
+        {
+          "code": "4",
+          "label": "Onerilmis -> uygun hasta degil",
+          "description": "Recommended, not a suitable patient."
+        },
+        {
+          "code": "5",
+          "label": "Onerilmis -> Bilinmiyor",
+          "description": "Recommended, adherence unknown."
+        },
+        {
+          "code": "6",
+          "label": "Onerilmemis",
+          "description": "Not recommended."
+        },
+        {
+          "code": "7",
+          "label": "Bilinmiyor",
+          "description": "Unknown."
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 311,
           "confidence": "extracted"
         }
       ],
@@ -29400,6 +32990,37 @@
           "fetchedAt": "2026-11-15",
           "page": 167,
           "section": "ekdsYontemGerekce codes (Pin/fotograf/fiziksel dogrulama gerekceleri)",
+          "confidence": "extracted"
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
+      "id": "ekg-durumu",
+      "displayName": "EKG Durumu",
+      "values": [
+        {
+          "code": "1",
+          "label": "Normal",
+          "description": "Normal ECG."
+        },
+        {
+          "code": "2",
+          "label": "Patolojik",
+          "description": "Pathological ECG."
+        },
+        {
+          "code": "3",
+          "label": "Bilinmiyor",
+          "description": "Unknown."
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 313,
           "confidence": "extracted"
         }
       ],
@@ -29675,6 +33296,57 @@
       "status": "reviewed"
     },
     {
+      "id": "goz-muayenesi",
+      "displayName": "Goz Muayenesi Durumu",
+      "values": [
+        {
+          "code": "1",
+          "label": "Normal",
+          "description": "Normal."
+        },
+        {
+          "code": "2",
+          "label": "Nonproliferatif RP",
+          "description": "Non-proliferative retinopathy."
+        },
+        {
+          "code": "3",
+          "label": "Proliferatif RP",
+          "description": "Proliferative retinopathy."
+        },
+        {
+          "code": "4",
+          "label": "Makula Donemi",
+          "description": "Macular degeneration."
+        },
+        {
+          "code": "5",
+          "label": "Katarakt",
+          "description": "Cataract."
+        },
+        {
+          "code": "6",
+          "label": "Glokom",
+          "description": "Glaucoma."
+        },
+        {
+          "code": "7",
+          "label": "Bilinmiyor",
+          "description": "Unknown."
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 313,
+          "confidence": "extracted"
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
       "id": "grup-turu",
       "displayName": "Grup Turu",
       "values": [
@@ -29734,6 +33406,52 @@
           "fetchedAt": "2026-11-15",
           "page": 201,
           "section": "Tablo 4.2.1.f.1.1 - MajistralHamMaddeDVO (hamMaddeBirimi)",
+          "confidence": "extracted"
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
+      "id": "ikamet-turu",
+      "displayName": "Ikamet Turu",
+      "values": [
+        {
+          "code": "1",
+          "label": "Il Merkezi",
+          "description": "Province center."
+        },
+        {
+          "code": "2",
+          "label": "Ilce Merkezi",
+          "description": "District center."
+        },
+        {
+          "code": "3",
+          "label": "Belde",
+          "description": "Town."
+        },
+        {
+          "code": "4",
+          "label": "Koy",
+          "description": "Village."
+        },
+        {
+          "code": "5",
+          "label": "Mezra",
+          "description": "Hamlet."
+        },
+        {
+          "code": "6",
+          "label": "Diger",
+          "description": "Other."
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 311,
           "confidence": "extracted"
         }
       ],
@@ -34287,6 +38005,52 @@
       "status": "reviewed"
     },
     {
+      "id": "tbt-durumu",
+      "displayName": "Tibbi Beslenme Tedavisi Durumu",
+      "values": [
+        {
+          "code": "1",
+          "label": "TBT onerilmis -> TBT'ye uyuyor",
+          "description": "Recommended and followed."
+        },
+        {
+          "code": "2",
+          "label": "TBT onerilmis -> ara sira uyuyor",
+          "description": "Recommended and occasionally followed."
+        },
+        {
+          "code": "3",
+          "label": "TBT onerilmis -> hic uyuyor",
+          "description": "Recommended and never followed."
+        },
+        {
+          "code": "4",
+          "label": "TBT onerilmis -> Bilinmiyor",
+          "description": "Recommended, adherence unknown."
+        },
+        {
+          "code": "5",
+          "label": "TBT onerilmemis",
+          "description": "Not recommended."
+        },
+        {
+          "code": "6",
+          "label": "Bilinmiyor",
+          "description": "Unknown."
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 311,
+          "confidence": "extracted"
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
       "id": "tedavi-rapor-turu",
       "displayName": "Tedavi Rapor Turu",
       "values": [
@@ -34563,6 +38327,38 @@
           "guideVersion": "3.1.1",
           "page": 276,
           "confidence": "extracted"
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
+      "id": "var-yok-bilinmiyor",
+      "displayName": "Var / Yok / Bilinmiyor",
+      "values": [
+        {
+          "code": "V",
+          "label": "Var",
+          "description": "Present."
+        },
+        {
+          "code": "Y",
+          "label": "Yok",
+          "description": "Absent."
+        },
+        {
+          "code": "B",
+          "label": "Bilinmiyor",
+          "description": "Unknown."
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 312,
+          "confidence": "extracted",
+          "notes": "Recurring V/Y/B list across glukoMetre, mikroalbuminuri, periferikSensoryalNoropati, koronerArterH, serebrovaskulerH, ayakMuayenesi (labels Diabetik ülser var/yok) and insulinPompasi (s.312-314)."
         }
       ],
       "status": "reviewed"

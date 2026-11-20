@@ -179,6 +179,115 @@ Domain: `rapor` · Direction: `input` · Status: `reviewed` · Source refs: medu
 | `kilo` | string |  | — |  | Birth weight, e.g. 3,45 (s.266). |
 | `dogumSaati` | string |  | — |  | Birth time, hh:mm (s.266). |
 
+## `DiabetTakipFormuDVO`
+
+Domain: `takip-formu` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `takipFormuNo` | string |  | — |  | System-generated follow-up form number (s.314). |
+| `tcKimlikNo` | string |  | — |  | Patient citizen ID (s.311). |
+| `ad` | string |  | — |  | Patient first name (s.311). |
+| `soyad` | string |  | — |  | Patient last name (s.311). |
+| `cepTel` | string |  | — |  | Mobile number, e.g. 5xxxxxxxxx (s.311). |
+| `protokolNo` | string |  | — |  | Protocol number (s.311). |
+| `vizitTarihi` | string |  | — |  | Visit date, "dd.mm.yyyy" (s.311). |
+| `saglikTesisiKodu` | integer |  | — |  | Facility code; the guide spells this parameter saglikTesisiKodu (extra i) unlike saglikTesisKodu elsewhere — preserved verbatim (s.311). |
+| `cinsiyet` | enum |  | cinsiyet |  | E = Erkek, K = Kadın (s.311). |
+| `ikametTuru` | enum |  | ikamet-turu |  | Six-value residence list (s.311). |
+| `doktorBilgileri` | array |  | — |  | Physicians; item shape Tablo 4.6.1.e (TakipFormuDoktorBilgisiDVO, this registry) (s.311). |
+| `tani` | string |  | — |  | Diagnosis ICD-10 code (s.311). |
+| `taniTarihi` | string |  | — |  | First date the patient received the diagnosis (s.311). |
+| `diabetEgitimi` | object |  | — |  | Diabetes education; shape Tablo 4.6.1.f (TakipFormuDiabetEgitimiDVO, this registry) (s.311). |
+| `tibbiBeslenmeTedavisi` | enum |  | tbt-durumu |  | Six-value medical-nutrition adherence list (s.311). |
+| `egzersiz` | enum |  | egzersiz-durumu |  | Seven-value exercise adherence list (s.311-312). |
+| `hastaliklar` | array |  | — |  | Diseases besides DM; item shape Tablo 4.6.1.g (TakipFormuHastalikDVO, this registry) (s.312). |
+| `basvuruNedeni` | enum |  | basvuru-nedeni |  | Six-value admission-reason list (s.312). |
+| `aliskanliklar` | array |  | — |  | Habits; item shape Tablo 4.6.1.h (TakipFormuAliskanlikDVO, this registry) (s.312). |
+| `glukoMetre` | enum |  | var-yok-bilinmiyor |  | Glucometer presence (s.312). |
+| `kanSekeriTakipSayisi` | integer |  | — |  | Daily blood-sugar measurement count (s.312). |
+| `kullanilanIlaclar` | array |  | — |  | Medications; item shape Tablo 4.6.1.i (TakipFormuKullanilanIlaclarDVO, this registry) (s.312). |
+| `sistolikKanBasinci` | integer |  | — |  | Systolic blood pressure; the guide's required column is empty in the extraction (s.312). |
+| `diyastolikKanBasinci` | integer |  | — |  | Diastolic blood pressure; required column empty in the extraction (s.312). |
+| `boy` | decimal |  | — |  | Height (s.312). |
+| `kilo` | decimal |  | — |  | Weight (s.312). |
+| `vki` | decimal |  | — |  | Body-mass index, e.g. 22.3 (s.312). |
+| `apg` | decimal |  | — |  | Fasting blood sugar; 0 when unknown (s.313). |
+| `tpg` | decimal |  | — |  | Postprandial blood sugar; 0 when unknown (s.313). |
+| `hbA1c` | decimal |  | — |  | HbA1c; 0 when unknown (s.313). |
+| `kreatinin` | decimal |  | — |  | Creatinine; 0 when unknown (s.313). |
+| `trigliserid` | decimal |  | — |  | Triglyceride; 0 when unknown (s.313). |
+| `ldlKol` | decimal |  | — |  | LDL cholesterol; 0 when unknown (s.313). |
+| `hdlKol` | decimal |  | — |  | HDL cholesterol; 0 when unknown (s.313). |
+| `alt` | decimal |  | — |  | ALT; 0 when unknown (s.313). |
+| `antiGAD` | enum |  | anti-gad |  | P/N/B result (s.313). |
+| `ekg` | enum |  | ekg-durumu |  | Three-value ECG state (s.313). |
+| `mikroalbuminuri` | enum |  | var-yok-bilinmiyor |  | V/Y/B (s.313). |
+| `gozMuayenesi` | enum |  | goz-muayenesi |  | Seven-value eye-examination state (s.313). |
+| `periferikSensoryalNoropati` | enum |  | var-yok-bilinmiyor |  | V/Y/B (s.313). |
+| `koronerArterH` | enum |  | var-yok-bilinmiyor |  | V/Y/B; the guide's required column is empty in the extraction (s.314). |
+| `serebrovaskulerH` | enum |  | var-yok-bilinmiyor |  | V/Y/B (s.314). |
+| `ayakMuayenesi` | enum |  | var-yok-bilinmiyor |  | V = diabetik ülser var, Y = yok, B = bilinmiyor (s.314). |
+| `akutKomplikasyon` | enum |  | akut-komplikasyon |  | Four-value complication list (s.314). |
+| `yatisGun` | integer |  | — |  | Hospitalization day count of the visit (s.314). |
+| `insulinPompasi` | enum |  | var-yok-bilinmiyor |  | Pump presence; the guide's parameter name carries the Turkish capital İ (İnsulinPompasi) — preserved verbatim (s.314). |
+| `insulinPompasiVerTarihi` | string |  | — |  | Pump start date, "dd.mm.yyyy"; filled when a pump exists (s.314). |
+| `insulinPompasiDegTarihi` | string |  | — |  | Pump change date; filled when a pump exists (s.314). |
+
+## `DiabetTakipFormuKayitDVO`
+
+Domain: `takip-formu` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `tcKimlikNo` | string |  | — |  | Patient citizen ID (s.311). |
+| `ad` | string |  | — |  | Patient first name (s.311). |
+| `soyad` | string |  | — |  | Patient last name (s.311). |
+| `cepTel` | string |  | — |  | Mobile number, e.g. 5xxxxxxxxx (s.311). |
+| `protokolNo` | string |  | — |  | Protocol number (s.311). |
+| `vizitTarihi` | string |  | — |  | Visit date, "dd.mm.yyyy" (s.311). |
+| `saglikTesisiKodu` | integer |  | — |  | Facility code; the guide spells this parameter saglikTesisiKodu (extra i) unlike saglikTesisKodu elsewhere — preserved verbatim (s.311). |
+| `cinsiyet` | enum |  | cinsiyet |  | E = Erkek, K = Kadın (s.311). |
+| `ikametTuru` | enum |  | ikamet-turu |  | Six-value residence list (s.311). |
+| `doktorBilgileri` | array |  | — |  | Physicians; item shape Tablo 4.6.1.e (TakipFormuDoktorBilgisiDVO, this registry) (s.311). |
+| `tani` | string |  | — |  | Diagnosis ICD-10 code (s.311). |
+| `taniTarihi` | string |  | — |  | First date the patient received the diagnosis (s.311). |
+| `diabetEgitimi` | object |  | — |  | Diabetes education; shape Tablo 4.6.1.f (TakipFormuDiabetEgitimiDVO, this registry) (s.311). |
+| `tibbiBeslenmeTedavisi` | enum |  | tbt-durumu |  | Six-value medical-nutrition adherence list (s.311). |
+| `egzersiz` | enum |  | egzersiz-durumu |  | Seven-value exercise adherence list (s.311-312). |
+| `hastaliklar` | array |  | — |  | Diseases besides DM; item shape Tablo 4.6.1.g (TakipFormuHastalikDVO, this registry) (s.312). |
+| `basvuruNedeni` | enum |  | basvuru-nedeni |  | Six-value admission-reason list (s.312). |
+| `aliskanliklar` | array |  | — |  | Habits; item shape Tablo 4.6.1.h (TakipFormuAliskanlikDVO, this registry) (s.312). |
+| `glukoMetre` | enum |  | var-yok-bilinmiyor |  | Glucometer presence (s.312). |
+| `kanSekeriTakipSayisi` | integer |  | — |  | Daily blood-sugar measurement count (s.312). |
+| `kullanilanIlaclar` | array |  | — |  | Medications; item shape Tablo 4.6.1.i (TakipFormuKullanilanIlaclarDVO, this registry) (s.312). |
+| `sistolikKanBasinci` | integer |  | — |  | Systolic blood pressure; the guide's required column is empty in the extraction (s.312). |
+| `diyastolikKanBasinci` | integer |  | — |  | Diastolic blood pressure; required column empty in the extraction (s.312). |
+| `boy` | decimal |  | — |  | Height (s.312). |
+| `kilo` | decimal |  | — |  | Weight (s.312). |
+| `vki` | decimal |  | — |  | Body-mass index, e.g. 22.3 (s.312). |
+| `apg` | decimal |  | — |  | Fasting blood sugar; 0 when unknown (s.313). |
+| `tpg` | decimal |  | — |  | Postprandial blood sugar; 0 when unknown (s.313). |
+| `hbA1c` | decimal |  | — |  | HbA1c; 0 when unknown (s.313). |
+| `kreatinin` | decimal |  | — |  | Creatinine; 0 when unknown (s.313). |
+| `trigliserid` | decimal |  | — |  | Triglyceride; 0 when unknown (s.313). |
+| `ldlKol` | decimal |  | — |  | LDL cholesterol; 0 when unknown (s.313). |
+| `hdlKol` | decimal |  | — |  | HDL cholesterol; 0 when unknown (s.313). |
+| `alt` | decimal |  | — |  | ALT; 0 when unknown (s.313). |
+| `antiGAD` | enum |  | anti-gad |  | P/N/B result (s.313). |
+| `ekg` | enum |  | ekg-durumu |  | Three-value ECG state (s.313). |
+| `mikroalbuminuri` | enum |  | var-yok-bilinmiyor |  | V/Y/B (s.313). |
+| `gozMuayenesi` | enum |  | goz-muayenesi |  | Seven-value eye-examination state (s.313). |
+| `periferikSensoryalNoropati` | enum |  | var-yok-bilinmiyor |  | V/Y/B (s.313). |
+| `koronerArterH` | enum |  | var-yok-bilinmiyor |  | V/Y/B; the guide's required column is empty in the extraction (s.314). |
+| `serebrovaskulerH` | enum |  | var-yok-bilinmiyor |  | V/Y/B (s.314). |
+| `ayakMuayenesi` | enum |  | var-yok-bilinmiyor |  | V = diabetik ülser var, Y = yok, B = bilinmiyor (s.314). |
+| `akutKomplikasyon` | enum |  | akut-komplikasyon |  | Four-value complication list (s.314). |
+| `yatisGun` | integer |  | — |  | Hospitalization day count of the visit (s.314). |
+| `insulinPompasi` | enum |  | var-yok-bilinmiyor |  | Pump presence; the guide's parameter name carries the Turkish capital İ (İnsulinPompasi) — preserved verbatim (s.314). |
+| `insulinPompasiVerTarihi` | string |  | — |  | Pump start date, "dd.mm.yyyy"; filled when a pump exists (s.314). |
+| `insulinPompasiDegTarihi` | string |  | — |  | Pump change date; filled when a pump exists (s.314). |
+
 ## `DigerIslemBilgisiDVO`
 
 Domain: `hizmet-kayit` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19, medula-hastane-guide-3-1-1-2026-10-19
@@ -1888,6 +1997,108 @@ Domain: `hasta-kabul` · Direction: `shared` · Status: `reviewed` · Source ref
 | `hastaBasvuruNo` | string |  | — |  | Patient application number this tracking record belongs to. |
 | `bransKodu` | string |  | — |  | Branch code of the service (s.165). Verification correction - String(4) in the guide. |
 | `ekdsYontemGerekce` | enum |  | ekds-yontem-gerekce |  | EKDS verification method justification codes; Integer[] in the guide, modeled as an array of ekds-yontem-gerekce codes (s.167, changelog s.13). |
+
+## `TakipFormuAliskanlikDVO`
+
+Domain: `takip-formu` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `aliskanlik` | enum |  | aliskanlik |  | Four-value habit list (s.319). |
+
+## `TakipFormuDiabetEgitimiDVO`
+
+Domain: `takip-formu` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `bireyselEgitimSayisi` | integer |  | — |  | Individual DM education count (s.319). |
+| `grupEgitimSayisi` | integer |  | — |  | Group DM education count (s.319). |
+| `dmEgitimiAlmisMi` | enum |  | evet-hayir |  | E/H (s.319). |
+
+## `TakipFormuDoktorBilgisiDVO`
+
+Domain: `takip-formu` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `drTescilNo` | string |  | — |  | Physician registration number (s.318). |
+| `drBransKodu` | string |  | — |  | Physician branch code (s.318). |
+| `dmEgitimiAlmisMi` | enum |  | evet-hayir |  | E/H (s.318). |
+
+## `TakipFormuHastalikDVO`
+
+Domain: `takip-formu` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `hastalikKodu` | enum |  | diabet-hastalik |  | Fifteen-value disease list including 0 = Diğer (s.319). |
+| `digerHastalikTaniKodu` | string |  | — |  | Diagnosis code of a disease outside the list; filled when hastalikKodu = 0 (s.319). |
+
+## `TakipFormuKaydetCevapDVO`
+
+Domain: `takip-formu` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `diabetTakipFormu` | object |  | — |  | Saved form; shape Tablo 4.6.1.d (DiabetTakipFormuDVO, this registry) (s.310). |
+| `sonucKodu` | string |  | — |  | Result code; "0000" means success (s.310). |
+| `sonucMesaji` | string |  | — |  | Result description (s.310). |
+
+## `TakipFormuKaydetGirisDVO`
+
+Domain: `takip-formu` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `diabetTakipFormu` | object |  | — |  | Diabetes follow-up form; shape Tablo 4.6.1.c (DiabetTakipFormuKayitDVO, this registry) (s.310). |
+| `kullaniciTesisKodu` | integer |  | — |  | Facility code (s.310). |
+
+## `TakipFormuKullanilanIlaclarDVO`
+
+Domain: `takip-formu` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `barkod` | string |  | — |  | Drug barcode (s.320). |
+| `gunlukDoz` | string |  | — |  | Daily dose; units written for insulin (s.320). |
+
+## `TakipFormuOkuCevapDVO`
+
+Domain: `takip-formu` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `diabetTakipFormu` | array |  | — |  | Saved forms; item shape Tablo 4.6.1.d (DiabetTakipFormuDVO, this registry) (s.320). |
+| `sonucKodu` | string |  | — |  | Result code; "0000" means success (s.320). |
+| `sonucMesaji` | string |  | — |  | Result description (s.320). |
+
+## `TakipFormuOkuGirisDVO`
+
+Domain: `takip-formu` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `tcKimlikNo` | string |  | — |  | Patient citizen ID (s.320). |
+| `saglikTesisKodu` | integer |  | — |  | Facility code (s.320). |
+
+## `TakipFormuSilCevapDVO`
+
+Domain: `takip-formu` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `sonucKodu` | string |  | — |  | Result code; "0000" means success (s.321). |
+| `sonucMesaji` | string |  | — |  | Result description (s.321). |
+
+## `TakipFormuSilGirisDVO`
+
+Domain: `takip-formu` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `takipFormuNo` | string |  | — |  | Follow-up form number (s.321). |
+| `saglikTesisKodu` | integer |  | — |  | Facility code (s.321). |
 
 ## `TakipIslemKesintiDVO`
 

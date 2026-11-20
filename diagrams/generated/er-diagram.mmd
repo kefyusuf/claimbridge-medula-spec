@@ -108,6 +108,105 @@ erDiagram
     string kilo
     string dogumSaati
   }
+  DiabetTakipFormuDVO {
+    string takipFormuNo
+    string tcKimlikNo
+    string ad
+    string soyad
+    string cepTel
+    string protokolNo
+    string vizitTarihi
+    integer saglikTesisiKodu
+    enum cinsiyet
+    enum ikametTuru
+    array doktorBilgileri
+    string tani
+    string taniTarihi
+    object diabetEgitimi
+    enum tibbiBeslenmeTedavisi
+    enum egzersiz
+    array hastaliklar
+    enum basvuruNedeni
+    array aliskanliklar
+    enum glukoMetre
+    integer kanSekeriTakipSayisi
+    array kullanilanIlaclar
+    integer sistolikKanBasinci
+    integer diyastolikKanBasinci
+    decimal boy
+    decimal kilo
+    decimal vki
+    decimal apg
+    decimal tpg
+    decimal hbA1c
+    decimal kreatinin
+    decimal trigliserid
+    decimal ldlKol
+    decimal hdlKol
+    decimal alt
+    enum antiGAD
+    enum ekg
+    enum mikroalbuminuri
+    enum gozMuayenesi
+    enum periferikSensoryalNoropati
+    enum koronerArterH
+    enum serebrovaskulerH
+    enum ayakMuayenesi
+    enum akutKomplikasyon
+    integer yatisGun
+    enum insulinPompasi
+    string insulinPompasiVerTarihi
+    string insulinPompasiDegTarihi
+  }
+  DiabetTakipFormuKayitDVO {
+    string tcKimlikNo
+    string ad
+    string soyad
+    string cepTel
+    string protokolNo
+    string vizitTarihi
+    integer saglikTesisiKodu
+    enum cinsiyet
+    enum ikametTuru
+    array doktorBilgileri
+    string tani
+    string taniTarihi
+    object diabetEgitimi
+    enum tibbiBeslenmeTedavisi
+    enum egzersiz
+    array hastaliklar
+    enum basvuruNedeni
+    array aliskanliklar
+    enum glukoMetre
+    integer kanSekeriTakipSayisi
+    array kullanilanIlaclar
+    integer sistolikKanBasinci
+    integer diyastolikKanBasinci
+    decimal boy
+    decimal kilo
+    decimal vki
+    decimal apg
+    decimal tpg
+    decimal hbA1c
+    decimal kreatinin
+    decimal trigliserid
+    decimal ldlKol
+    decimal hdlKol
+    decimal alt
+    enum antiGAD
+    enum ekg
+    enum mikroalbuminuri
+    enum gozMuayenesi
+    enum periferikSensoryalNoropati
+    enum koronerArterH
+    enum serebrovaskulerH
+    enum ayakMuayenesi
+    enum akutKomplikasyon
+    integer yatisGun
+    enum insulinPompasi
+    string insulinPompasiVerTarihi
+    string insulinPompasiDegTarihi
+  }
   DigerIslemBilgisiDVO {
     integer adet
     string bransKodu
@@ -1163,6 +1262,53 @@ erDiagram
     string bransKodu
     enum ekdsYontemGerekce
   }
+  TakipFormuAliskanlikDVO {
+    enum aliskanlik
+  }
+  TakipFormuDiabetEgitimiDVO {
+    integer bireyselEgitimSayisi
+    integer grupEgitimSayisi
+    enum dmEgitimiAlmisMi
+  }
+  TakipFormuDoktorBilgisiDVO {
+    string drTescilNo
+    string drBransKodu
+    enum dmEgitimiAlmisMi
+  }
+  TakipFormuHastalikDVO {
+    enum hastalikKodu
+    string digerHastalikTaniKodu
+  }
+  TakipFormuKaydetCevapDVO {
+    object diabetTakipFormu
+    string sonucKodu
+    string sonucMesaji
+  }
+  TakipFormuKaydetGirisDVO {
+    object diabetTakipFormu
+    integer kullaniciTesisKodu
+  }
+  TakipFormuKullanilanIlaclarDVO {
+    string barkod
+    string gunlukDoz
+  }
+  TakipFormuOkuCevapDVO {
+    array diabetTakipFormu
+    string sonucKodu
+    string sonucMesaji
+  }
+  TakipFormuOkuGirisDVO {
+    string tcKimlikNo
+    integer saglikTesisKodu
+  }
+  TakipFormuSilCevapDVO {
+    string sonucKodu
+    string sonucMesaji
+  }
+  TakipFormuSilGirisDVO {
+    string takipFormuNo
+    integer saglikTesisKodu
+  }
   TakipIslemKesintiDVO {
     string islemSiraNo
     string hizmetSunucuRefNo
@@ -1334,6 +1480,12 @@ erDiagram
   medula_hastane_rapor_rapor_bilgisi_sil ||--|| RaporCevapDVO : outputDvo
   medula_hastane_rapor_takip_no_ile_rapor_bilgisi_kaydet ||--|| RaporGirisDVO : inputDvo
   medula_hastane_rapor_takip_no_ile_rapor_bilgisi_kaydet ||--|| RaporCevapDVO : outputDvo
+  medula_hastane_takip_formu_takip_formu_kaydet ||--|| TakipFormuKaydetGirisDVO : inputDvo
+  medula_hastane_takip_formu_takip_formu_kaydet ||--|| TakipFormuKaydetCevapDVO : outputDvo
+  medula_hastane_takip_formu_takip_formu_oku ||--|| TakipFormuOkuGirisDVO : inputDvo
+  medula_hastane_takip_formu_takip_formu_oku ||--|| TakipFormuOkuCevapDVO : outputDvo
+  medula_hastane_takip_formu_takip_formu_sil ||--|| TakipFormuSilGirisDVO : inputDvo
+  medula_hastane_takip_formu_takip_formu_sil ||--|| TakipFormuSilCevapDVO : outputDvo
   medula_hastane_yardimci_islemler_barkod_sut_eslesme_sorgu ||--|| BarkodSutEslesmeSorguGirisDVO : inputDvo
   medula_hastane_yardimci_islemler_barkod_sut_eslesme_sorgu ||--|| BarkodSutEslesmeSorguCevapDVO : outputDvo
   medula_hastane_yardimci_islemler_doktor_ara ||--|| DoktorAraGirisDVO : inputDvo
@@ -1382,6 +1534,38 @@ erDiagram
   AnalikRaporDVO }o--|| analik_rapor_tipi : enumRef
   AnalikRaporDVO }o--|| gebelik_tipi : enumRef
   CocukBilgisiDVO }o--|| cinsiyet : enumRef
+  DiabetTakipFormuDVO }o--|| cinsiyet : enumRef
+  DiabetTakipFormuDVO }o--|| ikamet_turu : enumRef
+  DiabetTakipFormuDVO }o--|| tbt_durumu : enumRef
+  DiabetTakipFormuDVO }o--|| egzersiz_durumu : enumRef
+  DiabetTakipFormuDVO }o--|| basvuru_nedeni : enumRef
+  DiabetTakipFormuDVO }o--|| var_yok_bilinmiyor : enumRef
+  DiabetTakipFormuDVO }o--|| anti_gad : enumRef
+  DiabetTakipFormuDVO }o--|| ekg_durumu : enumRef
+  DiabetTakipFormuDVO }o--|| var_yok_bilinmiyor : enumRef
+  DiabetTakipFormuDVO }o--|| goz_muayenesi : enumRef
+  DiabetTakipFormuDVO }o--|| var_yok_bilinmiyor : enumRef
+  DiabetTakipFormuDVO }o--|| var_yok_bilinmiyor : enumRef
+  DiabetTakipFormuDVO }o--|| var_yok_bilinmiyor : enumRef
+  DiabetTakipFormuDVO }o--|| var_yok_bilinmiyor : enumRef
+  DiabetTakipFormuDVO }o--|| akut_komplikasyon : enumRef
+  DiabetTakipFormuDVO }o--|| var_yok_bilinmiyor : enumRef
+  DiabetTakipFormuKayitDVO }o--|| cinsiyet : enumRef
+  DiabetTakipFormuKayitDVO }o--|| ikamet_turu : enumRef
+  DiabetTakipFormuKayitDVO }o--|| tbt_durumu : enumRef
+  DiabetTakipFormuKayitDVO }o--|| egzersiz_durumu : enumRef
+  DiabetTakipFormuKayitDVO }o--|| basvuru_nedeni : enumRef
+  DiabetTakipFormuKayitDVO }o--|| var_yok_bilinmiyor : enumRef
+  DiabetTakipFormuKayitDVO }o--|| anti_gad : enumRef
+  DiabetTakipFormuKayitDVO }o--|| ekg_durumu : enumRef
+  DiabetTakipFormuKayitDVO }o--|| var_yok_bilinmiyor : enumRef
+  DiabetTakipFormuKayitDVO }o--|| goz_muayenesi : enumRef
+  DiabetTakipFormuKayitDVO }o--|| var_yok_bilinmiyor : enumRef
+  DiabetTakipFormuKayitDVO }o--|| var_yok_bilinmiyor : enumRef
+  DiabetTakipFormuKayitDVO }o--|| var_yok_bilinmiyor : enumRef
+  DiabetTakipFormuKayitDVO }o--|| var_yok_bilinmiyor : enumRef
+  DiabetTakipFormuKayitDVO }o--|| akut_komplikasyon : enumRef
+  DiabetTakipFormuKayitDVO }o--|| var_yok_bilinmiyor : enumRef
   DigerIslemBilgisiDVO }o--|| ayni_farkli_kesi : enumRef
   DiyalizRaporBilgisiDVO }o--|| evet_hayir : enumRef
   DoktorBilgisiDVO }o--|| doktor_tipi : enumRef
@@ -1455,6 +1639,10 @@ erDiagram
   TakipDVO }o--|| takip_tipi : enumRef
   TakipDVO }o--|| takip_durumu : enumRef
   TakipDVO }o--|| ekds_yontem_gerekce : enumRef
+  TakipFormuAliskanlikDVO }o--|| aliskanlik : enumRef
+  TakipFormuDiabetEgitimiDVO }o--|| evet_hayir : enumRef
+  TakipFormuDoktorBilgisiDVO }o--|| evet_hayir : enumRef
+  TakipFormuHastalikDVO }o--|| diabet_hastalik : enumRef
   TaniBilgisiDVO }o--|| tani_tipi : enumRef
   TedaviRaporDVO }o--|| tedavi_rapor_turu : enumRef
   TesisYatakBilgiDVO }o--|| yatak_turu : enumRef
