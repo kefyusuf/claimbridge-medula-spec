@@ -602,6 +602,270 @@
 | deletes | — |
 | generates | `islemSiraNo` |
 
+## `medula.hastane.imzali-rapor.bashekim-onay-bekleyen-rapor-sorgu`
+
+| Field | Value |
+| --- | --- |
+| Service | medula.hastane.imzali-rapor |
+| Documentation heading | bashekimOnayBekleyenRaporSorgu |
+| Operation name | bashekimOnayBekleyenRaporSorgu |
+| Input DVO | ImzaliRaporOnayBekleyenSorguGirisDVO |
+| Output DVO | RaporSorguCevapDVO |
+| Success | sonucKodu = 0000 (sonucMesaji) |
+| Sandbox supported |  |
+| Status | reviewed |
+| Source refs | medula-hastane-guide-3-1-1-2026-10-19 |
+
+**State effects**
+
+| Effect | Targets |
+| --- | --- |
+| creates | — |
+| reads | — |
+| updates | — |
+| deletes | — |
+| generates | — |
+
+## `medula.hastane.imzali-rapor.bashekim-rapor-onay`
+
+| Field | Value |
+| --- | --- |
+| Service | medula.hastane.imzali-rapor |
+| Documentation heading | bashekimRaporOnay |
+| Operation name | bashekimRaporOnay |
+| Input DVO | ImzaliRaporOnayGirisDVO |
+| Output DVO | RaporOnayCevapDVO |
+| Success | sonucKodu = 0000 (sonucMesaji) |
+| Sandbox supported |  |
+| Status | reviewed |
+| Source refs | medula-hastane-guide-3-1-1-2026-10-19 |
+
+**State effects**
+
+| Effect | Targets |
+| --- | --- |
+| creates | — |
+| reads | — |
+| updates | `imzaliRapor` |
+| deletes | — |
+| generates | `raporTakipNo` |
+
+## `medula.hastane.imzali-rapor.kurul-baskani-onay-bekleyen-rapor-sorgu`
+
+| Field | Value |
+| --- | --- |
+| Service | medula.hastane.imzali-rapor |
+| Documentation heading | kurulBaskaniOnayBekleyenRaporSorgu |
+| Operation name | kurulBaskaniOnayBekleyenRaporSorgu |
+| Input DVO | ImzaliRaporOnayBekleyenSorguGirisDVO |
+| Output DVO | RaporSorguCevapDVO |
+| Success | sonucKodu = 0000 (sonucMesaji) |
+| Sandbox supported |  |
+| Status | reviewed |
+| Source refs | medula-hastane-guide-3-1-1-2026-10-19 |
+
+**State effects**
+
+| Effect | Targets |
+| --- | --- |
+| creates | — |
+| reads | — |
+| updates | — |
+| deletes | — |
+| generates | — |
+
+## `medula.hastane.imzali-rapor.kurul-baskani-rapor-onay`
+
+| Field | Value |
+| --- | --- |
+| Service | medula.hastane.imzali-rapor |
+| Documentation heading | kurulBaskanıRaporOnay |
+| Operation name | kurulBaskanıRaporOnay |
+| Input DVO | ImzaliRaporOnayGirisDVO |
+| Output DVO | RaporOnayCevapDVO |
+| Success | sonucKodu = 0000 (sonucMesaji) |
+| Sandbox supported |  |
+| Status | reviewed |
+| Source refs | medula-hastane-guide-3-1-1-2026-10-19 |
+
+**State effects**
+
+| Effect | Targets |
+| --- | --- |
+| creates | — |
+| reads | — |
+| updates | `imzaliRapor` |
+| deletes | — |
+| generates | `raporTakipNo` |
+
+## `medula.hastane.imzali-rapor.onay`
+
+| Field | Value |
+| --- | --- |
+| Service | medula.hastane.imzali-rapor |
+| Documentation heading | onay |
+| Operation name | onay |
+| Input DVO | ImzaliRaporOnayGirisDVO |
+| Output DVO | OnayCevapDVO |
+| Success | sonucKodu = 0000 (sonucMesaji) |
+| Sandbox supported |  |
+| Status | reviewed |
+| Source refs | medula-hastane-guide-3-1-1-2026-10-19 |
+
+**State effects**
+
+| Effect | Targets |
+| --- | --- |
+| creates | — |
+| reads | — |
+| updates | — |
+| deletes | — |
+| generates | — |
+
+## `medula.hastane.imzali-rapor.onay-bekleyen`
+
+| Field | Value |
+| --- | --- |
+| Service | medula.hastane.imzali-rapor |
+| Documentation heading | onayBekleyen |
+| Operation name | onayBekleyen |
+| Input DVO | ImzaliRaporOnayGirisDVO |
+| Output DVO | OnayBekleyenCevapDVO |
+| Success | sonucKodu = 0000 (sonucMesaji) |
+| Sandbox supported |  |
+| Status | reviewed |
+| Source refs | medula-hastane-guide-3-1-1-2026-10-19 |
+
+**State effects**
+
+| Effect | Targets |
+| --- | --- |
+| creates | — |
+| reads | — |
+| updates | — |
+| deletes | — |
+| generates | — |
+
+## `medula.hastane.imzali-rapor.onay-bekleyen-rapor-sorgu`
+
+| Field | Value |
+| --- | --- |
+| Service | medula.hastane.imzali-rapor |
+| Documentation heading | onayBekleyenRaporSorgu |
+| Operation name | onayBekleyenRaporSorgu |
+| Input DVO | RaporOnayBekleyenSorguDVO |
+| Output DVO | RaporSorguCevapDVO |
+| Success | sonucKodu = 0000 (sonucMesaji) |
+| Sandbox supported |  |
+| Status | reviewed |
+| Source refs | medula-hastane-guide-3-1-1-2026-10-19 |
+
+**State effects**
+
+| Effect | Targets |
+| --- | --- |
+| creates | — |
+| reads | — |
+| updates | — |
+| deletes | — |
+| generates | — |
+
+## `medula.hastane.imzali-rapor.rapor-onay`
+
+| Field | Value |
+| --- | --- |
+| Service | medula.hastane.imzali-rapor |
+| Documentation heading | raporOnay |
+| Operation name | raporOnay |
+| Input DVO | RaporOnayDVO |
+| Output DVO | RaporOnayCevapDVO |
+| Success | sonucKodu = 0000 (sonucMesaji) |
+| Sandbox supported |  |
+| Status | reviewed |
+| Source refs | medula-hastane-guide-3-1-1-2026-10-19 |
+
+**State effects**
+
+| Effect | Targets |
+| --- | --- |
+| creates | `imzaliRapor` |
+| reads | — |
+| updates | — |
+| deletes | — |
+| generates | `raporTakipNo` |
+
+## `medula.hastane.imzali-rapor.rapor-sil`
+
+| Field | Value |
+| --- | --- |
+| Service | medula.hastane.imzali-rapor |
+| Documentation heading | raporSil |
+| Operation name | raporSil |
+| Input DVO | ImzaliRaporSilGirisDVO |
+| Output DVO | SonucDVO |
+| Success | sonucKodu = 0000 (sonucMesaji) |
+| Sandbox supported |  |
+| Status | reviewed |
+| Source refs | medula-hastane-guide-3-1-1-2026-10-19 |
+
+**State effects**
+
+| Effect | Targets |
+| --- | --- |
+| creates | — |
+| reads | — |
+| updates | — |
+| deletes | `imzaliRapor` |
+| generates | — |
+
+## `medula.hastane.imzali-rapor.rapor-sorgu`
+
+| Field | Value |
+| --- | --- |
+| Service | medula.hastane.imzali-rapor |
+| Documentation heading | raporSorgu |
+| Operation name | raporSorgu |
+| Input DVO | ImzaliRaporSorguGirisDVO |
+| Output DVO | RaporSorguCevapDVO |
+| Success | sonucKodu = 0000 (sonucMesaji) |
+| Sandbox supported |  |
+| Status | reviewed |
+| Source refs | medula-hastane-guide-3-1-1-2026-10-19 |
+
+**State effects**
+
+| Effect | Targets |
+| --- | --- |
+| creates | — |
+| reads | — |
+| updates | — |
+| deletes | — |
+| generates | — |
+
+## `medula.hastane.imzali-rapor.tc-ile-rapor-sorgu`
+
+| Field | Value |
+| --- | --- |
+| Service | medula.hastane.imzali-rapor |
+| Documentation heading | tcIleraporSorgu |
+| Operation name | tcIleraporSorgu |
+| Input DVO | ImzaliRaporSorguGirisDVO |
+| Output DVO | RaporSorguCevapDVO |
+| Success | sonucKodu = 0000 (sonucMesaji) |
+| Sandbox supported |  |
+| Status | reviewed |
+| Source refs | medula-hastane-guide-3-1-1-2026-10-19 |
+
+**State effects**
+
+| Effect | Targets |
+| --- | --- |
+| creates | — |
+| reads | — |
+| updates | — |
+| deletes | — |
+| generates | — |
+
 ## `medula.hastane.ortodonti.ortodonti-formu-iptal`
 
 | Field | Value |

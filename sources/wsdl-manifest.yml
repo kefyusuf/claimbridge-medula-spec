@@ -78,3 +78,13 @@ wsdls:
     service: ortodonti
     environment: test
     url: https://sgkt.sgk.gov.tr/medula/hastane/ortodontiIslemleriWS?wsdl
+
+  - id: wsdl.imzali-rapor.production
+    service: imzali-rapor
+    environment: production
+    url: https://medula.sgk.gov.tr/medula/hastane/ImzaliRaporIslemleriService?wsdl
+
+  - id: wsdl.imzali-rapor.test
+    service: imzali-rapor
+    environment: test
+    url: https://sgkt.sgk.gov.tr/medula/hastane/ImzaliRaporIslemleriService?wsdl

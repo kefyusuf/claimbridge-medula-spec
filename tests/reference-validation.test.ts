@@ -92,11 +92,12 @@ function schemaValidate(
 }
 
 describe("reference-validation (Group 2)", () => {
-  it("has exactly 8 service registry files", () => {
+  it("has exactly 9 service registry files", () => {
     expect(services.map((s) => s.file).sort()).toEqual([
       "fatura-kayit.yml",
       "hasta-kabul.yml",
       "hizmet-kayit.yml",
+      "imzali-rapor.yml",
       "ortodonti.yml",
       "rapor.yml",
       "taahhut.yml",
@@ -105,7 +106,7 @@ describe("reference-validation (Group 2)", () => {
     ]);
   });
 
-  it("has exactly 61 method registry files in 8 domains", () => {
+  it("has exactly 72 method registry files in 9 domains", () => {
     expect(methods.map((m) => m.file).sort()).toEqual([
       "fatura-kayit/fatura-iptal.yml",
       "fatura-kayit/fatura-kayit.yml",
@@ -132,6 +133,17 @@ describe("reference-validation (Group 2)", () => {
       "hizmet-kayit/hizmet-kaydi-iptal.yml",
       "hizmet-kayit/hizmet-kaydi-oku.yml",
       "hizmet-kayit/hizmet-kayit.yml",
+      "imzali-rapor/bashekim-onay-bekleyen-rapor-sorgu.yml",
+      "imzali-rapor/bashekim-rapor-onay.yml",
+      "imzali-rapor/kurul-baskani-onay-bekleyen-rapor-sorgu.yml",
+      "imzali-rapor/kurul-baskani-rapor-onay.yml",
+      "imzali-rapor/onay-bekleyen-rapor-sorgu.yml",
+      "imzali-rapor/onay-bekleyen.yml",
+      "imzali-rapor/onay.yml",
+      "imzali-rapor/rapor-onay.yml",
+      "imzali-rapor/rapor-sil.yml",
+      "imzali-rapor/rapor-sorgu.yml",
+      "imzali-rapor/tc-ile-rapor-sorgu.yml",
       "ortodonti/ortodonti-formu-iptal.yml",
       "ortodonti/ortodonti-formu-kaydet.yml",
       "ortodonti/ortodonti-formu-oku.yml",
@@ -284,7 +296,7 @@ describe("reference-validation (Group 2)", () => {
   });
 
   it("resolves every service WSDL reference in the manifest", () => {
-    expect(wsdlManifest.length).toBe(16);
+    expect(wsdlManifest.length).toBe(18);
     for (const s of services) {
       const slug = s.data.slug as string;
       const wsdl = s.data.wsdl as {

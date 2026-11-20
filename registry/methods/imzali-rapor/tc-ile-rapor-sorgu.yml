@@ -1,0 +1,31 @@
+id: medula.hastane.imzali-rapor.tc-ile-rapor-sorgu
+service: medula.hastane.imzali-rapor
+names:
+  documentationHeading: tcIleraporSorgu
+  operationName: tcIleraporSorgu
+  aliases:
+    - tcIleraporSorgu
+contract:
+  inputDvo: ImzaliRaporSorguGirisDVO
+  outputDvo: RaporSorguCevapDVO
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 341
+    confidence: extracted
+    section: 4.6 4.6.6 tcIleraporSorgu Metodu
+stateEffects:
+  creates: []
+  reads: []
+  updates: []
+  deletes: []
+  generates: []
+success:
+  resultCodeField: sonucKodu
+  successCode: "0000"
+  messageField: sonucMesaji
+sandbox:
+  supported: false
+  defaultScenario: null
+status: reviewed

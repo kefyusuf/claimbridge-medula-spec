@@ -72,6 +72,32 @@ Service registration process that records medical services against an existing p
 - `medula.hastane.hizmet-kayit.hizmet-kaydi-oku`
 - `medula.hastane.hizmet-kayit.hizmet-kaydi-iptal`
 
+## E-İmzalı Rapor Islemleri Metotlari (`medula.hastane.imzali-rapor`)
+
+Digitally-signed report operations: approval (physician / board head / chief physician), signed-blob queries, pending-approval queries, deletion and the XML-object approval step. Inputs and query payloads are opaque byte[] signature blobs; raporKaydet (7-page composite, s.329-336) lands with G45c-b.
+
+| Field | Value |
+| --- | --- |
+| Slug | imzali-rapor |
+| Status | reviewed |
+| Production WSDL | wsdl.imzali-rapor.production |
+| Test WSDL | wsdl.imzali-rapor.test |
+| Source refs | medula-hastane-guide-3-1-1-2026-10-19 |
+
+**Methods**
+
+- `medula.hastane.imzali-rapor.rapor-onay`
+- `medula.hastane.imzali-rapor.kurul-baskani-rapor-onay`
+- `medula.hastane.imzali-rapor.bashekim-rapor-onay`
+- `medula.hastane.imzali-rapor.rapor-sorgu`
+- `medula.hastane.imzali-rapor.tc-ile-rapor-sorgu`
+- `medula.hastane.imzali-rapor.kurul-baskani-onay-bekleyen-rapor-sorgu`
+- `medula.hastane.imzali-rapor.bashekim-onay-bekleyen-rapor-sorgu`
+- `medula.hastane.imzali-rapor.onay-bekleyen-rapor-sorgu`
+- `medula.hastane.imzali-rapor.rapor-sil`
+- `medula.hastane.imzali-rapor.onay`
+- `medula.hastane.imzali-rapor.onay-bekleyen`
+
 ## Ortodonti Formu Kayit Metotlari (`medula.hastane.ortodonti`)
 
 Orthodontic form operations: save, cancel and read the orthodontics follow-up form (guide section renumbered 4.5/4.8 across editions).

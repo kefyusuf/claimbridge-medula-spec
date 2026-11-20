@@ -1,6 +1,6 @@
 {
   "specVersion": "0.5.0",
-  "generatedAt": "2026-11-20T16:10:16.236Z",
+  "generatedAt": "2026-11-20T17:12:33.920Z",
   "sources": [
     {
       "id": "medula-hastane-guide-2026-06-17",
@@ -131,6 +131,40 @@
         "medula.hastane.hizmet-kayit.hizmet-kaydi-iptal"
       ],
       "status": "draft"
+    },
+    {
+      "id": "medula.hastane.imzali-rapor",
+      "slug": "imzali-rapor",
+      "displayName": "E-İmzalı Rapor Islemleri Metotlari",
+      "description": "Digitally-signed report operations: approval (physician / board head / chief physician), signed-blob queries, pending-approval queries, deletion and the XML-object approval step. Inputs and query payloads are opaque byte[] signature blobs; raporKaydet (7-page composite, s.329-336) lands with G45c-b.",
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 329,
+          "confidence": "extracted",
+          "section": "4.6 E-İmzalı Rapor Islemleri Metotlari"
+        }
+      ],
+      "wsdl": {
+        "production": "wsdl.imzali-rapor.production",
+        "test": "wsdl.imzali-rapor.test"
+      },
+      "methods": [
+        "medula.hastane.imzali-rapor.rapor-onay",
+        "medula.hastane.imzali-rapor.kurul-baskani-rapor-onay",
+        "medula.hastane.imzali-rapor.bashekim-rapor-onay",
+        "medula.hastane.imzali-rapor.rapor-sorgu",
+        "medula.hastane.imzali-rapor.tc-ile-rapor-sorgu",
+        "medula.hastane.imzali-rapor.kurul-baskani-onay-bekleyen-rapor-sorgu",
+        "medula.hastane.imzali-rapor.bashekim-onay-bekleyen-rapor-sorgu",
+        "medula.hastane.imzali-rapor.onay-bekleyen-rapor-sorgu",
+        "medula.hastane.imzali-rapor.rapor-sil",
+        "medula.hastane.imzali-rapor.onay",
+        "medula.hastane.imzali-rapor.onay-bekleyen"
+      ],
+      "status": "reviewed"
     },
     {
       "id": "medula.hastane.ortodonti",
@@ -1584,6 +1618,482 @@
       "sandbox": {
         "supported": true,
         "defaultScenario": "happy-path"
+      },
+      "status": "reviewed"
+    },
+    {
+      "id": "medula.hastane.imzali-rapor.bashekim-onay-bekleyen-rapor-sorgu",
+      "service": "medula.hastane.imzali-rapor",
+      "names": {
+        "documentationHeading": "bashekimOnayBekleyenRaporSorgu",
+        "operationName": "bashekimOnayBekleyenRaporSorgu",
+        "aliases": [
+          "bashekimOnayBekleyenRaporSorgu"
+        ]
+      },
+      "contract": {
+        "inputDvo": "ImzaliRaporOnayBekleyenSorguGirisDVO",
+        "outputDvo": "RaporSorguCevapDVO"
+      },
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 344,
+          "confidence": "extracted",
+          "section": "4.6 4.6.8 bashekimOnayBekleyenRaporSorgu Metodu"
+        }
+      ],
+      "stateEffects": {
+        "creates": [],
+        "reads": [],
+        "updates": [],
+        "deletes": [],
+        "generates": []
+      },
+      "success": {
+        "resultCodeField": "sonucKodu",
+        "successCode": "0000",
+        "messageField": "sonucMesaji"
+      },
+      "sandbox": {
+        "supported": false,
+        "defaultScenario": null
+      },
+      "status": "reviewed"
+    },
+    {
+      "id": "medula.hastane.imzali-rapor.bashekim-rapor-onay",
+      "service": "medula.hastane.imzali-rapor",
+      "names": {
+        "documentationHeading": "bashekimRaporOnay",
+        "operationName": "bashekimRaporOnay",
+        "aliases": [
+          "bashekimRaporOnay"
+        ]
+      },
+      "contract": {
+        "inputDvo": "ImzaliRaporOnayGirisDVO",
+        "outputDvo": "RaporOnayCevapDVO"
+      },
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 338,
+          "confidence": "extracted",
+          "section": "4.6 4.6.4 bashekimRaporOnay Metodu"
+        }
+      ],
+      "stateEffects": {
+        "creates": [],
+        "reads": [],
+        "updates": [
+          "imzaliRapor"
+        ],
+        "deletes": [],
+        "generates": [
+          "raporTakipNo"
+        ]
+      },
+      "success": {
+        "resultCodeField": "sonucKodu",
+        "successCode": "0000",
+        "messageField": "sonucMesaji"
+      },
+      "sandbox": {
+        "supported": false,
+        "defaultScenario": null
+      },
+      "status": "reviewed"
+    },
+    {
+      "id": "medula.hastane.imzali-rapor.kurul-baskani-onay-bekleyen-rapor-sorgu",
+      "service": "medula.hastane.imzali-rapor",
+      "names": {
+        "documentationHeading": "kurulBaskaniOnayBekleyenRaporSorgu",
+        "operationName": "kurulBaskaniOnayBekleyenRaporSorgu",
+        "aliases": [
+          "kurulBaskaniOnayBekleyenRaporSorgu"
+        ]
+      },
+      "contract": {
+        "inputDvo": "ImzaliRaporOnayBekleyenSorguGirisDVO",
+        "outputDvo": "RaporSorguCevapDVO"
+      },
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 342,
+          "confidence": "extracted",
+          "section": "4.6 4.6.7 kurulBaskaniOnayBekleyenRaporSorgu Metodu"
+        }
+      ],
+      "stateEffects": {
+        "creates": [],
+        "reads": [],
+        "updates": [],
+        "deletes": [],
+        "generates": []
+      },
+      "success": {
+        "resultCodeField": "sonucKodu",
+        "successCode": "0000",
+        "messageField": "sonucMesaji"
+      },
+      "sandbox": {
+        "supported": false,
+        "defaultScenario": null
+      },
+      "status": "reviewed"
+    },
+    {
+      "id": "medula.hastane.imzali-rapor.kurul-baskani-rapor-onay",
+      "service": "medula.hastane.imzali-rapor",
+      "names": {
+        "documentationHeading": "kurulBaskanıRaporOnay",
+        "operationName": "kurulBaskanıRaporOnay",
+        "aliases": [
+          "kurulBaskanıRaporOnay"
+        ]
+      },
+      "contract": {
+        "inputDvo": "ImzaliRaporOnayGirisDVO",
+        "outputDvo": "RaporOnayCevapDVO"
+      },
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 337,
+          "confidence": "extracted",
+          "section": "4.6 4.6.3 kurulBaskanıRaporOnay Metodu"
+        }
+      ],
+      "stateEffects": {
+        "creates": [],
+        "reads": [],
+        "updates": [
+          "imzaliRapor"
+        ],
+        "deletes": [],
+        "generates": [
+          "raporTakipNo"
+        ]
+      },
+      "success": {
+        "resultCodeField": "sonucKodu",
+        "successCode": "0000",
+        "messageField": "sonucMesaji"
+      },
+      "sandbox": {
+        "supported": false,
+        "defaultScenario": null
+      },
+      "status": "reviewed"
+    },
+    {
+      "id": "medula.hastane.imzali-rapor.onay",
+      "service": "medula.hastane.imzali-rapor",
+      "names": {
+        "documentationHeading": "onay",
+        "operationName": "onay",
+        "aliases": [
+          "onay"
+        ]
+      },
+      "contract": {
+        "inputDvo": "ImzaliRaporOnayGirisDVO",
+        "outputDvo": "OnayCevapDVO"
+      },
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 348,
+          "confidence": "extracted",
+          "section": "4.6 4.6.11 onay Metodu"
+        }
+      ],
+      "stateEffects": {
+        "creates": [],
+        "reads": [],
+        "updates": [],
+        "deletes": [],
+        "generates": []
+      },
+      "success": {
+        "resultCodeField": "sonucKodu",
+        "successCode": "0000",
+        "messageField": "sonucMesaji"
+      },
+      "sandbox": {
+        "supported": false,
+        "defaultScenario": null
+      },
+      "status": "reviewed"
+    },
+    {
+      "id": "medula.hastane.imzali-rapor.onay-bekleyen",
+      "service": "medula.hastane.imzali-rapor",
+      "names": {
+        "documentationHeading": "onayBekleyen",
+        "operationName": "onayBekleyen",
+        "aliases": [
+          "onayBekleyen"
+        ]
+      },
+      "contract": {
+        "inputDvo": "ImzaliRaporOnayGirisDVO",
+        "outputDvo": "OnayBekleyenCevapDVO"
+      },
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 349,
+          "confidence": "extracted",
+          "section": "4.6 4.6.12 onayBekleyen Metodu"
+        }
+      ],
+      "stateEffects": {
+        "creates": [],
+        "reads": [],
+        "updates": [],
+        "deletes": [],
+        "generates": []
+      },
+      "success": {
+        "resultCodeField": "sonucKodu",
+        "successCode": "0000",
+        "messageField": "sonucMesaji"
+      },
+      "sandbox": {
+        "supported": false,
+        "defaultScenario": null
+      },
+      "status": "reviewed"
+    },
+    {
+      "id": "medula.hastane.imzali-rapor.onay-bekleyen-rapor-sorgu",
+      "service": "medula.hastane.imzali-rapor",
+      "names": {
+        "documentationHeading": "onayBekleyenRaporSorgu",
+        "operationName": "onayBekleyenRaporSorgu",
+        "aliases": [
+          "onayBekleyenRaporSorgu"
+        ]
+      },
+      "contract": {
+        "inputDvo": "RaporOnayBekleyenSorguDVO",
+        "outputDvo": "RaporSorguCevapDVO"
+      },
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 345,
+          "confidence": "extracted",
+          "section": "4.6 4.6.9 onayBekleyenRaporSorgu Metodu"
+        }
+      ],
+      "stateEffects": {
+        "creates": [],
+        "reads": [],
+        "updates": [],
+        "deletes": [],
+        "generates": []
+      },
+      "success": {
+        "resultCodeField": "sonucKodu",
+        "successCode": "0000",
+        "messageField": "sonucMesaji"
+      },
+      "sandbox": {
+        "supported": false,
+        "defaultScenario": null
+      },
+      "status": "reviewed"
+    },
+    {
+      "id": "medula.hastane.imzali-rapor.rapor-onay",
+      "service": "medula.hastane.imzali-rapor",
+      "names": {
+        "documentationHeading": "raporOnay",
+        "operationName": "raporOnay",
+        "aliases": [
+          "raporOnay"
+        ]
+      },
+      "contract": {
+        "inputDvo": "RaporOnayDVO",
+        "outputDvo": "RaporOnayCevapDVO"
+      },
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 336,
+          "confidence": "extracted",
+          "section": "4.6 4.6.2 raporOnay Metodu"
+        }
+      ],
+      "stateEffects": {
+        "creates": [
+          "imzaliRapor"
+        ],
+        "reads": [],
+        "updates": [],
+        "deletes": [],
+        "generates": [
+          "raporTakipNo"
+        ]
+      },
+      "success": {
+        "resultCodeField": "sonucKodu",
+        "successCode": "0000",
+        "messageField": "sonucMesaji"
+      },
+      "sandbox": {
+        "supported": false,
+        "defaultScenario": null
+      },
+      "status": "reviewed"
+    },
+    {
+      "id": "medula.hastane.imzali-rapor.rapor-sil",
+      "service": "medula.hastane.imzali-rapor",
+      "names": {
+        "documentationHeading": "raporSil",
+        "operationName": "raporSil",
+        "aliases": [
+          "raporSil"
+        ]
+      },
+      "contract": {
+        "inputDvo": "ImzaliRaporSilGirisDVO",
+        "outputDvo": "SonucDVO"
+      },
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 347,
+          "confidence": "extracted",
+          "section": "4.6 4.6.10 raporSil Metodu"
+        }
+      ],
+      "stateEffects": {
+        "creates": [],
+        "reads": [],
+        "updates": [],
+        "deletes": [
+          "imzaliRapor"
+        ],
+        "generates": []
+      },
+      "success": {
+        "resultCodeField": "sonucKodu",
+        "successCode": "0000",
+        "messageField": "sonucMesaji"
+      },
+      "sandbox": {
+        "supported": false,
+        "defaultScenario": null
+      },
+      "status": "reviewed"
+    },
+    {
+      "id": "medula.hastane.imzali-rapor.rapor-sorgu",
+      "service": "medula.hastane.imzali-rapor",
+      "names": {
+        "documentationHeading": "raporSorgu",
+        "operationName": "raporSorgu",
+        "aliases": [
+          "raporSorgu"
+        ]
+      },
+      "contract": {
+        "inputDvo": "ImzaliRaporSorguGirisDVO",
+        "outputDvo": "RaporSorguCevapDVO"
+      },
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 339,
+          "confidence": "extracted",
+          "section": "4.6 4.6.5 raporSorgu Metodu"
+        }
+      ],
+      "stateEffects": {
+        "creates": [],
+        "reads": [],
+        "updates": [],
+        "deletes": [],
+        "generates": []
+      },
+      "success": {
+        "resultCodeField": "sonucKodu",
+        "successCode": "0000",
+        "messageField": "sonucMesaji"
+      },
+      "sandbox": {
+        "supported": false,
+        "defaultScenario": null
+      },
+      "status": "reviewed"
+    },
+    {
+      "id": "medula.hastane.imzali-rapor.tc-ile-rapor-sorgu",
+      "service": "medula.hastane.imzali-rapor",
+      "names": {
+        "documentationHeading": "tcIleraporSorgu",
+        "operationName": "tcIleraporSorgu",
+        "aliases": [
+          "tcIleraporSorgu"
+        ]
+      },
+      "contract": {
+        "inputDvo": "ImzaliRaporSorguGirisDVO",
+        "outputDvo": "RaporSorguCevapDVO"
+      },
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 341,
+          "confidence": "extracted",
+          "section": "4.6 4.6.6 tcIleraporSorgu Metodu"
+        }
+      ],
+      "stateEffects": {
+        "creates": [],
+        "reads": [],
+        "updates": [],
+        "deletes": [],
+        "generates": []
+      },
+      "success": {
+        "resultCodeField": "sonucKodu",
+        "successCode": "0000",
+        "messageField": "sonucMesaji"
+      },
+      "sandbox": {
+        "supported": false,
+        "defaultScenario": null
       },
       "status": "reviewed"
     },
@@ -17532,6 +18042,480 @@
       "status": "reviewed"
     },
     {
+      "id": "ImzaliRaporDVO",
+      "domain": "imzali-rapor",
+      "direction": "output",
+      "fields": [
+        {
+          "name": "turu",
+          "displayName": "Rapor Turu",
+          "type": "enum",
+          "enumRef": "imzali-rapor-turu",
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Six-value report type list (s.340).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 340,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "maluliyetRaporu",
+          "displayName": "Maluliyet Rapor Bilgileri",
+          "type": "object",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Populated per report type; shape Tablo 4.9.1.c (MaluliyetRaporDVO) — §4.9 composite, deferred to G45c-b.",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 340,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "engellilikRaporu",
+          "displayName": "Engellilik Rapor Bilgileri",
+          "type": "object",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Populated per report type; shape Tablo 4.9.1.g (EngellilikRaporDVO) — §4.9 composite, deferred to G45c-b.",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 340,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "tibbiGereklilikRaporu",
+          "displayName": "Tibbi Gereklilik Rapor Bilgileri",
+          "type": "object",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Populated per report type; shape Tablo 4.9.1.j (TibbiGereklilikRaporDVO) — §4.9 composite, deferred to G45c-b.",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 340,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 336,
+          "confidence": "extracted",
+          "section": "4.6 E-İmzalı Rapor Islemleri Metotlari"
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
+      "id": "ImzaliRaporOnayBekleyenSorguGirisDVO",
+      "domain": "imzali-rapor",
+      "direction": "input",
+      "fields": [
+        {
+          "name": "saglikTesisKodu",
+          "displayName": "Tesis Kodu",
+          "type": "integer",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": 8,
+          "description": "GSS-assigned facility code (s.343).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 343,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "doktorTcKimlikNo",
+          "displayName": "Doktor T.C. Kimlik No",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": 11,
+          "description": "Board-head physician's citizen ID (s.343).",
+          "sensitive": true,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 343,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "onayBekleyenSorguBilgisi",
+          "displayName": "Rapor Bilgisi",
+          "type": "array",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Signed pending-approval query blob; Digitally signed report blob — the E-İmzalı flow sends opaque byte arrays, not structured fields.",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 343,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 336,
+          "confidence": "extracted",
+          "section": "4.6 E-İmzalı Rapor Islemleri Metotlari"
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
+      "id": "ImzaliRaporOnayGirisDVO",
+      "domain": "imzali-rapor",
+      "direction": "input",
+      "fields": [
+        {
+          "name": "saglikTesisKodu",
+          "displayName": "Tesis Kodu",
+          "type": "integer",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": 8,
+          "description": "GSS-assigned facility code (s.338).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 338,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "doktorTcKimlikNo",
+          "displayName": "Doktor T.C. Kimlik No",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": 11,
+          "description": "Citizen ID of the approving physician (board head or chief physician per the method) (s.338).",
+          "sensitive": true,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 338,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "raporOnayBilgisi",
+          "displayName": "Rapor Bilgisi",
+          "type": "array",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Signed approval blob; Digitally signed report blob — the E-İmzalı flow sends opaque byte arrays, not structured fields.",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 338,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 336,
+          "confidence": "extracted",
+          "section": "4.6 E-İmzalı Rapor Islemleri Metotlari"
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
+      "id": "ImzaliRaporSilGirisDVO",
+      "domain": "imzali-rapor",
+      "direction": "input",
+      "fields": [
+        {
+          "name": "saglikTesisKodu",
+          "displayName": "Tesis Kodu",
+          "type": "integer",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": 8,
+          "description": "GSS-assigned facility code (s.347).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 347,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "doktorTcKimlikNo",
+          "displayName": "Doktor T.C. Kimlik No",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": 11,
+          "description": "Board-head physician's citizen ID (s.347).",
+          "sensitive": true,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 347,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "raporSorguBilgisi",
+          "displayName": "Rapor Bilgisi",
+          "type": "array",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Signed delete blob; Digitally signed report blob — the E-İmzalı flow sends opaque byte arrays, not structured fields.",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 347,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 336,
+          "confidence": "extracted",
+          "section": "4.6 E-İmzalı Rapor Islemleri Metotlari"
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
+      "id": "ImzaliRaporSorguGirisDVO",
+      "domain": "imzali-rapor",
+      "direction": "input",
+      "fields": [
+        {
+          "name": "saglikTesisKodu",
+          "displayName": "Tesis Kodu",
+          "type": "integer",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": 8,
+          "description": "GSS-assigned facility code (s.340).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 340,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "doktorTcKimlikNo",
+          "displayName": "Doktor T.C. Kimlik No",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": 11,
+          "description": "Querying physician's citizen ID (s.340).",
+          "sensitive": true,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 340,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "raporSorguBilgisi",
+          "displayName": "Rapor Bilgisi",
+          "type": "array",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Signed query blob; Digitally signed report blob — the E-İmzalı flow sends opaque byte arrays, not structured fields.",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 340,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 336,
+          "confidence": "extracted",
+          "section": "4.6 E-İmzalı Rapor Islemleri Metotlari"
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
       "id": "IsKazasiRaporDVO",
       "domain": "rapor",
       "direction": "input",
@@ -24038,6 +25022,348 @@
       "status": "reviewed"
     },
     {
+      "id": "OnayBekleyenCevapDVO",
+      "domain": "imzali-rapor",
+      "direction": "output",
+      "fields": [
+        {
+          "name": "onayiBeklenenDoktorlar",
+          "displayName": "Islem Referans / Onayi Beklenen Doktorlar",
+          "type": "array",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Physicians pending approval on the report; the guide types it DoktorBilgiDVO (singular, shape not shown) — preserved verbatim (s.349).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 349,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "sonucKodu",
+          "displayName": "Sonuc Kodu",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": 4,
+          "description": "Result code; \"0000\" means success (s.349).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 349,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "sonucMesaji",
+          "displayName": "Sonuc Mesaji",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Result description (s.349).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 349,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 336,
+          "confidence": "extracted",
+          "section": "4.6 E-İmzalı Rapor Islemleri Metotlari"
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
+      "id": "OnayCevapDVO",
+      "domain": "imzali-rapor",
+      "direction": "output",
+      "fields": [
+        {
+          "name": "onayIslemReferans",
+          "displayName": "Islem Referans",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "System-generated unique reference (s.348).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": true,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 348,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "sonucKodu",
+          "displayName": "Sonuc Kodu",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": 4,
+          "description": "Result code; \"0000\" means success (s.348).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 348,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "sonucMesaji",
+          "displayName": "Sonuc Mesaji",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Result description (s.349).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 349,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "uyariMesaji",
+          "displayName": "Uyari Mesaji",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Warning message (s.349).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 349,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 336,
+          "confidence": "extracted",
+          "section": "4.6 E-İmzalı Rapor Islemleri Metotlari"
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
+      "id": "OnayDVO",
+      "domain": "imzali-rapor",
+      "direction": "input",
+      "fields": [
+        {
+          "name": "tesisKodu",
+          "displayName": "Tesis Kodu",
+          "type": "integer",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Code of the performing facility (s.348).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 348,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "doktorTcKimlikNo",
+          "displayName": "Doktor T.C. Kimlik No",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": 11,
+          "description": "Citizen ID of the approving physician (s.348).",
+          "sensitive": true,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 348,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "onayVerenTuru",
+          "displayName": "Onay Turu",
+          "type": "enum",
+          "enumRef": "onay-veren-turu",
+          "codeSystem": null,
+          "required": true,
+          "length": 1,
+          "description": "Physician or chief physician (s.348).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 348,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "onayIslemTuru",
+          "displayName": "Onaylanan Islem Turu",
+          "type": "enum",
+          "enumRef": "onay-islem-turu",
+          "codeSystem": null,
+          "required": true,
+          "length": 1,
+          "description": "Report / off-standard report / referral notification / referral registration (s.348).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 348,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "onayIslemReferans",
+          "displayName": "Onay Islem Referans ID",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Document ID matching onayIslemTuru (s.348).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": true,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 348,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 336,
+          "confidence": "extracted",
+          "section": "4.6 E-İmzalı Rapor Islemleri Metotlari"
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
       "id": "OncekiIslemBilgisiDVO",
       "domain": "hizmet-kayit",
       "direction": "output",
@@ -27749,6 +29075,390 @@
       "status": "reviewed"
     },
     {
+      "id": "RaporOnayBekleyenSorguDVO",
+      "domain": "imzali-rapor",
+      "direction": "input",
+      "fields": [
+        {
+          "name": "saglikTesisKodu",
+          "displayName": "Tesis Kodu",
+          "type": "integer",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": 8,
+          "description": "GSS-assigned facility code (s.346).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 346,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "doktorTcKimlikNo",
+          "displayName": "Doktor T.C. Kimlik No",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": 11,
+          "description": "Board-head physician's citizen ID (s.346).",
+          "sensitive": true,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 346,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 336,
+          "confidence": "extracted",
+          "section": "4.6 E-İmzalı Rapor Islemleri Metotlari"
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
+      "id": "RaporOnayCevapDVO",
+      "domain": "imzali-rapor",
+      "direction": "output",
+      "fields": [
+        {
+          "name": "raporTakipNo",
+          "displayName": "Rapor Takip No",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "System-generated unique report tracking number (s.337).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": true,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 337,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "sonucKodu",
+          "displayName": "Sonuc Kodu",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": 4,
+          "description": "Result code; \"0000\" means success (s.337).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 337,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "sonucMesaji",
+          "displayName": "Sonuc Mesaji",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Result description (s.337).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 337,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "uyariMesaji",
+          "displayName": "Uyari Mesaji",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Warning message (s.337).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 337,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 336,
+          "confidence": "extracted",
+          "section": "4.6 E-İmzalı Rapor Islemleri Metotlari"
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
+      "id": "RaporOnayDVO",
+      "domain": "imzali-rapor",
+      "direction": "input",
+      "fields": [
+        {
+          "name": "saglikTesisKodu",
+          "displayName": "Tesis Kodu",
+          "type": "integer",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": 8,
+          "description": "GSS-assigned facility code (s.337).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 337,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "doktorTcKimlikNo",
+          "displayName": "Doktor T.C. Kimlik No",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": 11,
+          "description": "Citizen ID of the approving physician (s.337).",
+          "sensitive": true,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 337,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "raporBilgisi",
+          "displayName": "Rapor Bilgisi",
+          "type": "array",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Signed report blob; Digitally signed report blob — the E-İmzalı flow sends opaque byte arrays, not structured fields.",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 337,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 336,
+          "confidence": "extracted",
+          "section": "4.6 E-İmzalı Rapor Islemleri Metotlari"
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
+      "id": "RaporSorguCevapDVO",
+      "domain": "imzali-rapor",
+      "direction": "output",
+      "fields": [
+        {
+          "name": "sonucKodu",
+          "displayName": "Sonuc Kodu",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": 4,
+          "description": "Result code; \"0000\" means success (s.340).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 340,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "sonucMesaji",
+          "displayName": "Sonuc Mesaji",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Result description (s.340).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 340,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "uyariMesaji",
+          "displayName": "Uyari Mesaji",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Warning message (s.340).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 340,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "raporBilgileri",
+          "displayName": "Rapor Bilgileri",
+          "type": "array",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Signed reports; item shape ImzaliRaporDVO (this registry) (s.340).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 340,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 336,
+          "confidence": "extracted",
+          "section": "4.6 E-İmzalı Rapor Islemleri Metotlari"
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
       "id": "RaporSorguDVO",
       "domain": "rapor",
       "direction": "input",
@@ -28540,6 +30250,96 @@
           "conditionalRequired": [],
           "introducedIn": "0.2.0",
           "deprecatedIn": null
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
+      "id": "SonucDVO",
+      "domain": "imzali-rapor",
+      "direction": "output",
+      "fields": [
+        {
+          "name": "sonucKodu",
+          "displayName": "Sonuc Kodu",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": 4,
+          "description": "Result code; \"0000\" means success (s.347).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 347,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "sonucMesaji",
+          "displayName": "Sonuc Mesaji",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Result description (s.347).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 347,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "uyariMesaji",
+          "displayName": "Uyari Mesaji",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Warning message (s.347).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 347,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 336,
+          "confidence": "extracted",
+          "section": "4.6 E-İmzalı Rapor Islemleri Metotlari"
         }
       ],
       "status": "reviewed"
@@ -35557,6 +37357,53 @@
       "status": "reviewed"
     },
     {
+      "id": "imzali-rapor-turu",
+      "displayName": "Imzali Rapor Turu",
+      "values": [
+        {
+          "code": "1",
+          "label": "Tedavi Raporu",
+          "description": "Treatment report."
+        },
+        {
+          "code": "2",
+          "label": "Is Goremezlik",
+          "description": "Incapacity report."
+        },
+        {
+          "code": "3",
+          "label": "Maluliyet",
+          "description": "Disability report."
+        },
+        {
+          "code": "4",
+          "label": "Engellilik",
+          "description": "Impairment report."
+        },
+        {
+          "code": "5",
+          "label": "Tibbi Gereklilik",
+          "description": "Medical necessity report."
+        },
+        {
+          "code": "10",
+          "label": "Ilac",
+          "description": "Drug report."
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 340,
+          "confidence": "extracted",
+          "notes": "Reproduced identically across the raporSorgu / tcIleraporSorgu / onayBekleyen sorgu response tables (s.340-346)."
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
       "id": "isgoremezlik-rapor-turu",
       "displayName": "Isgoremezlik Rapor Turu",
       "values": [
@@ -38993,6 +40840,68 @@
           "sourceType": "official-guide",
           "guideVersion": "3.1.1",
           "page": 255,
+          "confidence": "extracted"
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
+      "id": "onay-islem-turu",
+      "displayName": "Onaylanan Islem Turu",
+      "values": [
+        {
+          "code": "1",
+          "label": "Rapor",
+          "description": "Report."
+        },
+        {
+          "code": "2",
+          "label": "Mutat disi raporu",
+          "description": "Off-standard report."
+        },
+        {
+          "code": "3",
+          "label": "Sevk Bildirim",
+          "description": "Referral notification."
+        },
+        {
+          "code": "4",
+          "label": "Sevk Kayit",
+          "description": "Referral registration."
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 348,
+          "confidence": "extracted"
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
+      "id": "onay-veren-turu",
+      "displayName": "Onay Veren Turu",
+      "values": [
+        {
+          "code": "1",
+          "label": "Doktor",
+          "description": "Physician."
+        },
+        {
+          "code": "2",
+          "label": "Bashekim",
+          "description": "Chief physician."
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 348,
           "confidence": "extracted"
         }
       ],

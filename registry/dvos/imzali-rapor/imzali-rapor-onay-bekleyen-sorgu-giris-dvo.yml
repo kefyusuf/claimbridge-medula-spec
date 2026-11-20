@@ -1,0 +1,69 @@
+id: ImzaliRaporOnayBekleyenSorguGirisDVO
+domain: imzali-rapor
+direction: input
+fields:
+  - name: saglikTesisKodu
+    displayName: Tesis Kodu
+    type: integer
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: 8
+    description: GSS-assigned facility code (s.343).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 343
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: doktorTcKimlikNo
+    displayName: Doktor T.C. Kimlik No
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: 11
+    description: Board-head physician's citizen ID (s.343).
+    sensitive: true
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 343
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: onayBekleyenSorguBilgisi
+    displayName: Rapor Bilgisi
+    type: array
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: null
+    description: Signed pending-approval query blob; Digitally signed report blob — the E-İmzalı flow sends opaque byte arrays, not structured fields.
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 343
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 336
+    confidence: extracted
+    section: 4.6 E-İmzalı Rapor Islemleri Metotlari
+status: reviewed

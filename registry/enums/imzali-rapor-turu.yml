@@ -1,0 +1,29 @@
+id: imzali-rapor-turu
+displayName: Imzali Rapor Turu
+values:
+  - code: "1"
+    label: Tedavi Raporu
+    description: Treatment report.
+  - code: "2"
+    label: Is Goremezlik
+    description: Incapacity report.
+  - code: "3"
+    label: Maluliyet
+    description: Disability report.
+  - code: "4"
+    label: Engellilik
+    description: Impairment report.
+  - code: "5"
+    label: Tibbi Gereklilik
+    description: Medical necessity report.
+  - code: "10"
+    label: Ilac
+    description: Drug report.
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 340
+    confidence: extracted
+    notes: Reproduced identically across the raporSorgu / tcIleraporSorgu / onayBekleyen sorgu response tables (s.340-346).
+status: reviewed
