@@ -1,19 +1,19 @@
 {
   "specVersion": "0.5.0",
-  "generatedAt": "2026-11-20T15:47:17.498Z",
+  "generatedAt": "2026-11-20T16:10:16.236Z",
   "bundle": "claimbridge-medula-spec.json",
   "minifiedBundle": "claimbridge-medula-spec.min.json",
   "counts": {
-    "services": 6,
-    "methods": 54,
-    "dvos": 176,
+    "services": 8,
+    "methods": 61,
+    "dvos": 189,
     "enums": 69,
     "rules": 5,
     "workflows": 4,
     "scenarios": 6
   },
   "checksums": {
-    "claimbridge-medula-spec.json": "sha256:fcf86c279224067ee20111e819dca52eae5b8f57dac44794d2984b7b95660265",
-    "claimbridge-medula-spec.min.json": "sha256:ef5a505e00a73fb0077a6d14a5c15cebd0d7d6d802a0bed21ad308bdb2ea8892"
+    "claimbridge-medula-spec.json": "sha256:9b8afb2a9e78b246f8d1cb021db226ca4f7a9162a0365c1a1d5c2b0bada7fdf6",
+    "claimbridge-medula-spec.min.json": "sha256:7f786dfa2b5e793328c0845d82c913bb8eb9ccf2aa69d305190a1c0ec8349a3b"
   }
 }

@@ -1628,6 +1628,81 @@ Domain: `yardimci-islemler` · Direction: `input` · Status: `reviewed` · Sourc
 | `grupTuru` | enum |  | grup-turu |  | A = Ayaktan, Y = Yatarak, G = Günübirlik, D = Diğer (s.290). |
 | `grupKodu` | integer |  | — |  | Group code; values come from the evrakTakipGrupKodlariSorgu method (s.290). |
 
+## `OrtodontiFormuIptalCevapDVO`
+
+Domain: `ortodonti` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `formNo` | string |  | — |  | Orthodontic form number (s.328). |
+| `sonucKodu` | string |  | — |  | Result code; "0000" means success (s.328). |
+| `sonucMesaji` | string |  | — |  | Result description (s.328). |
+
+## `OrtodontiFormuIptalGirisDVO`
+
+Domain: `ortodonti` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `saglikTesisKodu` | integer |  | — |  | GSS-assigned facility code (s.327). |
+| `sutKodu` | string |  | — |  | SUT code of the procedure (s.327). |
+| `formNo` | integer |  | — |  | Form number (s.327). |
+| `tcKimlikNo` | integer |  | — |  | Citizen ID of the person receiving the orthodontic procedure; the guide types it long (s.327). |
+
+## `OrtodontiFormuKaydetCevapDVO`
+
+Domain: `ortodonti` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `formNo` | string |  | — |  | Orthodontic form number (s.327). |
+| `sonucKodu` | string |  | — |  | Result code; "0000" means success (s.327). |
+| `sonucMesaji` | string |  | — |  | Result description (s.327). |
+
+## `OrtodontiFormuKaydetGirisDVO`
+
+Domain: `ortodonti` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `saglikTesisKodu` | integer |  | — |  | GSS-assigned facility code (s.326). |
+| `provizyonNo` | string |  | — |  | Provision number issued for the procedure (s.326). |
+| `sutKodu` | string |  | — |  | SUT code of the procedure (s.326). |
+| `formNo` | integer |  | — |  | Form number of the person; the guide's required column reads 'Evet/Hayır' — a conditional requirement preserved verbatim (s.326). |
+| `islemTarihi` | string |  | — |  | Procedure date, "dd.mm.yyyy" (s.326). |
+| `tcKimlikNo` | integer |  | — |  | Citizen ID of the person receiving the orthodontic procedure; the guide types it long (s.326). |
+
+## `OrtodontiFormuOkuCevapDVO`
+
+Domain: `ortodonti` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `formNo` | string |  | — |  | Orthodontic form number (s.329). |
+| `islemTuru` | string |  | — |  | Orthodontic procedure type, e.g. Sınıf I, Sınıf II (s.329). |
+| `tesis_kodu_1` | string |  | — |  | Facility code of the first procedure; underscored parameter names are guide-verbatim (s.329). |
+| `tesis_kodu_2` | string |  | — |  | Facility code of the second procedure (s.329). |
+| `tesis_kodu_3` | string |  | — |  | Facility code of the third procedure (s.329). |
+| `islem_tarihi_1` | string |  | — |  | Date of the first procedure (s.329). |
+| `islem_tarihi_2` | string |  | — |  | Date of the second procedure (s.329). |
+| `islem_tarihi_3` | string |  | — |  | Date of the third procedure (s.329). |
+| `provizyonNo1` | string |  | — |  | Provision number of the first procedure (s.329). |
+| `provizyonNo2` | string |  | — |  | Provision number of the second procedure (s.329). |
+| `provizyonNo3` | string |  | — |  | Provision number of the third procedure (s.329). |
+| `sonucKodu` | string |  | — |  | Result code; "0000" means success (s.329). |
+| `sonucMesaji` | string |  | — |  | Result description (s.329). |
+
+## `OrtodontiFormuOkuGirisDVO`
+
+Domain: `ortodonti` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `saglikTesisKodu` | integer |  | — |  | GSS-assigned facility code (s.328). |
+| `sutKodu` | string |  | — |  | SUT code of the procedure (s.328). |
+| `formNo` | integer |  | — |  | Form number (s.328). |
+| `tcKimlikNo` | integer |  | — |  | Citizen ID of the person receiving the orthodontic procedure; the guide types it long (s.328). |
+
 ## `ProvizyonCevapDVO`
 
 Domain: `hasta-kabul` · Direction: `output` · Status: `draft` · Source refs: medula-hastane-guide-2026-06-17
@@ -1892,6 +1967,83 @@ Domain: `yardimci-islemler` · Direction: `output` · Status: `reviewed` · Sour
 | `fiyat` | string |  | — |  | Price at the queried date — the guide types this String despite being a price (s.298). |
 | `turu` | enum |  | sut-hizmet-turu |  | Ten-value service-type list (s.298). |
 | `gecerlilikTarihi` | string |  | — |  | Validity date (s.298). |
+
+## `TaahhutCevapDVO`
+
+Domain: `taahhut` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `sonucKodu` | string |  | — |  | Result code; "0000" means the save succeeded (s.322). |
+| `sonucMesaji` | string |  | — |  | Failure description (s.322). |
+| `taahhutNo` | integer |  | — |  | System-generated commitment number (s.322). |
+| `taahhutCikti` | array |  | — |  | Commitment output as a PDF byte array; the guide states no other output is valid (s.322). |
+
+## `TaahhutDVO`
+
+Domain: `taahhut` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `hastaTCKimlikNo` | string |  | — |  | Patient citizen ID (s.323). |
+| `adressIlPlaka` | integer |  | — |  | Address province plate code (s.323). |
+| `adressIlce` | string |  | — |  | Address district name; must match a district of the plate-coded province or the record fails (s.323). |
+| `adressPostaKodu` | string |  | — |  | Postal code (s.323). |
+| `adressCaddeSokak` | string |  | — |  | Street name (s.323). |
+| `adressDisKapiNo` | string |  | — |  | Outer door number (s.323). |
+| `adressIcKapiNo` | string |  | — |  | Inner door number (s.323). |
+| `adressTelefon` | string |  | — |  | Phone number (s.323). |
+| `adressEposta` | string |  | — |  | E-mail address (s.323). |
+| `taahhutAlanAd` | string |  | — |  | Committed person's first name (s.323). |
+| `taahhutAlanSoyad` | string |  | — |  | Committed person's last name (s.323). |
+
+## `TaahhutDisDVO`
+
+Domain: `taahhut` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `sutKodu` | string |  | — |  | SUT code of the committed procedure. Restricted to the SUT annex-7 prosthesis codes (404010…404420 per the guide, s.326) — dental commitments are only accepted for those (s.326). |
+| `disNo` | integer |  | — |  | Tooth/region number per the mouth schema Tablo 4.7.4 (adult 11-48 quadrant numbering, deciduous 51-65/71-85, regions 1-7, anomaly regions) (s.323-326). |
+
+## `TaahhutKayitDVO`
+
+Domain: `taahhut` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `takipNo` | string |  | — |  | Tracking number of the dental treatment to commit (s.322). |
+| `saglikTesisKodu` | integer |  | — |  | GSS-assigned facility code (s.322). |
+| `taahhut` | object |  | — |  | Commitment body; shape Tablo 4.7.1.c (TaahhutDVO, this registry) (s.322). |
+| `taahhutDiss` | array |  | — |  | Committed dental procedures; item shape Tablo 4.7.1.d (TaahhutDisDVO, this registry) (s.322). |
+
+## `TaahhutKisiCevapDVO`
+
+Domain: `taahhut` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `sonucKodu` | string |  | — |  | Result code; "0000" means success (s.325). |
+| `sonucMesaji` | string |  | — |  | Failure description (s.325). |
+| `taahhutNo` | array |  | — |  | Commitment numbers previously saved by the facility for the person (s.325). |
+
+## `TaahhutKisiOkuDVO`
+
+Domain: `taahhut` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `saglikTesisKodu` | integer |  | — |  | GSS-assigned facility code (s.324). |
+| `tcKimlikNo` | integer |  | — |  | Citizen ID of the person whose commitments are read; the guide types it long (s.325). |
+
+## `TaahhutOkuDVO`
+
+Domain: `taahhut` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `saglikTesisKodu` | string |  | — |  | GSS-assigned facility code — typed String here unlike the Integer in TaahhutKayitDVO (s.324). |
+| `taahhutNo` | integer |  | — |  | System-generated commitment number (s.324). |
 
 ## `TahlilBilgisiDVO`
 

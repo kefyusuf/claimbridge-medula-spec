@@ -1,6 +1,6 @@
 {
   "specVersion": "0.5.0",
-  "generatedAt": "2026-11-20T15:47:17.498Z",
+  "generatedAt": "2026-11-20T16:10:16.236Z",
   "sources": [
     {
       "id": "medula-hastane-guide-2026-06-17",
@@ -133,6 +133,32 @@
       "status": "draft"
     },
     {
+      "id": "medula.hastane.ortodonti",
+      "slug": "ortodonti",
+      "displayName": "Ortodonti Formu Kayit Metotlari",
+      "description": "Orthodontic form operations: save, cancel and read the orthodontics follow-up form (guide section renumbered 4.5/4.8 across editions).",
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 326,
+          "confidence": "extracted",
+          "section": "4.5 Ortodonti Formu Kayit Metotlari"
+        }
+      ],
+      "wsdl": {
+        "production": "wsdl.ortodonti.production",
+        "test": "wsdl.ortodonti.test"
+      },
+      "methods": [
+        "medula.hastane.ortodonti.ortodonti-formu-kaydet",
+        "medula.hastane.ortodonti.ortodonti-formu-iptal",
+        "medula.hastane.ortodonti.ortodonti-formu-oku"
+      ],
+      "status": "reviewed"
+    },
+    {
       "id": "medula.hastane.rapor",
       "slug": "rapor",
       "displayName": "Rapor Bilgisi Kayit",
@@ -159,6 +185,33 @@
         "medula.hastane.rapor.rapor-bilgisi-bul-tc-kimlik-nodan",
         "medula.hastane.rapor.rapor-bilgisi-kaydet",
         "medula.hastane.rapor.takip-no-ile-rapor-bilgisi-kaydet"
+      ],
+      "status": "reviewed"
+    },
+    {
+      "id": "medula.hastane.taahhut",
+      "slug": "taahhut",
+      "displayName": "Taahhut Kayit Metotlari",
+      "description": "Dental-prosthesis commitment operations: save (restricted to SUT annex-7 prosthesis codes 404010…404420), read by commitment number, delete, and read a person's prior commitments. Dental codes follow the mouth schema Tablo 4.7.4 (s.325-326).",
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 322,
+          "confidence": "extracted",
+          "section": "4.4 Taahhut Kayit Metotlari"
+        }
+      ],
+      "wsdl": {
+        "production": "wsdl.taahhut.production",
+        "test": "wsdl.taahhut.test"
+      },
+      "methods": [
+        "medula.hastane.taahhut.dis-taahhut-kaydet",
+        "medula.hastane.taahhut.dis-taahhut-oku",
+        "medula.hastane.taahhut.dis-taahhut-sil",
+        "medula.hastane.taahhut.kisi-dis-taahhut-oku"
       ],
       "status": "reviewed"
     },
@@ -1535,6 +1588,140 @@
       "status": "reviewed"
     },
     {
+      "id": "medula.hastane.ortodonti.ortodonti-formu-iptal",
+      "service": "medula.hastane.ortodonti",
+      "names": {
+        "documentationHeading": "ortodontiFormuIptal",
+        "operationName": "ortodontiFormuIptal",
+        "aliases": [
+          "ortodontiFormuIptal"
+        ]
+      },
+      "contract": {
+        "inputDvo": "OrtodontiFormuIptalGirisDVO",
+        "outputDvo": "OrtodontiFormuIptalCevapDVO"
+      },
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 327,
+          "confidence": "extracted",
+          "section": "4.5.2 ortodontiFormuIptal Metodu"
+        }
+      ],
+      "stateEffects": {
+        "creates": [],
+        "reads": [
+          "ortodontiFormu"
+        ],
+        "updates": [],
+        "deletes": [],
+        "generates": []
+      },
+      "success": {
+        "resultCodeField": "sonucKodu",
+        "successCode": "0000",
+        "messageField": "sonucMesaji"
+      },
+      "sandbox": {
+        "supported": false,
+        "defaultScenario": null
+      },
+      "status": "reviewed"
+    },
+    {
+      "id": "medula.hastane.ortodonti.ortodonti-formu-kaydet",
+      "service": "medula.hastane.ortodonti",
+      "names": {
+        "documentationHeading": "ortodontiFormuKaydet",
+        "operationName": "ortodontiFormuKaydet",
+        "aliases": [
+          "ortodontiFormuKaydet"
+        ]
+      },
+      "contract": {
+        "inputDvo": "OrtodontiFormuKaydetGirisDVO",
+        "outputDvo": "OrtodontiFormuKaydetCevapDVO"
+      },
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 326,
+          "confidence": "extracted",
+          "section": "4.5.1 ortodontiFormuKaydet Metodu"
+        }
+      ],
+      "stateEffects": {
+        "creates": [
+          "ortodontiFormu"
+        ],
+        "reads": [],
+        "updates": [],
+        "deletes": [],
+        "generates": [
+          "formNo"
+        ]
+      },
+      "success": {
+        "resultCodeField": "sonucKodu",
+        "successCode": "0000",
+        "messageField": "sonucMesaji"
+      },
+      "sandbox": {
+        "supported": false,
+        "defaultScenario": null
+      },
+      "status": "reviewed"
+    },
+    {
+      "id": "medula.hastane.ortodonti.ortodonti-formu-oku",
+      "service": "medula.hastane.ortodonti",
+      "names": {
+        "documentationHeading": "ortodontiFormuOku",
+        "operationName": "ortodontiFormuOku",
+        "aliases": [
+          "ortodontiFormuOku"
+        ]
+      },
+      "contract": {
+        "inputDvo": "OrtodontiFormuOkuGirisDVO",
+        "outputDvo": "OrtodontiFormuOkuCevapDVO"
+      },
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 328,
+          "confidence": "extracted",
+          "section": "4.5.3 ortodontiFormuOku Metodu"
+        }
+      ],
+      "stateEffects": {
+        "creates": [],
+        "reads": [
+          "ortodontiFormu"
+        ],
+        "updates": [],
+        "deletes": [],
+        "generates": []
+      },
+      "success": {
+        "resultCodeField": "sonucKodu",
+        "successCode": "0000",
+        "messageField": "sonucMesaji"
+      },
+      "sandbox": {
+        "supported": false,
+        "defaultScenario": null
+      },
+      "status": "reviewed"
+    },
+    {
       "id": "medula.hastane.rapor.ilac-rapor-duzelt",
       "service": "medula.hastane.rapor",
       "names": {
@@ -1846,6 +2033,182 @@
         "resultCodeField": "sonucKodu",
         "successCode": "0",
         "messageField": "sonucAciklamasi"
+      },
+      "sandbox": {
+        "supported": false,
+        "defaultScenario": null
+      },
+      "status": "reviewed"
+    },
+    {
+      "id": "medula.hastane.taahhut.dis-taahhut-kaydet",
+      "service": "medula.hastane.taahhut",
+      "names": {
+        "documentationHeading": "disTaahhutKayit",
+        "operationName": "disTaahhutKayit",
+        "aliases": [
+          "disTaahhutKayit"
+        ]
+      },
+      "contract": {
+        "inputDvo": "TaahhutKayitDVO",
+        "outputDvo": "TaahhutCevapDVO"
+      },
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 322,
+          "confidence": "extracted",
+          "section": "4.4.1 disTaahhutKayit Metodu"
+        }
+      ],
+      "stateEffects": {
+        "creates": [
+          "taahhut"
+        ],
+        "reads": [],
+        "updates": [],
+        "deletes": [],
+        "generates": [
+          "taahhutNo"
+        ]
+      },
+      "success": {
+        "resultCodeField": "sonucKodu",
+        "successCode": "0000",
+        "messageField": "sonucMesaji"
+      },
+      "sandbox": {
+        "supported": false,
+        "defaultScenario": null
+      },
+      "status": "reviewed"
+    },
+    {
+      "id": "medula.hastane.taahhut.dis-taahhut-oku",
+      "service": "medula.hastane.taahhut",
+      "names": {
+        "documentationHeading": "okuDisTaahhut",
+        "operationName": "okuDisTaahhut",
+        "aliases": [
+          "okuDisTaahhut"
+        ]
+      },
+      "contract": {
+        "inputDvo": "TaahhutOkuDVO",
+        "outputDvo": "TaahhutCevapDVO"
+      },
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 323,
+          "confidence": "extracted",
+          "section": "4.4.2 okuDisTaahhut Metodu"
+        }
+      ],
+      "stateEffects": {
+        "creates": [],
+        "reads": [
+          "taahhut"
+        ],
+        "updates": [],
+        "deletes": [],
+        "generates": []
+      },
+      "success": {
+        "resultCodeField": "sonucKodu",
+        "successCode": "0000",
+        "messageField": "sonucMesaji"
+      },
+      "sandbox": {
+        "supported": false,
+        "defaultScenario": null
+      },
+      "status": "reviewed"
+    },
+    {
+      "id": "medula.hastane.taahhut.dis-taahhut-sil",
+      "service": "medula.hastane.taahhut",
+      "names": {
+        "documentationHeading": "silDisTaahhut",
+        "operationName": "silDisTaahhut",
+        "aliases": [
+          "silDisTaahhut"
+        ]
+      },
+      "contract": {
+        "inputDvo": "TaahhutOkuDVO",
+        "outputDvo": "TaahhutCevapDVO"
+      },
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 324,
+          "confidence": "extracted",
+          "section": "4.4.3 silDisTaahhut Metodu"
+        }
+      ],
+      "stateEffects": {
+        "creates": [],
+        "reads": [],
+        "updates": [],
+        "deletes": [
+          "taahhut"
+        ],
+        "generates": []
+      },
+      "success": {
+        "resultCodeField": "sonucKodu",
+        "successCode": "0000",
+        "messageField": "sonucMesaji"
+      },
+      "sandbox": {
+        "supported": false,
+        "defaultScenario": null
+      },
+      "status": "reviewed"
+    },
+    {
+      "id": "medula.hastane.taahhut.kisi-dis-taahhut-oku",
+      "service": "medula.hastane.taahhut",
+      "names": {
+        "documentationHeading": "okuKisiDisTaahhut",
+        "operationName": "okuKisiDisTaahhut",
+        "aliases": [
+          "okuKisiDisTaahhut"
+        ]
+      },
+      "contract": {
+        "inputDvo": "TaahhutKisiOkuDVO",
+        "outputDvo": "TaahhutKisiCevapDVO"
+      },
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 324,
+          "confidence": "extracted",
+          "section": "4.4.4 okuKisiDisTaahhut Metodu"
+        }
+      ],
+      "stateEffects": {
+        "creates": [],
+        "reads": [],
+        "updates": [],
+        "deletes": [],
+        "generates": []
+      },
+      "success": {
+        "resultCodeField": "sonucKodu",
+        "successCode": "0000",
+        "messageField": "sonucMesaji"
       },
       "sandbox": {
         "supported": false,
@@ -24014,6 +24377,911 @@
       "status": "reviewed"
     },
     {
+      "id": "OrtodontiFormuIptalCevapDVO",
+      "domain": "ortodonti",
+      "direction": "output",
+      "fields": [
+        {
+          "name": "formNo",
+          "displayName": "Form No",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Orthodontic form number (s.328).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 328,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "sonucKodu",
+          "displayName": "Sonuc Kodu",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": 4,
+          "description": "Result code; \"0000\" means success (s.328).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 328,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "sonucMesaji",
+          "displayName": "Sonuc Mesaji",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Result description (s.328).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 328,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 328,
+          "confidence": "extracted",
+          "section": "4.5 Ortodonti Formu Kayit Metotlari"
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
+      "id": "OrtodontiFormuIptalGirisDVO",
+      "domain": "ortodonti",
+      "direction": "input",
+      "fields": [
+        {
+          "name": "saglikTesisKodu",
+          "displayName": "Tesis Kodu",
+          "type": "integer",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "GSS-assigned facility code (s.327).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 327,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "sutKodu",
+          "displayName": "Sut Kodu",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": "SUT",
+          "required": true,
+          "length": null,
+          "description": "SUT code of the procedure (s.327).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 327,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "formNo",
+          "displayName": "Form No",
+          "type": "integer",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Form number (s.327).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 327,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "tcKimlikNo",
+          "displayName": "Kisinin T.C. Kimlik Numarasi",
+          "type": "integer",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Citizen ID of the person receiving the orthodontic procedure; the guide types it long (s.327).",
+          "sensitive": true,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 327,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 327,
+          "confidence": "extracted",
+          "section": "4.5 Ortodonti Formu Kayit Metotlari"
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
+      "id": "OrtodontiFormuKaydetCevapDVO",
+      "domain": "ortodonti",
+      "direction": "output",
+      "fields": [
+        {
+          "name": "formNo",
+          "displayName": "Form No",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Orthodontic form number (s.327).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": true,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 327,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "sonucKodu",
+          "displayName": "Sonuc Kodu",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": 4,
+          "description": "Result code; \"0000\" means success (s.327).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 327,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "sonucMesaji",
+          "displayName": "Sonuc Mesaji",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Result description (s.327).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 327,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 327,
+          "confidence": "extracted",
+          "section": "4.5 Ortodonti Formu Kayit Metotlari"
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
+      "id": "OrtodontiFormuKaydetGirisDVO",
+      "domain": "ortodonti",
+      "direction": "input",
+      "fields": [
+        {
+          "name": "saglikTesisKodu",
+          "displayName": "Tesis Kodu",
+          "type": "integer",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "GSS-assigned facility code (s.326).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 326,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "provizyonNo",
+          "displayName": "Provizyon No",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Provision number issued for the procedure (s.326).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 326,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "sutKodu",
+          "displayName": "Sut Kodu",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": "SUT",
+          "required": true,
+          "length": null,
+          "description": "SUT code of the procedure (s.326).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 326,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "formNo",
+          "displayName": "Form No",
+          "type": "integer",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Form number of the person; the guide's required column reads 'Evet/Hayır' — a conditional requirement preserved verbatim (s.326).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 326,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [
+            {
+              "condition": "Evet/Hayır per the guide",
+              "note": "required column literally reads 'Evet/Hayır' (s.326)"
+            }
+          ],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "islemTarihi",
+          "displayName": "Islem Tarihi",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Procedure date, \"dd.mm.yyyy\" (s.326).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 326,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "tcKimlikNo",
+          "displayName": "Kisinin T.C. Kimlik Numarasi",
+          "type": "integer",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Citizen ID of the person receiving the orthodontic procedure; the guide types it long (s.326).",
+          "sensitive": true,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 326,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 326,
+          "confidence": "extracted",
+          "section": "4.5 Ortodonti Formu Kayit Metotlari"
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
+      "id": "OrtodontiFormuOkuCevapDVO",
+      "domain": "ortodonti",
+      "direction": "output",
+      "fields": [
+        {
+          "name": "formNo",
+          "displayName": "Form No",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Orthodontic form number (s.329).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 329,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "islemTuru",
+          "displayName": "Islem Turu",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Orthodontic procedure type, e.g. Sınıf I, Sınıf II (s.329).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 329,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "tesis_kodu_1",
+          "displayName": "Tesis Kodu 1",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Facility code of the first procedure; underscored parameter names are guide-verbatim (s.329).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 329,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "tesis_kodu_2",
+          "displayName": "Tesis Kodu 2",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Facility code of the second procedure (s.329).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 329,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "tesis_kodu_3",
+          "displayName": "Tesis Kodu 3",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Facility code of the third procedure (s.329).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 329,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "islem_tarihi_1",
+          "displayName": "Islem Tarihi 1",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Date of the first procedure (s.329).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 329,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "islem_tarihi_2",
+          "displayName": "Islem Tarihi 2",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Date of the second procedure (s.329).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 329,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "islem_tarihi_3",
+          "displayName": "Islem Tarihi 3",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Date of the third procedure (s.329).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 329,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "provizyonNo1",
+          "displayName": "Provizyon No 1",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Provision number of the first procedure (s.329).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 329,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "provizyonNo2",
+          "displayName": "Provizyon No 2",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Provision number of the second procedure (s.329).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 329,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "provizyonNo3",
+          "displayName": "Provizyon No 3",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Provision number of the third procedure (s.329).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 329,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "sonucKodu",
+          "displayName": "Sonuc Kodu",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": 4,
+          "description": "Result code; \"0000\" means success (s.329).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 329,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "sonucMesaji",
+          "displayName": "Sonuc Mesaji",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Result description (s.329).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 329,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 329,
+          "confidence": "extracted",
+          "section": "4.5 Ortodonti Formu Kayit Metotlari"
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
+      "id": "OrtodontiFormuOkuGirisDVO",
+      "domain": "ortodonti",
+      "direction": "input",
+      "fields": [
+        {
+          "name": "saglikTesisKodu",
+          "displayName": "Tesis Kodu",
+          "type": "integer",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "GSS-assigned facility code (s.328).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 328,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "sutKodu",
+          "displayName": "Sut Kodu",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": "SUT",
+          "required": true,
+          "length": null,
+          "description": "SUT code of the procedure (s.328).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 328,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "formNo",
+          "displayName": "Form No",
+          "type": "integer",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Form number (s.328).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 328,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "tcKimlikNo",
+          "displayName": "Kisinin T.C. Kimlik Numarasi",
+          "type": "integer",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Citizen ID of the person receiving the orthodontic procedure; the guide types it long (s.328).",
+          "sensitive": true,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 328,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 328,
+          "confidence": "extracted",
+          "section": "4.5 Ortodonti Formu Kayit Metotlari"
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
       "id": "ProvizyonCevapDVO",
       "domain": "hasta-kabul",
       "direction": "output",
@@ -27410,6 +28678,804 @@
           "page": 290,
           "confidence": "extracted",
           "section": "4.5 Yardimci Web Servis Metotlari"
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
+      "id": "TaahhutCevapDVO",
+      "domain": "taahhut",
+      "direction": "output",
+      "fields": [
+        {
+          "name": "sonucKodu",
+          "displayName": "Sonuc Kodu",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": 4,
+          "description": "Result code; \"0000\" means the save succeeded (s.322).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 322,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "sonucMesaji",
+          "displayName": "Sonuc Mesaji",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Failure description (s.322).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 322,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "taahhutNo",
+          "displayName": "Taahhut Numarasi",
+          "type": "integer",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "System-generated commitment number (s.322).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": true,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 322,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "taahhutCikti",
+          "displayName": "Taahhut Cikti",
+          "type": "array",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Commitment output as a PDF byte array; the guide states no other output is valid (s.322).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 322,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 322,
+          "confidence": "extracted",
+          "section": "4.4 Taahhut Kayit Metotlari"
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
+      "id": "TaahhutDVO",
+      "domain": "taahhut",
+      "direction": "input",
+      "fields": [
+        {
+          "name": "hastaTCKimlikNo",
+          "displayName": "Hastanin T.C. Kimlik Numarasi",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": 11,
+          "description": "Patient citizen ID (s.323).",
+          "sensitive": true,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 323,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "adressIlPlaka",
+          "displayName": "Adres Il Plaka Kodu",
+          "type": "integer",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Address province plate code (s.323).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 323,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "adressIlce",
+          "displayName": "Adres Ilce Adi",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Address district name; must match a district of the plate-coded province or the record fails (s.323).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 323,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "adressPostaKodu",
+          "displayName": "Posta Kodu",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": 6,
+          "description": "Postal code (s.323).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 323,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "adressCaddeSokak",
+          "displayName": "Cadde Sokak Adi",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": 50,
+          "description": "Street name (s.323).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 323,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "adressDisKapiNo",
+          "displayName": "Dis Kapi Numarasi",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": 15,
+          "description": "Outer door number (s.323).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 323,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "adressIcKapiNo",
+          "displayName": "Ic Kapi Numarasi",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": 15,
+          "description": "Inner door number (s.323).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 323,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "adressTelefon",
+          "displayName": "Telefon Numarasi",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": 10,
+          "description": "Phone number (s.323).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 323,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "adressEposta",
+          "displayName": "E-posta Adresi",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": 50,
+          "description": "E-mail address (s.323).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 323,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "taahhutAlanAd",
+          "displayName": "Taahhut Alanin Adi",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": 30,
+          "description": "Committed person's first name (s.323).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 323,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "taahhutAlanSoyad",
+          "displayName": "Taahhut Alanin Soyadi",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": 30,
+          "description": "Committed person's last name (s.323).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 323,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 323,
+          "confidence": "extracted",
+          "section": "4.4 Taahhut Kayit Metotlari"
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
+      "id": "TaahhutDisDVO",
+      "domain": "taahhut",
+      "direction": "input",
+      "fields": [
+        {
+          "name": "sutKodu",
+          "displayName": "SUT Islem Kodu",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": "SUT",
+          "required": true,
+          "length": null,
+          "description": "SUT code of the committed procedure. Restricted to the SUT annex-7 prosthesis codes (404010…404420 per the guide, s.326) — dental commitments are only accepted for those (s.326).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 323,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "disNo",
+          "displayName": "Agiz Semasindaki Dis Numarasi",
+          "type": "integer",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Tooth/region number per the mouth schema Tablo 4.7.4 (adult 11-48 quadrant numbering, deciduous 51-65/71-85, regions 1-7, anomaly regions) (s.323-326).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 323,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 323,
+          "confidence": "extracted",
+          "section": "4.4 Taahhut Kayit Metotlari"
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
+      "id": "TaahhutKayitDVO",
+      "domain": "taahhut",
+      "direction": "input",
+      "fields": [
+        {
+          "name": "takipNo",
+          "displayName": "Takip Numarasi",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Tracking number of the dental treatment to commit (s.322).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": true,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 322,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "saglikTesisKodu",
+          "displayName": "Tesis Kodu",
+          "type": "integer",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "GSS-assigned facility code (s.322).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 322,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "taahhut",
+          "displayName": "Taahhut Bilgileri",
+          "type": "object",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Commitment body; shape Tablo 4.7.1.c (TaahhutDVO, this registry) (s.322).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 322,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "taahhutDiss",
+          "displayName": "Taahhut Edilen Islemler",
+          "type": "array",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Committed dental procedures; item shape Tablo 4.7.1.d (TaahhutDisDVO, this registry) (s.322).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 322,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 322,
+          "confidence": "extracted",
+          "section": "4.4 Taahhut Kayit Metotlari"
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
+      "id": "TaahhutKisiCevapDVO",
+      "domain": "taahhut",
+      "direction": "output",
+      "fields": [
+        {
+          "name": "sonucKodu",
+          "displayName": "Sonuc Kodu",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": 4,
+          "description": "Result code; \"0000\" means success (s.325).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 325,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "sonucMesaji",
+          "displayName": "Sonuc Mesaji",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Failure description (s.325).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 325,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "taahhutNo",
+          "displayName": "Taahhut Numaralari",
+          "type": "array",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Commitment numbers previously saved by the facility for the person (s.325).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 325,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 325,
+          "confidence": "extracted",
+          "section": "4.4 Taahhut Kayit Metotlari"
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
+      "id": "TaahhutKisiOkuDVO",
+      "domain": "taahhut",
+      "direction": "input",
+      "fields": [
+        {
+          "name": "saglikTesisKodu",
+          "displayName": "Tesis Kodu",
+          "type": "integer",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "GSS-assigned facility code (s.324).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 324,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "tcKimlikNo",
+          "displayName": "Kisinin T.C. Kimlik Numarasi",
+          "type": "integer",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Citizen ID of the person whose commitments are read; the guide types it long (s.325).",
+          "sensitive": true,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 325,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 324,
+          "confidence": "extracted",
+          "section": "4.4 Taahhut Kayit Metotlari"
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
+      "id": "TaahhutOkuDVO",
+      "domain": "taahhut",
+      "direction": "input",
+      "fields": [
+        {
+          "name": "saglikTesisKodu",
+          "displayName": "Tesis Kodu",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "GSS-assigned facility code — typed String here unlike the Integer in TaahhutKayitDVO (s.324).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 324,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "taahhutNo",
+          "displayName": "Taahhut Numarasi",
+          "type": "integer",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "System-generated commitment number (s.324).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": true,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 324,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 324,
+          "confidence": "extracted",
+          "section": "4.4 Taahhut Kayit Metotlari"
         }
       ],
       "status": "reviewed"

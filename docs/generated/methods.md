@@ -602,6 +602,78 @@
 | deletes | — |
 | generates | `islemSiraNo` |
 
+## `medula.hastane.ortodonti.ortodonti-formu-iptal`
+
+| Field | Value |
+| --- | --- |
+| Service | medula.hastane.ortodonti |
+| Documentation heading | ortodontiFormuIptal |
+| Operation name | ortodontiFormuIptal |
+| Input DVO | OrtodontiFormuIptalGirisDVO |
+| Output DVO | OrtodontiFormuIptalCevapDVO |
+| Success | sonucKodu = 0000 (sonucMesaji) |
+| Sandbox supported |  |
+| Status | reviewed |
+| Source refs | medula-hastane-guide-3-1-1-2026-10-19 |
+
+**State effects**
+
+| Effect | Targets |
+| --- | --- |
+| creates | — |
+| reads | `ortodontiFormu` |
+| updates | — |
+| deletes | — |
+| generates | — |
+
+## `medula.hastane.ortodonti.ortodonti-formu-kaydet`
+
+| Field | Value |
+| --- | --- |
+| Service | medula.hastane.ortodonti |
+| Documentation heading | ortodontiFormuKaydet |
+| Operation name | ortodontiFormuKaydet |
+| Input DVO | OrtodontiFormuKaydetGirisDVO |
+| Output DVO | OrtodontiFormuKaydetCevapDVO |
+| Success | sonucKodu = 0000 (sonucMesaji) |
+| Sandbox supported |  |
+| Status | reviewed |
+| Source refs | medula-hastane-guide-3-1-1-2026-10-19 |
+
+**State effects**
+
+| Effect | Targets |
+| --- | --- |
+| creates | `ortodontiFormu` |
+| reads | — |
+| updates | — |
+| deletes | — |
+| generates | `formNo` |
+
+## `medula.hastane.ortodonti.ortodonti-formu-oku`
+
+| Field | Value |
+| --- | --- |
+| Service | medula.hastane.ortodonti |
+| Documentation heading | ortodontiFormuOku |
+| Operation name | ortodontiFormuOku |
+| Input DVO | OrtodontiFormuOkuGirisDVO |
+| Output DVO | OrtodontiFormuOkuCevapDVO |
+| Success | sonucKodu = 0000 (sonucMesaji) |
+| Sandbox supported |  |
+| Status | reviewed |
+| Source refs | medula-hastane-guide-3-1-1-2026-10-19 |
+
+**State effects**
+
+| Effect | Targets |
+| --- | --- |
+| creates | — |
+| reads | `ortodontiFormu` |
+| updates | — |
+| deletes | — |
+| generates | — |
+
 ## `medula.hastane.rapor.ilac-rapor-duzelt`
 
 | Field | Value |
@@ -769,6 +841,102 @@
 | updates | — |
 | deletes | — |
 | generates | `raporTakipNo` |
+
+## `medula.hastane.taahhut.dis-taahhut-kaydet`
+
+| Field | Value |
+| --- | --- |
+| Service | medula.hastane.taahhut |
+| Documentation heading | disTaahhutKayit |
+| Operation name | disTaahhutKayit |
+| Input DVO | TaahhutKayitDVO |
+| Output DVO | TaahhutCevapDVO |
+| Success | sonucKodu = 0000 (sonucMesaji) |
+| Sandbox supported |  |
+| Status | reviewed |
+| Source refs | medula-hastane-guide-3-1-1-2026-10-19 |
+
+**State effects**
+
+| Effect | Targets |
+| --- | --- |
+| creates | `taahhut` |
+| reads | — |
+| updates | — |
+| deletes | — |
+| generates | `taahhutNo` |
+
+## `medula.hastane.taahhut.dis-taahhut-oku`
+
+| Field | Value |
+| --- | --- |
+| Service | medula.hastane.taahhut |
+| Documentation heading | okuDisTaahhut |
+| Operation name | okuDisTaahhut |
+| Input DVO | TaahhutOkuDVO |
+| Output DVO | TaahhutCevapDVO |
+| Success | sonucKodu = 0000 (sonucMesaji) |
+| Sandbox supported |  |
+| Status | reviewed |
+| Source refs | medula-hastane-guide-3-1-1-2026-10-19 |
+
+**State effects**
+
+| Effect | Targets |
+| --- | --- |
+| creates | — |
+| reads | `taahhut` |
+| updates | — |
+| deletes | — |
+| generates | — |
+
+## `medula.hastane.taahhut.dis-taahhut-sil`
+
+| Field | Value |
+| --- | --- |
+| Service | medula.hastane.taahhut |
+| Documentation heading | silDisTaahhut |
+| Operation name | silDisTaahhut |
+| Input DVO | TaahhutOkuDVO |
+| Output DVO | TaahhutCevapDVO |
+| Success | sonucKodu = 0000 (sonucMesaji) |
+| Sandbox supported |  |
+| Status | reviewed |
+| Source refs | medula-hastane-guide-3-1-1-2026-10-19 |
+
+**State effects**
+
+| Effect | Targets |
+| --- | --- |
+| creates | — |
+| reads | — |
+| updates | — |
+| deletes | `taahhut` |
+| generates | — |
+
+## `medula.hastane.taahhut.kisi-dis-taahhut-oku`
+
+| Field | Value |
+| --- | --- |
+| Service | medula.hastane.taahhut |
+| Documentation heading | okuKisiDisTaahhut |
+| Operation name | okuKisiDisTaahhut |
+| Input DVO | TaahhutKisiOkuDVO |
+| Output DVO | TaahhutKisiCevapDVO |
+| Success | sonucKodu = 0000 (sonucMesaji) |
+| Sandbox supported |  |
+| Status | reviewed |
+| Source refs | medula-hastane-guide-3-1-1-2026-10-19 |
+
+**State effects**
+
+| Effect | Targets |
+| --- | --- |
+| creates | — |
+| reads | — |
+| updates | — |
+| deletes | — |
+| generates | — |
 
 ## `medula.hastane.takip-formu.takip-formu-kaydet`
 
