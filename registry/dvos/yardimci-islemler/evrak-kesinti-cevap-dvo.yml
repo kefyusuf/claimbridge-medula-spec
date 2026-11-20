@@ -1,0 +1,145 @@
+id: EvrakKesintiCevapDVO
+domain: yardimci-islemler
+direction: output
+fields:
+  - name: sonucKodu
+    displayName: Sonuc Kodu
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: 4
+    description: Result code; "0000" means success (s.292).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 292
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: sonucMesaji
+    displayName: Sonuc Mesaji
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Result description (s.292).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 292
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: evrakReferansNo
+    displayName: Evrak Referans No
+    type: integer
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Document reference number of the deducted document (s.292).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 292
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: takipler
+    displayName: Takip Listesi
+    type: array
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Tracking records; item shape Tablo 4.5.6.c (EvrakTakipDVO, this registry) (s.292).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 292
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: muayeneKatilimTutari
+    displayName: Muayene Katilim Payi
+    type: decimal
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Examination co-payment of the document (s.292).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 292
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: malzemeKatilimTutari
+    displayName: Malzeme Katilim Payi
+    type: decimal
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Material co-payment of the document (s.292).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 292
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: tupBebekKatilimTutari
+    displayName: Tup Bebek Katilim Payi
+    type: decimal
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: IVF co-payment of the document (s.292).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 292
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 290
+    confidence: extracted
+    section: 4.5 Yardimci Web Servis Metotlari
+status: reviewed

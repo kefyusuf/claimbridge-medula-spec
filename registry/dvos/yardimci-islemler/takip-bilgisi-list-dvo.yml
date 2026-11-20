@@ -1,0 +1,88 @@
+id: TakipBilgisiListDVO
+domain: yardimci-islemler
+direction: output
+fields:
+  - name: takipNo
+    displayName: Takip No
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Tracking number (s.295).
+    sensitive: false
+    syntheticOnlyRecommended: true
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 295
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: grupTuru
+    displayName: Grup Turu
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Ödeme grup türü ADI — the guide returns the group-type NAME here, not the code (s.295).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 295
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: grupAdi
+    displayName: Grup Adi
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Ödeme group name (s.295).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 295
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: toplamTutar
+    displayName: Toplam Tutar
+    type: decimal
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Total amount of the takip (s.295).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 295
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 290
+    confidence: extracted
+    section: 4.5 Yardimci Web Servis Metotlari
+status: reviewed

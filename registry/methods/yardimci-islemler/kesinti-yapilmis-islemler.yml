@@ -1,0 +1,31 @@
+id: medula.hastane.yardimci-islemler.kesinti-yapilmis-islemler
+service: medula.hastane.yardimci-islemler
+names:
+  documentationHeading: kesintiYapilmisIslemler
+  operationName: kesintiYapilmisIslemler
+  aliases:
+    - kesintiYapilmisIslemler
+contract:
+  inputDvo: EvrakKesintiGirisDVO
+  outputDvo: EvrakKesintiCevapDVO
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 291
+    confidence: extracted
+    section: 4.5 4.5.6 kesintiYapilmisIslemler Metodu
+stateEffects:
+  creates: []
+  reads: []
+  updates: []
+  deletes: []
+  generates: []
+success:
+  resultCodeField: sonucKodu
+  successCode: "0000"
+  messageField: sonucMesaji
+sandbox:
+  supported: false
+  defaultScenario: null
+status: reviewed
