@@ -16,6 +16,7 @@ import { loadRegistry } from "./loadRegistry.js";
 import { validateSchemas, type ValidationIssue } from "./validateSchemas.js";
 import { validateReferences } from "./validateReferences.js";
 import { checkSyntheticExamples } from "./checkSyntheticExamples.js";
+import { writePhp } from "./generatePhp.js";
 import {
   buildBundle,
   buildManifest,
@@ -118,6 +119,7 @@ switch (command) {
     const manifest = writeDist(reg, distDir, generatedAt);
     writeDocs(reg, resolve(repoRoot, "docs", "generated"));
     writeMermaid(reg, resolve(repoRoot, "diagrams", "generated"));
+    writePhp(reg, resolve(repoRoot, "dist", "php"));
     const c = manifest.counts;
     console.log(
       `generate: OK — bundle ${manifest.bundle} (services ${c.services}, methods ${c.methods}, dvos ${c.dvos}, enums ${c.enums}, rules ${c.rules}, workflows ${c.workflows}, scenarios ${c.scenarios})`,

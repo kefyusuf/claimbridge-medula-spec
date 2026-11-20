@@ -6,7 +6,19 @@ Format: [Keep a Changelog](https://keepachangelog.com); versioning: SemVer
 
 ## [Unreleased]
 
-_Nothing yet — v0.6.0 scope is complete._
+_Nothing yet — v0.7.0 scope is complete._
+
+## [0.7.0] — 2026-11-21
+
+Seventh release: **PHP DTO codegen** (the v0.4 roadmap item). `pnpm
+generate` now also emits a self-contained composer package into
+`dist/php` — one string-backed enum per registry enum (81) and one
+readonly DTO class per registry DVO (212) grouped by domain, each with
+`fromArray()` / `toArray()`, enum-bound fields typed with the generated
+enum classes (coerced via `tryFrom`, never throwing on codes added by
+later guide editions), guide provenance docblocks, and a PSR-4
+`composer.json`. All 293 generated files pass `php -l`. Deterministic:
+regeneration is byte-identical.
 
 ## [0.6.0] — 2026-11-20
 
