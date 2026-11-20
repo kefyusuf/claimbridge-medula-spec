@@ -65,14 +65,14 @@ describe("code-system sweep (Group 42)", () => {
   });
 
   it("sweeps every DVO in the registry", () => {
-    expect(reg.dvos).toHaveLength(119);
+    expect(reg.dvos).toHaveLength(137);
   });
 
   it("keeps the manifest counts stable", () => {
     const manifest = JSON.parse(
       readFileSync(resolve(root, "dist", "manifest.json"), "utf8"),
     ) as { counts: Record<string, number> };
-    expect(manifest.counts.enums).toBe(52);
-    expect(manifest.counts.dvos).toBe(119);
+    expect(manifest.counts.enums).toBe(54);
+    expect(manifest.counts.dvos).toBe(137);
   });
 });

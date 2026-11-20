@@ -1,0 +1,88 @@
+id: OrneklenmisCevapDVO
+domain: yardimci-islemler
+direction: output
+fields:
+  - name: sonucKodu
+    displayName: Sonuc Kodu
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: 4
+    description: Result code; "0000" means success (s.291).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 291
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: sonucMesaji
+    displayName: Sonuc Mesaji
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Result description (s.291).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 291
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: saglikTesisKodu
+    displayName: Tesis Kodu
+    type: integer
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Code of the facility that searched the sampled takips (s.291).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 291
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: takipler
+    displayName: Takip Listesi
+    type: array
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Sampled tracking records; item shape Tablo 4.5.6.c (EvrakTakipDVO, this registry) (s.291).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 291
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 290
+    confidence: extracted
+    section: 4.5 Yardimci Web Servis Metotlari
+status: reviewed

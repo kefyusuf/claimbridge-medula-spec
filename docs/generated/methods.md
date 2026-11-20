@@ -794,6 +794,30 @@
 | deletes | — |
 | generates | — |
 
+## `medula.hastane.yardimci-islemler.guncel-sut-kodlari`
+
+| Field | Value |
+| --- | --- |
+| Service | medula.hastane.yardimci-islemler |
+| Documentation heading | guncelSutKodlari |
+| Operation name | guncelSutKodlari |
+| Input DVO | GuncelSutSorguGirisDVO |
+| Output DVO | GuncelSutSorguCevapDVO |
+| Success | sonucKodu = 0000 (sonucMesaji) |
+| Sandbox supported |  |
+| Status | reviewed |
+| Source refs | medula-hastane-guide-3-1-1-2026-10-19 |
+
+**State effects**
+
+| Effect | Targets |
+| --- | --- |
+| creates | — |
+| reads | — |
+| updates | — |
+| deletes | — |
+| generates | — |
+
 ## `medula.hastane.yardimci-islemler.ilac-ara`
 
 | Field | Value |
@@ -803,6 +827,78 @@
 | Operation name | IlacAra |
 | Input DVO | IlacAraGirisDVO |
 | Output DVO | IlacAraCevapDVO |
+| Success | sonucKodu = 0000 (sonucMesaji) |
+| Sandbox supported |  |
+| Status | reviewed |
+| Source refs | medula-hastane-guide-3-1-1-2026-10-19 |
+
+**State effects**
+
+| Effect | Targets |
+| --- | --- |
+| creates | — |
+| reads | — |
+| updates | — |
+| deletes | — |
+| generates | — |
+
+## `medula.hastane.yardimci-islemler.katilim-payi-ucreti`
+
+| Field | Value |
+| --- | --- |
+| Service | medula.hastane.yardimci-islemler |
+| Documentation heading | katilimPayiUcreti |
+| Operation name | katilimPayiUcreti |
+| Input DVO | KatilimPayiGirisDVO |
+| Output DVO | KatilimPayiCevapDVO |
+| Success | sonucKodu = 0000 (sonucMesaji) |
+| Sandbox supported |  |
+| Status | reviewed |
+| Source refs | medula-hastane-guide-3-1-1-2026-10-19 |
+
+**State effects**
+
+| Effect | Targets |
+| --- | --- |
+| creates | — |
+| reads | — |
+| updates | — |
+| deletes | — |
+| generates | — |
+
+## `medula.hastane.yardimci-islemler.kesinti-yapilmis-islemler`
+
+| Field | Value |
+| --- | --- |
+| Service | medula.hastane.yardimci-islemler |
+| Documentation heading | kesintiYapilmisIslemler |
+| Operation name | kesintiYapilmisIslemler |
+| Input DVO | EvrakKesintiGirisDVO |
+| Output DVO | EvrakKesintiCevapDVO |
+| Success | sonucKodu = 0000 (sonucMesaji) |
+| Sandbox supported |  |
+| Status | reviewed |
+| Source refs | medula-hastane-guide-3-1-1-2026-10-19 |
+
+**State effects**
+
+| Effect | Targets |
+| --- | --- |
+| creates | — |
+| reads | — |
+| updates | — |
+| deletes | — |
+| generates | — |
+
+## `medula.hastane.yardimci-islemler.orneklenmis-takipler`
+
+| Field | Value |
+| --- | --- |
+| Service | medula.hastane.yardimci-islemler |
+| Documentation heading | getOrneklenmisTakipler |
+| Operation name | getOrneklenmisTakipler |
+| Input DVO | OrneklenmisGirisDVO |
+| Output DVO | OrneklenmisCevapDVO |
 | Success | sonucKodu = 0000 (sonucMesaji) |
 | Sandbox supported |  |
 | Status | reviewed |
@@ -851,6 +947,54 @@
 | Operation name | TakipAra |
 | Input DVO | TakipAraGirisDVO |
 | Output DVO | TakipAraCevapDVO |
+| Success | sonucKodu = 0000 (sonucMesaji) |
+| Sandbox supported |  |
+| Status | reviewed |
+| Source refs | medula-hastane-guide-3-1-1-2026-10-19 |
+
+**State effects**
+
+| Effect | Targets |
+| --- | --- |
+| creates | — |
+| reads | — |
+| updates | — |
+| deletes | — |
+| generates | — |
+
+## `medula.hastane.yardimci-islemler.takip-bilgileri-listesi`
+
+| Field | Value |
+| --- | --- |
+| Service | medula.hastane.yardimci-islemler |
+| Documentation heading | takipBilgileriListesi |
+| Operation name | takipBilgileriListesi |
+| Input DVO | TakipBilgisiGirisDVO |
+| Output DVO | TakipBilgisiCevapDVO |
+| Success | sonucKodu = 0000 (sonucMesaji) |
+| Sandbox supported |  |
+| Status | reviewed |
+| Source refs | medula-hastane-guide-3-1-1-2026-10-19 |
+
+**State effects**
+
+| Effect | Targets |
+| --- | --- |
+| creates | — |
+| reads | — |
+| updates | — |
+| deletes | — |
+| generates | — |
+
+## `medula.hastane.yardimci-islemler.yurt-disi-yardim-hakki-getir`
+
+| Field | Value |
+| --- | --- |
+| Service | medula.hastane.yardimci-islemler |
+| Documentation heading | yurtDisiYardimHakkiGetir |
+| Operation name | yurtDisiYardimHakkiGetir |
+| Input DVO | YurtDisiYardimHakkiGetirGirisDVO |
+| Output DVO | YurtDisiYardimHakkiGetirCevapDVO |
 | Success | sonucKodu = 0000 (sonucMesaji) |
 | Sandbox supported |  |
 | Status | reviewed |

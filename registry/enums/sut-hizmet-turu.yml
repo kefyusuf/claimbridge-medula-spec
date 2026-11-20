@@ -1,0 +1,40 @@
+id: sut-hizmet-turu
+displayName: SUT Hizmet Turu
+values:
+  - code: "1"
+    label: Muayene islemi
+    description: Examination procedures.
+  - code: "2"
+    label: Yatak Islemleri
+    description: Bed procedures.
+  - code: "3"
+    label: Dis islemi
+    description: Dental procedures.
+  - code: "4"
+    label: Konsultasyon
+    description: Consultation.
+  - code: "5"
+    label: Malzemeler
+    description: Materials.
+  - code: "6"
+    label: Ameliyat ve girisimler
+    description: Surgery and interventions.
+  - code: "7"
+    label: Tetkik ve radyoloji bilgileri
+    description: Imaging and radiology.
+  - code: "8"
+    label: Tahlil islemleri
+    description: Laboratory procedures.
+  - code: "9"
+    label: Diger islemler
+    description: Other procedures.
+  - code: "10"
+    label: Kan islemleri
+    description: Blood procedures.
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 298
+    confidence: extracted
+status: reviewed

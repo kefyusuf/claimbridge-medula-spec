@@ -159,9 +159,9 @@ describe("v0.2 enrichment (Group 10)", () => {
     const manifest = JSON.parse(
       readFileSync(resolve(root, "dist", "manifest.json"), "utf8"),
     ) as { counts: Record<string, number> };
-    expect(manifest.counts.dvos).toBe(119);
-    expect(manifest.counts.enums).toBe(52);
-    expect(manifest.counts.methods).toBe(36);
+    expect(manifest.counts.dvos).toBe(137);
+    expect(manifest.counts.enums).toBe(54);
+    expect(manifest.counts.methods).toBe(42);
   });
 
   it("records the PRD 13.4 amendment for the guide-aligned names", () => {

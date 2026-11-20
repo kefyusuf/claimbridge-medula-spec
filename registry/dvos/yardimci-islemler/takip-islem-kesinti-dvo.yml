@@ -1,0 +1,164 @@
+id: TakipIslemKesintiDVO
+domain: yardimci-islemler
+direction: output
+fields:
+  - name: islemSiraNo
+    displayName: Islem Sira No
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: 20
+    description: Service procedure sequence number (s.292).
+    sensitive: false
+    syntheticOnlyRecommended: true
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 292
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: hizmetSunucuRefNo
+    displayName: Hizmet Sunucu Ref No
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: 20
+    description: Service-provider reference number (s.292).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 292
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: islemTarihi
+    displayName: Islem Tarihi
+    type: date
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Date the service was performed (s.292).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 292
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: sutKodu
+    displayName: SUT Kodu
+    type: string
+    enumRef: null
+    codeSystem: SUT
+    required: false
+    length: 15
+    description: SUT procedure code (s.293).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 293
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: islemAdi
+    displayName: SUT Islem Adi
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: 100
+    description: Name of the SUT code (s.293).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 293
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: tutar
+    displayName: Islem Tutari
+    type: decimal
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Amount of the SUT-coded procedure (s.293).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 293
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: kesintiTutari
+    displayName: Kesinti Tutari
+    type: decimal
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Deduction amount applied by the reviewer (s.293).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 293
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: aciklama
+    displayName: Aciklama
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: 255
+    description: Reviewer's deduction remark (s.293).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 293
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 290
+    confidence: extracted
+    section: 4.5 Yardimci Web Servis Metotlari
+status: reviewed

@@ -140,6 +140,24 @@ const EXPECTED_DVO_FILES = [
   "yardimci-islemler/ilac-list-dvo.yml",
   "yardimci-islemler/fiyat-list-dvo.yml",
   "yardimci-islemler/ilac-indirim-dvo.yml",
+  "yardimci-islemler/orneklenmis-giris-dvo.yml",
+  "yardimci-islemler/orneklenmis-cevap-dvo.yml",
+  "yardimci-islemler/evrak-kesinti-giris-dvo.yml",
+  "yardimci-islemler/evrak-kesinti-cevap-dvo.yml",
+  "yardimci-islemler/evrak-takip-dvo.yml",
+  "yardimci-islemler/takip-islem-kesinti-dvo.yml",
+  "yardimci-islemler/katilim-payi-giris-dvo.yml",
+  "yardimci-islemler/katilim-payi-cevap-dvo.yml",
+  "yardimci-islemler/katilim-payi-dvo.yml",
+  "yardimci-islemler/takip-bilgisi-giris-dvo.yml",
+  "yardimci-islemler/takip-bilgisi-cevap-dvo.yml",
+  "yardimci-islemler/takip-bilgisi-list-dvo.yml",
+  "yardimci-islemler/yurt-disi-yardim-hakki-giris-dvo.yml",
+  "yardimci-islemler/yurt-disi-yardim-hakki-cevap-dvo.yml",
+  "yardimci-islemler/yurt-disi-yardim-hakki-detay-dvo.yml",
+  "yardimci-islemler/guncel-sut-sorgu-giris-dvo.yml",
+  "yardimci-islemler/guncel-sut-sorgu-cevap-dvo.yml",
+  "yardimci-islemler/sut-fiyat-dvo.yml",
 ];
 
 const EXPECTED_ENUM_IDS = [
@@ -195,6 +213,8 @@ const EXPECTED_ENUM_IDS = [
   "tas-lokalizasyon",
   "odenme-durumu",
   "aktif-pasif",
+  "grup-turu",
+  "sut-hizmet-turu",
 ];
 
 const EXPECTED_RULE_FILES = [

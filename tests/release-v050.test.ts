@@ -49,7 +49,7 @@ describe("release v0.5.0 (Group 44)", () => {
     );
     expect(raporMethods).toHaveLength(7);
     expect(raporMethods.every((m) => m.status === "reviewed")).toBe(true);
-    expect(bundle.dvos).toHaveLength(119);
-    expect(bundle.enums).toHaveLength(52);
+    expect(bundle.dvos).toHaveLength(137);
+    expect(bundle.enums).toHaveLength(54);
   });
 });

@@ -1,0 +1,69 @@
+id: YurtDisiYardimHakkiGetirGirisDVO
+domain: yardimci-islemler
+direction: input
+fields:
+  - name: kisiNo
+    displayName: Yurt Disi Kisi No
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: null
+    description: Abroad person number (s.296).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 296
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: provizyonTarihi
+    displayName: Islem Tarihi
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: null
+    description: Operation date (s.296; no format given).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 296
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: saglikTesisKodu
+    displayName: Tesis Kodu
+    type: integer
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: null
+    description: Code of the calling facility (s.296).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 296
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 290
+    confidence: extracted
+    section: 4.5 Yardimci Web Servis Metotlari
+status: reviewed

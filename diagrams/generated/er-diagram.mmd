@@ -194,6 +194,28 @@ erDiagram
     string anneTcKimlikNo
     integer doganCocukSayisi
   }
+  EvrakKesintiCevapDVO {
+    string sonucKodu
+    string sonucMesaji
+    integer evrakReferansNo
+    array takipler
+    decimal muayeneKatilimTutari
+    decimal malzemeKatilimTutari
+    decimal tupBebekKatilimTutari
+  }
+  EvrakKesintiGirisDVO {
+    integer evrakReferansNo
+    integer tesisKodu
+    enum grupTuru
+    integer grupKodu
+  }
+  EvrakTakipDVO {
+    string takipNo
+    decimal toplamTutar
+    array kesintiler
+    enum grupTuru
+    integer grupKodu
+  }
   FTRRaporBilgisiDVO {
     enum ftrVucutBolgesiKodu
     integer seansGun
@@ -269,6 +291,15 @@ erDiagram
   }
   GenBilgisiDVO {
     string genKodu
+  }
+  GuncelSutSorguCevapDVO {
+    string sonucKodu
+    string sonucMesaji
+    array sutKodlari
+  }
+  GuncelSutSorguGirisDVO {
+    integer saglikTesisKodu
+    string tarih
   }
   HOTRaporBilgisiDVO {
     integer seansGun
@@ -596,6 +627,22 @@ erDiagram
     string ozelDurum
     array cokluOzelDurum
   }
+  KatilimPayiCevapDVO {
+    string sonucKodu
+    string sonucMesaji
+    integer evrakRefNo
+    array KatilimPayiDVO
+  }
+  KatilimPayiDVO {
+    string takipNo
+    decimal muayeneKatilimTutari
+    decimal malzemeKatilimTutari
+    decimal tupBebekKatilimTutari
+  }
+  KatilimPayiGirisDVO {
+    integer evrakRefNo
+    integer saglikTesisKodu
+  }
   KayitliIslemBilgisiDVO {
     string hizmetSunucuRefNo
     string islemSiraNo
@@ -757,6 +804,18 @@ erDiagram
     integer saglikTesisKodu
     string tesisAdi
   }
+  OrneklenmisCevapDVO {
+    string sonucKodu
+    string sonucMesaji
+    integer saglikTesisKodu
+    array takipler
+  }
+  OrneklenmisGirisDVO {
+    integer evrakRefNo
+    integer saglikTesisKodu
+    enum grupTuru
+    integer grupKodu
+  }
   ProvizyonCevapDVO {
     string sonucKodu
     string sonucMesaji
@@ -915,6 +974,13 @@ erDiagram
     string sonucKodu
     string sonucMesaji
   }
+  SutFiyatDVO {
+    string sutKodu
+    string adi
+    string fiyat
+    enum turu
+    string gecerlilikTarihi
+  }
   TahlilBilgisiDVO {
     string bransKodu
     string drTescilNo
@@ -951,6 +1017,26 @@ erDiagram
     integer saglikTesisKodu
     string ktsHbysKodu
   }
+  TakipBilgisiCevapDVO {
+    string sonucKodu
+    string sonucMesaji
+    array takipBilgisiListDVO
+    integer evrakRefNo
+    integer saglikTesisKodu
+  }
+  TakipBilgisiGirisDVO {
+    integer evrakRefNo
+    integer saglikTesisKodu
+    enum grupTuru
+    integer grupKodu
+    string ktsHbysKodu
+  }
+  TakipBilgisiListDVO {
+    string takipNo
+    string grupTuru
+    string grupAdi
+    decimal toplamTutar
+  }
   TakipDVO {
     string takipNo
     string ilkTakipNo
@@ -959,6 +1045,16 @@ erDiagram
     string hastaBasvuruNo
     string bransKodu
     enum ekdsYontemGerekce
+  }
+  TakipIslemKesintiDVO {
+    string islemSiraNo
+    string hizmetSunucuRefNo
+    date islemTarihi
+    string sutKodu
+    string islemAdi
+    decimal tutar
+    decimal kesintiTutari
+    string aciklama
   }
   TakipOkuGirisDVO {
     integer saglikTesisKodu
@@ -1007,6 +1103,27 @@ erDiagram
   TupBebekRaporBilgisiDVO {
     enum tupBebekRaporTuru
     string butKodu
+  }
+  YurtDisiYardimHakkiGetirCevapDVO {
+    string sonucKodu
+    string sonucMesaji
+    array yurtDisiDetay
+  }
+  YurtDisiYardimHakkiGetirCevapDetayDVO {
+    integer id
+    string kisiNo
+    string adi
+    string soyadi
+    string formulAdi
+    string odemeTuru
+    string tedaviKapsami
+    string sorguTarihi
+    string aciklama
+  }
+  YurtDisiYardimHakkiGetirGirisDVO {
+    string kisiNo
+    string provizyonTarihi
+    integer saglikTesisKodu
   }
   medula_hastane_fatura_kayit_fatura_iptal ||--|| FaturaIptalGirisDVO : inputDvo
   medula_hastane_fatura_kayit_fatura_iptal ||--|| FaturaIptalCevapDVO : outputDvo
@@ -1072,12 +1189,24 @@ erDiagram
   medula_hastane_rapor_takip_no_ile_rapor_bilgisi_kaydet ||--|| RaporCevapDVO : outputDvo
   medula_hastane_yardimci_islemler_doktor_ara ||--|| DoktorAraGirisDVO : inputDvo
   medula_hastane_yardimci_islemler_doktor_ara ||--|| DoktorAraCevapDVO : outputDvo
+  medula_hastane_yardimci_islemler_guncel_sut_kodlari ||--|| GuncelSutSorguGirisDVO : inputDvo
+  medula_hastane_yardimci_islemler_guncel_sut_kodlari ||--|| GuncelSutSorguCevapDVO : outputDvo
   medula_hastane_yardimci_islemler_ilac_ara ||--|| IlacAraGirisDVO : inputDvo
   medula_hastane_yardimci_islemler_ilac_ara ||--|| IlacAraCevapDVO : outputDvo
+  medula_hastane_yardimci_islemler_katilim_payi_ucreti ||--|| KatilimPayiGirisDVO : inputDvo
+  medula_hastane_yardimci_islemler_katilim_payi_ucreti ||--|| KatilimPayiCevapDVO : outputDvo
+  medula_hastane_yardimci_islemler_kesinti_yapilmis_islemler ||--|| EvrakKesintiGirisDVO : inputDvo
+  medula_hastane_yardimci_islemler_kesinti_yapilmis_islemler ||--|| EvrakKesintiCevapDVO : outputDvo
+  medula_hastane_yardimci_islemler_orneklenmis_takipler ||--|| OrneklenmisGirisDVO : inputDvo
+  medula_hastane_yardimci_islemler_orneklenmis_takipler ||--|| OrneklenmisCevapDVO : outputDvo
   medula_hastane_yardimci_islemler_saglik_tesisi_ara ||--|| SaglikTesisiAraGirisDVO : inputDvo
   medula_hastane_yardimci_islemler_saglik_tesisi_ara ||--|| SaglikTesisiAraCevapDVO : outputDvo
   medula_hastane_yardimci_islemler_takip_ara ||--|| TakipAraGirisDVO : inputDvo
   medula_hastane_yardimci_islemler_takip_ara ||--|| TakipAraCevapDVO : outputDvo
+  medula_hastane_yardimci_islemler_takip_bilgileri_listesi ||--|| TakipBilgisiGirisDVO : inputDvo
+  medula_hastane_yardimci_islemler_takip_bilgileri_listesi ||--|| TakipBilgisiCevapDVO : outputDvo
+  medula_hastane_yardimci_islemler_yurt_disi_yardim_hakki_getir ||--|| YurtDisiYardimHakkiGetirGirisDVO : inputDvo
+  medula_hastane_yardimci_islemler_yurt_disi_yardim_hakki_getir ||--|| YurtDisiYardimHakkiGetirCevapDVO : outputDvo
   AmeliyatveGirisimBilgisiDVO }o--|| ayni_farkli_kesi : enumRef
   AmeliyatveGirisimBilgisiDVO }o--|| euroscore : enumRef
   AnalikRaporDVO }o--|| calisma_durumu : enumRef
@@ -1094,6 +1223,8 @@ erDiagram
   ESWLRaporBilgisiDVO }o--|| bobrek_tarafi : enumRef
   ESWLTasBilgisiDVO }o--|| tas_lokalizasyon : enumRef
   ESWTRaporBilgisiDVO }o--|| eswt_vucut_bolgesi : enumRef
+  EvrakKesintiGirisDVO }o--|| grup_turu : enumRef
+  EvrakTakipDVO }o--|| grup_turu : enumRef
   FTRRaporBilgisiDVO }o--|| ftr_vucut_bolgesi : enumRef
   FTRRaporBilgisiDVO }o--|| tedavi_turu : enumRef
   FaturaCevapDetayDVO }o--|| taburcu_kodu : enumRef
@@ -1134,6 +1265,7 @@ erDiagram
   MeslekHastaligiRaporDVO }o--|| nuks_durumu : enumRef
   MeslekHastaligiRaporDVO }o--|| yatis_devam_is_kazasi : enumRef
   MeslekHastaligiRaporDVO }o--|| taburcu_kodu : enumRef
+  OrneklenmisGirisDVO }o--|| grup_turu : enumRef
   ProvizyonGirisDVO }o--|| sigortali_turu : enumRef
   ProvizyonGirisDVO }o--|| devredilen_kurum : enumRef
   ProvizyonGirisDVO }o--|| provizyon_tipi : enumRef
@@ -1149,9 +1281,11 @@ erDiagram
   RaporEtkinMaddeDVO }o--|| periyot_birimi : enumRef
   RaporOkuDVO }o--|| rapor_turu : enumRef
   RaporOkuTCKimlikNodanDVO }o--|| rapor_turu : enumRef
+  SutFiyatDVO }o--|| sut_hizmet_turu : enumRef
   TahlilBilgisiDVO }o--|| tahlil_tipi : enumRef
   TahlilBilgisiDVO }o--|| ayni_farkli_kesi : enumRef
   TakipAraGirisDVO }o--|| evet_hayir : enumRef
+  TakipBilgisiGirisDVO }o--|| grup_turu : enumRef
   TakipDVO }o--|| takip_tipi : enumRef
   TakipDVO }o--|| takip_durumu : enumRef
   TakipDVO }o--|| ekds_yontem_gerekce : enumRef

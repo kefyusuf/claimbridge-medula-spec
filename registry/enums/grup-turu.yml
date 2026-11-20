@@ -1,0 +1,23 @@
+id: grup-turu
+displayName: Grup Turu
+values:
+  - code: A
+    label: Ayaktan
+    description: Outpatient group.
+  - code: Y
+    label: Yatarak
+    description: Inpatient group.
+  - code: G
+    label: Gunubirlik
+    description: Day-unit group.
+  - code: D
+    label: Diger
+    description: Other group.
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 290
+    confidence: extracted
+    notes: Four-value variant used across the yardimci evrak queries; the hasta-kabul group's tedavi-turu has only A/Y/G (s.255).
+status: reviewed
