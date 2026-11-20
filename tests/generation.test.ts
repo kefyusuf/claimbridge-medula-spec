@@ -117,6 +117,8 @@ describe("generation (Group 6)", () => {
 
   it(
     "generates committed outputs that pass the check command",
+    // Registry growth scaled this generate+check cycle past the default 5s.
+    { timeout: 60000 },
     () => {
       execSync("pnpm generate", { cwd: root, stdio: "pipe" });
       const stdout = execSync("pnpm check", {
@@ -125,8 +127,6 @@ describe("generation (Group 6)", () => {
       }).toString();
       expect(stdout).toContain("check: OK");
     },
-    // Registry growth scaled this generate+check cycle past the default 5s.
-    { timeout: 60000 },
   );
 
   it("detects stale generated outputs and exits non-zero", () => {
