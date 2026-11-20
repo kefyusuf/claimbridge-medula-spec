@@ -770,6 +770,30 @@
 | deletes | — |
 | generates | — |
 
+## `medula.hastane.imzali-rapor.rapor-kaydet`
+
+| Field | Value |
+| --- | --- |
+| Service | medula.hastane.imzali-rapor |
+| Documentation heading | raporKaydet |
+| Operation name | raporKaydet |
+| Input DVO | ImzaliRaporGirisDVO |
+| Output DVO | ImzaliRaporCevapDVO |
+| Success | sonucKodu = 0000 (sonucMesaji) |
+| Sandbox supported |  |
+| Status | reviewed |
+| Source refs | medula-hastane-guide-3-1-1-2026-10-19 |
+
+**State effects**
+
+| Effect | Targets |
+| --- | --- |
+| creates | `imzaliRapor` |
+| reads | — |
+| updates | — |
+| deletes | — |
+| generates | `raporTakipNo` |
+
 ## `medula.hastane.imzali-rapor.rapor-onay`
 
 | Field | Value |

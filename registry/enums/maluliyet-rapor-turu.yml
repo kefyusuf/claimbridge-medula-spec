@@ -1,0 +1,19 @@
+id: maluliyet-rapor-turu
+displayName: Maluliyet Rapor Turu
+values:
+  - code: "1"
+    label: Maluliyet
+    description: Disability (maluliyet).
+  - code: "2"
+    label: Meslek Hastaligi
+    description: Occupational disease.
+  - code: "3"
+    label: Is Kazasi
+    description: Work accident.
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 331
+    confidence: extracted
+status: reviewed

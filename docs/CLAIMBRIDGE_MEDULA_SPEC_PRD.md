@@ -1665,6 +1665,13 @@ No real patient/credential data exists.
         annotated codeSystem SUT. Section 4.4 is now FULLY extracted —
         v0.5.0 RELEASED. Registry: 4 services, 32 methods, 106 DVOs, 50
         enums, 260/260 tests (46 suites). -->
+   <!-- G44a-c + G45a-c (2026-11-19..20): Yardimci Islemler (19/19 methods,
+        s.283-321), Takip Formu (3 methods + 47-field DiabetTakipFormuKayitDVO),
+        Taahhut + Ortodonti (7 methods, SUT annex-7 prosthesis restriction),
+        E-İmzalı Rapor (12 methods incl. raporKaydet's signed composite set —
+        Maluliyet/Engellilik/TibbiGereklilik chains; inputs are opaque byte[]
+        signature blobs). v0.6.0 RELEASED. Registry: 9 services, 73 methods,
+        212 DVOs, 81 enums, 308/308 tests (53 suites). -->
 2. Add Yardimci Islemler service group.
 3. Add more enums.
 4. Add richer scenario definitions.

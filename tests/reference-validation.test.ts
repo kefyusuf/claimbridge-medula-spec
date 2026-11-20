@@ -106,7 +106,7 @@ describe("reference-validation (Group 2)", () => {
     ]);
   });
 
-  it("has exactly 72 method registry files in 9 domains", () => {
+  it("has exactly 73 method registry files in 9 domains", () => {
     expect(methods.map((m) => m.file).sort()).toEqual([
       "fatura-kayit/fatura-iptal.yml",
       "fatura-kayit/fatura-kayit.yml",
@@ -140,6 +140,7 @@ describe("reference-validation (Group 2)", () => {
       "imzali-rapor/onay-bekleyen-rapor-sorgu.yml",
       "imzali-rapor/onay-bekleyen.yml",
       "imzali-rapor/onay.yml",
+      "imzali-rapor/rapor-kaydet.yml",
       "imzali-rapor/rapor-onay.yml",
       "imzali-rapor/rapor-sil.yml",
       "imzali-rapor/rapor-sorgu.yml",

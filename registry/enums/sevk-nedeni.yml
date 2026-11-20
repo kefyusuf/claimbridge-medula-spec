@@ -1,0 +1,20 @@
+id: sevk-nedeni
+displayName: Sevk Nedeni
+values:
+  - code: "1"
+    label: Ilk Sevk
+    description: Initial referral.
+  - code: "2"
+    label: Ara Kontrol
+    description: Interim control.
+  - code: "3"
+    label: Kontrol Muayenesi
+    description: Control examination.
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 331
+    confidence: extracted
+    notes: Same three-value list as TibbiGereklilikRaporDVO.istekNedeni (s.336).
+status: reviewed

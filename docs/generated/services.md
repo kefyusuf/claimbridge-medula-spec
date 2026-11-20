@@ -74,7 +74,7 @@ Service registration process that records medical services against an existing p
 
 ## E-İmzalı Rapor Islemleri Metotlari (`medula.hastane.imzali-rapor`)
 
-Digitally-signed report operations: approval (physician / board head / chief physician), signed-blob queries, pending-approval queries, deletion and the XML-object approval step. Inputs and query payloads are opaque byte[] signature blobs; raporKaydet (7-page composite, s.329-336) lands with G45c-b.
+Digitally-signed report operations: registration (raporKaydet dispatching the signed Maluliyet/Engellilik/TibbiGereklilik composite blobs), approval (physician / board head / chief physician), signed-blob queries, pending-approval queries, deletion and the XML-object approval step. Inputs and query payloads are opaque byte[] signature blobs.
 
 | Field | Value |
 | --- | --- |
@@ -97,6 +97,7 @@ Digitally-signed report operations: approval (physician / board head / chief phy
 - `medula.hastane.imzali-rapor.rapor-sil`
 - `medula.hastane.imzali-rapor.onay`
 - `medula.hastane.imzali-rapor.onay-bekleyen`
+- `medula.hastane.imzali-rapor.rapor-kaydet`
 
 ## Ortodonti Formu Kayit Metotlari (`medula.hastane.ortodonti`)
 

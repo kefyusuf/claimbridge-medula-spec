@@ -327,6 +327,42 @@ erDiagram
     string anneTcKimlikNo
     integer doganCocukSayisi
   }
+  EngellilikBransGorusBilgisiDVO {
+    string bransKodu
+    string drTescilNo
+    enum doktorTipi
+    string tetkikTeshisBulguAciklama
+    integer engelOrani
+  }
+  EngellilikRaporDVO {
+    string raporTakipNo
+    string tckimlikNo
+    array fotograf
+    integer tesisKodu
+    string takipNo
+    string raporNo
+    enum muracaatTuru
+    enum muracaatNedeni
+    string basvuruNedeni
+    integer durum
+    string kurulBaskaniDrTescilNo
+    string aciklama
+    integer engelOrani
+    enum bagimlilikDegerlendirilmesi
+    string calistirilamayacagiIslerinNiteligi
+    enum ortopedikEngelVar
+    enum zihinselEngelVar
+    enum gormeEngeliVar
+    enum ruhsalVeDengeselEngelVar
+    enum isitmeEngeliVar
+    enum kronikEngeliVar
+    enum dilVeKonusmaEngeliVar
+    enum siniflanamayanEngeliVar
+    array tanilar
+    array bransGorusler
+    object uyeler
+    array onayBekleyenDoktorlar
+  }
   EvrakKesintiCevapDVO {
     string sonucKodu
     string sonucMesaji
@@ -697,11 +733,32 @@ erDiagram
     integer teshisKodu
     array ICD10Kodu
   }
+  ImzaliDoktorBilgisiDVO {
+    string drTescilNo
+    string drAdi
+    string drSoyadi
+    string drBransKodu
+    enum tipi
+  }
+  ImzaliRaporCevapDVO {
+    string raporTakipNo
+    string sonucKodu
+    string sonucMesaji
+    string uyariMesaji
+    object maluliyetRaporu
+    object engellilikRaporu
+    object tibbiGereklilikRaporu
+  }
   ImzaliRaporDVO {
     enum turu
     object maluliyetRaporu
     object engellilikRaporu
     object tibbiGereklilikRaporu
+  }
+  ImzaliRaporGirisDVO {
+    integer saglikTesisKodu
+    string doktorTcKimlikNo
+    array raporBilgisi
   }
   ImzaliRaporOnayBekleyenSorguGirisDVO {
     integer saglikTesisKodu
@@ -722,6 +779,9 @@ erDiagram
     integer saglikTesisKodu
     string doktorTcKimlikNo
     array raporSorguBilgisi
+  }
+  ImzaliTaniBilgisiDVO {
+    string taniKodu
   }
   IsKazasiRaporDVO {
     string baslangicTarihi
@@ -983,6 +1043,43 @@ erDiagram
     string ambalajAdet
     array hamMaddeler
     array eklenenIlaclar
+  }
+  MaluliyetBransGorusBilgisiDVO {
+    string bransKodu
+    string drTescilNo
+    enum doktorTipi
+    string basvuruNedeni
+    string anamnez
+    string ozgecmis
+    string soygecmis
+    string muayeneBulgulari
+    string tetkikVeLabaratuarBulgulari
+    array tanilar
+  }
+  MaluliyetBransGorusTaniBilgisiDVO {
+    string icd10Kodu
+    string aciklama
+    enum taniNeden
+  }
+  MaluliyetRaporDVO {
+    string raporTakipNo
+    string tckimlikNo
+    array fotograf
+    integer tesisKodu
+    string takipNo
+    string raporTarihi
+    enum maluliyetRaporTuru
+    string raporNo
+    string sevkTarihi
+    enum sevkNedeni
+    enum basvuruSekli
+    integer durum
+    string kurulBaskaniDrTescilNo
+    string aciklama
+    string karar
+    array bransGorusler
+    array uyeler
+    array onayBekleyenDoktorlar
   }
   MalzemeBilgisiDVO {
     string kodsuzMalzemeAdi
@@ -1550,6 +1647,20 @@ erDiagram
     integer saglikTesisKodu
     string tarih
   }
+  TibbiGereklilikRaporDVO {
+    string raporTakipNo
+    string tckimlikNo
+    integer tesisKodu
+    string takipNo
+    string raporTarihi
+    string raporNo
+    enum istekNedeni
+    array tanilar
+    string protokolNo
+    string karar
+    array islemler
+    array doktorlar
+  }
   TupBebekRaporBilgisiDVO {
     enum tupBebekRaporTuru
     string butKodu
@@ -1637,6 +1748,8 @@ erDiagram
   medula_hastane_imzali_rapor_onay_bekleyen ||--|| OnayBekleyenCevapDVO : outputDvo
   medula_hastane_imzali_rapor_onay_bekleyen_rapor_sorgu ||--|| RaporOnayBekleyenSorguDVO : inputDvo
   medula_hastane_imzali_rapor_onay_bekleyen_rapor_sorgu ||--|| RaporSorguCevapDVO : outputDvo
+  medula_hastane_imzali_rapor_rapor_kaydet ||--|| ImzaliRaporGirisDVO : inputDvo
+  medula_hastane_imzali_rapor_rapor_kaydet ||--|| ImzaliRaporCevapDVO : outputDvo
   medula_hastane_imzali_rapor_rapor_onay ||--|| RaporOnayDVO : inputDvo
   medula_hastane_imzali_rapor_rapor_onay ||--|| RaporOnayCevapDVO : outputDvo
   medula_hastane_imzali_rapor_rapor_sil ||--|| ImzaliRaporSilGirisDVO : inputDvo
@@ -1765,6 +1878,18 @@ erDiagram
   ESWLRaporBilgisiDVO }o--|| bobrek_tarafi : enumRef
   ESWLTasBilgisiDVO }o--|| tas_lokalizasyon : enumRef
   ESWTRaporBilgisiDVO }o--|| eswt_vucut_bolgesi : enumRef
+  EngellilikBransGorusBilgisiDVO }o--|| doktor_personel_tipi : enumRef
+  EngellilikRaporDVO }o--|| muracaat_turu : enumRef
+  EngellilikRaporDVO }o--|| muracaat_nedeni : enumRef
+  EngellilikRaporDVO }o--|| bagimlilik_durumu : enumRef
+  EngellilikRaporDVO }o--|| evet_hayir : enumRef
+  EngellilikRaporDVO }o--|| evet_hayir : enumRef
+  EngellilikRaporDVO }o--|| evet_hayir : enumRef
+  EngellilikRaporDVO }o--|| evet_hayir : enumRef
+  EngellilikRaporDVO }o--|| evet_hayir : enumRef
+  EngellilikRaporDVO }o--|| evet_hayir : enumRef
+  EngellilikRaporDVO }o--|| evet_hayir : enumRef
+  EngellilikRaporDVO }o--|| evet_hayir : enumRef
   EvrakKesintiGirisDVO }o--|| grup_turu : enumRef
   EvrakTakipDVO }o--|| grup_turu : enumRef
   FTRRaporBilgisiDVO }o--|| ftr_vucut_bolgesi : enumRef
@@ -1785,6 +1910,7 @@ erDiagram
   IlacListDVO }o--|| odenme_durumu : enumRef
   IlacListDVO }o--|| odenme_durumu : enumRef
   IlacRaporDuzeltDVO }o--|| rapor_turu : enumRef
+  ImzaliDoktorBilgisiDVO }o--|| doktor_personel_tipi : enumRef
   ImzaliRaporDVO }o--|| imzali_rapor_turu : enumRef
   IsKazasiRaporDVO }o--|| yatis_devam_is_kazasi : enumRef
   IsKazasiRaporDVO }o--|| taburcu_kodu : enumRef
@@ -1803,6 +1929,11 @@ erDiagram
   MajistralIlacDVO }o--|| preparat_turu : enumRef
   MajistralIlacDVO }o--|| ambalaj_turu : enumRef
   MajistralIlacDVO }o--|| ambalaj_boyutu : enumRef
+  MaluliyetBransGorusBilgisiDVO }o--|| doktor_personel_tipi : enumRef
+  MaluliyetBransGorusTaniBilgisiDVO }o--|| tani_neden : enumRef
+  MaluliyetRaporDVO }o--|| maluliyet_rapor_turu : enumRef
+  MaluliyetRaporDVO }o--|| sevk_nedeni : enumRef
+  MaluliyetRaporDVO }o--|| basvuru_sekli : enumRef
   MalzemeBilgisiDVO }o--|| malzeme_turu : enumRef
   MalzemeBilgisiRaporDVO }o--|| malzeme_turu : enumRef
   MeslekHastaligiRaporDVO }o--|| calisma_durumu : enumRef
@@ -1844,4 +1975,5 @@ erDiagram
   TesisYatakBilgiDVO }o--|| yatak_turu : enumRef
   TesisYatakBilgiDVO }o--|| tescil_turu : enumRef
   TesisYatakBilgiDVO }o--|| yatak_seviyesi : enumRef
+  TibbiGereklilikRaporDVO }o--|| istek_nedeni : enumRef
   TupBebekRaporBilgisiDVO }o--|| tup_bebek_turu : enumRef

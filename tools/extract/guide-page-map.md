@@ -72,6 +72,32 @@ to the PDF text extraction of `local-guide/official-guide.pdf`
 open rapor item is the §4.6 E-İmzalı Rapor group (separate service, v0.5+
 roadmap).
 
+## Yardimci Islemler (section 4.5)
+
+| Table / section | Pages | Registry usage |
+|---|---|---|
+| 4.5.1-4.5.4 SaglikTesisiAra / DoktorAra / TakipAra / IlacAra | 283-290 | G44a search methods |
+| 4.5.5-4.5.10 getOrneklenmisTakipler … guncelSutKodlari | 290-298 | G44b query methods |
+| 4.5.11-4.5.20 remaining helpers | 298-310 | G44c final helpers |
+
+**Section 4.5 status: FULLY EXTRACTED as of G44c** — 19/19 numbered methods.
+
+## Takip Formu / Taahhüt / Ortodonti / E-İmzalı Rapor (renumbered 4.3-4.6)
+
+| Table / section | Pages | Registry usage |
+|---|---|---|
+| 4.6.1.a-i TakipFormu* + DiabetTakipFormuKayitDVO | 310-321 | G45a takip-formu service |
+| 4.7.1.a-d Taahhut* | 322-324 | G45b taahhut service |
+| 4.7.4 Ağız Şeması + SUT ek-7 restriction | 325-326 | TaahhutDisDVO.disNo semantics |
+| 4.8.1-4.8.3 OrtodontiFormu* | 326-329 | G45b ortodonti service |
+| 4.9.1.a-b ImzaliRaporGiris/CevapDVO | 330 | G45c-b rapor-kaydet |
+| 4.9.1.c-j Maluliyet/Engellilik/TibbiGereklilik chains | 330-336 | G45c-b composites |
+| 4.9.2-4.9.12 workflow methods | 336-349 | G45c-a imzali-rapor service |
+
+**Guide method-catalogue status as of v0.6.0: all main sections (§4.1-4.6
+plus Takip Formu / Taahhüt / Ortodonti / E-İmzalı Rapor) are FULLY
+EXTRACTED.**
+
 ## Not yet extracted
 
 - Complete sonucKodu error catalogs per method (pages beyond 167-168).

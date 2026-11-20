@@ -1,0 +1,19 @@
+id: muracaat-nedeni
+displayName: Muracaat Nedeni
+values:
+  - code: "1"
+    label: Ilk Rapor
+    description: Initial report.
+  - code: "2"
+    label: Ara itiraz
+    description: Interim objection.
+  - code: "3"
+    label: Kontrol Muayanesi / Yenileme
+    description: Control examination or renewal.
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 334
+    confidence: extracted
+status: reviewed

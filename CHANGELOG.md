@@ -6,7 +6,29 @@ Format: [Keep a Changelog](https://keepachangelog.com); versioning: SemVer
 
 ## [Unreleased]
 
-_Nothing yet — v0.5.0 scope is complete._
+_Nothing yet — v0.6.0 scope is complete._
+
+## [0.6.0] — 2026-11-20
+
+Sixth release: every main section of the guide's method catalogue is now
+extracted. Four work slices (G44a-c, G45a-c) added the **Yardimci Islemler**
+service (19 helper methods: facility/physician/tracking/drug searches,
+document-deduction and co-payment chains, abroad entitlements, bed and
+barcode-SUT catalogues, person history, diagnosis search, e-Nabiz
+notifications, death registration, institution referrals, gen queries), the
+**Takip Formu** service (diabetes follow-up form: save/read/delete with the
+47-field DiabetTakipFormuKayitDVO), the **Taahhut** service (dental
+prosthesis commitments restricted to SUT annex-7 codes, with PDF output and
+the mouth-schema tooth numbering) and the **Ortodonti** service (form
+save/cancel/read), and the **E-İmzalı Rapor** service (12 methods whose
+inputs are opaque byte[] signature blobs — registration dispatching the
+Maluliyet/Engellilik/TibbiGereklilik composite chains, the three-tier
+approval workflow, signed-blob queries, the XML-object approval step and
+deletion). Twenty-nine new guide-verified enums, dozens of preserved guide
+anomalies (duplicate TYPE-as-PARAMETER names, underscored parameters,
+String-typed prices and facility codes, ordering anomalies, changelog
+conflicts). Registry now: 9 services, 73 methods (72 reviewed + 1 draft),
+212 DVOs, 81 enums.
 
 ## [0.5.0] — 2026-11-19
 

@@ -488,6 +488,52 @@ Domain: `rapor` · Direction: `input` · Status: `reviewed` · Source refs: medu
 | `anneTcKimlikNo` | string |  | — |  | Mother's citizen ID when the nursing report is issued on behalf of the father (s.261). |
 | `doganCocukSayisi` | integer |  | — |  | Children delivered (s.261). |
 
+## `EngellilikBransGorusBilgisiDVO`
+
+Domain: `imzali-rapor` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `bransKodu` | string |  | — |  | Branch code (s.335). |
+| `drTescilNo` | string |  | — |  | Physician registration number (s.335). |
+| `doktorTipi` | enum |  | doktor-personel-tipi |  | Physician or dentist (s.335). |
+| `tetkikTeshisBulguAciklama` | string |  | — |  | Imaging, diagnosis and findings description (s.335). |
+| `engelOrani` | integer |  | — |  | Department-level impairment rate (s.335). |
+
+## `EngellilikRaporDVO`
+
+Domain: `imzali-rapor` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `raporTakipNo` | string |  | — |  | System-generated tracking number (s.333). |
+| `tckimlikNo` | string |  | — |  | Patient citizen ID (s.333). |
+| `fotograf` | array |  | — |  | Patient ID photograph as a byte array (s.333). |
+| `tesisKodu` | integer |  | — |  | Facility code (s.333). |
+| `takipNo` | string |  | — |  | Tracking number (s.333). |
+| `raporNo` | string |  | — |  | Report number (s.334). |
+| `muracaatTuru` | enum |  | muracaat-turu |  | Institution or personal application (s.334). |
+| `muracaatNedeni` | enum |  | muracaat-nedeni |  | Three-value admission reason (s.334). |
+| `basvuruNedeni` | string |  | — |  | Admission reason text (s.334). |
+| `durum` | integer |  | — |  | Approval state; no code list given (s.334). |
+| `kurulBaskaniDrTescilNo` | string |  | — |  | Board-head physician registration number (s.334). |
+| `aciklama` | string |  | — |  | Description (s.334). |
+| `engelOrani` | integer |  | — |  | Impairment rate between 0 and 100 (s.334). |
+| `bagimlilikDegerlendirilmesi` | enum |  | bagimlilik-durumu |  | Independent / partially dependent / fully dependent (s.334). |
+| `calistirilamayacagiIslerinNiteligi` | string |  | — |  | Nature of the work the person cannot perform (s.334). |
+| `ortopedikEngelVar` | enum |  | evet-hayir |  | E = Evet, H = Hayır (s.334). |
+| `zihinselEngelVar` | enum |  | evet-hayir |  | E/H (s.334). |
+| `gormeEngeliVar` | enum |  | evet-hayir |  | E/H (s.334). |
+| `ruhsalVeDengeselEngelVar` | enum |  | evet-hayir |  | E/H (s.334). |
+| `isitmeEngeliVar` | enum |  | evet-hayir |  | E/H (s.334). |
+| `kronikEngeliVar` | enum |  | evet-hayir |  | E/H (s.334). |
+| `dilVeKonusmaEngeliVar` | enum |  | evet-hayir |  | E/H (s.334). |
+| `siniflanamayanEngeliVar` | enum |  | evet-hayir |  | E/H (s.334). |
+| `tanilar` | array |  | — |  | Diagnoses; item shape Tablo 4.9.1.h (ImzaliTaniBilgisiDVO, this registry) (s.335). |
+| `bransGorusler` | array |  | — |  | Department opinions; item shape Tablo 4.9.1.i (EngellilikBransGorusBilgisiDVO, this registry) (s.335). |
+| `uyeler` | object |  | — |  | Board members; the guide types it singular DoktorBilgisiDVO unlike the array in MaluliyetRaporDVO — preserved verbatim; shape ImzaliDoktorBilgisiDVO (s.335). |
+| `onayBekleyenDoktorlar` | array |  | — |  | Physicians pending approval; item shape ImzaliDoktorBilgisiDVO (s.335). |
+
 ## `EvrakKesintiCevapDVO`
 
 Domain: `yardimci-islemler` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
@@ -1088,6 +1134,32 @@ Domain: `rapor` · Direction: `input` · Status: `reviewed` · Source refs: medu
 | `teshisKodu` | integer |  | — |  | Report diagnosis code (s.278). |
 | `ICD10Kodu` | array |  | — |  | Diagnosis codes; the guide types this row as TaniBilgisiDVO[] while naming the parameter ICD10Kodu — both facts preserved (s.278); item shape Tablo 4.2.1.k (TaniBilgisiDVO, hizmet-kayit group). |
 
+## `ImzaliDoktorBilgisiDVO`
+
+Domain: `imzali-rapor` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `drTescilNo` | string |  | — |  | Physician diploma registration number (s.333). |
+| `drAdi` | string |  | — |  | Physician first name (s.333). |
+| `drSoyadi` | string |  | — |  | Physician last name (s.333). |
+| `drBransKodu` | string |  | — |  | Physician branch code (s.333). |
+| `tipi` | enum |  | doktor-personel-tipi |  | Physician or dentist (s.333). |
+
+## `ImzaliRaporCevapDVO`
+
+Domain: `imzali-rapor` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `raporTakipNo` | string |  | — |  | System-generated unique report tracking number (s.330). |
+| `sonucKodu` | string |  | — |  | Result code; "0000" means success (s.330). |
+| `sonucMesaji` | string |  | — |  | Result description (s.330). |
+| `uyariMesaji` | string |  | — |  | Warning message (s.330). |
+| `maluliyetRaporu` | object |  | — |  | Populated when a disability report was saved; shape Tablo 4.9.1.c (MaluliyetRaporDVO, this registry) (s.330). |
+| `engellilikRaporu` | object |  | — |  | Populated when an impairment report was saved; shape Tablo 4.9.1.g (EngellilikRaporDVO, this registry) (s.330). |
+| `tibbiGereklilikRaporu` | object |  | — |  | Populated when a medical-necessity report was saved; shape Tablo 4.9.1.j (TibbiGereklilikRaporDVO, this registry) (s.330). |
+
 ## `ImzaliRaporDVO`
 
 Domain: `imzali-rapor` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
@@ -1098,6 +1170,16 @@ Domain: `imzali-rapor` · Direction: `output` · Status: `reviewed` · Source re
 | `maluliyetRaporu` | object |  | — |  | Populated per report type; shape Tablo 4.9.1.c (MaluliyetRaporDVO) — §4.9 composite, deferred to G45c-b. |
 | `engellilikRaporu` | object |  | — |  | Populated per report type; shape Tablo 4.9.1.g (EngellilikRaporDVO) — §4.9 composite, deferred to G45c-b. |
 | `tibbiGereklilikRaporu` | object |  | — |  | Populated per report type; shape Tablo 4.9.1.j (TibbiGereklilikRaporDVO) — §4.9 composite, deferred to G45c-b. |
+
+## `ImzaliRaporGirisDVO`
+
+Domain: `imzali-rapor` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `saglikTesisKodu` | integer |  | — |  | GSS-assigned facility code (s.330). |
+| `doktorTcKimlikNo` | string |  | — |  | Citizen ID of the registering physician (s.330). |
+| `raporBilgisi` | array |  | — |  | Digitally signed report blob — the E-İmzalı flow sends opaque byte arrays; the structured Maluliyet/Engellilik/TibbiGereklilik DVOs below describe the SIGNED CONTENT (s.330). |
 
 ## `ImzaliRaporOnayBekleyenSorguGirisDVO`
 
@@ -1138,6 +1220,14 @@ Domain: `imzali-rapor` · Direction: `input` · Status: `reviewed` · Source ref
 | `saglikTesisKodu` | integer |  | — |  | GSS-assigned facility code (s.340). |
 | `doktorTcKimlikNo` | string |  | — |  | Querying physician's citizen ID (s.340). |
 | `raporSorguBilgisi` | array |  | — |  | Signed query blob; Digitally signed report blob — the E-İmzalı flow sends opaque byte arrays, not structured fields. |
+
+## `ImzaliTaniBilgisiDVO`
+
+Domain: `imzali-rapor` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `taniKodu` | string |  | — |  | ICD-10 code. Id disambiguated as ImzaliTaniBilgisiDVO — the guide names it TaniBilgisiDVO, colliding with the hizmet-kayit group's Tablo 4.2.1.k shape (s.335). |
 
 ## `IsKazasiRaporDVO`
 
@@ -1569,6 +1659,58 @@ Domain: `hizmet-kayit` · Direction: `input` · Status: `reviewed` · Source ref
 | `ambalajAdet` | string |  | — |  | Packaging quantity (s.200) |
 | `hamMaddeler` | array |  | — |  | Raw-material records, expanded as the MajistralHamMaddeDVO registry entity (Tablo 4.2.1.f.1.1, s.201) |
 | `eklenenIlaclar` | array |  | — |  | Added-drug records, expanded as the MajistralEklenenIlacDVO registry entity (Tablo 4.2.1.f.1.2, s.223-224) |
+
+## `MaluliyetBransGorusBilgisiDVO`
+
+Domain: `imzali-rapor` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `bransKodu` | string |  | — |  | Branch code (s.332). |
+| `drTescilNo` | string |  | — |  | Physician diploma registration number (s.332). |
+| `doktorTipi` | enum |  | doktor-personel-tipi |  | Physician or dentist (s.332). |
+| `basvuruNedeni` | string |  | — |  | Admission reason (s.332). |
+| `anamnez` | string |  | — |  | Anamnesis (s.332). |
+| `ozgecmis` | string |  | — |  | Medical history (s.332). |
+| `soygecmis` | string |  | — |  | Family history (s.332). |
+| `muayeneBulgulari` | string |  | — |  | Examination findings (s.332). |
+| `tetkikVeLabaratuarBulgulari` | string |  | — |  | Imaging and laboratory findings (s.332). |
+| `tanilar` | array |  | — |  | Diagnoses; item shape Tablo 4.9.1.e (MaluliyetBransGorusTaniBilgisiDVO, this registry) (s.332). |
+
+## `MaluliyetBransGorusTaniBilgisiDVO`
+
+Domain: `imzali-rapor` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `icd10Kodu` | string |  | — |  | ICD-10 code (s.332). |
+| `aciklama` | string |  | — |  | Description (s.332). |
+| `taniNeden` | enum |  | tani-neden |  | Relation reason; codes 1-2 apply to occupational-disease reports, 3-4 to work-accident reports (s.332-333). |
+
+## `MaluliyetRaporDVO`
+
+Domain: `imzali-rapor` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `raporTakipNo` | string |  | — |  | System-generated tracking number (s.330). |
+| `tckimlikNo` | string |  | — |  | Patient citizen ID (s.331). |
+| `fotograf` | array |  | — |  | Patient ID photograph as a byte array (s.331). |
+| `tesisKodu` | integer |  | — |  | Facility code (s.331). |
+| `takipNo` | string |  | — |  | Tracking number (s.331). |
+| `raporTarihi` | string |  | — |  | "dd.MM.yyyy" report date (s.331). |
+| `maluliyetRaporTuru` | enum |  | maluliyet-rapor-turu |  | Maluliyet / occupational disease / work accident (s.331). |
+| `raporNo` | string |  | — |  | Report number (s.331). |
+| `sevkTarihi` | string |  | — |  | "dd.MM.yyyy" referral date (s.331). |
+| `sevkNedeni` | enum |  | sevk-nedeni |  | Three-value referral reason (s.331). |
+| `basvuruSekli` | enum |  | basvuru-sekli |  | Institution or personal application (s.331). |
+| `durum` | integer |  | — |  | Report approval state; no code list given (s.331). |
+| `kurulBaskaniDrTescilNo` | string |  | — |  | Board-head physician registration number (s.331). |
+| `aciklama` | string |  | — |  | Description (s.331). |
+| `karar` | string |  | — |  | Decision (s.331). |
+| `bransGorusler` | array |  | — |  | Department opinions; item shape Tablo 4.9.1.d (MaluliyetBransGorusBilgisiDVO, this registry) (s.331). |
+| `uyeler` | array |  | — |  | Board members; item shape Tablo 4.9.1.f (ImzaliDoktorBilgisiDVO, this registry) (s.331). |
+| `onayBekleyenDoktorlar` | array |  | — |  | Physicians pending approval; item shape ImzaliDoktorBilgisiDVO (s.331). |
 
 ## `MalzemeBilgisiDVO`
 
@@ -2540,6 +2682,25 @@ Domain: `yardimci-islemler` · Direction: `input` · Status: `reviewed` · Sourc
 | --- | --- | --- | --- | --- | --- |
 | `saglikTesisKodu` | integer |  | — |  | Code of the calling facility (s.300). |
 | `tarih` | string |  | — |  | Empty returns the whole bed list; filled returns the beds valid on that date (s.300). |
+
+## `TibbiGereklilikRaporDVO`
+
+Domain: `imzali-rapor` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `raporTakipNo` | string |  | — |  | System-generated tracking number (s.336). |
+| `tckimlikNo` | string |  | — |  | Patient citizen ID (s.336). |
+| `tesisKodu` | integer |  | — |  | Facility code (s.336). |
+| `takipNo` | string |  | — |  | Tracking number (s.336). |
+| `raporTarihi` | string |  | — |  | "dd.MM.yyyy" report date (s.336). |
+| `raporNo` | string |  | — |  | Report number (s.336). |
+| `istekNedeni` | enum |  | istek-nedeni |  | Three-value request reason (s.336). |
+| `tanilar` | array |  | — |  | Diagnoses; item shape Tablo 4.9.1.h (ImzaliTaniBilgisiDVO, this registry) (s.336). |
+| `protokolNo` | string |  | — |  | Protocol number (s.336). |
+| `karar` | string |  | — |  | Decision (s.336). |
+| `islemler` | array |  | — |  | SUT procedures; the guide references SutIslemBilgisiDVO without publishing its table in this section — shape deferred (s.336). |
+| `doktorlar` | array |  | — |  | Physicians — at least 3 can sign; item shape ImzaliDoktorBilgisiDVO (s.336). |
 
 ## `TupBebekRaporBilgisiDVO`
 

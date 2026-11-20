@@ -85,7 +85,7 @@ function values(enumId: string): Array<Record<string, string>> {
 describe("imzali rapor service (G45c-a, guide s.336-349)", () => {
   it("registers the imzali-rapor service with guide-verified wsdl", () => {
     expect(service["id"]).toBe("medula.hastane.imzali-rapor");
-    expect(service["methods"] as string[]).toHaveLength(11);
+    expect(service["methods"] as string[]).toHaveLength(12);
     const manifest = readYaml("sources/wsdl-manifest.yml");
     const wsdls = manifest["wsdls"] as Array<Record<string, string>>;
     const ir = wsdls.filter((w) => w["service"] === "imzali-rapor");

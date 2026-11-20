@@ -10,11 +10,11 @@ describe("release v0.4.0 (Group 43, superseded by v0.5.0)", () => {
       resolve(root, "SPEC_VERSION"),
       "utf8",
     ).trim();
-    expect(specVersion).toBe("0.5.0");
+    expect(specVersion).toBe("0.6.0");
     const pkg = JSON.parse(
       readFileSync(resolve(root, "package.json"), "utf8"),
     ) as { version: string };
-    expect(pkg.version).toBe("0.5.0");
+    expect(pkg.version).toBe("0.6.0");
   });
 
   it("records the 0.4.0 release in the changelog", () => {
@@ -30,6 +30,6 @@ describe("release v0.4.0 (Group 43, superseded by v0.5.0)", () => {
         "utf8",
       ),
     ) as { specVersion: string };
-    expect(bundle.specVersion).toBe("0.5.0");
+    expect(bundle.specVersion).toBe("0.6.0");
   });
 });

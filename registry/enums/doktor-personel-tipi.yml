@@ -1,0 +1,17 @@
+id: doktor-personel-tipi
+displayName: Doktor Personel Tipi
+values:
+  - code: "1"
+    label: Hekim
+    description: Physician.
+  - code: "2"
+    label: Dis Hekimi
+    description: Dentist.
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 332
+    confidence: extracted
+    notes: Recurring two-value list across MaluliyetBransGorusBilgisiDVO.doktorTipi (s.332), ImzaliDoktorBilgisiDVO.tipi (s.333) and EngellilikBransGorusBilgisiDVO.doktorTipi (s.335).
+status: reviewed

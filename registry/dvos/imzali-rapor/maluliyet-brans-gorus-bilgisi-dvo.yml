@@ -1,0 +1,202 @@
+id: MaluliyetBransGorusBilgisiDVO
+domain: imzali-rapor
+direction: input
+fields:
+  - name: bransKodu
+    displayName: Brans Kodu
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: null
+    description: Branch code (s.332).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 332
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: drTescilNo
+    displayName: Doktor T.C. Kimlik No
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: null
+    description: Physician diploma registration number (s.332).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 332
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: doktorTipi
+    displayName: Doktor Personel Tipi
+    type: enum
+    enumRef: doktor-personel-tipi
+    codeSystem: null
+    required: true
+    length: null
+    description: Physician or dentist (s.332).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 332
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: basvuruNedeni
+    displayName: Basvuru Nedeni
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: 3000
+    description: Admission reason (s.332).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 332
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: anamnez
+    displayName: Anamnez
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: 4000
+    description: Anamnesis (s.332).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 332
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: ozgecmis
+    displayName: Ozgecmis
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: 3000
+    description: Medical history (s.332).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 332
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: soygecmis
+    displayName: Soygecmis
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: 3000
+    description: Family history (s.332).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 332
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: muayeneBulgulari
+    displayName: Muayene Bulgulari
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: 4000
+    description: Examination findings (s.332).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 332
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: tetkikVeLabaratuarBulgulari
+    displayName: Tetkik ve Labaratuar Bulgulari
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: 4000
+    description: Imaging and laboratory findings (s.332).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 332
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: tanilar
+    displayName: Tanilar
+    type: array
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: null
+    description: Diagnoses; item shape Tablo 4.9.1.e (MaluliyetBransGorusTaniBilgisiDVO, this registry) (s.332).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 332
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 330
+    confidence: extracted
+    section: 4.6.1 raporKaydet Metodu
+status: reviewed
