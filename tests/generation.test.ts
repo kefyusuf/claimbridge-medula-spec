@@ -115,14 +115,19 @@ describe("generation (Group 6)", () => {
     expect(diagrams["service-map.mmd"]).toContain("hizmet-kayit");
   });
 
-  it("generates committed outputs that pass the check command", () => {
-    execSync("pnpm generate", { cwd: root, stdio: "pipe" });
-    const stdout = execSync("pnpm check", {
-      cwd: root,
-      stdio: "pipe",
-    }).toString();
-    expect(stdout).toContain("check: OK");
-  });
+  it(
+    "generates committed outputs that pass the check command",
+    () => {
+      execSync("pnpm generate", { cwd: root, stdio: "pipe" });
+      const stdout = execSync("pnpm check", {
+        cwd: root,
+        stdio: "pipe",
+      }).toString();
+      expect(stdout).toContain("check: OK");
+    },
+    // Registry growth scaled this generate+check cycle past the default 5s.
+    { timeout: 60000 },
+  );
 
   it("detects stale generated outputs and exits non-zero", () => {
     const minPath = resolve(root, "dist", "claimbridge-medula-spec.min.json");
