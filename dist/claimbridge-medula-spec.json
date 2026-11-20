@@ -1,6 +1,6 @@
 {
   "specVersion": "0.5.0",
-  "generatedAt": "2026-11-19T20:46:45.214Z",
+  "generatedAt": "2026-11-20T15:08:02.942Z",
   "sources": [
     {
       "id": "medula-hastane-guide-2026-06-17",
@@ -185,7 +185,13 @@
         "medula.hastane.yardimci-islemler.saglik-tesisi-ara",
         "medula.hastane.yardimci-islemler.doktor-ara",
         "medula.hastane.yardimci-islemler.takip-ara",
-        "medula.hastane.yardimci-islemler.ilac-ara"
+        "medula.hastane.yardimci-islemler.ilac-ara",
+        "medula.hastane.yardimci-islemler.orneklenmis-takipler",
+        "medula.hastane.yardimci-islemler.kesinti-yapilmis-islemler",
+        "medula.hastane.yardimci-islemler.katilim-payi-ucreti",
+        "medula.hastane.yardimci-islemler.takip-bilgileri-listesi",
+        "medula.hastane.yardimci-islemler.yurt-disi-yardim-hakki-getir",
+        "medula.hastane.yardimci-islemler.guncel-sut-kodlari"
       ],
       "status": "reviewed"
     }
@@ -1855,6 +1861,48 @@
       "status": "reviewed"
     },
     {
+      "id": "medula.hastane.yardimci-islemler.guncel-sut-kodlari",
+      "service": "medula.hastane.yardimci-islemler",
+      "names": {
+        "documentationHeading": "guncelSutKodlari",
+        "operationName": "guncelSutKodlari",
+        "aliases": [
+          "guncelSutKodlari"
+        ]
+      },
+      "contract": {
+        "inputDvo": "GuncelSutSorguGirisDVO",
+        "outputDvo": "GuncelSutSorguCevapDVO"
+      },
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 297,
+          "confidence": "extracted",
+          "section": "4.5 4.5.10 guncelSutKodlari Metodu"
+        }
+      ],
+      "stateEffects": {
+        "creates": [],
+        "reads": [],
+        "updates": [],
+        "deletes": [],
+        "generates": []
+      },
+      "success": {
+        "resultCodeField": "sonucKodu",
+        "successCode": "0000",
+        "messageField": "sonucMesaji"
+      },
+      "sandbox": {
+        "supported": false,
+        "defaultScenario": null
+      },
+      "status": "reviewed"
+    },
+    {
       "id": "medula.hastane.yardimci-islemler.ilac-ara",
       "service": "medula.hastane.yardimci-islemler",
       "names": {
@@ -1876,6 +1924,132 @@
           "page": 287,
           "confidence": "extracted",
           "section": "4.5 4.5.4 IlacAra Metodu"
+        }
+      ],
+      "stateEffects": {
+        "creates": [],
+        "reads": [],
+        "updates": [],
+        "deletes": [],
+        "generates": []
+      },
+      "success": {
+        "resultCodeField": "sonucKodu",
+        "successCode": "0000",
+        "messageField": "sonucMesaji"
+      },
+      "sandbox": {
+        "supported": false,
+        "defaultScenario": null
+      },
+      "status": "reviewed"
+    },
+    {
+      "id": "medula.hastane.yardimci-islemler.katilim-payi-ucreti",
+      "service": "medula.hastane.yardimci-islemler",
+      "names": {
+        "documentationHeading": "katilimPayiUcreti",
+        "operationName": "katilimPayiUcreti",
+        "aliases": [
+          "katilimPayiUcreti"
+        ]
+      },
+      "contract": {
+        "inputDvo": "KatilimPayiGirisDVO",
+        "outputDvo": "KatilimPayiCevapDVO"
+      },
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 293,
+          "confidence": "extracted",
+          "section": "4.5 4.5.7 katilimPayiUcreti Metodu"
+        }
+      ],
+      "stateEffects": {
+        "creates": [],
+        "reads": [],
+        "updates": [],
+        "deletes": [],
+        "generates": []
+      },
+      "success": {
+        "resultCodeField": "sonucKodu",
+        "successCode": "0000",
+        "messageField": "sonucMesaji"
+      },
+      "sandbox": {
+        "supported": false,
+        "defaultScenario": null
+      },
+      "status": "reviewed"
+    },
+    {
+      "id": "medula.hastane.yardimci-islemler.kesinti-yapilmis-islemler",
+      "service": "medula.hastane.yardimci-islemler",
+      "names": {
+        "documentationHeading": "kesintiYapilmisIslemler",
+        "operationName": "kesintiYapilmisIslemler",
+        "aliases": [
+          "kesintiYapilmisIslemler"
+        ]
+      },
+      "contract": {
+        "inputDvo": "EvrakKesintiGirisDVO",
+        "outputDvo": "EvrakKesintiCevapDVO"
+      },
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 291,
+          "confidence": "extracted",
+          "section": "4.5 4.5.6 kesintiYapilmisIslemler Metodu"
+        }
+      ],
+      "stateEffects": {
+        "creates": [],
+        "reads": [],
+        "updates": [],
+        "deletes": [],
+        "generates": []
+      },
+      "success": {
+        "resultCodeField": "sonucKodu",
+        "successCode": "0000",
+        "messageField": "sonucMesaji"
+      },
+      "sandbox": {
+        "supported": false,
+        "defaultScenario": null
+      },
+      "status": "reviewed"
+    },
+    {
+      "id": "medula.hastane.yardimci-islemler.orneklenmis-takipler",
+      "service": "medula.hastane.yardimci-islemler",
+      "names": {
+        "documentationHeading": "getOrneklenmisTakipler",
+        "operationName": "getOrneklenmisTakipler",
+        "aliases": [
+          "getOrneklenmisTakipler"
+        ]
+      },
+      "contract": {
+        "inputDvo": "OrneklenmisGirisDVO",
+        "outputDvo": "OrneklenmisCevapDVO"
+      },
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 290,
+          "confidence": "extracted",
+          "section": "4.5 4.5.5 getOrneklenmisTakipler Metodu"
         }
       ],
       "stateEffects": {
@@ -1960,6 +2134,90 @@
           "page": 286,
           "confidence": "extracted",
           "section": "4.5 4.5.3 TakipAra Metodu"
+        }
+      ],
+      "stateEffects": {
+        "creates": [],
+        "reads": [],
+        "updates": [],
+        "deletes": [],
+        "generates": []
+      },
+      "success": {
+        "resultCodeField": "sonucKodu",
+        "successCode": "0000",
+        "messageField": "sonucMesaji"
+      },
+      "sandbox": {
+        "supported": false,
+        "defaultScenario": null
+      },
+      "status": "reviewed"
+    },
+    {
+      "id": "medula.hastane.yardimci-islemler.takip-bilgileri-listesi",
+      "service": "medula.hastane.yardimci-islemler",
+      "names": {
+        "documentationHeading": "takipBilgileriListesi",
+        "operationName": "takipBilgileriListesi",
+        "aliases": [
+          "takipBilgileriListesi"
+        ]
+      },
+      "contract": {
+        "inputDvo": "TakipBilgisiGirisDVO",
+        "outputDvo": "TakipBilgisiCevapDVO"
+      },
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 294,
+          "confidence": "extracted",
+          "section": "4.5 4.5.8 takipBilgileriListesi Metodu"
+        }
+      ],
+      "stateEffects": {
+        "creates": [],
+        "reads": [],
+        "updates": [],
+        "deletes": [],
+        "generates": []
+      },
+      "success": {
+        "resultCodeField": "sonucKodu",
+        "successCode": "0000",
+        "messageField": "sonucMesaji"
+      },
+      "sandbox": {
+        "supported": false,
+        "defaultScenario": null
+      },
+      "status": "reviewed"
+    },
+    {
+      "id": "medula.hastane.yardimci-islemler.yurt-disi-yardim-hakki-getir",
+      "service": "medula.hastane.yardimci-islemler",
+      "names": {
+        "documentationHeading": "yurtDisiYardimHakkiGetir",
+        "operationName": "yurtDisiYardimHakkiGetir",
+        "aliases": [
+          "yurtDisiYardimHakkiGetir"
+        ]
+      },
+      "contract": {
+        "inputDvo": "YurtDisiYardimHakkiGetirGirisDVO",
+        "outputDvo": "YurtDisiYardimHakkiGetirCevapDVO"
+      },
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 296,
+          "confidence": "extracted",
+          "section": "4.5 4.5.9 yurtDisiYardimHakkiGetir Metodu"
         }
       ],
       "stateEffects": {
@@ -5880,6 +6138,444 @@
       "status": "reviewed"
     },
     {
+      "id": "EvrakKesintiCevapDVO",
+      "domain": "yardimci-islemler",
+      "direction": "output",
+      "fields": [
+        {
+          "name": "sonucKodu",
+          "displayName": "Sonuc Kodu",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": 4,
+          "description": "Result code; \"0000\" means success (s.292).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 292,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "sonucMesaji",
+          "displayName": "Sonuc Mesaji",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Result description (s.292).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 292,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "evrakReferansNo",
+          "displayName": "Evrak Referans No",
+          "type": "integer",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Document reference number of the deducted document (s.292).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 292,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "takipler",
+          "displayName": "Takip Listesi",
+          "type": "array",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Tracking records; item shape Tablo 4.5.6.c (EvrakTakipDVO, this registry) (s.292).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 292,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "muayeneKatilimTutari",
+          "displayName": "Muayene Katilim Payi",
+          "type": "decimal",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Examination co-payment of the document (s.292).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 292,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "malzemeKatilimTutari",
+          "displayName": "Malzeme Katilim Payi",
+          "type": "decimal",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Material co-payment of the document (s.292).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 292,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "tupBebekKatilimTutari",
+          "displayName": "Tup Bebek Katilim Payi",
+          "type": "decimal",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "IVF co-payment of the document (s.292).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 292,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 290,
+          "confidence": "extracted",
+          "section": "4.5 Yardimci Web Servis Metotlari"
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
+      "id": "EvrakKesintiGirisDVO",
+      "domain": "yardimci-islemler",
+      "direction": "input",
+      "fields": [
+        {
+          "name": "evrakReferansNo",
+          "displayName": "Evrak Referans No",
+          "type": "integer",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Document reference number (s.291).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 291,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "tesisKodu",
+          "displayName": "Saglik Tesis Kodu",
+          "type": "integer",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Code of the calling facility (s.291).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 291,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "grupTuru",
+          "displayName": "Grup Turu",
+          "type": "enum",
+          "enumRef": "grup-turu",
+          "codeSystem": null,
+          "required": true,
+          "length": 1,
+          "description": "A = Ayaktan, Y = Yatarak, G = Günübirlik, D = Diğer (s.291).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 291,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "grupKodu",
+          "displayName": "Grup Kodu",
+          "type": "integer",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Group code; values come from the evrakTakipGrupKodlariSorgu method (s.291).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 291,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 290,
+          "confidence": "extracted",
+          "section": "4.5 Yardimci Web Servis Metotlari"
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
+      "id": "EvrakTakipDVO",
+      "domain": "yardimci-islemler",
+      "direction": "output",
+      "fields": [
+        {
+          "name": "takipNo",
+          "displayName": "Takip No",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Tracking number (s.292).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": true,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 292,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "toplamTutar",
+          "displayName": "Toplam Tutar",
+          "type": "decimal",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Total amount of the takip (s.292).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 292,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "kesintiler",
+          "displayName": "Kesintiler",
+          "type": "array",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Deductions; item shape Tablo 4.5.6.d (TakipIslemKesintiDVO, this registry) (s.292).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 292,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "grupTuru",
+          "displayName": "Grup Turu",
+          "type": "enum",
+          "enumRef": "grup-turu",
+          "codeSystem": null,
+          "required": true,
+          "length": 1,
+          "description": "A = Ayaktan, Y = Yatarak, G = Günübirlik, D = Diğer (s.292).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 292,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "grupKodu",
+          "displayName": "Grup Kodu",
+          "type": "integer",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Group code; values come from the evrakTakipGrupKodlariSorgu method (s.292).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 292,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 290,
+          "confidence": "extracted",
+          "section": "4.5 Yardimci Web Servis Metotlari"
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
       "id": "FTRRaporBilgisiDVO",
       "domain": "rapor",
       "direction": "input",
@@ -7352,6 +8048,167 @@
           "conditionalRequired": [],
           "introducedIn": "0.2.0",
           "deprecatedIn": null
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
+      "id": "GuncelSutSorguCevapDVO",
+      "domain": "yardimci-islemler",
+      "direction": "output",
+      "fields": [
+        {
+          "name": "sonucKodu",
+          "displayName": "Sonuc Kodu",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": 4,
+          "description": "Result code; \"0000\" means success (s.298).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 298,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "sonucMesaji",
+          "displayName": "Sonuc Mesaji",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Result description (s.298).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 298,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "sutKodlari",
+          "displayName": "Sut Kodlari",
+          "type": "array",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "SUT code list; item shape Tablo 4.5.11.c (SutFiyatDVO, this registry) (s.298).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 298,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 290,
+          "confidence": "extracted",
+          "section": "4.5 Yardimci Web Servis Metotlari"
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
+      "id": "GuncelSutSorguGirisDVO",
+      "domain": "yardimci-islemler",
+      "direction": "input",
+      "fields": [
+        {
+          "name": "saglikTesisKodu",
+          "displayName": "Tesis Kodu",
+          "type": "integer",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Code of the calling facility (s.297).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 297,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "tarih",
+          "displayName": "Tarih",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": 10,
+          "description": "\"dd.MM.yyyy\"; empty returns the whole current list, filled returns changes after the queried date (s.297).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 297,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [
+            {
+              "condition": "empty vs filled has list vs delta semantics",
+              "note": "guide: boş gönderilirse güncel tüm liste, dolu gönderilirse sonraki değişenler (s.297)"
+            }
+          ],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 290,
+          "confidence": "extracted",
+          "section": "4.5 Yardimci Web Servis Metotlari"
         }
       ],
       "status": "reviewed"
@@ -14269,6 +15126,300 @@
       "status": "reviewed"
     },
     {
+      "id": "KatilimPayiCevapDVO",
+      "domain": "yardimci-islemler",
+      "direction": "output",
+      "fields": [
+        {
+          "name": "sonucKodu",
+          "displayName": "Sonuc Kodu",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": 4,
+          "description": "Result code; \"0000\" means success (s.293).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 293,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "sonucMesaji",
+          "displayName": "Sonuc Mesaji",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Result description (s.294).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 294,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "evrakRefNo",
+          "displayName": "Evrak Referans No",
+          "type": "integer",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Document reference number of the deducted document (s.294).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 294,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "KatilimPayiDVO",
+          "displayName": "Katilim Payi Alinan Islemler",
+          "type": "array",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Co-payment records; the guide uses the TYPE name as the PARAMETER name here — preserved verbatim; item shape Tablo 4.5.7.c (KatilimPayiDVO, this registry) (s.294).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 294,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 290,
+          "confidence": "extracted",
+          "section": "4.5 Yardimci Web Servis Metotlari"
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
+      "id": "KatilimPayiDVO",
+      "domain": "yardimci-islemler",
+      "direction": "output",
+      "fields": [
+        {
+          "name": "takipNo",
+          "displayName": "Takip No",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Tracking number (s.294).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": true,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 294,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "muayeneKatilimTutari",
+          "displayName": "Muayene Katilim Payi Tutari",
+          "type": "decimal",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Examination co-payment of the takip (s.294).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 294,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "malzemeKatilimTutari",
+          "displayName": "Malzeme Katilim Payi Tutari",
+          "type": "decimal",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Material co-payment of the takip (s.294).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 294,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "tupBebekKatilimTutari",
+          "displayName": "Tup Bebek Katilim Payi Tutari",
+          "type": "decimal",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "IVF co-payment of the takip (s.294).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 294,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 290,
+          "confidence": "extracted",
+          "section": "4.5 Yardimci Web Servis Metotlari"
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
+      "id": "KatilimPayiGirisDVO",
+      "domain": "yardimci-islemler",
+      "direction": "input",
+      "fields": [
+        {
+          "name": "evrakRefNo",
+          "displayName": "Evrak Referans No",
+          "type": "integer",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Document reference number (s.293).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 293,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "saglikTesisKodu",
+          "displayName": "Saglik Tesis Kodu",
+          "type": "integer",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Code of the calling facility (s.293).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 293,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 290,
+          "confidence": "extracted",
+          "section": "4.5 Yardimci Web Servis Metotlari"
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
       "id": "KayitliIslemBilgisiDVO",
       "domain": "hizmet-kayit",
       "direction": "output",
@@ -17524,6 +18675,234 @@
           "conditionalRequired": [],
           "introducedIn": "0.2.0",
           "deprecatedIn": null
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
+      "id": "OrneklenmisCevapDVO",
+      "domain": "yardimci-islemler",
+      "direction": "output",
+      "fields": [
+        {
+          "name": "sonucKodu",
+          "displayName": "Sonuc Kodu",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": 4,
+          "description": "Result code; \"0000\" means success (s.291).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 291,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "sonucMesaji",
+          "displayName": "Sonuc Mesaji",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Result description (s.291).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 291,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "saglikTesisKodu",
+          "displayName": "Tesis Kodu",
+          "type": "integer",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Code of the facility that searched the sampled takips (s.291).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 291,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "takipler",
+          "displayName": "Takip Listesi",
+          "type": "array",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Sampled tracking records; item shape Tablo 4.5.6.c (EvrakTakipDVO, this registry) (s.291).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 291,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 290,
+          "confidence": "extracted",
+          "section": "4.5 Yardimci Web Servis Metotlari"
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
+      "id": "OrneklenmisGirisDVO",
+      "domain": "yardimci-islemler",
+      "direction": "input",
+      "fields": [
+        {
+          "name": "evrakRefNo",
+          "displayName": "Evrak Referans No",
+          "type": "integer",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Document reference number (s.290).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 290,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "saglikTesisKodu",
+          "displayName": "Saglik Tesis Kodu",
+          "type": "integer",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Code of the searching facility (s.290).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 290,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "grupTuru",
+          "displayName": "Grup Turu",
+          "type": "enum",
+          "enumRef": "grup-turu",
+          "codeSystem": null,
+          "required": true,
+          "length": 1,
+          "description": "A = Ayaktan, Y = Yatarak, G = Günübirlik, D = Diğer (s.290).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 290,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "grupKodu",
+          "displayName": "Grup Kodu",
+          "type": "integer",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Group code; values come from the evrakTakipGrupKodlariSorgu method (s.290).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 290,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 290,
+          "confidence": "extracted",
+          "section": "4.5 Yardimci Web Servis Metotlari"
         }
       ],
       "status": "reviewed"
@@ -20792,6 +22171,144 @@
       "status": "reviewed"
     },
     {
+      "id": "SutFiyatDVO",
+      "domain": "yardimci-islemler",
+      "direction": "output",
+      "fields": [
+        {
+          "name": "sutKodu",
+          "displayName": "Sut Kodu",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": "SUT",
+          "required": false,
+          "length": null,
+          "description": "SUT procedure code (s.298).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 298,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "adi",
+          "displayName": "Sut Adi",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "SUT code name (s.298).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 298,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "fiyat",
+          "displayName": "Guncel Fiyat",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Price at the queried date — the guide types this String despite being a price (s.298).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 298,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "turu",
+          "displayName": "Hizmet Turu",
+          "type": "enum",
+          "enumRef": "sut-hizmet-turu",
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Ten-value service-type list (s.298).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 298,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "gecerlilikTarihi",
+          "displayName": "Gecerlilik Tarihi",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": 10,
+          "description": "Validity date (s.298).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 298,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 290,
+          "confidence": "extracted",
+          "section": "4.5 Yardimci Web Servis Metotlari"
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
       "id": "TahlilBilgisiDVO",
       "domain": "hizmet-kayit",
       "direction": "input",
@@ -21531,6 +23048,396 @@
       "status": "reviewed"
     },
     {
+      "id": "TakipBilgisiCevapDVO",
+      "domain": "yardimci-islemler",
+      "direction": "output",
+      "fields": [
+        {
+          "name": "sonucKodu",
+          "displayName": "Sonuc Kodu",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": 4,
+          "description": "Result code; \"0000\" means success (s.295).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 295,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "sonucMesaji",
+          "displayName": "Sonuc Mesaji",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Result description (s.295).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 295,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "takipBilgisiListDVO",
+          "displayName": "Evrak Idli Takiplerin Listesi",
+          "type": "array",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Takips of the given document id; the guide's TYPE column says Integer while the name is TakipBilgisiListDVO[] — extraction artifact, the array-of-DVO reading is authoritative (s.295); item shape Tablo 4.5.8.c (TakipBilgisiListDVO, this registry).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 295,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "evrakRefNo",
+          "displayName": "Evrak Referans No",
+          "type": "integer",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Document reference number (s.295).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 295,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "saglikTesisKodu",
+          "displayName": "Tesis Kodu",
+          "type": "integer",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Code of the calling facility (s.295).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 295,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 290,
+          "confidence": "extracted",
+          "section": "4.5 Yardimci Web Servis Metotlari"
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
+      "id": "TakipBilgisiGirisDVO",
+      "domain": "yardimci-islemler",
+      "direction": "input",
+      "fields": [
+        {
+          "name": "evrakRefNo",
+          "displayName": "Evrak Referans No",
+          "type": "integer",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Document reference number (s.295).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 295,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "saglikTesisKodu",
+          "displayName": "Tesis Kodu",
+          "type": "integer",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Code of the calling facility (s.295).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 295,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "grupTuru",
+          "displayName": "Grup Turu",
+          "type": "enum",
+          "enumRef": "grup-turu",
+          "codeSystem": null,
+          "required": true,
+          "length": 1,
+          "description": "A = Ayaktan, Y = Yatarak, G = Günübirlik, D = Diğer (s.295).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 295,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "grupKodu",
+          "displayName": "Grup Kodu",
+          "type": "integer",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Group code; values come from the evrakTakipGrupKodlariSorgu method (s.295).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 295,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "ktsHbysKodu",
+          "displayName": "KTS HBYS Kodu",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Software vendor KTS code (s.295).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 295,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 290,
+          "confidence": "extracted",
+          "section": "4.5 Yardimci Web Servis Metotlari"
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
+      "id": "TakipBilgisiListDVO",
+      "domain": "yardimci-islemler",
+      "direction": "output",
+      "fields": [
+        {
+          "name": "takipNo",
+          "displayName": "Takip No",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Tracking number (s.295).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": true,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 295,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "grupTuru",
+          "displayName": "Grup Turu",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Ödeme grup türü ADI — the guide returns the group-type NAME here, not the code (s.295).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 295,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "grupAdi",
+          "displayName": "Grup Adi",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Ödeme group name (s.295).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 295,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "toplamTutar",
+          "displayName": "Toplam Tutar",
+          "type": "decimal",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Total amount of the takip (s.295).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 295,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 290,
+          "confidence": "extracted",
+          "section": "4.5 Yardimci Web Servis Metotlari"
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
       "id": "TakipDVO",
       "domain": "hasta-kabul",
       "direction": "shared",
@@ -21709,6 +23616,216 @@
           "conditionalRequired": [],
           "introducedIn": "0.2.0",
           "deprecatedIn": null
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
+      "id": "TakipIslemKesintiDVO",
+      "domain": "yardimci-islemler",
+      "direction": "output",
+      "fields": [
+        {
+          "name": "islemSiraNo",
+          "displayName": "Islem Sira No",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": 20,
+          "description": "Service procedure sequence number (s.292).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": true,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 292,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "hizmetSunucuRefNo",
+          "displayName": "Hizmet Sunucu Ref No",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": 20,
+          "description": "Service-provider reference number (s.292).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 292,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "islemTarihi",
+          "displayName": "Islem Tarihi",
+          "type": "date",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Date the service was performed (s.292).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 292,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "sutKodu",
+          "displayName": "SUT Kodu",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": "SUT",
+          "required": false,
+          "length": 15,
+          "description": "SUT procedure code (s.293).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 293,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "islemAdi",
+          "displayName": "SUT Islem Adi",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": 100,
+          "description": "Name of the SUT code (s.293).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 293,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "tutar",
+          "displayName": "Islem Tutari",
+          "type": "decimal",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Amount of the SUT-coded procedure (s.293).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 293,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "kesintiTutari",
+          "displayName": "Kesinti Tutari",
+          "type": "decimal",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Deduction amount applied by the reviewer (s.293).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 293,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "aciklama",
+          "displayName": "Aciklama",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": 255,
+          "description": "Reviewer's deduction remark (s.293).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 293,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 290,
+          "confidence": "extracted",
+          "section": "4.5 Yardimci Web Servis Metotlari"
         }
       ],
       "status": "reviewed"
@@ -22613,6 +24730,420 @@
           "page": 276,
           "confidence": "extracted",
           "section": "4.4 Rapor Bilgisi Kayit Metotlari"
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
+      "id": "YurtDisiYardimHakkiGetirCevapDVO",
+      "domain": "yardimci-islemler",
+      "direction": "output",
+      "fields": [
+        {
+          "name": "sonucKodu",
+          "displayName": "Sonuc Kodu",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": 4,
+          "description": "Result code; \"0000\" means success (s.296).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 296,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "sonucMesaji",
+          "displayName": "Sonuc Mesaji",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Result description (s.296).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 296,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "yurtDisiDetay",
+          "displayName": "Yurt Disi Sigortali Yardim Hakklari",
+          "type": "array",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Entitlement verification list; item shape Tablo 4.5.10.c (YurtDisiYardimHakkiGetirCevapDetayDVO, this registry) (s.296).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 296,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 290,
+          "confidence": "extracted",
+          "section": "4.5 Yardimci Web Servis Metotlari"
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
+      "id": "YurtDisiYardimHakkiGetirCevapDetayDVO",
+      "domain": "yardimci-islemler",
+      "direction": "output",
+      "fields": [
+        {
+          "name": "id",
+          "displayName": "Yardim Hakki Id",
+          "type": "integer",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Entitlement id to be used at patient admission (s.297).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 297,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "kisiNo",
+          "displayName": "Kisi No",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Person's YUPASS number (s.297).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 297,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "adi",
+          "displayName": "Adi",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "First name (s.297).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 297,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "soyadi",
+          "displayName": "Soyadi",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Last name (s.297).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 297,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "formulAdi",
+          "displayName": "Formul Adi",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Formula name (s.297).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 297,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "odemeTuru",
+          "displayName": "Odeme Turu",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Payment type (s.297).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 297,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "tedaviKapsami",
+          "displayName": "Tedavi Kapsami",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Treatment coverage (s.297).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 297,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "sorguTarihi",
+          "displayName": "Sorgu Yapilan Tarih",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Date of the query (s.297).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 297,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "aciklama",
+          "displayName": "Aciklama",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": false,
+          "length": null,
+          "description": "Remark; the guide's description column carries only the label (s.297).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 297,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 290,
+          "confidence": "extracted",
+          "section": "4.5 Yardimci Web Servis Metotlari"
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
+      "id": "YurtDisiYardimHakkiGetirGirisDVO",
+      "domain": "yardimci-islemler",
+      "direction": "input",
+      "fields": [
+        {
+          "name": "kisiNo",
+          "displayName": "Yurt Disi Kisi No",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Abroad person number (s.296).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 296,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "provizyonTarihi",
+          "displayName": "Islem Tarihi",
+          "type": "string",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Operation date (s.296; no format given).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 296,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        },
+        {
+          "name": "saglikTesisKodu",
+          "displayName": "Tesis Kodu",
+          "type": "integer",
+          "enumRef": null,
+          "codeSystem": null,
+          "required": true,
+          "length": null,
+          "description": "Code of the calling facility (s.296).",
+          "sensitive": false,
+          "syntheticOnlyRecommended": false,
+          "sourceRefs": [
+            {
+              "id": "medula-hastane-guide-3-1-1-2026-10-19",
+              "sourceType": "official-guide",
+              "guideVersion": "3.1.1",
+              "page": 296,
+              "confidence": "extracted"
+            }
+          ],
+          "conditionalRequired": [],
+          "introducedIn": "0.5.0",
+          "deprecatedIn": null
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 290,
+          "confidence": "extracted",
+          "section": "4.5 Yardimci Web Servis Metotlari"
         }
       ],
       "status": "reviewed"
@@ -23948,6 +26479,43 @@
           "guideVersion": "3.1.1",
           "page": 260,
           "confidence": "extracted"
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
+      "id": "grup-turu",
+      "displayName": "Grup Turu",
+      "values": [
+        {
+          "code": "A",
+          "label": "Ayaktan",
+          "description": "Outpatient group."
+        },
+        {
+          "code": "Y",
+          "label": "Yatarak",
+          "description": "Inpatient group."
+        },
+        {
+          "code": "G",
+          "label": "Gunubirlik",
+          "description": "Day-unit group."
+        },
+        {
+          "code": "D",
+          "label": "Diger",
+          "description": "Other group."
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 290,
+          "confidence": "extracted",
+          "notes": "Four-value variant used across the yardimci evrak queries; the hasta-kabul group's tedavi-turu has only A/Y/G (s.255)."
         }
       ],
       "status": "reviewed"
@@ -27818,6 +30386,72 @@
           "section": "Response tables across all methods",
           "confidence": "extracted",
           "notes": "Verification correction (Group 12): the codes 33/34/35/99 added in Group 9 were EKDS verification-reason codes (ekdsYontemGerekce, s.167-168), not result codes — they moved to the ekds-yontem-gerekce enum. The guide provides no global result-code catalog; error codes surface per response in Medula and are cataloged as they are observed."
+        }
+      ],
+      "status": "reviewed"
+    },
+    {
+      "id": "sut-hizmet-turu",
+      "displayName": "SUT Hizmet Turu",
+      "values": [
+        {
+          "code": "1",
+          "label": "Muayene islemi",
+          "description": "Examination procedures."
+        },
+        {
+          "code": "2",
+          "label": "Yatak Islemleri",
+          "description": "Bed procedures."
+        },
+        {
+          "code": "3",
+          "label": "Dis islemi",
+          "description": "Dental procedures."
+        },
+        {
+          "code": "4",
+          "label": "Konsultasyon",
+          "description": "Consultation."
+        },
+        {
+          "code": "5",
+          "label": "Malzemeler",
+          "description": "Materials."
+        },
+        {
+          "code": "6",
+          "label": "Ameliyat ve girisimler",
+          "description": "Surgery and interventions."
+        },
+        {
+          "code": "7",
+          "label": "Tetkik ve radyoloji bilgileri",
+          "description": "Imaging and radiology."
+        },
+        {
+          "code": "8",
+          "label": "Tahlil islemleri",
+          "description": "Laboratory procedures."
+        },
+        {
+          "code": "9",
+          "label": "Diger islemler",
+          "description": "Other procedures."
+        },
+        {
+          "code": "10",
+          "label": "Kan islemleri",
+          "description": "Blood procedures."
+        }
+      ],
+      "sourceRefs": [
+        {
+          "id": "medula-hastane-guide-3-1-1-2026-10-19",
+          "sourceType": "official-guide",
+          "guideVersion": "3.1.1",
+          "page": 298,
+          "confidence": "extracted"
         }
       ],
       "status": "reviewed"

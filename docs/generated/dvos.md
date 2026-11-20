@@ -315,6 +315,43 @@ Domain: `rapor` · Direction: `input` · Status: `reviewed` · Source refs: medu
 | `anneTcKimlikNo` | string |  | — |  | Mother's citizen ID when the nursing report is issued on behalf of the father (s.261). |
 | `doganCocukSayisi` | integer |  | — |  | Children delivered (s.261). |
 
+## `EvrakKesintiCevapDVO`
+
+Domain: `yardimci-islemler` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `sonucKodu` | string |  | — |  | Result code; "0000" means success (s.292). |
+| `sonucMesaji` | string |  | — |  | Result description (s.292). |
+| `evrakReferansNo` | integer |  | — |  | Document reference number of the deducted document (s.292). |
+| `takipler` | array |  | — |  | Tracking records; item shape Tablo 4.5.6.c (EvrakTakipDVO, this registry) (s.292). |
+| `muayeneKatilimTutari` | decimal |  | — |  | Examination co-payment of the document (s.292). |
+| `malzemeKatilimTutari` | decimal |  | — |  | Material co-payment of the document (s.292). |
+| `tupBebekKatilimTutari` | decimal |  | — |  | IVF co-payment of the document (s.292). |
+
+## `EvrakKesintiGirisDVO`
+
+Domain: `yardimci-islemler` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `evrakReferansNo` | integer |  | — |  | Document reference number (s.291). |
+| `tesisKodu` | integer |  | — |  | Code of the calling facility (s.291). |
+| `grupTuru` | enum |  | grup-turu |  | A = Ayaktan, Y = Yatarak, G = Günübirlik, D = Diğer (s.291). |
+| `grupKodu` | integer |  | — |  | Group code; values come from the evrakTakipGrupKodlariSorgu method (s.291). |
+
+## `EvrakTakipDVO`
+
+Domain: `yardimci-islemler` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `takipNo` | string |  | — |  | Tracking number (s.292). |
+| `toplamTutar` | decimal |  | — |  | Total amount of the takip (s.292). |
+| `kesintiler` | array |  | — |  | Deductions; item shape Tablo 4.5.6.d (TakipIslemKesintiDVO, this registry) (s.292). |
+| `grupTuru` | enum |  | grup-turu |  | A = Ayaktan, Y = Yatarak, G = Günübirlik, D = Diğer (s.292). |
+| `grupKodu` | integer |  | — |  | Group code; values come from the evrakTakipGrupKodlariSorgu method (s.292). |
+
 ## `FTRRaporBilgisiDVO`
 
 Domain: `rapor` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
@@ -445,6 +482,25 @@ Domain: `hizmet-kayit` · Direction: `input` · Status: `reviewed` · Source ref
 | Field | Type | Required | Enum ref | Sensitive | Description |
 | --- | --- | --- | --- | --- | --- |
 | `genKodu` | string |  | — |  | Gene code; the table closes at s.232 with TaniBilgisiDVO following (s.231) |
+
+## `GuncelSutSorguCevapDVO`
+
+Domain: `yardimci-islemler` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `sonucKodu` | string |  | — |  | Result code; "0000" means success (s.298). |
+| `sonucMesaji` | string |  | — |  | Result description (s.298). |
+| `sutKodlari` | array |  | — |  | SUT code list; item shape Tablo 4.5.11.c (SutFiyatDVO, this registry) (s.298). |
+
+## `GuncelSutSorguGirisDVO`
+
+Domain: `yardimci-islemler` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `saglikTesisKodu` | integer |  | — |  | Code of the calling facility (s.297). |
+| `tarih` | string |  | — |  | "dd.MM.yyyy"; empty returns the whole current list, filled returns changes after the queried date (s.297). |
 
 ## `HOTRaporBilgisiDVO`
 
@@ -932,6 +988,37 @@ Domain: `hizmet-kayit` · Direction: `input` · Status: `reviewed` · Source ref
 | `ozelDurum` | string |  | — |  | Special condition code, Tablo 5.1 OzelDurumVO (s.235) |
 | `cokluOzelDurum` | array |  | — |  | Multiple special-condition codes (s.235) |
 
+## `KatilimPayiCevapDVO`
+
+Domain: `yardimci-islemler` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `sonucKodu` | string |  | — |  | Result code; "0000" means success (s.293). |
+| `sonucMesaji` | string |  | — |  | Result description (s.294). |
+| `evrakRefNo` | integer |  | — |  | Document reference number of the deducted document (s.294). |
+| `KatilimPayiDVO` | array |  | — |  | Co-payment records; the guide uses the TYPE name as the PARAMETER name here — preserved verbatim; item shape Tablo 4.5.7.c (KatilimPayiDVO, this registry) (s.294). |
+
+## `KatilimPayiDVO`
+
+Domain: `yardimci-islemler` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `takipNo` | string |  | — |  | Tracking number (s.294). |
+| `muayeneKatilimTutari` | decimal |  | — |  | Examination co-payment of the takip (s.294). |
+| `malzemeKatilimTutari` | decimal |  | — |  | Material co-payment of the takip (s.294). |
+| `tupBebekKatilimTutari` | decimal |  | — |  | IVF co-payment of the takip (s.294). |
+
+## `KatilimPayiGirisDVO`
+
+Domain: `yardimci-islemler` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `evrakRefNo` | integer |  | — |  | Document reference number (s.293). |
+| `saglikTesisKodu` | integer |  | — |  | Code of the calling facility (s.293). |
+
 ## `KayitliIslemBilgisiDVO`
 
 Domain: `hizmet-kayit` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
@@ -1193,6 +1280,28 @@ Domain: `hizmet-kayit` · Direction: `output` · Status: `reviewed` · Source re
 | `saglikTesisKodu` | integer |  | — |  | GSS-assigned code of the institution that performed the prior operations (s.236). |
 | `tesisAdi` | string |  | — |  | Name of the institution that performed the prior operations (s.236). |
 
+## `OrneklenmisCevapDVO`
+
+Domain: `yardimci-islemler` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `sonucKodu` | string |  | — |  | Result code; "0000" means success (s.291). |
+| `sonucMesaji` | string |  | — |  | Result description (s.291). |
+| `saglikTesisKodu` | integer |  | — |  | Code of the facility that searched the sampled takips (s.291). |
+| `takipler` | array |  | — |  | Sampled tracking records; item shape Tablo 4.5.6.c (EvrakTakipDVO, this registry) (s.291). |
+
+## `OrneklenmisGirisDVO`
+
+Domain: `yardimci-islemler` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `evrakRefNo` | integer |  | — |  | Document reference number (s.290). |
+| `saglikTesisKodu` | integer |  | — |  | Code of the searching facility (s.290). |
+| `grupTuru` | enum |  | grup-turu |  | A = Ayaktan, Y = Yatarak, G = Günübirlik, D = Diğer (s.290). |
+| `grupKodu` | integer |  | — |  | Group code; values come from the evrakTakipGrupKodlariSorgu method (s.290). |
+
 ## `ProvizyonCevapDVO`
 
 Domain: `hasta-kabul` · Direction: `output` · Status: `draft` · Source refs: medula-hastane-guide-2026-06-17
@@ -1446,6 +1555,18 @@ Domain: `hasta-kabul` · Direction: `output` · Status: `reviewed` · Source ref
 | `sonucKodu` | string |  | — |  | Result code; 0000 means success (s.173) |
 | `sonucMesaji` | string |  | — |  | Result explanation (s.173) |
 
+## `SutFiyatDVO`
+
+Domain: `yardimci-islemler` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `sutKodu` | string |  | — |  | SUT procedure code (s.298). |
+| `adi` | string |  | — |  | SUT code name (s.298). |
+| `fiyat` | string |  | — |  | Price at the queried date — the guide types this String despite being a price (s.298). |
+| `turu` | enum |  | sut-hizmet-turu |  | Ten-value service-type list (s.298). |
+| `gecerlilikTarihi` | string |  | — |  | Validity date (s.298). |
+
 ## `TahlilBilgisiDVO`
 
 Domain: `hizmet-kayit` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19, medula-hastane-guide-3-1-1-2026-10-19
@@ -1502,6 +1623,41 @@ Domain: `yardimci-islemler` · Direction: `input` · Status: `reviewed` · Sourc
 | `saglikTesisKodu` | integer |  | — |  | Code of the searching facility (s.286). |
 | `ktsHbysKodu` | string |  | — |  | Software vendor KTS code (s.286). |
 
+## `TakipBilgisiCevapDVO`
+
+Domain: `yardimci-islemler` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `sonucKodu` | string |  | — |  | Result code; "0000" means success (s.295). |
+| `sonucMesaji` | string |  | — |  | Result description (s.295). |
+| `takipBilgisiListDVO` | array |  | — |  | Takips of the given document id; the guide's TYPE column says Integer while the name is TakipBilgisiListDVO[] — extraction artifact, the array-of-DVO reading is authoritative (s.295); item shape Tablo 4.5.8.c (TakipBilgisiListDVO, this registry). |
+| `evrakRefNo` | integer |  | — |  | Document reference number (s.295). |
+| `saglikTesisKodu` | integer |  | — |  | Code of the calling facility (s.295). |
+
+## `TakipBilgisiGirisDVO`
+
+Domain: `yardimci-islemler` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `evrakRefNo` | integer |  | — |  | Document reference number (s.295). |
+| `saglikTesisKodu` | integer |  | — |  | Code of the calling facility (s.295). |
+| `grupTuru` | enum |  | grup-turu |  | A = Ayaktan, Y = Yatarak, G = Günübirlik, D = Diğer (s.295). |
+| `grupKodu` | integer |  | — |  | Group code; values come from the evrakTakipGrupKodlariSorgu method (s.295). |
+| `ktsHbysKodu` | string |  | — |  | Software vendor KTS code (s.295). |
+
+## `TakipBilgisiListDVO`
+
+Domain: `yardimci-islemler` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `takipNo` | string |  | — |  | Tracking number (s.295). |
+| `grupTuru` | string |  | — |  | Ödeme grup türü ADI — the guide returns the group-type NAME here, not the code (s.295). |
+| `grupAdi` | string |  | — |  | Ödeme group name (s.295). |
+| `toplamTutar` | decimal |  | — |  | Total amount of the takip (s.295). |
+
 ## `TakipDVO`
 
 Domain: `hasta-kabul` · Direction: `shared` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
@@ -1515,6 +1671,21 @@ Domain: `hasta-kabul` · Direction: `shared` · Status: `reviewed` · Source ref
 | `hastaBasvuruNo` | string |  | — |  | Patient application number this tracking record belongs to. |
 | `bransKodu` | string |  | — |  | Branch code of the service (s.165). Verification correction - String(4) in the guide. |
 | `ekdsYontemGerekce` | enum |  | ekds-yontem-gerekce |  | EKDS verification method justification codes; Integer[] in the guide, modeled as an array of ekds-yontem-gerekce codes (s.167, changelog s.13). |
+
+## `TakipIslemKesintiDVO`
+
+Domain: `yardimci-islemler` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `islemSiraNo` | string |  | — |  | Service procedure sequence number (s.292). |
+| `hizmetSunucuRefNo` | string |  | — |  | Service-provider reference number (s.292). |
+| `islemTarihi` | date |  | — |  | Date the service was performed (s.292). |
+| `sutKodu` | string |  | — |  | SUT procedure code (s.293). |
+| `islemAdi` | string |  | — |  | Name of the SUT code (s.293). |
+| `tutar` | decimal |  | — |  | Amount of the SUT-coded procedure (s.293). |
+| `kesintiTutari` | decimal |  | — |  | Deduction amount applied by the reviewer (s.293). |
+| `aciklama` | string |  | — |  | Reviewer's deduction remark (s.293). |
 
 ## `TakipOkuGirisDVO`
 
@@ -1603,4 +1774,40 @@ Domain: `rapor` · Direction: `input` · Status: `reviewed` · Source refs: medu
 | --- | --- | --- | --- | --- | --- |
 | `tupBebekRaporTuru` | enum |  | tup-bebek-turu |  | Disease-treatment vs other IVF procedures (s.276). |
 | `butKodu` | string |  | — |  | SUT procedure code (s.276). |
+
+## `YurtDisiYardimHakkiGetirCevapDVO`
+
+Domain: `yardimci-islemler` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `sonucKodu` | string |  | — |  | Result code; "0000" means success (s.296). |
+| `sonucMesaji` | string |  | — |  | Result description (s.296). |
+| `yurtDisiDetay` | array |  | — |  | Entitlement verification list; item shape Tablo 4.5.10.c (YurtDisiYardimHakkiGetirCevapDetayDVO, this registry) (s.296). |
+
+## `YurtDisiYardimHakkiGetirCevapDetayDVO`
+
+Domain: `yardimci-islemler` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `id` | integer |  | — |  | Entitlement id to be used at patient admission (s.297). |
+| `kisiNo` | string |  | — |  | Person's YUPASS number (s.297). |
+| `adi` | string |  | — |  | First name (s.297). |
+| `soyadi` | string |  | — |  | Last name (s.297). |
+| `formulAdi` | string |  | — |  | Formula name (s.297). |
+| `odemeTuru` | string |  | — |  | Payment type (s.297). |
+| `tedaviKapsami` | string |  | — |  | Treatment coverage (s.297). |
+| `sorguTarihi` | string |  | — |  | Date of the query (s.297). |
+| `aciklama` | string |  | — |  | Remark; the guide's description column carries only the label (s.297). |
+
+## `YurtDisiYardimHakkiGetirGirisDVO`
+
+Domain: `yardimci-islemler` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `kisiNo` | string |  | — |  | Abroad person number (s.296). |
+| `provizyonTarihi` | string |  | — |  | Operation date (s.296; no format given). |
+| `saglikTesisKodu` | integer |  | — |  | Code of the calling facility (s.296). |
 
