@@ -1088,6 +1088,57 @@ Domain: `rapor` · Direction: `input` · Status: `reviewed` · Source refs: medu
 | `teshisKodu` | integer |  | — |  | Report diagnosis code (s.278). |
 | `ICD10Kodu` | array |  | — |  | Diagnosis codes; the guide types this row as TaniBilgisiDVO[] while naming the parameter ICD10Kodu — both facts preserved (s.278); item shape Tablo 4.2.1.k (TaniBilgisiDVO, hizmet-kayit group). |
 
+## `ImzaliRaporDVO`
+
+Domain: `imzali-rapor` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `turu` | enum |  | imzali-rapor-turu |  | Six-value report type list (s.340). |
+| `maluliyetRaporu` | object |  | — |  | Populated per report type; shape Tablo 4.9.1.c (MaluliyetRaporDVO) — §4.9 composite, deferred to G45c-b. |
+| `engellilikRaporu` | object |  | — |  | Populated per report type; shape Tablo 4.9.1.g (EngellilikRaporDVO) — §4.9 composite, deferred to G45c-b. |
+| `tibbiGereklilikRaporu` | object |  | — |  | Populated per report type; shape Tablo 4.9.1.j (TibbiGereklilikRaporDVO) — §4.9 composite, deferred to G45c-b. |
+
+## `ImzaliRaporOnayBekleyenSorguGirisDVO`
+
+Domain: `imzali-rapor` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `saglikTesisKodu` | integer |  | — |  | GSS-assigned facility code (s.343). |
+| `doktorTcKimlikNo` | string |  | — |  | Board-head physician's citizen ID (s.343). |
+| `onayBekleyenSorguBilgisi` | array |  | — |  | Signed pending-approval query blob; Digitally signed report blob — the E-İmzalı flow sends opaque byte arrays, not structured fields. |
+
+## `ImzaliRaporOnayGirisDVO`
+
+Domain: `imzali-rapor` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `saglikTesisKodu` | integer |  | — |  | GSS-assigned facility code (s.338). |
+| `doktorTcKimlikNo` | string |  | — |  | Citizen ID of the approving physician (board head or chief physician per the method) (s.338). |
+| `raporOnayBilgisi` | array |  | — |  | Signed approval blob; Digitally signed report blob — the E-İmzalı flow sends opaque byte arrays, not structured fields. |
+
+## `ImzaliRaporSilGirisDVO`
+
+Domain: `imzali-rapor` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `saglikTesisKodu` | integer |  | — |  | GSS-assigned facility code (s.347). |
+| `doktorTcKimlikNo` | string |  | — |  | Board-head physician's citizen ID (s.347). |
+| `raporSorguBilgisi` | array |  | — |  | Signed delete blob; Digitally signed report blob — the E-İmzalı flow sends opaque byte arrays, not structured fields. |
+
+## `ImzaliRaporSorguGirisDVO`
+
+Domain: `imzali-rapor` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `saglikTesisKodu` | integer |  | — |  | GSS-assigned facility code (s.340). |
+| `doktorTcKimlikNo` | string |  | — |  | Querying physician's citizen ID (s.340). |
+| `raporSorguBilgisi` | array |  | — |  | Signed query blob; Digitally signed report blob — the E-İmzalı flow sends opaque byte arrays, not structured fields. |
+
 ## `IsKazasiRaporDVO`
 
 Domain: `rapor` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
@@ -1595,6 +1646,39 @@ Domain: `hizmet-kayit` · Direction: `input` · Status: `reviewed` · Source ref
 | `ozelDurum` | string |  | — |  | Special condition code, Tablo 5.1 OzelDurumVO (s.227) |
 | `cokluOzelDurum` | array |  | — |  | Multiple special-condition codes (s.227) |
 
+## `OnayBekleyenCevapDVO`
+
+Domain: `imzali-rapor` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `onayiBeklenenDoktorlar` | array |  | — |  | Physicians pending approval on the report; the guide types it DoktorBilgiDVO (singular, shape not shown) — preserved verbatim (s.349). |
+| `sonucKodu` | string |  | — |  | Result code; "0000" means success (s.349). |
+| `sonucMesaji` | string |  | — |  | Result description (s.349). |
+
+## `OnayCevapDVO`
+
+Domain: `imzali-rapor` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `onayIslemReferans` | string |  | — |  | System-generated unique reference (s.348). |
+| `sonucKodu` | string |  | — |  | Result code; "0000" means success (s.348). |
+| `sonucMesaji` | string |  | — |  | Result description (s.349). |
+| `uyariMesaji` | string |  | — |  | Warning message (s.349). |
+
+## `OnayDVO`
+
+Domain: `imzali-rapor` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `tesisKodu` | integer |  | — |  | Code of the performing facility (s.348). |
+| `doktorTcKimlikNo` | string |  | — |  | Citizen ID of the approving physician (s.348). |
+| `onayVerenTuru` | enum |  | onay-veren-turu |  | Physician or chief physician (s.348). |
+| `onayIslemTuru` | enum |  | onay-islem-turu |  | Report / off-standard report / referral notification / referral registration (s.348). |
+| `onayIslemReferans` | string |  | — |  | Document ID matching onayIslemTuru (s.348). |
+
 ## `OncekiIslemBilgisiDVO`
 
 Domain: `hizmet-kayit` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
@@ -1885,6 +1969,47 @@ Domain: `rapor` · Direction: `input` · Status: `reviewed` · Source refs: medu
 | `raporTuru` | enum |  | rapor-turu |  | Raporun türü (s.280): 1 Tedavi, 2 İş Kazası, 3 Meslek Hastalığı, 4 Hastalık, 5 Doğum Öncesi Çalışabilir, 6 Analık, 7 Doğum, 8 Protez, 9 Maluliyet, 10 İlaç Kullanım, 11 İlaç Muafiyet. |
 | `kullaniciTesisKodu` | integer |  | — |  | Health facility code of the caller (s.282). |
 
+## `RaporOnayBekleyenSorguDVO`
+
+Domain: `imzali-rapor` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `saglikTesisKodu` | integer |  | — |  | GSS-assigned facility code (s.346). |
+| `doktorTcKimlikNo` | string |  | — |  | Board-head physician's citizen ID (s.346). |
+
+## `RaporOnayCevapDVO`
+
+Domain: `imzali-rapor` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `raporTakipNo` | string |  | — |  | System-generated unique report tracking number (s.337). |
+| `sonucKodu` | string |  | — |  | Result code; "0000" means success (s.337). |
+| `sonucMesaji` | string |  | — |  | Result description (s.337). |
+| `uyariMesaji` | string |  | — |  | Warning message (s.337). |
+
+## `RaporOnayDVO`
+
+Domain: `imzali-rapor` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `saglikTesisKodu` | integer |  | — |  | GSS-assigned facility code (s.337). |
+| `doktorTcKimlikNo` | string |  | — |  | Citizen ID of the approving physician (s.337). |
+| `raporBilgisi` | array |  | — |  | Signed report blob; Digitally signed report blob — the E-İmzalı flow sends opaque byte arrays, not structured fields. |
+
+## `RaporSorguCevapDVO`
+
+Domain: `imzali-rapor` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `sonucKodu` | string |  | — |  | Result code; "0000" means success (s.340). |
+| `sonucMesaji` | string |  | — |  | Result description (s.340). |
+| `uyariMesaji` | string |  | — |  | Warning message (s.340). |
+| `raporBilgileri` | array |  | — |  | Signed reports; item shape ImzaliRaporDVO (this registry) (s.340). |
+
 ## `RaporSorguDVO`
 
 Domain: `rapor` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
@@ -1955,6 +2080,16 @@ Domain: `hasta-kabul` · Direction: `output` · Status: `reviewed` · Source ref
 | `sevkEdilisTarihi` | date |  | — |  | Referral date, dd.mm.yyyy (s.173) |
 | `sonucKodu` | string |  | — |  | Result code; 0000 means success (s.173) |
 | `sonucMesaji` | string |  | — |  | Result explanation (s.173) |
+
+## `SonucDVO`
+
+Domain: `imzali-rapor` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `sonucKodu` | string |  | — |  | Result code; "0000" means success (s.347). |
+| `sonucMesaji` | string |  | — |  | Result description (s.347). |
+| `uyariMesaji` | string |  | — |  | Warning message (s.347). |
 
 ## `SutFiyatDVO`
 

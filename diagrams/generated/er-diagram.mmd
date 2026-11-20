@@ -697,6 +697,32 @@ erDiagram
     integer teshisKodu
     array ICD10Kodu
   }
+  ImzaliRaporDVO {
+    enum turu
+    object maluliyetRaporu
+    object engellilikRaporu
+    object tibbiGereklilikRaporu
+  }
+  ImzaliRaporOnayBekleyenSorguGirisDVO {
+    integer saglikTesisKodu
+    string doktorTcKimlikNo
+    array onayBekleyenSorguBilgisi
+  }
+  ImzaliRaporOnayGirisDVO {
+    integer saglikTesisKodu
+    string doktorTcKimlikNo
+    array raporOnayBilgisi
+  }
+  ImzaliRaporSilGirisDVO {
+    integer saglikTesisKodu
+    string doktorTcKimlikNo
+    array raporSorguBilgisi
+  }
+  ImzaliRaporSorguGirisDVO {
+    integer saglikTesisKodu
+    string doktorTcKimlikNo
+    array raporSorguBilgisi
+  }
   IsKazasiRaporDVO {
     string baslangicTarihi
     string bitisTarihi
@@ -1014,6 +1040,24 @@ erDiagram
     string ozelDurum
     array cokluOzelDurum
   }
+  OnayBekleyenCevapDVO {
+    array onayiBeklenenDoktorlar
+    string sonucKodu
+    string sonucMesaji
+  }
+  OnayCevapDVO {
+    string onayIslemReferans
+    string sonucKodu
+    string sonucMesaji
+    string uyariMesaji
+  }
+  OnayDVO {
+    integer tesisKodu
+    string doktorTcKimlikNo
+    enum onayVerenTuru
+    enum onayIslemTuru
+    string onayIslemReferans
+  }
   OncekiIslemBilgisiDVO {
     integer islemAdedi
     date islemTarihi
@@ -1194,6 +1238,27 @@ erDiagram
     enum raporTuru
     integer kullaniciTesisKodu
   }
+  RaporOnayBekleyenSorguDVO {
+    integer saglikTesisKodu
+    string doktorTcKimlikNo
+  }
+  RaporOnayCevapDVO {
+    string raporTakipNo
+    string sonucKodu
+    string sonucMesaji
+    string uyariMesaji
+  }
+  RaporOnayDVO {
+    integer saglikTesisKodu
+    string doktorTcKimlikNo
+    array raporBilgisi
+  }
+  RaporSorguCevapDVO {
+    string sonucKodu
+    string sonucMesaji
+    string uyariMesaji
+    array raporBilgileri
+  }
   RaporSorguDVO {
     object raporBilgisi
     integer kullaniciTesisKodu
@@ -1234,6 +1299,11 @@ erDiagram
     date sevkEdilisTarihi
     string sonucKodu
     string sonucMesaji
+  }
+  SonucDVO {
+    string sonucKodu
+    string sonucMesaji
+    string uyariMesaji
   }
   SutFiyatDVO {
     string sutKodu
@@ -1553,6 +1623,28 @@ erDiagram
   medula_hastane_hizmet_kayit_hizmet_kaydi_oku ||--|| HizmetOkuCevapDVO : outputDvo
   medula_hastane_hizmet_kayit_hizmet_kayit ||--|| HizmetKayitGirisDVO : inputDvo
   medula_hastane_hizmet_kayit_hizmet_kayit ||--|| HizmetKayitCevapDVO : outputDvo
+  medula_hastane_imzali_rapor_bashekim_onay_bekleyen_rapor_sorgu ||--|| ImzaliRaporOnayBekleyenSorguGirisDVO : inputDvo
+  medula_hastane_imzali_rapor_bashekim_onay_bekleyen_rapor_sorgu ||--|| RaporSorguCevapDVO : outputDvo
+  medula_hastane_imzali_rapor_bashekim_rapor_onay ||--|| ImzaliRaporOnayGirisDVO : inputDvo
+  medula_hastane_imzali_rapor_bashekim_rapor_onay ||--|| RaporOnayCevapDVO : outputDvo
+  medula_hastane_imzali_rapor_kurul_baskani_onay_bekleyen_rapor_sorgu ||--|| ImzaliRaporOnayBekleyenSorguGirisDVO : inputDvo
+  medula_hastane_imzali_rapor_kurul_baskani_onay_bekleyen_rapor_sorgu ||--|| RaporSorguCevapDVO : outputDvo
+  medula_hastane_imzali_rapor_kurul_baskani_rapor_onay ||--|| ImzaliRaporOnayGirisDVO : inputDvo
+  medula_hastane_imzali_rapor_kurul_baskani_rapor_onay ||--|| RaporOnayCevapDVO : outputDvo
+  medula_hastane_imzali_rapor_onay ||--|| ImzaliRaporOnayGirisDVO : inputDvo
+  medula_hastane_imzali_rapor_onay ||--|| OnayCevapDVO : outputDvo
+  medula_hastane_imzali_rapor_onay_bekleyen ||--|| ImzaliRaporOnayGirisDVO : inputDvo
+  medula_hastane_imzali_rapor_onay_bekleyen ||--|| OnayBekleyenCevapDVO : outputDvo
+  medula_hastane_imzali_rapor_onay_bekleyen_rapor_sorgu ||--|| RaporOnayBekleyenSorguDVO : inputDvo
+  medula_hastane_imzali_rapor_onay_bekleyen_rapor_sorgu ||--|| RaporSorguCevapDVO : outputDvo
+  medula_hastane_imzali_rapor_rapor_onay ||--|| RaporOnayDVO : inputDvo
+  medula_hastane_imzali_rapor_rapor_onay ||--|| RaporOnayCevapDVO : outputDvo
+  medula_hastane_imzali_rapor_rapor_sil ||--|| ImzaliRaporSilGirisDVO : inputDvo
+  medula_hastane_imzali_rapor_rapor_sil ||--|| SonucDVO : outputDvo
+  medula_hastane_imzali_rapor_rapor_sorgu ||--|| ImzaliRaporSorguGirisDVO : inputDvo
+  medula_hastane_imzali_rapor_rapor_sorgu ||--|| RaporSorguCevapDVO : outputDvo
+  medula_hastane_imzali_rapor_tc_ile_rapor_sorgu ||--|| ImzaliRaporSorguGirisDVO : inputDvo
+  medula_hastane_imzali_rapor_tc_ile_rapor_sorgu ||--|| RaporSorguCevapDVO : outputDvo
   medula_hastane_ortodonti_ortodonti_formu_iptal ||--|| OrtodontiFormuIptalGirisDVO : inputDvo
   medula_hastane_ortodonti_ortodonti_formu_iptal ||--|| OrtodontiFormuIptalCevapDVO : outputDvo
   medula_hastane_ortodonti_ortodonti_formu_kaydet ||--|| OrtodontiFormuKaydetGirisDVO : inputDvo
@@ -1693,6 +1785,7 @@ erDiagram
   IlacListDVO }o--|| odenme_durumu : enumRef
   IlacListDVO }o--|| odenme_durumu : enumRef
   IlacRaporDuzeltDVO }o--|| rapor_turu : enumRef
+  ImzaliRaporDVO }o--|| imzali_rapor_turu : enumRef
   IsKazasiRaporDVO }o--|| yatis_devam_is_kazasi : enumRef
   IsKazasiRaporDVO }o--|| taburcu_kodu : enumRef
   IsgoremezlikRaporDVO }o--|| isgoremezlik_rapor_turu : enumRef
@@ -1716,6 +1809,8 @@ erDiagram
   MeslekHastaligiRaporDVO }o--|| nuks_durumu : enumRef
   MeslekHastaligiRaporDVO }o--|| yatis_devam_is_kazasi : enumRef
   MeslekHastaligiRaporDVO }o--|| taburcu_kodu : enumRef
+  OnayDVO }o--|| onay_veren_turu : enumRef
+  OnayDVO }o--|| onay_islem_turu : enumRef
   OrneklenmisGirisDVO }o--|| grup_turu : enumRef
   ProvizyonGirisDVO }o--|| sigortali_turu : enumRef
   ProvizyonGirisDVO }o--|| devredilen_kurum : enumRef
