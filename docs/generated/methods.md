@@ -770,6 +770,30 @@
 | deletes | — |
 | generates | `raporTakipNo` |
 
+## `medula.hastane.yardimci-islemler.barkod-sut-eslesme-sorgu`
+
+| Field | Value |
+| --- | --- |
+| Service | medula.hastane.yardimci-islemler |
+| Documentation heading | barkodSutEslesmeSorgu |
+| Operation name | barkodSutEslesmeSorgu |
+| Input DVO | BarkodSutEslesmeSorguGirisDVO |
+| Output DVO | BarkodSutEslesmeSorguCevapDVO |
+| Success | sonucKodu = 0000 (sonucMesaji) |
+| Sandbox supported |  |
+| Status | reviewed |
+| Source refs | medula-hastane-guide-3-1-1-2026-10-19 |
+
+**State effects**
+
+| Effect | Targets |
+| --- | --- |
+| creates | — |
+| reads | — |
+| updates | — |
+| deletes | — |
+| generates | — |
+
 ## `medula.hastane.yardimci-islemler.doktor-ara`
 
 | Field | Value |
@@ -779,6 +803,54 @@
 | Operation name | DoktorAra |
 | Input DVO | DoktorAraGirisDVO |
 | Output DVO | DoktorAraCevapDVO |
+| Success | sonucKodu = 0000 (sonucMesaji) |
+| Sandbox supported |  |
+| Status | reviewed |
+| Source refs | medula-hastane-guide-3-1-1-2026-10-19 |
+
+**State effects**
+
+| Effect | Targets |
+| --- | --- |
+| creates | — |
+| reads | — |
+| updates | — |
+| deletes | — |
+| generates | — |
+
+## `medula.hastane.yardimci-islemler.e-nabiz-bildirim-sorgu`
+
+| Field | Value |
+| --- | --- |
+| Service | medula.hastane.yardimci-islemler |
+| Documentation heading | eNabizBildirimSorgu |
+| Operation name | eNabizBildirimSorgu |
+| Input DVO | ENabizBildirimSorguGirisDVO |
+| Output DVO | ENabizBildirimSorguCevapDVO |
+| Success | sonucKodu = 0000 (sonucMesaji) |
+| Sandbox supported |  |
+| Status | reviewed |
+| Source refs | medula-hastane-guide-3-1-1-2026-10-19 |
+
+**State effects**
+
+| Effect | Targets |
+| --- | --- |
+| creates | — |
+| reads | — |
+| updates | — |
+| deletes | — |
+| generates | — |
+
+## `medula.hastane.yardimci-islemler.evrak-takip-grup-kodlari-sorgu`
+
+| Field | Value |
+| --- | --- |
+| Service | medula.hastane.yardimci-islemler |
+| Documentation heading | evrakTakipGrupKodlariSorgu |
+| Operation name | evrakTakipGrupKodlariSorgu |
+| Input DVO | EvrakTakipGrupKoduSorguGirisDVO |
+| Output DVO | EvrakTakipGrupKoduSorguCevapDVO |
 | Success | sonucKodu = 0000 (sonucMesaji) |
 | Sandbox supported |  |
 | Status | reviewed |
@@ -890,6 +962,102 @@
 | deletes | — |
 | generates | — |
 
+## `medula.hastane.yardimci-islemler.kisi-gecmis-islem-sorgu`
+
+| Field | Value |
+| --- | --- |
+| Service | medula.hastane.yardimci-islemler |
+| Documentation heading | kisiGecmisİslemSorgu |
+| Operation name | kisiGecmisİslemSorgu |
+| Input DVO | KisiGecmisIslemlerGirisDVO |
+| Output DVO | KisiGecmisIslemlerCevapDVO |
+| Success | sonucKodu = 0000 (sonucMesaji) |
+| Sandbox supported |  |
+| Status | reviewed |
+| Source refs | medula-hastane-guide-3-1-1-2026-10-19 |
+
+**State effects**
+
+| Effect | Targets |
+| --- | --- |
+| creates | — |
+| reads | — |
+| updates | — |
+| deletes | — |
+| generates | — |
+
+## `medula.hastane.yardimci-islemler.kisi-gen-sorgula`
+
+| Field | Value |
+| --- | --- |
+| Service | medula.hastane.yardimci-islemler |
+| Documentation heading | KisiGenSorgula |
+| Operation name | KisiGenSorgula |
+| Input DVO | KisiGenSorguGirisDVO |
+| Output DVO | KisiGenSorguCevapDVO |
+| Success | sonucKodu = 0000 (sonucMesaji) |
+| Sandbox supported |  |
+| Status | reviewed |
+| Source refs | medula-hastane-guide-3-1-1-2026-10-19 |
+
+**State effects**
+
+| Effect | Targets |
+| --- | --- |
+| creates | — |
+| reads | — |
+| updates | — |
+| deletes | — |
+| generates | — |
+
+## `medula.hastane.yardimci-islemler.kisi-vefat-kayit`
+
+| Field | Value |
+| --- | --- |
+| Service | medula.hastane.yardimci-islemler |
+| Documentation heading | kisiVefatKayit |
+| Operation name | kisiVefatKayit |
+| Input DVO | KisiOlumKayitGirisDVO |
+| Output DVO | KisiOlumKayitCevapDVO |
+| Success | sonucKodu = 0000 (sonucMesaji) |
+| Sandbox supported |  |
+| Status | reviewed |
+| Source refs | medula-hastane-guide-3-1-1-2026-10-19 |
+
+**State effects**
+
+| Effect | Targets |
+| --- | --- |
+| creates | — |
+| reads | — |
+| updates | — |
+| deletes | — |
+| generates | — |
+
+## `medula.hastane.yardimci-islemler.kurum-sevk-talep-no-sorgu`
+
+| Field | Value |
+| --- | --- |
+| Service | medula.hastane.yardimci-islemler |
+| Documentation heading | kurumSevkTalepNoSorgu |
+| Operation name | kurumSevkTalepNoSorgu |
+| Input DVO | KurumSevkTalepNoSorguGirisDVO |
+| Output DVO | KurumSevkTalepNoSorguCevapDVO |
+| Success | sonucKodu = 0000 (sonucMesaji) |
+| Sandbox supported |  |
+| Status | reviewed |
+| Source refs | medula-hastane-guide-3-1-1-2026-10-19 |
+
+**State effects**
+
+| Effect | Targets |
+| --- | --- |
+| creates | — |
+| reads | — |
+| updates | — |
+| deletes | — |
+| generates | — |
+
 ## `medula.hastane.yardimci-islemler.orneklenmis-takipler`
 
 | Field | Value |
@@ -971,6 +1139,54 @@
 | Operation name | takipBilgileriListesi |
 | Input DVO | TakipBilgisiGirisDVO |
 | Output DVO | TakipBilgisiCevapDVO |
+| Success | sonucKodu = 0000 (sonucMesaji) |
+| Sandbox supported |  |
+| Status | reviewed |
+| Source refs | medula-hastane-guide-3-1-1-2026-10-19 |
+
+**State effects**
+
+| Effect | Targets |
+| --- | --- |
+| creates | — |
+| reads | — |
+| updates | — |
+| deletes | — |
+| generates | — |
+
+## `medula.hastane.yardimci-islemler.tani-ara`
+
+| Field | Value |
+| --- | --- |
+| Service | medula.hastane.yardimci-islemler |
+| Documentation heading | taniAra |
+| Operation name | taniAra |
+| Input DVO | TaniAraGirisWSDVO |
+| Output DVO | TaniAraCevapDVO |
+| Success | sonucKodu = 0000 (sonucMesaji) |
+| Sandbox supported |  |
+| Status | reviewed |
+| Source refs | medula-hastane-guide-3-1-1-2026-10-19 |
+
+**State effects**
+
+| Effect | Targets |
+| --- | --- |
+| creates | — |
+| reads | — |
+| updates | — |
+| deletes | — |
+| generates | — |
+
+## `medula.hastane.yardimci-islemler.tesis-yatak-sorgu`
+
+| Field | Value |
+| --- | --- |
+| Service | medula.hastane.yardimci-islemler |
+| Documentation heading | tesisYatakSorgu |
+| Operation name | tesisYatakSorgu |
+| Input DVO | TesisYatakSorguGirisDVO |
+| Output DVO | TesisYatakSorguCevapDVO |
 | Success | sonucKodu = 0000 (sonucMesaji) |
 | Sandbox supported |  |
 | Status | reviewed |

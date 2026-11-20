@@ -87,6 +87,40 @@ Domain: `hasta-kabul` · Direction: `input` · Status: `reviewed` · Source refs
 | `islemTarihi` | date |  | — |  | Verification date (s.185) |
 | `tesisKodu` | integer |  | — |  | GSS-assigned institution code (s.185) |
 
+## `BarkodSutDVO`
+
+Domain: `yardimci-islemler` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `barkod` | string |  | — |  | Barcode (s.302). |
+| `firmaTanimlayiciNo` | string |  | — |  | Company identifier (s.302). |
+| `sutKodu` | string |  | — |  | SUT code (s.302). |
+| `baslangicTarihi` | string |  | — |  | Validity start (s.302). |
+| `bitisTarihi` | string |  | — |  | Validity end (s.302). |
+
+## `BarkodSutEslesmeSorguCevapDVO`
+
+Domain: `yardimci-islemler` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `sonucKodu` | string |  | — |  | Result code; "0000" means success (s.302). |
+| `sonucMesaji` | string |  | — |  | Result description (s.302). |
+| `eslesmeler` | array |  | — |  | Barcode-SUT mappings; item shape Tablo 4.5.14.c (BarkodSutDVO, this registry) (s.302). |
+
+## `BarkodSutEslesmeSorguGirisDVO`
+
+Domain: `yardimci-islemler` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `saglikTesisKodu` | integer |  | — |  | Code of the calling facility (s.301). |
+| `tarih` | string |  | — |  | Empty returns the whole mapping list; filled returns mappings valid on that date (s.301). |
+| `barkod` | string |  | — |  | Sent when querying by barcode + company identifier (s.301). |
+| `firmaTanimlayiciNo` | string |  | — |  | Sent when querying by barcode + company identifier (s.301). |
+| `sutKodu` | string |  | — |  | Sent when querying by SUT code (s.301). |
+
 ## `BasvuruTakipDVO`
 
 Domain: `hasta-kabul` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
@@ -271,6 +305,36 @@ Domain: `hasta-kabul` · Direction: `input` · Status: `reviewed` · Source refs
 | `tesisKodu` | integer |  | — |  | GSS-assigned institution code (s.186) |
 | `evrakID` | integer |  | — |  | Period document reference number to query (s.186) |
 
+## `ENabizBildirimSorguCevapDVO`
+
+Domain: `yardimci-islemler` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `sonucKodu` | string |  | — |  | Result code; "0000" means success (s.305). |
+| `sonucMesaji` | string |  | — |  | Result description (s.305). |
+| `hizmetler` | array |  | — |  | e-Nabız service notifications; item shape Tablo 4.5.16.c (ENabizHizmetBilgiDVO, this registry); the guide numbers this table under the PREVIOUS section (4.5.16.c) although it belongs to eNabizBildirimSorgu — numbering anomaly preserved (s.305). |
+
+## `ENabizBildirimSorguGirisDVO`
+
+Domain: `yardimci-islemler` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `saglikTesisKodu` | integer |  | — |  | Code of the calling facility (s.305). |
+| `takipNo` | string |  | — |  | Tracking number (s.305). |
+| `hizmetSunucuRefNo` | array |  | — |  | Query by service-provider reference numbers (s.305). |
+
+## `ENabizHizmetBilgiDVO`
+
+Domain: `yardimci-islemler` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `hizmetSunucuRefNo` | string |  | — |  | Service-provider reference (s.305). |
+| `islemKodu` | string |  | — |  | Barcode or SUT code (s.306). |
+| `islemTarihi` | string |  | — |  | "dd.MM.yyyy" procedure date (s.306). |
+
 ## `ESWLRaporBilgisiDVO`
 
 Domain: `rapor` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
@@ -351,6 +415,33 @@ Domain: `yardimci-islemler` · Direction: `output` · Status: `reviewed` · Sour
 | `kesintiler` | array |  | — |  | Deductions; item shape Tablo 4.5.6.d (TakipIslemKesintiDVO, this registry) (s.292). |
 | `grupTuru` | enum |  | grup-turu |  | A = Ayaktan, Y = Yatarak, G = Günübirlik, D = Diğer (s.292). |
 | `grupKodu` | integer |  | — |  | Group code; values come from the evrakTakipGrupKodlariSorgu method (s.292). |
+
+## `EvrakTakipGrupKoduDVO`
+
+Domain: `yardimci-islemler` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `kodu` | integer |  | — |  | Group code (s.299). |
+| `adi` | string |  | — |  | Group name (s.299). |
+
+## `EvrakTakipGrupKoduSorguCevapDVO`
+
+Domain: `yardimci-islemler` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `sonucKodu` | string |  | — |  | Result code; "0000" means success (s.299). |
+| `sonucMesaji` | string |  | — |  | Result description (s.299). |
+| `grupKodlari` | array |  | — |  | Group codes; item shape Tablo 4.5.12.c (EvrakTakipGrupKoduDVO, this registry) (s.299). |
+
+## `EvrakTakipGrupKoduSorguGirisDVO`
+
+Domain: `yardimci-islemler` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `saglikTesisKodu` | integer |  | — |  | Code of the calling facility (s.299). |
 
 ## `FTRRaporBilgisiDVO`
 
@@ -1142,6 +1233,96 @@ Domain: `hasta-kabul` · Direction: `input` · Status: `reviewed` · Source refs
 | `tcNo` | string |  | — |  | Patient T.C. identity number (s.184) |
 | `tesisKodu` | integer |  | — |  | GSS-assigned institution code (s.184) |
 
+## `KisiGecmisIslemlerCevapDVO`
+
+Domain: `yardimci-islemler` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `sonucKodu` | string |  | — |  | Result code; "0000" means success (s.303). |
+| `sonucMesaji` | string |  | — |  | Result description (s.303). |
+| `oncekiIslemler` | array |  | — |  | Past procedures; item shape Tablo 4.5.15.c (KisiIslemDVO, this registry) (s.303). |
+
+## `KisiGecmisIslemlerGirisDVO`
+
+Domain: `yardimci-islemler` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `saglikTesisKodu` | integer |  | — |  | Code of the calling facility (s.303). |
+| `hastaTCKimlikNo` | integer |  | — |  | Citizen ID of the queried person; the guide types it long (s.303). |
+| `sutKodu` | string |  | — |  | SUT code to query (s.303). |
+
+## `KisiGenSorguCevapDVO`
+
+Domain: `yardimci-islemler` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `islemTarihi` | string |  | — |  | "dd.MM.yyyy" referral date; the guide labels the field islemTarihi while the clear name says Sevk Tarihi (s.309). |
+| `tesisKodu` | integer |  | — |  | Facility code (s.309). |
+| `sonucKodu` | string |  | — |  | Result code; "0000" means success (s.309). |
+| `sonucMesaji` | string |  | — |  | Result description (s.310). |
+
+## `KisiGenSorguGirisDVO`
+
+Domain: `yardimci-islemler` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `hastaTCKimlikNo` | integer |  | — |  | Citizen ID of the queried person; the guide types it long (s.309). |
+| `saglikTesisKodu` | integer |  | — |  | Facility code (s.309). |
+| `sutKodu` | string |  | — |  | SUT code; sutKodu or genKodu is mandatory (s.309). |
+| `genKodu` | string |  | — |  | Gen code to query; sutKodu or genKodu is mandatory (s.309). |
+
+## `KisiIslemDVO`
+
+Domain: `yardimci-islemler` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `tesisKodu` | integer |  | — |  | Facility code (s.303). |
+| `tesisAdi` | string |  | — |  | Name of the facility where the procedure was performed (s.303). |
+| `islemTarihi` | string |  | — |  | Procedure date (s.303). |
+
+## `KisiOlumKayitCevapDVO`
+
+Domain: `yardimci-islemler` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `sonucKodu` | string |  | — |  | Result code; "0000" means success (s.306). |
+| `sonucMesaji` | string |  | — |  | Result description (s.306). |
+| `kisiOlumKayitDetay` | array |  | — |  | Death-registration details; item shape Tablo 4.5.18.c (KisiOlumKayitDetayDVO, this registry) (s.307). |
+
+## `KisiOlumKayitDetayDVO`
+
+Domain: `yardimci-islemler` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `tcKimlikNo` | string |  | — |  | Citizen ID — the guide's description column erroneously repeats 'Hizmet Sunucu Ref' (s.307). |
+| `adi` | string |  | — |  | First name — the guide's description column erroneously repeats 'İşlem Kodu' (s.307). |
+| `soyadi` | string |  | — |  | Last name — the guide's description column erroneously repeats 'İşlem Tarihi' (s.307). |
+| `olumTarihi` | string |  | — |  | "dd.MM.yyyy" death date (s.307). |
+| `saglikTesisKodu` | integer |  | — |  | Facility code (s.307). |
+| `olumSaati` | string |  | — |  | "HH:MM" death time (s.307). |
+| `olumBelgesiAdi` | string |  | — |  | Death-certificate name (s.307). |
+| `olumBelgesiIcerik` | array |  | — |  | Certificate content as a byte array (s.307). |
+
+## `KisiOlumKayitGirisDVO`
+
+Domain: `yardimci-islemler` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `tcKimlikNo` | integer |  | — |  | Citizen ID of the person to register; the guide types it long (s.306). |
+| `olumTarihi` | string |  | — |  | "dd.MM.yyyy" death date (s.306). |
+| `saglikTesisKodu` | string |  | — |  | Facility code — typed String here unlike the Integer elsewhere in the group (s.306). |
+| `olumSaati` | string |  | — |  | "HH:MM" death time (s.306). |
+| `olumBelgesiAdi` | string |  | — |  | Death-certificate name (s.306). |
+| `olumBelgesiIcerik` | array |  | — |  | Certificate content as a byte array — full file name with extension per the guide (s.306). |
+
 ## `KonsultasyonBilgisiDVO`
 
 Domain: `hizmet-kayit` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
@@ -1156,6 +1337,42 @@ Domain: `hizmet-kayit` · Direction: `input` · Status: `reviewed` · Source ref
 | `islemTarihi` | date |  | — |  | (Consultation date, dd.mm.yyyy) s.224 |
 | `ozelDurum` | string |  | — |  | (Special condition code, Tablo 5.1 OzelDurumVO) s.224 |
 | `cokluOzelDurum` | array |  | — |  | (Multiple special-condition codes) s.224 |
+
+## `KurumSevkTalepNoSorguCevapDVO`
+
+Domain: `yardimci-islemler` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `sonucKodu` | string |  | — |  | Result code; "0000" means success (s.308). |
+| `sonucMesaji` | string |  | — |  | Result description (s.308). |
+| `KurumSevkTalepNoSorguDetay` | array |  | — |  | Institution-referred person details; the guide uses the TYPE name as the PARAMETER name — preserved verbatim; item shape Tablo 4.5.19.c (KurumSevkTalepNoSorguDetayDVO, this registry) (s.308). |
+
+## `KurumSevkTalepNoSorguDetayDVO`
+
+Domain: `yardimci-islemler` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `kurumSevkTalepNo` | string |  | — |  | The "e-Talep MALULİYET SEVK FORMU" number issued by the province directorate / social-security center (s.308). |
+| `tcKimlikNo` | string |  | — |  | Patient citizen ID (s.308). |
+| `sevkTarihi` | string |  | — |  | "dd.MM.yyyy" referral date (s.308). |
+| `saglikTesisKodu` | integer |  | — |  | Facility code (s.308). |
+| `hastaBasvuruNo` | string |  | — |  | Populated when a takip was taken with this referral number (s.308). |
+| `raporTakipNo` | string |  | — |  | Populated when a report was registered with this referral number (s.308). |
+| `aciklama` | string |  | — |  | Report remark (s.308). |
+| `sigortaliTcNo` | string |  | — |  | Citizen ID of the applicant's insured person (s.308). |
+| `ucret` | string |  | — |  | Whether treatment costs are covered by the "Kurum" or the "Sigortalı" (s.308). |
+| `araKarar` | enum |  | ara-karar |  | Referral decision type (s.309). |
+
+## `KurumSevkTalepNoSorguGirisDVO`
+
+Domain: `yardimci-islemler` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `tcKimlikNo` | integer |  | — |  | Citizen ID of the queried person; the guide types it long (s.308). |
+| `saglikTesisKodu` | string |  | — |  | Facility code — typed String here unlike the Integer elsewhere (s.308). |
 
 ## `MajistralEklenenIlacDVO`
 
@@ -1717,6 +1934,25 @@ Domain: `hasta-kabul` · Direction: `input` · Status: `reviewed` · Source refs
 | `takipNo` | string |  | — |  | Tracking number to be cancelled (s.168). |
 | `ktsHbysKodu` | string |  | — |  | Software vendor KTS code (s.168). |
 
+## `TaniAraCevapDVO`
+
+Domain: `yardimci-islemler` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `sonucKodu` | string |  | — |  | Result code; "0000" means success (s.304). |
+| `sonucMesaji` | string |  | — |  | Result description (s.304). |
+| `tanilar` | array |  | — |  | Diagnosis list; item shape Tablo 4.5.16.c (TaniListDVO, this registry) (s.304). |
+
+## `TaniAraGirisWSDVO`
+
+Domain: `yardimci-islemler` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `saglikTesisKodu` | integer |  | — |  | Code of the calling facility (s.304). |
+| `icd10Kodu` | string |  | — |  | Diagnosis code to query; partial prefixes allowed, e.g. "A", "A0" (s.304). |
+
 ## `TaniBilgisiDVO`
 
 Domain: `hizmet-kayit` · Direction: `shared` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
@@ -1730,6 +1966,15 @@ Domain: `hizmet-kayit` · Direction: `shared` · Status: `reviewed` · Source re
 | `taniTipi` | enum |  | tani-tipi |  | Diagnosis type - 1 On tani, 2 Kesin tani, 3 Ayirici tani (s.232). |
 | `ozelDurum` | string |  | — |  | Special condition code; see guide Tablo 5.1 OzelDurumVO (s.232). |
 | `cokluOzelDurum` | array |  | — |  | Multiple special-condition codes, valid alongside ozelDurum (s.232). |
+
+## `TaniListDVO`
+
+Domain: `yardimci-islemler` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `icd10Kodu` | string |  | — |  | ICD-10 code (s.304). |
+| `taniAdi` | string |  | — |  | Diagnosis name (s.304). |
 
 ## `TedaviIslemBilgisiDVO`
 
@@ -1765,6 +2010,38 @@ Domain: `rapor` · Direction: `input` · Status: `reviewed` · Source refs: medu
 | `baslangicTarihi` | string |  | — |  | Report start date, "dd.mm.yyyy" (s.273). |
 | `bitisTarihi` | string |  | — |  | Report end date, "dd.mm.yyyy" (s.273). |
 | `teshisKodu` | integer |  | — |  | Report diagnosis code (s.273). |
+
+## `TesisYatakBilgiDVO`
+
+Domain: `yardimci-islemler` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `yatakKodu` | string |  | — |  | Bed code (s.300). |
+| `turu` | enum |  | yatak-turu |  | Adult / neonatal / palliative (s.300). |
+| `tescilTuru` | enum |  | tescil-turu |  | Registration state (s.300). |
+| `seviye` | enum |  | yatak-seviyesi |  | Intensive-care level (s.301). |
+| `gecerlilikBaslangicTarihi` | string |  | — |  | Validity start date (s.301). |
+| `gecerlilikBitisTarihi` | string |  | — |  | Validity end date (s.301). |
+
+## `TesisYatakSorguCevapDVO`
+
+Domain: `yardimci-islemler` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `sonucKodu` | string |  | — |  | Result code; "0000" means success (s.300). |
+| `sonucMesaji` | string |  | — |  | Result description (s.300). |
+| `yataklar` | array |  | — |  | Bed list; item shape Tablo 4.5.13.c (TesisYatakBilgiDVO, this registry) (s.300). |
+
+## `TesisYatakSorguGirisDVO`
+
+Domain: `yardimci-islemler` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `saglikTesisKodu` | integer |  | — |  | Code of the calling facility (s.300). |
+| `tarih` | string |  | — |  | Empty returns the whole bed list; filled returns the beds valid on that date (s.300). |
 
 ## `TupBebekRaporBilgisiDVO`
 
