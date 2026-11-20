@@ -92,18 +92,20 @@ function schemaValidate(
 }
 
 describe("reference-validation (Group 2)", () => {
-  it("has exactly 6 service registry files", () => {
+  it("has exactly 8 service registry files", () => {
     expect(services.map((s) => s.file).sort()).toEqual([
       "fatura-kayit.yml",
       "hasta-kabul.yml",
       "hizmet-kayit.yml",
+      "ortodonti.yml",
       "rapor.yml",
+      "taahhut.yml",
       "takip-formu.yml",
       "yardimci-islemler.yml",
     ]);
   });
 
-  it("has exactly 54 method registry files in 6 domains", () => {
+  it("has exactly 61 method registry files in 8 domains", () => {
     expect(methods.map((m) => m.file).sort()).toEqual([
       "fatura-kayit/fatura-iptal.yml",
       "fatura-kayit/fatura-kayit.yml",
@@ -130,6 +132,9 @@ describe("reference-validation (Group 2)", () => {
       "hizmet-kayit/hizmet-kaydi-iptal.yml",
       "hizmet-kayit/hizmet-kaydi-oku.yml",
       "hizmet-kayit/hizmet-kayit.yml",
+      "ortodonti/ortodonti-formu-iptal.yml",
+      "ortodonti/ortodonti-formu-kaydet.yml",
+      "ortodonti/ortodonti-formu-oku.yml",
       "rapor/ilac-rapor-duzelt.yml",
       "rapor/rapor-bilgisi-bul-rapor-takip-nodan.yml",
       "rapor/rapor-bilgisi-bul-tc-kimlik-nodan.yml",
@@ -137,6 +142,10 @@ describe("reference-validation (Group 2)", () => {
       "rapor/rapor-bilgisi-kaydet.yml",
       "rapor/rapor-bilgisi-sil.yml",
       "rapor/takip-no-ile-rapor-bilgisi-kaydet.yml",
+      "taahhut/dis-taahhut-kaydet.yml",
+      "taahhut/dis-taahhut-oku.yml",
+      "taahhut/dis-taahhut-sil.yml",
+      "taahhut/kisi-dis-taahhut-oku.yml",
       "takip-formu/takip-formu-kaydet.yml",
       "takip-formu/takip-formu-oku.yml",
       "takip-formu/takip-formu-sil.yml",
@@ -275,7 +284,7 @@ describe("reference-validation (Group 2)", () => {
   });
 
   it("resolves every service WSDL reference in the manifest", () => {
-    expect(wsdlManifest.length).toBe(12);
+    expect(wsdlManifest.length).toBe(16);
     for (const s of services) {
       const slug = s.data.slug as string;
       const wsdl = s.data.wsdl as {

@@ -197,6 +197,19 @@ const EXPECTED_DVO_FILES = [
   "takip-formu/takip-formu-oku-cevap-dvo.yml",
   "takip-formu/takip-formu-sil-giris-dvo.yml",
   "takip-formu/takip-formu-sil-cevap-dvo.yml",
+  "taahhut/taahhut-kayit-dvo.yml",
+  "taahhut/taahhut-dvo.yml",
+  "taahhut/taahhut-dis-dvo.yml",
+  "taahhut/taahhut-cevap-dvo.yml",
+  "taahhut/taahhut-oku-dvo.yml",
+  "taahhut/taahhut-kisi-oku-dvo.yml",
+  "taahhut/taahhut-kisi-cevap-dvo.yml",
+  "ortodonti/ortodonti-formu-kaydet-giris-dvo.yml",
+  "ortodonti/ortodonti-formu-kaydet-cevap-dvo.yml",
+  "ortodonti/ortodonti-formu-iptal-giris-dvo.yml",
+  "ortodonti/ortodonti-formu-iptal-cevap-dvo.yml",
+  "ortodonti/ortodonti-formu-oku-giris-dvo.yml",
+  "ortodonti/ortodonti-formu-oku-cevap-dvo.yml",
 ];
 
 const EXPECTED_ENUM_IDS = [
