@@ -1,0 +1,71 @@
+id: MaluliyetBransGorusTaniBilgisiDVO
+domain: imzali-rapor
+direction: input
+fields:
+  - name: icd10Kodu
+    displayName: ICD10 Kodu
+    type: string
+    enumRef: null
+    codeSystem: ICD-10-WHO
+    required: true
+    length: null
+    description: ICD-10 code (s.332).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 332
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: aciklama
+    displayName: Aciklama
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: 500
+    description: Description (s.332).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 332
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: taniNeden
+    displayName: Tani Nedeni
+    type: enum
+    enumRef: tani-neden
+    codeSystem: null
+    required: false
+    length: null
+    description: Relation reason; codes 1-2 apply to occupational-disease reports, 3-4 to work-accident reports (s.332-333).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 332
+        confidence: extracted
+    conditionalRequired:
+      - condition: rapor türü Meslek Hastalığı veya İş Kazası
+        note: "guide: Rapor türü Meslek Hastalığı ise 1-2, İş Kazası ise 3-4 (s.332-333)"
+    introducedIn: 0.5.0
+    deprecatedIn: null
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 330
+    confidence: extracted
+    section: 4.6.1 raporKaydet Metodu
+status: reviewed

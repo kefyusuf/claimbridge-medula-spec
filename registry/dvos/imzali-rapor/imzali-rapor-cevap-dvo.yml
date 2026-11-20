@@ -1,0 +1,145 @@
+id: ImzaliRaporCevapDVO
+domain: imzali-rapor
+direction: output
+fields:
+  - name: raporTakipNo
+    displayName: Rapora Ait Unique Bilgi
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: null
+    description: System-generated unique report tracking number (s.330).
+    sensitive: false
+    syntheticOnlyRecommended: true
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 330
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: sonucKodu
+    displayName: Sonuc Kodu
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: 4
+    description: Result code; "0000" means success (s.330).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 330
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: sonucMesaji
+    displayName: Sonuc Mesaji
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: null
+    description: Result description (s.330).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 330
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: uyariMesaji
+    displayName: Uyari Mesaji
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Warning message (s.330).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 330
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: maluliyetRaporu
+    displayName: Maluliyet Rapor Bilgileri
+    type: object
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Populated when a disability report was saved; shape Tablo 4.9.1.c (MaluliyetRaporDVO, this registry) (s.330).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 330
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: engellilikRaporu
+    displayName: Engellilik Rapor Bilgileri
+    type: object
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Populated when an impairment report was saved; shape Tablo 4.9.1.g (EngellilikRaporDVO, this registry) (s.330).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 330
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: tibbiGereklilikRaporu
+    displayName: Tibbi Gereklilik Rapor Bilgileri
+    type: object
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Populated when a medical-necessity report was saved; shape Tablo 4.9.1.j (TibbiGereklilikRaporDVO, this registry) (s.330).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 330
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 330
+    confidence: extracted
+    section: 4.6.1 raporKaydet Metodu
+status: reviewed

@@ -1,0 +1,16 @@
+id: basvuru-sekli
+displayName: Basvuru Sekli
+values:
+  - code: "1"
+    label: Kurum
+    description: Institution.
+  - code: "2"
+    label: Kisisel
+    description: Personal.
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 331
+    confidence: extracted
+status: reviewed

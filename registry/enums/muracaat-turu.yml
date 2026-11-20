@@ -1,0 +1,16 @@
+id: muracaat-turu
+displayName: Muracaat Turu
+values:
+  - code: "1"
+    label: Kurumu
+    description: Via the institution.
+  - code: "2"
+    label: Kisisel
+    description: Personal.
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 334
+    confidence: extracted
+status: reviewed

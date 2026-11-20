@@ -1,0 +1,23 @@
+id: tani-neden
+displayName: Tani Nedeni
+values:
+  - code: "1"
+    label: Mesleki Hastaliga Bagli
+    description: Occupational-disease related.
+  - code: "2"
+    label: Mesleki Hastaliga Bagli Degil
+    description: Not occupational-disease related.
+  - code: "3"
+    label: Is Kazasina Bagli
+    description: Work-accident related.
+  - code: "4"
+    label: Is Kazasina Bagli Degil
+    description: Not work-accident related.
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 332
+    confidence: extracted
+    notes: "Semantics depend on the report type: codes 1-2 apply when the report is Meslek Hastaligi, codes 3-4 when it is Is Kazasi (s.332-333)."
+status: reviewed
