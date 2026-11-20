@@ -1032,6 +1032,51 @@ erDiagram
     enum grupTuru
     integer grupKodu
   }
+  OrtodontiFormuIptalCevapDVO {
+    string formNo
+    string sonucKodu
+    string sonucMesaji
+  }
+  OrtodontiFormuIptalGirisDVO {
+    integer saglikTesisKodu
+    string sutKodu
+    integer formNo
+    integer tcKimlikNo
+  }
+  OrtodontiFormuKaydetCevapDVO {
+    string formNo
+    string sonucKodu
+    string sonucMesaji
+  }
+  OrtodontiFormuKaydetGirisDVO {
+    integer saglikTesisKodu
+    string provizyonNo
+    string sutKodu
+    integer formNo
+    string islemTarihi
+    integer tcKimlikNo
+  }
+  OrtodontiFormuOkuCevapDVO {
+    string formNo
+    string islemTuru
+    string tesis_kodu_1
+    string tesis_kodu_2
+    string tesis_kodu_3
+    string islem_tarihi_1
+    string islem_tarihi_2
+    string islem_tarihi_3
+    string provizyonNo1
+    string provizyonNo2
+    string provizyonNo3
+    string sonucKodu
+    string sonucMesaji
+  }
+  OrtodontiFormuOkuGirisDVO {
+    integer saglikTesisKodu
+    string sutKodu
+    integer formNo
+    integer tcKimlikNo
+  }
   ProvizyonCevapDVO {
     string sonucKodu
     string sonucMesaji
@@ -1196,6 +1241,48 @@ erDiagram
     string fiyat
     enum turu
     string gecerlilikTarihi
+  }
+  TaahhutCevapDVO {
+    string sonucKodu
+    string sonucMesaji
+    integer taahhutNo
+    array taahhutCikti
+  }
+  TaahhutDVO {
+    string hastaTCKimlikNo
+    integer adressIlPlaka
+    string adressIlce
+    string adressPostaKodu
+    string adressCaddeSokak
+    string adressDisKapiNo
+    string adressIcKapiNo
+    string adressTelefon
+    string adressEposta
+    string taahhutAlanAd
+    string taahhutAlanSoyad
+  }
+  TaahhutDisDVO {
+    string sutKodu
+    integer disNo
+  }
+  TaahhutKayitDVO {
+    string takipNo
+    integer saglikTesisKodu
+    object taahhut
+    array taahhutDiss
+  }
+  TaahhutKisiCevapDVO {
+    string sonucKodu
+    string sonucMesaji
+    array taahhutNo
+  }
+  TaahhutKisiOkuDVO {
+    integer saglikTesisKodu
+    integer tcKimlikNo
+  }
+  TaahhutOkuDVO {
+    string saglikTesisKodu
+    integer taahhutNo
   }
   TahlilBilgisiDVO {
     string bransKodu
@@ -1466,6 +1553,12 @@ erDiagram
   medula_hastane_hizmet_kayit_hizmet_kaydi_oku ||--|| HizmetOkuCevapDVO : outputDvo
   medula_hastane_hizmet_kayit_hizmet_kayit ||--|| HizmetKayitGirisDVO : inputDvo
   medula_hastane_hizmet_kayit_hizmet_kayit ||--|| HizmetKayitCevapDVO : outputDvo
+  medula_hastane_ortodonti_ortodonti_formu_iptal ||--|| OrtodontiFormuIptalGirisDVO : inputDvo
+  medula_hastane_ortodonti_ortodonti_formu_iptal ||--|| OrtodontiFormuIptalCevapDVO : outputDvo
+  medula_hastane_ortodonti_ortodonti_formu_kaydet ||--|| OrtodontiFormuKaydetGirisDVO : inputDvo
+  medula_hastane_ortodonti_ortodonti_formu_kaydet ||--|| OrtodontiFormuKaydetCevapDVO : outputDvo
+  medula_hastane_ortodonti_ortodonti_formu_oku ||--|| OrtodontiFormuOkuGirisDVO : inputDvo
+  medula_hastane_ortodonti_ortodonti_formu_oku ||--|| OrtodontiFormuOkuCevapDVO : outputDvo
   medula_hastane_rapor_ilac_rapor_duzelt ||--|| IlacRaporDuzeltDVO : inputDvo
   medula_hastane_rapor_ilac_rapor_duzelt ||--|| RaporCevapDVO : outputDvo
   medula_hastane_rapor_rapor_bilgisi_bul ||--|| RaporSorguDVO : inputDvo
@@ -1480,6 +1573,14 @@ erDiagram
   medula_hastane_rapor_rapor_bilgisi_sil ||--|| RaporCevapDVO : outputDvo
   medula_hastane_rapor_takip_no_ile_rapor_bilgisi_kaydet ||--|| RaporGirisDVO : inputDvo
   medula_hastane_rapor_takip_no_ile_rapor_bilgisi_kaydet ||--|| RaporCevapDVO : outputDvo
+  medula_hastane_taahhut_dis_taahhut_kaydet ||--|| TaahhutKayitDVO : inputDvo
+  medula_hastane_taahhut_dis_taahhut_kaydet ||--|| TaahhutCevapDVO : outputDvo
+  medula_hastane_taahhut_dis_taahhut_oku ||--|| TaahhutOkuDVO : inputDvo
+  medula_hastane_taahhut_dis_taahhut_oku ||--|| TaahhutCevapDVO : outputDvo
+  medula_hastane_taahhut_dis_taahhut_sil ||--|| TaahhutOkuDVO : inputDvo
+  medula_hastane_taahhut_dis_taahhut_sil ||--|| TaahhutCevapDVO : outputDvo
+  medula_hastane_taahhut_kisi_dis_taahhut_oku ||--|| TaahhutKisiOkuDVO : inputDvo
+  medula_hastane_taahhut_kisi_dis_taahhut_oku ||--|| TaahhutKisiCevapDVO : outputDvo
   medula_hastane_takip_formu_takip_formu_kaydet ||--|| TakipFormuKaydetGirisDVO : inputDvo
   medula_hastane_takip_formu_takip_formu_kaydet ||--|| TakipFormuKaydetCevapDVO : outputDvo
   medula_hastane_takip_formu_takip_formu_oku ||--|| TakipFormuOkuGirisDVO : inputDvo

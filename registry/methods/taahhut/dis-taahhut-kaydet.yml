@@ -1,0 +1,33 @@
+id: medula.hastane.taahhut.dis-taahhut-kaydet
+service: medula.hastane.taahhut
+names:
+  documentationHeading: disTaahhutKayit
+  operationName: disTaahhutKayit
+  aliases:
+    - disTaahhutKayit
+contract:
+  inputDvo: TaahhutKayitDVO
+  outputDvo: TaahhutCevapDVO
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 322
+    confidence: extracted
+    section: 4.4.1 disTaahhutKayit Metodu
+stateEffects:
+  creates:
+    - taahhut
+  reads: []
+  updates: []
+  deletes: []
+  generates:
+    - taahhutNo
+success:
+  resultCodeField: sonucKodu
+  successCode: "0000"
+  messageField: sonucMesaji
+sandbox:
+  supported: false
+  defaultScenario: null
+status: reviewed

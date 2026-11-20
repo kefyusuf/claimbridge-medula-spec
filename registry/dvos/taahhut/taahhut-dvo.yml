@@ -1,0 +1,221 @@
+id: TaahhutDVO
+domain: taahhut
+direction: input
+fields:
+  - name: hastaTCKimlikNo
+    displayName: Hastanin T.C. Kimlik Numarasi
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: 11
+    description: Patient citizen ID (s.323).
+    sensitive: true
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 323
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: adressIlPlaka
+    displayName: Adres Il Plaka Kodu
+    type: integer
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: null
+    description: Address province plate code (s.323).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 323
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: adressIlce
+    displayName: Adres Ilce Adi
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: null
+    description: Address district name; must match a district of the plate-coded province or the record fails (s.323).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 323
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: adressPostaKodu
+    displayName: Posta Kodu
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: 6
+    description: Postal code (s.323).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 323
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: adressCaddeSokak
+    displayName: Cadde Sokak Adi
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: 50
+    description: Street name (s.323).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 323
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: adressDisKapiNo
+    displayName: Dis Kapi Numarasi
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: 15
+    description: Outer door number (s.323).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 323
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: adressIcKapiNo
+    displayName: Ic Kapi Numarasi
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: 15
+    description: Inner door number (s.323).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 323
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: adressTelefon
+    displayName: Telefon Numarasi
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: 10
+    description: Phone number (s.323).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 323
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: adressEposta
+    displayName: E-posta Adresi
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: 50
+    description: E-mail address (s.323).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 323
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: taahhutAlanAd
+    displayName: Taahhut Alanin Adi
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: 30
+    description: Committed person's first name (s.323).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 323
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: taahhutAlanSoyad
+    displayName: Taahhut Alanin Soyadi
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: 30
+    description: Committed person's last name (s.323).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 323
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 323
+    confidence: extracted
+    section: 4.4 Taahhut Kayit Metotlari
+status: reviewed

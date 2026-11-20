@@ -58,3 +58,23 @@ wsdls:
     service: takip-formu
     environment: test
     url: https://sgkt.sgk.gov.tr/medula/hastane/takipFormuIslemleriWS?wsdl
+
+  - id: wsdl.taahhut.production
+    service: taahhut
+    environment: production
+    url: https://medula.sgk.gov.tr/medula/hastane/taahhutIslemleriWS?wsdl
+
+  - id: wsdl.taahhut.test
+    service: taahhut
+    environment: test
+    url: https://sgkt.sgk.gov.tr/medula/hastane/taahhutIslemleriWS?wsdl
+
+  - id: wsdl.ortodonti.production
+    service: ortodonti
+    environment: production
+    url: https://medula.sgk.gov.tr/medula/hastane/ortodontiIslemleriWS?wsdl
+
+  - id: wsdl.ortodonti.test
+    service: ortodonti
+    environment: test
+    url: https://sgkt.sgk.gov.tr/medula/hastane/ortodontiIslemleriWS?wsdl

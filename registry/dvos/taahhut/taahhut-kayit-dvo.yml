@@ -1,0 +1,88 @@
+id: TaahhutKayitDVO
+domain: taahhut
+direction: input
+fields:
+  - name: takipNo
+    displayName: Takip Numarasi
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: null
+    description: Tracking number of the dental treatment to commit (s.322).
+    sensitive: false
+    syntheticOnlyRecommended: true
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 322
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: saglikTesisKodu
+    displayName: Tesis Kodu
+    type: integer
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: null
+    description: GSS-assigned facility code (s.322).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 322
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: taahhut
+    displayName: Taahhut Bilgileri
+    type: object
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: null
+    description: Commitment body; shape Tablo 4.7.1.c (TaahhutDVO, this registry) (s.322).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 322
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: taahhutDiss
+    displayName: Taahhut Edilen Islemler
+    type: array
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: null
+    description: Committed dental procedures; item shape Tablo 4.7.1.d (TaahhutDisDVO, this registry) (s.322).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 322
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 322
+    confidence: extracted
+    section: 4.4 Taahhut Kayit Metotlari
+status: reviewed

@@ -1,0 +1,31 @@
+id: medula.hastane.taahhut.kisi-dis-taahhut-oku
+service: medula.hastane.taahhut
+names:
+  documentationHeading: okuKisiDisTaahhut
+  operationName: okuKisiDisTaahhut
+  aliases:
+    - okuKisiDisTaahhut
+contract:
+  inputDvo: TaahhutKisiOkuDVO
+  outputDvo: TaahhutKisiCevapDVO
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 324
+    confidence: extracted
+    section: 4.4.4 okuKisiDisTaahhut Metodu
+stateEffects:
+  creates: []
+  reads: []
+  updates: []
+  deletes: []
+  generates: []
+success:
+  resultCodeField: sonucKodu
+  successCode: "0000"
+  messageField: sonucMesaji
+sandbox:
+  supported: false
+  defaultScenario: null
+status: reviewed

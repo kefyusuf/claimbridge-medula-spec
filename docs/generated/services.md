@@ -72,6 +72,24 @@ Service registration process that records medical services against an existing p
 - `medula.hastane.hizmet-kayit.hizmet-kaydi-oku`
 - `medula.hastane.hizmet-kayit.hizmet-kaydi-iptal`
 
+## Ortodonti Formu Kayit Metotlari (`medula.hastane.ortodonti`)
+
+Orthodontic form operations: save, cancel and read the orthodontics follow-up form (guide section renumbered 4.5/4.8 across editions).
+
+| Field | Value |
+| --- | --- |
+| Slug | ortodonti |
+| Status | reviewed |
+| Production WSDL | wsdl.ortodonti.production |
+| Test WSDL | wsdl.ortodonti.test |
+| Source refs | medula-hastane-guide-3-1-1-2026-10-19 |
+
+**Methods**
+
+- `medula.hastane.ortodonti.ortodonti-formu-kaydet`
+- `medula.hastane.ortodonti.ortodonti-formu-iptal`
+- `medula.hastane.ortodonti.ortodonti-formu-oku`
+
 ## Rapor Bilgisi Kayit (`medula.hastane.rapor`)
 
 Report information registry operations: report lookup by report key, deletion, drug report correction, lookups by report tracking number or citizen ID, and report registration (RaporBilgisiKaydet dispatching exactly one report branch; the drug/disability/treatment/illness sub-branch shapes land incrementally).
@@ -93,6 +111,25 @@ Report information registry operations: report lookup by report key, deletion, d
 - `medula.hastane.rapor.rapor-bilgisi-bul-tc-kimlik-nodan`
 - `medula.hastane.rapor.rapor-bilgisi-kaydet`
 - `medula.hastane.rapor.takip-no-ile-rapor-bilgisi-kaydet`
+
+## Taahhut Kayit Metotlari (`medula.hastane.taahhut`)
+
+Dental-prosthesis commitment operations: save (restricted to SUT annex-7 prosthesis codes 404010…404420), read by commitment number, delete, and read a person's prior commitments. Dental codes follow the mouth schema Tablo 4.7.4 (s.325-326).
+
+| Field | Value |
+| --- | --- |
+| Slug | taahhut |
+| Status | reviewed |
+| Production WSDL | wsdl.taahhut.production |
+| Test WSDL | wsdl.taahhut.test |
+| Source refs | medula-hastane-guide-3-1-1-2026-10-19 |
+
+**Methods**
+
+- `medula.hastane.taahhut.dis-taahhut-kaydet`
+- `medula.hastane.taahhut.dis-taahhut-oku`
+- `medula.hastane.taahhut.dis-taahhut-sil`
+- `medula.hastane.taahhut.kisi-dis-taahhut-oku`
 
 ## Takip Formu Kayit Metotlari (`medula.hastane.takip-formu`)
 

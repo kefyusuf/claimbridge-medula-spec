@@ -1,0 +1,19 @@
+id: medula.hastane.ortodonti
+slug: ortodonti
+displayName: Ortodonti Formu Kayit Metotlari
+description: "Orthodontic form operations: save, cancel and read the orthodontics follow-up form (guide section renumbered 4.5/4.8 across editions)."
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 326
+    confidence: extracted
+    section: 4.5 Ortodonti Formu Kayit Metotlari
+wsdl:
+  production: wsdl.ortodonti.production
+  test: wsdl.ortodonti.test
+methods:
+  - medula.hastane.ortodonti.ortodonti-formu-kaydet
+  - medula.hastane.ortodonti.ortodonti-formu-iptal
+  - medula.hastane.ortodonti.ortodonti-formu-oku
+status: reviewed

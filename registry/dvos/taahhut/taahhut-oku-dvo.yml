@@ -1,0 +1,50 @@
+id: TaahhutOkuDVO
+domain: taahhut
+direction: input
+fields:
+  - name: saglikTesisKodu
+    displayName: Tesis Kodu
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: null
+    description: GSS-assigned facility code — typed String here unlike the Integer in TaahhutKayitDVO (s.324).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 324
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: taahhutNo
+    displayName: Taahhut Numarasi
+    type: integer
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: null
+    description: System-generated commitment number (s.324).
+    sensitive: false
+    syntheticOnlyRecommended: true
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 324
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 324
+    confidence: extracted
+    section: 4.4 Taahhut Kayit Metotlari
+status: reviewed

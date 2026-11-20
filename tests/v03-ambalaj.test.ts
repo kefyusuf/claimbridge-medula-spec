@@ -44,6 +44,6 @@ describe("v0.3 ambalaj-boyutu (Group 32)", () => {
       readFileSync(resolve(root, "dist", "manifest.json"), "utf8"),
     ) as { counts: Record<string, number> };
     expect(manifest.counts.enums).toBe(69);
-    expect(manifest.counts.dvos).toBe(176);
+    expect(manifest.counts.dvos).toBe(189);
   });
 });

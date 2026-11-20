@@ -1,0 +1,32 @@
+id: medula.hastane.ortodonti.ortodonti-formu-iptal
+service: medula.hastane.ortodonti
+names:
+  documentationHeading: ortodontiFormuIptal
+  operationName: ortodontiFormuIptal
+  aliases:
+    - ortodontiFormuIptal
+contract:
+  inputDvo: OrtodontiFormuIptalGirisDVO
+  outputDvo: OrtodontiFormuIptalCevapDVO
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 327
+    confidence: extracted
+    section: 4.5.2 ortodontiFormuIptal Metodu
+stateEffects:
+  creates: []
+  reads:
+    - ortodontiFormu
+  updates: []
+  deletes: []
+  generates: []
+success:
+  resultCodeField: sonucKodu
+  successCode: "0000"
+  messageField: sonucMesaji
+sandbox:
+  supported: false
+  defaultScenario: null
+status: reviewed
