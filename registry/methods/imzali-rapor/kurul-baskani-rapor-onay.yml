@@ -1,0 +1,33 @@
+id: medula.hastane.imzali-rapor.kurul-baskani-rapor-onay
+service: medula.hastane.imzali-rapor
+names:
+  documentationHeading: kurulBaskanıRaporOnay
+  operationName: kurulBaskanıRaporOnay
+  aliases:
+    - kurulBaskanıRaporOnay
+contract:
+  inputDvo: ImzaliRaporOnayGirisDVO
+  outputDvo: RaporOnayCevapDVO
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 337
+    confidence: extracted
+    section: 4.6 4.6.3 kurulBaskanıRaporOnay Metodu
+stateEffects:
+  creates: []
+  reads: []
+  updates:
+    - imzaliRapor
+  deletes: []
+  generates:
+    - raporTakipNo
+success:
+  resultCodeField: sonucKodu
+  successCode: "0000"
+  messageField: sonucMesaji
+sandbox:
+  supported: false
+  defaultScenario: null
+status: reviewed

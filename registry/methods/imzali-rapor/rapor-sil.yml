@@ -1,0 +1,32 @@
+id: medula.hastane.imzali-rapor.rapor-sil
+service: medula.hastane.imzali-rapor
+names:
+  documentationHeading: raporSil
+  operationName: raporSil
+  aliases:
+    - raporSil
+contract:
+  inputDvo: ImzaliRaporSilGirisDVO
+  outputDvo: SonucDVO
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 347
+    confidence: extracted
+    section: 4.6 4.6.10 raporSil Metodu
+stateEffects:
+  creates: []
+  reads: []
+  updates: []
+  deletes:
+    - imzaliRapor
+  generates: []
+success:
+  resultCodeField: sonucKodu
+  successCode: "0000"
+  messageField: sonucMesaji
+sandbox:
+  supported: false
+  defaultScenario: null
+status: reviewed

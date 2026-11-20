@@ -1,0 +1,88 @@
+id: RaporSorguCevapDVO
+domain: imzali-rapor
+direction: output
+fields:
+  - name: sonucKodu
+    displayName: Sonuc Kodu
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: 4
+    description: Result code; "0000" means success (s.340).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 340
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: sonucMesaji
+    displayName: Sonuc Mesaji
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: null
+    description: Result description (s.340).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 340
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: uyariMesaji
+    displayName: Uyari Mesaji
+    type: string
+    enumRef: null
+    codeSystem: null
+    required: true
+    length: null
+    description: Warning message (s.340).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 340
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+  - name: raporBilgileri
+    displayName: Rapor Bilgileri
+    type: array
+    enumRef: null
+    codeSystem: null
+    required: false
+    length: null
+    description: Signed reports; item shape ImzaliRaporDVO (this registry) (s.340).
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: 3.1.1
+        page: 340
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: 0.5.0
+    deprecatedIn: null
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 336
+    confidence: extracted
+    section: 4.6 E-İmzalı Rapor Islemleri Metotlari
+status: reviewed

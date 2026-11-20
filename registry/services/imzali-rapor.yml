@@ -1,0 +1,27 @@
+id: medula.hastane.imzali-rapor
+slug: imzali-rapor
+displayName: E-İmzalı Rapor Islemleri Metotlari
+description: "Digitally-signed report operations: approval (physician / board head / chief physician), signed-blob queries, pending-approval queries, deletion and the XML-object approval step. Inputs and query payloads are opaque byte[] signature blobs; raporKaydet (7-page composite, s.329-336) lands with G45c-b."
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 329
+    confidence: extracted
+    section: 4.6 E-İmzalı Rapor Islemleri Metotlari
+wsdl:
+  production: wsdl.imzali-rapor.production
+  test: wsdl.imzali-rapor.test
+methods:
+  - medula.hastane.imzali-rapor.rapor-onay
+  - medula.hastane.imzali-rapor.kurul-baskani-rapor-onay
+  - medula.hastane.imzali-rapor.bashekim-rapor-onay
+  - medula.hastane.imzali-rapor.rapor-sorgu
+  - medula.hastane.imzali-rapor.tc-ile-rapor-sorgu
+  - medula.hastane.imzali-rapor.kurul-baskani-onay-bekleyen-rapor-sorgu
+  - medula.hastane.imzali-rapor.bashekim-onay-bekleyen-rapor-sorgu
+  - medula.hastane.imzali-rapor.onay-bekleyen-rapor-sorgu
+  - medula.hastane.imzali-rapor.rapor-sil
+  - medula.hastane.imzali-rapor.onay
+  - medula.hastane.imzali-rapor.onay-bekleyen
+status: reviewed

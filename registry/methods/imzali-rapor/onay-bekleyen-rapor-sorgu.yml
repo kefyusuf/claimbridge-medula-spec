@@ -1,0 +1,31 @@
+id: medula.hastane.imzali-rapor.onay-bekleyen-rapor-sorgu
+service: medula.hastane.imzali-rapor
+names:
+  documentationHeading: onayBekleyenRaporSorgu
+  operationName: onayBekleyenRaporSorgu
+  aliases:
+    - onayBekleyenRaporSorgu
+contract:
+  inputDvo: RaporOnayBekleyenSorguDVO
+  outputDvo: RaporSorguCevapDVO
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: 3.1.1
+    page: 345
+    confidence: extracted
+    section: 4.6 4.6.9 onayBekleyenRaporSorgu Metodu
+stateEffects:
+  creates: []
+  reads: []
+  updates: []
+  deletes: []
+  generates: []
+success:
+  resultCodeField: sonucKodu
+  successCode: "0000"
+  messageField: sonucMesaji
+sandbox:
+  supported: false
+  defaultScenario: null
+status: reviewed
