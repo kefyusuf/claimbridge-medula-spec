@@ -4,29 +4,33 @@ import { describe, expect, it } from "vitest";
 
 const root = resolve(import.meta.dirname, "..");
 
-describe("release v0.6.0 (Group 46)", () => {
-  it("bumps SPEC_VERSION and package.json to 0.6.0", () => {
+describe("release v0.6.0 (Group 46, superseded by v0.7.0)", () => {
+  it("keeps the pre-0.7.0 version history coherent (release superseded)", () => {
     const specVersion = readFileSync(
       resolve(root, "SPEC_VERSION"),
       "utf8",
     ).trim();
-    expect(specVersion).toBe("0.6.0");
+    expect(specVersion).toBe("0.7.0");
     const pkg = JSON.parse(
       readFileSync(resolve(root, "package.json"), "utf8"),
     ) as { version: string };
-    expect(pkg.version).toBe("0.6.0");
-  });
-
-  it("bumps CITATION.cff to 0.6.0", () => {
-    const citation = readFileSync(resolve(root, "CITATION.cff"), "utf8");
-    expect(citation).toContain("version: 0.6.0");
-    expect(citation).toContain('date-released: "2026-11-20"');
+    expect(pkg.version).toBe("0.7.0");
   });
 
   it("records the 0.6.0 release in the changelog", () => {
     const changelog = readFileSync(resolve(root, "CHANGELOG.md"), "utf8");
     expect(changelog).toContain("## [0.6.0] — 2026-11-20");
     expect(changelog).toContain("E-İmzalı Rapor");
+  });
+
+  it("keeps the bundle specVersion in lockstep", () => {
+    const bundle = JSON.parse(
+      readFileSync(
+        resolve(root, "dist", "claimbridge-medula-spec.json"),
+        "utf8",
+      ),
+    ) as { specVersion: string };
+    expect(bundle.specVersion).toBe("0.7.0");
   });
 
   it("carries every main-section service group in the bundle", () => {
@@ -42,7 +46,7 @@ describe("release v0.6.0 (Group 46)", () => {
       dvos: Array<{ id: string }>;
       enums: Array<{ id: string }>;
     };
-    expect(bundle.specVersion).toBe("0.6.0");
+    expect(bundle.specVersion).toBe("0.7.0");
     const serviceIds = bundle.services.map((s) => s.id);
     for (const id of [
       "medula.hastane.hasta-kabul",
