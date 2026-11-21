@@ -6,7 +6,18 @@ Format: [Keep a Changelog](https://keepachangelog.com); versioning: SemVer
 
 ## [Unreleased]
 
-_Nothing yet — v0.7.0 scope is complete._
+_Nothing yet — v0.8.0 scope is complete._
+
+## [0.8.0] — 2026-11-21
+
+Eighth release: **Laravel validation rules codegen**. `pnpm generate` now
+emits 123 rule classes (`ClaimBridge\Medula\Rules\<Domain>\`) — one per
+input DVO — each exposing `rules(): array` with Laravel-ready rule arrays
+built from the guide-verified registry: `required`/`nullable` from the
+guide's columns, `integer`/`string`/`numeric`/`date`/`array` types,
+`max:N` from the guide lengths, and `in:...` membership lists from the
+81 registry enums. Conditional exceptions (linked-takip style) are
+annotated as inline comments. All 416 generated PHP files pass `php -l`.
 
 ## [0.7.0] — 2026-11-21
 

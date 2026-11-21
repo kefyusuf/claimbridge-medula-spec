@@ -110,6 +110,112 @@ function generateEnum(entry: YamlFile): string {
   ].join("\n");
 }
 
+const RULE_TYPE: Record<string, string> = {
+  string: "string",
+  integer: "integer",
+  decimal: "numeric",
+  boolean: "boolean",
+  date: "date",
+  array: "array",
+  object: "array",
+};
+
+function generateRules(
+  entry: YamlFile,
+  enumCodes: Map<string, string[]>,
+): string {
+  const data = entry.data;
+  const id = String(data["id"]);
+  const domain = String(data["domain"]);
+  const fields = (data["fields"] as Array<Field>) ?? [];
+  const used = new Set<string>();
+  const lines: string[] = [];
+
+  for (const f of fields) {
+    const name = String(f["name"]);
+    const type = String(f["type"] ?? "string");
+    const enumRef = f["enumRef"] as string | null;
+    const length = f["length"] as number | null;
+    const conditionals =
+      (f["conditionalRequired"] as Array<Record<string, unknown>>) ?? [];
+
+    let unique = name;
+    let counter = 2;
+    while (used.has(unique)) {
+      unique = `${name}${counter++}`;
+    }
+    used.add(unique);
+
+    const rules: string[] = [];
+    const required = f["required"] === true;
+    const isEnum = type === "enum" && enumRef !== null;
+    if (required) rules.push("'required'");
+    else rules.push("'nullable'");
+    rules.push(`'${isEnum ? "string" : (RULE_TYPE[type] ?? "array")}'`);
+    if (isEnum) {
+      const codes = enumCodes.get(enumRef) ?? [];
+      if (codes.length > 0) rules.push(`'in:${codes.join(",")}'`);
+    }
+    if (typeof length === "number" && !isEnum) rules.push(`'max:${length}'`);
+
+    const conditionalComment =
+      conditionals.length > 0 && !required
+        ? conditionals
+            .map(
+              (c) =>
+                `        // conditional: ${phpDoc(String(c["condition"] ?? ""))}`,
+            )
+            .join("\n") + "\n"
+        : "";
+    const exceptionComment =
+      conditionals.length > 0 && required
+        ? "        // " +
+          phpDoc(
+            conditionals.map((c) => String(c["condition"] ?? "")).join("; "),
+          ) +
+          "\n"
+        : "";
+
+    lines.push(
+      ...(exceptionComment ? [exceptionComment.trimEnd()] : []),
+      ...(conditionalComment ? [conditionalComment.trimEnd()] : []),
+      `        ${JSON.stringify(name)} => [${rules.join(", ")}],`,
+    );
+  }
+
+  const className = `${pascal(id)}Rules`;
+  const refs = (data["sourceRefs"] as Array<Record<string, unknown>>) ?? [];
+  const page = refs[0]?.["page"] ?? "?";
+  return [
+    "<?php",
+    "",
+    "declare(strict_types=1);",
+    "",
+    `namespace ClaimBridge\\Medula\\Rules\\${pascal(domain)};`,
+    "",
+    "/**",
+    ` * Laravel validation rules for ${phpDoc(id)} — guideVersion 3.1.1, page ${page}.`,
+    " *",
+    " * Conditional exceptions from the guide are annotated inline; a field",
+    " * marked required with a linked-takip-style exception stays 'required' —",
+    " * apply the exception in your own request layer (Laravel sometimes/required_without).",
+    " *",
+    " * @deprecated Generated artifact — do not edit by hand.",
+    " */",
+    `final class ${className}`,
+    "{",
+    "    /** @return array<string, array<int, string>> */",
+    "    public static function rules(): array",
+    "    {",
+    "        return [",
+    ...lines,
+    "        ];",
+    "    }",
+    "}",
+    "",
+  ].join("\n");
+}
+
 function generateDvo(entry: YamlFile): string {
   const data = entry.data;
   const id = String(data["id"]);
@@ -242,6 +348,27 @@ export function writePhp(reg: Registry, phpDir: string): void {
     write(
       resolve(dir, `${pascal(String(entry.data["id"]))}.php`),
       generateDvo(entry),
+    );
+  }
+
+  const enumCodes = new Map<string, string[]>();
+  for (const entry of enums) {
+    const id = String(entry.data["id"]);
+    const values =
+      (entry.data["values"] as Array<Record<string, string>>) ?? [];
+    enumCodes.set(
+      id,
+      values.map((v) => String(v["code"])),
+    );
+  }
+  for (const entry of dvos) {
+    if (entry.data["direction"] !== "input") continue;
+    const domain = pascal(String(entry.data["domain"]));
+    const dir = resolve(phpDir, "src", "Rules", domain);
+    mkdirSync(dir, { recursive: true });
+    write(
+      resolve(dir, `${pascal(String(entry.data["id"]))}Rules.php`),
+      generateRules(entry, enumCodes),
     );
   }
 
