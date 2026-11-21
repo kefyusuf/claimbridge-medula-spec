@@ -41,11 +41,11 @@ final class TakipBilgisiCevapDVO
     public function toArray(): array
     {
         return [
-        "sonucKodu" => $sonucKodu,
-        "sonucMesaji" => $sonucMesaji,
-        "takipBilgisiListDVO" => $takipBilgisiListDVO,
-        "evrakRefNo" => $evrakRefNo,
-        "saglikTesisKodu" => $saglikTesisKodu,
+        "sonucKodu" => $this->sonucKodu,
+        "sonucMesaji" => $this->sonucMesaji,
+        "takipBilgisiListDVO" => $this->takipBilgisiListDVO,
+        "evrakRefNo" => $this->evrakRefNo,
+        "saglikTesisKodu" => $this->saglikTesisKodu,
         ];
     }
 }

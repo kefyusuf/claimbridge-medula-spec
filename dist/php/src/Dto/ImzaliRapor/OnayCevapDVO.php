@@ -38,10 +38,10 @@ final class OnayCevapDVO
     public function toArray(): array
     {
         return [
-        "onayIslemReferans" => $onayIslemReferans,
-        "sonucKodu" => $sonucKodu,
-        "sonucMesaji" => $sonucMesaji,
-        "uyariMesaji" => $uyariMesaji,
+        "onayIslemReferans" => $this->onayIslemReferans,
+        "sonucKodu" => $this->sonucKodu,
+        "sonucMesaji" => $this->sonucMesaji,
+        "uyariMesaji" => $this->uyariMesaji,
         ];
     }
 }

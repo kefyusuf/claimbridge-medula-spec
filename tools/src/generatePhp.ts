@@ -170,10 +170,10 @@ function generateDvo(entry: YamlFile): string {
     reads.push(`        ${readExpr},`);
     if (type === "enum" && enumRef) {
       writes.push(
-        `        ${JSON.stringify(name)} => $${unique} !== null ? $${unique}->value : null,`,
+        `        ${JSON.stringify(name)} => $this->${unique} !== null ? $this->${unique}->value : null,`,
       );
     } else {
-      writes.push(`        ${JSON.stringify(name)} => $${unique},`);
+      writes.push(`        ${JSON.stringify(name)} => $this->${unique},`);
     }
   }
 

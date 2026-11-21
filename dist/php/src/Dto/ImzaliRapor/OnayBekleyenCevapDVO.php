@@ -35,9 +35,9 @@ final class OnayBekleyenCevapDVO
     public function toArray(): array
     {
         return [
-        "onayiBeklenenDoktorlar" => $onayiBeklenenDoktorlar,
-        "sonucKodu" => $sonucKodu,
-        "sonucMesaji" => $sonucMesaji,
+        "onayiBeklenenDoktorlar" => $this->onayiBeklenenDoktorlar,
+        "sonucKodu" => $this->sonucKodu,
+        "sonucMesaji" => $this->sonucMesaji,
         ];
     }
 }

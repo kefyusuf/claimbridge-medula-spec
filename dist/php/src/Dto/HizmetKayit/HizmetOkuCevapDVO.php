@@ -38,10 +38,10 @@ final class HizmetOkuCevapDVO
     public function toArray(): array
     {
         return [
-        "hizmetler" => $hizmetler,
-        "hastaBasvuruNo" => $hastaBasvuruNo,
-        "sonucKodu" => $sonucKodu,
-        "sonucMesaji" => $sonucMesaji,
+        "hizmetler" => $this->hizmetler,
+        "hastaBasvuruNo" => $this->hastaBasvuruNo,
+        "sonucKodu" => $this->sonucKodu,
+        "sonucMesaji" => $this->sonucMesaji,
         ];
     }
 }

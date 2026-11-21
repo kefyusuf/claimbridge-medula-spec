@@ -63,18 +63,18 @@ final class TibbiGereklilikRaporDVO
     public function toArray(): array
     {
         return [
-        "raporTakipNo" => $raporTakipNo,
-        "tckimlikNo" => $tckimlikNo,
-        "tesisKodu" => $tesisKodu,
-        "takipNo" => $takipNo,
-        "raporTarihi" => $raporTarihi,
-        "raporNo" => $raporNo,
-        "istekNedeni" => $istekNedeni !== null ? $istekNedeni->value : null,
-        "tanilar" => $tanilar,
-        "protokolNo" => $protokolNo,
-        "karar" => $karar,
-        "islemler" => $islemler,
-        "doktorlar" => $doktorlar,
+        "raporTakipNo" => $this->raporTakipNo,
+        "tckimlikNo" => $this->tckimlikNo,
+        "tesisKodu" => $this->tesisKodu,
+        "takipNo" => $this->takipNo,
+        "raporTarihi" => $this->raporTarihi,
+        "raporNo" => $this->raporNo,
+        "istekNedeni" => $this->istekNedeni !== null ? $this->istekNedeni->value : null,
+        "tanilar" => $this->tanilar,
+        "protokolNo" => $this->protokolNo,
+        "karar" => $this->karar,
+        "islemler" => $this->islemler,
+        "doktorlar" => $this->doktorlar,
         ];
     }
 }

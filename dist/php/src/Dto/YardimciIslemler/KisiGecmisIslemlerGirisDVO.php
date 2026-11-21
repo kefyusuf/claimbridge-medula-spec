@@ -35,9 +35,9 @@ final class KisiGecmisIslemlerGirisDVO
     public function toArray(): array
     {
         return [
-        "saglikTesisKodu" => $saglikTesisKodu,
-        "hastaTCKimlikNo" => $hastaTCKimlikNo,
-        "sutKodu" => $sutKodu,
+        "saglikTesisKodu" => $this->saglikTesisKodu,
+        "hastaTCKimlikNo" => $this->hastaTCKimlikNo,
+        "sutKodu" => $this->sutKodu,
         ];
     }
 }

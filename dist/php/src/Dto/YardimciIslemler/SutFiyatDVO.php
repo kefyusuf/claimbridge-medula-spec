@@ -42,11 +42,11 @@ final class SutFiyatDVO
     public function toArray(): array
     {
         return [
-        "sutKodu" => $sutKodu,
-        "adi" => $adi,
-        "fiyat" => $fiyat,
-        "turu" => $turu !== null ? $turu->value : null,
-        "gecerlilikTarihi" => $gecerlilikTarihi,
+        "sutKodu" => $this->sutKodu,
+        "adi" => $this->adi,
+        "fiyat" => $this->fiyat,
+        "turu" => $this->turu !== null ? $this->turu->value : null,
+        "gecerlilikTarihi" => $this->gecerlilikTarihi,
         ];
     }
 }

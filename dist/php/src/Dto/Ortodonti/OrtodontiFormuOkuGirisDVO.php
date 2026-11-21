@@ -38,10 +38,10 @@ final class OrtodontiFormuOkuGirisDVO
     public function toArray(): array
     {
         return [
-        "saglikTesisKodu" => $saglikTesisKodu,
-        "sutKodu" => $sutKodu,
-        "formNo" => $formNo,
-        "tcKimlikNo" => $tcKimlikNo,
+        "saglikTesisKodu" => $this->saglikTesisKodu,
+        "sutKodu" => $this->sutKodu,
+        "formNo" => $this->formNo,
+        "tcKimlikNo" => $this->tcKimlikNo,
         ];
     }
 }

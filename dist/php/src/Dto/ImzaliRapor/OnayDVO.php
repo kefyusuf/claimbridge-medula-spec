@@ -43,11 +43,11 @@ final class OnayDVO
     public function toArray(): array
     {
         return [
-        "tesisKodu" => $tesisKodu,
-        "doktorTcKimlikNo" => $doktorTcKimlikNo,
-        "onayVerenTuru" => $onayVerenTuru !== null ? $onayVerenTuru->value : null,
-        "onayIslemTuru" => $onayIslemTuru !== null ? $onayIslemTuru->value : null,
-        "onayIslemReferans" => $onayIslemReferans,
+        "tesisKodu" => $this->tesisKodu,
+        "doktorTcKimlikNo" => $this->doktorTcKimlikNo,
+        "onayVerenTuru" => $this->onayVerenTuru !== null ? $this->onayVerenTuru->value : null,
+        "onayIslemTuru" => $this->onayIslemTuru !== null ? $this->onayIslemTuru->value : null,
+        "onayIslemReferans" => $this->onayIslemReferans,
         ];
     }
 }

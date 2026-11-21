@@ -35,9 +35,9 @@ final class TesisYatakSorguCevapDVO
     public function toArray(): array
     {
         return [
-        "sonucKodu" => $sonucKodu,
-        "sonucMesaji" => $sonucMesaji,
-        "yataklar" => $yataklar,
+        "sonucKodu" => $this->sonucKodu,
+        "sonucMesaji" => $this->sonucMesaji,
+        "yataklar" => $this->yataklar,
         ];
     }
 }

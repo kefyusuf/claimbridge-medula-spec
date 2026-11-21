@@ -35,9 +35,9 @@ final class ImzaliRaporGirisDVO
     public function toArray(): array
     {
         return [
-        "saglikTesisKodu" => $saglikTesisKodu,
-        "doktorTcKimlikNo" => $doktorTcKimlikNo,
-        "raporBilgisi" => $raporBilgisi,
+        "saglikTesisKodu" => $this->saglikTesisKodu,
+        "doktorTcKimlikNo" => $this->doktorTcKimlikNo,
+        "raporBilgisi" => $this->raporBilgisi,
         ];
     }
 }

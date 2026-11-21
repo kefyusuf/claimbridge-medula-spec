@@ -35,9 +35,9 @@ final class BKDSDogrulamaKisiSorguCevapDVO
     public function toArray(): array
     {
         return [
-        "bkdsDogrulamaDetayDVO" => $bkdsDogrulamaDetayDVO,
-        "sonucKodu" => $sonucKodu,
-        "sonucMesaji" => $sonucMesaji,
+        "bkdsDogrulamaDetayDVO" => $this->bkdsDogrulamaDetayDVO,
+        "sonucKodu" => $this->sonucKodu,
+        "sonucMesaji" => $this->sonucMesaji,
         ];
     }
 }

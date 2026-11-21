@@ -32,8 +32,8 @@ final class EKDSBelgeGerekenTakipSorguGirisDVO
     public function toArray(): array
     {
         return [
-        "tesisKodu" => $tesisKodu,
-        "evrakID" => $evrakID,
+        "tesisKodu" => $this->tesisKodu,
+        "evrakID" => $this->evrakID,
         ];
     }
 }

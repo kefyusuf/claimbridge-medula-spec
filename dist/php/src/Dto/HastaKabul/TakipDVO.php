@@ -50,13 +50,13 @@ final class TakipDVO
     public function toArray(): array
     {
         return [
-        "takipNo" => $takipNo,
-        "ilkTakipNo" => $ilkTakipNo,
-        "takipTipi" => $takipTipi !== null ? $takipTipi->value : null,
-        "takipDurumu" => $takipDurumu !== null ? $takipDurumu->value : null,
-        "hastaBasvuruNo" => $hastaBasvuruNo,
-        "bransKodu" => $bransKodu,
-        "ekdsYontemGerekce" => $ekdsYontemGerekce !== null ? $ekdsYontemGerekce->value : null,
+        "takipNo" => $this->takipNo,
+        "ilkTakipNo" => $this->ilkTakipNo,
+        "takipTipi" => $this->takipTipi !== null ? $this->takipTipi->value : null,
+        "takipDurumu" => $this->takipDurumu !== null ? $this->takipDurumu->value : null,
+        "hastaBasvuruNo" => $this->hastaBasvuruNo,
+        "bransKodu" => $this->bransKodu,
+        "ekdsYontemGerekce" => $this->ekdsYontemGerekce !== null ? $this->ekdsYontemGerekce->value : null,
         ];
     }
 }

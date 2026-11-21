@@ -38,10 +38,10 @@ final class OrneklenmisCevapDVO
     public function toArray(): array
     {
         return [
-        "sonucKodu" => $sonucKodu,
-        "sonucMesaji" => $sonucMesaji,
-        "saglikTesisKodu" => $saglikTesisKodu,
-        "takipler" => $takipler,
+        "sonucKodu" => $this->sonucKodu,
+        "sonucMesaji" => $this->sonucMesaji,
+        "saglikTesisKodu" => $this->saglikTesisKodu,
+        "takipler" => $this->takipler,
         ];
     }
 }

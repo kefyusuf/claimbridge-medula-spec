@@ -69,19 +69,19 @@ final class MeslekHastaligiRaporDVO
     public function toArray(): array
     {
         return [
-        "baslangicTarihi" => $baslangicTarihi,
-        "bitisTarihi" => $bitisTarihi,
-        "raporDurumu" => $raporDurumu !== null ? $raporDurumu->value : null,
-        "isKontTarihi" => $isKontTarihi,
-        "hastaneYatisTarihi" => $hastaneYatisTarihi,
-        "hastaneCikisTarihi" => $hastaneCikisTarihi,
-        "nuks" => $nuks !== null ? $nuks->value : null,
-        "yatisDevam" => $yatisDevam !== null ? $yatisDevam->value : null,
-        "yaraninTuru" => $yaraninTuru,
-        "yaraninYeri" => $yaraninYeri,
-        "taburcuTarihi" => $taburcuTarihi,
-        "taburcuKodu" => $taburcuKodu !== null ? $taburcuKodu->value : null,
-        "isKazasiTarihi" => $isKazasiTarihi,
+        "baslangicTarihi" => $this->baslangicTarihi,
+        "bitisTarihi" => $this->bitisTarihi,
+        "raporDurumu" => $this->raporDurumu !== null ? $this->raporDurumu->value : null,
+        "isKontTarihi" => $this->isKontTarihi,
+        "hastaneYatisTarihi" => $this->hastaneYatisTarihi,
+        "hastaneCikisTarihi" => $this->hastaneCikisTarihi,
+        "nuks" => $this->nuks !== null ? $this->nuks->value : null,
+        "yatisDevam" => $this->yatisDevam !== null ? $this->yatisDevam->value : null,
+        "yaraninTuru" => $this->yaraninTuru,
+        "yaraninYeri" => $this->yaraninYeri,
+        "taburcuTarihi" => $this->taburcuTarihi,
+        "taburcuKodu" => $this->taburcuKodu !== null ? $this->taburcuKodu->value : null,
+        "isKazasiTarihi" => $this->isKazasiTarihi,
         ];
     }
 }

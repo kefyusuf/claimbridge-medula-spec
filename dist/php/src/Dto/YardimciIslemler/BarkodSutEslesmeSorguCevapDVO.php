@@ -35,9 +35,9 @@ final class BarkodSutEslesmeSorguCevapDVO
     public function toArray(): array
     {
         return [
-        "sonucKodu" => $sonucKodu,
-        "sonucMesaji" => $sonucMesaji,
-        "eslesmeler" => $eslesmeler,
+        "sonucKodu" => $this->sonucKodu,
+        "sonucMesaji" => $this->sonucMesaji,
+        "eslesmeler" => $this->eslesmeler,
         ];
     }
 }

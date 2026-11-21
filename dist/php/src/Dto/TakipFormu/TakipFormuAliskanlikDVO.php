@@ -30,7 +30,7 @@ final class TakipFormuAliskanlikDVO
     public function toArray(): array
     {
         return [
-        "aliskanlik" => $aliskanlik !== null ? $aliskanlik->value : null,
+        "aliskanlik" => $this->aliskanlik !== null ? $this->aliskanlik->value : null,
         ];
     }
 }

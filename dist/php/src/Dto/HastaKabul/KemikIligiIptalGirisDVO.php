@@ -35,9 +35,9 @@ final class KemikIligiIptalGirisDVO
     public function toArray(): array
     {
         return [
-        "hastaTcNo" => $hastaTcNo,
-        "saglikTesisKodu" => $saglikTesisKodu,
-        "bildirimNo" => $bildirimNo,
+        "hastaTcNo" => $this->hastaTcNo,
+        "saglikTesisKodu" => $this->saglikTesisKodu,
+        "bildirimNo" => $this->bildirimNo,
         ];
     }
 }

@@ -39,10 +39,10 @@ final class ESWTRaporBilgisiDVO
     public function toArray(): array
     {
         return [
-        "eswtVucutBolgesiKodu" => $eswtVucutBolgesiKodu !== null ? $eswtVucutBolgesiKodu->value : null,
-        "seansGun" => $seansGun,
-        "seansSayi" => $seansSayi,
-        "butKodu" => $butKodu,
+        "eswtVucutBolgesiKodu" => $this->eswtVucutBolgesiKodu !== null ? $this->eswtVucutBolgesiKodu->value : null,
+        "seansGun" => $this->seansGun,
+        "seansSayi" => $this->seansSayi,
+        "butKodu" => $this->butKodu,
         ];
     }
 }

@@ -35,9 +35,9 @@ final class TakipFormuOkuCevapDVO
     public function toArray(): array
     {
         return [
-        "diabetTakipFormu" => $diabetTakipFormu,
-        "sonucKodu" => $sonucKodu,
-        "sonucMesaji" => $sonucMesaji,
+        "diabetTakipFormu" => $this->diabetTakipFormu,
+        "sonucKodu" => $this->sonucKodu,
+        "sonucMesaji" => $this->sonucMesaji,
         ];
     }
 }

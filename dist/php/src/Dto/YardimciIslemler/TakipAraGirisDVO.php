@@ -45,12 +45,12 @@ final class TakipAraGirisDVO
     public function toArray(): array
     {
         return [
-        "hastaTCK" => $hastaTCK,
-        "baslangicTarihi" => $baslangicTarihi,
-        "bitisTarihi" => $bitisTarihi,
-        "sevkDurumu" => $sevkDurumu !== null ? $sevkDurumu->value : null,
-        "saglikTesisKodu" => $saglikTesisKodu,
-        "ktsHbysKodu" => $ktsHbysKodu,
+        "hastaTCK" => $this->hastaTCK,
+        "baslangicTarihi" => $this->baslangicTarihi,
+        "bitisTarihi" => $this->bitisTarihi,
+        "sevkDurumu" => $this->sevkDurumu !== null ? $this->sevkDurumu->value : null,
+        "saglikTesisKodu" => $this->saglikTesisKodu,
+        "ktsHbysKodu" => $this->ktsHbysKodu,
         ];
     }
 }

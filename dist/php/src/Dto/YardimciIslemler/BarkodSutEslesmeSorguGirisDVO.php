@@ -41,11 +41,11 @@ final class BarkodSutEslesmeSorguGirisDVO
     public function toArray(): array
     {
         return [
-        "saglikTesisKodu" => $saglikTesisKodu,
-        "tarih" => $tarih,
-        "barkod" => $barkod,
-        "firmaTanimlayiciNo" => $firmaTanimlayiciNo,
-        "sutKodu" => $sutKodu,
+        "saglikTesisKodu" => $this->saglikTesisKodu,
+        "tarih" => $this->tarih,
+        "barkod" => $this->barkod,
+        "firmaTanimlayiciNo" => $this->firmaTanimlayiciNo,
+        "sutKodu" => $this->sutKodu,
         ];
     }
 }

@@ -57,16 +57,16 @@ final class KurumSevkTalepNoSorguDetayDVO
     public function toArray(): array
     {
         return [
-        "kurumSevkTalepNo" => $kurumSevkTalepNo,
-        "tcKimlikNo" => $tcKimlikNo,
-        "sevkTarihi" => $sevkTarihi,
-        "saglikTesisKodu" => $saglikTesisKodu,
-        "hastaBasvuruNo" => $hastaBasvuruNo,
-        "raporTakipNo" => $raporTakipNo,
-        "aciklama" => $aciklama,
-        "sigortaliTcNo" => $sigortaliTcNo,
-        "ucret" => $ucret,
-        "araKarar" => $araKarar !== null ? $araKarar->value : null,
+        "kurumSevkTalepNo" => $this->kurumSevkTalepNo,
+        "tcKimlikNo" => $this->tcKimlikNo,
+        "sevkTarihi" => $this->sevkTarihi,
+        "saglikTesisKodu" => $this->saglikTesisKodu,
+        "hastaBasvuruNo" => $this->hastaBasvuruNo,
+        "raporTakipNo" => $this->raporTakipNo,
+        "aciklama" => $this->aciklama,
+        "sigortaliTcNo" => $this->sigortaliTcNo,
+        "ucret" => $this->ucret,
+        "araKarar" => $this->araKarar !== null ? $this->araKarar->value : null,
         ];
     }
 }

@@ -65,19 +65,19 @@ final class OrtodontiFormuOkuCevapDVO
     public function toArray(): array
     {
         return [
-        "formNo" => $formNo,
-        "islemTuru" => $islemTuru,
-        "tesis_kodu_1" => $tesis_kodu_1,
-        "tesis_kodu_2" => $tesis_kodu_2,
-        "tesis_kodu_3" => $tesis_kodu_3,
-        "islem_tarihi_1" => $islem_tarihi_1,
-        "islem_tarihi_2" => $islem_tarihi_2,
-        "islem_tarihi_3" => $islem_tarihi_3,
-        "provizyonNo1" => $provizyonNo1,
-        "provizyonNo2" => $provizyonNo2,
-        "provizyonNo3" => $provizyonNo3,
-        "sonucKodu" => $sonucKodu,
-        "sonucMesaji" => $sonucMesaji,
+        "formNo" => $this->formNo,
+        "islemTuru" => $this->islemTuru,
+        "tesis_kodu_1" => $this->tesis_kodu_1,
+        "tesis_kodu_2" => $this->tesis_kodu_2,
+        "tesis_kodu_3" => $this->tesis_kodu_3,
+        "islem_tarihi_1" => $this->islem_tarihi_1,
+        "islem_tarihi_2" => $this->islem_tarihi_2,
+        "islem_tarihi_3" => $this->islem_tarihi_3,
+        "provizyonNo1" => $this->provizyonNo1,
+        "provizyonNo2" => $this->provizyonNo2,
+        "provizyonNo3" => $this->provizyonNo3,
+        "sonucKodu" => $this->sonucKodu,
+        "sonucMesaji" => $this->sonucMesaji,
         ];
     }
 }

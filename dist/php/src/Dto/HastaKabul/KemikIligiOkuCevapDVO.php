@@ -47,13 +47,13 @@ final class KemikIligiOkuCevapDVO
     public function toArray(): array
     {
         return [
-        "hastaTcNo" => $hastaTcNo,
-        "islemTarihi" => $islemTarihi,
-        "islemKodu" => $islemKodu,
-        "aktifPasif" => $aktifPasif,
-        "bildirimNo" => $bildirimNo,
-        "sonucKodu" => $sonucKodu,
-        "sonucMesaji" => $sonucMesaji,
+        "hastaTcNo" => $this->hastaTcNo,
+        "islemTarihi" => $this->islemTarihi,
+        "islemKodu" => $this->islemKodu,
+        "aktifPasif" => $this->aktifPasif,
+        "bildirimNo" => $this->bildirimNo,
+        "sonucKodu" => $this->sonucKodu,
+        "sonucMesaji" => $this->sonucMesaji,
         ];
     }
 }

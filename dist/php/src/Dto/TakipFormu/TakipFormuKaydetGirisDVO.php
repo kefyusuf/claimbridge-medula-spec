@@ -32,8 +32,8 @@ final class TakipFormuKaydetGirisDVO
     public function toArray(): array
     {
         return [
-        "diabetTakipFormu" => $diabetTakipFormu,
-        "kullaniciTesisKodu" => $kullaniciTesisKodu,
+        "diabetTakipFormu" => $this->diabetTakipFormu,
+        "kullaniciTesisKodu" => $this->kullaniciTesisKodu,
         ];
     }
 }

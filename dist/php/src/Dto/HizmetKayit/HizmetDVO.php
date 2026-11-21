@@ -72,21 +72,21 @@ final class HizmetDVO
     public function toArray(): array
     {
         return [
-        "ameliyatveGirisimBilgileri" => $ameliyatveGirisimBilgileri,
-        "digerIslemBilgileri" => $digerIslemBilgileri,
-        "disBilgileri" => $disBilgileri,
-        "ilacBilgileri" => $ilacBilgileri,
-        "konsultasyonBilgileri" => $konsultasyonBilgileri,
-        "malzemeBilgileri" => $malzemeBilgileri,
-        "muayeneBilgisi" => $muayeneBilgisi,
-        "tahlilBilgileri" => $tahlilBilgileri,
-        "tanilar" => $tanilar,
-        "tetkikveRadyolojiBilgileri" => $tetkikveRadyolojiBilgileri,
-        "hastaYatisBilgileri" => $hastaYatisBilgileri,
-        "kanBilgileri" => $kanBilgileri,
-        "takipNo" => $takipNo,
-        "odemeSorguDurum" => $odemeSorguDurum !== null ? $odemeSorguDurum->value : null,
-        "triajBeyani" => $triajBeyani,
+        "ameliyatveGirisimBilgileri" => $this->ameliyatveGirisimBilgileri,
+        "digerIslemBilgileri" => $this->digerIslemBilgileri,
+        "disBilgileri" => $this->disBilgileri,
+        "ilacBilgileri" => $this->ilacBilgileri,
+        "konsultasyonBilgileri" => $this->konsultasyonBilgileri,
+        "malzemeBilgileri" => $this->malzemeBilgileri,
+        "muayeneBilgisi" => $this->muayeneBilgisi,
+        "tahlilBilgileri" => $this->tahlilBilgileri,
+        "tanilar" => $this->tanilar,
+        "tetkikveRadyolojiBilgileri" => $this->tetkikveRadyolojiBilgileri,
+        "hastaYatisBilgileri" => $this->hastaYatisBilgileri,
+        "kanBilgileri" => $this->kanBilgileri,
+        "takipNo" => $this->takipNo,
+        "odemeSorguDurum" => $this->odemeSorguDurum !== null ? $this->odemeSorguDurum->value : null,
+        "triajBeyani" => $this->triajBeyani,
         ];
     }
 }

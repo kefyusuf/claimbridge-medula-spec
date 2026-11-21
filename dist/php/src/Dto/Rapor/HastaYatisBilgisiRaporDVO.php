@@ -32,8 +32,8 @@ final class HastaYatisBilgisiRaporDVO
     public function toArray(): array
     {
         return [
-        "yatisTarihi" => $yatisTarihi,
-        "cikisTarihi" => $cikisTarihi,
+        "yatisTarihi" => $this->yatisTarihi,
+        "cikisTarihi" => $this->cikisTarihi,
         ];
     }
 }

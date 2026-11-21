@@ -59,17 +59,17 @@ final class TaahhutDVO
     public function toArray(): array
     {
         return [
-        "hastaTCKimlikNo" => $hastaTCKimlikNo,
-        "adressIlPlaka" => $adressIlPlaka,
-        "adressIlce" => $adressIlce,
-        "adressPostaKodu" => $adressPostaKodu,
-        "adressCaddeSokak" => $adressCaddeSokak,
-        "adressDisKapiNo" => $adressDisKapiNo,
-        "adressIcKapiNo" => $adressIcKapiNo,
-        "adressTelefon" => $adressTelefon,
-        "adressEposta" => $adressEposta,
-        "taahhutAlanAd" => $taahhutAlanAd,
-        "taahhutAlanSoyad" => $taahhutAlanSoyad,
+        "hastaTCKimlikNo" => $this->hastaTCKimlikNo,
+        "adressIlPlaka" => $this->adressIlPlaka,
+        "adressIlce" => $this->adressIlce,
+        "adressPostaKodu" => $this->adressPostaKodu,
+        "adressCaddeSokak" => $this->adressCaddeSokak,
+        "adressDisKapiNo" => $this->adressDisKapiNo,
+        "adressIcKapiNo" => $this->adressIcKapiNo,
+        "adressTelefon" => $this->adressTelefon,
+        "adressEposta" => $this->adressEposta,
+        "taahhutAlanAd" => $this->taahhutAlanAd,
+        "taahhutAlanSoyad" => $this->taahhutAlanSoyad,
         ];
     }
 }

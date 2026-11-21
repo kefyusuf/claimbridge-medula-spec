@@ -32,8 +32,8 @@ final class TaahhutKisiOkuDVO
     public function toArray(): array
     {
         return [
-        "saglikTesisKodu" => $saglikTesisKodu,
-        "tcKimlikNo" => $tcKimlikNo,
+        "saglikTesisKodu" => $this->saglikTesisKodu,
+        "tcKimlikNo" => $this->tcKimlikNo,
         ];
     }
 }

@@ -32,8 +32,8 @@ final class HastaYatisOkuDVO
     public function toArray(): array
     {
         return [
-        "hastaBasvuruNo" => $hastaBasvuruNo,
-        "saglikTesisKodu" => $saglikTesisKodu,
+        "hastaBasvuruNo" => $this->hastaBasvuruNo,
+        "saglikTesisKodu" => $this->saglikTesisKodu,
         ];
     }
 }

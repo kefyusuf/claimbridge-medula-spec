@@ -35,9 +35,9 @@ final class YurtDisiYardimHakkiGetirGirisDVO
     public function toArray(): array
     {
         return [
-        "kisiNo" => $kisiNo,
-        "provizyonTarihi" => $provizyonTarihi,
-        "saglikTesisKodu" => $saglikTesisKodu,
+        "kisiNo" => $this->kisiNo,
+        "provizyonTarihi" => $this->provizyonTarihi,
+        "saglikTesisKodu" => $this->saglikTesisKodu,
         ];
     }
 }

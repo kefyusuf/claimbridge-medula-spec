@@ -35,9 +35,9 @@ final class HOTRaporBilgisiDVO
     public function toArray(): array
     {
         return [
-        "seansGun" => $seansGun,
-        "seansSayi" => $seansSayi,
-        "tedaviSuresi" => $tedaviSuresi,
+        "seansGun" => $this->seansGun,
+        "seansSayi" => $this->seansSayi,
+        "tedaviSuresi" => $this->tedaviSuresi,
         ];
     }
 }

@@ -38,10 +38,10 @@ final class HizmetIptalGirisDVO
     public function toArray(): array
     {
         return [
-        "islemSiraNumaralari" => $islemSiraNumaralari,
-        "saglikTesisKodu" => $saglikTesisKodu,
-        "takipNo" => $takipNo,
-        "ktsHbysKodu" => $ktsHbysKodu,
+        "islemSiraNumaralari" => $this->islemSiraNumaralari,
+        "saglikTesisKodu" => $this->saglikTesisKodu,
+        "takipNo" => $this->takipNo,
+        "ktsHbysKodu" => $this->ktsHbysKodu,
         ];
     }
 }

@@ -32,8 +32,8 @@ final class TakipFormuKullanilanIlaclarDVO
     public function toArray(): array
     {
         return [
-        "barkod" => $barkod,
-        "gunlukDoz" => $gunlukDoz,
+        "barkod" => $this->barkod,
+        "gunlukDoz" => $this->gunlukDoz,
         ];
     }
 }

@@ -35,9 +35,9 @@ final class TakipSilCevapDVO
     public function toArray(): array
     {
         return [
-        "sonucKodu" => $sonucKodu,
-        "sonucMesaji" => $sonucMesaji,
-        "takipNo" => $takipNo,
+        "sonucKodu" => $this->sonucKodu,
+        "sonucMesaji" => $this->sonucMesaji,
+        "takipNo" => $this->takipNo,
         ];
     }
 }

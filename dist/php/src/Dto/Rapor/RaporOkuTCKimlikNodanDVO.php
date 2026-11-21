@@ -36,9 +36,9 @@ final class RaporOkuTCKimlikNodanDVO
     public function toArray(): array
     {
         return [
-        "tckimlikNo" => $tckimlikNo,
-        "raporTuru" => $raporTuru !== null ? $raporTuru->value : null,
-        "kullaniciTesisKodu" => $kullaniciTesisKodu,
+        "tckimlikNo" => $this->tckimlikNo,
+        "raporTuru" => $this->raporTuru !== null ? $this->raporTuru->value : null,
+        "kullaniciTesisKodu" => $this->kullaniciTesisKodu,
         ];
     }
 }

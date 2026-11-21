@@ -36,9 +36,9 @@ final class TakipFormuDiabetEgitimiDVO
     public function toArray(): array
     {
         return [
-        "bireyselEgitimSayisi" => $bireyselEgitimSayisi,
-        "grupEgitimSayisi" => $grupEgitimSayisi,
-        "dmEgitimiAlmisMi" => $dmEgitimiAlmisMi !== null ? $dmEgitimiAlmisMi->value : null,
+        "bireyselEgitimSayisi" => $this->bireyselEgitimSayisi,
+        "grupEgitimSayisi" => $this->grupEgitimSayisi,
+        "dmEgitimiAlmisMi" => $this->dmEgitimiAlmisMi !== null ? $this->dmEgitimiAlmisMi->value : null,
         ];
     }
 }

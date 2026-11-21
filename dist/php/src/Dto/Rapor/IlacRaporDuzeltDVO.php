@@ -57,16 +57,16 @@ final class IlacRaporDuzeltDVO
     public function toArray(): array
     {
         return [
-        "drTescilNo" => $drTescilNo,
-        "duzeltmeBilgisi" => $duzeltmeBilgisi,
-        "duzeltmeTarihi" => $duzeltmeTarihi,
-        "raporNo" => $raporNo,
-        "raporTarihi" => $raporTarihi,
-        "raporTuru" => $raporTuru !== null ? $raporTuru->value : null,
-        "tesisKodu" => $tesisKodu,
-        "raporEtkinMaddeler" => $raporEtkinMaddeler,
-        "tanilar" => $tanilar,
-        "ilacTeshisler" => $ilacTeshisler,
+        "drTescilNo" => $this->drTescilNo,
+        "duzeltmeBilgisi" => $this->duzeltmeBilgisi,
+        "duzeltmeTarihi" => $this->duzeltmeTarihi,
+        "raporNo" => $this->raporNo,
+        "raporTarihi" => $this->raporTarihi,
+        "raporTuru" => $this->raporTuru !== null ? $this->raporTuru->value : null,
+        "tesisKodu" => $this->tesisKodu,
+        "raporEtkinMaddeler" => $this->raporEtkinMaddeler,
+        "tanilar" => $this->tanilar,
+        "ilacTeshisler" => $this->ilacTeshisler,
         ];
     }
 }

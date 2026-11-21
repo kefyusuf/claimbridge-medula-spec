@@ -41,11 +41,11 @@ final class RaporGirisDVO
     public function toArray(): array
     {
         return [
-        "ilacRapor" => $ilacRapor,
-        "maluliyetRapor" => $maluliyetRapor,
-        "tedaviRapor" => $tedaviRapor,
-        "isgoremezlikRapor" => $isgoremezlikRapor,
-        "kullaniciTesisKodu" => $kullaniciTesisKodu,
+        "ilacRapor" => $this->ilacRapor,
+        "maluliyetRapor" => $this->maluliyetRapor,
+        "tedaviRapor" => $this->tedaviRapor,
+        "isgoremezlikRapor" => $this->isgoremezlikRapor,
+        "kullaniciTesisKodu" => $this->kullaniciTesisKodu,
         ];
     }
 }

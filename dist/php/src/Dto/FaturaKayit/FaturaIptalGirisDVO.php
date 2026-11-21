@@ -35,9 +35,9 @@ final class FaturaIptalGirisDVO
     public function toArray(): array
     {
         return [
-        "saglikTesisKodu" => $saglikTesisKodu,
-        "faturaTeslimNo" => $faturaTeslimNo,
-        "ktsHbysKodu" => $ktsHbysKodu,
+        "saglikTesisKodu" => $this->saglikTesisKodu,
+        "faturaTeslimNo" => $this->faturaTeslimNo,
+        "ktsHbysKodu" => $this->ktsHbysKodu,
         ];
     }
 }

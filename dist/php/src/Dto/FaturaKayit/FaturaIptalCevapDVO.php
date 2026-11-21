@@ -41,11 +41,11 @@ final class FaturaIptalCevapDVO
     public function toArray(): array
     {
         return [
-        "sonucKodu" => $sonucKodu,
-        "sonucMesaji" => $sonucMesaji,
-        "hataKodu" => $hataKodu,
-        "hataMesaji" => $hataMesaji,
-        "faturaTeslimNo" => $faturaTeslimNo,
+        "sonucKodu" => $this->sonucKodu,
+        "sonucMesaji" => $this->sonucMesaji,
+        "hataKodu" => $this->hataKodu,
+        "hataMesaji" => $this->hataMesaji,
+        "faturaTeslimNo" => $this->faturaTeslimNo,
         ];
     }
 }

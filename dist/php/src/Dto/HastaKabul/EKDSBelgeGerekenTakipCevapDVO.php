@@ -35,9 +35,9 @@ final class EKDSBelgeGerekenTakipCevapDVO
     public function toArray(): array
     {
         return [
-        "ekdsBelgeGerekenTakipDVO" => $ekdsBelgeGerekenTakipDVO,
-        "sonucKodu" => $sonucKodu,
-        "sonucMesaji" => $sonucMesaji,
+        "ekdsBelgeGerekenTakipDVO" => $this->ekdsBelgeGerekenTakipDVO,
+        "sonucKodu" => $this->sonucKodu,
+        "sonucMesaji" => $this->sonucMesaji,
         ];
     }
 }

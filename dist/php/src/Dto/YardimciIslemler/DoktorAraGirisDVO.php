@@ -44,12 +44,12 @@ final class DoktorAraGirisDVO
     public function toArray(): array
     {
         return [
-        "drAdi" => $drAdi,
-        "drSoyadi" => $drSoyadi,
-        "drBransKodu" => $drBransKodu,
-        "drDiplomaNo" => $drDiplomaNo,
-        "drTescilNo" => $drTescilNo,
-        "saglikTesisKodu" => $saglikTesisKodu,
+        "drAdi" => $this->drAdi,
+        "drSoyadi" => $this->drSoyadi,
+        "drBransKodu" => $this->drBransKodu,
+        "drDiplomaNo" => $this->drDiplomaNo,
+        "drTescilNo" => $this->drTescilNo,
+        "saglikTesisKodu" => $this->saglikTesisKodu,
         ];
     }
 }

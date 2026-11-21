@@ -45,12 +45,12 @@ final class RaporBilgisiDVO
     public function toArray(): array
     {
         return [
-        "raporTesisKodu" => $raporTesisKodu,
-        "raporTarih" => $raporTarih,
-        "raporNo" => $raporNo,
-        "raporTakipNo" => $raporTakipNo,
-        "raporSiraNo" => $raporSiraNo,
-        "aVakaTKaza" => $aVakaTKaza !== null ? $aVakaTKaza->value : null,
+        "raporTesisKodu" => $this->raporTesisKodu,
+        "raporTarih" => $this->raporTarih,
+        "raporNo" => $this->raporNo,
+        "raporTakipNo" => $this->raporTakipNo,
+        "raporSiraNo" => $this->raporSiraNo,
+        "aVakaTKaza" => $this->aVakaTKaza !== null ? $this->aVakaTKaza->value : null,
         ];
     }
 }

@@ -38,10 +38,10 @@ final class SevkBildirSonucDVO
     public function toArray(): array
     {
         return [
-        "takipNo" => $takipNo,
-        "sevkEdilisTarihi" => $sevkEdilisTarihi,
-        "sonucKodu" => $sonucKodu,
-        "sonucMesaji" => $sonucMesaji,
+        "takipNo" => $this->takipNo,
+        "sevkEdilisTarihi" => $this->sevkEdilisTarihi,
+        "sonucKodu" => $this->sonucKodu,
+        "sonucMesaji" => $this->sonucMesaji,
         ];
     }
 }

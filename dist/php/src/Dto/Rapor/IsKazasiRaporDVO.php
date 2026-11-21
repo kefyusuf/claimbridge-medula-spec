@@ -67,19 +67,19 @@ final class IsKazasiRaporDVO
     public function toArray(): array
     {
         return [
-        "baslangicTarihi" => $baslangicTarihi,
-        "bitisTarihi" => $bitisTarihi,
-        "raporDurumu" => $raporDurumu,
-        "isKontTarihi" => $isKontTarihi,
-        "hastaneYatisTarihi" => $hastaneYatisTarihi,
-        "hastaneCikisTarihi" => $hastaneCikisTarihi,
-        "nuks" => $nuks,
-        "yatisDevam" => $yatisDevam !== null ? $yatisDevam->value : null,
-        "yaraninTuru" => $yaraninTuru,
-        "yaraninYeri" => $yaraninYeri,
-        "taburcuTarihi" => $taburcuTarihi,
-        "taburcuKodu" => $taburcuKodu !== null ? $taburcuKodu->value : null,
-        "isKazasiTarihi" => $isKazasiTarihi,
+        "baslangicTarihi" => $this->baslangicTarihi,
+        "bitisTarihi" => $this->bitisTarihi,
+        "raporDurumu" => $this->raporDurumu,
+        "isKontTarihi" => $this->isKontTarihi,
+        "hastaneYatisTarihi" => $this->hastaneYatisTarihi,
+        "hastaneCikisTarihi" => $this->hastaneCikisTarihi,
+        "nuks" => $this->nuks,
+        "yatisDevam" => $this->yatisDevam !== null ? $this->yatisDevam->value : null,
+        "yaraninTuru" => $this->yaraninTuru,
+        "yaraninYeri" => $this->yaraninYeri,
+        "taburcuTarihi" => $this->taburcuTarihi,
+        "taburcuKodu" => $this->taburcuKodu !== null ? $this->taburcuKodu->value : null,
+        "isKazasiTarihi" => $this->isKazasiTarihi,
         ];
     }
 }

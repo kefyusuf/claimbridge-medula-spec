@@ -35,9 +35,9 @@ final class OrtodontiFormuKaydetCevapDVO
     public function toArray(): array
     {
         return [
-        "formNo" => $formNo,
-        "sonucKodu" => $sonucKodu,
-        "sonucMesaji" => $sonucMesaji,
+        "formNo" => $this->formNo,
+        "sonucKodu" => $this->sonucKodu,
+        "sonucMesaji" => $this->sonucMesaji,
         ];
     }
 }
