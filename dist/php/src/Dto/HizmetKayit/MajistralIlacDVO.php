@@ -53,14 +53,14 @@ final class MajistralIlacDVO
     public function toArray(): array
     {
         return [
-        $islemSiraNo,
-        $preparatTuru !== null ? $preparatTuru->value : null,
-        $bolunmusTozTuru,
-        $ambalajTuru !== null ? $ambalajTuru->value : null,
-        $ambalajBoyutu !== null ? $ambalajBoyutu->value : null,
-        $ambalajAdet,
-        $hamMaddeler,
-        $eklenenIlaclar,
+        "islemSiraNo" => $islemSiraNo,
+        "preparatTuru" => $preparatTuru !== null ? $preparatTuru->value : null,
+        "bolunmusTozTuru" => $bolunmusTozTuru,
+        "ambalajTuru" => $ambalajTuru !== null ? $ambalajTuru->value : null,
+        "ambalajBoyutu" => $ambalajBoyutu !== null ? $ambalajBoyutu->value : null,
+        "ambalajAdet" => $ambalajAdet,
+        "hamMaddeler" => $hamMaddeler,
+        "eklenenIlaclar" => $eklenenIlaclar,
         ];
     }
 }

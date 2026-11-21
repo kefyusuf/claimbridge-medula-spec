@@ -53,15 +53,15 @@ final class YurtDisiYardimHakkiGetirCevapDetayDVO
     public function toArray(): array
     {
         return [
-        $id,
-        $kisiNo,
-        $adi,
-        $soyadi,
-        $formulAdi,
-        $odemeTuru,
-        $tedaviKapsami,
-        $sorguTarihi,
-        $aciklama,
+        "id" => $id,
+        "kisiNo" => $kisiNo,
+        "adi" => $adi,
+        "soyadi" => $soyadi,
+        "formulAdi" => $formulAdi,
+        "odemeTuru" => $odemeTuru,
+        "tedaviKapsami" => $tedaviKapsami,
+        "sorguTarihi" => $sorguTarihi,
+        "aciklama" => $aciklama,
         ];
     }
 }

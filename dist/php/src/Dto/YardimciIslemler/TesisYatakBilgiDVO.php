@@ -47,12 +47,12 @@ final class TesisYatakBilgiDVO
     public function toArray(): array
     {
         return [
-        $yatakKodu,
-        $turu !== null ? $turu->value : null,
-        $tescilTuru !== null ? $tescilTuru->value : null,
-        $seviye !== null ? $seviye->value : null,
-        $gecerlilikBaslangicTarihi,
-        $gecerlilikBitisTarihi,
+        "yatakKodu" => $yatakKodu,
+        "turu" => $turu !== null ? $turu->value : null,
+        "tescilTuru" => $tescilTuru !== null ? $tescilTuru->value : null,
+        "seviye" => $seviye !== null ? $seviye->value : null,
+        "gecerlilikBaslangicTarihi" => $gecerlilikBaslangicTarihi,
+        "gecerlilikBitisTarihi" => $gecerlilikBitisTarihi,
         ];
     }
 }

@@ -70,20 +70,20 @@ final class AmeliyatveGirisimBilgisiDVO
     public function toArray(): array
     {
         return [
-        $aciklama,
-        $adet,
-        $ayniFarkliKesi !== null ? $ayniFarkliKesi->value : null,
-        $bransKodu,
-        $drTescilNo,
-        $hizmetSunucuRefNo,
-        $islemSiraNo,
-        $islemTarihi,
-        $sagSol,
-        $sutKodu,
-        $euroscore !== null ? $euroscore->value : null,
-        $ozelDurum,
-        $cokluOzelDurum,
-        $raporTakipNo,
+        "aciklama" => $aciklama,
+        "adet" => $adet,
+        "ayniFarkliKesi" => $ayniFarkliKesi !== null ? $ayniFarkliKesi->value : null,
+        "bransKodu" => $bransKodu,
+        "drTescilNo" => $drTescilNo,
+        "hizmetSunucuRefNo" => $hizmetSunucuRefNo,
+        "islemSiraNo" => $islemSiraNo,
+        "islemTarihi" => $islemTarihi,
+        "sagSol" => $sagSol,
+        "sutKodu" => $sutKodu,
+        "euroscore" => $euroscore !== null ? $euroscore->value : null,
+        "ozelDurum" => $ozelDurum,
+        "cokluOzelDurum" => $cokluOzelDurum,
+        "raporTakipNo" => $raporTakipNo,
         ];
     }
 }

@@ -32,8 +32,8 @@ final class RaporSorguDVO
     public function toArray(): array
     {
         return [
-        $raporBilgisi,
-        $kullaniciTesisKodu,
+        "raporBilgisi" => $raporBilgisi,
+        "kullaniciTesisKodu" => $kullaniciTesisKodu,
         ];
     }
 }

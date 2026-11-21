@@ -46,12 +46,12 @@ final class RaporEtkinMaddeDVO
     public function toArray(): array
     {
         return [
-        $etkinMaddeKodu,
-        $kullanimDoz1,
-        $kullanimDoz2,
-        $kullanimDozBirim !== null ? $kullanimDozBirim->value : null,
-        $kullanimPeriyot,
-        $kullanimPeriyotBirim !== null ? $kullanimPeriyotBirim->value : null,
+        "etkinMaddeKodu" => $etkinMaddeKodu,
+        "kullanimDoz1" => $kullanimDoz1,
+        "kullanimDoz2" => $kullanimDoz2,
+        "kullanimDozBirim" => $kullanimDozBirim !== null ? $kullanimDozBirim->value : null,
+        "kullanimPeriyot" => $kullanimPeriyot,
+        "kullanimPeriyotBirim" => $kullanimPeriyotBirim !== null ? $kullanimPeriyotBirim->value : null,
         ];
     }
 }

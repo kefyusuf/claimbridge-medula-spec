@@ -35,9 +35,9 @@ final class SonucDVO
     public function toArray(): array
     {
         return [
-        $sonucKodu,
-        $sonucMesaji,
-        $uyariMesaji,
+        "sonucKodu" => $sonucKodu,
+        "sonucMesaji" => $sonucMesaji,
+        "uyariMesaji" => $uyariMesaji,
         ];
     }
 }

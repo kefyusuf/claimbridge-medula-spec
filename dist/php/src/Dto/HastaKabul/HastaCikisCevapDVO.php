@@ -38,10 +38,10 @@ final class HastaCikisCevapDVO
     public function toArray(): array
     {
         return [
-        $sonucKodu,
-        $sonucMesaji,
-        $yatisBaslangicTarihi,
-        $yatisBitisTarihi,
+        "sonucKodu" => $sonucKodu,
+        "sonucMesaji" => $sonucMesaji,
+        "yatisBaslangicTarihi" => $yatisBaslangicTarihi,
+        "yatisBitisTarihi" => $yatisBitisTarihi,
         ];
     }
 }

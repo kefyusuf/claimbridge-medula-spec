@@ -72,21 +72,21 @@ final class DigerIslemBilgisiDVO
     public function toArray(): array
     {
         return [
-        $adet,
-        $bransKodu,
-        $sutKodu,
-        $drTescilNo,
-        $hizmetSunucuRefNo,
-        $islemSiraNo,
-        $islemTarihi,
-        $raporTakipNo,
-        $ozelDurum,
-        $ayniFarkliKesi !== null ? $ayniFarkliKesi->value : null,
-        $cokluOzelDurum,
-        $aciklama,
-        $sagSol,
-        $istemYapanDrTescilNo,
-        $istemYapanDrBrans,
+        "adet" => $adet,
+        "bransKodu" => $bransKodu,
+        "sutKodu" => $sutKodu,
+        "drTescilNo" => $drTescilNo,
+        "hizmetSunucuRefNo" => $hizmetSunucuRefNo,
+        "islemSiraNo" => $islemSiraNo,
+        "islemTarihi" => $islemTarihi,
+        "raporTakipNo" => $raporTakipNo,
+        "ozelDurum" => $ozelDurum,
+        "ayniFarkliKesi" => $ayniFarkliKesi !== null ? $ayniFarkliKesi->value : null,
+        "cokluOzelDurum" => $cokluOzelDurum,
+        "aciklama" => $aciklama,
+        "sagSol" => $sagSol,
+        "istemYapanDrTescilNo" => $istemYapanDrTescilNo,
+        "istemYapanDrBrans" => $istemYapanDrBrans,
         ];
     }
 }

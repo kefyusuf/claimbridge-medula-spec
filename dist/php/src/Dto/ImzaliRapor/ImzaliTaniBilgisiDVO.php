@@ -29,7 +29,7 @@ final class ImzaliTaniBilgisiDVO
     public function toArray(): array
     {
         return [
-        $taniKodu,
+        "taniKodu" => $taniKodu,
         ];
     }
 }

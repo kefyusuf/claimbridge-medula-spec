@@ -69,19 +69,19 @@ final class MeslekHastaligiRaporDVO
     public function toArray(): array
     {
         return [
-        $baslangicTarihi,
-        $bitisTarihi,
-        $raporDurumu !== null ? $raporDurumu->value : null,
-        $isKontTarihi,
-        $hastaneYatisTarihi,
-        $hastaneCikisTarihi,
-        $nuks !== null ? $nuks->value : null,
-        $yatisDevam !== null ? $yatisDevam->value : null,
-        $yaraninTuru,
-        $yaraninYeri,
-        $taburcuTarihi,
-        $taburcuKodu !== null ? $taburcuKodu->value : null,
-        $isKazasiTarihi,
+        "baslangicTarihi" => $baslangicTarihi,
+        "bitisTarihi" => $bitisTarihi,
+        "raporDurumu" => $raporDurumu !== null ? $raporDurumu->value : null,
+        "isKontTarihi" => $isKontTarihi,
+        "hastaneYatisTarihi" => $hastaneYatisTarihi,
+        "hastaneCikisTarihi" => $hastaneCikisTarihi,
+        "nuks" => $nuks !== null ? $nuks->value : null,
+        "yatisDevam" => $yatisDevam !== null ? $yatisDevam->value : null,
+        "yaraninTuru" => $yaraninTuru,
+        "yaraninYeri" => $yaraninYeri,
+        "taburcuTarihi" => $taburcuTarihi,
+        "taburcuKodu" => $taburcuKodu !== null ? $taburcuKodu->value : null,
+        "isKazasiTarihi" => $isKazasiTarihi,
         ];
     }
 }

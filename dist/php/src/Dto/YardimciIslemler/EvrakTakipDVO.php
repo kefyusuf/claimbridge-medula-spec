@@ -42,11 +42,11 @@ final class EvrakTakipDVO
     public function toArray(): array
     {
         return [
-        $takipNo,
-        $toplamTutar,
-        $kesintiler,
-        $grupTuru !== null ? $grupTuru->value : null,
-        $grupKodu,
+        "takipNo" => $takipNo,
+        "toplamTutar" => $toplamTutar,
+        "kesintiler" => $kesintiler,
+        "grupTuru" => $grupTuru !== null ? $grupTuru->value : null,
+        "grupKodu" => $grupKodu,
         ];
     }
 }

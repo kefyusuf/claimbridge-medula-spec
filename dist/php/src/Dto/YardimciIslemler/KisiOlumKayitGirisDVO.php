@@ -44,12 +44,12 @@ final class KisiOlumKayitGirisDVO
     public function toArray(): array
     {
         return [
-        $tcKimlikNo,
-        $olumTarihi,
-        $saglikTesisKodu,
-        $olumSaati,
-        $olumBelgesiAdi,
-        $olumBelgesiIcerik,
+        "tcKimlikNo" => $tcKimlikNo,
+        "olumTarihi" => $olumTarihi,
+        "saglikTesisKodu" => $saglikTesisKodu,
+        "olumSaati" => $olumSaati,
+        "olumBelgesiAdi" => $olumBelgesiAdi,
+        "olumBelgesiIcerik" => $olumBelgesiIcerik,
         ];
     }
 }

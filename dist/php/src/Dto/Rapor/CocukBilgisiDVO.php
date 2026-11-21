@@ -36,9 +36,9 @@ final class CocukBilgisiDVO
     public function toArray(): array
     {
         return [
-        $cinsiyet !== null ? $cinsiyet->value : null,
-        $kilo,
-        $dogumSaati,
+        "cinsiyet" => $cinsiyet !== null ? $cinsiyet->value : null,
+        "kilo" => $kilo,
+        "dogumSaati" => $dogumSaati,
         ];
     }
 }

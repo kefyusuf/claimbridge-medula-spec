@@ -47,13 +47,13 @@ final class EvrakKesintiCevapDVO
     public function toArray(): array
     {
         return [
-        $sonucKodu,
-        $sonucMesaji,
-        $evrakReferansNo,
-        $takipler,
-        $muayeneKatilimTutari,
-        $malzemeKatilimTutari,
-        $tupBebekKatilimTutari,
+        "sonucKodu" => $sonucKodu,
+        "sonucMesaji" => $sonucMesaji,
+        "evrakReferansNo" => $evrakReferansNo,
+        "takipler" => $takipler,
+        "muayeneKatilimTutari" => $muayeneKatilimTutari,
+        "malzemeKatilimTutari" => $malzemeKatilimTutari,
+        "tupBebekKatilimTutari" => $tupBebekKatilimTutari,
         ];
     }
 }

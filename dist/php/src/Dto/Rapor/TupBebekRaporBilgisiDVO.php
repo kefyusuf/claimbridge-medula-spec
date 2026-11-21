@@ -33,8 +33,8 @@ final class TupBebekRaporBilgisiDVO
     public function toArray(): array
     {
         return [
-        $tupBebekRaporTuru !== null ? $tupBebekRaporTuru->value : null,
-        $butKodu,
+        "tupBebekRaporTuru" => $tupBebekRaporTuru !== null ? $tupBebekRaporTuru->value : null,
+        "butKodu" => $butKodu,
         ];
     }
 }

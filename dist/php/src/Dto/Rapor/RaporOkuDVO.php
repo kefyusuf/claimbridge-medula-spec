@@ -42,11 +42,11 @@ final class RaporOkuDVO
     public function toArray(): array
     {
         return [
-        $raporTesisKodu,
-        $raporNo,
-        $raporTarih,
-        $raporTuru !== null ? $raporTuru->value : null,
-        $raporSiraNo,
+        "raporTesisKodu" => $raporTesisKodu,
+        "raporNo" => $raporNo,
+        "raporTarih" => $raporTarih,
+        "raporTuru" => $raporTuru !== null ? $raporTuru->value : null,
+        "raporSiraNo" => $raporSiraNo,
         ];
     }
 }

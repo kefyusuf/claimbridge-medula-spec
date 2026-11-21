@@ -41,11 +41,11 @@ final class SaglikTesisiAraGirisDVO
     public function toArray(): array
     {
         return [
-        $saglikTesisKodu,
-        $saglikTesisAdi,
-        $tesisIlKodu,
-        $tesisKodu,
-        $tesisTuru,
+        "saglikTesisKodu" => $saglikTesisKodu,
+        "saglikTesisAdi" => $saglikTesisAdi,
+        "tesisIlKodu" => $tesisIlKodu,
+        "tesisKodu" => $tesisKodu,
+        "tesisTuru" => $tesisTuru,
         ];
     }
 }

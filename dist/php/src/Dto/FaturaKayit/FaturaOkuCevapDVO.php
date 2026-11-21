@@ -47,13 +47,13 @@ final class FaturaOkuCevapDVO
     public function toArray(): array
     {
         return [
-        $faturaRefNo,
-        $faturaTarihi,
-        $faturaTeslimNo,
-        $faturaTutari,
-        $sonucKodu,
-        $sonucMesaji,
-        $faturaDetaylari,
+        "faturaRefNo" => $faturaRefNo,
+        "faturaTarihi" => $faturaTarihi,
+        "faturaTeslimNo" => $faturaTeslimNo,
+        "faturaTutari" => $faturaTutari,
+        "sonucKodu" => $sonucKodu,
+        "sonucMesaji" => $sonucMesaji,
+        "faturaDetaylari" => $faturaDetaylari,
         ];
     }
 }

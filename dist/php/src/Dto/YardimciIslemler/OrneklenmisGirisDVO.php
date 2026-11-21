@@ -39,10 +39,10 @@ final class OrneklenmisGirisDVO
     public function toArray(): array
     {
         return [
-        $evrakRefNo,
-        $saglikTesisKodu,
-        $grupTuru !== null ? $grupTuru->value : null,
-        $grupKodu,
+        "evrakRefNo" => $evrakRefNo,
+        "saglikTesisKodu" => $saglikTesisKodu,
+        "grupTuru" => $grupTuru !== null ? $grupTuru->value : null,
+        "grupKodu" => $grupKodu,
         ];
     }
 }

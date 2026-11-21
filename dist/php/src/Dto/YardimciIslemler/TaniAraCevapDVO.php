@@ -35,9 +35,9 @@ final class TaniAraCevapDVO
     public function toArray(): array
     {
         return [
-        $sonucKodu,
-        $sonucMesaji,
-        $tanilar,
+        "sonucKodu" => $sonucKodu,
+        "sonucMesaji" => $sonucMesaji,
+        "tanilar" => $tanilar,
         ];
     }
 }

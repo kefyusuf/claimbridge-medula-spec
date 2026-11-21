@@ -39,10 +39,10 @@ final class DiyalizRaporBilgisiDVO
     public function toArray(): array
     {
         return [
-        $refakatVarMi !== null ? $refakatVarMi->value : null,
-        $seansGun,
-        $seansSayi,
-        $butKodu,
+        "refakatVarMi" => $refakatVarMi !== null ? $refakatVarMi->value : null,
+        "seansGun" => $seansGun,
+        "seansSayi" => $seansSayi,
+        "butKodu" => $butKodu,
         ];
     }
 }

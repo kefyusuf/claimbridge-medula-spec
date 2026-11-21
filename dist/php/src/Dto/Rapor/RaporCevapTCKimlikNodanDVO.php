@@ -35,9 +35,9 @@ final class RaporCevapTCKimlikNodanDVO
     public function toArray(): array
     {
         return [
-        $raporlar,
-        $sonucAciklamasi,
-        $sonucKodu,
+        "raporlar" => $raporlar,
+        "sonucAciklamasi" => $sonucAciklamasi,
+        "sonucKodu" => $sonucKodu,
         ];
     }
 }

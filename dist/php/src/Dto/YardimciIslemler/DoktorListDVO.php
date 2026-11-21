@@ -38,10 +38,10 @@ final class DoktorListDVO
     public function toArray(): array
     {
         return [
-        $drAdi,
-        $drSoyadi,
-        $drDiplomaNo,
-        $drTescilNo,
+        "drAdi" => $drAdi,
+        "drSoyadi" => $drSoyadi,
+        "drDiplomaNo" => $drDiplomaNo,
+        "drTescilNo" => $drTescilNo,
         ];
     }
 }

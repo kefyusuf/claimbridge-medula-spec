@@ -38,10 +38,10 @@ final class OrtodontiFormuIptalGirisDVO
     public function toArray(): array
     {
         return [
-        $saglikTesisKodu,
-        $sutKodu,
-        $formNo,
-        $tcKimlikNo,
+        "saglikTesisKodu" => $saglikTesisKodu,
+        "sutKodu" => $sutKodu,
+        "formNo" => $formNo,
+        "tcKimlikNo" => $tcKimlikNo,
         ];
     }
 }

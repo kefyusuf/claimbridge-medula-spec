@@ -38,10 +38,10 @@ final class KemikIligiKabulDVO
     public function toArray(): array
     {
         return [
-        $hastaTcNo,
-        $islemTarihi,
-        $islemKodu,
-        $saglikTesisKodu,
+        "hastaTcNo" => $hastaTcNo,
+        "islemTarihi" => $islemTarihi,
+        "islemKodu" => $islemKodu,
+        "saglikTesisKodu" => $saglikTesisKodu,
         ];
     }
 }

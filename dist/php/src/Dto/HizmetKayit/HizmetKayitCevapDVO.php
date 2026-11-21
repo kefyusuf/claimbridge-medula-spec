@@ -47,13 +47,13 @@ final class HizmetKayitCevapDVO
     public function toArray(): array
     {
         return [
-        $sonucKodu,
-        $sonucMesaji,
-        $takipNo,
-        $hastaBasvuruNo,
-        $saglikTesisKodu,
-        $islemBilgileri,
-        $hataliKayitlar,
+        "sonucKodu" => $sonucKodu,
+        "sonucMesaji" => $sonucMesaji,
+        "takipNo" => $takipNo,
+        "hastaBasvuruNo" => $hastaBasvuruNo,
+        "saglikTesisKodu" => $saglikTesisKodu,
+        "islemBilgileri" => $islemBilgileri,
+        "hataliKayitlar" => $hataliKayitlar,
         ];
     }
 }

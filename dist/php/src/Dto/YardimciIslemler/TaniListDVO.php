@@ -32,8 +32,8 @@ final class TaniListDVO
     public function toArray(): array
     {
         return [
-        $icd10Kodu,
-        $taniAdi,
+        "icd10Kodu" => $icd10Kodu,
+        "taniAdi" => $taniAdi,
         ];
     }
 }

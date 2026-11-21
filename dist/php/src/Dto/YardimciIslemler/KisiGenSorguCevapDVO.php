@@ -38,10 +38,10 @@ final class KisiGenSorguCevapDVO
     public function toArray(): array
     {
         return [
-        $islemTarihi,
-        $tesisKodu,
-        $sonucKodu,
-        $sonucMesaji,
+        "islemTarihi" => $islemTarihi,
+        "tesisKodu" => $tesisKodu,
+        "sonucKodu" => $sonucKodu,
+        "sonucMesaji" => $sonucMesaji,
         ];
     }
 }

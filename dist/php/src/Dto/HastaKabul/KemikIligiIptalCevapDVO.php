@@ -35,9 +35,9 @@ final class KemikIligiIptalCevapDVO
     public function toArray(): array
     {
         return [
-        $hastaTcNo,
-        $sonucKodu,
-        $sonucMesaji,
+        "hastaTcNo" => $hastaTcNo,
+        "sonucKodu" => $sonucKodu,
+        "sonucMesaji" => $sonucMesaji,
         ];
     }
 }

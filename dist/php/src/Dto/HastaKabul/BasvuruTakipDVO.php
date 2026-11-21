@@ -32,8 +32,8 @@ final class BasvuruTakipDVO
     public function toArray(): array
     {
         return [
-        $takipNo,
-        $takipFaturaDurumu,
+        "takipNo" => $takipNo,
+        "takipFaturaDurumu" => $takipFaturaDurumu,
         ];
     }
 }

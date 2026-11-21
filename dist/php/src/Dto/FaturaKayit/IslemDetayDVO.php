@@ -32,8 +32,8 @@ final class IslemDetayDVO
     public function toArray(): array
     {
         return [
-        $islemSiraNo,
-        $islemTutari,
+        "islemSiraNo" => $islemSiraNo,
+        "islemTutari" => $islemTutari,
         ];
     }
 }

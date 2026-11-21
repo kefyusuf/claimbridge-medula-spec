@@ -44,12 +44,12 @@ final class SevkBildirGirisDVO
     public function toArray(): array
     {
         return [
-        $takipNo,
-        $tesisKodu,
-        $sevkEdilisTarihi,
-        $yesilKartSevkEdilenBransKodu,
-        $yesilKartSevkEdilenTedaviTipi,
-        $yesilKartSevkEdilenTakipTipi,
+        "takipNo" => $takipNo,
+        "tesisKodu" => $tesisKodu,
+        "sevkEdilisTarihi" => $sevkEdilisTarihi,
+        "yesilKartSevkEdilenBransKodu" => $yesilKartSevkEdilenBransKodu,
+        "yesilKartSevkEdilenTedaviTipi" => $yesilKartSevkEdilenTedaviTipi,
+        "yesilKartSevkEdilenTakipTipi" => $yesilKartSevkEdilenTakipTipi,
         ];
     }
 }

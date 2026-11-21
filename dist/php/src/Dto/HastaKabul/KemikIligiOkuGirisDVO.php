@@ -41,11 +41,11 @@ final class KemikIligiOkuGirisDVO
     public function toArray(): array
     {
         return [
-        $hastaTcNo,
-        $islemTarihi,
-        $islemKodu,
-        $saglikTesisKodu,
-        $bildirimNo,
+        "hastaTcNo" => $hastaTcNo,
+        "islemTarihi" => $islemTarihi,
+        "islemKodu" => $islemKodu,
+        "saglikTesisKodu" => $saglikTesisKodu,
+        "bildirimNo" => $bildirimNo,
         ];
     }
 }

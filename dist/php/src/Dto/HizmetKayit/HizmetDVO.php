@@ -72,21 +72,21 @@ final class HizmetDVO
     public function toArray(): array
     {
         return [
-        $ameliyatveGirisimBilgileri,
-        $digerIslemBilgileri,
-        $disBilgileri,
-        $ilacBilgileri,
-        $konsultasyonBilgileri,
-        $malzemeBilgileri,
-        $muayeneBilgisi,
-        $tahlilBilgileri,
-        $tanilar,
-        $tetkikveRadyolojiBilgileri,
-        $hastaYatisBilgileri,
-        $kanBilgileri,
-        $takipNo,
-        $odemeSorguDurum !== null ? $odemeSorguDurum->value : null,
-        $triajBeyani,
+        "ameliyatveGirisimBilgileri" => $ameliyatveGirisimBilgileri,
+        "digerIslemBilgileri" => $digerIslemBilgileri,
+        "disBilgileri" => $disBilgileri,
+        "ilacBilgileri" => $ilacBilgileri,
+        "konsultasyonBilgileri" => $konsultasyonBilgileri,
+        "malzemeBilgileri" => $malzemeBilgileri,
+        "muayeneBilgisi" => $muayeneBilgisi,
+        "tahlilBilgileri" => $tahlilBilgileri,
+        "tanilar" => $tanilar,
+        "tetkikveRadyolojiBilgileri" => $tetkikveRadyolojiBilgileri,
+        "hastaYatisBilgileri" => $hastaYatisBilgileri,
+        "kanBilgileri" => $kanBilgileri,
+        "takipNo" => $takipNo,
+        "odemeSorguDurum" => $odemeSorguDurum !== null ? $odemeSorguDurum->value : null,
+        "triajBeyani" => $triajBeyani,
         ];
     }
 }

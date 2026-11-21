@@ -32,8 +32,8 @@ final class KatilimPayiGirisDVO
     public function toArray(): array
     {
         return [
-        $evrakRefNo,
-        $saglikTesisKodu,
+        "evrakRefNo" => $evrakRefNo,
+        "saglikTesisKodu" => $saglikTesisKodu,
         ];
     }
 }

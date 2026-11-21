@@ -38,10 +38,10 @@ final class KatilimPayiDVO
     public function toArray(): array
     {
         return [
-        $takipNo,
-        $muayeneKatilimTutari,
-        $malzemeKatilimTutari,
-        $tupBebekKatilimTutari,
+        "takipNo" => $takipNo,
+        "muayeneKatilimTutari" => $muayeneKatilimTutari,
+        "malzemeKatilimTutari" => $malzemeKatilimTutari,
+        "tupBebekKatilimTutari" => $tupBebekKatilimTutari,
         ];
     }
 }

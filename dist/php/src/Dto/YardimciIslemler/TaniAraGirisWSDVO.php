@@ -32,8 +32,8 @@ final class TaniAraGirisWSDVO
     public function toArray(): array
     {
         return [
-        $saglikTesisKodu,
-        $icd10Kodu,
+        "saglikTesisKodu" => $saglikTesisKodu,
+        "icd10Kodu" => $icd10Kodu,
         ];
     }
 }

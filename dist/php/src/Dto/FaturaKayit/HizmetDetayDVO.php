@@ -39,10 +39,10 @@ final class HizmetDetayDVO
     public function toArray(): array
     {
         return [
-        $aciklama,
-        $protokolNo,
-        $taburcuKodu !== null ? $taburcuKodu->value : null,
-        $takipNo,
+        "aciklama" => $aciklama,
+        "protokolNo" => $protokolNo,
+        "taburcuKodu" => $taburcuKodu !== null ? $taburcuKodu->value : null,
+        "takipNo" => $takipNo,
         ];
     }
 }

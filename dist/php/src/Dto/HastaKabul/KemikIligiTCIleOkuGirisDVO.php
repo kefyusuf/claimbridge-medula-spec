@@ -32,8 +32,8 @@ final class KemikIligiTCIleOkuGirisDVO
     public function toArray(): array
     {
         return [
-        $tcNo,
-        $tesisKodu,
+        "tcNo" => $tcNo,
+        "tesisKodu" => $tesisKodu,
         ];
     }
 }

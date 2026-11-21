@@ -32,8 +32,8 @@ final class GuncelSutSorguGirisDVO
     public function toArray(): array
     {
         return [
-        $saglikTesisKodu,
-        $tarih,
+        "saglikTesisKodu" => $saglikTesisKodu,
+        "tarih" => $tarih,
         ];
     }
 }

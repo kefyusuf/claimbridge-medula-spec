@@ -32,8 +32,8 @@ final class TakipFormuOkuGirisDVO
     public function toArray(): array
     {
         return [
-        $tcKimlikNo,
-        $saglikTesisKodu,
+        "tcKimlikNo" => $tcKimlikNo,
+        "saglikTesisKodu" => $saglikTesisKodu,
         ];
     }
 }

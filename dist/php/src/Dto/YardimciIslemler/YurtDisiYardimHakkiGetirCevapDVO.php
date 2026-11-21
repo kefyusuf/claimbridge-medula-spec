@@ -35,9 +35,9 @@ final class YurtDisiYardimHakkiGetirCevapDVO
     public function toArray(): array
     {
         return [
-        $sonucKodu,
-        $sonucMesaji,
-        $yurtDisiDetay,
+        "sonucKodu" => $sonucKodu,
+        "sonucMesaji" => $sonucMesaji,
+        "yurtDisiDetay" => $yurtDisiDetay,
         ];
     }
 }

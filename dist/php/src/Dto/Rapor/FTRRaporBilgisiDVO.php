@@ -46,12 +46,12 @@ final class FTRRaporBilgisiDVO
     public function toArray(): array
     {
         return [
-        $ftrVucutBolgesiKodu !== null ? $ftrVucutBolgesiKodu->value : null,
-        $seansGun,
-        $seansSayi,
-        $butKodu,
-        $tedaviTuru !== null ? $tedaviTuru->value : null,
-        $robotikRehabilitasyon,
+        "ftrVucutBolgesiKodu" => $ftrVucutBolgesiKodu !== null ? $ftrVucutBolgesiKodu->value : null,
+        "seansGun" => $seansGun,
+        "seansSayi" => $seansSayi,
+        "butKodu" => $butKodu,
+        "tedaviTuru" => $tedaviTuru !== null ? $tedaviTuru->value : null,
+        "robotikRehabilitasyon" => $robotikRehabilitasyon,
         ];
     }
 }

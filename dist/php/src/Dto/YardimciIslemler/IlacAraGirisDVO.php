@@ -35,9 +35,9 @@ final class IlacAraGirisDVO
     public function toArray(): array
     {
         return [
-        $barkod,
-        $ilacAdi,
-        $saglikTesisKodu,
+        "barkod" => $barkod,
+        "ilacAdi" => $ilacAdi,
+        "saglikTesisKodu" => $saglikTesisKodu,
         ];
     }
 }

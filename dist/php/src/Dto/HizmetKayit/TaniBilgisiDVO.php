@@ -48,13 +48,13 @@ final class TaniBilgisiDVO
     public function toArray(): array
     {
         return [
-        $islemSiraNo,
-        $birincilTani,
-        $hizmetSunucuRefNo,
-        $taniKodu,
-        $taniTipi !== null ? $taniTipi->value : null,
-        $ozelDurum,
-        $cokluOzelDurum,
+        "islemSiraNo" => $islemSiraNo,
+        "birincilTani" => $birincilTani,
+        "hizmetSunucuRefNo" => $hizmetSunucuRefNo,
+        "taniKodu" => $taniKodu,
+        "taniTipi" => $taniTipi !== null ? $taniTipi->value : null,
+        "ozelDurum" => $ozelDurum,
+        "cokluOzelDurum" => $cokluOzelDurum,
         ];
     }
 }
