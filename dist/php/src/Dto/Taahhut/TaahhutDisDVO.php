@@ -32,8 +32,8 @@ final class TaahhutDisDVO
     public function toArray(): array
     {
         return [
-        $sutKodu,
-        $disNo,
+        "sutKodu" => $sutKodu,
+        "disNo" => $disNo,
         ];
     }
 }

@@ -38,10 +38,10 @@ final class HastaCikisIptalDVO
     public function toArray(): array
     {
         return [
-        $hastaBasvuruNo,
-        $hastaCikisTarihi,
-        $yeniHastaCikisTarihi,
-        $saglikTesisKodu,
+        "hastaBasvuruNo" => $hastaBasvuruNo,
+        "hastaCikisTarihi" => $hastaCikisTarihi,
+        "yeniHastaCikisTarihi" => $yeniHastaCikisTarihi,
+        "saglikTesisKodu" => $saglikTesisKodu,
         ];
     }
 }

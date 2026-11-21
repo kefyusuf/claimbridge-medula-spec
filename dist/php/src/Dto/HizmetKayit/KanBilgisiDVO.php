@@ -59,17 +59,17 @@ final class KanBilgisiDVO
     public function toArray(): array
     {
         return [
-        $bransKodu,
-        $drTescilNo,
-        $sutKodu,
-        $hizmetSunucuRefNo,
-        $islemSiraNo,
-        $adet,
-        $isbtBilesenNo,
-        $isbtUniteNo,
-        $islemTarihi,
-        $ozelDurum,
-        $cokluOzelDurum,
+        "bransKodu" => $bransKodu,
+        "drTescilNo" => $drTescilNo,
+        "sutKodu" => $sutKodu,
+        "hizmetSunucuRefNo" => $hizmetSunucuRefNo,
+        "islemSiraNo" => $islemSiraNo,
+        "adet" => $adet,
+        "isbtBilesenNo" => $isbtBilesenNo,
+        "isbtUniteNo" => $isbtUniteNo,
+        "islemTarihi" => $islemTarihi,
+        "ozelDurum" => $ozelDurum,
+        "cokluOzelDurum" => $cokluOzelDurum,
         ];
     }
 }

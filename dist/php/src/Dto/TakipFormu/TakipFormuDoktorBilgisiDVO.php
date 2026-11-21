@@ -36,9 +36,9 @@ final class TakipFormuDoktorBilgisiDVO
     public function toArray(): array
     {
         return [
-        $drTescilNo,
-        $drBransKodu,
-        $dmEgitimiAlmisMi !== null ? $dmEgitimiAlmisMi->value : null,
+        "drTescilNo" => $drTescilNo,
+        "drBransKodu" => $drBransKodu,
+        "dmEgitimiAlmisMi" => $dmEgitimiAlmisMi !== null ? $dmEgitimiAlmisMi->value : null,
         ];
     }
 }

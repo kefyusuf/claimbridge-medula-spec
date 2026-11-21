@@ -32,8 +32,8 @@ final class BransGorusBilgisiDVO
     public function toArray(): array
     {
         return [
-        $bransKodu,
-        $aciklama,
+        "bransKodu" => $bransKodu,
+        "aciklama" => $aciklama,
         ];
     }
 }

@@ -57,16 +57,16 @@ final class MaluliyetBransGorusBilgisiDVO
     public function toArray(): array
     {
         return [
-        $bransKodu,
-        $drTescilNo,
-        $doktorTipi !== null ? $doktorTipi->value : null,
-        $basvuruNedeni,
-        $anamnez,
-        $ozgecmis,
-        $soygecmis,
-        $muayeneBulgulari,
-        $tetkikVeLabaratuarBulgulari,
-        $tanilar,
+        "bransKodu" => $bransKodu,
+        "drTescilNo" => $drTescilNo,
+        "doktorTipi" => $doktorTipi !== null ? $doktorTipi->value : null,
+        "basvuruNedeni" => $basvuruNedeni,
+        "anamnez" => $anamnez,
+        "ozgecmis" => $ozgecmis,
+        "soygecmis" => $soygecmis,
+        "muayeneBulgulari" => $muayeneBulgulari,
+        "tetkikVeLabaratuarBulgulari" => $tetkikVeLabaratuarBulgulari,
+        "tanilar" => $tanilar,
         ];
     }
 }

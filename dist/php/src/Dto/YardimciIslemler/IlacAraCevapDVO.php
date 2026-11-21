@@ -35,9 +35,9 @@ final class IlacAraCevapDVO
     public function toArray(): array
     {
         return [
-        $sonucKodu,
-        $sonucMesaji,
-        $ilaclar,
+        "sonucKodu" => $sonucKodu,
+        "sonucMesaji" => $sonucMesaji,
+        "ilaclar" => $ilaclar,
         ];
     }
 }

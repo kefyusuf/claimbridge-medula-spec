@@ -41,11 +41,11 @@ final class EmzirmeRaporDVO
     public function toArray(): array
     {
         return [
-        $bebekDogumTarihi,
-        $dogumOncBasTarihi,
-        $canliCocukSayisi,
-        $anneTcKimlikNo,
-        $doganCocukSayisi,
+        "bebekDogumTarihi" => $bebekDogumTarihi,
+        "dogumOncBasTarihi" => $dogumOncBasTarihi,
+        "canliCocukSayisi" => $canliCocukSayisi,
+        "anneTcKimlikNo" => $anneTcKimlikNo,
+        "doganCocukSayisi" => $doganCocukSayisi,
         ];
     }
 }

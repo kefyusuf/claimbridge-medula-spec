@@ -35,9 +35,9 @@ final class BKDSDogrulamaKisiSorguGirisDVO
     public function toArray(): array
     {
         return [
-        $tckNo,
-        $islemTarihi,
-        $tesisKodu,
+        "tckNo" => $tckNo,
+        "islemTarihi" => $islemTarihi,
+        "tesisKodu" => $tesisKodu,
         ];
     }
 }

@@ -45,12 +45,12 @@ final class FaturaCevapDetayDVO
     public function toArray(): array
     {
         return [
-        $aciklama,
-        $protokolNo,
-        $taburcuKodu !== null ? $taburcuKodu->value : null,
-        $takipNo,
-        $takipToplamTutar,
-        $islemDetaylari,
+        "aciklama" => $aciklama,
+        "protokolNo" => $protokolNo,
+        "taburcuKodu" => $taburcuKodu !== null ? $taburcuKodu->value : null,
+        "takipNo" => $takipNo,
+        "takipToplamTutar" => $takipToplamTutar,
+        "islemDetaylari" => $islemDetaylari,
         ];
     }
 }

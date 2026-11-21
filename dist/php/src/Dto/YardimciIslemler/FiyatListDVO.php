@@ -32,8 +32,8 @@ final class FiyatListDVO
     public function toArray(): array
     {
         return [
-        $fiyat,
-        $gecerlilikTarihi,
+        "fiyat" => $fiyat,
+        "gecerlilikTarihi" => $gecerlilikTarihi,
         ];
     }
 }

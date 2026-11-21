@@ -38,10 +38,10 @@ final class OncekiIslemBilgisiDVO
     public function toArray(): array
     {
         return [
-        $islemAdedi,
-        $islemTarihi,
-        $saglikTesisKodu,
-        $tesisAdi,
+        "islemAdedi" => $islemAdedi,
+        "islemTarihi" => $islemTarihi,
+        "saglikTesisKodu" => $saglikTesisKodu,
+        "tesisAdi" => $tesisAdi,
         ];
     }
 }

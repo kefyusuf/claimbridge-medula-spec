@@ -36,9 +36,9 @@ final class TedaviRaporDVO
     public function toArray(): array
     {
         return [
-        $raporDVO,
-        $islemler,
-        $tedaviRaporTuru !== null ? $tedaviRaporTuru->value : null,
+        "raporDVO" => $raporDVO,
+        "islemler" => $islemler,
+        "tedaviRaporTuru" => $tedaviRaporTuru !== null ? $tedaviRaporTuru->value : null,
         ];
     }
 }

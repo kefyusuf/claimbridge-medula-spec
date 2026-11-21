@@ -33,8 +33,8 @@ final class ESWLTasBilgisiDVO
     public function toArray(): array
     {
         return [
-        $tasBoyutu,
-        $tasLokalizasyonKodu !== null ? $tasLokalizasyonKodu->value : null,
+        "tasBoyutu" => $tasBoyutu,
+        "tasLokalizasyonKodu" => $tasLokalizasyonKodu !== null ? $tasLokalizasyonKodu->value : null,
         ];
     }
 }

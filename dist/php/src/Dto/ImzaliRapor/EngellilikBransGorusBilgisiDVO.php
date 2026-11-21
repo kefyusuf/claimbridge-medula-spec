@@ -42,11 +42,11 @@ final class EngellilikBransGorusBilgisiDVO
     public function toArray(): array
     {
         return [
-        $bransKodu,
-        $drTescilNo,
-        $doktorTipi !== null ? $doktorTipi->value : null,
-        $tetkikTeshisBulguAciklama,
-        $engelOrani,
+        "bransKodu" => $bransKodu,
+        "drTescilNo" => $drTescilNo,
+        "doktorTipi" => $doktorTipi !== null ? $doktorTipi->value : null,
+        "tetkikTeshisBulguAciklama" => $tetkikTeshisBulguAciklama,
+        "engelOrani" => $engelOrani,
         ];
     }
 }

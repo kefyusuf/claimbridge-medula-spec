@@ -38,10 +38,10 @@ final class RaporSorguCevapDVO
     public function toArray(): array
     {
         return [
-        $sonucKodu,
-        $sonucMesaji,
-        $uyariMesaji,
-        $raporBilgileri,
+        "sonucKodu" => $sonucKodu,
+        "sonucMesaji" => $sonucMesaji,
+        "uyariMesaji" => $uyariMesaji,
+        "raporBilgileri" => $raporBilgileri,
         ];
     }
 }

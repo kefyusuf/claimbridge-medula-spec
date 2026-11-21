@@ -35,9 +35,9 @@ final class TaahhutKisiCevapDVO
     public function toArray(): array
     {
         return [
-        $sonucKodu,
-        $sonucMesaji,
-        $taahhutNo,
+        "sonucKodu" => $sonucKodu,
+        "sonucMesaji" => $sonucMesaji,
+        "taahhutNo" => $taahhutNo,
         ];
     }
 }

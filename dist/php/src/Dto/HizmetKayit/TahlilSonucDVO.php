@@ -32,8 +32,8 @@ final class TahlilSonucDVO
     public function toArray(): array
     {
         return [
-        $islemSiraNo,
-        $sonuc,
+        "islemSiraNo" => $islemSiraNo,
+        "sonuc" => $sonuc,
         ];
     }
 }

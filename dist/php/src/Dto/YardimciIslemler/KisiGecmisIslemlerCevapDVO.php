@@ -35,9 +35,9 @@ final class KisiGecmisIslemlerCevapDVO
     public function toArray(): array
     {
         return [
-        $sonucKodu,
-        $sonucMesaji,
-        $oncekiIslemler,
+        "sonucKodu" => $sonucKodu,
+        "sonucMesaji" => $sonucMesaji,
+        "oncekiIslemler" => $oncekiIslemler,
         ];
     }
 }

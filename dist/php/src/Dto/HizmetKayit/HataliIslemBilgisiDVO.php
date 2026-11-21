@@ -38,10 +38,10 @@ final class HataliIslemBilgisiDVO
     public function toArray(): array
     {
         return [
-        $hataKodu,
-        $hataMesaji,
-        $hizmetSunucuRefNo,
-        $oncekiIslemBilgisi,
+        "hataKodu" => $hataKodu,
+        "hataMesaji" => $hataMesaji,
+        "hizmetSunucuRefNo" => $hizmetSunucuRefNo,
+        "oncekiIslemBilgisi" => $oncekiIslemBilgisi,
         ];
     }
 }

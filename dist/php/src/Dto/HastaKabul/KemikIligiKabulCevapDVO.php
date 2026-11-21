@@ -41,11 +41,11 @@ final class KemikIligiKabulCevapDVO
     public function toArray(): array
     {
         return [
-        $hastaTcNo,
-        $islemTarihi,
-        $bildirimNo,
-        $sonucKodu,
-        $sonucMesaji,
+        "hastaTcNo" => $hastaTcNo,
+        "islemTarihi" => $islemTarihi,
+        "bildirimNo" => $bildirimNo,
+        "sonucKodu" => $sonucKodu,
+        "sonucMesaji" => $sonucMesaji,
         ];
     }
 }

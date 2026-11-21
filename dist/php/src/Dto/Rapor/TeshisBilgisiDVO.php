@@ -35,9 +35,9 @@ final class TeshisBilgisiDVO
     public function toArray(): array
     {
         return [
-        $baslangicTarihi,
-        $bitisTarihi,
-        $teshisKodu,
+        "baslangicTarihi" => $baslangicTarihi,
+        "bitisTarihi" => $bitisTarihi,
+        "teshisKodu" => $teshisKodu,
         ];
     }
 }

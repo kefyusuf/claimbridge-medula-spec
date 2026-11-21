@@ -35,9 +35,9 @@ final class GuncelSutSorguCevapDVO
     public function toArray(): array
     {
         return [
-        $sonucKodu,
-        $sonucMesaji,
-        $sutKodlari,
+        "sonucKodu" => $sonucKodu,
+        "sonucMesaji" => $sonucMesaji,
+        "sutKodlari" => $sutKodlari,
         ];
     }
 }

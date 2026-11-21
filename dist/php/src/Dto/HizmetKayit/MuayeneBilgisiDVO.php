@@ -50,14 +50,14 @@ final class MuayeneBilgisiDVO
     public function toArray(): array
     {
         return [
-        $bransKodu,
-        $drTescilNo,
-        $sutKodu,
-        $hizmetSunucuRefNo,
-        $islemSiraNo,
-        $muayeneTarihi,
-        $ozelDurum,
-        $cokluOzelDurum,
+        "bransKodu" => $bransKodu,
+        "drTescilNo" => $drTescilNo,
+        "sutKodu" => $sutKodu,
+        "hizmetSunucuRefNo" => $hizmetSunucuRefNo,
+        "islemSiraNo" => $islemSiraNo,
+        "muayeneTarihi" => $muayeneTarihi,
+        "ozelDurum" => $ozelDurum,
+        "cokluOzelDurum" => $cokluOzelDurum,
         ];
     }
 }

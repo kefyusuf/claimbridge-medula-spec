@@ -39,10 +39,10 @@ final class ImzaliRaporDVO
     public function toArray(): array
     {
         return [
-        $turu !== null ? $turu->value : null,
-        $maluliyetRaporu,
-        $engellilikRaporu,
-        $tibbiGereklilikRaporu,
+        "turu" => $turu !== null ? $turu->value : null,
+        "maluliyetRaporu" => $maluliyetRaporu,
+        "engellilikRaporu" => $engellilikRaporu,
+        "tibbiGereklilikRaporu" => $tibbiGereklilikRaporu,
         ];
     }
 }

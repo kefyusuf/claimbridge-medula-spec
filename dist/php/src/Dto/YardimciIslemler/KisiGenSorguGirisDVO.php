@@ -38,10 +38,10 @@ final class KisiGenSorguGirisDVO
     public function toArray(): array
     {
         return [
-        $hastaTCKimlikNo,
-        $saglikTesisKodu,
-        $sutKodu,
-        $genKodu,
+        "hastaTCKimlikNo" => $hastaTCKimlikNo,
+        "saglikTesisKodu" => $saglikTesisKodu,
+        "sutKodu" => $sutKodu,
+        "genKodu" => $genKodu,
         ];
     }
 }

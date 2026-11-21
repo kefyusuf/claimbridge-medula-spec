@@ -39,10 +39,10 @@ final class MalzemeBilgisiRaporDVO
     public function toArray(): array
     {
         return [
-        $malzemeKodu,
-        $malzemeAdi,
-        $malzemeTuru !== null ? $malzemeTuru->value : null,
-        $adet,
+        "malzemeKodu" => $malzemeKodu,
+        "malzemeAdi" => $malzemeAdi,
+        "malzemeTuru" => $malzemeTuru !== null ? $malzemeTuru->value : null,
+        "adet" => $adet,
         ];
     }
 }

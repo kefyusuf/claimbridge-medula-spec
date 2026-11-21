@@ -169,11 +169,11 @@ function generateDvo(entry: YamlFile): string {
     );
     reads.push(`        ${readExpr},`);
     if (type === "enum" && enumRef) {
-      writes.push(`        $${unique} !== null ? $${unique}->value : null,`);
-    } else if (type === "array" || type === "object") {
-      writes.push(`        $${unique},`);
+      writes.push(
+        `        ${JSON.stringify(name)} => $${unique} !== null ? $${unique}->value : null,`,
+      );
     } else {
-      writes.push(`        $${unique},`);
+      writes.push(`        ${JSON.stringify(name)} => $${unique},`);
     }
   }
 

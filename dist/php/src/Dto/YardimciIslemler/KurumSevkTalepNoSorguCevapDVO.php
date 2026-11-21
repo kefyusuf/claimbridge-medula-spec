@@ -35,9 +35,9 @@ final class KurumSevkTalepNoSorguCevapDVO
     public function toArray(): array
     {
         return [
-        $sonucKodu,
-        $sonucMesaji,
-        $KurumSevkTalepNoSorguDetay,
+        "sonucKodu" => $sonucKodu,
+        "sonucMesaji" => $sonucMesaji,
+        "KurumSevkTalepNoSorguDetay" => $KurumSevkTalepNoSorguDetay,
         ];
     }
 }

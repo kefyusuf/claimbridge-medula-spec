@@ -67,19 +67,19 @@ final class IsKazasiRaporDVO
     public function toArray(): array
     {
         return [
-        $baslangicTarihi,
-        $bitisTarihi,
-        $raporDurumu,
-        $isKontTarihi,
-        $hastaneYatisTarihi,
-        $hastaneCikisTarihi,
-        $nuks,
-        $yatisDevam !== null ? $yatisDevam->value : null,
-        $yaraninTuru,
-        $yaraninYeri,
-        $taburcuTarihi,
-        $taburcuKodu !== null ? $taburcuKodu->value : null,
-        $isKazasiTarihi,
+        "baslangicTarihi" => $baslangicTarihi,
+        "bitisTarihi" => $bitisTarihi,
+        "raporDurumu" => $raporDurumu,
+        "isKontTarihi" => $isKontTarihi,
+        "hastaneYatisTarihi" => $hastaneYatisTarihi,
+        "hastaneCikisTarihi" => $hastaneCikisTarihi,
+        "nuks" => $nuks,
+        "yatisDevam" => $yatisDevam !== null ? $yatisDevam->value : null,
+        "yaraninTuru" => $yaraninTuru,
+        "yaraninYeri" => $yaraninYeri,
+        "taburcuTarihi" => $taburcuTarihi,
+        "taburcuKodu" => $taburcuKodu !== null ? $taburcuKodu->value : null,
+        "isKazasiTarihi" => $isKazasiTarihi,
         ];
     }
 }

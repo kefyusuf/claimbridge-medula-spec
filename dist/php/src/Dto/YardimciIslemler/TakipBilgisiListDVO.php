@@ -38,10 +38,10 @@ final class TakipBilgisiListDVO
     public function toArray(): array
     {
         return [
-        $takipNo,
-        $grupTuru,
-        $grupAdi,
-        $toplamTutar,
+        "takipNo" => $takipNo,
+        "grupTuru" => $grupTuru,
+        "grupAdi" => $grupAdi,
+        "toplamTutar" => $toplamTutar,
         ];
     }
 }

@@ -50,14 +50,14 @@ final class IlacIndirimDVO
     public function toArray(): array
     {
         return [
-        $kamuIndOranAlt,
-        $kamuIndOranUst,
-        $gecerlilikTarihi,
-        $ilac_id,
-        $indirimOrani1,
-        $indirimOrani2,
-        $indirimOrani3,
-        $indirimOrani4,
+        "kamuIndOranAlt" => $kamuIndOranAlt,
+        "kamuIndOranUst" => $kamuIndOranUst,
+        "gecerlilikTarihi" => $gecerlilikTarihi,
+        "ilac_id" => $ilac_id,
+        "indirimOrani1" => $indirimOrani1,
+        "indirimOrani2" => $indirimOrani2,
+        "indirimOrani3" => $indirimOrani3,
+        "indirimOrani4" => $indirimOrani4,
         ];
     }
 }

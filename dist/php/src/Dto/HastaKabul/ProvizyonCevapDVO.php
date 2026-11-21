@@ -41,11 +41,11 @@ final class ProvizyonCevapDVO
     public function toArray(): array
     {
         return [
-        $sonucKodu,
-        $sonucMesaji,
-        $hastaBasvuruNo,
-        $takipNo,
-        $takipler,
+        "sonucKodu" => $sonucKodu,
+        "sonucMesaji" => $sonucMesaji,
+        "hastaBasvuruNo" => $hastaBasvuruNo,
+        "takipNo" => $takipNo,
+        "takipler" => $takipler,
         ];
     }
 }

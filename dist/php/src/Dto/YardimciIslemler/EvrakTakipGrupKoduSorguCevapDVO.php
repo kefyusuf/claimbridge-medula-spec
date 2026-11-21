@@ -35,9 +35,9 @@ final class EvrakTakipGrupKoduSorguCevapDVO
     public function toArray(): array
     {
         return [
-        $sonucKodu,
-        $sonucMesaji,
-        $grupKodlari,
+        "sonucKodu" => $sonucKodu,
+        "sonucMesaji" => $sonucMesaji,
+        "grupKodlari" => $grupKodlari,
         ];
     }
 }

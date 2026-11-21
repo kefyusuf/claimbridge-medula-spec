@@ -38,10 +38,10 @@ final class IlacTeshisBilgiDVO
     public function toArray(): array
     {
         return [
-        $baslangicTarihi,
-        $bitisTarihi,
-        $teshisKodu,
-        $ICD10Kodu,
+        "baslangicTarihi" => $baslangicTarihi,
+        "bitisTarihi" => $bitisTarihi,
+        "teshisKodu" => $teshisKodu,
+        "ICD10Kodu" => $ICD10Kodu,
         ];
     }
 }

@@ -66,19 +66,19 @@ final class RaporCevapDVO
     public function toArray(): array
     {
         return [
-        $raporTakipNo,
-        $analikRapor,
-        $dogumOncesiCalisabilirRapor,
-        $dogumRapor,
-        $ilacRapor,
-        $maluliyetRapor,
-        $protezRapor,
-        $tedaviRapor,
-        $isgoremezlikRapor,
-        $isgoremezlikRaporEkleri,
-        $sonucAciklamasi,
-        $sonucKodu,
-        $raporTuru !== null ? $raporTuru->value : null,
+        "raporTakipNo" => $raporTakipNo,
+        "analikRapor" => $analikRapor,
+        "dogumOncesiCalisabilirRapor" => $dogumOncesiCalisabilirRapor,
+        "dogumRapor" => $dogumRapor,
+        "ilacRapor" => $ilacRapor,
+        "maluliyetRapor" => $maluliyetRapor,
+        "protezRapor" => $protezRapor,
+        "tedaviRapor" => $tedaviRapor,
+        "isgoremezlikRapor" => $isgoremezlikRapor,
+        "isgoremezlikRaporEkleri" => $isgoremezlikRaporEkleri,
+        "sonucAciklamasi" => $sonucAciklamasi,
+        "sonucKodu" => $sonucKodu,
+        "raporTuru" => $raporTuru !== null ? $raporTuru->value : null,
         ];
     }
 }

@@ -42,11 +42,11 @@ final class TakipBilgisiGirisDVO
     public function toArray(): array
     {
         return [
-        $evrakRefNo,
-        $saglikTesisKodu,
-        $grupTuru !== null ? $grupTuru->value : null,
-        $grupKodu,
-        $ktsHbysKodu,
+        "evrakRefNo" => $evrakRefNo,
+        "saglikTesisKodu" => $saglikTesisKodu,
+        "grupTuru" => $grupTuru !== null ? $grupTuru->value : null,
+        "grupKodu" => $grupKodu,
+        "ktsHbysKodu" => $ktsHbysKodu,
         ];
     }
 }

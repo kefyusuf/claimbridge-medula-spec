@@ -35,9 +35,9 @@ final class KisiIslemDVO
     public function toArray(): array
     {
         return [
-        $tesisKodu,
-        $tesisAdi,
-        $islemTarihi,
+        "tesisKodu" => $tesisKodu,
+        "tesisAdi" => $tesisAdi,
+        "islemTarihi" => $islemTarihi,
         ];
     }
 }

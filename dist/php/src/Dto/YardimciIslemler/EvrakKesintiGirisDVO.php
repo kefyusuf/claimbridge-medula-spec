@@ -39,10 +39,10 @@ final class EvrakKesintiGirisDVO
     public function toArray(): array
     {
         return [
-        $evrakReferansNo,
-        $tesisKodu,
-        $grupTuru !== null ? $grupTuru->value : null,
-        $grupKodu,
+        "evrakReferansNo" => $evrakReferansNo,
+        "tesisKodu" => $tesisKodu,
+        "grupTuru" => $grupTuru !== null ? $grupTuru->value : null,
+        "grupKodu" => $grupKodu,
         ];
     }
 }

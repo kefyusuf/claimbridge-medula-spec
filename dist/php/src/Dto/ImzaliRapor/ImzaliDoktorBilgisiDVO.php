@@ -42,11 +42,11 @@ final class ImzaliDoktorBilgisiDVO
     public function toArray(): array
     {
         return [
-        $drTescilNo,
-        $drAdi,
-        $drSoyadi,
-        $drBransKodu,
-        $tipi !== null ? $tipi->value : null,
+        "drTescilNo" => $drTescilNo,
+        "drAdi" => $drAdi,
+        "drSoyadi" => $drSoyadi,
+        "drBransKodu" => $drBransKodu,
+        "tipi" => $tipi !== null ? $tipi->value : null,
         ];
     }
 }

@@ -44,12 +44,12 @@ final class KemikIligiIslemDuzeltmeCevapDVO
     public function toArray(): array
     {
         return [
-        $hastaTcNo,
-        $islemTarihi,
-        $sonucKodu,
-        $sonucMesaji,
-        $yeniIslemKodu,
-        $bildirimNo,
+        "hastaTcNo" => $hastaTcNo,
+        "islemTarihi" => $islemTarihi,
+        "sonucKodu" => $sonucKodu,
+        "sonucMesaji" => $sonucMesaji,
+        "yeniIslemKodu" => $yeniIslemKodu,
+        "bildirimNo" => $bildirimNo,
         ];
     }
 }

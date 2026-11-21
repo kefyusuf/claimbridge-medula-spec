@@ -29,7 +29,7 @@ final class EvrakTakipGrupKoduSorguGirisDVO
     public function toArray(): array
     {
         return [
-        $saglikTesisKodu,
+        "saglikTesisKodu" => $saglikTesisKodu,
         ];
     }
 }

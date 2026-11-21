@@ -32,8 +32,8 @@ final class KayitliIslemBilgisiDVO
     public function toArray(): array
     {
         return [
-        $hizmetSunucuRefNo,
-        $islemSiraNo,
+        "hizmetSunucuRefNo" => $hizmetSunucuRefNo,
+        "islemSiraNo" => $islemSiraNo,
         ];
     }
 }

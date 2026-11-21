@@ -71,20 +71,20 @@ final class IsgoremezlikRaporEkDVO
     public function toArray(): array
     {
         return [
-        $aciklama,
-        $bitisTarihi,
-        $durum !== null ? $durum->value : null,
-        $duzenlemeTuru !== null ? $duzenlemeTuru->value : null,
-        $hastaYatisVarMi !== null ? $hastaYatisVarMi->value : null,
-        $kontrolMu !== null ? $kontrolMu->value : null,
-        $kontrolTarihi,
-        $protokolNo,
-        $protokolTarihi,
-        $yatislar,
-        $raporBilgisiDVO,
-        $doktorlar,
-        $tanilar,
-        $kullaniciTesisKodu,
+        "aciklama" => $aciklama,
+        "bitisTarihi" => $bitisTarihi,
+        "durum" => $durum !== null ? $durum->value : null,
+        "duzenlemeTuru" => $duzenlemeTuru !== null ? $duzenlemeTuru->value : null,
+        "hastaYatisVarMi" => $hastaYatisVarMi !== null ? $hastaYatisVarMi->value : null,
+        "kontrolMu" => $kontrolMu !== null ? $kontrolMu->value : null,
+        "kontrolTarihi" => $kontrolTarihi,
+        "protokolNo" => $protokolNo,
+        "protokolTarihi" => $protokolTarihi,
+        "yatislar" => $yatislar,
+        "raporBilgisiDVO" => $raporBilgisiDVO,
+        "doktorlar" => $doktorlar,
+        "tanilar" => $tanilar,
+        "kullaniciTesisKodu" => $kullaniciTesisKodu,
         ];
     }
 }

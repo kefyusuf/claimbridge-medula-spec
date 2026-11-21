@@ -59,17 +59,17 @@ final class HastaYatisBilgisiDVO
     public function toArray(): array
     {
         return [
-        $bransKodu,
-        $drTescilNo,
-        $sutKodu,
-        $hizmetSunucuRefNo,
-        $islemSiraNo,
-        $refakatciGunSayisi,
-        $yatisBaslangicTarihi,
-        $yatisBitisTarihi,
-        $ozelDurum,
-        $aciklama,
-        $cokluOzelDurum,
+        "bransKodu" => $bransKodu,
+        "drTescilNo" => $drTescilNo,
+        "sutKodu" => $sutKodu,
+        "hizmetSunucuRefNo" => $hizmetSunucuRefNo,
+        "islemSiraNo" => $islemSiraNo,
+        "refakatciGunSayisi" => $refakatciGunSayisi,
+        "yatisBaslangicTarihi" => $yatisBaslangicTarihi,
+        "yatisBitisTarihi" => $yatisBitisTarihi,
+        "ozelDurum" => $ozelDurum,
+        "aciklama" => $aciklama,
+        "cokluOzelDurum" => $cokluOzelDurum,
         ];
     }
 }

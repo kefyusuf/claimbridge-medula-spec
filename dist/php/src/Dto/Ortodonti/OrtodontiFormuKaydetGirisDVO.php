@@ -44,12 +44,12 @@ final class OrtodontiFormuKaydetGirisDVO
     public function toArray(): array
     {
         return [
-        $saglikTesisKodu,
-        $provizyonNo,
-        $sutKodu,
-        $formNo,
-        $islemTarihi,
-        $tcKimlikNo,
+        "saglikTesisKodu" => $saglikTesisKodu,
+        "provizyonNo" => $provizyonNo,
+        "sutKodu" => $sutKodu,
+        "formNo" => $formNo,
+        "islemTarihi" => $islemTarihi,
+        "tcKimlikNo" => $tcKimlikNo,
         ];
     }
 }
