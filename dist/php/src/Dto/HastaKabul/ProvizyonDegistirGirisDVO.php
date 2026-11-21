@@ -35,9 +35,9 @@ final class ProvizyonDegistirGirisDVO
     public function toArray(): array
     {
         return [
-        "takipNo" => $takipNo,
-        "tesisKodu" => $tesisKodu,
-        "yeniProvizyonTipi" => $yeniProvizyonTipi,
+        "takipNo" => $this->takipNo,
+        "tesisKodu" => $this->tesisKodu,
+        "yeniProvizyonTipi" => $this->yeniProvizyonTipi,
         ];
     }
 }

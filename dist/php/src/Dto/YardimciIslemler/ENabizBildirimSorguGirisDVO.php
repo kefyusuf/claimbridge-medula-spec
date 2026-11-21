@@ -35,9 +35,9 @@ final class ENabizBildirimSorguGirisDVO
     public function toArray(): array
     {
         return [
-        "saglikTesisKodu" => $saglikTesisKodu,
-        "takipNo" => $takipNo,
-        "hizmetSunucuRefNo" => $hizmetSunucuRefNo,
+        "saglikTesisKodu" => $this->saglikTesisKodu,
+        "takipNo" => $this->takipNo,
+        "hizmetSunucuRefNo" => $this->hizmetSunucuRefNo,
         ];
     }
 }

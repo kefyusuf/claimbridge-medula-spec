@@ -35,9 +35,9 @@ final class MajistralEklenenIlacDVO
     public function toArray(): array
     {
         return [
-        "islemSiraNo" => $islemSiraNo,
-        "barkod" => $barkod,
-        "adet" => $adet,
+        "islemSiraNo" => $this->islemSiraNo,
+        "barkod" => $this->barkod,
+        "adet" => $this->adet,
         ];
     }
 }

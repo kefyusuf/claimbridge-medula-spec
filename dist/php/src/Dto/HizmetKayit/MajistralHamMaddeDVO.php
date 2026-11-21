@@ -40,10 +40,10 @@ final class MajistralHamMaddeDVO
     public function toArray(): array
     {
         return [
-        "islemSiraNo" => $islemSiraNo,
-        "majistralHamMaddeKodu" => $majistralHamMaddeKodu !== null ? $majistralHamMaddeKodu->value : null,
-        "miktar" => $miktar,
-        "hamMaddeBirimi" => $hamMaddeBirimi !== null ? $hamMaddeBirimi->value : null,
+        "islemSiraNo" => $this->islemSiraNo,
+        "majistralHamMaddeKodu" => $this->majistralHamMaddeKodu !== null ? $this->majistralHamMaddeKodu->value : null,
+        "miktar" => $this->miktar,
+        "hamMaddeBirimi" => $this->hamMaddeBirimi !== null ? $this->hamMaddeBirimi->value : null,
         ];
     }
 }

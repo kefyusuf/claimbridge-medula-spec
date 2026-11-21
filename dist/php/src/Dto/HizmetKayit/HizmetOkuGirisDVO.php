@@ -41,11 +41,11 @@ final class HizmetOkuGirisDVO
     public function toArray(): array
     {
         return [
-        "islemSiraNumaralari" => $islemSiraNumaralari,
-        "hizmetSunucuRefNolari" => $hizmetSunucuRefNolari,
-        "saglikTesisKodu" => $saglikTesisKodu,
-        "takipNo" => $takipNo,
-        "ktsHbysKodu" => $ktsHbysKodu,
+        "islemSiraNumaralari" => $this->islemSiraNumaralari,
+        "hizmetSunucuRefNolari" => $this->hizmetSunucuRefNolari,
+        "saglikTesisKodu" => $this->saglikTesisKodu,
+        "takipNo" => $this->takipNo,
+        "ktsHbysKodu" => $this->ktsHbysKodu,
         ];
     }
 }

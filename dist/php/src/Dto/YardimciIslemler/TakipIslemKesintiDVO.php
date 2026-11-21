@@ -50,14 +50,14 @@ final class TakipIslemKesintiDVO
     public function toArray(): array
     {
         return [
-        "islemSiraNo" => $islemSiraNo,
-        "hizmetSunucuRefNo" => $hizmetSunucuRefNo,
-        "islemTarihi" => $islemTarihi,
-        "sutKodu" => $sutKodu,
-        "islemAdi" => $islemAdi,
-        "tutar" => $tutar,
-        "kesintiTutari" => $kesintiTutari,
-        "aciklama" => $aciklama,
+        "islemSiraNo" => $this->islemSiraNo,
+        "hizmetSunucuRefNo" => $this->hizmetSunucuRefNo,
+        "islemTarihi" => $this->islemTarihi,
+        "sutKodu" => $this->sutKodu,
+        "islemAdi" => $this->islemAdi,
+        "tutar" => $this->tutar,
+        "kesintiTutari" => $this->kesintiTutari,
+        "aciklama" => $this->aciklama,
         ];
     }
 }

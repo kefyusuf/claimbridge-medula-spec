@@ -38,10 +38,10 @@ final class TaahhutCevapDVO
     public function toArray(): array
     {
         return [
-        "sonucKodu" => $sonucKodu,
-        "sonucMesaji" => $sonucMesaji,
-        "taahhutNo" => $taahhutNo,
-        "taahhutCikti" => $taahhutCikti,
+        "sonucKodu" => $this->sonucKodu,
+        "sonucMesaji" => $this->sonucMesaji,
+        "taahhutNo" => $this->taahhutNo,
+        "taahhutCikti" => $this->taahhutCikti,
         ];
     }
 }

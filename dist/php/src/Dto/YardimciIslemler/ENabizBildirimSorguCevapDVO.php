@@ -35,9 +35,9 @@ final class ENabizBildirimSorguCevapDVO
     public function toArray(): array
     {
         return [
-        "sonucKodu" => $sonucKodu,
-        "sonucMesaji" => $sonucMesaji,
-        "hizmetler" => $hizmetler,
+        "sonucKodu" => $this->sonucKodu,
+        "sonucMesaji" => $this->sonucMesaji,
+        "hizmetler" => $this->hizmetler,
         ];
     }
 }

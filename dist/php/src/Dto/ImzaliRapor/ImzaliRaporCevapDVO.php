@@ -47,13 +47,13 @@ final class ImzaliRaporCevapDVO
     public function toArray(): array
     {
         return [
-        "raporTakipNo" => $raporTakipNo,
-        "sonucKodu" => $sonucKodu,
-        "sonucMesaji" => $sonucMesaji,
-        "uyariMesaji" => $uyariMesaji,
-        "maluliyetRaporu" => $maluliyetRaporu,
-        "engellilikRaporu" => $engellilikRaporu,
-        "tibbiGereklilikRaporu" => $tibbiGereklilikRaporu,
+        "raporTakipNo" => $this->raporTakipNo,
+        "sonucKodu" => $this->sonucKodu,
+        "sonucMesaji" => $this->sonucMesaji,
+        "uyariMesaji" => $this->uyariMesaji,
+        "maluliyetRaporu" => $this->maluliyetRaporu,
+        "engellilikRaporu" => $this->engellilikRaporu,
+        "tibbiGereklilikRaporu" => $this->tibbiGereklilikRaporu,
         ];
     }
 }

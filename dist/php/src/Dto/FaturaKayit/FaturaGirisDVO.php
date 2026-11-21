@@ -59,17 +59,17 @@ final class FaturaGirisDVO
     public function toArray(): array
     {
         return [
-        "saglikTesisKodu" => $saglikTesisKodu,
-        "faturaTarihi" => $faturaTarihi,
-        "hastaBasvuruNo" => $hastaBasvuruNo,
-        "faturaRefNo" => $faturaRefNo,
-        "hizmetDetaylari" => $hizmetDetaylari,
-        "trafikKazasiOdemeYuzdesi" => $trafikKazasiOdemeYuzdesi,
-        "ilaveUcret" => $ilaveUcret,
-        "ktsHbysKodu" => $ktsHbysKodu,
-        "hastaTelefon" => $hastaTelefon,
-        "hastaAdres" => $hastaAdres,
-        "muvafakatVar" => $muvafakatVar,
+        "saglikTesisKodu" => $this->saglikTesisKodu,
+        "faturaTarihi" => $this->faturaTarihi,
+        "hastaBasvuruNo" => $this->hastaBasvuruNo,
+        "faturaRefNo" => $this->faturaRefNo,
+        "hizmetDetaylari" => $this->hizmetDetaylari,
+        "trafikKazasiOdemeYuzdesi" => $this->trafikKazasiOdemeYuzdesi,
+        "ilaveUcret" => $this->ilaveUcret,
+        "ktsHbysKodu" => $this->ktsHbysKodu,
+        "hastaTelefon" => $this->hastaTelefon,
+        "hastaAdres" => $this->hastaAdres,
+        "muvafakatVar" => $this->muvafakatVar,
         ];
     }
 }

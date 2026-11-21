@@ -47,13 +47,13 @@ final class BKDSDogrulamaDetayDVO
     public function toArray(): array
     {
         return [
-        "dogrulananTckNo" => $dogrulananTckNo,
-        "tesisKodu" => $tesisKodu,
-        "dogrulamaTarihi" => $dogrulamaTarihi,
-        "araciTckNo" => $araciTckNo,
-        "dogrulamaYontemi" => $dogrulamaYontemi,
-        "dogrulamaYontemAciklama" => $dogrulamaYontemAciklama,
-        "takipReceteNo" => $takipReceteNo,
+        "dogrulananTckNo" => $this->dogrulananTckNo,
+        "tesisKodu" => $this->tesisKodu,
+        "dogrulamaTarihi" => $this->dogrulamaTarihi,
+        "araciTckNo" => $this->araciTckNo,
+        "dogrulamaYontemi" => $this->dogrulamaYontemi,
+        "dogrulamaYontemAciklama" => $this->dogrulamaYontemAciklama,
+        "takipReceteNo" => $this->takipReceteNo,
         ];
     }
 }

@@ -35,9 +35,9 @@ final class IlacRaporDVO
     public function toArray(): array
     {
         return [
-        "raporDVO" => $raporDVO,
-        "raporEtkinMaddeler" => $raporEtkinMaddeler,
-        "takipFormuNo" => $takipFormuNo,
+        "raporDVO" => $this->raporDVO,
+        "raporEtkinMaddeler" => $this->raporEtkinMaddeler,
+        "takipFormuNo" => $this->takipFormuNo,
         ];
     }
 }

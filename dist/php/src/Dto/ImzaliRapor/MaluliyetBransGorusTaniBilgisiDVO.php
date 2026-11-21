@@ -36,9 +36,9 @@ final class MaluliyetBransGorusTaniBilgisiDVO
     public function toArray(): array
     {
         return [
-        "icd10Kodu" => $icd10Kodu,
-        "aciklama" => $aciklama,
-        "taniNeden" => $taniNeden !== null ? $taniNeden->value : null,
+        "icd10Kodu" => $this->icd10Kodu,
+        "aciklama" => $this->aciklama,
+        "taniNeden" => $this->taniNeden !== null ? $this->taniNeden->value : null,
         ];
     }
 }

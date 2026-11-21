@@ -50,14 +50,14 @@ final class TedaviIslemBilgisiDVO
     public function toArray(): array
     {
         return [
-        "diyalizRaporBilgisi" => $diyalizRaporBilgisi,
-        "eswlRaporBilgisi" => $eswlRaporBilgisi,
-        "eswtRaporBilgisi" => $eswtRaporBilgisi,
-        "ftrRaporBilgisi" => $ftrRaporBilgisi,
-        "hotRaporBilgisi" => $hotRaporBilgisi,
-        "tupBebekRaporBilgisi" => $tupBebekRaporBilgisi,
-        "evHemodiyaliziRaporBilgisi" => $evHemodiyaliziRaporBilgisi,
-        "pulmonerRaporBilgisi" => $pulmonerRaporBilgisi,
+        "diyalizRaporBilgisi" => $this->diyalizRaporBilgisi,
+        "eswlRaporBilgisi" => $this->eswlRaporBilgisi,
+        "eswtRaporBilgisi" => $this->eswtRaporBilgisi,
+        "ftrRaporBilgisi" => $this->ftrRaporBilgisi,
+        "hotRaporBilgisi" => $this->hotRaporBilgisi,
+        "tupBebekRaporBilgisi" => $this->tupBebekRaporBilgisi,
+        "evHemodiyaliziRaporBilgisi" => $this->evHemodiyaliziRaporBilgisi,
+        "pulmonerRaporBilgisi" => $this->pulmonerRaporBilgisi,
         ];
     }
 }

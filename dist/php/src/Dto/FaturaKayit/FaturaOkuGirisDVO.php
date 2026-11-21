@@ -41,11 +41,11 @@ final class FaturaOkuGirisDVO
     public function toArray(): array
     {
         return [
-        "saglikTesisKodu" => $saglikTesisKodu,
-        "faturaTeslimNo" => $faturaTeslimNo,
-        "faturaRefNo" => $faturaRefNo,
-        "faturaTarihi" => $faturaTarihi,
-        "ktsHbysKodu" => $ktsHbysKodu,
+        "saglikTesisKodu" => $this->saglikTesisKodu,
+        "faturaTeslimNo" => $this->faturaTeslimNo,
+        "faturaRefNo" => $this->faturaRefNo,
+        "faturaTarihi" => $this->faturaTarihi,
+        "ktsHbysKodu" => $this->ktsHbysKodu,
         ];
     }
 }

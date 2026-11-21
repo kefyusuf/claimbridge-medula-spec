@@ -32,8 +32,8 @@ final class EvrakTakipGrupKoduDVO
     public function toArray(): array
     {
         return [
-        "kodu" => $kodu,
-        "adi" => $adi,
+        "kodu" => $this->kodu,
+        "adi" => $this->adi,
         ];
     }
 }

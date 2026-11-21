@@ -42,11 +42,11 @@ final class ESWLRaporBilgisiDVO
     public function toArray(): array
     {
         return [
-        "butKodu" => $butKodu,
-        "eswlRaporuTasSayisi" => $eswlRaporuTasSayisi,
-        "eswlRaporuSeansSayisi" => $eswlRaporuSeansSayisi,
-        "bobrekBilgisi" => $bobrekBilgisi !== null ? $bobrekBilgisi->value : null,
-        "eswlRaporuTasBilgileri" => $eswlRaporuTasBilgileri,
+        "butKodu" => $this->butKodu,
+        "eswlRaporuTasSayisi" => $this->eswlRaporuTasSayisi,
+        "eswlRaporuSeansSayisi" => $this->eswlRaporuSeansSayisi,
+        "bobrekBilgisi" => $this->bobrekBilgisi !== null ? $this->bobrekBilgisi->value : null,
+        "eswlRaporuTasBilgileri" => $this->eswlRaporuTasBilgileri,
         ];
     }
 }

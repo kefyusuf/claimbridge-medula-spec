@@ -38,10 +38,10 @@ final class FaturaHizmetDetayDVO
     public function toArray(): array
     {
         return [
-        "islemSiraNo" => $islemSiraNo,
-        "islemKodu" => $islemKodu,
-        "adet" => $adet,
-        "birimFiyat" => $birimFiyat,
+        "islemSiraNo" => $this->islemSiraNo,
+        "islemKodu" => $this->islemKodu,
+        "adet" => $this->adet,
+        "birimFiyat" => $this->birimFiyat,
         ];
     }
 }

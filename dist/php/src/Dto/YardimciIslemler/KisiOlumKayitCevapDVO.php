@@ -35,9 +35,9 @@ final class KisiOlumKayitCevapDVO
     public function toArray(): array
     {
         return [
-        "sonucKodu" => $sonucKodu,
-        "sonucMesaji" => $sonucMesaji,
-        "kisiOlumKayitDetay" => $kisiOlumKayitDetay,
+        "sonucKodu" => $this->sonucKodu,
+        "sonucMesaji" => $this->sonucMesaji,
+        "kisiOlumKayitDetay" => $this->kisiOlumKayitDetay,
         ];
     }
 }

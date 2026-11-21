@@ -41,11 +41,11 @@ final class ProvizyonDegistirCevapDVO
     public function toArray(): array
     {
         return [
-        "takipNo" => $takipNo,
-        "yeniProvizyonTipi" => $yeniProvizyonTipi,
-        "hastaBasvuruNo" => $hastaBasvuruNo,
-        "sonucKodu" => $sonucKodu,
-        "sonucMesaji" => $sonucMesaji,
+        "takipNo" => $this->takipNo,
+        "yeniProvizyonTipi" => $this->yeniProvizyonTipi,
+        "hastaBasvuruNo" => $this->hastaBasvuruNo,
+        "sonucKodu" => $this->sonucKodu,
+        "sonucMesaji" => $this->sonucMesaji,
         ];
     }
 }

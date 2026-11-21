@@ -32,8 +32,8 @@ final class RaporOnayBekleyenSorguDVO
     public function toArray(): array
     {
         return [
-        "saglikTesisKodu" => $saglikTesisKodu,
-        "doktorTcKimlikNo" => $doktorTcKimlikNo,
+        "saglikTesisKodu" => $this->saglikTesisKodu,
+        "doktorTcKimlikNo" => $this->doktorTcKimlikNo,
         ];
     }
 }

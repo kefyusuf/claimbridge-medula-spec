@@ -38,10 +38,10 @@ final class BasvuruTakipOkuCevapDVO
     public function toArray(): array
     {
         return [
-        "basvuruTakip" => $basvuruTakip,
-        "hastaBasvuruNo" => $hastaBasvuruNo,
-        "sonucKodu" => $sonucKodu,
-        "sonucMesaji" => $sonucMesaji,
+        "basvuruTakip" => $this->basvuruTakip,
+        "hastaBasvuruNo" => $this->hastaBasvuruNo,
+        "sonucKodu" => $this->sonucKodu,
+        "sonucMesaji" => $this->sonucMesaji,
         ];
     }
 }

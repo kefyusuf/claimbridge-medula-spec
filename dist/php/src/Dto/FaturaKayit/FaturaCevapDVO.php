@@ -38,10 +38,10 @@ final class FaturaCevapDVO
     public function toArray(): array
     {
         return [
-        "sonucKodu" => $sonucKodu,
-        "sonucMesaji" => $sonucMesaji,
-        "faturaTeslimNo" => $faturaTeslimNo,
-        "faturaTutari" => $faturaTutari,
+        "sonucKodu" => $this->sonucKodu,
+        "sonucMesaji" => $this->sonucMesaji,
+        "faturaTeslimNo" => $this->faturaTeslimNo,
+        "faturaTutari" => $this->faturaTutari,
         ];
     }
 }

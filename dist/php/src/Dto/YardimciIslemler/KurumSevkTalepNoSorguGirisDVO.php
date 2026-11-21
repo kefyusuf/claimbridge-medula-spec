@@ -32,8 +32,8 @@ final class KurumSevkTalepNoSorguGirisDVO
     public function toArray(): array
     {
         return [
-        "tcKimlikNo" => $tcKimlikNo,
-        "saglikTesisKodu" => $saglikTesisKodu,
+        "tcKimlikNo" => $this->tcKimlikNo,
+        "saglikTesisKodu" => $this->saglikTesisKodu,
         ];
     }
 }

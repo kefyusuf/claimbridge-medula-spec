@@ -35,9 +35,9 @@ final class DoktorAraCevapDVO
     public function toArray(): array
     {
         return [
-        "sonucKodu" => $sonucKodu,
-        "sonucMesaji" => $sonucMesaji,
-        "doktorlar" => $doktorlar,
+        "sonucKodu" => $this->sonucKodu,
+        "sonucMesaji" => $this->sonucMesaji,
+        "doktorlar" => $this->doktorlar,
         ];
     }
 }

@@ -38,10 +38,10 @@ final class KatilimPayiCevapDVO
     public function toArray(): array
     {
         return [
-        "sonucKodu" => $sonucKodu,
-        "sonucMesaji" => $sonucMesaji,
-        "evrakRefNo" => $evrakRefNo,
-        "KatilimPayiDVO" => $KatilimPayiDVO,
+        "sonucKodu" => $this->sonucKodu,
+        "sonucMesaji" => $this->sonucMesaji,
+        "evrakRefNo" => $this->evrakRefNo,
+        "KatilimPayiDVO" => $this->KatilimPayiDVO,
         ];
     }
 }

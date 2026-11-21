@@ -72,21 +72,21 @@ final class DigerIslemBilgisiDVO
     public function toArray(): array
     {
         return [
-        "adet" => $adet,
-        "bransKodu" => $bransKodu,
-        "sutKodu" => $sutKodu,
-        "drTescilNo" => $drTescilNo,
-        "hizmetSunucuRefNo" => $hizmetSunucuRefNo,
-        "islemSiraNo" => $islemSiraNo,
-        "islemTarihi" => $islemTarihi,
-        "raporTakipNo" => $raporTakipNo,
-        "ozelDurum" => $ozelDurum,
-        "ayniFarkliKesi" => $ayniFarkliKesi !== null ? $ayniFarkliKesi->value : null,
-        "cokluOzelDurum" => $cokluOzelDurum,
-        "aciklama" => $aciklama,
-        "sagSol" => $sagSol,
-        "istemYapanDrTescilNo" => $istemYapanDrTescilNo,
-        "istemYapanDrBrans" => $istemYapanDrBrans,
+        "adet" => $this->adet,
+        "bransKodu" => $this->bransKodu,
+        "sutKodu" => $this->sutKodu,
+        "drTescilNo" => $this->drTescilNo,
+        "hizmetSunucuRefNo" => $this->hizmetSunucuRefNo,
+        "islemSiraNo" => $this->islemSiraNo,
+        "islemTarihi" => $this->islemTarihi,
+        "raporTakipNo" => $this->raporTakipNo,
+        "ozelDurum" => $this->ozelDurum,
+        "ayniFarkliKesi" => $this->ayniFarkliKesi !== null ? $this->ayniFarkliKesi->value : null,
+        "cokluOzelDurum" => $this->cokluOzelDurum,
+        "aciklama" => $this->aciklama,
+        "sagSol" => $this->sagSol,
+        "istemYapanDrTescilNo" => $this->istemYapanDrTescilNo,
+        "istemYapanDrBrans" => $this->istemYapanDrBrans,
         ];
     }
 }

@@ -41,11 +41,11 @@ final class BarkodSutDVO
     public function toArray(): array
     {
         return [
-        "barkod" => $barkod,
-        "firmaTanimlayiciNo" => $firmaTanimlayiciNo,
-        "sutKodu" => $sutKodu,
-        "baslangicTarihi" => $baslangicTarihi,
-        "bitisTarihi" => $bitisTarihi,
+        "barkod" => $this->barkod,
+        "firmaTanimlayiciNo" => $this->firmaTanimlayiciNo,
+        "sutKodu" => $this->sutKodu,
+        "baslangicTarihi" => $this->baslangicTarihi,
+        "bitisTarihi" => $this->bitisTarihi,
         ];
     }
 }

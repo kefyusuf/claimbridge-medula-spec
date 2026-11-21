@@ -42,11 +42,11 @@ final class DoktorBilgisiDVO
     public function toArray(): array
     {
         return [
-        "drTescilNo" => $drTescilNo,
-        "drAdi" => $drAdi,
-        "drSoyadi" => $drSoyadi,
-        "drBransKodu" => $drBransKodu,
-        "tipi" => $tipi !== null ? $tipi->value : null,
+        "drTescilNo" => $this->drTescilNo,
+        "drAdi" => $this->drAdi,
+        "drSoyadi" => $this->drSoyadi,
+        "drBransKodu" => $this->drBransKodu,
+        "tipi" => $this->tipi !== null ? $this->tipi->value : null,
         ];
     }
 }

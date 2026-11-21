@@ -35,9 +35,9 @@ final class BasvuruYatisBilgileriDVO
     public function toArray(): array
     {
         return [
-        "baslangicTarihi" => $baslangicTarihi,
-        "bitisTarihi" => $bitisTarihi,
-        "durum" => $durum,
+        "baslangicTarihi" => $this->baslangicTarihi,
+        "bitisTarihi" => $this->bitisTarihi,
+        "durum" => $this->durum,
         ];
     }
 }

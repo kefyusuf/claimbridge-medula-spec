@@ -35,9 +35,9 @@ final class ENabizHizmetBilgiDVO
     public function toArray(): array
     {
         return [
-        "hizmetSunucuRefNo" => $hizmetSunucuRefNo,
-        "islemKodu" => $islemKodu,
-        "islemTarihi" => $islemTarihi,
+        "hizmetSunucuRefNo" => $this->hizmetSunucuRefNo,
+        "islemKodu" => $this->islemKodu,
+        "islemTarihi" => $this->islemTarihi,
         ];
     }
 }

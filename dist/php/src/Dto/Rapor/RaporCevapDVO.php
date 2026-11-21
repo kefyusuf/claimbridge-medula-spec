@@ -66,19 +66,19 @@ final class RaporCevapDVO
     public function toArray(): array
     {
         return [
-        "raporTakipNo" => $raporTakipNo,
-        "analikRapor" => $analikRapor,
-        "dogumOncesiCalisabilirRapor" => $dogumOncesiCalisabilirRapor,
-        "dogumRapor" => $dogumRapor,
-        "ilacRapor" => $ilacRapor,
-        "maluliyetRapor" => $maluliyetRapor,
-        "protezRapor" => $protezRapor,
-        "tedaviRapor" => $tedaviRapor,
-        "isgoremezlikRapor" => $isgoremezlikRapor,
-        "isgoremezlikRaporEkleri" => $isgoremezlikRaporEkleri,
-        "sonucAciklamasi" => $sonucAciklamasi,
-        "sonucKodu" => $sonucKodu,
-        "raporTuru" => $raporTuru !== null ? $raporTuru->value : null,
+        "raporTakipNo" => $this->raporTakipNo,
+        "analikRapor" => $this->analikRapor,
+        "dogumOncesiCalisabilirRapor" => $this->dogumOncesiCalisabilirRapor,
+        "dogumRapor" => $this->dogumRapor,
+        "ilacRapor" => $this->ilacRapor,
+        "maluliyetRapor" => $this->maluliyetRapor,
+        "protezRapor" => $this->protezRapor,
+        "tedaviRapor" => $this->tedaviRapor,
+        "isgoremezlikRapor" => $this->isgoremezlikRapor,
+        "isgoremezlikRaporEkleri" => $this->isgoremezlikRaporEkleri,
+        "sonucAciklamasi" => $this->sonucAciklamasi,
+        "sonucKodu" => $this->sonucKodu,
+        "raporTuru" => $this->raporTuru !== null ? $this->raporTuru->value : null,
         ];
     }
 }

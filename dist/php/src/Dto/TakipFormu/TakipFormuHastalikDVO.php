@@ -33,8 +33,8 @@ final class TakipFormuHastalikDVO
     public function toArray(): array
     {
         return [
-        "hastalikKodu" => $hastalikKodu !== null ? $hastalikKodu->value : null,
-        "digerHastalikTaniKodu" => $digerHastalikTaniKodu,
+        "hastalikKodu" => $this->hastalikKodu !== null ? $this->hastalikKodu->value : null,
+        "digerHastalikTaniKodu" => $this->digerHastalikTaniKodu,
         ];
     }
 }

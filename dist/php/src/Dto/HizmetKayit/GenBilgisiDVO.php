@@ -29,7 +29,7 @@ final class GenBilgisiDVO
     public function toArray(): array
     {
         return [
-        "genKodu" => $genKodu,
+        "genKodu" => $this->genKodu,
         ];
     }
 }

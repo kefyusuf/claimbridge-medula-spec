@@ -50,14 +50,14 @@ final class HastaYatisOkuCevapDVO
     public function toArray(): array
     {
         return [
-        "saglikTesisiKodu" => $saglikTesisiKodu,
-        "hastaBasvuruNo" => $hastaBasvuruNo,
-        "basvuruYatisBilgileri" => $basvuruYatisBilgileri,
-        "sonucKodu" => $sonucKodu,
-        "sonucMesaji" => $sonucMesaji,
-        "yeniDoganDogumTarihi" => $yeniDoganDogumTarihi,
-        "yeniDoganCocukSiraNo" => $yeniDoganCocukSiraNo,
-        "donorTck" => $donorTck,
+        "saglikTesisiKodu" => $this->saglikTesisiKodu,
+        "hastaBasvuruNo" => $this->hastaBasvuruNo,
+        "basvuruYatisBilgileri" => $this->basvuruYatisBilgileri,
+        "sonucKodu" => $this->sonucKodu,
+        "sonucMesaji" => $this->sonucMesaji,
+        "yeniDoganDogumTarihi" => $this->yeniDoganDogumTarihi,
+        "yeniDoganCocukSiraNo" => $this->yeniDoganCocukSiraNo,
+        "donorTck" => $this->donorTck,
         ];
     }
 }

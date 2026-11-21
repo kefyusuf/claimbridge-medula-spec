@@ -53,15 +53,15 @@ final class SaglikTesisiListDVO
     public function toArray(): array
     {
         return [
-        "tesisIl" => $tesisIl,
-        "tesisAdi" => $tesisAdi,
-        "tesisKodu" => $tesisKodu,
-        "tesisSinifKodu" => $tesisSinifKodu,
-        "tesisTuru" => $tesisTuru,
-        "tesisIlAdi" => $tesisIlAdi,
-        "tesisIlceKodu" => $tesisIlceKodu,
-        "tesisIlceAdi" => $tesisIlceAdi,
-        "tesisTuruAdi" => $tesisTuruAdi,
+        "tesisIl" => $this->tesisIl,
+        "tesisAdi" => $this->tesisAdi,
+        "tesisKodu" => $this->tesisKodu,
+        "tesisSinifKodu" => $this->tesisSinifKodu,
+        "tesisTuru" => $this->tesisTuru,
+        "tesisIlAdi" => $this->tesisIlAdi,
+        "tesisIlceKodu" => $this->tesisIlceKodu,
+        "tesisIlceAdi" => $this->tesisIlceAdi,
+        "tesisTuruAdi" => $this->tesisTuruAdi,
         ];
     }
 }

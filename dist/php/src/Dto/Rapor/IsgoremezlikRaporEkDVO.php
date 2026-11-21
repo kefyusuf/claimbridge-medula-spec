@@ -71,20 +71,20 @@ final class IsgoremezlikRaporEkDVO
     public function toArray(): array
     {
         return [
-        "aciklama" => $aciklama,
-        "bitisTarihi" => $bitisTarihi,
-        "durum" => $durum !== null ? $durum->value : null,
-        "duzenlemeTuru" => $duzenlemeTuru !== null ? $duzenlemeTuru->value : null,
-        "hastaYatisVarMi" => $hastaYatisVarMi !== null ? $hastaYatisVarMi->value : null,
-        "kontrolMu" => $kontrolMu !== null ? $kontrolMu->value : null,
-        "kontrolTarihi" => $kontrolTarihi,
-        "protokolNo" => $protokolNo,
-        "protokolTarihi" => $protokolTarihi,
-        "yatislar" => $yatislar,
-        "raporBilgisiDVO" => $raporBilgisiDVO,
-        "doktorlar" => $doktorlar,
-        "tanilar" => $tanilar,
-        "kullaniciTesisKodu" => $kullaniciTesisKodu,
+        "aciklama" => $this->aciklama,
+        "bitisTarihi" => $this->bitisTarihi,
+        "durum" => $this->durum !== null ? $this->durum->value : null,
+        "duzenlemeTuru" => $this->duzenlemeTuru !== null ? $this->duzenlemeTuru->value : null,
+        "hastaYatisVarMi" => $this->hastaYatisVarMi !== null ? $this->hastaYatisVarMi->value : null,
+        "kontrolMu" => $this->kontrolMu !== null ? $this->kontrolMu->value : null,
+        "kontrolTarihi" => $this->kontrolTarihi,
+        "protokolNo" => $this->protokolNo,
+        "protokolTarihi" => $this->protokolTarihi,
+        "yatislar" => $this->yatislar,
+        "raporBilgisiDVO" => $this->raporBilgisiDVO,
+        "doktorlar" => $this->doktorlar,
+        "tanilar" => $this->tanilar,
+        "kullaniciTesisKodu" => $this->kullaniciTesisKodu,
         ];
     }
 }

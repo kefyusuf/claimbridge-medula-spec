@@ -35,9 +35,9 @@ final class SaglikTesisiAraCevapDVO
     public function toArray(): array
     {
         return [
-        "sonucKodu" => $sonucKodu,
-        "sonucMesaji" => $sonucMesaji,
-        "tesisler" => $tesisler,
+        "sonucKodu" => $this->sonucKodu,
+        "sonucMesaji" => $this->sonucMesaji,
+        "tesisler" => $this->tesisler,
         ];
     }
 }

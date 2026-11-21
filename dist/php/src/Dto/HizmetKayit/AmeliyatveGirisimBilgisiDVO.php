@@ -70,20 +70,20 @@ final class AmeliyatveGirisimBilgisiDVO
     public function toArray(): array
     {
         return [
-        "aciklama" => $aciklama,
-        "adet" => $adet,
-        "ayniFarkliKesi" => $ayniFarkliKesi !== null ? $ayniFarkliKesi->value : null,
-        "bransKodu" => $bransKodu,
-        "drTescilNo" => $drTescilNo,
-        "hizmetSunucuRefNo" => $hizmetSunucuRefNo,
-        "islemSiraNo" => $islemSiraNo,
-        "islemTarihi" => $islemTarihi,
-        "sagSol" => $sagSol,
-        "sutKodu" => $sutKodu,
-        "euroscore" => $euroscore !== null ? $euroscore->value : null,
-        "ozelDurum" => $ozelDurum,
-        "cokluOzelDurum" => $cokluOzelDurum,
-        "raporTakipNo" => $raporTakipNo,
+        "aciklama" => $this->aciklama,
+        "adet" => $this->adet,
+        "ayniFarkliKesi" => $this->ayniFarkliKesi !== null ? $this->ayniFarkliKesi->value : null,
+        "bransKodu" => $this->bransKodu,
+        "drTescilNo" => $this->drTescilNo,
+        "hizmetSunucuRefNo" => $this->hizmetSunucuRefNo,
+        "islemSiraNo" => $this->islemSiraNo,
+        "islemTarihi" => $this->islemTarihi,
+        "sagSol" => $this->sagSol,
+        "sutKodu" => $this->sutKodu,
+        "euroscore" => $this->euroscore !== null ? $this->euroscore->value : null,
+        "ozelDurum" => $this->ozelDurum,
+        "cokluOzelDurum" => $this->cokluOzelDurum,
+        "raporTakipNo" => $this->raporTakipNo,
         ];
     }
 }

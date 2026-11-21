@@ -50,14 +50,14 @@ final class KonsultasyonBilgisiDVO
     public function toArray(): array
     {
         return [
-        "bransKodu" => $bransKodu,
-        "drTescilNo" => $drTescilNo,
-        "sutKodu" => $sutKodu,
-        "hizmetSunucuRefNo" => $hizmetSunucuRefNo,
-        "islemSiraNo" => $islemSiraNo,
-        "islemTarihi" => $islemTarihi,
-        "ozelDurum" => $ozelDurum,
-        "cokluOzelDurum" => $cokluOzelDurum,
+        "bransKodu" => $this->bransKodu,
+        "drTescilNo" => $this->drTescilNo,
+        "sutKodu" => $this->sutKodu,
+        "hizmetSunucuRefNo" => $this->hizmetSunucuRefNo,
+        "islemSiraNo" => $this->islemSiraNo,
+        "islemTarihi" => $this->islemTarihi,
+        "ozelDurum" => $this->ozelDurum,
+        "cokluOzelDurum" => $this->cokluOzelDurum,
         ];
     }
 }

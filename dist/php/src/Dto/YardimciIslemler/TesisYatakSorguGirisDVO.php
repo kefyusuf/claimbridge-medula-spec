@@ -32,8 +32,8 @@ final class TesisYatakSorguGirisDVO
     public function toArray(): array
     {
         return [
-        "saglikTesisKodu" => $saglikTesisKodu,
-        "tarih" => $tarih,
+        "saglikTesisKodu" => $this->saglikTesisKodu,
+        "tarih" => $this->tarih,
         ];
     }
 }

@@ -35,9 +35,9 @@ final class RaporOkuRaporTakipNodanDVO
     public function toArray(): array
     {
         return [
-        "raporTakipNo" => $raporTakipNo,
-        "kullaniciTesisKodu" => $kullaniciTesisKodu,
-        "raporSiraNo" => $raporSiraNo,
+        "raporTakipNo" => $this->raporTakipNo,
+        "kullaniciTesisKodu" => $this->kullaniciTesisKodu,
+        "raporSiraNo" => $this->raporSiraNo,
         ];
     }
 }
