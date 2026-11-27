@@ -7,6 +7,14 @@ values:
       The operation completed successfully. Documented as a String of
       length 4 in every response table (Tablo 4.1.1.b, 4.1.2.b, 4.1.3.b,
       4.2.1.b, 4.2.3.b, 4.3.1.b, 4.3.2.b, 4.3.3.b).
+  - code: "9000"
+    label: Uyari Mesaji ile Basarili
+    description: >-
+      NOT an error: the operation completed successfully and sonucMesaji
+      carries a warning that must be shown to the user (guide s.103).
+      Documented verbatim for under-18 provision requests (s.143): the
+      provision succeeds and takipNo is still returned; the message must
+      be displayed as a warning and the patient directed as stated.
 sourceRefs:
   - id: medula-hastane-guide-3-1-1-2026-10-19
     sourceType: official-guide
@@ -21,5 +29,35 @@ sourceRefs:
       s.167-168), not result codes — they moved to the ekds-yontem-gerekce
       enum. The guide provides no global result-code catalog; error codes
       surface per response in Medula and are cataloged as they are
-      observed.
+      observed. Group 50: the guide's own changed-sections history
+      documents one more result code beyond 0000 — 9000 is a
+      success-with-warning code, not an error (s.103), with the under-18
+      provision branch carrying the verbatim warning message (s.143).
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: "3.1.1"
+    fetchedAt: "2026-11-15"
+    page: 103
+    section: Changed-sections history (v3.1.1 note)
+    confidence: extracted
+    notes: >-
+      Guide verbatim: "sonucKodu alanında eğer 9000 geliyorsa bu mesaj
+      hata mesajı değil, HBYS sistemin üzerinden kullanıcılara
+      gösterilmesi gereken uyarı mesajı anlamına gelmektedir. 9000 sonuç
+      kodu geldiği durumda işleminiz başarı ile gerçekleştirilmiş
+      demektir."
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: "3.1.1"
+    fetchedAt: "2026-11-15"
+    page: 143
+    section: Changed-sections history (v3.0.1 note)
+    confidence: extracted
+    notes: >-
+      Guide verbatim (under-18 branch): "hata kodu olarak 9000 ve uyarı
+      mesajı olarak da 'Provizyon sorgulamasını yaptığınız çocuğun ana
+      yada babasına ait TC kimlik numarası adı, soyadı, ve ikametgah
+      adresi bilgileri ile GSS tescili için mahalinizdeki SGK İl/Merkez
+      Müdürlüğüne başvurması için yönlendiriniz!' ... 9000 hata kodu hata
+      olarak değerlendirilmemelidir."
 status: reviewed

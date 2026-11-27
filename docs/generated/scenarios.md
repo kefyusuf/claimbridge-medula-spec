@@ -67,6 +67,19 @@
 | Status | draft |
 | Source refs | sandbox-design-v0.1 |
 
+## An under-18 provision succeeds with a mandatory warning (9000) (`provizyon-under18-warning`)
+
+| Field | Value |
+| --- | --- |
+| Method | `medula.hastane.hasta-kabul.hasta-kabul` |
+| Expected sonucKodu | `9000` |
+| Expected sonucMesaji | Provizyon sorgulamasını yaptığınız çocuğun ana yada babasına ait TC kimlik numarası adı, soyadı, ve ikametgah adresi bilgileri ile GSS tescili için mahalinizdeki SGK İl/Merkez Müdürlüğüne başvurması için yönlendiriniz! |
+| Deterministic |  |
+| HTTP status |  |
+| Latency (ms) |  |
+| Status | draft |
+| Source refs | medula-hastane-guide-3-1-1-2026-10-19, sandbox-design-v0.1 |
+
 ## Simulated service latency and timeout (`service-timeout`)
 
 | Field | Value |
