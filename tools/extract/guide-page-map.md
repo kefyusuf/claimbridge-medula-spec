@@ -93,8 +93,9 @@ roadmap).
 | 4.9.1.a-b ImzaliRaporGiris/CevapDVO | 330 | G45c-b rapor-kaydet |
 | 4.9.1.c-j Maluliyet/Engellilik/TibbiGereklilik chains | 330-336 | G45c-b composites |
 | 4.9.2-4.9.12 workflow methods | 336-349 | G45c-a imzali-rapor service |
+| G49 scenario/rules | 286, 323, 326 | takip-ara-window-limit + taahhut annex-7 restriction / ilçe–il uyuşmazlığı rule files (SANDBOX_4001/4002) |
 
-**Guide method-catalogue status as of v0.6.0: all main sections (§4.1-4.6
+**Guide method-catalogue status as of v0.9.0: all main sections (§4.1-4.6
 plus Takip Formu / Taahhüt / Ortodonti / E-İmzalı Rapor) are FULLY
 EXTRACTED.**
 

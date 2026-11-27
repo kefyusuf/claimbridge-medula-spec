@@ -1675,6 +1675,15 @@ No real patient/credential data exists.
 2. Add Yardimci Islemler service group.
 3. Add more enums.
 4. Add richer scenario definitions.
+   <!-- G49 + RELEASE (2026-11-27): richer scenarios LANDED —
+        taahhut-dis-annex7-restriction (s.326, SANDBOX_4001) +
+        takip-ara-window-limit (s.286, SANDBOX_4002); taahhut-rules.yml
+        (annex-7 restriction + ilçe–il uyuşmazlığı, s.323) +
+        yardimci-rules.yml (window limit); rule schema gained the
+        taahhut-rule/yardimci-rule types. v0.9.0 RELEASED. Registry:
+        9 services, 73 methods, 212 DVOs, 81 enums, 7 rule files,
+        8 scenarios, 336/336 tests (59 suites). -->
+5. Add codegen prototype for TypeScript types.
 5. Add codegen prototype for TypeScript types.
 
 ### v0.4

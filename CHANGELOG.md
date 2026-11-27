@@ -6,7 +6,21 @@ Format: [Keep a Changelog](https://keepachangelog.com); versioning: SemVer
 
 ## [Unreleased]
 
-_Nothing yet — v0.8.0 scope is complete._
+_Nothing yet — v0.9.0 scope is complete._
+
+## [0.9.0] — 2026-11-27
+
+Ninth release: **new-group scenarios and rules** (the v0.9 roadmap item).
+Two guide-verified scenarios for the newer groups join the registry: the
+dental-commitment annex-7 restriction (`dis-taahhut-kaydet`, guide s.326,
+verbatim: only SUT ek-7 prosthesis codes may be committed — sandbox code
+`SANDBOX_4001`) and the tracking-search one-month window limit
+(`takip-ara`, guide s.286, verbatim: the start/end date range may not
+exceed one month — sandbox code `SANDBOX_4002`). Two new rule files
+(`taahhut-rules.yml`, `yardimci-rules.yml`) add three `taahhut-rule` /
+`yardimci-rule` assertions including the district–province mismatch rule
+(guide s.323), and the rule schema's `type` enum gained the two new rule
+types. Scenario count 6 → 8, rule count 5 → 7.
 
 ## [0.8.0] — 2026-11-21
 
