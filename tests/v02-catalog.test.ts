@@ -55,13 +55,27 @@ describe("v0.2 catalog (Group 12)", () => {
     ]);
   });
 
-  it("registers the istisnai-hal enum with the nine guide codes (s.157-158)", () => {
+  it("registers the istisnai-hal enum with the nine numeric and four letter guide codes (s.157-158)", () => {
     const e = reg.enums.find((x) => x.data["id"] === "istisnai-hal");
     expect(e, "istisnai-hal must exist").toBeTruthy();
     const codes = (e?.data["values"] as Array<{ code: string }>).map(
       (v) => v.code,
     );
-    expect(codes).toEqual(["1", "2", "3", "4", "5", "6", "7", "8", "9"]);
+    expect(codes).toEqual([
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "I",
+      "M",
+      "B",
+      "V",
+    ]);
     expect(e?.data["status"]).toBe("reviewed");
     const refs = JSON.stringify(e?.data["sourceRefs"]);
     expect(refs).toContain('"page":157');

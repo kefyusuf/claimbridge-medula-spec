@@ -6,7 +6,20 @@ Format: [Keep a Changelog](https://keepachangelog.com); versioning: SemVer
 
 ## [Unreleased]
 
-_Nothing yet — v0.10.0 scope is complete._
+_Nothing yet — v0.11.0 scope is complete._
+
+## [0.11.0] — 2026-11-28
+
+Eleventh release: **istisnaiHal / devredilenKurum code-list visual pass**
+(the last "not yet extracted" code-list item, guide pages 154-158). The
+verbatim guide rows resolve the earlier column-mapping ambiguity: the
+**letter codes I/M/B/V belong to the istisnaiHal list** (s.158: I İş
+kazası, M Meslek Hastalığı, B Madde Bağımlılığı, V Acil Hal for adli-vaka
+sourced applications) — the prior column-flow inference had misattributed
+them to devredilenKurum. `istisnai-hal` now carries 13 values (1-9 plus
+I/M/B/V) and `devredilen-kurum` carries the numeric-only 31-value list
+(1…149, s.154-156). The generated PHP enums reflect the same correction.
+Registry counts unchanged: 81 enums, 212 DVOs, 9 scenarios.
 
 ## [0.10.0] — 2026-11-27
 

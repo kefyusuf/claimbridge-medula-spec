@@ -20,4 +20,8 @@ enum IstisnaiHal: string
     case Code_18YasAltiCocuklar = "7"; // 18 yas alti cocuklar
     case TibbenBaskasininBakiminaMuhtacKisiler = "8"; // Tibben baskasinin bakimina muhtac kisiler
     case BKKNaGoreBorclular = "9"; // BKK na gore Borclular
+    case IsKazasi = "I"; // Is kazasi
+    case MeslekHastaligi = "M"; // Meslek Hastaligi
+    case MaddeBagimliligi = "B"; // Madde Bagimliligi
+    case AcilHalAdliVakaKaynakliBasvurular = "V"; // Acil Hal (Adli Vaka kaynakli basvurular)
 }

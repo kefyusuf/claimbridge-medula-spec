@@ -95,15 +95,14 @@ roadmap).
 | 4.9.2-4.9.12 workflow methods | 336-349 | G45c-a imzali-rapor service |
 | G49 scenario/rules | 286, 323, 326 | takip-ara-window-limit + taahhut annex-7 restriction / ilçe–il uyuşmazlığı rule files (SANDBOX_4001/4002) |
 | G50 result-code catalog resolution | 103, 143, 165-168 | RESOLVED: the guide has no per-method error catalog — every response table states only "0000 = success, anything else = error, reason in sonucMesaji" (s.165/168); the one documented extra code is 9000 = success-with-warning, NOT an error (s.103), with the under-18 provision branch carrying a verbatim warning message (s.143) → sonuc-kodu enum values 0000 + 9000, scenario provizyon-under18-warning |
+| G54 code-list visual pass | 154-158 | RESOLVED: the s.154-156 devredilenKurum list is numeric-only (31 codes, 1…149); the s.158 letter rows I/M/B/V close the istisnaiHal list — the earlier column-flow inference had misattributed the letter codes to devredilenKurum. istisnai-hal now 13 values (1-9 + I/M/B/V), devredilen-kurum 31 values |
 
-**Guide method-catalogue status as of v0.10.0: all main sections (§4.1-4.6
+**Guide method-catalogue status as of v0.11.0: all main sections (§4.1-4.6
 plus Takip Formu / Taahhüt / Ortodonti / E-İmzalı Rapor) are FULLY
 EXTRACTED.**
 
 ## Not yet extracted
 
-- istisnaiHal and devredilenKurum code lists (column mapping ambiguity in
-  the text extraction; needs a visual pass of pages 154-158).
 - Nested composites (Tablo 4.2.1.c-l, 4.3.1.c-e, 4.3.3.c) — v0.3 scope.
 - New HastaKabul methods: ekds*, SevkBildir, HastaCikis*, KemikIligi*,
   HastaKabulKimlikDogrulama (disabled), UTS kesinleştirme.
