@@ -325,6 +325,8 @@ const EXPECTED_RULE_FILES = [
   "rules/invoice-rules.yml",
   "rules/required-fields.yml",
   "rules/state-transition-rules.yml",
+  "rules/taahhut-rules.yml",
+  "rules/yardimci-rules.yml",
 ];
 
 const MIN_FIELDS: Record<string, string[]> = {
@@ -451,7 +453,7 @@ describe("registry-data (Group 3)", () => {
     );
   });
 
-  it("has exactly the 5 rule files from PRD section 11", () => {
+  it("has exactly the 7 rule files from PRD section 11", () => {
     expect(rules.map((r) => r.file).sort()).toEqual(EXPECTED_RULE_FILES);
   });
 

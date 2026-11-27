@@ -42,6 +42,8 @@ const EXPECTED_SCENARIO_IDS = [
   "invoice-without-service",
   "missing-required-field",
   "service-timeout",
+  "taahhut-dis-annex7-restriction",
+  "takip-ara-window-limit",
 ];
 
 const EXAMPLE_DOMAINS = ["fatura-kayit", "hasta-kabul", "hizmet-kayit"];
@@ -108,7 +110,7 @@ describe("flows (Group 4)", () => {
     ).toEqual(EXPECTED_WORKFLOW_FILES);
   });
 
-  it("has exactly the 6 scenarios from PRD section 15", () => {
+  it("has exactly the 8 scenarios from PRD section 15", () => {
     expect(scenarios.map((s) => s.data.id).sort()).toEqual(
       EXPECTED_SCENARIO_IDS,
     );

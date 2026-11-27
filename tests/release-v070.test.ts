@@ -4,17 +4,17 @@ import { describe, expect, it } from "vitest";
 
 const root = resolve(import.meta.dirname, "..");
 
-describe("release v0.7.0 (Group 47, superseded by v0.8.0)", () => {
-  it("keeps the pre-0.8.0 version history coherent (release superseded)", () => {
+describe("release v0.7.0 (Group 47, superseded by v0.9.0)", () => {
+  it("keeps the pre-0.9.0 version history coherent (release superseded)", () => {
     const specVersion = readFileSync(
       resolve(root, "SPEC_VERSION"),
       "utf8",
     ).trim();
-    expect(specVersion).toBe("0.8.0");
+    expect(specVersion).toBe("0.9.0");
     const pkg = JSON.parse(
       readFileSync(resolve(root, "package.json"), "utf8"),
     ) as { version: string };
-    expect(pkg.version).toBe("0.8.0");
+    expect(pkg.version).toBe("0.9.0");
   });
 
   it("records the 0.7.0 release in the changelog", () => {
@@ -30,7 +30,7 @@ describe("release v0.7.0 (Group 47, superseded by v0.8.0)", () => {
         "utf8",
       ),
     ) as { specVersion: string };
-    expect(bundle.specVersion).toBe("0.8.0");
+    expect(bundle.specVersion).toBe("0.9.0");
   });
 
   it("ships the generated PHP DTO package in the distribution", () => {
