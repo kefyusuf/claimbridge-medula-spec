@@ -80,3 +80,29 @@
 | Status | draft |
 | Source refs | sandbox-design-v0.1 |
 
+## A dental commitment with a SUT code outside annex 7 is rejected (`taahhut-dis-annex7-restriction`)
+
+| Field | Value |
+| --- | --- |
+| Method | `medula.hastane.taahhut.dis-taahhut-kaydet` |
+| Expected sonucKodu | `SANDBOX_4001` |
+| Expected sonucMesaji | Taahhut girişi yalnızca SUT ek-7 protez kodları ile yapılabilir. |
+| Deterministic |  |
+| HTTP status |  |
+| Latency (ms) |  |
+| Status | draft |
+| Source refs | medula-hastane-guide-3-1-1-2026-10-19, sandbox-design-v0.1 |
+
+## A tracking search window longer than one month is rejected (`takip-ara-window-limit`)
+
+| Field | Value |
+| --- | --- |
+| Method | `medula.hastane.yardimci-islemler.takip-ara` |
+| Expected sonucKodu | `SANDBOX_4002` |
+| Expected sonucMesaji | Arama araligi bir aydan fazla olamaz. |
+| Deterministic |  |
+| HTTP status |  |
+| Latency (ms) |  |
+| Status | draft |
+| Source refs | medula-hastane-guide-3-1-1-2026-10-19, sandbox-design-v0.1 |
+
