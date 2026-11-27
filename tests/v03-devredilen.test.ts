@@ -13,14 +13,14 @@ beforeAll(() => {
 });
 
 describe("v0.3 devredilen-kurum (Group 36)", () => {
-  it("registers the devredilen-kurum enum with the 34 guide codes (s.154-158)", () => {
+  it("registers the devredilen-kurum enum with the 31 numeric guide codes (s.154-156)", () => {
     const e = reg.enums.find((x) => x.data["id"] === "devredilen-kurum");
     expect(e, "devredilen-kurum must exist").toBeTruthy();
     expect(e?.data["status"]).toBe("reviewed");
     const codes = (e?.data["values"] as Array<{ code: string }>).map(
       (v) => v.code,
     );
-    expect(codes).toHaveLength(35);
+    expect(codes).toHaveLength(31);
     for (const c of [
       "1",
       "2",
@@ -53,17 +53,21 @@ describe("v0.3 devredilen-kurum (Group 36)", () => {
       "147",
       "148",
       "149",
-      "I",
-      "M",
-      "B",
-      "V",
     ]) {
       expect(codes, `missing devredilenKurum code ${c}`).toContain(c);
+    }
+    // The I/M/B/V letter rows belong to istisnaiHal (s.158) — corrected
+    // in Group 54; they must not live in this list.
+    for (const c of ["I", "M", "B", "V"]) {
+      expect(
+        codes,
+        `letter code ${c} must stay out of devredilenKurum`,
+      ).not.toContain(c);
     }
     const refs = JSON.stringify(e?.data["sourceRefs"]);
     expect(refs).toContain('"page":155');
     expect(refs).toContain('"page":156');
-    expect(refs).toContain('"page":158');
+    expect(refs).not.toContain('"page":158');
   });
 
   it("keeps the guide-anchored spot checks", () => {
@@ -79,8 +83,6 @@ describe("v0.3 devredilen-kurum (Group 36)", () => {
     expect(byCode.get("100")).toBe(
       "8105 CK Kapsaminda Ozel Duzenlemeye Tabi Kisiler",
     );
-    expect(byCode.get("I")).toBe("Is kazasi");
-    expect(byCode.get("V")).toBe("Acil Hal");
   });
 
   it("binds ProvizyonGirisDVO devredilenKurum to the enum", () => {
