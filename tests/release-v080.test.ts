@@ -4,23 +4,17 @@ import { describe, expect, it } from "vitest";
 
 const root = resolve(import.meta.dirname, "..");
 
-describe("release v0.8.0 (Group 48)", () => {
-  it("bumps SPEC_VERSION and package.json to 0.8.0", () => {
+describe("release v0.8.0 (Group 48, superseded by v0.9.0)", () => {
+  it("keeps the pre-0.9.0 version history coherent (release superseded)", () => {
     const specVersion = readFileSync(
       resolve(root, "SPEC_VERSION"),
       "utf8",
     ).trim();
-    expect(specVersion).toBe("0.8.0");
+    expect(specVersion).toBe("0.9.0");
     const pkg = JSON.parse(
       readFileSync(resolve(root, "package.json"), "utf8"),
     ) as { version: string };
-    expect(pkg.version).toBe("0.8.0");
-  });
-
-  it("bumps CITATION.cff to 0.8.0", () => {
-    const citation = readFileSync(resolve(root, "CITATION.cff"), "utf8");
-    expect(citation).toContain("version: 0.8.0");
-    expect(citation).toContain('date-released: "2026-11-21"');
+    expect(pkg.version).toBe("0.9.0");
   });
 
   it("records the 0.8.0 release in the changelog", () => {
@@ -51,7 +45,7 @@ describe("release v0.8.0 (Group 48)", () => {
         "utf8",
       ),
     ) as { specVersion: string; dvos: unknown[]; enums: unknown[] };
-    expect(bundle.specVersion).toBe("0.8.0");
+    expect(bundle.specVersion).toBe("0.9.0");
     expect(bundle.dvos).toHaveLength(212);
     expect(bundle.enums).toHaveLength(81);
   });

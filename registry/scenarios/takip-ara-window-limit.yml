@@ -1,0 +1,33 @@
+id: takip-ara-window-limit
+title: A tracking search window longer than one month is rejected
+method: medula.hastane.yardimci-islemler.takip-ara
+given:
+  facility: SYNTHETIC_FACILITY_001
+request:
+  saglikTesisKodu: 1
+  hastaTCK: "10000000001"
+  baslangicTarihi: "01.01.2026"
+  bitisTarihi: "01.03.2026"
+  sevkDurumu: "E"
+  ktsHbysKodu: SYNTHETIC_HBYS_001
+expected:
+  result:
+    sonucKodu: SANDBOX_4002
+    sonucMesaji: Arama araligi bir aydan fazla olamaz.
+  stateChanges:
+    note: The one-month window limit (s.286) rejects the search; no state changes.
+sandbox:
+  deterministic: true
+  httpStatus: 200
+  latencyMs: null
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: "3.1.1"
+    page: 286
+    confidence: extracted
+    notes: The window limit is guide-verbatim ("başlangış ve bitiş tarih aralığı 1 ay dan fazla olamaz"); SANDBOX_4002 is a sandbox-only code.
+  - id: sandbox-design-v0.1
+    sourceType: sandbox-design
+    confidence: unknown
+status: draft

@@ -1,0 +1,44 @@
+id: taahhut-dis-annex7-restriction
+title: A dental commitment with a SUT code outside annex 7 is rejected
+method: medula.hastane.taahhut.dis-taahhut-kaydet
+given:
+  facility: SYNTHETIC_FACILITY_001
+  takipNo: SYNTHETIC_TAKIPNO_000001
+request:
+  saglikTesisKodu: 1
+  takipNo: SYNTHETIC_TAKIPNO_000001
+  taahhut:
+    hastaTCKimlikNo: "10000000001"
+    adressIlPlaka: 34
+    adressIlce: Kadikoy
+    adressPostaKodu: "34710"
+    adressCaddeSokak: Bagdat Caddesi
+    adressDisKapiNo: "12"
+    adressIcKapiNo: "3"
+    adressTelefon: "5320000000"
+    taahhutAlanAd: Mehmet
+    taahhutAlanSoyad: Yilmaz
+  taahhutDiss:
+    - sutKodu: "404060"
+      disNo: 11
+expected:
+  result:
+    sonucKodu: SANDBOX_4001
+    sonucMesaji: Taahhut girişi yalnızca SUT ek-7 protez kodları ile yapılabilir.
+  stateChanges:
+    note: The annex-7 restriction (s.326) rejects the commit; no taahhut state is created.
+sandbox:
+  deterministic: true
+  httpStatus: 200
+  latencyMs: null
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: "3.1.1"
+    page: 326
+    confidence: extracted
+    notes: The restriction is guide-verbatim; SANDBOX_4001 is a sandbox-only code (the guide states the restriction without an error code).
+  - id: sandbox-design-v0.1
+    sourceType: sandbox-design
+    confidence: unknown
+status: draft
