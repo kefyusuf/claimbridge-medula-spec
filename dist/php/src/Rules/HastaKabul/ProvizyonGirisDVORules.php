@@ -26,7 +26,7 @@ final class ProvizyonGirisDVORules
         "sigortaliTuru" => ['required', 'string', 'in:1,2,3,4'],
         "bransKodu" => ['required', 'string', 'max:4'],
         // takipNo is filled (linked-takip request)
-        "devredilenKurum" => ['required', 'string', 'in:1,2,3,4,5,6,7,10,12,14,15,17,18,19,20,21,22,23,25,26,27,28,31,32,97,98,99,100,147,148,149,I,M,B,V'],
+        "devredilenKurum" => ['required', 'string', 'in:1,2,3,4,5,6,7,10,12,14,15,17,18,19,20,21,22,23,25,26,27,28,31,32,97,98,99,100,147,148,149'],
         "provizyonTarihi" => ['required', 'date', 'max:10'],
         "provizyonTipi" => ['required', 'string', 'in:N,I,A,T,V,M,K,C,H,R,L,G,U,D,E,S'],
         "tedaviTuru" => ['required', 'string', 'in:A,Y,G'],

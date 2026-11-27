@@ -28,6 +28,18 @@ values:
   - code: "9"
     label: BKK na gore Borclular
     description: Debtors under BKK.
+  - code: "I"
+    label: Is kazasi
+    description: Occupational accident condition (letter code, s.158).
+  - code: "M"
+    label: Meslek Hastaligi
+    description: Occupational disease condition (letter code, s.158).
+  - code: "B"
+    label: Madde Bagimliligi
+    description: Substance dependence condition (letter code, s.158).
+  - code: "V"
+    label: Acil Hal (Adli Vaka kaynakli basvurular)
+    description: Emergency condition for adli-vaka sourced applications (letter code, s.158).
 sourceRefs:
   - id: medula-hastane-guide-3-1-1-2026-10-19
     sourceType: official-guide
@@ -41,10 +53,12 @@ sourceRefs:
     guideVersion: "3.1.1"
     fetchedAt: "2026-11-15"
     page: 158
-    section: ProvizyonGirisDVO istisnaiHal codes 5-9
+    section: ProvizyonGirisDVO istisnaiHal codes 5-9 and letter codes I/M/B/V
     confidence: extracted
     notes: >-
-      Codes 5-9 continue on s.158 before the devredilenKurum letter codes
-      (I/M/B/V). Column-flow inference noted; a visual pass of pages
-      157-158 would remove any residual doubt.
+      Codes 5-9 continue on s.158 and the list closes with the four letter
+      codes I/M/B/V. Group 54 resolved the earlier column-flow doubt by
+      reading the s.158 rows verbatim: the letter codes belong to
+      istisnaiHal, not to devredilenKurum (they had been misattributed
+      there).
 status: reviewed

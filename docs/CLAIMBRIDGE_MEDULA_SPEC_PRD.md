@@ -1693,7 +1693,15 @@ No real patient/credential data exists.
         branch. v0.10.0 RELEASED. Registry: 9 services, 73 methods,
         212 DVOs, 81 enums, 7 rule files, 9 scenarios, 339/339 tests
         (61 suites). -->
-5. Add codegen prototype for TypeScript types.
+   <!-- G54 + RELEASE (2026-11-28): istisnaiHal/devredilenKurum code-list
+        visual pass RESOLVED — the s.158 letter rows I/M/B/V close the
+        istisnaiHal list (I İş kazası, M Meslek Hastalığı, B Madde
+        Bağımlılığı, V Acil Hal for adli-vaka sourced applications); the
+        earlier column-flow inference had misattributed them to
+        devredilenKurum. istisnai-hal now 13 values (1-9 + I/M/B/V),
+        devredilen-kurum 31 numeric values (s.154-156). v0.11.0 RELEASED.
+        Registry: 9 services, 73 methods, 212 DVOs, 81 enums, 7 rule
+        files, 9 scenarios, 346/346 tests (63 suites). -->
 5. Add codegen prototype for TypeScript types.
 
 ### v0.4

@@ -42,8 +42,4 @@ enum DevredilenKurum: string
     case Code_6015fMilliEgitimAkademisiAdayOgretmenleri = "147"; // 60/15f Milli Egitim Akademisi Aday Ogretmenleri
     case Code_6016fYTBKapsamindakiOgrenciler = "148"; // 60/16f YTB Kapsamindaki Ogrenciler
     case Code_60C2UluslararasiKoruma = "149"; // 60/c2 Uluslararasi Koruma
-    case IsKazasi = "I"; // Is kazasi
-    case MeslekHastaligi = "M"; // Meslek Hastaligi
-    case MaddeBagimliligi = "B"; // Madde Bagimliligi
-    case AcilHal_vV = "V"; // Acil Hal
 }
