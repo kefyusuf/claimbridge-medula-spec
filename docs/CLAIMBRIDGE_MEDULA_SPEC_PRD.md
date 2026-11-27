@@ -1683,6 +1683,16 @@ No real patient/credential data exists.
         taahhut-rule/yardimci-rule types. v0.9.0 RELEASED. Registry:
         9 services, 73 methods, 212 DVOs, 81 enums, 7 rule files,
         8 scenarios, 336/336 tests (59 suites). -->
+   <!-- G50 + RELEASE (2026-11-27): result-code catalog RESOLVED — the
+        guide has NO per-method error catalog (every response table states
+        only 0000 = success, else error with reason in sonucMesaji,
+        s.165/168); the one documented extra code is 9000 =
+        success-with-warning, NOT an error (s.103), with the under-18
+        provision branch carrying the verbatim warning (s.143). sonuc-kodu
+        enum now 0000 + 9000; scenario provizyon-under18-warning pins the
+        branch. v0.10.0 RELEASED. Registry: 9 services, 73 methods,
+        212 DVOs, 81 enums, 7 rule files, 9 scenarios, 339/339 tests
+        (61 suites). -->
 5. Add codegen prototype for TypeScript types.
 5. Add codegen prototype for TypeScript types.
 

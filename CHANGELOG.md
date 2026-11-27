@@ -6,7 +6,22 @@ Format: [Keep a Changelog](https://keepachangelog.com); versioning: SemVer
 
 ## [Unreleased]
 
-_Nothing yet — v0.9.0 scope is complete._
+_Nothing yet — v0.10.0 scope is complete._
+
+## [0.10.0] — 2026-11-27
+
+Tenth release: **result-code catalog resolution**. The guide's per-method
+error-catalog backlog item is resolved with a documented finding: the
+guide has no global or per-method error catalog — every response table
+states only "0000 = success, anything else = error, reason in
+sonucMesaji". The one documented code beyond 0000 is **9000 =
+success-with-warning, not an error** (guide s.103): the operation
+succeeds and sonucMesaji must be shown to the user as a warning. The
+under-18 provision branch carries the verbatim warning message (s.143).
+The `sonuc-kodu` enum now documents both guide-verified codes (0000,
+9000), and a new guide-verified scenario `provizyon-under18-warning`
+pins the branch: the provision still succeeds and creates takip state.
+Scenario count 8 → 9.
 
 ## [0.9.0] — 2026-11-27
 

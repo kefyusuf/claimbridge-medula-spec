@@ -1,0 +1,53 @@
+id: provizyon-under18-warning
+title: An under-18 provision succeeds with a mandatory warning (9000)
+method: medula.hastane.hasta-kabul.hasta-kabul
+given:
+  facility: SYNTHETIC_FACILITY_001
+request:
+  saglikTesisKodu: 1
+  hastaTCKimlikNo: SYNTHETIC_TC_000000001
+  provizyonTipi: N
+  tedaviTuru: A
+  takipTipi: N
+  bransKodu: 1
+  doktorTescilNo: SYNTHETIC_DOCTOR_001
+  ktsHbysKodu: SYNTHETIC_HBYS_001
+expected:
+  result:
+    sonucKodu: "9000"
+    sonucMesaji: >-
+      Provizyon sorgulamasını yaptığınız çocuğun ana yada babasına ait TC
+      kimlik numarası adı, soyadı, ve ikametgah adresi bilgileri ile GSS
+      tescili için mahalinizdeki SGK İl/Merkez Müdürlüğüne başvurması için
+      yönlendiriniz!
+  stateChanges:
+    creates:
+      - hastaBasvuruNo
+      - takipNo
+      - patientAdmission
+      - takip
+    note: >-
+      9000 is NOT an error (s.103): the provision succeeds and takipNo is
+      still returned; sonucMesaji must be displayed as a warning and the
+      patient directed as stated (s.143). The request models an under-18
+      provision — age is not representable with a synthetic TC, so the
+      branch is exercised via scenario replay.
+sandbox:
+  deterministic: true
+  httpStatus: 200
+  latencyMs: null
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: "3.1.1"
+    page: 143
+    confidence: extracted
+    notes: >-
+      The under-18 branch and its warning message are guide-verbatim
+      (s.143); the 9000 warning semantics are documented in the
+      changed-sections history (s.103). No error code is invented — 9000
+      is the guide's own code.
+  - id: sandbox-design-v0.1
+    sourceType: sandbox-design
+    confidence: unknown
+status: draft

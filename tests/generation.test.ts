@@ -33,7 +33,7 @@ describe("generation (Group 6)", () => {
     expect(bundle.enums).toHaveLength(81);
     expect(bundle.rules).toHaveLength(7);
     expect(bundle.workflows).toHaveLength(4);
-    expect(bundle.scenarios).toHaveLength(8);
+    expect(bundle.scenarios).toHaveLength(9);
   });
 
   it("reports PRD 18.1 counts and sha256 checksums", () => {
@@ -48,7 +48,7 @@ describe("generation (Group 6)", () => {
       enums: 81,
       rules: 7,
       workflows: 4,
-      scenarios: 8,
+      scenarios: 9,
     });
     for (const value of Object.values(manifest.checksums)) {
       expect(value).toMatch(/^sha256:[0-9a-f]{64}$/);

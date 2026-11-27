@@ -13,12 +13,12 @@ beforeAll(() => {
 });
 
 describe("v0.2 catalog (Group 12)", () => {
-  it("corrects sonuc-kodu to the success code only (EKDS codes misattributed in G9)", () => {
+  it("keeps sonuc-kodu to the guide-verified codes (0000 success; 9000 warning; EKDS codes stay out)", () => {
     const e = reg.enums.find((x) => x.data["id"] === "sonuc-kodu");
     const codes = (e?.data["values"] as Array<{ code: string }>).map(
       (v) => v.code,
     );
-    expect(codes).toEqual(["0000"]);
+    expect(codes).toEqual(["0000", "9000"]);
     expect(JSON.stringify(e?.data["sourceRefs"])).toContain(GUIDE_ID);
     expect(JSON.stringify(e?.data["sourceRefs"])).toContain("no global");
   });
