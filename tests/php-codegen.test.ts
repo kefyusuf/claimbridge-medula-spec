@@ -49,7 +49,7 @@ describe("php dto codegen (Group 47)", () => {
   });
 
   it("generates one readonly DTO class per registry DVO", () => {
-    expect(dvoFiles().length).toBe(212);
+    expect(dvoFiles().length).toBe(221);
     expect(dvoFiles()).toContain("HastaKabul/ProvizyonGirisDVO.php");
     expect(dvoFiles()).toContain("ImzaliRapor/MaluliyetRaporDVO.php");
     expect(dvoFiles()).toContain("YardimciIslemler/IlacListDVO.php");

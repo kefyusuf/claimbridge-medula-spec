@@ -99,6 +99,6 @@ describe("v0.3 devredilen-kurum (Group 36)", () => {
       readFileSync(resolve(root, "dist", "manifest.json"), "utf8"),
     ) as { counts: Record<string, number> };
     expect(manifest.counts.enums).toBe(81);
-    expect(manifest.counts.dvos).toBe(212);
+    expect(manifest.counts.dvos).toBe(221);
   });
 });
