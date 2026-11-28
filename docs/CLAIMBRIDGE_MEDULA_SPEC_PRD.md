@@ -1702,6 +1702,16 @@ No real patient/credential data exists.
         devredilen-kurum 31 numeric values (s.154-156). v0.11.0 RELEASED.
         Registry: 9 services, 73 methods, 212 DVOs, 81 enums, 7 rule
         files, 9 scenarios, 346/346 tests (63 suites). -->
+   <!-- G57 + RELEASE (2026-11-28): the final four guide §4.1 methods
+        LANDED — getYesilKartliSevkliHasta (4.1.12, s.176),
+        UpdateTedaviTuru (4.1.13, s.177), UpdateTakipTipi (4.1.14,
+        s.178), getMustehaklikKapsamKodu (4.1.15, s.179); 9 new DVOs
+        (YesilKartli×3, Degistir×4, Mustehaklik×2); the response tables'
+        hastaBasvuruNo "String 4" lengths annotated as a guide anomaly.
+        The stale page-map backlog row was mostly already extracted —
+        §4.1 is now COMPLETE at 22 methods. v0.12.0 RELEASED. Registry:
+        9 services, 77 methods, 221 DVOs, 81 enums, 7 rule files,
+        9 scenarios, 357/357 tests (65 suites). -->
 5. Add codegen prototype for TypeScript types.
 
 ### v0.4

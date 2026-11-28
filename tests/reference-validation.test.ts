@@ -106,7 +106,7 @@ describe("reference-validation (Group 2)", () => {
     ]);
   });
 
-  it("has exactly 73 method registry files in 9 domains", () => {
+  it("has exactly 77 method registry files in 9 domains", () => {
     expect(methods.map((m) => m.file).sort()).toEqual([
       "fatura-kayit/fatura-iptal.yml",
       "fatura-kayit/fatura-kayit.yml",
@@ -115,6 +115,8 @@ describe("reference-validation (Group 2)", () => {
       "hasta-kabul/basvuru-altindaki-takipleri-oku.yml",
       "hasta-kabul/ekds-belge-gereken-takip-sorgu.yml",
       "hasta-kabul/ekds-kisi-dogrulama-sorgu.yml",
+      "hasta-kabul/get-mustehaklik-kapsam-kodu.yml",
+      "hasta-kabul/get-yesil-kartli-sevkli-hasta.yml",
       "hasta-kabul/hasta-cikis-iptal.yml",
       "hasta-kabul/hasta-cikis-kayit.yml",
       "hasta-kabul/hasta-kabul-iptal.yml",
@@ -129,7 +131,9 @@ describe("reference-validation (Group 2)", () => {
       "hasta-kabul/kemik-iligi-tc-ile-sorgu.yml",
       "hasta-kabul/sevk-bildir.yml",
       "hasta-kabul/update-provizyon-tipi.yml",
+      "hasta-kabul/update-takip-tipi.yml",
       "hasta-kabul/update-tedavi-tipi.yml",
+      "hasta-kabul/update-tedavi-turu.yml",
       "hizmet-kayit/hizmet-kaydi-iptal.yml",
       "hizmet-kayit/hizmet-kaydi-oku.yml",
       "hizmet-kayit/hizmet-kayit.yml",

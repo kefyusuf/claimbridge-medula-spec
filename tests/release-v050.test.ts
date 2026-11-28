@@ -10,11 +10,11 @@ describe("release v0.5.0 (Group 44)", () => {
       resolve(root, "SPEC_VERSION"),
       "utf8",
     ).trim();
-    expect(specVersion).toBe("0.11.0");
+    expect(specVersion).toBe("0.12.0");
     const pkg = JSON.parse(
       readFileSync(resolve(root, "package.json"), "utf8"),
     ) as { version: string };
-    expect(pkg.version).toBe("0.11.0");
+    expect(pkg.version).toBe("0.12.0");
   });
 
   it("records the 0.5.0 release in the changelog", () => {
@@ -36,14 +36,14 @@ describe("release v0.5.0 (Group 44)", () => {
       dvos: Array<{ id: string }>;
       enums: Array<{ id: string }>;
     };
-    expect(bundle.specVersion).toBe("0.11.0");
+    expect(bundle.specVersion).toBe("0.12.0");
     expect(bundle.services.map((s) => s.id)).toContain("medula.hastane.rapor");
     const raporMethods = bundle.methods.filter((m) =>
       m.id.startsWith("medula.hastane.rapor."),
     );
     expect(raporMethods).toHaveLength(7);
     expect(raporMethods.every((m) => m.status === "reviewed")).toBe(true);
-    expect(bundle.dvos).toHaveLength(212);
+    expect(bundle.dvos).toHaveLength(221);
     expect(bundle.enums).toHaveLength(81);
   });
 });

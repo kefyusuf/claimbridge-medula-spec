@@ -4,17 +4,17 @@ import { describe, expect, it } from "vitest";
 
 const root = resolve(import.meta.dirname, "..");
 
-describe("release v0.8.0 (Group 48, superseded by v0.11.0)", () => {
+describe("release v0.8.0 (Group 48, superseded by v0.12.0)", () => {
   it("keeps the pre-0.9.0 version history coherent (release superseded)", () => {
     const specVersion = readFileSync(
       resolve(root, "SPEC_VERSION"),
       "utf8",
     ).trim();
-    expect(specVersion).toBe("0.11.0");
+    expect(specVersion).toBe("0.12.0");
     const pkg = JSON.parse(
       readFileSync(resolve(root, "package.json"), "utf8"),
     ) as { version: string };
-    expect(pkg.version).toBe("0.11.0");
+    expect(pkg.version).toBe("0.12.0");
   });
 
   it("records the 0.8.0 release in the changelog", () => {
@@ -34,7 +34,7 @@ describe("release v0.8.0 (Group 48, superseded by v0.11.0)", () => {
           .map((f) => `${d.name}/${f}`),
       );
     }
-    expect(files).toHaveLength(123);
+    expect(files).toHaveLength(127);
     expect(files).toContain("HastaKabul/ProvizyonGirisDVORules.php");
   });
 
@@ -45,8 +45,8 @@ describe("release v0.8.0 (Group 48, superseded by v0.11.0)", () => {
         "utf8",
       ),
     ) as { specVersion: string; dvos: unknown[]; enums: unknown[] };
-    expect(bundle.specVersion).toBe("0.11.0");
-    expect(bundle.dvos).toHaveLength(212);
+    expect(bundle.specVersion).toBe("0.12.0");
+    expect(bundle.dvos).toHaveLength(221);
     expect(bundle.enums).toHaveLength(81);
   });
 });

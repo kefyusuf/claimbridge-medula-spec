@@ -6,7 +6,21 @@ Format: [Keep a Changelog](https://keepachangelog.com); versioning: SemVer
 
 ## [Unreleased]
 
-_Nothing yet — v0.11.0 scope is complete._
+_Nothing yet — v0.12.0 scope is complete._
+
+## [0.12.0] — 2026-11-28
+
+Twelfth release: **the final four guide §4.1 methods**. The stale page-map
+backlog row ("New HastaKabul methods") was audited against the guide's
+own §4.1 catalogue and turned out to be mostly extracted already — the
+actual remaining four were `getYesilKartliSevkliHasta` (4.1.12, s.176),
+`UpdateTedaviTuru` (4.1.13, s.177), `UpdateTakipTipi` (4.1.14, s.178) and
+`getMustehaklikKapsamKodu` (4.1.15, s.179). Nine new DVOs
+(YesilKartli×3, Degistir×4, Mustehaklik×2); the response tables'
+`hastaBasvuruNo` "String 4" lengths are documented as a guide anomaly.
+§4.1 is now COMPLETE at 22 methods. Registry: 9 services, **77 methods,
+221 DVOs**, 81 enums; the generated PHP package carries 221 DTO classes
+and 127 rule classes (one per input DVO).
 
 ## [0.11.0] — 2026-11-28
 

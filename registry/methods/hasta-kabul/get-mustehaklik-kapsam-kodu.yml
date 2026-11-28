@@ -1,0 +1,33 @@
+id: medula.hastane.hasta-kabul.get-mustehaklik-kapsam-kodu
+service: medula.hastane.hasta-kabul
+names:
+  documentationHeading: GetMustehaklikKapsamKodu
+  operationName: GetMustehaklikKapsamKodu
+  aliases:
+    - getMustehaklikKapsamKodu
+contract:
+  inputDvo: MustehaklikGirisDVO
+  outputDvo: MustehaklikCevapDVO
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: "3.1.1"
+    fetchedAt: "2026-11-15"
+    page: 179
+    section: "4.1.15 getMustehaklikKapsamKodu Metodu"
+    confidence: extracted
+
+stateEffects:
+  creates: []
+  reads: []
+  updates: []
+  deletes: []
+  generates: []
+success:
+  resultCodeField: sonucKodu
+  successCode: "0000"
+  messageField: sonucMesaji
+sandbox:
+  supported: true
+  defaultScenario: null
+status: reviewed

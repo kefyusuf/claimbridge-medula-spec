@@ -28,7 +28,7 @@ describe("governance (Group 37)", () => {
     const text = readFileSync(p, "utf8");
     expect(text).toContain("cff-version:");
     expect(text).toContain("title:");
-    expect(text).toContain("version: 0.11.0");
+    expect(text).toContain("version: 0.12.0");
   });
 
   it("configures Dependabot for dependency and action updates", () => {
@@ -43,11 +43,11 @@ describe("governance (Group 37)", () => {
       resolve(root, "SPEC_VERSION"),
       "utf8",
     ).trim();
-    expect(specVersion).toBe("0.11.0");
+    expect(specVersion).toBe("0.12.0");
     const pkg = JSON.parse(
       readFileSync(resolve(root, "package.json"), "utf8"),
     ) as { version: string };
-    expect(pkg.version).toBe("0.11.0");
+    expect(pkg.version).toBe("0.12.0");
   });
 
   it("records the 0.3.0 release in the changelog", () => {

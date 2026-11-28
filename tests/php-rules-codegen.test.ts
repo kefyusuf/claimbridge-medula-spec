@@ -22,7 +22,7 @@ describe("php validation rules codegen (Group 48)", () => {
       (acc, d) => (d.isDirectory() ? acc + listRules(d.name).length : acc),
       0,
     );
-    expect(total).toBe(123);
+    expect(total).toBe(127);
   });
 
   it("generates the ProvizyonGirisDVO rules from guide data", () => {

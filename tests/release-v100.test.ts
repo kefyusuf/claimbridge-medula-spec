@@ -4,17 +4,17 @@ import { describe, expect, it } from "vitest";
 
 const root = resolve(import.meta.dirname, "..");
 
-describe("release v0.10.0 (Group 50, superseded by v0.11.0)", () => {
+describe("release v0.10.0 (Group 50, superseded by v0.12.0)", () => {
   it("keeps the pre-0.11.0 version history coherent (release superseded)", () => {
     const specVersion = readFileSync(
       resolve(root, "SPEC_VERSION"),
       "utf8",
     ).trim();
-    expect(specVersion).toBe("0.11.0");
+    expect(specVersion).toBe("0.12.0");
     const pkg = JSON.parse(
       readFileSync(resolve(root, "package.json"), "utf8"),
     ) as { version: string };
-    expect(pkg.version).toBe("0.11.0");
+    expect(pkg.version).toBe("0.12.0");
   });
 
   it("records the 0.10.0 release in the changelog", () => {
@@ -35,9 +35,9 @@ describe("release v0.10.0 (Group 50, superseded by v0.11.0)", () => {
       dvos: unknown[];
       enums: unknown[];
     };
-    expect(bundle.specVersion).toBe("0.11.0");
+    expect(bundle.specVersion).toBe("0.12.0");
     expect(bundle.scenarios).toHaveLength(9);
-    expect(bundle.dvos).toHaveLength(212);
+    expect(bundle.dvos).toHaveLength(221);
     expect(bundle.enums).toHaveLength(81);
   });
 

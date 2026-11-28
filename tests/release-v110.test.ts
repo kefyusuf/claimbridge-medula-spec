@@ -4,23 +4,17 @@ import { describe, expect, it } from "vitest";
 
 const root = resolve(import.meta.dirname, "..");
 
-describe("release v0.11.0 (Group 54)", () => {
-  it("bumps SPEC_VERSION and package.json to 0.11.0", () => {
+describe("release v0.11.0 (Group 54, superseded by v0.12.0)", () => {
+  it("keeps the pre-0.12.0 version history coherent (release superseded)", () => {
     const specVersion = readFileSync(
       resolve(root, "SPEC_VERSION"),
       "utf8",
     ).trim();
-    expect(specVersion).toBe("0.11.0");
+    expect(specVersion).toBe("0.12.0");
     const pkg = JSON.parse(
       readFileSync(resolve(root, "package.json"), "utf8"),
     ) as { version: string };
-    expect(pkg.version).toBe("0.11.0");
-  });
-
-  it("bumps CITATION.cff to 0.11.0", () => {
-    const citation = readFileSync(resolve(root, "CITATION.cff"), "utf8");
-    expect(citation).toContain("version: 0.11.0");
-    expect(citation).toContain('date-released: "2026-11-28"');
+    expect(pkg.version).toBe("0.12.0");
   });
 
   it("records the 0.11.0 release in the changelog", () => {
@@ -41,8 +35,8 @@ describe("release v0.11.0 (Group 54)", () => {
       dvos: unknown[];
       scenarios: unknown[];
     };
-    expect(bundle.specVersion).toBe("0.11.0");
-    expect(bundle.dvos).toHaveLength(212);
+    expect(bundle.specVersion).toBe("0.12.0");
+    expect(bundle.dvos).toHaveLength(221);
     expect(bundle.scenarios).toHaveLength(9);
     const istisnai = bundle.enums.find((e) => e.id === "istisnai-hal");
     expect(istisnai?.values.map((v) => v.code)).toEqual([

@@ -1788,6 +1788,26 @@ Domain: `hizmet-kayit` · Direction: `input` · Status: `reviewed` · Source ref
 | `ozelDurum` | string |  | — |  | Special condition code, Tablo 5.1 OzelDurumVO (s.227) |
 | `cokluOzelDurum` | array |  | — |  | Multiple special-condition codes (s.227) |
 
+## `MustehaklikCevapDVO`
+
+Domain: `hasta-kabul` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `kapsamTuru` | integer |  | — |  | Entitlement coverage type. The guide documents no code list for this Integer (s.179); the sandbox echoes 1 and consumers treat the value opaquely until a list is published. |
+| `sonucKodu` | string |  | — |  | Result code; 0000 means success, any other value is an error (s.179) |
+| `sonucMesaji` | string |  | — |  | Human-readable result message accompanying the result code (s.180) |
+
+## `MustehaklikGirisDVO`
+
+Domain: `hasta-kabul` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `tcKimlikNo` | string |  | — |  | Patient TCK number (s.179) |
+| `tarih` | string |  | — |  | Entitlement query date (s.179) |
+| `saglikTesisKodu` | integer |  | — |  | GSS-assigned institution code (s.179) |
+
 ## `OnayBekleyenCevapDVO`
 
 Domain: `imzali-rapor` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
@@ -2574,6 +2594,28 @@ Domain: `hasta-kabul` · Direction: `input` · Status: `reviewed` · Source refs
 | `takipNo` | string |  | — |  | Tracking number to be cancelled (s.168). |
 | `ktsHbysKodu` | string |  | — |  | Software vendor KTS code (s.168). |
 
+## `TakipTipiDegistirCevapDVO`
+
+Domain: `hasta-kabul` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `takipNo` | string |  | — |  | Tracking number (s.179) |
+| `yeniTakipTipi` | string |  | — |  | New takip tipi (s.179) |
+| `hastaBasvuruNo` | string |  | — |  | Patient application number. Guide prints the length as String 4 (s.179) — a guide anomaly: hastaBasvuruNo is not bounded to 4 characters anywhere else in the guide; treated as unbounded here pending a guide-side correction. |
+| `sonucKodu` | string |  | — |  | Result code; 0000 means success, any other value is an error (s.179) |
+| `sonucMesaji` | string |  | — |  | Human-readable result message accompanying the result code (s.179) |
+
+## `TakipTipiDegistirGirisDVO`
+
+Domain: `hasta-kabul` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `takipNo` | string |  | — |  | Tracking number whose takip tipi changes (s.178) |
+| `tesisKodu` | integer |  | — |  | GSS-assigned institution code (s.178) |
+| `yeniTakipTipi` | string |  | — |  | New takip tipi (takip-tipi codes N/E/U/K/T/Y/P/S/C/F/B) (s.178) |
+
 ## `TaniAraCevapDVO`
 
 Domain: `yardimci-islemler` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
@@ -2640,6 +2682,29 @@ Domain: `rapor` · Direction: `input` · Status: `reviewed` · Source refs: medu
 | `raporDVO` | object |  | — |  | Report core; shape Tablo 4.4.1.k (RaporDVO, this registry). |
 | `islemler` | array |  | — |  | Treatment procedures; only the object matching tedaviRaporTuru is populated, the rest NULL; item shape Tablo 4.4.1.o (TedaviIslemBilgisiDVO, this registry) (s.262). |
 | `tedaviRaporTuru` | enum |  | tedavi-rapor-turu |  | Nine-value treatment type list (s.262). |
+
+## `TedaviTuruDegistirCevapDVO`
+
+Domain: `hasta-kabul` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `takipNo` | string |  | — |  | Tracking number (s.178) |
+| `yeniTedaviTuru` | string |  | — |  | New tedavi turu (s.178) |
+| `hastaBasvuruNo` | string |  | — |  | Patient application number. Guide prints the length as String 4 (s.178) — a guide anomaly: hastaBasvuruNo is not bounded to 4 characters anywhere else in the guide; treated as unbounded here pending a guide-side correction. |
+| `sonucKodu` | string |  | — |  | Result code; 0000 means success, any other value is an error (s.178) |
+| `sonucMesaji` | string |  | — |  | Human-readable result message accompanying the result code (s.178) |
+
+## `TedaviTuruDegistirGirisDVO`
+
+Domain: `hasta-kabul` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `takipNo` | string |  | — |  | Tracking number whose tedavi turu changes (s.177) |
+| `tesisKodu` | integer |  | — |  | GSS-assigned institution code (s.177) |
+| `yeniTedaviTuru` | string |  | — |  | New tedavi turu (tedavi-turu codes A/Y/G) (s.177) |
+| `yatisBitisTarihi` | string |  | — |  | Inpatient discharge date for a closed yatis (s.177) |
 
 ## `TeshisBilgisiDVO`
 
@@ -2710,6 +2775,37 @@ Domain: `rapor` · Direction: `input` · Status: `reviewed` · Source refs: medu
 | --- | --- | --- | --- | --- | --- |
 | `tupBebekRaporTuru` | enum |  | tup-bebek-turu |  | Disease-treatment vs other IVF procedures (s.276). |
 | `butKodu` | string |  | — |  | SUT procedure code (s.276). |
+
+## `YesilKartliHastaSevkBilgileriDVO`
+
+Domain: `hasta-kabul` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `sevkEdilenBransKodu` | string |  | — |  | Referred branch code (s.176) |
+| `sevkEdenTesisKodu` | integer |  | — |  | Referring facility code (s.177) |
+| `sevkEdilmeTarihi` | string |  | — |  | Referral date (s.177) |
+| `takipNo` | string |  | — |  | Tracking number (s.177) |
+
+## `YesilKartliSevkliHastaCevapDVO`
+
+Domain: `hasta-kabul` · Direction: `output` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `yesilKartliHastaSevkBilgileriDVO` | array |  | — |  | Green-card patient referral rows as YesilKartliHastaSevkBilgileriDVO (Tablo 4.1.12.c, s.176) |
+| `hastaBilgileriDVO` | object |  | — |  | Patient information (HastaBilgileriDVO, Tablo 4.1.1.c, s.176) |
+| `sonucKodu` | string |  | — |  | Result code; 0000 means success, any other value is an error (s.176) |
+| `sonucMesaji` | string |  | — |  | Human-readable result message accompanying the result code (s.176) |
+
+## `YesilKartliSevkliHastaGirisDVO`
+
+Domain: `hasta-kabul` · Direction: `input` · Status: `reviewed` · Source refs: medula-hastane-guide-3-1-1-2026-10-19
+
+| Field | Type | Required | Enum ref | Sensitive | Description |
+| --- | --- | --- | --- | --- | --- |
+| `hastaTCKNo` | string |  | — |  | Patient TCK number (s.176) |
+| `tesisKodu` | integer |  | — |  | GSS-assigned institution code (s.176) |
 
 ## `YurtDisiYardimHakkiGetirCevapDVO`
 
