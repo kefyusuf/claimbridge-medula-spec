@@ -30,4 +30,8 @@ methods:
   - medula.hastane.hasta-kabul.kemik-iligi-tc-ile-sorgu
   - medula.hastane.hasta-kabul.ekds-kisi-dogrulama-sorgu
   - medula.hastane.hasta-kabul.ekds-belge-gereken-takip-sorgu
+  - medula.hastane.hasta-kabul.get-yesil-kartli-sevkli-hasta
+  - medula.hastane.hasta-kabul.update-tedavi-turu
+  - medula.hastane.hasta-kabul.update-takip-tipi
+  - medula.hastane.hasta-kabul.get-mustehaklik-kapsam-kodu
 status: draft

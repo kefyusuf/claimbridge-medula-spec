@@ -1,0 +1,89 @@
+id: YesilKartliHastaSevkBilgileriDVO
+domain: hasta-kabul
+direction: output
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: "3.1.1"
+    fetchedAt: "2026-11-15"
+    page: 176
+    section: Tablo 4.1.12.c - YesilKartliHastaSevkBilgileriDVO
+    confidence: extracted
+fields:
+  - name: sevkEdilenBransKodu
+    displayName: Sevk Edilen Brans Kodu
+    type: string
+    enumRef: null
+    required: false
+    length: null
+    description: Referred branch code (s.176)
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 176
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.12.0"
+    deprecatedIn: null
+
+  - name: sevkEdenTesisKodu
+    displayName: Sevk Eden Tesis Kodu
+    type: integer
+    enumRef: null
+    required: false
+    length: null
+    description: Referring facility code (s.177)
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 177
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.12.0"
+    deprecatedIn: null
+
+  - name: sevkEdilmeTarihi
+    displayName: Sevk Edilme Tarihi
+    type: string
+    enumRef: null
+    required: false
+    length: 10
+    description: Referral date (s.177)
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 177
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.12.0"
+    deprecatedIn: null
+
+  - name: takipNo
+    displayName: Takip Numarasi
+    type: string
+    enumRef: null
+    required: false
+    length: null
+    description: Tracking number (s.177)
+    sensitive: false
+    syntheticOnlyRecommended: true
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 177
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.12.0"
+    deprecatedIn: null
+
+status: reviewed

@@ -53,6 +53,10 @@ Patient admission process that creates a patient application number and an assoc
 - `medula.hastane.hasta-kabul.kemik-iligi-tc-ile-sorgu`
 - `medula.hastane.hasta-kabul.ekds-kisi-dogrulama-sorgu`
 - `medula.hastane.hasta-kabul.ekds-belge-gereken-takip-sorgu`
+- `medula.hastane.hasta-kabul.get-yesil-kartli-sevkli-hasta`
+- `medula.hastane.hasta-kabul.update-tedavi-turu`
+- `medula.hastane.hasta-kabul.update-takip-tipi`
+- `medula.hastane.hasta-kabul.get-mustehaklik-kapsam-kodu`
 
 ## Hizmet Kayit (`medula.hastane.hizmet-kayit`)
 

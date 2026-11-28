@@ -1,0 +1,115 @@
+id: TedaviTuruDegistirCevapDVO
+domain: hasta-kabul
+direction: output
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: "3.1.1"
+    fetchedAt: "2026-11-15"
+    page: 177
+    section: Tablo 4.1.13.b - TedaviTuruDegistirCevapDVO
+    confidence: extracted
+fields:
+  - name: takipNo
+    displayName: Takip Numarasi
+    type: string
+    enumRef: null
+    required: false
+    length: null
+    description: Tracking number (s.178)
+    sensitive: false
+    syntheticOnlyRecommended: true
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 178
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.12.0"
+    deprecatedIn: null
+
+  - name: yeniTedaviTuru
+    displayName: Yeni Tedavi Turu
+    type: string
+    enumRef: null
+    required: false
+    length: null
+    description: New tedavi turu (s.178)
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 178
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.12.0"
+    deprecatedIn: null
+
+  - name: hastaBasvuruNo
+    displayName: Hasta Basvuru No
+    type: string
+    enumRef: null
+    required: false
+    length: 4
+    description: >-
+      Patient application number. Guide prints the length as String 4
+      (s.178) — a guide anomaly: hastaBasvuruNo is not bounded to 4
+      characters anywhere else in the guide; treated as unbounded here
+      pending a guide-side correction.
+    sensitive: false
+    syntheticOnlyRecommended: true
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 178
+        confidence: extracted
+        notes: Guide anomaly — String 4 length contradicts every other
+          hastaBasvuruNo row; the guide-side value is preserved but
+          annotated rather than trusted for validation.
+    conditionalRequired: []
+    introducedIn: "0.12.0"
+    deprecatedIn: null
+
+  - name: sonucKodu
+    displayName: Sonuc Kodu
+    type: string
+    enumRef: null
+    required: false
+    length: null
+    description: Result code; 0000 means success, any other value is an error (s.178)
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 178
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.12.0"
+    deprecatedIn: null
+
+  - name: sonucMesaji
+    displayName: Sonuc Mesaji
+    type: string
+    enumRef: null
+    required: false
+    length: null
+    description: Human-readable result message accompanying the result code (s.178)
+    sensitive: false
+    syntheticOnlyRecommended: false
+    sourceRefs:
+      - id: medula-hastane-guide-3-1-1-2026-10-19
+        sourceType: official-guide
+        guideVersion: "3.1.1"
+        page: 178
+        confidence: extracted
+    conditionalRequired: []
+    introducedIn: "0.12.0"
+    deprecatedIn: null
+
+status: reviewed

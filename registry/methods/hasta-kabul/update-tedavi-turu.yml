@@ -1,0 +1,33 @@
+id: medula.hastane.hasta-kabul.update-tedavi-turu
+service: medula.hastane.hasta-kabul
+names:
+  documentationHeading: UpdateTedaviTuru
+  operationName: UpdateTedaviTuru
+  aliases:
+    - updateTedaviTuru
+contract:
+  inputDvo: TedaviTuruDegistirGirisDVO
+  outputDvo: TedaviTuruDegistirCevapDVO
+sourceRefs:
+  - id: medula-hastane-guide-3-1-1-2026-10-19
+    sourceType: official-guide
+    guideVersion: "3.1.1"
+    fetchedAt: "2026-11-15"
+    page: 177
+    section: "4.1.13 UpdateTedaviTuru Metodu"
+    confidence: extracted
+
+stateEffects:
+  creates: []
+  reads: []
+  updates: []
+  deletes: []
+  generates: []
+success:
+  resultCodeField: sonucKodu
+  successCode: "0000"
+  messageField: sonucMesaji
+sandbox:
+  supported: true
+  defaultScenario: null
+status: reviewed

@@ -96,16 +96,15 @@ roadmap).
 | G49 scenario/rules | 286, 323, 326 | takip-ara-window-limit + taahhut annex-7 restriction / ilçe–il uyuşmazlığı rule files (SANDBOX_4001/4002) |
 | G50 result-code catalog resolution | 103, 143, 165-168 | RESOLVED: the guide has no per-method error catalog — every response table states only "0000 = success, anything else = error, reason in sonucMesaji" (s.165/168); the one documented extra code is 9000 = success-with-warning, NOT an error (s.103), with the under-18 provision branch carrying a verbatim warning message (s.143) → sonuc-kodu enum values 0000 + 9000, scenario provizyon-under18-warning |
 | G54 code-list visual pass | 154-158 | RESOLVED: the s.154-156 devredilenKurum list is numeric-only (31 codes, 1…149); the s.158 letter rows I/M/B/V close the istisnaiHal list — the earlier column-flow inference had misattributed the letter codes to devredilenKurum. istisnai-hal now 13 values (1-9 + I/M/B/V), devredilen-kurum 31 values |
+| G57 final 4.1 methods | 176-180 | getYesilKartliSevkliHasta (4.1.12) + UpdateTedaviTuru (4.1.13) + UpdateTakipTipi (4.1.14) + getMustehaklikKapsamKodu (4.1.15); 9 new DVOs (YesilKartli×3, Degistir×4, Mustehaklik×2); hastaBasvuruNo "String 4" guide anomaly annotated (s.178/179); the stale HastaKabul backlog row was already mostly extracted (ekds*/Sevk/HastaCikis*/KemikIligi* landed in v0.3+) — §4.1 is now COMPLETE at 22 methods |
 
-**Guide method-catalogue status as of v0.11.0: all main sections (§4.1-4.6
+**Guide method-catalogue status as of v0.12.0: all main sections (§4.1-4.6
 plus Takip Formu / Taahhüt / Ortodonti / E-İmzalı Rapor) are FULLY
 EXTRACTED.**
 
 ## Not yet extracted
 
 - Nested composites (Tablo 4.2.1.c-l, 4.3.1.c-e, 4.3.3.c) — v0.3 scope.
-- New HastaKabul methods: ekds*, SevkBildir, HastaCikis*, KemikIligi*,
-  HastaKabulKimlikDogrulama (disabled), UTS kesinleştirme.
 - Rapor remaining uzman rapor tabloları (G43d): Tablo 4.4.1.v TeshisBilgisiDVO,
   4.4.1.w DiyalizRaporBilgisiDVO, 4.4.1.x ESWLRaporBilgisiDVO,
   4.4.1.y ESWTRaporBilgisiDVO, 4.4.1.z FTRRaporBilgisiDVO,

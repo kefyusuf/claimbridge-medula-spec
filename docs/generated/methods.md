@@ -170,6 +170,54 @@
 | deletes | — |
 | generates | — |
 
+## `medula.hastane.hasta-kabul.get-mustehaklik-kapsam-kodu`
+
+| Field | Value |
+| --- | --- |
+| Service | medula.hastane.hasta-kabul |
+| Documentation heading | GetMustehaklikKapsamKodu |
+| Operation name | GetMustehaklikKapsamKodu |
+| Input DVO | MustehaklikGirisDVO |
+| Output DVO | MustehaklikCevapDVO |
+| Success | sonucKodu = 0000 (sonucMesaji) |
+| Sandbox supported |  |
+| Status | reviewed |
+| Source refs | medula-hastane-guide-3-1-1-2026-10-19 |
+
+**State effects**
+
+| Effect | Targets |
+| --- | --- |
+| creates | — |
+| reads | — |
+| updates | — |
+| deletes | — |
+| generates | — |
+
+## `medula.hastane.hasta-kabul.get-yesil-kartli-sevkli-hasta`
+
+| Field | Value |
+| --- | --- |
+| Service | medula.hastane.hasta-kabul |
+| Documentation heading | GetYesilKartliSevkliHasta |
+| Operation name | GetYesilKartliSevkliHasta |
+| Input DVO | YesilKartliSevkliHastaGirisDVO |
+| Output DVO | YesilKartliSevkliHastaCevapDVO |
+| Success | sonucKodu = 0000 (sonucMesaji) |
+| Sandbox supported |  |
+| Status | reviewed |
+| Source refs | medula-hastane-guide-3-1-1-2026-10-19 |
+
+**State effects**
+
+| Effect | Targets |
+| --- | --- |
+| creates | — |
+| reads | — |
+| updates | — |
+| deletes | — |
+| generates | — |
+
 ## `medula.hastane.hasta-kabul.hasta-cikis-iptal`
 
 | Field | Value |
@@ -506,6 +554,30 @@
 | deletes | — |
 | generates | — |
 
+## `medula.hastane.hasta-kabul.update-takip-tipi`
+
+| Field | Value |
+| --- | --- |
+| Service | medula.hastane.hasta-kabul |
+| Documentation heading | UpdateTakipTipi |
+| Operation name | UpdateTakipTipi |
+| Input DVO | TakipTipiDegistirGirisDVO |
+| Output DVO | TakipTipiDegistirCevapDVO |
+| Success | sonucKodu = 0000 (sonucMesaji) |
+| Sandbox supported |  |
+| Status | reviewed |
+| Source refs | medula-hastane-guide-3-1-1-2026-10-19 |
+
+**State effects**
+
+| Effect | Targets |
+| --- | --- |
+| creates | — |
+| reads | — |
+| updates | — |
+| deletes | — |
+| generates | — |
+
 ## `medula.hastane.hasta-kabul.update-tedavi-tipi`
 
 | Field | Value |
@@ -519,6 +591,30 @@
 | Sandbox supported |  |
 | Status | reviewed |
 | Source refs | medula-hastane-guide-3-1-1-2026-10-19, medula-hastane-guide-3-1-1-2026-10-19 |
+
+**State effects**
+
+| Effect | Targets |
+| --- | --- |
+| creates | — |
+| reads | — |
+| updates | — |
+| deletes | — |
+| generates | — |
+
+## `medula.hastane.hasta-kabul.update-tedavi-turu`
+
+| Field | Value |
+| --- | --- |
+| Service | medula.hastane.hasta-kabul |
+| Documentation heading | UpdateTedaviTuru |
+| Operation name | UpdateTedaviTuru |
+| Input DVO | TedaviTuruDegistirGirisDVO |
+| Output DVO | TedaviTuruDegistirCevapDVO |
+| Success | sonucKodu = 0000 (sonucMesaji) |
+| Sandbox supported |  |
+| Status | reviewed |
+| Source refs | medula-hastane-guide-3-1-1-2026-10-19 |
 
 **State effects**
 
